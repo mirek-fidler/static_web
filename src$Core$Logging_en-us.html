@@ -1,0 +1,397 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en-us">
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
+<META NAME="Generator" CONTENT="U++ HTML Package">
+<TITLE>U++ Logging :: U++</TITLE>
+<STYLE TYPE="text/css"><!--
+.A{margin:0px 0px 0px 0px;text-indent:0px;text-align:left;color:#000000;font-family:sans-serif;font-size:10pt;font-weight:normal;font-style:normal;}
+.B{font-size:12pt;}
+.C{border-collapse:collapse;table-layout:auto;border: 2px solid #000000;}
+.D{padding: 3px 5px 3px 5px;border-left: 1px solid #000000;border-top: 1px solid #000000;border-right: 1px solid #000000;border-bottom: 1px solid #000000;background-color:#712A00;vertical-align:middle;}
+.E{margin:0px 0px 0px 0px;text-indent:0px;text-align:left;color:#e0e0e0;font-family:sans-serif;font-size:16pt;font-weight:bold;font-style:normal;}
+.F{margin:0px 0px 5px 0px;text-indent:0px;text-align:left;color:#0000ff;font-family:sans-serif;font-size:10pt;font-weight:normal;font-style:normal;}
+.G{border-collapse:collapse;table-layout:auto;border: 2px solid #808080;}
+.H{padding: 3px 5px 3px 5px;border-left: 1px solid #808080;border-top: 1px solid #808080;border-right: 1px solid #808080;border-bottom: 1px solid #808080;background-color:#C0C0C0;vertical-align:middle;}
+.I{margin:0px 0px 0px 0px;text-indent:0px;text-align:left;color:#000000;font-family:sans-serif;font-size:10pt;font-weight:bold;font-style:normal;}
+.J{margin:0px 0px 5px 0px;text-indent:0px;text-align:left;color:#000000;font-family:sans-serif;font-size:10pt;font-weight:normal;font-style:normal;}
+.K{color:#0000ff;}
+.L{font-weight:bold;}
+.M{color:#800000;font-weight:bold;}
+.N{color:#800000;}
+.O{margin:0px 0px 0px 57px;text-indent:0px;text-align:left;color:#000000;font-family:sans-serif;font-size:10pt;font-weight:normal;font-style:normal;}
+.P{padding: 3px 5px 3px 5px;border-left: 1px solid #000000;border-top: 1px solid #000000;border-right: 1px solid #000000;border-bottom: 1px solid #000000;background-color:#FFFFFF;vertical-align:top;}
+.Q{font-style:italic;}
+.R{margin:0px 0px 0px 0px;text-indent:0px;text-align:left;color:#000000;font-family:sans-serif;font-size:6pt;font-weight:normal;font-style:normal;}
+.S{margin:0px 0px 5px 0px;text-indent:0px;text-align:left;color:#000000;font-family:sans-serif;font-size:10pt;font-weight:bold;font-style:normal;}
+.T{color:#0000ff;font-weight:normal;}
+.U{font-weight:normal;}
+.V{margin:0px 0px 0px 57px;text-indent:0px;text-align:left;color:#000000;font-family:monospace;font-size:10pt;font-weight:normal;font-style:normal;}
+.W{font-weight:bold;font-style:italic;}
+a.l1         { text-decoration:none; font-size: 8pt; font-family: sans-serif; font-weight: normal; }
+a.l1:link    { color:#000000; }
+a.l1:visited { color:#000080; }
+a.l1:hover   { color:#9933CC; }
+a.l1:active  { color:#000000; }
+a.l2         { text-decoration:none; font-size: 12pt; font-family: sans-serif; font-variant: small-caps; }
+a.l2:link    { color:#0066FF; }
+a.l2:visited { color:#FF6600; }
+a.l2:hover   { color:#BC0624; }
+a.l2:active  { color:#BC0024; }
+
+-->
+</STYLE>
+<META NAME="keywords" CONTENT="framework, toolkit, widget, c++, visual, studio, dev-cpp, builder, ide, class, component,wxwidgets, qt, rapid, application, development, rad, mfc, linux, macos, gui, sdl, directx, desktop"><META name="robots" content="index,follow">
+<LINK rel="alternate" type="application/rss+xml" title="SVN changes" href="svnchanges.xml">
+<LINK rel="shortcut icon" type="image/png" href="favicon.png">
+</HEAD><BODY BGCOLOR="#D2D9D2" ALINK="#800000" LINK="#000000" VLINK="#000080"><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%"><TR><TD COLSPAN="3"><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%" BGCOLOR="#FFFFFF" style="border: 1px solid #6E89AE;padding-left: 10px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;"><TR><TD><A HREF="index.html"><IMG SRC="0i.png" ALT="" BORDER="0"></A>
+</TD>
+<TD ALIGN="RIGHT" VALIGN="BOTTOM" STYLE="padding-bottom: 5px; background-image: url('1i.png')"><span style="font-size: 14pt; font-family: sans-serif;"><script type="text/javascript"><!--
+google_ad_client = "pub-1082147624384270";
+google_ad_width = 468;
+google_ad_height = 60;
+google_ad_format = "468x60_as";
+google_ad_type = "text_image";
+google_ad_channel = "";
+google_color_border = "336699";
+google_color_bg = "FFFFFF";
+google_color_link = "0000FF";
+google_color_text = "000000";
+google_color_url = "008000";
+//--></script>
+<script type="text/javascript"
+  src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+&nbsp;&nbsp;</span>
+</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>
+<TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%"><TR><TD COLSPAN="3" BGCOLOR="#D2D9D2" HEIGHT="6"></TD>
+</TR>
+<TR><TD VALIGN="TOP" ALIGN="CENTER"><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="160"><TR><TD ALIGN="CENTER"><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%" BGCOLOR="#FFFFFF" style="border-style: solid; border-width: 1px; border-color: #6E89AE;padding: 0px"><TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px;"><A HREF="www$uppweb$overview$en-us.html" CLASS="l1">Overview</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$examples$en-us.html" CLASS="l1">Examples</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$ss$en-us.html" CLASS="l1">Screenshots</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$comparison$en-us.html" CLASS="l1">Comparisons</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$apps$en-us.html" CLASS="l1">Applications</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$download$en-us.html" CLASS="l1">Download</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$documentation$en-us.html" CLASS="l1">Documentation</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$Tutorials$en-us.html" CLASS="l1">Tutorials</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="app$ide$UppHub$en-us.html" CLASS="l1">UppHub</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$Roadmap$en-us.html" CLASS="l1">Status & Roadmap</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$FAQ$en-us.html" CLASS="l1">FAQ</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="app$ide$About$en-us.html" CLASS="l1">Authors & License</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="https://www.ultimatepp.org/forums" CLASS="l1">Forums</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$Funding$en-us.html" CLASS="l1">Funding U++</A>
+</TD>
+</TR>
+</TABLE>
+<TABLE BORDER="0" WIDTH="100%"><TR><TD></TD>
+</TR>
+</TABLE>
+<TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%" BGCOLOR="#FFFFFF" style="border-style: solid; border-width: 1px; border-color: #6E89AE;padding: 0px"><TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('3i.png'); border: 0px solid black;padding-left:12px; padding-right:0px; padding-top:1px; padding-bottom:1px;color:#FFFFFF;"><B><span style="font-size: 8pt; font-family: sans-serif;">Search on this site</span>
+</B>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:6px; padding-right:0px; padding-top:4px; padding-bottom:4px;border-top: 1px solid #6E89AE;"><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%"><TR><TD><IMG SRC="4i.png" ALT="" BORDER="0"></TD>
+<TD><FORM ACTION="https://www.google.com/search" METHOD="GET" STYLE="margin:0px;padding:0px;"><INPUT TYPE="HIDDEN" NAME="ie" VALUE="UTF-8"><INPUT TYPE="HIDDEN" NAME="oe" VALUE="UTF-8"><INPUT TYPE="TEXT" NAME="q" SIZE="15" MAXLENGTH="256" placeholder="Site search"><INPUT TYPE="HIDDEN" NAME="sitesearch" VALUE="ultimatepp.org"></FORM>
+</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>
+<TABLE BORDER="0" WIDTH="100%"><TR><TD></TD>
+</TR>
+</TABLE>
+<br><div id="fb-root"></div>
+<script type="text/javascript">(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) {return;}
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+<div class="fb-like" data-href="https://www.facebook.com/pages/Upp-Framework/262346610476027?sk=wall" data-send="false" data-layout="button_count" data-width="160" data-show-faces="false" data-font="arial"></div>
+<br><br><script type="text/javascript"><!--
+google_ad_client = "pub-1082147624384270";
+google_ad_width = 160;
+google_ad_height = 600;
+google_ad_format = "160x600_as";
+google_ad_type = "text_image";
+google_ad_channel = "";
+google_color_border = "336699";
+google_color_bg = "FFFFFF";
+google_color_link = "0000FF";
+google_color_text = "000000";
+google_color_url = "008000";
+//--></script>
+<script type="text/javascript"
+  src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script><br><br><script type="text/javascript"><!--
+google_ad_client = "pub-1082147624384270";
+google_ad_width = 160;
+google_ad_height = 90;
+google_ad_format = "160x90_0ads_al_s";
+google_ad_channel = "";
+google_color_border = "336699";
+google_color_bg = "FFFFFF";
+google_color_link = "0000FF";
+google_color_text = "000000";
+google_color_url = "008000";
+//--></script>
+<script type="text/javascript"
+  src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+<br><br><br><br><br><br><A HREF="https://sourceforge.net/projects/upp/"><IMG SRC="https://sourceforge.net/sflogo.php?group_id=93970&amp;type=2" ALT="SourceForge.net Logo" BORDER="0" WIDTH="125" HEIGHT="37"></A>
+<br><br><A HREF="https://flathub.org/en/apps/org.ultimatepp.TheIDE"><IMG SRC="5i.png" ALT="SourceForge.net Logo" BORDER="0" WIDTH="125" HEIGHT="37"></A>
+<br><br><div style="background-color:#ffffff;width:125;height:35"><A HREF="https://github.com/ultimatepp"><IMG SRC="6i.png" ALT="GitHub Logo" BORDER="0" WIDTH="125" HEIGHT="35"></A>
+</div><br><div style="background-color:#ffffff;width:125;height:35"><div style="height:5"></div><A HREF="https://discord.gg/8XzqQzXZzb"><IMG SRC="https://assets-global.website-files.com/6257adef93867e50d84d30e2/636e0b5061df29d55a92d945_full_logo_blurple_RGB.svg" ALT="Discord Logo" BORDER="0" WIDTH="125" HEIGHT="25"></A>
+</div><br></TD>
+</TR>
+</TABLE>
+</TD>
+<TD VALIGN="TOP" BGCOLOR="#D2D9D2"><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="6"><TR><TD></TD>
+</TR>
+</TABLE>
+</TD>
+<TD VALIGN="TOP" WIDTH="100%" BGCOLOR="#D2D9D2"><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" BGCOLOR="#FFFFFF" WIDTH="100%" style="border-style: solid; border-width: 1px; border-color: #6E89AE;padding: 10px;;"><TR><TD><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%"><TR><TD><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr><td width="100%"><table width="100%" class="C"><colgroup><col width="100%"></colgroup>
+<tr><td class="D"><p class="E">U++ Logging</p>
+</td>
+</tr>
+</table></td>
+</tr></table>
+<p class="F">&nbsp;</p>
+<p class="A">U++ logging infrastructure is based on output stream, which is capable of outputting log lines into decided output facilities (files, console output, syslog).</p>
+<p class="A">&nbsp;</p>
+<p class="A">Logging itself is then based on set o macros that output values to this stream, usually using AsString or operator&lt;&lt;(Stream&amp;, ...) to convert values.</p>
+<p class="A">&nbsp;</p>
+<p class="A">This stream is accessible through UppLog() function and its default version is provided by U++, however it can be replaced (using SetUppLog).</p>
+<p class="A">&nbsp;</p>
+<p class="A">Multithreading note: Standard log stream handles serialization of output in its implementation &nbsp;(and any possible replacement should do that too), so it is possible to use single output stream in all threads.</p>
+<p class="A">&nbsp;</p>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr><td width="100%"><table width="100%" class="G"><colgroup><col width="100%"></colgroup>
+<tr><td class="H"><p class="I">Entity List</p>
+</td>
+</tr>
+</table></td>
+</tr></table>
+<p class="A">&nbsp;</p>
+<p id="StdLogSetup(dword,const char*,int)" class="J"><span class="K">void</span>&nbsp;<span class="L">StdLogSetup</span>(<a href="dword"><u>dword</u></a>&nbsp;<span class="M">options</span>, <span class="K">const</span>&nbsp;<span class="K">char</span>&nbsp;*<span class="M">filepath</span>&nbsp;=&nbsp;NULL, <span class="K">int</span>&nbsp;<span class="M">filesize_limit</span>&nbsp;=&nbsp;<span class="N">10</span>&nbsp;*&nbsp;<span class="N">1024</span>&nbsp;*&nbsp;<span class="N">1024</span>)</p>
+<p class="O">This function setups standard U++ logging. <span class="M">filepath</span> is the path of .log file (if logging to file is active), <span class="M">filesize_limit</span> is maximum size of log (if LOG_FILE options is active), if achieved, a new log file is created. <span class="M">options</span> is a combination of bit flags:</p>
+<p class="O">&nbsp;</p>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr><td><table border="0" width= 57px><tr><td></td></tr></table></td>
+<td width="100%"><table width="100%" class="C"><colgroup><col width="29%"><col width="70%"></colgroup>
+<tr><td class="P"><p class="A">LOG_FILE </p>
+</td>
+<td class="P"><p class="A">Output log to file (this is default). The default path of file is ConfigFile(&quot;<span class="Q">program_name</span>.log&quot;).</p>
+</td>
+</tr>
+<tr><td class="P"><p class="A">LOG_COUT </p>
+</td>
+<td class="P"><p class="A">Output log to standard output, using plain putchar.</p>
+</td>
+</tr>
+<tr><td class="P"><p class="A">LOG_CERR </p>
+</td>
+<td class="P"><p class="A">Output log to error output, using plain putc.</p>
+</td>
+</tr>
+<tr><td class="P"><p class="A">LOG_DBG </p>
+</td>
+<td class="P"><p class="A">Output log to debugger (Win32 specific).</p>
+</td>
+</tr>
+<tr><td class="P"><p class="A">LOG_SYS </p>
+</td>
+<td class="P"><p class="A">Output log to syslog (POSIX specific).</p>
+</td>
+</tr>
+<tr><td class="P"><p class="A">LOG_ELAPSED</p>
+</td>
+<td class="P"><p class="A">Prepend a number of miliseconds to each log line since the previous log line.</p>
+</td>
+</tr>
+<tr><td class="P"><p class="A">LOG_TIMESTAMP </p>
+</td>
+<td class="P"><p class="A">Prepend local time timestamp to each log line (not with LOG_SYS, as syslog already does this).</p>
+</td>
+</tr>
+<tr><td class="P"><p class="A">LOG_TIMESTAMP_UTC</p>
+</td>
+<td class="P"><p class="A">Prepend universal time timestamp to each log line (not with LOG_SYS).</p>
+</td>
+</tr>
+<tr><td class="P"><p class="A">LOG_APPEND </p>
+</td>
+<td class="P"><p class="A">When starting a program, append log to existing file instead of replacing it.</p>
+</td>
+</tr>
+<tr><td class="P"><p class="A">LOG_ROTATE(<span class="M">x</span>)</p>
+</td>
+<td class="P"><p class="A">When starting a new log file, up to <span class="M">x</span> older logs is preserved (renamed with extension '.1', '.2' etc...).</p>
+</td>
+</tr>
+<tr><td class="P"><p class="A">LOG_ROTATE_GZIP</p>
+</td>
+<td class="P"><p class="A">Older preserved log files are compressed using gzip (except the most recent log '.1'.</p>
+</td>
+</tr>
+<tr><td class="P"><p class="A">LOG_COUTW</p>
+</td>
+<td class="P"><p class="A">Output log to standard output, using Cout. This provides eventual conversion of UTF8 characters, at the price of using heap (so cannot be used to e.g. LOG inside heap routines).</p>
+</td>
+</tr>
+<tr><td class="P"><p class="A">LOG_CERRW</p>
+</td>
+<td class="P"><p class="A">Output log to standard output, using Cerr. This provides eventual conversion of UTF8 characters, at the price of using heap (so cannot be used to e.g. LOG inside heap routines).</p>
+</td>
+</tr>
+</table></td>
+</tr></table>
+<p class="R">&nbsp;</p>
+<hr><p class="R">&nbsp;</p>
+<p id="StdLog()" class="J"><a href="Stream"><u>Stream</u></a><span class="K">&amp;</span>&nbsp;<span class="L">StdLog</span>()</p>
+<p class="O">Returns a reference to standard log stream.</p>
+<p class="R">&nbsp;</p>
+<hr><p class="R">&nbsp;</p>
+<p id="Upp::GetStdLogPath()" class="J"><a href="Upp::String"><u>String</u></a>&nbsp;<span class="L">GetStdLogPath</span>()</p>
+<p class="O">Returns the path of current log, if any.</p>
+<p class="R">&nbsp;</p>
+<hr><p class="R">&nbsp;</p>
+<p id="LOG_BEGIN" class="S"><span class="T">const</span><span class="U">&nbsp;</span><span class="T">char</span><span class="U">&nbsp;</span>LOG_BEGIN = '\x1e';</p>
+<p class="O">Putting this character into standard log stream adds one tabulator of indentation to all subsequent lines (moves text &quot;right&quot;).</p>
+<p class="R">&nbsp;</p>
+<hr><p class="R">&nbsp;</p>
+<p id="LOG_END" class="S"><span class="T">const</span><span class="U">&nbsp;</span><span class="T">char</span><span class="U">&nbsp;</span>LOG_END = '\x1f';</p>
+<p class="O">Putting this character into standard log stream removes one tabulator of indentation to all subsequent lines (moves text &quot;left&quot;).</p>
+<p class="R">&nbsp;</p>
+<hr><p class="R">&nbsp;</p>
+<p id="UppLog()" class="J"><a href="Stream"><u>Stream</u></a><span class="K">&amp;</span>&nbsp;<span class="L">UppLog</span>()</p>
+<p class="O">Returns a reference to <span class="Q">current</span> log stream.</p>
+<p class="R">&nbsp;</p>
+<hr><p class="R">&nbsp;</p>
+<p id="SetUppLog(Stream&)" class="J"><span class="K">void</span>&nbsp;<span class="L">SetUppLog</span>(<a href="Stream"><u>Stream</u></a><span class="K">&amp;</span>&nbsp;<span class="M">log</span>)</p>
+<p class="O">Sets the current log stream to <span class="M">log</span> (must be an object with global lifetime).</p>
+<p class="R">&nbsp;</p>
+<hr><p class="R">&nbsp;</p>
+<p id="Upp::SetUppLog(Upp::LogLineFn)" class="J"><a href="Upp::LogLineFn"><u>LogLineFn</u></a>&nbsp;<span class="L">SetUppLog</span>(<a href="Upp::LogLineFn"><u>LogLineFn</u></a>&nbsp;<span class="M">log_line</span>)</p>
+<p class="O">Similar to SetUppLog with Stream parameter, but instead of replacing the whole stream, it just replaces the final routine to write the single line, while returning its previous definition (as function pointer). LogLineFn is defined as</p>
+<p class="O">&nbsp;</p>
+<p class="V">typedef void (*LogLineFn)(const char *buffer, int len, int depth);</p>
+<p class="O">&nbsp;</p>
+<p class="O">where dept is incremented by LOG_BEGIN character and decremented by LOG_END - standard logging stream inserts equivalent number of tabs at the beginning of line.</p>
+<p class="R">&nbsp;</p>
+<p class="A">&nbsp;</p>
+<p class="A">&nbsp;</p>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr><td width="100%"><table width="100%" class="G"><colgroup><col width="100%"></colgroup>
+<tr><td class="H"><p class="I">Logging macros</p>
+</td>
+</tr>
+</table></td>
+</tr></table>
+<p class="A">&nbsp;</p>
+<p class="A">Standard logging macros come in 3 basic flavors. &quot;Normal&quot; macros (LOG, DUMP, ...) only emit code in debug mode, &quot;Debugging&quot; macros (DLOG, DDUMP, ..., first letter is 'D') only <span class="W">compile</span> in debug mode and their presence causes release mode compilation to fail (this is to prevent any forgotten debugging macros in code) and finally &quot;Release&quot; macros (RLOG, RDUMP, ..., first letter is 'R') produce output even in release mode.</p>
+<p class="A">&nbsp;</p>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr><td width="100%"><table width="100%" class="C"><colgroup><col width="50%"><col width="50%"></colgroup>
+<tr><td class="P"><p class="A">LOG(x), DLOG(x), RLOG(x)</p>
+</td>
+<td class="P"><p class="A">Outputs a single line to log.</p>
+</td>
+</tr>
+<tr><td class="P"><p class="A">DUMP(x), DDUMP(x), RDUMP(x)</p>
+</td>
+<td class="P"><p class="A">Outputs a variable - adds a variable name before value - &nbsp;defined as LOG(#x &lt;&lt; &quot;=&quot; &lt;&lt; x)</p>
+</td>
+</tr>
+<tr><td class="P"><p class="A">DUMPC(x), DDUMPC(x), RDUMPC(x)</p>
+</td>
+<td class="P"><p class="A">Outputs a Vector or Array or Index of values.</p>
+</td>
+</tr>
+<tr><td class="P"><p class="A">DUMPM(x), DDUMPM(x), RDUMPM(x)</p>
+</td>
+<td class="P"><p class="A">Outputs a VectorMap or ArrayMap.</p>
+</td>
+</tr>
+<tr><td class="P"><p class="A">TIMING(x), DTIMING(x), RTIMING(x)</p>
+</td>
+<td class="P"><p class="A">Establishes profiling timing inspector which profiles since definition till the end of block, profiling values are printed to log at the program exit.</p>
+</td>
+</tr>
+<tr><td class="P"><p class="A">LOGHEX(x), DLOGHEX(x), RLOGHEX(x)</p>
+</td>
+<td class="P"><p class="A">Outputs value as hexadecimal dump, currently works with String.</p>
+</td>
+</tr>
+<tr><td class="P"><p class="A">DUMPHEX(x), DDUMPHEX(x), RDUMPHEX(x)</p>
+</td>
+<td class="P"><p class="A">Outputs variable as hexadecimal dump, like LOGHEX but puts variable name into log.</p>
+</td>
+</tr>
+</table></td>
+</tr></table>
+<p class="A">&nbsp;</p>
+<p class="A">In addition to this it is common practice to use 'local' macros that can be switched on/off for given modules files; standard approach is to add</p>
+<p class="A">&nbsp;</p>
+<p class="A">#define LLOG(x) &nbsp;&nbsp;&nbsp;// DLOG(x)</p>
+<p class="A">&nbsp;</p>
+<p class="A">at the start of files with local logging, then activate logging by uncommenting the DLOG.</p>
+<p class="A">&nbsp;</p>
+<p class="A">U++ has also concept of &quot;modular&quot; logging, where specific logging macros can be created that are bound to some global boolean entity (usually INI_BOOL). Creation of these modular logs is simplified by macro:</p>
+<p class="A">&nbsp;</p>
+<p class="A">#define <span class="L">LOG_</span>(flag, x) &nbsp;&nbsp;&nbsp;&nbsp;do { if(flag) RLOG(x); } while(false)</p>
+<p class="A">&nbsp;</p>
+<p class="A">One such predefined type exists, USRLOG, that is indended to log user actions (like opening windows, pressing keyboard keys) and can be activated by IniBool Ini::user_log (and also by setting user_log=true in .ini file):</p>
+<p class="A">&nbsp;</p>
+<p class="A">#define <span class="L">USRLOG</span>(x) &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;LOG_(Ini::user_log, x)</p>
+<p class="A">&nbsp;</p>
+</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>
+<TABLE BORDER="0" WIDTH="100%"><TR><TD></TD>
+</TR>
+</TABLE>
+<TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" BGCOLOR="#FFFFFF" WIDTH="100%" style="border-style: solid; border-width: 1px; border-color: #6E89AE;padding: 10px;;"><TR><TD><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%"><TR><TD><p class="A"><span class="B"> </span><a href="www$uppweb$contribweb$en-us.html">Do you want to contribute?</a></p>
+</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>
+<script type="text/javascript">var a={};var p=window.location.pathname.split("/");p=p[p.length-1];var s='<select id="lang" onchange="window.location=document.getElementById(\'lang\').value;">';for(l in a){if(p==l){d=" selected=1"}else{d=""}s+='<option value="'+l+'"'+d+'>'+a[l]+'</option>'}s+='</select>';var d=document.createElement('div');d.innerHTML=s;var c=document.getElementById('langs');c.replaceChild(d,c.firstChild);document.getElementById('langbox').style.display='block';</script></BODY>

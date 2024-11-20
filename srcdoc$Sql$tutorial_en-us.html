@@ -1,0 +1,510 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en-us">
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
+<META NAME="Generator" CONTENT="U++ HTML Package">
+<META NAME="Description" CONTENT="SqlSession derived objects represent database connection.">
+<TITLE>SQL Tutorial :: U++</TITLE>
+<STYLE TYPE="text/css"><!--
+.A{margin:0px 0px 0px 0px;text-indent:0px;text-align:left;color:#000000;font-family:sans-serif;font-size:10pt;font-weight:normal;font-style:normal;}
+.B{font-size:12pt;}
+.C{margin:0px 0px 16px 0px;text-indent:0px;text-align:left;color:#000000;font-family:serif;font-size:24pt;font-weight:bold;font-style:normal;}
+.D{margin:16px 0px 0px 0px;text-indent:0px;text-align:left;color:#000000;font-family:sans-serif;font-size:16pt;font-weight:bold;font-style:normal;}
+.E{margin:8px 0px 8px 0px;text-indent:0px;text-align:left;color:#000000;font-family:sans-serif;font-size:10pt;font-weight:normal;font-style:normal;line-height:150%}
+.F{margin:0px 0px 0px 64px;text-indent:0px;text-align:left;color:#0000ff;font-family:monospace;font-size:9pt;font-weight:normal;font-style:normal;}
+.G{color:#8000ff;}
+.H{color:#000000;}
+.I{margin:0px 0px 0px 64px;text-indent:0px;text-align:left;color:#000000;font-family:monospace;font-size:9pt;font-weight:normal;font-style:normal;}
+.J{color:#0000ff;font-weight:bold;}
+.K{font-weight:bold;}
+.L{color:#0000ff;}
+.M{color:#800000;}
+.N{color:#8000ff;font-weight:bold;}
+.O{margin:0px 0px 0px 64px;text-indent:0px;text-align:left;color:#8000ff;font-family:monospace;font-size:9pt;font-weight:normal;font-style:normal;}
+.P{color:#800000;font-weight:bold;}
+.Q{margin:8px 0px 8px 64px;text-indent:0px;text-align:left;color:#000000;font-family:sans-serif;font-size:10pt;font-weight:normal;font-style:normal;line-height:150%}
+.R{margin:8px 0px 8px 0px;text-indent:0px;text-align:left;color:#000000;font-family:sans-serif;font-size:10pt;font-weight:normal;font-style:italic;line-height:150%}
+.S{color:#000080;font-family:monospace;font-size:9pt;font-weight:bold;font-style:normal;}
+.T{display:list-item;list-style-type:disc;margin:8px 0px 8px 52px;text-indent:0px;text-align:left;color:#000000;font-family:sans-serif;font-size:10pt;font-weight:normal;font-style:normal;line-height:150%}
+.U{margin:0px 0px 0px 64px;text-indent:0px;text-align:left;color:#0000ff;font-family:monospace;font-size:9pt;font-weight:bold;font-style:normal;}
+.V{font-weight:normal;}
+.W{margin:0px 0px 0px 64px;text-indent:0px;text-align:left;color:#800000;font-family:monospace;font-size:9pt;font-weight:bold;font-style:normal;}
+.X{margin:0px 0px 0px 64px;text-indent:0px;text-align:left;color:#800000;font-family:monospace;font-size:9pt;font-weight:normal;font-style:normal;}
+.Y{margin:0px 0px 0px 64px;text-indent:0px;text-align:left;color:#000000;font-family:monospace;font-size:9pt;font-weight:bold;font-style:normal;}
+a.l1         { text-decoration:none; font-size: 8pt; font-family: sans-serif; font-weight: normal; }
+a.l1:link    { color:#000000; }
+a.l1:visited { color:#000080; }
+a.l1:hover   { color:#9933CC; }
+a.l1:active  { color:#000000; }
+a.l2         { text-decoration:none; font-size: 12pt; font-family: sans-serif; font-variant: small-caps; }
+a.l2:link    { color:#0066FF; }
+a.l2:visited { color:#FF6600; }
+a.l2:hover   { color:#BC0624; }
+a.l2:active  { color:#BC0024; }
+
+-->
+</STYLE>
+<META NAME="keywords" CONTENT="framework, toolkit, widget, c++, visual, studio, dev-cpp, builder, ide, class, component,wxwidgets, qt, rapid, application, development, rad, mfc, linux, macos, gui, sdl, directx, desktop"><META name="robots" content="index,follow">
+<LINK rel="alternate" type="application/rss+xml" title="SVN changes" href="svnchanges.xml">
+<LINK rel="shortcut icon" type="image/png" href="favicon.png">
+</HEAD><BODY BGCOLOR="#D2D9D2" ALINK="#800000" LINK="#000000" VLINK="#000080"><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%"><TR><TD COLSPAN="3"><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%" BGCOLOR="#FFFFFF" style="border: 1px solid #6E89AE;padding-left: 10px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;"><TR><TD><A HREF="index.html"><IMG SRC="0i.png" ALT="" BORDER="0"></A>
+</TD>
+<TD ALIGN="RIGHT" VALIGN="BOTTOM" STYLE="padding-bottom: 5px; background-image: url('1i.png')"><span style="font-size: 14pt; font-family: sans-serif;"><script type="text/javascript"><!--
+google_ad_client = "pub-1082147624384270";
+google_ad_width = 468;
+google_ad_height = 60;
+google_ad_format = "468x60_as";
+google_ad_type = "text_image";
+google_ad_channel = "";
+google_color_border = "336699";
+google_color_bg = "FFFFFF";
+google_color_link = "0000FF";
+google_color_text = "000000";
+google_color_url = "008000";
+//--></script>
+<script type="text/javascript"
+  src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+&nbsp;&nbsp;</span>
+</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>
+<TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%"><TR><TD COLSPAN="3" BGCOLOR="#D2D9D2" HEIGHT="6"></TD>
+</TR>
+<TR><TD VALIGN="TOP" ALIGN="CENTER"><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="160"><TR><TD ALIGN="CENTER"><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%" BGCOLOR="#FFFFFF" style="border-style: solid; border-width: 1px; border-color: #6E89AE;padding: 0px"><TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px;"><A HREF="www$uppweb$overview$en-us.html" CLASS="l1">Overview</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$examples$en-us.html" CLASS="l1">Examples</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$ss$en-us.html" CLASS="l1">Screenshots</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$comparison$en-us.html" CLASS="l1">Comparisons</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$apps$en-us.html" CLASS="l1">Applications</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$download$en-us.html" CLASS="l1">Download</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$documentation$en-us.html" CLASS="l1">Documentation</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$Tutorials$en-us.html" CLASS="l1">Tutorials</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="app$ide$UppHub$en-us.html" CLASS="l1">UppHub</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$Roadmap$en-us.html" CLASS="l1">Status & Roadmap</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$FAQ$en-us.html" CLASS="l1">FAQ</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="app$ide$About$en-us.html" CLASS="l1">Authors & License</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="https://www.ultimatepp.org/forums" CLASS="l1">Forums</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$Funding$en-us.html" CLASS="l1">Funding U++</A>
+</TD>
+</TR>
+</TABLE>
+<TABLE BORDER="0" WIDTH="100%"><TR><TD></TD>
+</TR>
+</TABLE>
+<TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%" BGCOLOR="#FFFFFF" style="border-style: solid; border-width: 1px; border-color: #6E89AE;padding: 0px"><TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('3i.png'); border: 0px solid black;padding-left:12px; padding-right:0px; padding-top:1px; padding-bottom:1px;color:#FFFFFF;"><B><span style="font-size: 8pt; font-family: sans-serif;">Search on this site</span>
+</B>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:6px; padding-right:0px; padding-top:4px; padding-bottom:4px;border-top: 1px solid #6E89AE;"><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%"><TR><TD><IMG SRC="4i.png" ALT="" BORDER="0"></TD>
+<TD><FORM ACTION="https://www.google.com/search" METHOD="GET" STYLE="margin:0px;padding:0px;"><INPUT TYPE="HIDDEN" NAME="ie" VALUE="UTF-8"><INPUT TYPE="HIDDEN" NAME="oe" VALUE="UTF-8"><INPUT TYPE="TEXT" NAME="q" SIZE="15" MAXLENGTH="256" placeholder="Site search"><INPUT TYPE="HIDDEN" NAME="sitesearch" VALUE="ultimatepp.org"></FORM>
+</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>
+<TABLE BORDER="0" WIDTH="100%"><TR><TD></TD>
+</TR>
+</TABLE>
+<br><div id="fb-root"></div>
+<script type="text/javascript">(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) {return;}
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+<div class="fb-like" data-href="https://www.facebook.com/pages/Upp-Framework/262346610476027?sk=wall" data-send="false" data-layout="button_count" data-width="160" data-show-faces="false" data-font="arial"></div>
+<br><br><script type="text/javascript"><!--
+google_ad_client = "pub-1082147624384270";
+google_ad_width = 160;
+google_ad_height = 600;
+google_ad_format = "160x600_as";
+google_ad_type = "text_image";
+google_ad_channel = "";
+google_color_border = "336699";
+google_color_bg = "FFFFFF";
+google_color_link = "0000FF";
+google_color_text = "000000";
+google_color_url = "008000";
+//--></script>
+<script type="text/javascript"
+  src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script><br><br><script type="text/javascript"><!--
+google_ad_client = "pub-1082147624384270";
+google_ad_width = 160;
+google_ad_height = 90;
+google_ad_format = "160x90_0ads_al_s";
+google_ad_channel = "";
+google_color_border = "336699";
+google_color_bg = "FFFFFF";
+google_color_link = "0000FF";
+google_color_text = "000000";
+google_color_url = "008000";
+//--></script>
+<script type="text/javascript"
+  src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+<br><br><br><br><br><br><A HREF="https://sourceforge.net/projects/upp/"><IMG SRC="https://sourceforge.net/sflogo.php?group_id=93970&amp;type=2" ALT="SourceForge.net Logo" BORDER="0" WIDTH="125" HEIGHT="37"></A>
+<br><br><A HREF="https://flathub.org/en/apps/org.ultimatepp.TheIDE"><IMG SRC="5i.png" ALT="SourceForge.net Logo" BORDER="0" WIDTH="125" HEIGHT="37"></A>
+<br><br><div style="background-color:#ffffff;width:125;height:35"><A HREF="https://github.com/ultimatepp"><IMG SRC="6i.png" ALT="GitHub Logo" BORDER="0" WIDTH="125" HEIGHT="35"></A>
+</div><br><div style="background-color:#ffffff;width:125;height:35"><div style="height:5"></div><A HREF="https://discord.gg/8XzqQzXZzb"><IMG SRC="https://assets-global.website-files.com/6257adef93867e50d84d30e2/636e0b5061df29d55a92d945_full_logo_blurple_RGB.svg" ALT="Discord Logo" BORDER="0" WIDTH="125" HEIGHT="25"></A>
+</div><br></TD>
+</TR>
+</TABLE>
+</TD>
+<TD VALIGN="TOP" BGCOLOR="#D2D9D2"><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="6"><TR><TD></TD>
+</TR>
+</TABLE>
+</TD>
+<TD VALIGN="TOP" WIDTH="100%" BGCOLOR="#D2D9D2"><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" BGCOLOR="#FFFFFF" WIDTH="100%" style="border-style: solid; border-width: 1px; border-color: #6E89AE;padding: 10px;;"><TR><TD><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%"><TR><TD><p class="C">SQL Tutorial</p>
+<hr><p class="D">Table of contents</p>
+<p class="A">&nbsp;</p>
+<p class="A"><a href="srcdoc$Sql$tutorial$en-us.html#1">1. SqlSession, Sql, opening database connection</a></p>
+<p class="A"><a href="srcdoc$Sql$tutorial$en-us.html#2">2. Using global main database, executing statements with parameters, getting resultset info</a></p>
+<p class="A"><a href="srcdoc$Sql$tutorial$en-us.html#3">3. Using SqlExp</a></p>
+<p class="A"><a href="srcdoc$Sql$tutorial$en-us.html#4">4. Schema file</a></p>
+<p class="A"><a href="srcdoc$Sql$tutorial$en-us.html#5">5. Using schema file to define SqlId constants</a></p>
+<p class="A"><a href="srcdoc$Sql$tutorial$en-us.html#6">6. Using structures defined by schema files</a></p>
+<p class="A">&nbsp;</p>
+<hr><p id="1" class="D">1. SqlSession, Sql, opening database connection</p>
+<p class="E">SqlSession derived objects represent database connection. Each SQL database (Sqlite3, Microsoft SQL, Oracle, MySQL, PostgreSQL) has its own session class derived from SqlSession. Sql class is used to issue SQL statements and retrieve results:</p>
+<p class="E">&nbsp;</p>
+<p class="F"><span class="G">#include</span><span class="H"> </span>&lt;<span class="H">Core</span>/<span class="H">Core</span>.<span class="H">h</span>&gt;</p>
+<p class="F"><span class="G">#include</span><span class="H"> </span>&lt;<span class="H">plugin</span>/<span class="H">sqlite3</span>/<span class="H">Sqlite3</span>.<span class="H">h</span>&gt;</p>
+<p class="I">&nbsp;</p>
+<p class="I"><span class="J">using</span> <span class="J">namespace</span> Upp;</p>
+<p class="I">&nbsp;</p>
+<p class="I">CONSOLE_APP_MAIN</p>
+<p class="I">{</p>
+<p class="I"> &nbsp;&nbsp;&nbsp;<span class="K"><u>Sqlite3Session</u></span> sqlite3;</p>
+<p class="I"> &nbsp;&nbsp;&nbsp;<span class="J">if</span>(<span class="L">!</span>sqlite3<span class="L">.</span><span class="K"><u>Open</u></span>(ConfigFile(<span class="M">&quot;simple.db&quot;</span>))) {</p>
+<p class="I"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Cout() <span class="L">&lt;&lt;</span> <span class="M">&quot;Can't create or open database file</span><span class="L">\n</span><span class="M">&quot;</span>;</p>
+<p class="I"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="N"><u>return</u></span>;</p>
+<p class="I"> &nbsp;&nbsp;&nbsp;}</p>
+<p class="I"> &nbsp;&nbsp;&nbsp;</p>
+<p class="I"><span class="G">#ifdef</span> _DEBUG</p>
+<p class="I"> &nbsp;&nbsp;&nbsp;sqlite3<span class="L">.</span><span class="K"><u>SetTrace</u></span>();</p>
+<p class="O">#endif</p>
+<p class="I">&nbsp;</p>
+<p class="I"> &nbsp;&nbsp;&nbsp;<span class="K"><u>Sql</u></span> sql(sqlite3);</p>
+<p class="I"> &nbsp;&nbsp;&nbsp;sql<span class="L">.</span><span class="K"><u>Execute</u></span>(<span class="M">&quot;select date('now')&quot;</span>);</p>
+<p class="I"> &nbsp;&nbsp;&nbsp;<span class="J">while</span>(sql<span class="L">.</span><span class="K"><u>Fetch</u></span>())</p>
+<p class="I"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Cout() <span class="L">&lt;&lt;</span> <span class="K"><u>sql</u></span><span class="J"><u>[</u></span><span class="P"><u>0</u></span><span class="J"><u>]</u></span> <span class="L">&lt;&lt;</span> <span class="M">'</span><span class="L">\n</span><span class="M">'</span>;</p>
+<p class="I">}</p>
+<p class="E">&nbsp;</p>
+<p class="E">In this tutorial, we are using Sqlite3 database. The connection method varies with database; in this case it is done using <span class="K">Open </span>statement.</p>
+<p class="E"><span class="K">SetTrace </span>is useful in debug mode - all issued SQL statements and SQL errors are logged in standard U++ log.</p>
+<p class="E">Each <span class="K">Sql</span> instance has to be associated to some SqlSession - it is passed as constructor parameter (parameter-less Sql constructor uses global session, more on that in section 2.). To execute SQL statements, use <span class="K">Execute</span>. If executed statement is Select, it may return a result set, which is retrieved using <span class="K">Fetch</span>. Columns of result set are then accessed by Sql::operator[] using index of column (starts with 0). Values are returned as Value type.</p>
+<p class="E">&nbsp;</p>
+<hr><p id="2" class="D">2. Using global main database, executing statements with parameters, getting resultset info</p>
+<p class="E">Most applications need to work with just single database backend, therefore repeating SqlSession parameter in all Sql declarations would be tedious.</p>
+<p class="E">To this end U++ supports concept of &quot;main database&quot; which is represented by <span class="K">SQL</span> variable. <span class="K">SQL</span> is of Sql type. When any other Sql variable is created with default constructor (no session parameter provided), it uses the same session as the one the SQL is bound to. To assign session to global SQL, use operator=:</p>
+<p class="E">&nbsp;</p>
+<p class="F"><span class="G">#include</span><span class="H"> </span>&lt;<span class="H">Core</span>/<span class="H">Core</span>.<span class="H">h</span>&gt;</p>
+<p class="F"><span class="G">#include</span><span class="H"> </span>&lt;<span class="H">plugin</span>/<span class="H">sqlite3</span>/<span class="H">Sqlite3</span>.<span class="H">h</span>&gt;</p>
+<p class="I">&nbsp;</p>
+<p class="I"><span class="J">using</span> <span class="J">namespace</span> Upp;</p>
+<p class="I">&nbsp;</p>
+<p class="I">CONSOLE_APP_MAIN</p>
+<p class="I">{</p>
+<p class="I"> &nbsp;&nbsp;&nbsp;Sqlite3Session sqlite3;</p>
+<p class="I"> &nbsp;&nbsp;&nbsp;<span class="J">if</span>(<span class="L">!</span>sqlite3<span class="L">.</span>Open(ConfigFile(<span class="M">&quot;simple.db&quot;</span>))) {</p>
+<p class="I"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Cout() <span class="L">&lt;&lt;</span> <span class="M">&quot;Can't create or open database file</span><span class="L">\n</span><span class="M">&quot;</span>;</p>
+<p class="I"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="N"><u>return</u></span>;</p>
+<p class="I"> &nbsp;&nbsp;&nbsp;}</p>
+<p class="I"> &nbsp;&nbsp;&nbsp;</p>
+<p class="I"><span class="G">#ifdef</span> _DEBUG</p>
+<p class="I"> &nbsp;&nbsp;&nbsp;sqlite3<span class="L">.</span>SetTrace();</p>
+<p class="O">#endif</p>
+<p class="I">&nbsp;</p>
+<p class="I"> &nbsp;&nbsp;&nbsp;<span class="K"><u>SQL</u></span> <span class="L">=</span> sqlite3;</p>
+<p class="I"> &nbsp;&nbsp;&nbsp;</p>
+<p class="I"> &nbsp;&nbsp;&nbsp;<span class="K"><u>SQL</u></span><span class="L">.</span>Execute(<span class="M">&quot;drop table TEST&quot;</span>);</p>
+<p class="I"> &nbsp;&nbsp;&nbsp;SQL<span class="L">.</span>ClearError();</p>
+<p class="I"> &nbsp;&nbsp;&nbsp;SQL<span class="L">.</span>Execute(<span class="M">&quot;create table TEST (A INTEGER, B TEXT)&quot;</span>);</p>
+<p class="I">&nbsp;</p>
+<p class="I"> &nbsp;&nbsp;&nbsp;<span class="J">for</span>(<span class="J">int</span> i <span class="L">=</span> <span class="M">0</span>; i <span class="L">&lt;</span> <span class="M">10</span>; i<span class="L">++</span>)</p>
+<p class="I"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SQL<span class="L">.</span><span class="K"><u>Execute</u></span>(<span class="M">&quot;insert into TEST(A, B) values (?, ?)&quot;</span>, i, AsString(<span class="M">3</span> <span class="L">*</span> i));</p>
+<p class="I">&nbsp;</p>
+<p class="I"> &nbsp;&nbsp;&nbsp;Sql sql;</p>
+<p class="I"> &nbsp;&nbsp;&nbsp;sql<span class="L">.</span>Execute(<span class="M">&quot;select * from TEST&quot;</span>);</p>
+<p class="I"> &nbsp;&nbsp;&nbsp;<span class="J">for</span>(<span class="J">int</span> i <span class="L">=</span> <span class="M">0</span>; i <span class="L">&lt;</span> sql<span class="L">.</span><span class="K"><u>GetColumns</u></span>(); i<span class="L">++</span>)</p>
+<p class="I"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Cout() <span class="L">&lt;&lt;</span> sql<span class="L">.</span><span class="K"><u>GetColumnInfo(i)</u></span><span class="J"><u>.</u></span><span class="K"><u>name</u></span> <span class="L">&lt;&lt;</span> <span class="M">'</span><span class="L">\n</span><span class="M">'</span>;</p>
+<p class="I"> &nbsp;&nbsp;&nbsp;<span class="J">while</span>(sql<span class="L">.</span>Fetch())</p>
+<p class="I"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Cout() <span class="L">&lt;&lt;</span> sql<span class="L">[</span><span class="M">0</span><span class="L">]</span> <span class="L">&lt;&lt;</span> <span class="M">&quot; </span><span class="L">\'</span><span class="M">&quot;</span> <span class="L">&lt;&lt;</span> sql<span class="L">[</span><span class="M">1</span><span class="L">]</span> <span class="L">&lt;&lt;</span> <span class="M">&quot;</span><span class="L">\'\n</span><span class="M">&quot;</span>;</p>
+<p class="I">}</p>
+<p class="Q">&nbsp;</p>
+<p class="E">As global <span class="K">SQL</span> is regular Sql variable too, it can be used to issue SQL statements.</p>
+<p class="R">Warning: While it is possible to issue <span class="K">select</span> statements through <span class="K">SQL</span>, based on experience this is not recommended - way too often result set of <span class="K">select</span> is canceled by issuing some other command, e.g. in routine called as part of Fetch loop. One exception to this rule is using SQL::operator% to fetch single value like <span class="S">String txt = SQL % Select(TEXT).From(DOCTEMPLATE).Where(ID == id); </span>(see further tutorial topics for detailed explanation of this code).</p>
+<p class="E">To get information about result set columns, you can use <span class="K">GetColumns </span>to retrieve the number of columns and <span class="K">GetColumnInfo</span> to retrieve information about columns - returns <span class="K">SqlColumnInfo</span> reference with information like name or type of column.</p>
+<p class="E">&nbsp;</p>
+<hr><p id="3" class="D">3. Using SqlExp</p>
+<p class="E">U++ contains an unique feature, &quot;SqlExp&quot;. This is a mechanism where you construct SQL statements as C++ expressions (using heavily overloaded operators).</p>
+<p class="E">There are three advantages to this approach:</p>
+<p class="T">SQL statements are at least partially checked at compile time</p>
+<p class="T">As such statements are yet to be interpreted, it is possible to hide some differences between DB engines</p>
+<p class="T">It is much easier to create complex dynamic SQL statements</p>
+<p class="E">Database entity identifiers (like table or column names) can be defined as <span class="K">SqlId</span> type. For the complete lest of supported SQL statements, see <a href="src$Sql$SqlExp$en-us.html">SqlExp in examples</a>.</p>
+<p class="E">&nbsp;</p>
+<p class="F"><span class="G">#include</span><span class="H"> </span>&lt;<span class="H">Core</span>/<span class="H">Core</span>.<span class="H">h</span>&gt;</p>
+<p class="F"><span class="G">#include</span><span class="H"> </span>&lt;<span class="H">plugin</span>/<span class="H">sqlite3</span>/<span class="H">Sqlite3</span>.<span class="H">h</span>&gt;</p>
+<p class="I">&nbsp;</p>
+<p class="I"><span class="J">using</span> <span class="J">namespace</span> Upp;</p>
+<p class="I">&nbsp;</p>
+<p class="I">CONSOLE_APP_MAIN</p>
+<p class="I">{</p>
+<p class="I"> &nbsp;&nbsp;&nbsp;Sqlite3Session sqlite3;</p>
+<p class="I"> &nbsp;&nbsp;&nbsp;<span class="J">if</span>(<span class="L">!</span>sqlite3<span class="L">.</span>Open(ConfigFile(<span class="M">&quot;simple.db&quot;</span>))) {</p>
+<p class="I"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Cout() <span class="L">&lt;&lt;</span> <span class="M">&quot;Can't create or open database file</span><span class="L">\n</span><span class="M">&quot;</span>;</p>
+<p class="I"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="N"><u>return</u></span>;</p>
+<p class="I"> &nbsp;&nbsp;&nbsp;}</p>
+<p class="I"> &nbsp;&nbsp;&nbsp;</p>
+<p class="I"><span class="G">#ifdef</span> _DEBUG</p>
+<p class="I"> &nbsp;&nbsp;&nbsp;sqlite3<span class="L">.</span>SetTrace();</p>
+<p class="O">#endif</p>
+<p class="I">&nbsp;</p>
+<p class="I"> &nbsp;&nbsp;&nbsp;SQL <span class="L">=</span> sqlite3;</p>
+<p class="I"> &nbsp;&nbsp;&nbsp;</p>
+<p class="I"> &nbsp;&nbsp;&nbsp;SQL<span class="L">.</span>Execute(<span class="M">&quot;drop table TEST&quot;</span>);</p>
+<p class="I"> &nbsp;&nbsp;&nbsp;SQL<span class="L">.</span>ClearError();</p>
+<p class="I"> &nbsp;&nbsp;&nbsp;SQL<span class="L">.</span>Execute(<span class="M">&quot;create table TEST (A INTEGER, B TEXT)&quot;</span>);</p>
+<p class="I">&nbsp;</p>
+<p class="I"> &nbsp;&nbsp;&nbsp;<span class="K"><u>SqlId</u></span> A(<span class="M">&quot;A&quot;</span>), B(<span class="M">&quot;B&quot;</span>), TEST(<span class="M">&quot;TEST&quot;</span>);</p>
+<p class="I">&nbsp;</p>
+<p class="I"> &nbsp;&nbsp;&nbsp;<span class="J">for</span>(<span class="J">int</span> i <span class="L">=</span> <span class="M">0</span>; i <span class="L">&lt;</span> <span class="M">10</span>; i<span class="L">++</span>)</p>
+<p class="I"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SQL <span class="J"><u>*</u></span><span class="K"><u> Insert(TEST)(A, i)(B, AsString(</u></span><span class="P"><u>3</u></span><span class="K"><u> </u></span><span class="J"><u>*</u></span><span class="K"><u> i))</u></span>;</p>
+<p class="I">&nbsp;</p>
+<p class="I"> &nbsp;&nbsp;&nbsp;Sql sql;</p>
+<p class="I"> &nbsp;&nbsp;&nbsp;sql <span class="J"><u>*</u></span><span class="K"><u> Select(A, B)</u></span><span class="J"><u>.</u></span><span class="K"><u>From(TEST)</u></span>;</p>
+<p class="I"> &nbsp;&nbsp;&nbsp;<span class="J">while</span>(sql<span class="L">.</span>Fetch())</p>
+<p class="I"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Cout() <span class="L">&lt;&lt;</span> <span class="K"><u>sql</u></span><span class="J"><u>[</u></span><span class="K"><u>A</u></span><span class="J"><u>]</u></span> <span class="L">&lt;&lt;</span> <span class="M">&quot; </span><span class="L">\'</span><span class="M">&quot;</span> <span class="L">&lt;&lt;</span> <span class="K"><u>sql</u></span><span class="J"><u>[</u></span><span class="K"><u>B</u></span><span class="J"><u>]</u></span> <span class="L">&lt;&lt;</span> <span class="M">&quot;</span><span class="L">\'\n</span><span class="M">&quot;</span>;</p>
+<p class="I">}</p>
+<p class="Q">&nbsp;</p>
+<p class="E">SqlId identifiers can be also used as parameter of Sql::operator[] to retrieve particular columns of result-set.</p>
+<p class="E">&nbsp;</p>
+<hr><p id="4" class="D">4. Schema file</p>
+<p class="E">Schema files can be used to describe the database schema. Such schema files can be used to upload the schema to the database, to defined SqlId constants and also to work with database records as C++ structures.</p>
+<p class="E">Following example demonstrates using schema file to create database schema in SQL database server.</p>
+<p class="R">MyApp.sch:</p>
+<p class="E">&nbsp;</p>
+<p class="I"><span class="J">TABLE</span>(TEST)</p>
+<p class="I"> &nbsp;&nbsp;&nbsp;<span class="J">INT</span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(A)</p>
+<p class="I"> &nbsp;&nbsp;&nbsp;<span class="J">STRING</span> &nbsp;&nbsp;&nbsp;&nbsp;(B, <span class="M">200</span>)</p>
+<p class="U">END<span class="V">_</span>TABLE</p>
+<p class="E">&nbsp;</p>
+<p class="R">MyApp.h:</p>
+<p class="R">&nbsp;</p>
+<p class="I"><span class="G">#ifndef</span> _MyApp_h_</p>
+<p class="I"><span class="G">#define</span> _MyApp_h_</p>
+<p class="I">&nbsp;</p>
+<p class="F"><span class="G">#include</span><span class="H"> </span>&lt;<span class="H">Core</span>/<span class="H">Core</span>.<span class="H">h</span>&gt;</p>
+<p class="F"><span class="G">#include</span><span class="H"> </span>&lt;<span class="H">plugin</span>/<span class="H">sqlite3</span>/<span class="H">Sqlite3</span>.<span class="H">h</span>&gt;</p>
+<p class="I">&nbsp;</p>
+<p class="I"><span class="J">using</span> <span class="J">namespace</span> Upp;</p>
+<p class="I">&nbsp;</p>
+<p class="U"><span class="G"><u>#define</u></span><span class="H"><u> SCHEMADIALECT </u></span><u>&lt;</u><span class="H"><u>plugin</u></span><u>/</u><span class="H"><u>sqlite3</u></span><u>/</u><span class="H"><u>Sqlite3Schema</u></span><u>.</u><span class="H"><u>h</u></span><u>&gt;</u></p>
+<p class="U"><span class="G"><u>#define</u></span><span class="H"><u> MODEL </u></span><u>&lt;</u><span class="H"><u>Sql04</u></span><u>/</u><span class="H"><u>MyApp</u></span><u>.</u><span class="H"><u>sch</u></span><u>&gt;</u></p>
+<p class="W"><span class="G"><u>#include</u></span><span class="H"><u> </u></span><u>&quot;Sql/sch_header.h&quot;</u></p>
+<p class="I">&nbsp;</p>
+<p class="O">#endif</p>
+<p class="E">&nbsp;</p>
+<p class="R">main.cpp:</p>
+<p class="R">&nbsp;</p>
+<p class="X"><span class="G">#include</span><span class="H"> </span>&quot;MyApp.h&quot;</p>
+<p class="I">&nbsp;</p>
+<p class="U"><span class="G"><u>#include</u></span><span class="H"><u> </u></span><u>&lt;</u><span class="H"><u>Sql</u></span><u>/</u><span class="H"><u>sch_schema</u></span><u>.</u><span class="H"><u>h</u></span><u>&gt;</u></p>
+<p class="U"><span class="G"><u>#include</u></span><span class="H"><u> </u></span><u>&lt;</u><span class="H"><u>Sql</u></span><u>/</u><span class="H"><u>sch_source</u></span><u>.</u><span class="H"><u>h</u></span><u>&gt;</u></p>
+<p class="I">&nbsp;</p>
+<p class="I">CONSOLE_APP_MAIN</p>
+<p class="I">{</p>
+<p class="I"> &nbsp;&nbsp;&nbsp;Sqlite3Session sqlite3;</p>
+<p class="I"> &nbsp;&nbsp;&nbsp;<span class="J">if</span>(<span class="L">!</span>sqlite3<span class="L">.</span>Open(ConfigFile(<span class="M">&quot;simple.db&quot;</span>))) {</p>
+<p class="I"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Cout() <span class="L">&lt;&lt;</span> <span class="M">&quot;Can't create or open database file</span><span class="L">\n</span><span class="M">&quot;</span>;</p>
+<p class="I"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="N"><u>return</u></span>;</p>
+<p class="I"> &nbsp;&nbsp;&nbsp;}</p>
+<p class="I"> &nbsp;&nbsp;&nbsp;</p>
+<p class="I"><span class="G">#ifdef</span> _DEBUG</p>
+<p class="I"> &nbsp;&nbsp;&nbsp;sqlite3<span class="L">.</span>SetTrace();</p>
+<p class="O">#endif</p>
+<p class="I">&nbsp;</p>
+<p class="I"> &nbsp;&nbsp;&nbsp;SQL <span class="L">=</span> sqlite3;</p>
+<p class="I">&nbsp;</p>
+<p class="Y"><span class="V"> &nbsp;&nbsp;&nbsp;</span><u>SqlSchema sch(SQLITE3);</u></p>
+<p class="Y"><span class="V"> &nbsp;&nbsp;&nbsp;</span><u>All_Tables(sch);</u></p>
+<p class="Y"><span class="V"> &nbsp;&nbsp;&nbsp;</span><u>SqlPerformScript(sch</u><span class="L"><u>.</u></span><u>Upgrade());</u></p>
+<p class="Y"><span class="V"> &nbsp;&nbsp;&nbsp;</span><u>SqlPerformScript(sch</u><span class="L"><u>.</u></span><u>Attributes());</u></p>
+<p class="Y"><span class="V"> &nbsp;&nbsp;&nbsp;</span><u>SQL</u><span class="L"><u>.</u></span><u>ClearError();</u></p>
+<p class="I">&nbsp;</p>
+<p class="I"> &nbsp;&nbsp;&nbsp;SqlId A(<span class="M">&quot;A&quot;</span>), B(<span class="M">&quot;B&quot;</span>), TEST(<span class="M">&quot;TEST&quot;</span>);</p>
+<p class="I">&nbsp;</p>
+<p class="I"> &nbsp;&nbsp;&nbsp;<span class="J">for</span>(<span class="J">int</span> i <span class="L">=</span> <span class="M">0</span>; i <span class="L">&lt;</span> <span class="M">10</span>; i<span class="L">++</span>)</p>
+<p class="I"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SQL <span class="L">*</span> Insert(TEST)(A, i)(B, AsString(<span class="M">3</span> <span class="L">*</span> i));</p>
+<p class="I">&nbsp;</p>
+<p class="I"> &nbsp;&nbsp;&nbsp;Sql sql;</p>
+<p class="I"> &nbsp;&nbsp;&nbsp;sql <span class="L">*</span> Select(A, B)<span class="L">.</span>From(TEST);</p>
+<p class="I"> &nbsp;&nbsp;&nbsp;<span class="J">while</span>(sql<span class="L">.</span>Fetch())</p>
+<p class="I"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Cout() <span class="L">&lt;&lt;</span> sql<span class="L">[</span>A<span class="L">]</span> <span class="L">&lt;&lt;</span> <span class="M">&quot; </span><span class="L">\'</span><span class="M">&quot;</span> <span class="L">&lt;&lt;</span> sql<span class="L">[</span>B<span class="L">]</span> <span class="L">&lt;&lt;</span> <span class="M">&quot;</span><span class="L">\'\n</span><span class="M">&quot;</span>;</p>
+<p class="I">}</p>
+<p class="E">&nbsp;</p>
+<hr><p id="5" class="D">5. Using schema file to define SqlId constants</p>
+<p class="E">As names of columns are present in the database schema, it is natural to recycle them to create SqlId constants.</p>
+<p class="E">However, due to C++ one definition rule (.sch files are interpreted as C++ sources, using changing set of macros), you have to mark identifiers using underscore:</p>
+<p class="R">MyApp.sch:</p>
+<p class="R">&nbsp;</p>
+<p class="I"><span class="J">TABLE</span><span class="L">_</span>(TEST)</p>
+<p class="I"> &nbsp;&nbsp;&nbsp;<span class="J">INT</span><span class="L">_</span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(A)</p>
+<p class="I"> &nbsp;&nbsp;&nbsp;<span class="J">STRING</span><span class="L">_</span> &nbsp;&nbsp;&nbsp;&nbsp;(B, <span class="M">200</span>)</p>
+<p class="U">END<span class="V">_</span>TABLE</p>
+<p class="I">&nbsp;</p>
+<p class="I"><span class="J">TABLE</span><span class="L">_</span>(TEST2)</p>
+<p class="I"> &nbsp;&nbsp;&nbsp;<span class="J">INT</span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(A)</p>
+<p class="I"> &nbsp;&nbsp;&nbsp;<span class="J">STRING</span> &nbsp;&nbsp;&nbsp;&nbsp;(B, <span class="M">200</span>)</p>
+<p class="U">END<span class="V">_</span>TABLE</p>
+<p class="E">&nbsp;</p>
+<p class="E">MyApp.h:</p>
+<p class="E">&nbsp;</p>
+<p class="I"><span class="G">#ifndef</span> _MyApp_h_</p>
+<p class="I"><span class="G">#define</span> _MyApp_h_</p>
+<p class="I">&nbsp;</p>
+<p class="F"><span class="G">#include</span><span class="H"> </span>&lt;<span class="H">Core</span>/<span class="H">Core</span>.<span class="H">h</span>&gt;</p>
+<p class="F"><span class="G">#include</span><span class="H"> </span>&lt;<span class="H">plugin</span>/<span class="H">sqlite3</span>/<span class="H">Sqlite3</span>.<span class="H">h</span>&gt;</p>
+<p class="I">&nbsp;</p>
+<p class="I"><span class="J">using</span> <span class="J">namespace</span> Upp;</p>
+<p class="I">&nbsp;</p>
+<p class="F"><span class="G">#define</span><span class="H"> SCHEMADIALECT </span>&lt;<span class="H">plugin</span>/<span class="H">sqlite3</span>/<span class="H">Sqlite3Schema</span>.<span class="H">h</span>&gt;</p>
+<p class="F"><span class="G">#define</span><span class="H"> MODEL </span>&lt;<span class="H">Sql05</span>/<span class="H">MyApp</span>.<span class="H">sch</span>&gt;</p>
+<p class="X"><span class="G">#include</span><span class="H"> </span>&quot;Sql/sch_header.h&quot;</p>
+<p class="I">&nbsp;</p>
+<p class="O">#endif</p>
+<p class="E">&nbsp;</p>
+<p class="E">main.cpp:</p>
+<p class="E">&nbsp;</p>
+<p class="X"><span class="G">#include</span><span class="H"> </span>&quot;MyApp.h&quot;</p>
+<p class="I">&nbsp;</p>
+<p class="F"><span class="G">#include</span><span class="H"> </span>&lt;<span class="H">Sql</span>/<span class="H">sch_schema</span>.<span class="H">h</span>&gt;</p>
+<p class="F"><span class="G">#include</span><span class="H"> </span>&lt;<span class="H">Sql</span>/<span class="H">sch_source</span>.<span class="H">h</span>&gt;</p>
+<p class="I">&nbsp;</p>
+<p class="I">CONSOLE_APP_MAIN</p>
+<p class="I">{</p>
+<p class="I"> &nbsp;&nbsp;&nbsp;Sqlite3Session sqlite3;</p>
+<p class="I"> &nbsp;&nbsp;&nbsp;<span class="J">if</span>(<span class="L">!</span>sqlite3<span class="L">.</span>Open(ConfigFile(<span class="M">&quot;simple.db&quot;</span>))) {</p>
+<p class="I"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Cout() <span class="L">&lt;&lt;</span> <span class="M">&quot;Can't create or open database file</span><span class="L">\n</span><span class="M">&quot;</span>;</p>
+<p class="I"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="N"><u>return</u></span>;</p>
+<p class="I"> &nbsp;&nbsp;&nbsp;}</p>
+<p class="I"> &nbsp;&nbsp;&nbsp;</p>
+<p class="I"><span class="G">#ifdef</span> _DEBUG</p>
+<p class="I"> &nbsp;&nbsp;&nbsp;sqlite3<span class="L">.</span>SetTrace();</p>
+<p class="O">#endif</p>
+<p class="I">&nbsp;</p>
+<p class="I"> &nbsp;&nbsp;&nbsp;SQL <span class="L">=</span> sqlite3;</p>
+<p class="I">&nbsp;</p>
+<p class="I"> &nbsp;&nbsp;&nbsp;SqlSchema sch(SQLITE3);</p>
+<p class="I"> &nbsp;&nbsp;&nbsp;All_Tables(sch);</p>
+<p class="I"> &nbsp;&nbsp;&nbsp;SqlPerformScript(sch<span class="L">.</span>Upgrade());</p>
+<p class="I"> &nbsp;&nbsp;&nbsp;SqlPerformScript(sch<span class="L">.</span>Attributes());</p>
+<p class="I"> &nbsp;&nbsp;&nbsp;SQL<span class="L">.</span>ClearError();</p>
+<p class="I">&nbsp;</p>
+<p class="I"> &nbsp;&nbsp;&nbsp;<span class="J">for</span>(<span class="J">int</span> i <span class="L">=</span> <span class="M">0</span>; i <span class="L">&lt;</span> <span class="M">10</span>; i<span class="L">++</span>)</p>
+<p class="I"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SQL <span class="L">*</span> Insert(TEST)(A, i)(B, AsString(<span class="M">3</span> <span class="L">*</span> i));</p>
+<p class="I">&nbsp;</p>
+<p class="I"> &nbsp;&nbsp;&nbsp;Sql sql;</p>
+<p class="I"> &nbsp;&nbsp;&nbsp;sql <span class="L">*</span> Select(A, B)<span class="L">.</span>From(TEST);</p>
+<p class="I"> &nbsp;&nbsp;&nbsp;<span class="J">while</span>(sql<span class="L">.</span>Fetch())</p>
+<p class="I"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Cout() <span class="L">&lt;&lt;</span> sql<span class="L">[</span>A<span class="L">]</span> <span class="L">&lt;&lt;</span> <span class="M">&quot; </span><span class="L">\'</span><span class="M">&quot;</span> <span class="L">&lt;&lt;</span> sql<span class="L">[</span>B<span class="L">]</span> <span class="L">&lt;&lt;</span> <span class="M">&quot;</span><span class="L">\'\n</span><span class="M">&quot;</span>;</p>
+<p class="I">}</p>
+<p class="E">&nbsp;</p>
+<hr><p id="6" class="D">6. Using structures defined by schema files</p>
+<p class="E">Schema files also define structures that can be used to fetch, insert or update database records. Names of such structures are identical to the names of tables, with <span class="K">S_</span> prefix:</p>
+<p class="E">&nbsp;</p>
+<p class="X"><span class="G">#include</span><span class="H"> </span>&quot;MyApp.h&quot;</p>
+<p class="I">&nbsp;</p>
+<p class="F"><span class="G">#include</span><span class="H"> </span>&lt;<span class="H">Sql</span>/<span class="H">sch_schema</span>.<span class="H">h</span>&gt;</p>
+<p class="F"><span class="G">#include</span><span class="H"> </span>&lt;<span class="H">Sql</span>/<span class="H">sch_source</span>.<span class="H">h</span>&gt;</p>
+<p class="I">&nbsp;</p>
+<p class="I">CONSOLE_APP_MAIN</p>
+<p class="I">{</p>
+<p class="I"> &nbsp;&nbsp;&nbsp;Sqlite3Session sqlite3;</p>
+<p class="I"> &nbsp;&nbsp;&nbsp;<span class="J">if</span>(<span class="L">!</span>sqlite3<span class="L">.</span>Open(ConfigFile(<span class="M">&quot;simple.db&quot;</span>))) {</p>
+<p class="I"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Cout() <span class="L">&lt;&lt;</span> <span class="M">&quot;Can't create or open database file</span><span class="L">\n</span><span class="M">&quot;</span>;</p>
+<p class="I"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="N"><u>return</u></span>;</p>
+<p class="I"> &nbsp;&nbsp;&nbsp;}</p>
+<p class="I"> &nbsp;&nbsp;&nbsp;</p>
+<p class="I"><span class="G">#ifdef</span> _DEBUG</p>
+<p class="I"> &nbsp;&nbsp;&nbsp;sqlite3<span class="L">.</span>SetTrace();</p>
+<p class="O">#endif</p>
+<p class="I">&nbsp;</p>
+<p class="I"> &nbsp;&nbsp;&nbsp;SQL <span class="L">=</span> sqlite3;</p>
+<p class="I">&nbsp;</p>
+<p class="I"> &nbsp;&nbsp;&nbsp;SqlSchema sch(SQLITE3);</p>
+<p class="I"> &nbsp;&nbsp;&nbsp;All_Tables(sch);</p>
+<p class="I"> &nbsp;&nbsp;&nbsp;SqlPerformScript(sch<span class="L">.</span>Upgrade());</p>
+<p class="I"> &nbsp;&nbsp;&nbsp;SqlPerformScript(sch<span class="L">.</span>Attributes());</p>
+<p class="I"> &nbsp;&nbsp;&nbsp;SQL<span class="L">.</span>ClearError();</p>
+<p class="I">&nbsp;</p>
+<p class="Y"><span class="V"> &nbsp;&nbsp;&nbsp;</span><u>S_TEST x;</u></p>
+<p class="I"> &nbsp;&nbsp;&nbsp;<span class="J">for</span>(<span class="J">int</span> i <span class="L">=</span> <span class="M">0</span>; i <span class="L">&lt;</span> <span class="M">10</span>; i<span class="L">++</span>) {</p>
+<p class="Y"><span class="V"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><u>x</u><span class="L"><u>.</u></span><u>A </u><span class="L"><u>=</u></span><u> i;</u></p>
+<p class="Y"><span class="V"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><u>x</u><span class="L"><u>.</u></span><u>B </u><span class="L"><u>=</u></span><u> AsString(</u><span class="M"><u>3</u></span><u> </u><span class="L"><u>*</u></span><u> i);</u></p>
+<p class="Y"><span class="V"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><u>SQL </u><span class="L"><u>*</u></span><u> Insert(x);</u></p>
+<p class="I"> &nbsp;&nbsp;&nbsp;}</p>
+<p class="I">&nbsp;</p>
+<p class="I"> &nbsp;&nbsp;&nbsp;Sql sql;</p>
+<p class="I"> &nbsp;&nbsp;&nbsp;sql <span class="L">*</span> Select(<span class="K"><u>x</u></span>)<span class="L">.</span>From(TEST);</p>
+<p class="I"> &nbsp;&nbsp;&nbsp;<span class="J">while</span>(sql<span class="L">.</span>Fetch(<span class="K"><u>x</u></span>))</p>
+<p class="I"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Cout() <span class="L">&lt;&lt;</span> <span class="K"><u>x</u></span><span class="J"><u>.</u></span><span class="K"><u>A</u></span> <span class="L">&lt;&lt;</span> <span class="M">&quot; </span><span class="L">\'</span><span class="M">&quot;</span> <span class="L">&lt;&lt;</span> <span class="K"><u>x</u></span><span class="J"><u>.</u></span><span class="K"><u>B</u></span> <span class="L">&lt;&lt;</span> <span class="M">&quot;</span><span class="L">\'\n</span><span class="M">&quot;</span>;</p>
+<p class="I">}</p>
+<p class="Q">&nbsp;</p>
+<hr><p class="D">Recommended tutorials:</p>
+<p class="E">If you want to learn more, we have several tutorials that you can find useful:</p>
+<p class="T"><a href="srcdoc$Core$Tutorial_en-us.html">U++ Core value types</a> - still not very confident with U++. In this tutorial you will learn basics.</p>
+</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>
+<TABLE BORDER="0" WIDTH="100%"><TR><TD></TD>
+</TR>
+</TABLE>
+<TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" BGCOLOR="#FFFFFF" WIDTH="100%" style="border-style: solid; border-width: 1px; border-color: #6E89AE;padding: 10px;;"><TR><TD><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%"><TR><TD><p class="A"><span class="B"> </span><a href="www$uppweb$contribweb$en-us.html">Do you want to contribute?</a></p>
+</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>
+<script type="text/javascript">var a={};var p=window.location.pathname.split("/");p=p[p.length-1];var s='<select id="lang" onchange="window.location=document.getElementById(\'lang\').value;">';for(l in a){if(p==l){d=" selected=1"}else{d=""}s+='<option value="'+l+'"'+d+'>'+a[l]+'</option>'}s+='</select>';var d=document.createElement('div');d.innerHTML=s;var c=document.getElementById('langs');c.replaceChild(d,c.firstChild);document.getElementById('langbox').style.display='block';</script></BODY>

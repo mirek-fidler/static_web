@@ -1,0 +1,389 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en-us">
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
+<META NAME="Generator" CONTENT="U++ HTML Package">
+<TITLE>Image Utility Functions :: U++</TITLE>
+<STYLE TYPE="text/css"><!--
+.A{margin:0px 0px 0px 0px;text-indent:0px;text-align:left;color:#000000;font-family:sans-serif;font-size:10pt;font-weight:normal;font-style:normal;}
+.B{font-size:12pt;}
+.C{border-collapse:collapse;table-layout:auto;border: 2px solid #000000;}
+.D{padding: 3px 5px 3px 5px;border-left: 1px solid #000000;border-top: 1px solid #000000;border-right: 1px solid #000000;border-bottom: 1px solid #000000;background-color:#712A00;vertical-align:middle;}
+.E{margin:0px 0px 0px 0px;text-indent:0px;text-align:left;color:#e5e5e5;font-family:sans-serif;font-size:16pt;font-weight:bold;font-style:normal;}
+.F{margin:0px 0px 0px 0px;text-indent:0px;text-align:left;color:#000000;font-family:sans-serif;font-size:6pt;font-weight:normal;font-style:normal;}
+.G{margin:0px 0px 5px 0px;text-indent:0px;text-align:left;color:#000000;font-family:sans-serif;font-size:10pt;font-weight:normal;font-style:normal;}
+.H{color:#0000ff;}
+.I{font-weight:bold;}
+.J{color:#800000;font-weight:bold;}
+.K{margin:0px 0px 0px 57px;text-indent:0px;text-align:left;color:#000000;font-family:sans-serif;font-size:10pt;font-weight:normal;font-style:normal;}
+.L{margin:0px 0px 0px 57px;text-indent:0px;text-align:left;color:#800000;font-family:sans-serif;font-size:10pt;font-weight:bold;font-style:normal;}
+.M{color:#000000;font-weight:normal;}
+.N{color:#800000;}
+.O{color:#000000;}
+a.l1         { text-decoration:none; font-size: 8pt; font-family: sans-serif; font-weight: normal; }
+a.l1:link    { color:#000000; }
+a.l1:visited { color:#000080; }
+a.l1:hover   { color:#9933CC; }
+a.l1:active  { color:#000000; }
+a.l2         { text-decoration:none; font-size: 12pt; font-family: sans-serif; font-variant: small-caps; }
+a.l2:link    { color:#0066FF; }
+a.l2:visited { color:#FF6600; }
+a.l2:hover   { color:#BC0624; }
+a.l2:active  { color:#BC0024; }
+
+-->
+</STYLE>
+<META NAME="keywords" CONTENT="framework, toolkit, widget, c++, visual, studio, dev-cpp, builder, ide, class, component,wxwidgets, qt, rapid, application, development, rad, mfc, linux, macos, gui, sdl, directx, desktop"><META name="robots" content="index,follow">
+<LINK rel="alternate" type="application/rss+xml" title="SVN changes" href="svnchanges.xml">
+<LINK rel="shortcut icon" type="image/png" href="favicon.png">
+</HEAD><BODY BGCOLOR="#D2D9D2" ALINK="#800000" LINK="#000000" VLINK="#000080"><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%"><TR><TD COLSPAN="3"><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%" BGCOLOR="#FFFFFF" style="border: 1px solid #6E89AE;padding-left: 10px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;"><TR><TD><A HREF="index.html"><IMG SRC="0i.png" ALT="" BORDER="0"></A>
+</TD>
+<TD ALIGN="RIGHT" VALIGN="BOTTOM" STYLE="padding-bottom: 5px; background-image: url('1i.png')"><span style="font-size: 14pt; font-family: sans-serif;"><script type="text/javascript"><!--
+google_ad_client = "pub-1082147624384270";
+google_ad_width = 468;
+google_ad_height = 60;
+google_ad_format = "468x60_as";
+google_ad_type = "text_image";
+google_ad_channel = "";
+google_color_border = "336699";
+google_color_bg = "FFFFFF";
+google_color_link = "0000FF";
+google_color_text = "000000";
+google_color_url = "008000";
+//--></script>
+<script type="text/javascript"
+  src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+&nbsp;&nbsp;</span>
+</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>
+<TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%"><TR><TD COLSPAN="3" BGCOLOR="#D2D9D2" HEIGHT="6"></TD>
+</TR>
+<TR><TD VALIGN="TOP" ALIGN="CENTER"><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="160"><TR><TD ALIGN="CENTER"><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%" BGCOLOR="#FFFFFF" style="border-style: solid; border-width: 1px; border-color: #6E89AE;padding: 0px"><TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px;"><A HREF="www$uppweb$overview$en-us.html" CLASS="l1">Overview</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$examples$en-us.html" CLASS="l1">Examples</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$ss$en-us.html" CLASS="l1">Screenshots</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$comparison$en-us.html" CLASS="l1">Comparisons</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$apps$en-us.html" CLASS="l1">Applications</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$download$en-us.html" CLASS="l1">Download</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$documentation$en-us.html" CLASS="l1">Documentation</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$Tutorials$en-us.html" CLASS="l1">Tutorials</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="app$ide$UppHub$en-us.html" CLASS="l1">UppHub</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$Roadmap$en-us.html" CLASS="l1">Status & Roadmap</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$FAQ$en-us.html" CLASS="l1">FAQ</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="app$ide$About$en-us.html" CLASS="l1">Authors & License</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="https://www.ultimatepp.org/forums" CLASS="l1">Forums</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$Funding$en-us.html" CLASS="l1">Funding U++</A>
+</TD>
+</TR>
+</TABLE>
+<TABLE BORDER="0" WIDTH="100%"><TR><TD></TD>
+</TR>
+</TABLE>
+<TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%" BGCOLOR="#FFFFFF" style="border-style: solid; border-width: 1px; border-color: #6E89AE;padding: 0px"><TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('3i.png'); border: 0px solid black;padding-left:12px; padding-right:0px; padding-top:1px; padding-bottom:1px;color:#FFFFFF;"><B><span style="font-size: 8pt; font-family: sans-serif;">Search on this site</span>
+</B>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:6px; padding-right:0px; padding-top:4px; padding-bottom:4px;border-top: 1px solid #6E89AE;"><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%"><TR><TD><IMG SRC="4i.png" ALT="" BORDER="0"></TD>
+<TD><FORM ACTION="https://www.google.com/search" METHOD="GET" STYLE="margin:0px;padding:0px;"><INPUT TYPE="HIDDEN" NAME="ie" VALUE="UTF-8"><INPUT TYPE="HIDDEN" NAME="oe" VALUE="UTF-8"><INPUT TYPE="TEXT" NAME="q" SIZE="15" MAXLENGTH="256" placeholder="Site search"><INPUT TYPE="HIDDEN" NAME="sitesearch" VALUE="ultimatepp.org"></FORM>
+</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>
+<TABLE BORDER="0" WIDTH="100%"><TR><TD></TD>
+</TR>
+</TABLE>
+<br><div id="fb-root"></div>
+<script type="text/javascript">(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) {return;}
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+<div class="fb-like" data-href="https://www.facebook.com/pages/Upp-Framework/262346610476027?sk=wall" data-send="false" data-layout="button_count" data-width="160" data-show-faces="false" data-font="arial"></div>
+<br><br><script type="text/javascript"><!--
+google_ad_client = "pub-1082147624384270";
+google_ad_width = 160;
+google_ad_height = 600;
+google_ad_format = "160x600_as";
+google_ad_type = "text_image";
+google_ad_channel = "";
+google_color_border = "336699";
+google_color_bg = "FFFFFF";
+google_color_link = "0000FF";
+google_color_text = "000000";
+google_color_url = "008000";
+//--></script>
+<script type="text/javascript"
+  src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script><br><br><script type="text/javascript"><!--
+google_ad_client = "pub-1082147624384270";
+google_ad_width = 160;
+google_ad_height = 90;
+google_ad_format = "160x90_0ads_al_s";
+google_ad_channel = "";
+google_color_border = "336699";
+google_color_bg = "FFFFFF";
+google_color_link = "0000FF";
+google_color_text = "000000";
+google_color_url = "008000";
+//--></script>
+<script type="text/javascript"
+  src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+<br><br><br><br><br><br><A HREF="https://sourceforge.net/projects/upp/"><IMG SRC="https://sourceforge.net/sflogo.php?group_id=93970&amp;type=2" ALT="SourceForge.net Logo" BORDER="0" WIDTH="125" HEIGHT="37"></A>
+<br><br><A HREF="https://flathub.org/en/apps/org.ultimatepp.TheIDE"><IMG SRC="5i.png" ALT="SourceForge.net Logo" BORDER="0" WIDTH="125" HEIGHT="37"></A>
+<br><br><div style="background-color:#ffffff;width:125;height:35"><A HREF="https://github.com/ultimatepp"><IMG SRC="6i.png" ALT="GitHub Logo" BORDER="0" WIDTH="125" HEIGHT="35"></A>
+</div><br><div style="background-color:#ffffff;width:125;height:35"><div style="height:5"></div><A HREF="https://discord.gg/8XzqQzXZzb"><IMG SRC="https://assets-global.website-files.com/6257adef93867e50d84d30e2/636e0b5061df29d55a92d945_full_logo_blurple_RGB.svg" ALT="Discord Logo" BORDER="0" WIDTH="125" HEIGHT="25"></A>
+</div><br></TD>
+</TR>
+</TABLE>
+</TD>
+<TD VALIGN="TOP" BGCOLOR="#D2D9D2"><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="6"><TR><TD></TD>
+</TR>
+</TABLE>
+</TD>
+<TD VALIGN="TOP" WIDTH="100%" BGCOLOR="#D2D9D2"><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" BGCOLOR="#FFFFFF" WIDTH="100%" style="border-style: solid; border-width: 1px; border-color: #6E89AE;padding: 10px;;"><TR><TD><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%"><TR><TD><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr><td width="100%"><table width="100%" class="C"><colgroup><col width="100%"></colgroup>
+<tr><td class="D"><p class="E">Image Utility Functions</p>
+</td>
+</tr>
+</table></td>
+</tr></table>
+<p class="F">&nbsp;</p>
+<p id="Upp::SetHotSpots(Upp::Image&,Upp::Point,Upp::Point)" class="G"><span class="H">void</span>&nbsp;<span class="I">SetHotSpots</span>(<a href="Upp::Image"><u>Image</u></a><span class="H">&amp;</span>&nbsp;<span class="J">m</span>, <a href="Upp::Point"><u>Point</u></a>&nbsp;<span class="J">hotspot</span>, <a href="Upp::Point"><u>Point</u></a>&nbsp;<span class="J">hotspot2</span>)</p>
+<p class="K">Sets hotspots in <span class="J">m</span> to <span class="J">hotspot</span>, <span class="J">hotspot2</span>.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Upp::WithHotSpots(const Upp::Image&,Upp::Point,Upp::Point)" class="G"><a href="Upp::Image"><u>Image</u></a>&nbsp;<span class="I">WithHotSpots</span>(<span class="H">const</span>&nbsp;<a href="Upp::Image"><u>Image</u></a><span class="H">&amp;</span>&nbsp;<span class="J">m</span>, <a href="Upp::Point"><u>Point</u></a>&nbsp;<span class="J">hotspot</span>, <a href="Upp::Point"><u>Point</u></a>&nbsp;<span class="J">hotspot2</span>)</p>
+<p id="WithHotSpots(const Image&,int,int,int,int)" class="G"><a href="Image"><u>Image</u></a>&nbsp;<span class="I">WithHotSpots</span>(<span class="H">const</span>&nbsp;<a href="Image"><u>Image</u></a><span class="H">&amp;</span>&nbsp;<span class="J">m</span>, <span class="H">int</span>&nbsp;<span class="J">x1</span>, <span class="H">int</span>&nbsp;<span class="J">y1</span>, <span class="H">int</span>&nbsp;<span class="J">x2</span>, <span class="H">int</span>&nbsp;<span class="J">y2</span>)</p>
+<p class="K">Returns <span class="J">m</span> with new hotspots.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="WithHotSpot(const Image&,int,int)" class="G"><a href="Image"><u>Image</u></a>&nbsp;<span class="I">WithHotSpot</span>(<span class="H">const</span>&nbsp;<a href="Image"><u>Image</u></a><span class="H">&amp;</span>&nbsp;<span class="J">m</span>, <span class="H">int</span>&nbsp;<span class="J">x1</span>, <span class="H">int</span>&nbsp;<span class="J">y1</span>)</p>
+<p class="L"><span class="M">Returns </span>m<span class="M"> with hotspot </span>x1,<span class="M"> </span>y1.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="CreateImage(Size,const RGBA&)" class="G"><a href="Image"><u>Image</u></a>&nbsp;<span class="I">CreateImage</span>(<a href="Size"><u>Size</u></a>&nbsp;<span class="J">sz</span>, <span class="H">const</span>&nbsp;<a href="RGBA"><u>RGBA</u></a><span class="H">&amp;</span>&nbsp;<span class="J">rgba</span>)</p>
+<p class="K">Creates a new Image with Size <span class="J">sz</span> filled with color <span class="J">rgba</span>.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="CreateImage(Size,Color)" class="G"><a href="Image"><u>Image</u></a>&nbsp;<span class="I">CreateImage</span>(<a href="Size"><u>Size</u></a>&nbsp;<span class="J">sz</span>, <a href="Color"><u>Color</u></a>&nbsp;<span class="J">color</span>)</p>
+<p class="K">Creates a new Image with Size <span class="J">sz</span> filled with color <span class="J">color</span>.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="DstSrc(ImageBuffer&,Point&,const Image&,Rect&)" class="G"><a href="Size"><u>Size</u></a>&nbsp;<span class="I">DstSrc</span>(<a href="ImageBuffer"><u>ImageBuffer</u></a><span class="H">&amp;</span>&nbsp;<span class="J">dest</span>, <a href="Point"><u>Point</u></a><span class="H">&amp;</span>&nbsp;<span class="J">p</span>, <span class="H">const</span>&nbsp;<a href="Image"><u>Image</u></a><span class="H">&amp;</span>&nbsp;<span class="J">src</span>, <a href="Rect"><u>Rect</u></a><span class="H">&amp;</span>&nbsp;<span class="J">sr</span>)</p>
+<p class="K">Calculates the minimum Size of Rect <span class="J">sr</span> of Image <span class="J">src</span> when trying to copy it into Point <span class="J">p</span> of ImageBuffer <span class="J">dest</span>.</p>
+<p class="F">&nbsp;</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Upp::DstSrcOp(ImageBuffer&,Point,const Image&,const Rect&,void(*)(RGBA*,const RGBA*,int),bool)" class="G"><span class="H">void</span> <span class="I">DstSrcOp</span>(ImageBuffer<span class="H">&amp;</span> <span class="J">dest</span>, Point <span class="J">p</span>, <span class="H">const</span> Image<span class="H">&amp;</span> <span class="J">src</span>, <span class="H">const</span> Rect<span class="H">&amp;</span> <span class="J">srect</span>, <span class="H">void</span> (<span class="H">*</span>op)(RGBA <span class="H">*</span>, <span class="H">const</span> <span class="J">RGBA</span> <span class="H">*</span>, <span class="H">int</span>), <span class="H">bool</span> <span class="J">co</span> <span class="H">=</span> <span class="H">false</span>)</p>
+<p class="K">Copies Rect <span class="J">srect</span> of Image <span class="J">src</span> into Point <span class="J">p</span> of ImageBuffer <span class="J">dest</span> using copying function <span class="J">op</span>. If <span class="J">co</span> is true, uses multithreading.</p>
+<p class="A">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Upp::Copy(ImageBuffer&,Point,const Image&,const Rect&,bool)" class="G"><span class="H">void</span> <span class="I">Copy</span>(ImageBuffer<span class="H">&amp;</span> <span class="J">dest</span>, Point <span class="J">p</span>, <span class="H">const</span> Image<span class="H">&amp;</span> <span class="J">src</span>, <span class="H">const</span> Rect<span class="H">&amp;</span> <span class="J">srect</span>, <span class="H">bool</span> <span class="J">co</span> <span class="H">=</span> <span class="H">false</span>)</p>
+<p class="K">Copies Rect <span class="J">srect</span> of Image <span class="J">src</span> into Point <span class="J">p</span> of ImageBuffer <span class="J">dest</span>. <span class="J">co</span> activates multithreading.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Fill(ImageBuffer&,const Rect&,RGBA)" class="G"><span class="H">void</span>&nbsp;<span class="I">Fill</span>(<a href="ImageBuffer"><u>ImageBuffer</u></a><span class="H">&amp;</span>&nbsp;<span class="J">dest</span>, <span class="H">const</span>&nbsp;<a href="Rect"><u>Rect</u></a><span class="H">&amp;</span>&nbsp;<span class="J">rect</span>, <a href="RGBA"><u>RGBA</u></a>&nbsp;<span class="J">color</span>)</p>
+<p class="K">Fills rectangular are <span class="J">rect</span> with <span class="J">color</span> .</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Upp::Copy(Image&,Point,const Image&,const Rect&,bool)" class="G"><span class="H">void</span> <span class="I">Copy</span>(Image<span class="H">&amp;</span> <span class="J">dest</span>, Point <span class="J">p</span>, <span class="H">const</span> Image<span class="H">&amp;</span> <span class="J">src</span>, <span class="H">const</span> Rect<span class="H">&amp;</span> <span class="J">srect</span>, <span class="H">bool</span> <span class="J">co</span> <span class="H">=</span> <span class="H">false</span>)</p>
+<p class="K">Copies Rect <span class="J">srect</span> of Image <span class="J">src</span> into Point <span class="J">p</span> of Image <span class="J">dest</span>. If <span class="J">co</span> is true, uses multithreading.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Upp::Over(ImageBuffer&,Point,const Image&,const Rect&,bool)" class="G"><span class="H">void</span> <span class="I">Over</span>(ImageBuffer<span class="H">&amp;</span> <span class="J">dest</span>, Point <span class="J">p</span>, <span class="H">const</span> Image<span class="H">&amp;</span> <span class="J">src</span>, <span class="H">const</span> Rect<span class="H">&amp;</span> <span class="J">srect</span>, <span class="H">bool</span> <span class="J">co</span> <span class="H">=</span> <span class="H">false</span>)</p>
+<p class="K">Paints over (using alpha channel) Rect <span class="J">srect</span> of Image <span class="J">src</span> into Point <span class="J">p</span> of ImageBuffer <span class="J">dest</span>. If <span class="J">co</span> is true, uses multithreading.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Upp::Over(Image&,Point,const Image&,const Rect&,bool)" class="G"><span class="H">void</span> <span class="I">Over</span>(Image<span class="H">&amp;</span> <span class="J">dest</span>, Point <span class="J">p</span>, <span class="H">const</span> Image<span class="H">&amp;</span> <span class="J">_src</span>, <span class="H">const</span> Rect<span class="H">&amp;</span> <span class="J">srect</span>, <span class="H">bool</span> <span class="J">co</span> <span class="H">=</span> <span class="H">false</span>)</p>
+<p class="K">Paints over (using alpha channel) Rect <span class="J">srect</span> of Image <span class="J">src</span> into Point <span class="J">p</span> of Image <span class="J">dest</span>. If <span class="J">co</span> is true, uses multithreading.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Upp::Over(Image&,const Image&,bool)" class="G"><span class="H">void</span> <span class="I">Over</span>(Image<span class="H">&amp;</span> <span class="J">dest</span>, <span class="H">const</span> Image<span class="H">&amp;</span> <span class="J">_src</span>, <span class="H">bool</span> <span class="J">co</span> <span class="H">=</span> <span class="H">false</span>)</p>
+<p class="K">Same as Over(<span class="J">dest</span>, Point(0, 0), <span class="J">src</span>, <span class="J">src</span>.GetSize(), <span class="J">co</span>).</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Fill(Image&,const Rect&,RGBA)" class="G"><span class="H">void</span>&nbsp;<span class="I">Fill</span>(<a href="Image"><u>Image</u></a><span class="H">&amp;</span>&nbsp;<span class="J">dest</span>, <span class="H">const</span>&nbsp;<a href="Rect"><u>Rect</u></a><span class="H">&amp;</span>&nbsp;<span class="J">rect</span>, <a href="RGBA"><u>RGBA</u></a>&nbsp;<span class="J">color</span>)</p>
+<p class="K">Fills rectangular are <span class="J">rect</span> with <span class="J">color</span>.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Upp::Copy(const Upp::Image&,const Upp::Rect&)" class="G"><a href="Upp::Image"><u>Image</u></a>&nbsp;<span class="I">Copy</span>(<span class="H">const</span>&nbsp;<a href="Upp::Image"><u>Image</u></a><span class="H">&amp;</span>&nbsp;<span class="J">src</span>, <span class="H">const</span>&nbsp;<a href="Upp::Rect"><u>Rect</u></a><span class="H">&amp;</span>&nbsp;<span class="J">srect</span>)</p>
+<p class="K">Returns <span class="J">srect</span> area of <span class="J">src</span>.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Crop(const Image&,const Rect&)" class="G"><a href="Image"><u>Image</u></a>&nbsp;<span class="I">Crop</span>(<span class="H">const</span>&nbsp;<a href="Image"><u>Image</u></a><span class="H">&amp;</span>&nbsp;<span class="J">img</span>, <span class="H">const</span>&nbsp;<a href="Rect"><u>Rect</u></a><span class="H">&amp;</span>&nbsp;<span class="J">rc</span>)</p>
+<p class="K">Returns a subimage from <span class="J">img</span> defined by Rect <span class="J">rc</span>.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Crop(const Image&,int,int,int,int)" class="G"><a href="Image"><u>Image</u></a>&nbsp;<span class="I">Crop</span>(<span class="H">const</span>&nbsp;<a href="Image"><u>Image</u></a><span class="H">&amp;</span>&nbsp;<span class="J">img</span>, <span class="H">int</span>&nbsp;<span class="J">x</span>, <span class="H">int</span>&nbsp;<span class="J">y</span>, <span class="H">int</span>&nbsp;<span class="J">cx</span>, <span class="H">int</span>&nbsp;<span class="J">cy</span>)</p>
+<p class="K">Returns a subimage from <span class="J">img</span> defined by origin <span class="J">x,</span> <span class="J">y</span>, width <span class="J">cx</span> and height <span class="J">cy</span>.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Upp::FindBounds(const Upp::Image&,Upp::RGBA)" class="G"><a href="Upp::Rect"><u>Rect</u></a>&nbsp;<span class="I">FindBounds</span>(<span class="H">const</span>&nbsp;<a href="Upp::Image"><u>Image</u></a><span class="H">&amp;</span>&nbsp;<span class="J">m</span>, <a href="Upp::RGBA"><u>RGBA</u></a>&nbsp;<span class="J">bg</span>&nbsp;=&nbsp;RGBAZero())</p>
+<p class="K">Detects rectangular margin with uniform color <span class="J">bg</span> and returns the rectangle with the image with pixels inside this margin.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Upp::AutoCrop(const Upp::Image&,Upp::RGBA)" class="G"><a href="Upp::Image"><u>Image</u></a>&nbsp;<span class="I">AutoCrop</span>(<span class="H">const</span>&nbsp;<a href="Upp::Image"><u>Image</u></a><span class="H">&amp;</span>&nbsp;<span class="J">m</span>, <a href="Upp::RGBA"><u>RGBA</u></a>&nbsp;<span class="J">bg</span>&nbsp;=&nbsp;RGBAZero())</p>
+<p class="K">Detects rectangular margin with uniform color <span class="J">bg</span> and then crops this margin out.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Upp::AutoCrop(Upp::Image*,int,Upp::RGBA)" class="G"><span class="H">void</span>&nbsp;<span class="I">AutoCrop</span>(<a href="Upp::Image"><u>Image</u></a>&nbsp;*<span class="J">m</span>, <span class="H">int</span>&nbsp;<span class="J">count</span>, <a href="Upp::RGBA"><u>RGBA</u></a>&nbsp;<span class="J">bg</span>)</p>
+<p class="K">Finds the maximal rectangular margin with uniform color <span class="J">bg</span> of all images and then crops this margin out. All images must have the same size and will have the same size after the operation.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Upp::ClampHotSpots(Upp::Image&)" class="G"><span class="H">void</span>&nbsp;<span class="I">ClampHotSpots</span>(<a href="Upp::Image"><u>Image</u></a><span class="H">&amp;</span>&nbsp;<span class="J">m</span>)</p>
+<p class="K">Clamps the positions of hotspots so that they are inside <span class="J">m</span>.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="ColorMask(const Image&,Color)" class="G"><a href="Image"><u>Image</u></a>&nbsp;<span class="I">ColorMask</span>(<span class="H">const</span>&nbsp;<a href="Image"><u>Image</u></a><span class="H">&amp;</span>&nbsp;<span class="J">src</span>, <a href="Color"><u>Color</u></a>&nbsp;<span class="J">transparent</span>)</p>
+<p class="K">Returns a new Image based on <span class="J">src</span> replaced Color <span class="J">transparent</span> with RGBAZero().</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="CanvasSize(const Image&,int,int)" class="G"><a href="Image"><u>Image</u></a>&nbsp;<span class="I">CanvasSize</span>(<span class="H">const</span>&nbsp;<a href="Image"><u>Image</u></a><span class="H">&amp;</span>&nbsp;<span class="J">img</span>, <span class="H">int</span>&nbsp;<span class="J">cx</span>, <span class="H">int</span>&nbsp;<span class="J">cy</span>)</p>
+<p class="K"> <span class="J">img</span> <span class="J">cx</span> <span class="J">cy</span>.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="AssignAlpha(const Image&,const Image&)" class="G"><a href="Image"><u>Image</u></a>&nbsp;<span class="I">AssignAlpha</span>(<span class="H">const</span>&nbsp;<a href="Image"><u>Image</u></a><span class="H">&amp;</span>&nbsp;<span class="J">img</span>, <span class="H">const</span>&nbsp;<a href="Image"><u>Image</u></a><span class="H">&amp;</span>&nbsp;<span class="J">new_alpha</span>)</p>
+<p class="K">Returns a new Image based on <span class="J">img</span> colors and <span class="J">new_alpha</span> alpha.</p>
+<p class="K">Image size is the minimum of <span class="J">img</span> and <span class="J">new_alpha</span>.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Equalight(const Image&,int)" class="G"><a href="Image"><u>Image</u></a>&nbsp;<span class="I">Equalight</span>(<span class="H">const</span>&nbsp;<a href="Image"><u>Image</u></a><span class="H">&amp;</span>&nbsp;<span class="J">img</span>, <span class="H">int</span>&nbsp;<span class="J">thold</span>&nbsp;=&nbsp;<span class="N">10</span>)</p>
+<p class="K"> <span class="J">img</span> <span class="J">thold</span>.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Grayscale(const Image&)" class="G"><a href="Image"><u>Image</u></a>&nbsp;<span class="I">Grayscale</span>(<span class="H">const</span>&nbsp;<a href="Image"><u>Image</u></a><span class="H">&amp;</span>&nbsp;<span class="J">img</span>)</p>
+<p class="K">Returns a new Image including <span class="J">img</span> converted to grayscale.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Grayscale(const Image&,int)" class="G"><a href="Image"><u>Image</u></a>&nbsp;<span class="I">Grayscale</span>(<span class="H">const</span>&nbsp;<a href="Image"><u>Image</u></a><span class="H">&amp;</span>&nbsp;<span class="J">img</span>, <span class="H">int</span>&nbsp;<span class="J">amount</span>)</p>
+<p class="K"> <span class="J">img</span> <span class="J">amount</span>.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Colorize(const Image&,Color,int)" class="G"><a href="Image"><u>Image</u></a>&nbsp;<span class="I">Colorize</span>(<span class="H">const</span>&nbsp;<a href="Image"><u>Image</u></a><span class="H">&amp;</span>&nbsp;<span class="J">img</span>, <a href="Color"><u>Color</u></a>&nbsp;<span class="J">color</span>, <span class="H">int</span>&nbsp;<span class="J">alpha</span>&nbsp;=&nbsp;<span class="N">100</span>)</p>
+<p class="K"> <span class="J">img</span> <span class="J">color</span> <span class="J">alpha</span>.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Contrast(const Image&,int)" class="G"><a href="Image"><u>Image</u></a>&nbsp;<span class="I">Contrast</span>(<span class="H">const</span>&nbsp;<a href="Image"><u>Image</u></a><span class="H">&amp;</span>&nbsp;<span class="J">img</span>, <span class="H">int</span>&nbsp;<span class="J">amount</span>&nbsp;=&nbsp;<span class="N">256</span>)</p>
+<p class="K">Returns a new Image with its contrast increased in <span class="J">amount</span> based on <span class="J">img</span>.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Rescale(const Image&,Size,const Rect&,Gate<int,int>)" class="G"><a href="Image"><u>Image</u></a>&nbsp;<span class="I">Rescale</span>(<span class="H">const</span>&nbsp;<a href="Image"><u>Image</u></a><span class="H">&amp;</span>&nbsp;<span class="J">src</span>, <a href="Size"><u>Size</u></a>&nbsp;<span class="J">sz</span>, <span class="H">const</span>&nbsp;<a href="Rect"><u>Rect</u></a><span class="H">&amp;</span>&nbsp;<span class="J">src_rc</span>, <a href="Gate2"><u>Gate2</u></a>&lt;<span class="H">int</span>, <span class="H">int</span>&gt;&nbsp;<span class="J">progress</span>&nbsp;=&nbsp;<span class="H">false</span>)</p>
+<p class="L"><span class="M">Returns a new Image rescaled to Size </span>sz<span class="M"> based on Rect </span>src_rc <span class="M">of Image </span>src</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Upp::Rescale(const Image&,Size,Gate)" class="G">Image <span class="I">Rescale</span>(<span class="H">const</span> Image<span class="H">&amp;</span> <span class="J">src</span>, Size <span class="J">sz</span>, Gate&lt;<span class="H">int</span>, <span class="H">int</span>&gt; progress <span class="H">=</span> <span class="J">Null</span>)</p>
+<p id="Upp::Rescale(const Image&,int,int,Gate)" class="G">Image <span class="I">Rescale</span>(<span class="H">const</span> Image<span class="H">&amp;</span> <span class="J">src</span>, <span class="H">int</span> <span class="J">cx</span>, <span class="H">int</span> <span class="J">cy</span>, Gate&lt;<span class="H">int</span>, <span class="H">int</span>&gt; progress <span class="H">=</span> <span class="J">Null</span>)</p>
+<p class="K">Returns <span class="J">src</span> rescaled to requested size.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Sharpen(const Image&,int)" class="G"><a href="Image"><u>Image</u></a>&nbsp;<span class="I">Sharpen</span>(<span class="H">const</span>&nbsp;<a href="Image"><u>Image</u></a><span class="H">&amp;</span>&nbsp;<span class="J">img</span>, <span class="H">int</span>&nbsp;<span class="J">amount</span>&nbsp;=&nbsp;<span class="N">100</span>)</p>
+<p class="K">Sharpens image using primitive convolution filter.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Dither(const Image&,int)" class="G"><a href="Image"><u>Image</u></a>&nbsp;<span class="I">Dither</span>(<span class="H">const</span>&nbsp;<a href="Image"><u>Image</u></a><span class="H">&amp;</span>&nbsp;<span class="J">m</span>, <span class="H">int</span>&nbsp;<span class="J">dival</span>&nbsp;=&nbsp;<span class="N">394</span>)</p>
+<p class="K">Provides primitive dithering with 8x8 matrix into black/white picture. Dival is sort of gamma control of output, lowering it from default value (to e.g. 350) can produce better results when dithering is using for printing on purely monochromatic (without half-toning support) printers.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Upp::GaussianBlur(const Upp::Image&,int,bool)" class="G"><a href="Upp::Image"><u>Image</u></a>&nbsp;<span class="I">GaussianBlur</span>(<span class="H">const</span>&nbsp;<a href="Upp::Image"><u>Image</u></a><span class="H">&amp;</span>&nbsp;<span class="J">img</span>, <span class="H">int</span>&nbsp;<span class="J">radius</span>, <span class="H">bool</span>&nbsp;<span class="J">co</span>&nbsp;=&nbsp;<span class="H">false</span>)</p>
+<p class="K"><span class="O">An implementation of well known fast box and gaussian blur approximation algorithms by Wojciech Jarosz and Peter Kovesi.</span> <span class="J">co</span> activates parallel processing.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Etched(const Image&)" class="G"><a href="Image"><u>Image</u></a>&nbsp;<span class="I">Etched</span>(<span class="H">const</span>&nbsp;<a href="Image"><u>Image</u></a><span class="H">&amp;</span>&nbsp;<span class="J">img</span>)</p>
+<p class="K">&quot;Etching&quot; effect.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="SetColorKeepAlpha(const Image&,Color)" class="G"><a href="Image"><u>Image</u></a>&nbsp;<span class="I">SetColorKeepAlpha</span>(<span class="H">const</span>&nbsp;<a href="Image"><u>Image</u></a><span class="H">&amp;</span>&nbsp;<span class="J">img</span>, <a href="Color"><u>Color</u></a>&nbsp;<span class="J">c</span>)</p>
+<p class="K">Returns a new Image based on <span class="J">img</span> alpha and <span class="J">c</span> Color.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="RotateClockwise(const Image&)" class="G"><a href="Image"><u>Image</u></a>&nbsp;<span class="I">RotateClockwise</span>(<span class="H">const</span>&nbsp;<a href="Image"><u>Image</u></a><span class="H">&amp;</span>&nbsp;<span class="J">img</span>)</p>
+<p class="K">Returns a new<span class="J"> </span>Image rotated 90º (clockwise) that is based on <span class="J">img</span>.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="RotateAntiClockwise(const Image&)" class="G"><a href="Image"><u>Image</u></a>&nbsp;<span class="I">RotateAntiClockwise</span>(<span class="H">const</span>&nbsp;<a href="Image"><u>Image</u></a><span class="H">&amp;</span>&nbsp;<span class="J">img</span>)</p>
+<p class="K">Returns a new Image<span class="J"> </span>rotated -90º (anticlockwise) that is based on <span class="J">img</span>.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Rotate180(const Image&)" class="G"><a href="Image"><u>Image</u></a>&nbsp;<span class="I">Rotate180</span>(<span class="H">const</span>&nbsp;<a href="Image"><u>Image</u></a><span class="H">&amp;</span>&nbsp;<span class="J">orig</span>)</p>
+<p class="K">Returns a new Image<span class="J"> </span>rotated 180º that is based on <span class="J">img</span>.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="MirrorHorz(const Image&)" class="G"><a href="Image"><u>Image</u></a>&nbsp;<span class="I">MirrorHorz</span>(<span class="H">const</span>&nbsp;<a href="Image"><u>Image</u></a><span class="H">&amp;</span>&nbsp;<span class="J">img</span>)</p>
+<p class="K">Returns a new Image that is a mirror of <span class="J">img </span>following horizontal axis.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="MirrorVert(const Image&)" class="G"><a href="Image"><u>Image</u></a>&nbsp;<span class="I">MirrorVert</span>(<span class="H">const</span>&nbsp;<a href="Image"><u>Image</u></a><span class="H">&amp;</span>&nbsp;<span class="J">img</span>)</p>
+<p class="K">Returns a new Image that is a mirror of <span class="J">img </span>following vertical axis.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Rotate(const Image&,int)" class="G"><a href="Image"><u>Image</u></a>&nbsp;<span class="I">Rotate</span>(<span class="H">const</span>&nbsp;<a href="Image"><u>Image</u></a><span class="H">&amp;</span>&nbsp;<span class="J">m</span>, <span class="H">int</span>&nbsp;<span class="J">angle</span>)</p>
+<p class="K">Returns a new Image based on Image <span class="J">m</span> rotated <span class="J">angle</span> by its center where the full rotation (2π) is 3600.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Upp::Transpose(const Upp::Image&)" class="G"><a href="Upp::Image"><u>Image</u></a>&nbsp;<span class="I">Transpose</span>(<span class="H">const</span>&nbsp;<a href="Upp::Image"><u>Image</u></a><span class="H">&amp;</span>&nbsp;<span class="J">img</span>)</p>
+<p class="K">Result is the same as MirrorHorz(RotateClockwise(<span class="J">img</span>)), but implemented effectively in single step.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Upp::Transverse(const Upp::Image&)" class="G"><a href="Upp::Image"><u>Image</u></a>&nbsp;<span class="I">Transverse</span>(<span class="H">const</span>&nbsp;<a href="Upp::Image"><u>Image</u></a><span class="H">&amp;</span>&nbsp;<span class="J">img</span>)</p>
+<p class="K">Result is the same as MirrorHorz(RotateAntiClockwise(<span class="J">img</span>)), but implemented effectively in single step.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Upp::FlipImage(const Upp::Image&,int)" class="G"><a href="Upp::Image"><u>Image</u></a>&nbsp;<span class="I">FlipImage</span>(<span class="H">const</span>&nbsp;<a href="Upp::Image"><u>Image</u></a><span class="H">&amp;</span>&nbsp;<span class="J">m</span>, <span class="H">int</span>&nbsp;<span class="J">mode</span>)</p>
+<p class="K">Transforms Image based on flip <span class="J">mode</span>, which can be one of FLIP_NONE, FLIP_MIRROR_HORZ, FLIP_ROTATE_180, FLIP_MIRROR_VERT, FLIP_TRANSPOSE, FLIP_ROTATE_CLOCKWISE, FLIP_TRANSVERSE, FLIP_ROTATE_ANTICLOCKWISE. Flip mode values are compatible with Raster::GetOrientation and are equal to EXIF orientation - 1. This function is intended to flip Image to correct orientation (usually JPEG from digital camera).</p>
+<p class="K">&nbsp;</p>
+<p class="A">&nbsp;</p>
+</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>
+<TABLE BORDER="0" WIDTH="100%"><TR><TD></TD>
+</TR>
+</TABLE>
+<TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" BGCOLOR="#FFFFFF" WIDTH="100%" style="border-style: solid; border-width: 1px; border-color: #6E89AE;padding: 10px;;"><TR><TD><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%"><TR><TD><p class="A"><span class="B"> </span><a href="www$uppweb$contribweb$en-us.html">Do you want to contribute?</a></p>
+</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>
+<script type="text/javascript">var a={};var p=window.location.pathname.split("/");p=p[p.length-1];var s='<select id="lang" onchange="window.location=document.getElementById(\'lang\').value;">';for(l in a){if(p==l){d=" selected=1"}else{d=""}s+='<option value="'+l+'"'+d+'>'+a[l]+'</option>'}s+='</select>';var d=document.createElement('div');d.innerHTML=s;var c=document.getElementById('langs');c.replaceChild(d,c.firstChild);document.getElementById('langbox').style.display='block';</script></BODY>

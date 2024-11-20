@@ -1,0 +1,701 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en-us">
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
+<META NAME="Generator" CONTENT="U++ HTML Package">
+<TITLE>Color :: U++</TITLE>
+<STYLE TYPE="text/css"><!--
+.A{margin:0px 0px 0px 0px;text-indent:0px;text-align:left;color:#000000;font-family:sans-serif;font-size:10pt;font-weight:normal;font-style:normal;}
+.B{font-size:12pt;}
+.C{border-collapse:collapse;table-layout:auto;border: 2px solid #000000;}
+.D{padding: 3px 5px 3px 5px;border-left: 1px solid #000000;border-top: 1px solid #000000;border-right: 1px solid #000000;border-bottom: 1px solid #000000;background-color:#712A00;vertical-align:middle;}
+.E{margin:0px 0px 0px 0px;text-indent:0px;text-align:left;color:#e5e5e5;font-family:sans-serif;font-size:16pt;font-weight:bold;font-style:normal;}
+.F{margin:0px 0px 0px 0px;text-indent:0px;text-align:left;color:#000000;font-family:sans-serif;font-size:6pt;font-weight:normal;font-style:normal;}
+.G{margin:0px 0px 5px 0px;text-indent:0px;text-align:left;color:#000000;font-family:sans-serif;font-size:12pt;font-weight:normal;font-style:normal;}
+.H{color:#0000ff;}
+.I{font-weight:bold;}
+.J{color:#800000;font-weight:bold;}
+.K{margin:8px 0px 0px 0px;text-indent:0px;text-align:left;color:#000000;font-family:sans-serif;font-size:10pt;font-weight:normal;font-style:normal;}
+.L{border-collapse:collapse;table-layout:auto;border: 2px solid #808080;}
+.M{padding: 3px 5px 3px 5px;border-left: 1px solid #808080;border-top: 1px solid #808080;border-right: 1px solid #808080;border-bottom: 1px solid #808080;background-color:#C0C0C0;vertical-align:middle;}
+.N{margin:0px 0px 0px 0px;text-indent:0px;text-align:left;color:#000000;font-family:sans-serif;font-size:10pt;font-weight:bold;font-style:normal;}
+.O{margin:0px 0px 5px 0px;text-indent:0px;text-align:left;color:#000000;font-family:sans-serif;font-size:10pt;font-weight:normal;font-style:normal;}
+.P{margin:0px 0px 0px 57px;text-indent:0px;text-align:left;color:#000000;font-family:sans-serif;font-size:10pt;font-weight:normal;font-style:normal;}
+.Q{color:#800000;font-family:monospace;font-weight:bold;}
+.R{margin:0px 0px 0px 57px;text-indent:0px;text-align:left;color:#000080;font-family:sans-serif;font-size:8pt;font-weight:bold;font-style:normal;}
+.S{margin:0px 0px 5px 0px;text-indent:0px;text-align:left;color:#0000ff;font-family:sans-serif;font-size:10pt;font-weight:normal;font-style:normal;}
+.T{color:#000000;font-weight:bold;}
+.U{color:#000000;}
+.V{font-weight:bold;font-style:italic;}
+.W{color:#800000;}
+.X{font-style:italic;}
+.Y{margin:0px 0px 0px 0px;text-indent:0px;text-align:left;color:#000000;font-family:sans-serif;font-size:12pt;font-weight:normal;font-style:normal;}
+a.l1         { text-decoration:none; font-size: 8pt; font-family: sans-serif; font-weight: normal; }
+a.l1:link    { color:#000000; }
+a.l1:visited { color:#000080; }
+a.l1:hover   { color:#9933CC; }
+a.l1:active  { color:#000000; }
+a.l2         { text-decoration:none; font-size: 12pt; font-family: sans-serif; font-variant: small-caps; }
+a.l2:link    { color:#0066FF; }
+a.l2:visited { color:#FF6600; }
+a.l2:hover   { color:#BC0624; }
+a.l2:active  { color:#BC0024; }
+
+-->
+</STYLE>
+<META NAME="keywords" CONTENT="framework, toolkit, widget, c++, visual, studio, dev-cpp, builder, ide, class, component,wxwidgets, qt, rapid, application, development, rad, mfc, linux, macos, gui, sdl, directx, desktop"><META name="robots" content="index,follow">
+<LINK rel="alternate" type="application/rss+xml" title="SVN changes" href="svnchanges.xml">
+<LINK rel="shortcut icon" type="image/png" href="favicon.png">
+</HEAD><BODY BGCOLOR="#D2D9D2" ALINK="#800000" LINK="#000000" VLINK="#000080"><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%"><TR><TD COLSPAN="3"><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%" BGCOLOR="#FFFFFF" style="border: 1px solid #6E89AE;padding-left: 10px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;"><TR><TD><A HREF="index.html"><IMG SRC="0i.png" ALT="" BORDER="0"></A>
+</TD>
+<TD ALIGN="RIGHT" VALIGN="BOTTOM" STYLE="padding-bottom: 5px; background-image: url('1i.png')"><span style="font-size: 14pt; font-family: sans-serif;"><script type="text/javascript"><!--
+google_ad_client = "pub-1082147624384270";
+google_ad_width = 468;
+google_ad_height = 60;
+google_ad_format = "468x60_as";
+google_ad_type = "text_image";
+google_ad_channel = "";
+google_color_border = "336699";
+google_color_bg = "FFFFFF";
+google_color_link = "0000FF";
+google_color_text = "000000";
+google_color_url = "008000";
+//--></script>
+<script type="text/javascript"
+  src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+&nbsp;&nbsp;</span>
+</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>
+<TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%"><TR><TD COLSPAN="3" BGCOLOR="#D2D9D2" HEIGHT="6"></TD>
+</TR>
+<TR><TD VALIGN="TOP" ALIGN="CENTER"><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="160"><TR><TD ALIGN="CENTER"><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%" BGCOLOR="#FFFFFF" style="border-style: solid; border-width: 1px; border-color: #6E89AE;padding: 0px"><TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px;"><A HREF="www$uppweb$overview$en-us.html" CLASS="l1">Overview</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$examples$en-us.html" CLASS="l1">Examples</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$ss$en-us.html" CLASS="l1">Screenshots</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$comparison$en-us.html" CLASS="l1">Comparisons</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$apps$en-us.html" CLASS="l1">Applications</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$download$en-us.html" CLASS="l1">Download</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$documentation$en-us.html" CLASS="l1">Documentation</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$Tutorials$en-us.html" CLASS="l1">Tutorials</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="app$ide$UppHub$en-us.html" CLASS="l1">UppHub</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$Roadmap$en-us.html" CLASS="l1">Status & Roadmap</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$FAQ$en-us.html" CLASS="l1">FAQ</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="app$ide$About$en-us.html" CLASS="l1">Authors & License</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="https://www.ultimatepp.org/forums" CLASS="l1">Forums</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$Funding$en-us.html" CLASS="l1">Funding U++</A>
+</TD>
+</TR>
+</TABLE>
+<TABLE BORDER="0" WIDTH="100%"><TR><TD></TD>
+</TR>
+</TABLE>
+<TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%" BGCOLOR="#FFFFFF" style="border-style: solid; border-width: 1px; border-color: #6E89AE;padding: 0px"><TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('3i.png'); border: 0px solid black;padding-left:12px; padding-right:0px; padding-top:1px; padding-bottom:1px;color:#FFFFFF;"><B><span style="font-size: 8pt; font-family: sans-serif;">Search on this site</span>
+</B>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:6px; padding-right:0px; padding-top:4px; padding-bottom:4px;border-top: 1px solid #6E89AE;"><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%"><TR><TD><IMG SRC="4i.png" ALT="" BORDER="0"></TD>
+<TD><FORM ACTION="https://www.google.com/search" METHOD="GET" STYLE="margin:0px;padding:0px;"><INPUT TYPE="HIDDEN" NAME="ie" VALUE="UTF-8"><INPUT TYPE="HIDDEN" NAME="oe" VALUE="UTF-8"><INPUT TYPE="TEXT" NAME="q" SIZE="15" MAXLENGTH="256" placeholder="Site search"><INPUT TYPE="HIDDEN" NAME="sitesearch" VALUE="ultimatepp.org"></FORM>
+</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>
+<TABLE BORDER="0" WIDTH="100%"><TR><TD></TD>
+</TR>
+</TABLE>
+<br><div id="fb-root"></div>
+<script type="text/javascript">(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) {return;}
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+<div class="fb-like" data-href="https://www.facebook.com/pages/Upp-Framework/262346610476027?sk=wall" data-send="false" data-layout="button_count" data-width="160" data-show-faces="false" data-font="arial"></div>
+<br><br><script type="text/javascript"><!--
+google_ad_client = "pub-1082147624384270";
+google_ad_width = 160;
+google_ad_height = 600;
+google_ad_format = "160x600_as";
+google_ad_type = "text_image";
+google_ad_channel = "";
+google_color_border = "336699";
+google_color_bg = "FFFFFF";
+google_color_link = "0000FF";
+google_color_text = "000000";
+google_color_url = "008000";
+//--></script>
+<script type="text/javascript"
+  src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script><br><br><script type="text/javascript"><!--
+google_ad_client = "pub-1082147624384270";
+google_ad_width = 160;
+google_ad_height = 90;
+google_ad_format = "160x90_0ads_al_s";
+google_ad_channel = "";
+google_color_border = "336699";
+google_color_bg = "FFFFFF";
+google_color_link = "0000FF";
+google_color_text = "000000";
+google_color_url = "008000";
+//--></script>
+<script type="text/javascript"
+  src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+<br><br><br><br><br><br><A HREF="https://sourceforge.net/projects/upp/"><IMG SRC="https://sourceforge.net/sflogo.php?group_id=93970&amp;type=2" ALT="SourceForge.net Logo" BORDER="0" WIDTH="125" HEIGHT="37"></A>
+<br><br><A HREF="https://flathub.org/en/apps/org.ultimatepp.TheIDE"><IMG SRC="5i.png" ALT="SourceForge.net Logo" BORDER="0" WIDTH="125" HEIGHT="37"></A>
+<br><br><div style="background-color:#ffffff;width:125;height:35"><A HREF="https://github.com/ultimatepp"><IMG SRC="6i.png" ALT="GitHub Logo" BORDER="0" WIDTH="125" HEIGHT="35"></A>
+</div><br><div style="background-color:#ffffff;width:125;height:35"><div style="height:5"></div><A HREF="https://discord.gg/8XzqQzXZzb"><IMG SRC="https://assets-global.website-files.com/6257adef93867e50d84d30e2/636e0b5061df29d55a92d945_full_logo_blurple_RGB.svg" ALT="Discord Logo" BORDER="0" WIDTH="125" HEIGHT="25"></A>
+</div><br></TD>
+</TR>
+</TABLE>
+</TD>
+<TD VALIGN="TOP" BGCOLOR="#D2D9D2"><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="6"><TR><TD></TD>
+</TR>
+</TABLE>
+</TD>
+<TD VALIGN="TOP" WIDTH="100%" BGCOLOR="#D2D9D2"><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" BGCOLOR="#FFFFFF" WIDTH="100%" style="border-style: solid; border-width: 1px; border-color: #6E89AE;padding: 10px;;"><TR><TD><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%"><TR><TD><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr><td width="100%"><table width="100%" class="C"><colgroup><col width="100%"></colgroup>
+<tr><td class="D"><p class="E">Color</p>
+</td>
+</tr>
+</table></td>
+</tr></table>
+<p class="F">&nbsp;</p>
+<p id="Color::class" class="G"><span class="H">class</span>&nbsp;<span class="I">Color</span>&nbsp;:&nbsp;<span class="H">private</span>&nbsp;<span class="J">AssignValueTypeNo</span><span class="H">&lt;</span><span class="I">Color</span>, COLOR_V, <a href="Moveable"><u>Moveable</u></a><span class="H">&lt;</span><span class="I">Color</span><span class="H">&gt;</span>&nbsp;&gt;&nbsp;</p>
+<p class="K"><span class="I">Color</span> type representing RGB color. All components are in the range 0 through 255. Null value is defined for Color. Color is Value compatible as a Rich-Value type (supports Value comparison, serialization etc.).</p>
+<p class="F">&nbsp;</p>
+<p class="A">&nbsp;</p>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr><td width="100%"><table width="100%" class="L"><colgroup><col width="100%"></colgroup>
+<tr><td class="M"><p class="N">Constructor Detail</p>
+</td>
+</tr>
+</table></td>
+</tr></table>
+<p class="F">&nbsp;</p>
+<p id="Color::Color()" class="O"><span class="I">Color</span>()</p>
+<p class="P">Default constructor. Leaves component values uninitialized.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Color::Color(int,int,int)" class="O"><span class="I">Color</span>(<span class="H">int</span>&nbsp;<span class="J">r</span>, <span class="H">int</span>&nbsp;<span class="J">g</span>, <span class="H">int</span>&nbsp;<span class="J">b</span>)</p>
+<p class="P">Constructor.</p>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="Q">r</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">Red channel.</p></td></tr></table>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="Q">g</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">Green channel.</p></td></tr></table>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="Q">b</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">Blue channel.</p></td></tr></table>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Color::Color(const Nuller&)" class="O"><span class="I">Color</span>(<span class="H">const</span>&nbsp;<a href="Nuller"><u>Nuller</u></a><span class="H">&amp;</span>)</p>
+<p class="P">Null constructor.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Color::Color(const Value&)" class="O"><span class="I">Color</span>(<span class="H">const</span>&nbsp;<a href="Value"><u>Value</u></a><span class="H">&amp;</span>&nbsp;<span class="J">q</span>)</p>
+<p class="P">Conversion from Value.</p>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="J">q</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">Value.</p></td></tr></table>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Color::Color(Color(*)())" class="O"><span class="I">Color</span>(<span class="I">Color</span>&nbsp;(*<span class="J">fn</span>)())</p>
+<p class="R">[deprecated]</p>
+<p class="P">This constructor allows using a pointer to a function returning Colors instead of Colors in many places. Global functions returning Color are needed instead of global Color constants on many platforms, because often global variables are not allowed when using dynamic libraries.</p>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="J">fn</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">Pointer to a function returning Color.</p></td></tr></table>
+<p class="A">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Color::Color(RGBA)" class="O"><span class="I">Color</span>(<a href="RGBA"><u>RGBA</u></a>&nbsp;<span class="J">rgba</span>)</p>
+<p class="P">Conversion from a RGBA structure <span class="J">rgba</span>.</p>
+<p class="F">&nbsp;</p>
+<p class="A">&nbsp;</p>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr><td width="100%"><table width="100%" class="L"><colgroup><col width="100%"></colgroup>
+<tr><td class="M"><p class="N">Public Member List</p>
+</td>
+</tr>
+</table></td>
+</tr></table>
+<p class="F">&nbsp;</p>
+<p id="Color::operator Value()const" class="S"><span class="T">operator&nbsp;Value</span><span class="U">()&nbsp;</span>const</p>
+<p class="P">Conversion to Value.</p>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="V">Return value</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">Value.</p></td></tr></table>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Color::GetRaw()const" class="S"><a href="dword"><span class="U"><u>dword</u></span></a><span class="U">&nbsp;</span><span class="T">GetRaw</span><span class="U">()&nbsp;</span>const</p>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="V">Return value</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">Platform specific dword representing the color.</p></td></tr></table>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Color::GetR()const" class="S">int<span class="U">&nbsp;</span><span class="T">GetR</span><span class="U">()&nbsp;</span>const</p>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="V">Return value</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">The red component.</p></td></tr></table>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Color::GetG()const" class="S">int<span class="U">&nbsp;</span><span class="T">GetG</span><span class="U">()&nbsp;</span>const</p>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="V">Return value</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">The green component.</p></td></tr></table>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Color::GetB()const" class="S">int<span class="U">&nbsp;</span><span class="T">GetB</span><span class="U">()&nbsp;</span>const</p>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="V">Return value</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">The blue component.</p></td></tr></table>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Color::SetNull()" class="O"><span class="H">void</span>&nbsp;<span class="I">SetNull</span>()</p>
+<p class="P">Sets the Color to Null.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Color::IsNullInstance()const" class="S">bool<span class="U">&nbsp;</span><span class="T">IsNullInstance</span><span class="U">()&nbsp;</span>const</p>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="V">Return value</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">True if Color is Null. Used to implement IsNull for Color.</p></td></tr></table>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Color::GetHashValue()const" class="S">unsigned<span class="U">&nbsp;</span><span class="T">GetHashValue</span><span class="U">()&nbsp;</span>const</p>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="V">Return value</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">Hash-value for Color.</p></td></tr></table>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Color::operator==(Color)const" class="S">bool<span class="U">&nbsp;</span><span class="T">operator==</span><span class="U">(</span><a href="Color"><span class="U"><u>Color</u></span></a><span class="U">&nbsp;</span><span class="J">c</span><span class="U">)&nbsp;</span>const</p>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="Q">c</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">Color to compare with.</p></td></tr></table>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="V">Return value</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">True if Color is equal to <span class="W">c</span>.</p></td></tr></table>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Color::operator!=(Color)const" class="S">bool<span class="U">&nbsp;</span><span class="T">operator!=</span><span class="U">(</span><a href="Color"><span class="U"><u>Color</u></span></a><span class="U">&nbsp;</span><span class="J">c</span><span class="U">)&nbsp;</span>const</p>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="Q">c</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">Color to compare with.</p></td></tr></table>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="V">Return value</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">True if Color is not equal to <span class="W">c</span>.</p></td></tr></table>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Color::Serialize(Stream&)" class="O"><span class="H">void</span>&nbsp;<span class="I">Serialize</span>(<a href="Stream"><u>Stream</u></a><span class="H">&amp;</span>&nbsp;<span class="J">s</span>)</p>
+<p class="P">Serializes the color to the <a href="src$Core$Stream$en-us.html#Stream::class">Stream</a> <span class="J">s</span>.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Color::FromRaw(dword)" class="O"><span class="H">static</span> <a href="Color"><u>Color</u></a>&nbsp;<span class="I">FromRaw</span>(<a href="dword"><u>dword</u></a>&nbsp;<span class="J">co</span>)</p>
+<p class="P">Creates a Color based on a platform specific raw dword value.</p>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="Q">co</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">Raw dword value.</p></td></tr></table>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="V">Return value</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">Color.</p></td></tr></table>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Upp::Color::Special(int)" class="O"><span class="H">static</span> <a href="Upp::Color"><u>Color</u></a>&nbsp;<span class="I">Special</span>(<span class="H">int</span>&nbsp;<span class="J">n</span>)</p>
+<p class="P">Creates special color <span class="J">n</span>. Special colors are application defined, sort of &quot;escape&quot; color in situation where something else has to be stored in Color, e.g. index of some color palette.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Upp::Color::GetSpecial()const" class="S">int<span class="U">&nbsp;</span><span class="T">GetSpecial</span><span class="U">()&nbsp;</span>const</p>
+<p class="P">Returns special color value or -1 if Color is not special.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Color::operator COLORREF()const" class="S"><span class="T">operator&nbsp;COLORREF</span><span class="U">()&nbsp;</span>const</p>
+<p class="R">Win32 specific.</p>
+<p class="P">Return COLORREF for Color.</p>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="V">Return value</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">COLORREF.</p></td></tr></table>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Color::FromCR(COLORREF)" class="O"><span class="H">static</span> <a href="Color"><u>Color</u></a>&nbsp;<span class="I">FromCR</span>(COLORREF&nbsp;<span class="J">cr</span>)</p>
+<p class="R">Win32 specific.</p>
+<p class="P">Creates Color from COLORREF.</p>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="Q">cr</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">COLORREF.</p></td></tr></table>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="V">Return value</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">Color.</p></td></tr></table>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Color::operator dword()const" class="S"><span class="T">operator&nbsp;dword</span><span class="U">()&nbsp;</span>const</p>
+<p class="R">Not available on Win32</p>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="V">Return value</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A"><a href="src$Core$Color$en-us.html#Color::GetRaw()const">GetRaw</a>().</p></td></tr></table>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Color::operator RGBA()const" class="S"><span class="T">operator&nbsp;RGBA</span><span class="U">()&nbsp;</span>const</p>
+<p class="P">Returns a RGBA structure containing the color information.</p>
+<p class="F">&nbsp;</p>
+<p class="A">&nbsp;</p>
+<p class="A">&nbsp;</p>
+<p class="A">&nbsp;</p>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr><td width="100%"><table width="100%" class="C"><colgroup><col width="100%"></colgroup>
+<tr><td class="D"><p class="E">Utility functions</p>
+</td>
+</tr>
+</table></td>
+</tr></table>
+<p class="F">&nbsp;</p>
+<p id="GetRValue(dword)" class="O"><span class="H">int</span>&nbsp;<span class="I">GetRValue</span>(<a href="dword"><u>dword</u></a>&nbsp;<span class="J">c</span>)</p>
+<p class="P">Returns red component from a platform specific value.</p>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="Q">c</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">Platform specific value.</p></td></tr></table>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="V">Return value</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">Red component.</p></td></tr></table>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="GetGValue(dword)" class="O"><span class="H">int</span>&nbsp;<span class="I">GetGValue</span>(<a href="dword"><u>dword</u></a>&nbsp;<span class="J">c</span>)</p>
+<p class="P">Returns green component from a platform specific value.</p>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="Q">c</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">Platform specific value.</p></td></tr></table>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="V">Return value</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">Green component.</p></td></tr></table>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="GetBValue(dword)" class="O"><span class="H">int</span>&nbsp;<span class="I">GetBValue</span>(<a href="dword"><u>dword</u></a>&nbsp;<span class="J">c</span>)</p>
+<p class="P">Returns blue component from a platform specific value.</p>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="Q">c</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">Platform specific value.</p></td></tr></table>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="V">Return value</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">Blue component.</p></td></tr></table>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="RGB(byte,byte,byte)" class="O"><a href="dword"><u>dword</u></a>&nbsp;<span class="I">RGB</span>(<a href="byte"><u>byte</u></a>&nbsp;<span class="J">r</span>, <a href="byte"><u>byte</u></a>&nbsp;<span class="J">g</span>, <a href="byte"><u>byte</u></a>&nbsp;<span class="J">b</span>)</p>
+<p class="P">Calculates platform specific value from components.</p>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="Q">r</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">Red component.</p></td></tr></table>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="Q">g</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">Green component.</p></td></tr></table>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="Q">b</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">Blue component.</p></td></tr></table>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="V">Return value</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">Platform specific value.</p></td></tr></table>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="GetHashValue(Color)" class="O"><span class="H">unsigned</span>&nbsp;<span class="I">GetHashValue</span>(<a href="Color"><u>Color</u></a>&nbsp;<span class="J">c</span>)</p>
+<p class="P">Returns a hash value for the color.</p>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="Q">c</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">Color.</p></td></tr></table>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="V">Return value</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">Hash value.</p></td></tr></table>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Nvl(Color,Color)" class="O"><a href="Color"><u>Color</u></a>&nbsp;<span class="I">Nvl</span>(<a href="Color"><u>Color</u></a>&nbsp;<span class="J">a</span>, <a href="Color"><u>Color</u></a>&nbsp;<span class="J">b</span>)</p>
+<p class="P">Returns first parameter if it is not Null, second otherwise.</p>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="Q">a</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">Color.</p></td></tr></table>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="Q">b</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">Color.</p></td></tr></table>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="V">Return value</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">a if not Null, b otherwise.</p></td></tr></table>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="AsString(const Color&)" class="O"><span class="H">template</span>&nbsp;&lt;&gt;&nbsp;<a href="String"><u>String</u></a>&nbsp;<span class="I">AsString</span>(<span class="H">const</span>&nbsp;<a href="Color"><u>Color</u></a><span class="H">&amp;</span>&nbsp;<span class="J">c</span>)</p>
+<p class="P">Converts Color to textual form.</p>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="Q">c</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">Color.</p></td></tr></table>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="V">Return value</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">Textual form.</p></td></tr></table>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="RGBtoHSV(double,double,double,double&,double&,double&)" class="O"><span class="H">void</span>&nbsp;<span class="I">RGBtoHSV</span>(<span class="H">double</span>&nbsp;<span class="J">r</span>, <span class="H">double</span>&nbsp;<span class="J">g</span>, <span class="H">double</span>&nbsp;<span class="J">b</span>, <span class="H">double&amp;</span>&nbsp;<span class="J">h</span>, <span class="H">double&amp;</span>&nbsp;<span class="J">s</span>, <span class="H">double&amp;</span>&nbsp;<span class="J">v</span>)</p>
+<p class="P">Transforms an [R,G,B] color triplet (each of the components is supposed to be in the range [0..1]) into an [H,S,V] triplet (again all components are in the range [0..1]). This effectively transforms the RGB cube to a cone in which color selection more intuitively matches our our visual perception (<span class="X">hue</span> corresponds to the tint of the color, <span class="X">saturation</span> to the richness of the color hue and <span class="X">value</span> corresponds to luminance or brightness). </p>
+<p class="P">&nbsp;</p>
+<p class="P">The mathematical formula used to convert between the two color spaces are:</p>
+<p class="P">&nbsp;</p>
+<p class="P">v = max(r, g, b)</p>
+<p class="P">s = 1 - min(r, g, b) / v</p>
+<p class="P">h = (x - min(r, g, b)) / (max(r, g, b) - min(r, g, b))</p>
+<p class="P">&nbsp;</p>
+<p class="P">where <span class="X">x</span> is the color component which is neither minimum nor maximum. There are six combinations for this, in every even h is taken, in every odd 1-h. The six combinations correspond to six points on the color wheel forming the base of the HSV cone - pure red, yellow, green, cyan, blue, and magenta. The color component ranges along the circumference are the following (capital letters denote maximum component value, minuscule letters minimum): Rgb -&gt; RGb -&gt; rGb -&gt; rGB -&gt; rgB -&gt; RgB.</p>
+<p class="P">&nbsp;</p>
+<p class="P">An easy way to visualize the HSV transform based on the RGB cube is: imagine a slight deformation of the cube where the tip of the cone corresponds to the black RBG cube vertex, the opposite (white) RGB cube vertex corresponds to the center of the base circle of the HSV cone and the remaining six RGB cube vertices get projected on the circumference of the cone base as explained in the preceding paragraph.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="HSVtoRGB(double,double,double,double&,double&,double&)" class="O"><span class="H">void</span>&nbsp;<span class="I">HSVtoRGB</span>(<span class="H">double</span>&nbsp;<span class="J">h</span>, <span class="H">double</span>&nbsp;<span class="J">s</span>, <span class="H">double</span>&nbsp;<span class="J">v</span>, <span class="H">double&amp;</span>&nbsp;<span class="J">r</span>, <span class="H">double&amp;</span>&nbsp;<span class="J">g</span>, <span class="H">double&amp;</span>&nbsp;<span class="J">b</span>)</p>
+<p class="P">Transformes an HSV triplet (each of the components is supposed to lie in the interval [0..1]) into an RGB triplet (again with component ranges [0..1]). This projects the HSV cone (as explained in the preceding section) back onto the RGB cube.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="HsvColorf(double,double,double)" class="O"><a href="Color"><u>Color</u></a>&nbsp;<span class="I">HsvColorf</span>(<span class="H">double</span>&nbsp;<span class="J">h</span>, <span class="H">double</span>&nbsp;<span class="J">s</span>, <span class="H">double</span>&nbsp;<span class="J">v</span>)</p>
+<p class="P">Converts an HSV color triplet into a <span class="I">Color</span> object. The H, S, and V components are supposed to be in the range [0..1].</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Upp::CMYKtoRGB(double,double,double,double,double&,double&,double&)" class="O"><span class="H">void</span>&nbsp;<span class="I">CMYKtoRGB</span>(<span class="H">double</span>&nbsp;<span class="J">c</span>, <span class="H">double</span>&nbsp;<span class="J">m</span>, <span class="H">double</span>&nbsp;<span class="J">y</span>, <span class="H">double</span>&nbsp;<span class="J">k</span>, <span class="H">double&amp;</span>&nbsp;<span class="J">r</span>, <span class="H">double&amp;</span>&nbsp;<span class="J">g</span>, <span class="H">double&amp;</span>&nbsp;<span class="J">b</span>)</p>
+<p class="P">Converts CMYK color definition to RGB (all components are in [0..1] range).</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Upp::RGBtoCMYK(double,double,double,double&,double&,double&,double&)" class="O"><span class="H">void</span>&nbsp;<span class="I">RGBtoCMYK</span>(<span class="H">double</span>&nbsp;<span class="J">r</span>, <span class="H">double</span>&nbsp;<span class="J">g</span>, <span class="H">double</span>&nbsp;<span class="J">b</span>, <span class="H">double&amp;</span>&nbsp;<span class="J">c</span>, <span class="H">double&amp;</span>&nbsp;<span class="J">m</span>, <span class="H">double&amp;</span>&nbsp;<span class="J">y</span>, <span class="H">double&amp;</span>&nbsp;<span class="J">k</span>)</p>
+<p class="P">Converts RGB color definition to CMYK (all components are in [0..1] range).</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Upp::CmykColorf(double,double,double,double)" class="O"><a href="Upp::Color"><u>Color</u></a>&nbsp;<span class="I">CmykColorf</span>(<span class="H">double</span>&nbsp;<span class="J">c</span>, <span class="H">double</span>&nbsp;<span class="J">m</span>, <span class="H">double</span>&nbsp;<span class="J">y</span>, <span class="H">double</span>&nbsp;<span class="J">k</span>)</p>
+<p class="P">Converts CMYK color definition to RGB (all components are in [0..1] range).</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Upp::CmyColorf(double,double,double)" class="O"><a href="Upp::Color"><u>Color</u></a>&nbsp;<span class="I">CmyColorf</span>(<span class="H">double</span>&nbsp;<span class="J">c</span>, <span class="H">double</span>&nbsp;<span class="J">m</span>, <span class="H">double</span>&nbsp;<span class="J">y</span>)</p>
+<p class="P">Converts CMY color definition to RGB (all components are in [0..1] range).</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Blend(Color,Color,int)" class="O"><a href="Color"><u>Color</u></a>&nbsp;<span class="I">Blend</span>(<a href="Color"><u>Color</u></a>&nbsp;<span class="J">c1</span>, <a href="Color"><u>Color</u></a>&nbsp;<span class="J">c2</span>, <span class="H">int</span>&nbsp;<span class="J">alpha</span>&nbsp;=&nbsp;<span class="W">128</span>)</p>
+<p class="P">Blends two colors.</p>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="Q">c1</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">First color.</p></td></tr></table>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="Q">c2</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">Second color.</p></td></tr></table>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="Q">alpha</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">Blending factor in the range 0..255.</p></td></tr></table>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="V">Return value</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">Blended color - (255 - alpha) / 255.0 * c1 + alpha / 255.0 * c2.</p></td></tr></table>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="ColorToHtml(Color)" class="O"><a href="String"><u>String</u></a>&nbsp;<span class="I">ColorToHtml</span>(<a href="Color"><u>Color</u></a>&nbsp;<span class="J">color</span>)</p>
+<p class="P">Converts Color to the textual format used in HTML (into hexadecimal form like #ffffff for white).</p>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="Q">color</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">Color.</p></td></tr></table>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="V">Return value</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">HTML text.</p></td></tr></table>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Upp::ColorFromText(const char*)" class="O"><a href="Upp::Color"><u>Color</u></a>&nbsp;<span class="I">ColorFromText</span>(<span class="H">const</span>&nbsp;<span class="H">char</span>&nbsp;*<span class="J">s</span>)</p>
+<p class="P">Converts text to Color. Allowed formats are 3 decimal numbers in range 0-255, representing r, g, b colors and separated by ',' or ';' or '.' or ' ', or the text must exactly contain 6 hexadecimal digits representing RRGGBB values.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="GrayColor(int)" class="O"><a href="Color"><u>Color</u></a>&nbsp;<span class="I">GrayColor</span>(<span class="H">int</span>&nbsp;<span class="J">a</span>&nbsp;=&nbsp;<span class="W">128</span>)</p>
+<p class="P">Returns a gray color of intensity <span class="J">a</span>.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Grayscale(const Color&)" class="O"><span class="H">int</span>&nbsp;<span class="I">Grayscale</span>(<span class="H">const</span>&nbsp;<a href="Color"><u>Color</u></a><span class="H">&amp;</span>&nbsp;<span class="J">c</span>)</p>
+<p class="P">Converts a color <span class="J">c</span> to grayscale.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="IsDark(Color)" class="O"><span class="H">bool</span>&nbsp;<span class="I">IsDark</span>(<a href="Color"><u>Color</u></a>&nbsp;<span class="J">c</span>)</p>
+<p class="P">True if <span class="J">c</span> grayscale level is lower than 80.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="IsLight(Color)" class="O"><span class="H">bool</span>&nbsp;<span class="I">IsLight</span>(<a href="Color"><u>Color</u></a>&nbsp;<span class="J">c</span>)</p>
+<p class="P">True if <span class="J">c</span> grayscale is higher than 175 (255 - 80).</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Upp::DarkTheme(Upp::Color)" class="O"><a href="Upp::Color"><u>Color</u></a>&nbsp;<span class="I">DarkTheme</span>(<a href="Upp::Color"><u>Color</u></a>&nbsp;<span class="J">c</span>)</p>
+<p class="P">'Dark Theme conversion'. Converts dark colors to light ones and vice versa, sustaining the color hue.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Upp::DarkThemeCached(Upp::Color)" class="O"><a href="Upp::Color"><u>Color</u></a>&nbsp;<span class="I">DarkThemeCached</span>(<a href="Upp::Color"><u>Color</u></a>&nbsp;<span class="J">c</span>)</p>
+<p class="P">Cached variant of DarkTheme, caches up to 4 repeating colors.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="StraightColor(RGBA)" class="O"><a href="Color"><u>Color</u></a>&nbsp;<span class="I">StraightColor</span>(<a href="RGBA"><u>RGBA</u></a>&nbsp;<span class="J">rgba</span>)</p>
+<p class="P">Converts a RGBA structure <span class="J">rgba</span> to a <span class="I">Color</span>.</p>
+<p class="F">&nbsp;</p>
+<p class="Y">&nbsp;</p>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr><td width="100%"><table width="100%" class="C"><colgroup><col width="100%"></colgroup>
+<tr><td class="D"><p class="E">Color constants</p>
+</td>
+</tr>
+</table></td>
+</tr></table>
+<p class="F">&nbsp;</p>
+<p class="K">Predefined colors are represented by functions that return the predefined color value.</p>
+<p class="F">&nbsp;</p>
+<p class="A">&nbsp;</p>
+<p id="Black()" class="O"><a href="Color"><u>Color</u></a>&nbsp;<span class="I">Black</span>()</p>
+<p class="P">Black.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Gray()" class="O"><a href="Color"><u>Color</u></a>&nbsp;<span class="I">Gray</span>()</p>
+<p class="P">Gray.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="LtGray()" class="O"><a href="Color"><u>Color</u></a>&nbsp;<span class="I">LtGray</span>()</p>
+<p class="P">Light gray.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="WhiteGray()" class="O"><a href="Color"><u>Color</u></a>&nbsp;<span class="I">WhiteGray</span>()</p>
+<p class="P">White gray.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="White()" class="O"><a href="Color"><u>Color</u></a>&nbsp;<span class="I">White</span>()</p>
+<p class="P">White.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Red()" class="O"><a href="Color"><u>Color</u></a>&nbsp;<span class="I">Red</span>()</p>
+<p class="P">Red.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Green()" class="O"><a href="Color"><u>Color</u></a>&nbsp;<span class="I">Green</span>()</p>
+<p class="P">Green.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Brown()" class="O"><a href="Color"><u>Color</u></a>&nbsp;<span class="I">Brown</span>()</p>
+<p class="P">Brown.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Blue()" class="O"><a href="Color"><u>Color</u></a>&nbsp;<span class="I">Blue</span>()</p>
+<p class="P">Blue.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Magenta()" class="O"><a href="Color"><u>Color</u></a>&nbsp;<span class="I">Magenta</span>()</p>
+<p class="P">Magenta.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Cyan()" class="O"><a href="Color"><u>Color</u></a>&nbsp;<span class="I">Cyan</span>()</p>
+<p class="P">Cyan.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Yellow()" class="O"><a href="Color"><u>Color</u></a>&nbsp;<span class="I">Yellow</span>()</p>
+<p class="P">Yellow.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="LtRed()" class="O"><a href="Color"><u>Color</u></a>&nbsp;<span class="I">LtRed</span>()</p>
+<p class="P">Light red.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="LtGreen()" class="O"><a href="Color"><u>Color</u></a>&nbsp;<span class="I">LtGreen</span>()</p>
+<p class="P">Light green.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="LtYellow()" class="O"><a href="Color"><u>Color</u></a>&nbsp;<span class="I">LtYellow</span>()</p>
+<p class="P">Light yellow.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="LtBlue()" class="O"><a href="Color"><u>Color</u></a>&nbsp;<span class="I">LtBlue</span>()</p>
+<p class="P">Light blue.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="LtMagenta()" class="O"><a href="Color"><u>Color</u></a>&nbsp;<span class="I">LtMagenta</span>()</p>
+<p class="P">Light magenta.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="LtCyan()" class="O"><a href="Color"><u>Color</u></a>&nbsp;<span class="I">LtCyan</span>()</p>
+<p class="P">Light cyan.</p>
+<p class="F">&nbsp;</p>
+<p class="A">&nbsp;</p>
+</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>
+<TABLE BORDER="0" WIDTH="100%"><TR><TD></TD>
+</TR>
+</TABLE>
+<TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" BGCOLOR="#FFFFFF" WIDTH="100%" style="border-style: solid; border-width: 1px; border-color: #6E89AE;padding: 10px;;"><TR><TD><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%"><TR><TD><p class="A"><span class="B"> </span><a href="www$uppweb$contribweb$en-us.html">Do you want to contribute?</a></p>
+</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>
+<script type="text/javascript">var a={};var p=window.location.pathname.split("/");p=p[p.length-1];var s='<select id="lang" onchange="window.location=document.getElementById(\'lang\').value;">';for(l in a){if(p==l){d=" selected=1"}else{d=""}s+='<option value="'+l+'"'+d+'>'+a[l]+'</option>'}s+='</select>';var d=document.createElement('div');d.innerHTML=s;var c=document.getElementById('langs');c.replaceChild(d,c.firstChild);document.getElementById('langbox').style.display='block';</script></BODY>

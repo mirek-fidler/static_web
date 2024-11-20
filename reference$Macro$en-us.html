@@ -1,0 +1,472 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en-us">
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
+<META NAME="Generator" CONTENT="U++ HTML Package">
+<TITLE>Examples / Macro :: U++</TITLE>
+<STYLE TYPE="text/css"><!--
+.A{margin:0px 0px 0px 0px;text-indent:0px;text-align:left;color:#000000;font-family:sans-serif;font-size:10pt;font-weight:normal;font-style:normal;}
+.B{font-size:12pt;}
+.C{margin:0px 0px 0px 0px;text-indent:0px;text-align:left;color:#000000;font-family:serif;font-size:24pt;font-weight:bold;font-style:normal;}
+.D{margin:0px 0px 0px 0px;text-indent:0px;text-align:left;color:#000000;font-family:sans-serif;font-size:12pt;font-weight:normal;font-style:normal;}
+.E{margin:0px 0px 0px 0px;text-indent:0px;text-align:left;color:#000000;font-family:sans-serif;font-size:16pt;font-weight:bold;font-style:normal;}
+.F{margin:0px 0px 0px 0px;text-indent:0px;text-align:left;color:#0000ff;font-family:monospace;font-size:9pt;font-weight:normal;font-style:normal;}
+.G{color:#000000;}
+.H{margin:0px 0px 0px 0px;text-indent:0px;text-align:left;color:#000000;font-family:monospace;font-size:9pt;font-weight:normal;font-style:normal;}
+.I{color:#0000ff;}
+a.l1         { text-decoration:none; font-size: 8pt; font-family: sans-serif; font-weight: normal; }
+a.l1:link    { color:#000000; }
+a.l1:visited { color:#000080; }
+a.l1:hover   { color:#9933CC; }
+a.l1:active  { color:#000000; }
+a.l2         { text-decoration:none; font-size: 12pt; font-family: sans-serif; font-variant: small-caps; }
+a.l2:link    { color:#0066FF; }
+a.l2:visited { color:#FF6600; }
+a.l2:hover   { color:#BC0624; }
+a.l2:active  { color:#BC0024; }
+
+-->
+</STYLE>
+<META NAME="keywords" CONTENT="framework, toolkit, widget, c++, visual, studio, dev-cpp, builder, ide, class, component,wxwidgets, qt, rapid, application, development, rad, mfc, linux, macos, gui, sdl, directx, desktop"><META name="robots" content="index,follow">
+<LINK rel="alternate" type="application/rss+xml" title="SVN changes" href="svnchanges.xml">
+<LINK rel="shortcut icon" type="image/png" href="favicon.png">
+</HEAD><BODY BGCOLOR="#D2D9D2" ALINK="#800000" LINK="#000000" VLINK="#000080"><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%"><TR><TD COLSPAN="3"><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%" BGCOLOR="#FFFFFF" style="border: 1px solid #6E89AE;padding-left: 10px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;"><TR><TD><A HREF="index.html"><IMG SRC="0i.png" ALT="" BORDER="0"></A>
+</TD>
+<TD ALIGN="RIGHT" VALIGN="BOTTOM" STYLE="padding-bottom: 5px; background-image: url('1i.png')"><span style="font-size: 14pt; font-family: sans-serif;"><script type="text/javascript"><!--
+google_ad_client = "pub-1082147624384270";
+google_ad_width = 468;
+google_ad_height = 60;
+google_ad_format = "468x60_as";
+google_ad_type = "text_image";
+google_ad_channel = "";
+google_color_border = "336699";
+google_color_bg = "FFFFFF";
+google_color_link = "0000FF";
+google_color_text = "000000";
+google_color_url = "008000";
+//--></script>
+<script type="text/javascript"
+  src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+&nbsp;&nbsp;</span>
+</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>
+<TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%"><TR><TD COLSPAN="3" BGCOLOR="#D2D9D2" HEIGHT="6"></TD>
+</TR>
+<TR><TD VALIGN="TOP" ALIGN="CENTER"><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="160"><TR><TD ALIGN="CENTER"><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%" BGCOLOR="#FFFFFF" style="border-style: solid; border-width: 1px; border-color: #6E89AE;padding: 0px"><TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px;"><A HREF="www$uppweb$overview$en-us.html" CLASS="l1">Overview</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$examples$en-us.html" CLASS="l1">Examples</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$ss$en-us.html" CLASS="l1">Screenshots</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$comparison$en-us.html" CLASS="l1">Comparisons</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$apps$en-us.html" CLASS="l1">Applications</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$download$en-us.html" CLASS="l1">Download</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$documentation$en-us.html" CLASS="l1">Documentation</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$Tutorials$en-us.html" CLASS="l1">Tutorials</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="app$ide$UppHub$en-us.html" CLASS="l1">UppHub</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$Roadmap$en-us.html" CLASS="l1">Status & Roadmap</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$FAQ$en-us.html" CLASS="l1">FAQ</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="app$ide$About$en-us.html" CLASS="l1">Authors & License</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="https://www.ultimatepp.org/forums" CLASS="l1">Forums</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$Funding$en-us.html" CLASS="l1">Funding U++</A>
+</TD>
+</TR>
+</TABLE>
+<TABLE BORDER="0" WIDTH="100%"><TR><TD></TD>
+</TR>
+</TABLE>
+<TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%" BGCOLOR="#FFFFFF" style="border-style: solid; border-width: 1px; border-color: #6E89AE;padding: 0px"><TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('3i.png'); border: 0px solid black;padding-left:12px; padding-right:0px; padding-top:1px; padding-bottom:1px;color:#FFFFFF;"><B><span style="font-size: 8pt; font-family: sans-serif;">Search on this site</span>
+</B>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:6px; padding-right:0px; padding-top:4px; padding-bottom:4px;border-top: 1px solid #6E89AE;"><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%"><TR><TD><IMG SRC="4i.png" ALT="" BORDER="0"></TD>
+<TD><FORM ACTION="https://www.google.com/search" METHOD="GET" STYLE="margin:0px;padding:0px;"><INPUT TYPE="HIDDEN" NAME="ie" VALUE="UTF-8"><INPUT TYPE="HIDDEN" NAME="oe" VALUE="UTF-8"><INPUT TYPE="TEXT" NAME="q" SIZE="15" MAXLENGTH="256" placeholder="Site search"><INPUT TYPE="HIDDEN" NAME="sitesearch" VALUE="ultimatepp.org"></FORM>
+</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>
+<TABLE BORDER="0" WIDTH="100%"><TR><TD></TD>
+</TR>
+</TABLE>
+<br><div id="fb-root"></div>
+<script type="text/javascript">(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) {return;}
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+<div class="fb-like" data-href="https://www.facebook.com/pages/Upp-Framework/262346610476027?sk=wall" data-send="false" data-layout="button_count" data-width="160" data-show-faces="false" data-font="arial"></div>
+<br><br><script type="text/javascript"><!--
+google_ad_client = "pub-1082147624384270";
+google_ad_width = 160;
+google_ad_height = 600;
+google_ad_format = "160x600_as";
+google_ad_type = "text_image";
+google_ad_channel = "";
+google_color_border = "336699";
+google_color_bg = "FFFFFF";
+google_color_link = "0000FF";
+google_color_text = "000000";
+google_color_url = "008000";
+//--></script>
+<script type="text/javascript"
+  src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script><br><br><script type="text/javascript"><!--
+google_ad_client = "pub-1082147624384270";
+google_ad_width = 160;
+google_ad_height = 90;
+google_ad_format = "160x90_0ads_al_s";
+google_ad_channel = "";
+google_color_border = "336699";
+google_color_bg = "FFFFFF";
+google_color_link = "0000FF";
+google_color_text = "000000";
+google_color_url = "008000";
+//--></script>
+<script type="text/javascript"
+  src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+<br><br><br><br><br><br><A HREF="https://sourceforge.net/projects/upp/"><IMG SRC="https://sourceforge.net/sflogo.php?group_id=93970&amp;type=2" ALT="SourceForge.net Logo" BORDER="0" WIDTH="125" HEIGHT="37"></A>
+<br><br><A HREF="https://flathub.org/en/apps/org.ultimatepp.TheIDE"><IMG SRC="5i.png" ALT="SourceForge.net Logo" BORDER="0" WIDTH="125" HEIGHT="37"></A>
+<br><br><div style="background-color:#ffffff;width:125;height:35"><A HREF="https://github.com/ultimatepp"><IMG SRC="6i.png" ALT="GitHub Logo" BORDER="0" WIDTH="125" HEIGHT="35"></A>
+</div><br><div style="background-color:#ffffff;width:125;height:35"><div style="height:5"></div><A HREF="https://discord.gg/8XzqQzXZzb"><IMG SRC="https://assets-global.website-files.com/6257adef93867e50d84d30e2/636e0b5061df29d55a92d945_full_logo_blurple_RGB.svg" ALT="Discord Logo" BORDER="0" WIDTH="125" HEIGHT="25"></A>
+</div><br></TD>
+</TR>
+</TABLE>
+</TD>
+<TD VALIGN="TOP" BGCOLOR="#D2D9D2"><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="6"><TR><TD></TD>
+</TR>
+</TABLE>
+</TD>
+<TD VALIGN="TOP" WIDTH="100%" BGCOLOR="#D2D9D2"><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" BGCOLOR="#FFFFFF" WIDTH="100%" style="border-style: solid; border-width: 1px; border-color: #6E89AE;padding: 10px;;"><TR><TD><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%"><TR><TD><p class="C">Macro</p>
+<p class="D">&nbsp;</p>
+<p class="D">Examples of using macros in TheIDE</p>
+<p class="A">&nbsp;</p>
+<p class="A">&nbsp;</p>
+<p class="E">Macro.cpp</p>
+<p class="A">&nbsp;</p>
+<p class="F">#include<span class="G"> </span>&lt;<span class="G">Core</span>/<span class="G">Core</span>.<span class="G">h</span>&gt;</p>
+<p class="H">&nbsp;</p>
+<p class="H"><span class="I">using</span> <span class="I">namespace</span> Upp;</p>
+<p class="H">&nbsp;</p>
+<p class="H">CONSOLE_APP_MAIN</p>
+<p class="H">{</p>
+<p class="F"><span class="G">&nbsp;&nbsp;&nbsp;&nbsp;Cout() </span>&lt;&lt;</p>
+<p class="H">&nbsp;&nbsp;&nbsp;&nbsp;&quot;This application does nothing<span class="I">.</span> It's only purpose is to demonstrate\n&quot;</p>
+<p class="H">&nbsp;&nbsp;&nbsp;&nbsp;&quot;the capabilities of the macro language embeded in TheIDE<span class="I">.</span>\n&quot;</p>
+<p class="H">&nbsp;&nbsp;&nbsp;&nbsp;&quot;Try pressing Ctrl<span class="I">+</span>Alt<span class="I">+</span>S in TheIDE<span class="I">...</span>\n&quot;;</p>
+<p class="H">}</p>
+<p class="H">&nbsp;</p>
+<p class="H">&nbsp;</p>
+<p class="H">&nbsp;</p>
+<p class="E">Macro.usc</p>
+<p class="H">&nbsp;</p>
+<p class="F">/*<span class="G"> Welcome to the macro examples file</span>!<span class="G"> </span>*/</p>
+<p class="H">&nbsp;</p>
+<p class="F">//<span class="G"> The first function only serves as an introduction</span>.</p>
+<p class="H"><span class="I">//</span> It is bound to a keyboard shortcut, to make it easier,</p>
+<p class="F">//<span class="G"> the rest of the macros can be invoked via Macro item in the menu</span>.</p>
+<p class="H">macro &quot;Start here&quot; Ctrl<span class="I">+</span>Alt<span class="I">+</span>S {</p>
+<p class="H">&nbsp;&nbsp;&nbsp;&nbsp;<span class="I">//</span> Open <span class="I">this</span> file</p>
+<p class="H">&nbsp;&nbsp;&nbsp;&nbsp;EditFile(&quot;Macro&quot;, &quot;Macro<span class="I">.</span>usc&quot;);</p>
+<p class="H">&nbsp;&nbsp;&nbsp;&nbsp;<span class="I">//</span> Set cursor to the start</p>
+<p class="H">&nbsp;&nbsp;&nbsp;&nbsp;SetCursor(0);</p>
+<p class="F"><span class="G">&nbsp;&nbsp;&nbsp;&nbsp;</span>//<span class="G"> Now you can </span>continue<span class="G"> reading </span>and<span class="G"> exploring the rest of the examples</span>...</p>
+<p class="H">}</p>
+<p class="H">&nbsp;</p>
+<p class="F">//<span class="G"> Macros can call functions defined via &quot;fn&quot; keyword anywhere (even other files, see Func</span>.<span class="G">usc)</span>.</p>
+<p class="F">//<span class="G"> This is usefull e</span>.<span class="G">g</span>.<span class="G"> when you want to share some funcionality between several macros</span>.</p>
+<p class="H">macro &quot;Using functions&quot; {</p>
+<p class="H">&nbsp;&nbsp;&nbsp;&nbsp;<span class="I">//</span> This function opens the example file, moves cursor at the end <span class="I">and</span> appends some strings</p>
+<p class="F"><span class="G">&nbsp;&nbsp;&nbsp;&nbsp;</span>//<span class="G"> generated by functions</span>.</p>
+<p class="H">&nbsp;&nbsp;&nbsp;&nbsp;EditFile(&quot;Macro&quot;,&quot;example<span class="I">.</span>txt&quot;);</p>
+<p class="H">&nbsp;&nbsp;&nbsp;&nbsp;MoveTextEnd();</p>
+<p class="H">&nbsp;&nbsp;&nbsp;&nbsp;Insert(&quot;\n &quot; <span class="I">+</span> FuncA(&quot;C&quot;) <span class="I">+</span> FuncB(&quot;D&quot;) <span class="I">+</span> &quot; \n&quot;);</p>
+<p class="H">}</p>
+<p class="H">&nbsp;</p>
+<p class="H">fn FuncA(arg) {</p>
+<p class="H">&nbsp;&nbsp;&nbsp;&nbsp;<span class="I">return</span> FuncB(arg <span class="I">+</span> &quot;A&quot;);</p>
+<p class="H">}</p>
+<p class="H">&nbsp;</p>
+<p class="F">/*<span class="G"> Chapter 1</span>:<span class="G"> Methods controlling the editor </span>*/</p>
+<p class="H">&nbsp;</p>
+<p class="H">macro &quot;1 Editor&quot;<span class="I">:</span>&quot;1<span class="I">.</span>1 File name&quot; {</p>
+<p class="H">&nbsp;&nbsp;&nbsp;&nbsp;ClearConsole();</p>
+<p class="H">&nbsp;&nbsp;&nbsp;&nbsp;Echo(&quot;Currently edited file is '&quot; <span class="I">+</span> FileName() <span class="I">+</span> &quot;'&quot;);</p>
+<p class="H">}</p>
+<p class="H">&nbsp;</p>
+<p class="H">macro &quot;1 Editor&quot;<span class="I">:</span>&quot;1<span class="I">.</span>2 Opening file&quot; {</p>
+<p class="H">&nbsp;&nbsp;&nbsp;&nbsp;<span class="I">//</span> EditFile can be used with package <span class="I">and</span> file names, as seen here, <span class="I">or</span> it can ba called </p>
+<p class="F"><span class="G">&nbsp;&nbsp;&nbsp;&nbsp;</span>//<span class="G"> with single parameter containing full path to a file</span>.</p>
+<p class="H">&nbsp;&nbsp;&nbsp;&nbsp;EditFile(&quot;Macro&quot;,&quot;example<span class="I">.</span>txt&quot;);</p>
+<p class="H">}</p>
+<p class="H">&nbsp;</p>
+<p class="H">macro &quot;1 Editor&quot;<span class="I">:</span>&quot;1<span class="I">.</span>3 Closing file&quot; {</p>
+<p class="H">&nbsp;&nbsp;&nbsp;&nbsp;<span class="I">//</span> Save the file first, to be sure</p>
+<p class="H">&nbsp;&nbsp;&nbsp;&nbsp;SaveCurrentFile();</p>
+<p class="H">&nbsp;&nbsp;&nbsp;&nbsp;<span class="I">//</span> Now we can close it</p>
+<p class="H">&nbsp;&nbsp;&nbsp;&nbsp;CloseFile();</p>
+<p class="H">}</p>
+<p class="H">&nbsp;</p>
+<p class="F">/*<span class="G"> Chapter 2</span>:<span class="G"> Methods </span>for<span class="G"> automatic text editing </span>*/</p>
+<p class="H">&nbsp;</p>
+<p class="H">macro &quot;2 Editing&quot;<span class="I">:</span>&quot;2<span class="I">.</span>1 Select all&quot; {</p>
+<p class="H">&nbsp;&nbsp;&nbsp;&nbsp;<span class="I">//</span> Again, make sure we use the testing file</p>
+<p class="H">&nbsp;&nbsp;&nbsp;&nbsp;EditFile(&quot;Macro&quot;,&quot;example<span class="I">.</span>txt&quot;);</p>
+<p class="H">&nbsp;&nbsp;&nbsp;&nbsp;<span class="I">//</span> This moves the cursor at the begining of file (the same can be achieved with SetCursor(0);)</p>
+<p class="H">&nbsp;&nbsp;&nbsp;&nbsp;MoveTextBegin();</p>
+<p class="H">&nbsp;&nbsp;&nbsp;&nbsp;<span class="I">//</span> Now we move the cursor at the end of file<span class="I">.</span> The parameter says that we want to select all</p>
+<p class="F"><span class="G">&nbsp;&nbsp;&nbsp;&nbsp;</span>//<span class="G"> the text in between the previous </span>and<span class="G"> </span>new<span class="G"> position</span>.</p>
+<p class="H">&nbsp;&nbsp;&nbsp;&nbsp;MoveTextEnd(1);</p>
+<p class="H">}</p>
+<p class="H">&nbsp;</p>
+<p class="H">macro &quot;2 Editing&quot;<span class="I">:</span>&quot;2<span class="I">.</span>2 Cursor position&quot; {</p>
+<p class="H">&nbsp;&nbsp;&nbsp;&nbsp;EditFile(&quot;Macro&quot;,&quot;example<span class="I">.</span>txt&quot;);</p>
+<p class="F"><span class="G">&nbsp;&nbsp;&nbsp;&nbsp;</span>//<span class="G"> We can get curent cursor position (in characters from start)</span>...</p>
+<p class="H">&nbsp;&nbsp;&nbsp;&nbsp;pos <span class="I">=</span> GetCursor();</p>
+<p class="F"><span class="G">&nbsp;&nbsp;&nbsp;&nbsp;</span>//<span class="G"> </span>...<span class="G"> which can be used to calculate line number </span>...</p>
+<p class="H">&nbsp;&nbsp;&nbsp;&nbsp;line <span class="I">=</span> GetLine(pos);</p>
+<p class="H">&nbsp;&nbsp;&nbsp;&nbsp;<span class="I">//</span> <span class="I">...</span> <span class="I">and</span> also position within the line</p>
+<p class="H">&nbsp;&nbsp;&nbsp;&nbsp;col <span class="I">=</span> GetColumn(pos);</p>
+<p class="H">&nbsp;&nbsp;&nbsp;&nbsp;<span class="I">//</span> Now we move at the end of file <span class="I">and</span> insert a string summarizing what we found out</p>
+<p class="H">&nbsp;&nbsp;&nbsp;&nbsp;MoveTextEnd();</p>
+<p class="H">&nbsp;&nbsp;&nbsp;&nbsp;Insert(&quot;Line<span class="I">:</span>&quot;<span class="I">+</span>to_string(line)<span class="I">+</span>&quot;, Col<span class="I">:</span>&quot;<span class="I">+</span>to_string(col)<span class="I">+</span>&quot;, Pos&quot;<span class="I">+</span>to_string(pos)<span class="I">+</span>&quot;\n&quot;);</p>
+<p class="H">&nbsp;&nbsp;&nbsp;&nbsp;<span class="I">//</span> And finally, we put the cursor back where it originally was, just <span class="I">for</span> users convenience</p>
+<p class="H">&nbsp;&nbsp;&nbsp;&nbsp;SetCursor(pos);</p>
+<p class="H">}</p>
+<p class="H">&nbsp;</p>
+<p class="H">macro &quot;2 Editing&quot;<span class="I">:</span>&quot;2<span class="I">.</span>3 File info&quot; {</p>
+<p class="H">&nbsp;&nbsp;&nbsp;&nbsp;EditFile(&quot;Macro&quot;,&quot;example<span class="I">.</span>txt&quot;);</p>
+<p class="H">&nbsp;&nbsp;&nbsp;&nbsp;pos <span class="I">=</span> GetCursor();</p>
+<p class="H">&nbsp;&nbsp;&nbsp;&nbsp;<span class="I">//</span> Another set of informations we can get from the editor methods is how many text is there</p>
+<p class="H">&nbsp;&nbsp;&nbsp;&nbsp;length <span class="I">=</span> GetLength();</p>
+<p class="H">&nbsp;&nbsp;&nbsp;&nbsp;<span class="I">//</span> And also how many lines</p>
+<p class="H">&nbsp;&nbsp;&nbsp;&nbsp;lines <span class="I">=</span> GetLineCount();</p>
+<p class="H">&nbsp;&nbsp;&nbsp;&nbsp;<span class="I">//</span> Again, we append the info at the end <span class="I">and</span> <span class="I">return</span> to original position</p>
+<p class="H">&nbsp;&nbsp;&nbsp;&nbsp;MoveTextEnd();</p>
+<p class="H">&nbsp;&nbsp;&nbsp;&nbsp;Insert(&quot;Length<span class="I">:</span>&quot;<span class="I">+</span>to_string(length)<span class="I">+</span>&quot;, Lines<span class="I">:</span>&quot;<span class="I">+</span>to_string(lines)<span class="I">+</span>&quot;\n&quot;);</p>
+<p class="H">&nbsp;&nbsp;&nbsp;&nbsp;SetCursor(pos);</p>
+<p class="H">}</p>
+<p class="H">&nbsp;</p>
+<p class="H">macro &quot;2 Editing&quot;<span class="I">:</span>&quot;2<span class="I">.</span>4 Complex example&quot; {</p>
+<p class="H">&nbsp;&nbsp;&nbsp;&nbsp;<span class="I">/*</span> This function analyzes a document (example<span class="I">.</span>txt) <span class="I">and</span> prints a histogram of character </p>
+<p class="H">&nbsp;&nbsp;&nbsp;&nbsp; <span class="I">*</span> usage at the bottom<span class="I">.</span> It could probably be implemented better, faster <span class="I">or</span> both,</p>
+<p class="H">&nbsp;&nbsp;&nbsp;&nbsp; <span class="I">*</span> but it is intentionaly left as is, to demonstrate that even simple macro language </p>
+<p class="F"><span class="G">&nbsp;&nbsp;&nbsp;&nbsp; </span>*<span class="G"> can be used to achieve quite complex tasks</span>.</p>
+<p class="F"><span class="G">&nbsp;&nbsp;&nbsp;&nbsp; </span>*/</p>
+<p class="H">&nbsp;&nbsp;&nbsp;&nbsp;<span class="I">//</span> how many lines should we use to print the histogram</p>
+<p class="H">&nbsp;&nbsp;&nbsp;&nbsp;height <span class="I">=</span> 20;</p>
+<p class="H">&nbsp;&nbsp;&nbsp;&nbsp;<span class="I">//</span> set active file to the example text</p>
+<p class="H">&nbsp;&nbsp;&nbsp;&nbsp;EditFile(&quot;Macro&quot;, &quot;example<span class="I">.</span>txt&quot;);</p>
+<p class="H">&nbsp;&nbsp;&nbsp;&nbsp;<span class="I">//</span> remember cursor position, so we can <span class="I">return</span> it at the end</p>
+<p class="H">&nbsp;&nbsp;&nbsp;&nbsp;pos <span class="I">=</span> GetCursor();</p>
+<p class="H">&nbsp;&nbsp;&nbsp;&nbsp;<span class="I">//</span> <span class="I">this</span> is a little trick to make sure Esc knows that hist is a map, <span class="I">not</span> an array</p>
+<p class="H">&nbsp;&nbsp;&nbsp;&nbsp;hist<span class="I">[</span>&quot;&quot;<span class="I">]</span> <span class="I">=</span> 0;</p>
+<p class="H">&nbsp;&nbsp;&nbsp;&nbsp;<span class="I">//</span> iterate over entire document <span class="I">and</span> count letters</p>
+<p class="H">&nbsp;&nbsp;&nbsp;&nbsp;length <span class="I">=</span> GetLength();</p>
+<p class="H">&nbsp;&nbsp;&nbsp;&nbsp;<span class="I">for</span>(i<span class="I">=</span>0; i<span class="I">&lt;</span>length; i<span class="I">++</span>){</p>
+<p class="H">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;x <span class="I">=</span> ToLower(Get(i));</p>
+<p class="H">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="I">//</span> change the key <span class="I">for</span> non<span class="I">-</span>printable</p>
+<p class="H">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="I">if</span>(x<span class="I">[</span>0<span class="I">]&lt;=</span>32)</p>
+<p class="H">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;x<span class="I">=</span>&quot;&quot;;</p>
+<p class="H">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="I">//</span> initialize <span class="I">if</span> it is first encounter, otherwise just increse value</p>
+<p class="H">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="I">if</span>(is_void(hist<span class="I">[</span>x<span class="I">]</span>))</p>
+<p class="H">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;hist<span class="I">[</span>x<span class="I">]</span> <span class="I">=</span> 1;</p>
+<p class="F"><span class="G">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>else</p>
+<p class="H">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;hist<span class="I">[</span>x<span class="I">]++</span>;</p>
+<p class="H">&nbsp;&nbsp;&nbsp;&nbsp;}</p>
+<p class="H">&nbsp;&nbsp;&nbsp;&nbsp;<span class="I">//</span> <span class="I">delete</span> non<span class="I">-</span>printable</p>
+<p class="H">&nbsp;&nbsp;&nbsp;&nbsp;hist<span class="I">[</span>&quot;&quot;<span class="I">]</span> <span class="I">=</span> <span class="I">void</span>;</p>
+<p class="H">&nbsp;&nbsp;&nbsp;&nbsp;<span class="I">//</span> make a line of '<span class="I">=</span>' with same length as we have columns</p>
+<p class="H">&nbsp;&nbsp;&nbsp;&nbsp;sep <span class="I">=</span> &quot;<span class="I">+</span>&quot; <span class="I">+</span> len(hist) <span class="I">*</span> &quot;<span class="I">-</span>&quot; <span class="I">+</span> &quot;<span class="I">+</span>&quot;;</p>
+<p class="H">&nbsp;&nbsp;&nbsp;&nbsp;<span class="I">//</span> insert top line</p>
+<p class="H">&nbsp;&nbsp;&nbsp;&nbsp;MoveTextEnd();</p>
+<p class="H">&nbsp;&nbsp;&nbsp;&nbsp;Insert(&quot;\n&quot;<span class="I">+</span>sep<span class="I">+</span>&quot;\n&quot;);</p>
+<p class="H">&nbsp;&nbsp;&nbsp;&nbsp;MoveTextEnd();</p>
+<p class="H">&nbsp;&nbsp;&nbsp;&nbsp;<span class="I">//</span> compute maximum <span class="I">for</span> scaling</p>
+<p class="H">&nbsp;&nbsp;&nbsp;&nbsp;max <span class="I">=</span> height;</p>
+<p class="H">&nbsp;&nbsp;&nbsp;&nbsp;<span class="I">for</span>(i in hist)</p>
+<p class="H">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="I">if</span>(hist<span class="I">[</span>i<span class="I">]&gt;</span>max) </p>
+<p class="H">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;max <span class="I">=</span> hist<span class="I">[</span>i<span class="I">]</span>;</p>
+<p class="H">&nbsp;&nbsp;&nbsp;&nbsp;<span class="I">//</span> get sort order</p>
+<p class="H">&nbsp;&nbsp;&nbsp;&nbsp;k <span class="I">=</span> sort(keys(hist));</p>
+<p class="H">&nbsp;&nbsp;&nbsp;&nbsp;<span class="I">//</span> plot the histogram, left to right, top to bottom</p>
+<p class="H">&nbsp;&nbsp;&nbsp;&nbsp;<span class="I">for</span>(i<span class="I">=</span>height; i<span class="I">&gt;</span>0; <span class="I">--</span>i){</p>
+<p class="H">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Insert(&quot;<span class="I">|</span>&quot;);</p>
+<p class="H">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;MoveRight();</p>
+<p class="H">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="I">for</span>(j in k){</p>
+<p class="H">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="I">if</span>(hist<span class="I">[</span>k<span class="I">[</span>j<span class="I">]]/</span>max<span class="I">*</span>height <span class="I">&gt;=</span> i)</p>
+<p class="H">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Insert(&quot;<span class="I">#</span>&quot;);</p>
+<p class="F"><span class="G">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>else</p>
+<p class="H">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Insert(&quot; &quot;);</p>
+<p class="H">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;MoveRight();</p>
+<p class="H">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</p>
+<p class="H">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="I">//</span> print y<span class="I">-</span>axis legend</p>
+<p class="H">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Insert(&quot;<span class="I">|</span>&quot;<span class="I">+</span>to_string(<span class="I">int</span>(i<span class="I">*</span>max<span class="I">/</span>height))<span class="I">+</span>&quot;\n&quot;);</p>
+<p class="H">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;MoveTextEnd();</p>
+<p class="H">&nbsp;&nbsp;&nbsp;&nbsp;}</p>
+<p class="H">&nbsp;&nbsp;&nbsp;&nbsp;<span class="I">//</span>insert bottom line</p>
+<p class="H">&nbsp;&nbsp;&nbsp;&nbsp;Insert(sep<span class="I">+</span>&quot;\n&quot;);</p>
+<p class="H">&nbsp;&nbsp;&nbsp;&nbsp;MoveTextEnd();</p>
+<p class="H">&nbsp;&nbsp;&nbsp;&nbsp;<span class="I">//</span> print x<span class="I">-</span>axis legend</p>
+<p class="H">&nbsp;&nbsp;&nbsp;&nbsp;Insert(&quot; &quot;);</p>
+<p class="H">&nbsp;&nbsp;&nbsp;&nbsp;MoveRight();</p>
+<p class="H">&nbsp;&nbsp;&nbsp;&nbsp;<span class="I">for</span>(j in k) {</p>
+<p class="H">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Insert(k<span class="I">[</span>j<span class="I">]</span>);</p>
+<p class="H">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;MoveRight();</p>
+<p class="H">&nbsp;&nbsp;&nbsp;&nbsp;}</p>
+<p class="H">&nbsp;&nbsp;&nbsp;&nbsp;Insert(&quot;\n&quot;);</p>
+<p class="H">&nbsp;&nbsp;&nbsp;&nbsp;<span class="I">//</span> <span class="I">return</span> cursor to original position</p>
+<p class="H">&nbsp;&nbsp;&nbsp;&nbsp;SetCursor(pos);</p>
+<p class="H">}</p>
+<p class="H">&nbsp;</p>
+<p class="H">macro &quot;3 User interaction&quot;<span class="I">:</span>&quot;3<span class="I">.</span>1 Using console&quot; {</p>
+<p class="H">&nbsp;&nbsp;&nbsp;&nbsp;<span class="I">//</span> It is a good idea to clean the console before printing something in it, because text</p>
+<p class="H">&nbsp;&nbsp;&nbsp;&nbsp;<span class="I">//</span> left from previous actions might confuse the user</p>
+<p class="H">&nbsp;&nbsp;&nbsp;&nbsp;ClearConsole();</p>
+<p class="F"><span class="G">&nbsp;&nbsp;&nbsp;&nbsp;</span>//<span class="G"> You already seen Echo being used to inform user in some of the examples above</span>...</p>
+<p class="H">&nbsp;&nbsp;&nbsp;&nbsp;<span class="I">//</span> Important point is, that the console will be shown <span class="I">if</span> it is hidden as soon</p>
+<p class="F"><span class="G">&nbsp;&nbsp;&nbsp;&nbsp;</span>//<span class="G"> as you Echo() something</span>.</p>
+<p class="H">&nbsp;&nbsp;&nbsp;&nbsp;Echo(&quot;Hello wolrd<span class="I">!</span>&quot;, &quot;This is just a test<span class="I">...</span>&quot;);</p>
+<p class="H">}</p>
+<p class="H">&nbsp;</p>
+<p class="H">macro &quot;3 User interaction&quot;<span class="I">:</span>&quot;3<span class="I">.</span>2 Input&quot; {</p>
+<p class="H">&nbsp;&nbsp;&nbsp;&nbsp;ClearConsole();</p>
+<p class="H">&nbsp;&nbsp;&nbsp;&nbsp;<span class="I">//</span> The Input() function can be called to get some values from user<span class="I">.</span> It returns array </p>
+<p class="F"><span class="G">&nbsp;&nbsp;&nbsp;&nbsp;</span>//<span class="G"> of strings containing the values entered into the dialog</span>.</p>
+<p class="H">&nbsp;&nbsp;&nbsp;&nbsp;a <span class="I">=</span> Input(&quot;Some number&quot;,&quot;Some string&quot;);</p>
+<p class="H">&nbsp;&nbsp;&nbsp;&nbsp;<span class="I">//</span> If you want to use it to get some number, you need to convert it from string <span class="I">and</span> check</p>
+<p class="H">&nbsp;&nbsp;&nbsp;&nbsp;<span class="I">//</span> that it was really a number</p>
+<p class="H">&nbsp;&nbsp;&nbsp;&nbsp;n <span class="I">=</span> to_number(a<span class="I">[</span>0<span class="I">]</span>);</p>
+<p class="H">&nbsp;&nbsp;&nbsp;&nbsp;<span class="I">if</span> (is_void(n)){</p>
+<p class="H">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Echo(&quot;ERROR<span class="I">:</span> '&quot; <span class="I">+</span> a<span class="I">[</span>0<span class="I">]</span> <span class="I">+</span> &quot;' is <span class="I">not</span> a number<span class="I">.</span>&quot;);</p>
+<p class="H">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="I">return</span>;</p>
+<p class="H">&nbsp;&nbsp;&nbsp;&nbsp;}</p>
+<p class="H">&nbsp;&nbsp;&nbsp;&nbsp;<span class="I">//</span> Now you can safely use the obtained data</p>
+<p class="H">&nbsp;&nbsp;&nbsp;&nbsp;Echo(&quot;The entered number was &quot;<span class="I">+</span>to_string(n),</p>
+<p class="H">&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&quot;The string was '&quot; <span class="I">+</span> a<span class="I">[</span>1<span class="I">]</span> <span class="I">+</span> &quot;'&quot;);</p>
+<p class="H">}</p>
+<p class="H">&nbsp;</p>
+<p class="F">/*<span class="G"> Chapter 4</span>:<span class="G"> Methods that give you informations about the development environment </span>*/</p>
+<p class="H">&nbsp;</p>
+<p class="H">macro &quot;4 Informative&quot;<span class="I">:</span>&quot;4<span class="I">.</span>1 Package info&quot; {</p>
+<p class="H">&nbsp;&nbsp;&nbsp;&nbsp;ClearConsole();</p>
+<p class="H">&nbsp;&nbsp;&nbsp;&nbsp;<span class="I">//</span> There are 4 functions that can be used to find out what packages <span class="I">and</span> files current </p>
+<p class="H">&nbsp;&nbsp;&nbsp;&nbsp;<span class="I">//</span> project consists of<span class="I">.</span> </p>
+<p class="H">&nbsp;&nbsp;&nbsp;&nbsp;Echo(&quot;ActivePackage()<span class="I">=</span>\&quot;&quot; <span class="I">+</span> ActivePackage() <span class="I">+</span> &quot;\&quot;&quot;,</p>
+<p class="H">&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&quot;MainPackage()<span class="I">=</span>\&quot;&quot; <span class="I">+</span> MainPackage() <span class="I">+</span> &quot;\&quot;&quot;,</p>
+<p class="H">&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&quot;PackageDir()<span class="I">=</span>\&quot;&quot; <span class="I">+</span> PackageDir() <span class="I">+</span> &quot;\&quot;&quot;,</p>
+<p class="H">&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&quot;PackageDir(\&quot;plugin<span class="I">/</span>z\&quot;)<span class="I">=</span>\&quot;&quot; <span class="I">+</span> PackageDir(&quot;plugin<span class="I">/</span>z&quot;) <span class="I">+</span> &quot;\&quot;&quot;,</p>
+<p class="H">&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&quot;PackageFiles()<span class="I">=</span>&quot; <span class="I">+</span> to_string(PackageFiles()),</p>
+<p class="H">&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&quot;PackageFiles(\&quot;plugin<span class="I">/</span>z\&quot;)<span class="I">=</span>&quot; <span class="I">+</span> to_string(PackageFiles(&quot;plugin<span class="I">/</span>z&quot;)));</p>
+<p class="H">&nbsp;&nbsp;&nbsp;&nbsp;<span class="I">//</span> Additionaly, the two of them which accept package name as a parameter can be also used</p>
+<p class="H">&nbsp;&nbsp;&nbsp;&nbsp;<span class="I">//</span> to query packages <span class="I">not</span> used in current project</p>
+<p class="H">&nbsp;&nbsp;&nbsp;&nbsp;Echo(&quot;PackageDir(\&quot;plugin<span class="I">/</span>gif\&quot;)<span class="I">=</span>\&quot;&quot; <span class="I">+</span> PackageDir(&quot;plugin<span class="I">/</span>gif&quot;) <span class="I">+</span> &quot;\&quot;&quot;,</p>
+<p class="H">&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&quot;PackageFiles(\&quot;plugin<span class="I">/</span>gif\&quot;)<span class="I">=</span>&quot; <span class="I">+</span> to_string(PackageFiles(&quot;plugin<span class="I">/</span>gif&quot;)));</p>
+<p class="H">}</p>
+<p class="H">&nbsp;</p>
+<p class="H">macro &quot;4 Informative&quot;<span class="I">:</span>&quot;4<span class="I">.</span>2 Build config info&quot; {</p>
+<p class="H">&nbsp;&nbsp;&nbsp;&nbsp;ClearConsole();</p>
+<p class="H">&nbsp;&nbsp;&nbsp;&nbsp;<span class="I">//</span> Another four methods inform about the build environment settings</p>
+<p class="H">&nbsp;&nbsp;&nbsp;&nbsp;Echo(&quot;Assembly()<span class="I">=</span>\&quot;&quot; <span class="I">+</span> Assembly() <span class="I">+</span> &quot;\&quot;&quot;,</p>
+<p class="H">&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&quot;Flags()<span class="I">=</span>&quot; <span class="I">+</span> to_string(Flags()),</p>
+<p class="H">&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&quot;BuildMethod()<span class="I">=</span>\&quot;&quot; <span class="I">+</span> BuildMethod() <span class="I">+</span> &quot;\&quot;&quot;,</p>
+<p class="H">&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&quot;BuildMode()<span class="I">=</span>\&quot;&quot; <span class="I">+</span> to_string(BuildMode()) <span class="I">+</span> &quot;\&quot;&quot;);</p>
+<p class="F"><span class="G">&nbsp;&nbsp;&nbsp;&nbsp;</span>//<span class="G"> You might have noticed that BuildMode() returns number, but it can be easily converted</span>:</p>
+<p class="H">&nbsp;&nbsp;&nbsp;&nbsp;modes <span class="I">=</span> <span class="I">[</span> &quot;Debug&quot;, &quot;Optional&quot;, &quot;Speed&quot;, &quot;Size&quot; <span class="I">]</span>;</p>
+<p class="H">&nbsp;&nbsp;&nbsp;&nbsp;Echo(&quot;Build mode is set to '&quot; <span class="I">+</span> modes<span class="I">[</span>BuildMode()<span class="I">]</span> <span class="I">+</span> &quot;'<span class="I">.</span>&quot;);</p>
+<p class="H">}</p>
+<p class="H">&nbsp;</p>
+<p class="H">macro &quot;5 Executing<span class="I">/</span>Building&quot;<span class="I">:</span>&quot;5<span class="I">.</span>1 Execute&quot; {</p>
+<p class="H">&nbsp;&nbsp;&nbsp;&nbsp;ClearConsole();</p>
+<p class="H">&nbsp;&nbsp;&nbsp;&nbsp;<span class="I">//</span> An external command can be executed with Execute, the output will be printed in console</p>
+<p class="H">&nbsp;&nbsp;&nbsp;&nbsp;Execute(&quot;echo Hello world&quot;);</p>
+<p class="H">}</p>
+<p class="H">&nbsp;</p>
+<p class="H">macro &quot;5 Executing<span class="I">/</span>Building&quot;<span class="I">:</span>&quot;5<span class="I">.</span>2 Launch&quot; {</p>
+<p class="H">&nbsp;&nbsp;&nbsp;&nbsp;<span class="I">//</span> <span class="I">this</span> should work on Win <span class="I">and</span> <span class="I">do</span> nothing on Linux</p>
+<p class="H">&nbsp;&nbsp;&nbsp;&nbsp;Launch(&quot;cmd<span class="I">.</span>exe&quot;);</p>
+<p class="H">&nbsp;&nbsp;&nbsp;&nbsp;<span class="I">//</span> <span class="I">this</span> should <span class="I">do</span> nothing on Win <span class="I">and</span> work on Linux</p>
+<p class="H">&nbsp;&nbsp;&nbsp;&nbsp;Launch(&quot;<span class="I">/</span>usr<span class="I">/</span>bin<span class="I">/</span>xterm&quot;);</p>
+<p class="H">}</p>
+<p class="H">&nbsp;</p>
+<p class="H">macro &quot;5 Executing<span class="I">/</span>Building&quot;<span class="I">:</span>&quot;5<span class="I">.</span>3 Build&quot; {</p>
+<p class="H">&nbsp;&nbsp;&nbsp;&nbsp;ClearConsole();</p>
+<p class="F"><span class="G">&nbsp;&nbsp;&nbsp;&nbsp;</span>//<span class="G"> Build can be used to automatically build current project</span>.</p>
+<p class="H">&nbsp;&nbsp;&nbsp;&nbsp;Build();</p>
+<p class="H">}</p>
+<p class="H">&nbsp;</p>
+<p class="H">macro &quot;5 Executing<span class="I">/</span>Building&quot;<span class="I">:</span>&quot;5<span class="I">.</span>4 BuildProject&quot; {</p>
+<p class="H">&nbsp;&nbsp;&nbsp;&nbsp;ClearConsole();</p>
+<p class="H">&nbsp;&nbsp;&nbsp;&nbsp;<span class="I">//</span> Get <span class="I">.</span>upp file location <span class="I">for</span> another package</p>
+<p class="H">&nbsp;&nbsp;&nbsp;&nbsp;upp <span class="I">=</span> PackageDir(&quot;umk&quot;) <span class="I">+</span> &quot;<span class="I">/</span>umk<span class="I">.</span>upp&quot;;</p>
+<p class="H">&nbsp;&nbsp;&nbsp;&nbsp;<span class="I">//</span> Build that package with SSE2 build flag</p>
+<p class="H">&nbsp;&nbsp;&nbsp;&nbsp;BuildProject(upp, &quot;SSE2&quot;);</p>
+<p class="H">}</p>
+<p class="H">&nbsp;</p>
+<p class="H">&nbsp;</p>
+<p class="H">&nbsp;</p>
+<p class="H">&nbsp;</p>
+<p class="E">Func.usc</p>
+<p class="H">&nbsp;</p>
+<p class="F">//<span class="G"> One of the functions used in the &quot;Using functions&quot; macro</span>.</p>
+<p class="F">//<span class="G"> As you can see, it can be defined in completely separate file</span>.</p>
+<p class="H">fn FuncB(arg) {</p>
+<p class="H">&nbsp;&nbsp;&nbsp;&nbsp;<span class="I">return</span> arg <span class="I">+</span> &quot;B&quot;;</p>
+<p class="H">}</p>
+<p class="H">&nbsp;</p>
+<p class="H">&nbsp;</p>
+<p class="H">&nbsp;</p>
+<p class="H">&nbsp;</p>
+</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>
+<TABLE BORDER="0" WIDTH="100%"><TR><TD></TD>
+</TR>
+</TABLE>
+<TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" BGCOLOR="#FFFFFF" WIDTH="100%" style="border-style: solid; border-width: 1px; border-color: #6E89AE;padding: 10px;;"><TR><TD><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%"><TR><TD><p class="A"><span class="B"> </span><a href="www$uppweb$contribweb$en-us.html">Do you want to contribute?</a></p>
+</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>
+<script type="text/javascript">var a={'reference$Macro$en-us.html':'English'};var p=window.location.pathname.split("/");p=p[p.length-1];var s='<select id="lang" onchange="window.location=document.getElementById(\'lang\').value;">';for(l in a){if(p==l){d=" selected=1"}else{d=""}s+='<option value="'+l+'"'+d+'>'+a[l]+'</option>'}s+='</select>';var d=document.createElement('div');d.innerHTML=s;var c=document.getElementById('langs');c.replaceChild(d,c.firstChild);document.getElementById('langbox').style.display='block';</script></BODY>

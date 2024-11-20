@@ -1,0 +1,766 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en-us">
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
+<META NAME="Generator" CONTENT="U++ HTML Package">
+<TITLE>Demos / CompDir :: U++</TITLE>
+<STYLE TYPE="text/css"><!--
+.A{margin:0px 0px 0px 0px;text-indent:0px;text-align:left;color:#000000;font-family:sans-serif;font-size:10pt;font-weight:normal;font-style:normal;}
+.B{font-size:12pt;}
+.C{margin:0px 0px 0px 0px;text-indent:0px;text-align:left;color:#000000;font-family:serif;font-size:24pt;font-weight:bold;font-style:normal;}
+.D{margin:0px 0px 0px 0px;text-indent:0px;text-align:left;color:#000000;font-family:sans-serif;font-size:12pt;font-weight:normal;font-style:normal;}
+.E{margin:0px 0px 0px 0px;text-indent:0px;text-align:center;color:#000000;font-family:sans-serif;font-size:12pt;font-weight:normal;font-style:normal;}
+.F{margin:0px 0px 0px 0px;text-indent:0px;text-align:left;color:#000000;font-family:sans-serif;font-size:16pt;font-weight:bold;font-style:normal;}
+.G{margin:0px 0px 0px 0px;text-indent:0px;text-align:left;color:#000000;font-family:monospace;font-size:9pt;font-weight:normal;font-style:normal;}
+.H{color:#0000ff;}
+.I{margin:0px 0px 0px 0px;text-indent:0px;text-align:left;color:#0000ff;font-family:monospace;font-size:9pt;font-weight:normal;font-style:normal;}
+.J{color:#000000;}
+a.l1         { text-decoration:none; font-size: 8pt; font-family: sans-serif; font-weight: normal; }
+a.l1:link    { color:#000000; }
+a.l1:visited { color:#000080; }
+a.l1:hover   { color:#9933CC; }
+a.l1:active  { color:#000000; }
+a.l2         { text-decoration:none; font-size: 12pt; font-family: sans-serif; font-variant: small-caps; }
+a.l2:link    { color:#0066FF; }
+a.l2:visited { color:#FF6600; }
+a.l2:hover   { color:#BC0624; }
+a.l2:active  { color:#BC0024; }
+
+-->
+</STYLE>
+<META NAME="keywords" CONTENT="framework, toolkit, widget, c++, visual, studio, dev-cpp, builder, ide, class, component,wxwidgets, qt, rapid, application, development, rad, mfc, linux, macos, gui, sdl, directx, desktop"><META name="robots" content="index,follow">
+<LINK rel="alternate" type="application/rss+xml" title="SVN changes" href="svnchanges.xml">
+<LINK rel="shortcut icon" type="image/png" href="favicon.png">
+</HEAD><BODY BGCOLOR="#D2D9D2" ALINK="#800000" LINK="#000000" VLINK="#000080"><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%"><TR><TD COLSPAN="3"><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%" BGCOLOR="#FFFFFF" style="border: 1px solid #6E89AE;padding-left: 10px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;"><TR><TD><A HREF="index.html"><IMG SRC="0i.png" ALT="" BORDER="0"></A>
+</TD>
+<TD ALIGN="RIGHT" VALIGN="BOTTOM" STYLE="padding-bottom: 5px; background-image: url('1i.png')"><span style="font-size: 14pt; font-family: sans-serif;"><script type="text/javascript"><!--
+google_ad_client = "pub-1082147624384270";
+google_ad_width = 468;
+google_ad_height = 60;
+google_ad_format = "468x60_as";
+google_ad_type = "text_image";
+google_ad_channel = "";
+google_color_border = "336699";
+google_color_bg = "FFFFFF";
+google_color_link = "0000FF";
+google_color_text = "000000";
+google_color_url = "008000";
+//--></script>
+<script type="text/javascript"
+  src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+&nbsp;&nbsp;</span>
+</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>
+<TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%"><TR><TD COLSPAN="3" BGCOLOR="#D2D9D2" HEIGHT="6"></TD>
+</TR>
+<TR><TD VALIGN="TOP" ALIGN="CENTER"><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="160"><TR><TD ALIGN="CENTER"><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%" BGCOLOR="#FFFFFF" style="border-style: solid; border-width: 1px; border-color: #6E89AE;padding: 0px"><TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px;"><A HREF="www$uppweb$overview$en-us.html" CLASS="l1">Overview</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$examples$en-us.html" CLASS="l1">Examples</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$ss$en-us.html" CLASS="l1">Screenshots</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$comparison$en-us.html" CLASS="l1">Comparisons</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$apps$en-us.html" CLASS="l1">Applications</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$download$en-us.html" CLASS="l1">Download</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$documentation$en-us.html" CLASS="l1">Documentation</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$Tutorials$en-us.html" CLASS="l1">Tutorials</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="app$ide$UppHub$en-us.html" CLASS="l1">UppHub</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$Roadmap$en-us.html" CLASS="l1">Status & Roadmap</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$FAQ$en-us.html" CLASS="l1">FAQ</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="app$ide$About$en-us.html" CLASS="l1">Authors & License</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="https://www.ultimatepp.org/forums" CLASS="l1">Forums</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$Funding$en-us.html" CLASS="l1">Funding U++</A>
+</TD>
+</TR>
+</TABLE>
+<TABLE BORDER="0" WIDTH="100%"><TR><TD></TD>
+</TR>
+</TABLE>
+<TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%" BGCOLOR="#FFFFFF" style="border-style: solid; border-width: 1px; border-color: #6E89AE;padding: 0px"><TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('3i.png'); border: 0px solid black;padding-left:12px; padding-right:0px; padding-top:1px; padding-bottom:1px;color:#FFFFFF;"><B><span style="font-size: 8pt; font-family: sans-serif;">Search on this site</span>
+</B>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:6px; padding-right:0px; padding-top:4px; padding-bottom:4px;border-top: 1px solid #6E89AE;"><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%"><TR><TD><IMG SRC="4i.png" ALT="" BORDER="0"></TD>
+<TD><FORM ACTION="https://www.google.com/search" METHOD="GET" STYLE="margin:0px;padding:0px;"><INPUT TYPE="HIDDEN" NAME="ie" VALUE="UTF-8"><INPUT TYPE="HIDDEN" NAME="oe" VALUE="UTF-8"><INPUT TYPE="TEXT" NAME="q" SIZE="15" MAXLENGTH="256" placeholder="Site search"><INPUT TYPE="HIDDEN" NAME="sitesearch" VALUE="ultimatepp.org"></FORM>
+</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>
+<TABLE BORDER="0" WIDTH="100%"><TR><TD></TD>
+</TR>
+</TABLE>
+<br><div id="fb-root"></div>
+<script type="text/javascript">(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) {return;}
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+<div class="fb-like" data-href="https://www.facebook.com/pages/Upp-Framework/262346610476027?sk=wall" data-send="false" data-layout="button_count" data-width="160" data-show-faces="false" data-font="arial"></div>
+<br><br><script type="text/javascript"><!--
+google_ad_client = "pub-1082147624384270";
+google_ad_width = 160;
+google_ad_height = 600;
+google_ad_format = "160x600_as";
+google_ad_type = "text_image";
+google_ad_channel = "";
+google_color_border = "336699";
+google_color_bg = "FFFFFF";
+google_color_link = "0000FF";
+google_color_text = "000000";
+google_color_url = "008000";
+//--></script>
+<script type="text/javascript"
+  src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script><br><br><script type="text/javascript"><!--
+google_ad_client = "pub-1082147624384270";
+google_ad_width = 160;
+google_ad_height = 90;
+google_ad_format = "160x90_0ads_al_s";
+google_ad_channel = "";
+google_color_border = "336699";
+google_color_bg = "FFFFFF";
+google_color_link = "0000FF";
+google_color_text = "000000";
+google_color_url = "008000";
+//--></script>
+<script type="text/javascript"
+  src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+<br><br><br><br><br><br><A HREF="https://sourceforge.net/projects/upp/"><IMG SRC="https://sourceforge.net/sflogo.php?group_id=93970&amp;type=2" ALT="SourceForge.net Logo" BORDER="0" WIDTH="125" HEIGHT="37"></A>
+<br><br><A HREF="https://flathub.org/en/apps/org.ultimatepp.TheIDE"><IMG SRC="5i.png" ALT="SourceForge.net Logo" BORDER="0" WIDTH="125" HEIGHT="37"></A>
+<br><br><div style="background-color:#ffffff;width:125;height:35"><A HREF="https://github.com/ultimatepp"><IMG SRC="6i.png" ALT="GitHub Logo" BORDER="0" WIDTH="125" HEIGHT="35"></A>
+</div><br><div style="background-color:#ffffff;width:125;height:35"><div style="height:5"></div><A HREF="https://discord.gg/8XzqQzXZzb"><IMG SRC="https://assets-global.website-files.com/6257adef93867e50d84d30e2/636e0b5061df29d55a92d945_full_logo_blurple_RGB.svg" ALT="Discord Logo" BORDER="0" WIDTH="125" HEIGHT="25"></A>
+</div><br></TD>
+</TR>
+</TABLE>
+</TD>
+<TD VALIGN="TOP" BGCOLOR="#D2D9D2"><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="6"><TR><TD></TD>
+</TR>
+</TABLE>
+</TD>
+<TD VALIGN="TOP" WIDTH="100%" BGCOLOR="#D2D9D2"><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" BGCOLOR="#FFFFFF" WIDTH="100%" style="border-style: solid; border-width: 1px; border-color: #6E89AE;padding: 10px;;"><TR><TD><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%"><TR><TD><p class="C">CompDir</p>
+<p class="D">&nbsp;</p>
+<p class="D">Compares directory contents</p>
+<p class="D">&nbsp;</p>
+<p class="E"><a href="examples$CompDir$en-us.html_0.png"><img src="examples$CompDir$en-us.html_0.png" border="0" alt="" style="width: 677px; height: 726px"></a></p>
+<p class="A">&nbsp;</p>
+<p class="A">&nbsp;</p>
+<p class="F">CompDir.h</p>
+<p class="A">&nbsp;</p>
+<p class="G"><span class="H">#ifndef</span> _CompDir_CompDir_h</p>
+<p class="G"><span class="H">#define</span> _CompDir_CompDir_h</p>
+<p class="G">&nbsp;</p>
+<p class="I">#include<span class="J"> </span>&lt;<span class="J">CtrlLib</span>/<span class="J">CtrlLib</span>.<span class="J">h</span>&gt;</p>
+<p class="G">&nbsp;</p>
+<p class="G"><span class="H">using</span> <span class="H">namespace</span> Upp;</p>
+<p class="G">&nbsp;</p>
+<p class="G"><span class="H">#include</span> &quot;textdiff<span class="H">.</span>h&quot;</p>
+<p class="G">&nbsp;</p>
+<p class="I">#endif</p>
+<p class="G">&nbsp;</p>
+<p class="G">&nbsp;</p>
+<p class="G">&nbsp;</p>
+<p class="F">textdiff.h</p>
+<p class="G">&nbsp;</p>
+<p class="G"><span class="H">#ifndef</span> _CompDir_textdiff_h_</p>
+<p class="G"><span class="H">#define</span> _CompDir_textdiff_h_</p>
+<p class="G">&nbsp;</p>
+<p class="G"><span class="H">class</span> TextSection</p>
+<p class="G">{</p>
+<p class="I">public:</p>
+<p class="G">&nbsp;&nbsp;&nbsp;&nbsp;TextSection(<span class="H">int</span> start1, <span class="H">int</span> count1, <span class="H">int</span> start2, <span class="H">int</span> count2, <span class="H">bool</span> same)</p>
+<p class="G">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="H">:</span> start1(start1), count1(count1), start2(start2), count2(count2), same(same) {}</p>
+<p class="G">&nbsp;</p>
+<p class="I">public:</p>
+<p class="G">&nbsp;&nbsp;&nbsp;&nbsp;<span class="H">int</span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;start1;</p>
+<p class="G">&nbsp;&nbsp;&nbsp;&nbsp;<span class="H">int</span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;count1;</p>
+<p class="G">&nbsp;&nbsp;&nbsp;&nbsp;<span class="H">int</span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;start2;</p>
+<p class="G">&nbsp;&nbsp;&nbsp;&nbsp;<span class="H">int</span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;count2 <span class="H">:</span> 31;</p>
+<p class="G">&nbsp;&nbsp;&nbsp;&nbsp;<span class="H">unsigned</span> same &nbsp;&nbsp;<span class="H">:</span> 1;</p>
+<p class="G">};</p>
+<p class="G">&nbsp;</p>
+<p class="G">Array<span class="H">&lt;</span>TextSection<span class="H">&gt;</span> CompareLineMaps(<span class="H">const</span> Vector<span class="H">&lt;</span>String<span class="H">&gt;&amp;</span> l1, <span class="H">const</span> Vector<span class="H">&lt;</span>String<span class="H">&gt;&amp;</span> l2);</p>
+<p class="G">Vector<span class="H">&lt;</span>String<span class="H">&gt;</span> &nbsp;&nbsp;&nbsp;&nbsp;GetLineMap(Stream<span class="H">&amp;</span> stream);</p>
+<p class="G">Vector<span class="H">&lt;</span>String<span class="H">&gt;</span> &nbsp;&nbsp;&nbsp;&nbsp;GetFileLineMap(<span class="H">const</span> String<span class="H">&amp;</span> path);</p>
+<p class="G">Vector<span class="H">&lt;</span>String<span class="H">&gt;</span> &nbsp;&nbsp;&nbsp;&nbsp;GetStringLineMap(<span class="H">const</span> String <span class="H">&amp;</span>s);</p>
+<p class="G">&nbsp;</p>
+<p class="I">#endif</p>
+<p class="G">&nbsp;</p>
+<p class="G">&nbsp;</p>
+<p class="G">&nbsp;</p>
+<p class="F">textdiff.cpp</p>
+<p class="G">&nbsp;</p>
+<p class="G"><span class="H">#include</span> &quot;CompDir<span class="H">.</span>h&quot;</p>
+<p class="G">&nbsp;</p>
+<p class="I">template<span class="J"> </span>&lt;class<span class="J"> I</span>&gt;</p>
+<p class="G"><span class="H">static</span> <span class="H">int</span> CompareGetCount(I a, I b, <span class="H">int</span> max_count)</p>
+<p class="G">{</p>
+<p class="G">&nbsp;&nbsp;&nbsp;&nbsp;<span class="H">if</span>(max_count <span class="H">&lt;=</span> 0 <span class="H">||</span> <span class="H">*</span>a <span class="H">!=</span> <span class="H">*</span>b)</p>
+<p class="G">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="H">return</span> 0;</p>
+<p class="G">&nbsp;&nbsp;&nbsp;&nbsp;<span class="H">int</span> left;</p>
+<p class="G">&nbsp;&nbsp;&nbsp;&nbsp;<span class="H">for</span>(left <span class="H">=</span> max_count; <span class="H">--</span>left <span class="H">&gt;</span> 0;)</p>
+<p class="G">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="H">if</span>(<span class="H">*++</span>a <span class="H">!=</span> <span class="H">*++</span>b)</p>
+<p class="G">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="H">return</span> max_count <span class="H">-</span> left;</p>
+<p class="G">&nbsp;&nbsp;&nbsp;&nbsp;<span class="H">return</span> max_count;</p>
+<p class="G">}</p>
+<p class="G">&nbsp;</p>
+<p class="G">Vector<span class="H">&lt;</span>String<span class="H">&gt;</span> GetLineMap(Stream<span class="H">&amp;</span> stream)</p>
+<p class="G">{</p>
+<p class="G">&nbsp;&nbsp;&nbsp;&nbsp;Vector<span class="H">&lt;</span>String<span class="H">&gt;</span> out;</p>
+<p class="G">&nbsp;&nbsp;&nbsp;&nbsp;<span class="H">int</span> emp <span class="H">=</span> 0;</p>
+<p class="G">&nbsp;&nbsp;&nbsp;&nbsp;<span class="H">if</span>(stream<span class="H">.</span>IsOpen())</p>
+<p class="G">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="H">while</span>(<span class="H">!</span>stream<span class="H">.</span>IsEof()) {</p>
+<p class="G">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;String s <span class="H">=</span> stream<span class="H">.</span>GetLine();</p>
+<p class="G">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="H">const</span> <span class="H">char</span> <span class="H">*</span>p <span class="H">=</span> s, <span class="H">*</span>e <span class="H">=</span> s<span class="H">.</span>End(), <span class="H">*</span>f <span class="H">=</span> e;</p>
+<p class="G">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="H">while</span>(e <span class="H">&gt;</span> p <span class="H">&amp;&amp;</span> (byte)e<span class="H">[-</span>1<span class="H">]</span> <span class="H">&lt;=</span> ' ')</p>
+<p class="G">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;e<span class="H">--</span>;</p>
+<p class="G">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="H">if</span>(e <span class="H">==</span> p)</p>
+<p class="G">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;emp<span class="H">++</span>;</p>
+<p class="I"><span class="J">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>else</p>
+<p class="G">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{</p>
+<p class="G">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="H">while</span>(emp<span class="H">--</span> <span class="H">&gt;</span> 0)</p>
+<p class="G">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;out<span class="H">.</span>Add(Null);</p>
+<p class="G">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="H">if</span>(e <span class="H">!=</span> f)</p>
+<p class="G">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;s<span class="H">.</span>Trim(e <span class="H">-</span> p);</p>
+<p class="G">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;out<span class="H">.</span>Add(s);</p>
+<p class="G">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;emp <span class="H">=</span> 0;</p>
+<p class="G">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</p>
+<p class="G">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</p>
+<p class="G">&nbsp;&nbsp;&nbsp;&nbsp;<span class="H">return</span> out;</p>
+<p class="G">}</p>
+<p class="G">&nbsp;</p>
+<p class="G">Vector<span class="H">&lt;</span>String<span class="H">&gt;</span> GetFileLineMap(<span class="H">const</span> String<span class="H">&amp;</span> path)</p>
+<p class="G">{</p>
+<p class="G">&nbsp;&nbsp;&nbsp;&nbsp;FileIn fi(path);</p>
+<p class="G">&nbsp;&nbsp;&nbsp;&nbsp;<span class="H">return</span> GetLineMap(fi);</p>
+<p class="G">}</p>
+<p class="G">&nbsp;</p>
+<p class="G">Vector<span class="H">&lt;</span>String<span class="H">&gt;</span> GetStringLineMap(<span class="H">const</span> String<span class="H">&amp;</span> s)</p>
+<p class="G">{</p>
+<p class="G">&nbsp;&nbsp;&nbsp;&nbsp;StringStream ss(s);</p>
+<p class="G">&nbsp;&nbsp;&nbsp;&nbsp;<span class="H">return</span> GetLineMap(ss);</p>
+<p class="G">}</p>
+<p class="G">&nbsp;</p>
+<p class="G"><span class="H">class</span> TextComparator</p>
+<p class="G">{</p>
+<p class="I">public:</p>
+<p class="G">&nbsp;&nbsp;&nbsp;&nbsp;TextComparator(<span class="H">const</span> Vector<span class="H">&lt;</span>String<span class="H">&gt;&amp;</span> f1, <span class="H">const</span> Vector<span class="H">&lt;</span>String<span class="H">&gt;&amp;</span> f2);</p>
+<p class="G">&nbsp;</p>
+<p class="G">&nbsp;&nbsp;&nbsp;&nbsp;Array<span class="H">&lt;</span>TextSection<span class="H">&gt;</span> &nbsp;&nbsp;&nbsp;GetSections() <span class="H">const</span>;</p>
+<p class="G">&nbsp;</p>
+<p class="I">private:</p>
+<p class="G">&nbsp;&nbsp;&nbsp;&nbsp;<span class="H">bool</span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Find(<span class="H">int</span> start1, <span class="H">int</span> end1, <span class="H">int</span> start2, <span class="H">int</span> end2, <span class="H">int&amp;</span> best_match, <span class="H">int&amp;</span> best_count) <span class="H">const</span>;</p>
+<p class="G">&nbsp;&nbsp;&nbsp;&nbsp;<span class="H">void</span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Split(Array<span class="H">&lt;</span>TextSection<span class="H">&gt;&amp;</span> dest, <span class="H">int</span> start1, <span class="H">int</span> end1, <span class="H">int</span> start2, <span class="H">int</span> end2) <span class="H">const</span>;</p>
+<p class="G">&nbsp;</p>
+<p class="I">private:</p>
+<p class="G">&nbsp;&nbsp;&nbsp;&nbsp;Vector<span class="H">&lt;</span>Index<span class="H">&lt;</span>dword<span class="H">&gt;&gt;</span> &nbsp;hash1;</p>
+<p class="G">&nbsp;&nbsp;&nbsp;&nbsp;Vector<span class="H">&lt;</span>Index<span class="H">&lt;</span>dword<span class="H">&gt;&gt;</span> &nbsp;hash2;</p>
+<p class="G">&nbsp;&nbsp;&nbsp;&nbsp;<span class="H">const</span> Vector<span class="H">&lt;</span>String<span class="H">&gt;&amp;</span> file1;</p>
+<p class="G">&nbsp;&nbsp;&nbsp;&nbsp;<span class="H">const</span> Vector<span class="H">&lt;</span>String<span class="H">&gt;&amp;</span> file2;</p>
+<p class="G">};</p>
+<p class="G">&nbsp;</p>
+<p class="G">Array<span class="H">&lt;</span>TextSection<span class="H">&gt;</span> CompareLineMaps(<span class="H">const</span> Vector<span class="H">&lt;</span>String<span class="H">&gt;&amp;</span> s1, <span class="H">const</span> Vector<span class="H">&lt;</span>String<span class="H">&gt;&amp;</span> s2)</p>
+<p class="G">{</p>
+<p class="G">&nbsp;&nbsp;&nbsp;&nbsp;<span class="H">return</span> TextComparator(s1, s2)<span class="H">.</span>GetSections();</p>
+<p class="G">}</p>
+<p class="G">&nbsp;</p>
+<p class="G"><span class="H">static</span> <span class="H">void</span> CalcHash(Vector<span class="H">&lt;</span>Index<span class="H">&lt;</span>dword<span class="H">&gt;&gt;&amp;</span> hash, <span class="H">const</span> Vector<span class="H">&lt;</span>String<span class="H">&gt;&amp;</span> file, <span class="H">int</span> limit)</p>
+<p class="G">{</p>
+<p class="G">&nbsp;&nbsp;&nbsp;&nbsp;{ <span class="H">//</span> 1st row</p>
+<p class="G">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Index<span class="H">&lt;</span>dword<span class="H">&gt;&amp;</span> first <span class="H">=</span> hash<span class="H">.</span>Add();</p>
+<p class="G">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="H">for</span>(<span class="H">int</span> i <span class="H">=</span> 0; i <span class="H">&lt;</span> file<span class="H">.</span>GetCount(); i<span class="H">++</span>)</p>
+<p class="G">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;first<span class="H">.</span>Add(GetHashValue(file<span class="H">[</span>i<span class="H">]</span>));</p>
+<p class="G">&nbsp;&nbsp;&nbsp;&nbsp;}</p>
+<p class="I"><span class="J">&nbsp;&nbsp;&nbsp;&nbsp;</span>static<span class="J"> </span>const<span class="J"> </span>int<span class="J"> prime</span>[]<span class="J"> </span>=</p>
+<p class="G">&nbsp;&nbsp;&nbsp;&nbsp;{</p>
+<p class="G">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3, &nbsp;5, &nbsp;7, &nbsp;&nbsp;11, &nbsp;13, &nbsp;17, &nbsp;19, &nbsp;21,</p>
+<p class="G">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;23, 29, 31, &nbsp;37, &nbsp;41, &nbsp;43, &nbsp;47, &nbsp;51,</p>
+<p class="G">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;53, 61, 67, &nbsp;71, &nbsp;73, &nbsp;79, &nbsp;83, &nbsp;87,</p>
+<p class="G">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;89, 97, 101, 103, 107, 109, 113, 117,</p>
+<p class="G">&nbsp;&nbsp;&nbsp;&nbsp;};</p>
+<p class="G">&nbsp;&nbsp;&nbsp;&nbsp;<span class="H">const</span> <span class="H">int</span> <span class="H">*</span>pp <span class="H">=</span> prime;</p>
+<p class="G">&nbsp;&nbsp;&nbsp;&nbsp;<span class="H">for</span>(<span class="H">int</span> l <span class="H">=</span> 1; l <span class="H">&lt;</span> limit; l <span class="H">&lt;&lt;=</span> 1) {</p>
+<p class="G">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Index<span class="H">&lt;</span>dword<span class="H">&gt;&amp;</span> nhash <span class="H">=</span> hash<span class="H">.</span>Add();</p>
+<p class="G">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="H">const</span> Index<span class="H">&lt;</span>dword<span class="H">&gt;&amp;</span> ohash <span class="H">=</span> hash<span class="H">[</span>hash<span class="H">.</span>GetCount() <span class="H">-</span> 2<span class="H">]</span>;</p>
+<p class="G">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="H">int</span> pri <span class="H">=</span> <span class="H">*</span>pp<span class="H">++</span>;</p>
+<p class="G">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="H">int</span> t;</p>
+<p class="G">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="H">for</span>(t <span class="H">=</span> l; t <span class="H">&lt;</span> ohash<span class="H">.</span>GetCount(); t<span class="H">++</span>)</p>
+<p class="G">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;nhash<span class="H">.</span>Add(ohash<span class="H">[</span>t <span class="H">-</span> l<span class="H">]</span> <span class="H">+</span> pri <span class="H">*</span> ohash<span class="H">[</span>t<span class="H">]</span>);</p>
+<p class="G">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="H">for</span>(t <span class="H">-=</span> l; t <span class="H">&lt;</span> ohash<span class="H">.</span>GetCount(); t<span class="H">++</span>)</p>
+<p class="G">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;nhash<span class="H">.</span>Add(ohash<span class="H">[</span>t<span class="H">]</span>);</p>
+<p class="G">&nbsp;&nbsp;&nbsp;&nbsp;}</p>
+<p class="G">}</p>
+<p class="G">&nbsp;</p>
+<p class="G">TextComparator<span class="H">::</span>TextComparator(<span class="H">const</span> Vector<span class="H">&lt;</span>String<span class="H">&gt;&amp;</span> f1, <span class="H">const</span> Vector<span class="H">&lt;</span>String<span class="H">&gt;&amp;</span> f2)</p>
+<p class="G"><span class="H">:</span> file1(f1), file2(f2)</p>
+<p class="G">{</p>
+<p class="G">&nbsp;&nbsp;&nbsp;&nbsp;<span class="H">int</span> limit <span class="H">=</span> min(f1<span class="H">.</span>GetCount(), f2<span class="H">.</span>GetCount());</p>
+<p class="G">&nbsp;&nbsp;&nbsp;&nbsp;CalcHash(hash1, f1, limit);</p>
+<p class="G">&nbsp;&nbsp;&nbsp;&nbsp;CalcHash(hash2, f2, limit);</p>
+<p class="G">}</p>
+<p class="G">&nbsp;</p>
+<p class="G"><span class="H">static</span> <span class="H">bool</span> CompareSection(<span class="H">const</span> TextSection<span class="H">&amp;</span> ta, <span class="H">const</span> TextSection<span class="H">&amp;</span> tb)</p>
+<p class="G">{</p>
+<p class="G">&nbsp;&nbsp;&nbsp;&nbsp;<span class="H">return</span> ta<span class="H">.</span>start1 <span class="H">&lt;</span> tb<span class="H">.</span>start1 <span class="H">||</span> ta<span class="H">.</span>start1 <span class="H">==</span> tb<span class="H">.</span>start1 <span class="H">&amp;&amp;</span> ta<span class="H">.</span>start2 <span class="H">&lt;</span> tb<span class="H">.</span>start2;</p>
+<p class="G">}</p>
+<p class="G">&nbsp;</p>
+<p class="I"><span class="J">Array</span>&lt;<span class="J">TextSection</span>&gt;<span class="J"> TextComparator</span>::<span class="J">GetSections() </span>const</p>
+<p class="G">{</p>
+<p class="G">&nbsp;&nbsp;&nbsp;&nbsp;Array<span class="H">&lt;</span>TextSection<span class="H">&gt;</span> output;</p>
+<p class="G">&nbsp;&nbsp;&nbsp;&nbsp;Split(output, 0, file1<span class="H">.</span>GetCount(), 0, file2<span class="H">.</span>GetCount());</p>
+<p class="G">&nbsp;&nbsp;&nbsp;&nbsp;Sort(output, <span class="H">&amp;</span>CompareSection);</p>
+<p class="G">&nbsp;&nbsp;&nbsp;&nbsp;<span class="H">return</span> output;</p>
+<p class="G">}</p>
+<p class="G">&nbsp;</p>
+<p class="G"><span class="H">static</span> <span class="H">int</span> GetHashLevel(<span class="H">int</span> min_count, <span class="H">int</span> hash_count)</p>
+<p class="G">{</p>
+<p class="G">&nbsp;&nbsp;&nbsp;&nbsp;<span class="H">int</span> l <span class="H">=</span> 0;</p>
+<p class="G">&nbsp;&nbsp;&nbsp;&nbsp;hash_count<span class="H">--</span>;</p>
+<p class="G">&nbsp;&nbsp;&nbsp;&nbsp;<span class="H">while</span>(min_count <span class="H">&gt;</span> 1 <span class="H">&amp;&amp;</span> l <span class="H">&lt;</span> hash_count)</p>
+<p class="G">&nbsp;&nbsp;&nbsp;&nbsp;{</p>
+<p class="G">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;min_count <span class="H">&gt;&gt;=</span> 1;</p>
+<p class="G">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;l<span class="H">++</span>;</p>
+<p class="G">&nbsp;&nbsp;&nbsp;&nbsp;}</p>
+<p class="G">&nbsp;&nbsp;&nbsp;&nbsp;<span class="H">return</span> l;</p>
+<p class="G">}</p>
+<p class="G">&nbsp;</p>
+<p class="I">bool<span class="J"> TextComparator</span>::<span class="J">Find(</span>int<span class="J"> start1, </span>int<span class="J"> end1, </span>int<span class="J"> start2, </span>int<span class="J"> end2, </span>int&amp;<span class="J"> best_match, </span>int&amp;<span class="J"> best_count) </span>const</p>
+<p class="G">{</p>
+<p class="G">&nbsp;&nbsp;&nbsp;&nbsp;ASSERT(end1 <span class="H">&gt;</span> start1 <span class="H">&amp;&amp;</span> end2 <span class="H">&gt;</span> start2);</p>
+<p class="G">&nbsp;&nbsp;&nbsp;&nbsp;<span class="H">bool</span> done <span class="H">=</span> <span class="H">false</span>;</p>
+<p class="G">&nbsp;&nbsp;&nbsp;&nbsp;<span class="H">const</span> String <span class="H">*</span>f1 <span class="H">=</span> file1<span class="H">.</span>Begin() <span class="H">+</span> start1;</p>
+<p class="G">&nbsp;&nbsp;&nbsp;&nbsp;<span class="H">int</span> len1 <span class="H">=</span> end1 <span class="H">-</span> start1;</p>
+<p class="G">&nbsp;&nbsp;&nbsp;&nbsp;<span class="H">int</span> lvl <span class="H">=</span> GetHashLevel(best_count <span class="H">+</span> 1, hash1<span class="H">.</span>GetCount());</p>
+<p class="G">&nbsp;&nbsp;&nbsp;&nbsp;<span class="H">int</span> chunk <span class="H">=</span> 1 <span class="H">&lt;&lt;</span> lvl;</p>
+<p class="G">&nbsp;&nbsp;&nbsp;&nbsp;<span class="H">int</span> last <span class="H">=</span> max(best_count <span class="H">-</span> chunk <span class="H">+</span> 1, 0);</p>
+<p class="G">&nbsp;&nbsp;&nbsp;&nbsp;<span class="H">const</span> Index<span class="H">&lt;</span>dword<span class="H">&gt;</span> <span class="H">*</span>hp1 <span class="H">=</span> <span class="H">&amp;</span>hash1<span class="H">[</span>lvl<span class="H">]</span>;</p>
+<p class="G">&nbsp;&nbsp;&nbsp;&nbsp;<span class="H">const</span> Index<span class="H">&lt;</span>dword<span class="H">&gt;</span> <span class="H">*</span>hp2 <span class="H">=</span> <span class="H">&amp;</span>hash2<span class="H">[</span>lvl<span class="H">]</span>;</p>
+<p class="G">&nbsp;&nbsp;&nbsp;&nbsp;<span class="H">const</span> dword <span class="H">*</span>h1 <span class="H">=</span> hp1<span class="H">-&gt;</span>begin() <span class="H">+</span> start1;</p>
+<p class="G">&nbsp;</p>
+<p class="G">&nbsp;&nbsp;&nbsp;&nbsp;<span class="H">int</span> i <span class="H">=</span> hp2<span class="H">-&gt;</span>Find(<span class="H">*</span>h1);</p>
+<p class="G">&nbsp;&nbsp;&nbsp;&nbsp;<span class="H">while</span>(i <span class="H">&gt;=</span> 0)</p>
+<p class="G">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="H">if</span>(i <span class="H">+</span> best_count <span class="H">&gt;=</span> end2)</p>
+<p class="G">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="H">return</span> done;</p>
+<p class="G">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="H">else</span> {</p>
+<p class="G">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="H">if</span>(i <span class="H">&gt;=</span> start2 <span class="H">&amp;&amp;</span> h1<span class="H">[</span>last<span class="H">]</span> <span class="H">==</span> (<span class="H">*</span>hp2)<span class="H">[</span>i <span class="H">+</span> last<span class="H">]</span>) {</p>
+<p class="G">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="H">int</span> top <span class="H">=</span> min(len1, end2 <span class="H">-</span> i);</p>
+<p class="G">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="H">int</span> hc <span class="H">=</span> CompareGetCount(h1, hp2<span class="H">-&gt;</span>begin() <span class="H">+</span> i, top) <span class="H">+</span> chunk <span class="H">-</span> 1;</p>
+<p class="G">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="H">int</span> cnt <span class="H">=</span> CompareGetCount(f1, file2<span class="H">.</span>begin() <span class="H">+</span> i, min(hc, top));</p>
+<p class="G">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="H">if</span>(cnt <span class="H">&gt;</span> best_count) {</p>
+<p class="G">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;best_count <span class="H">=</span> cnt;</p>
+<p class="G">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;best_match <span class="H">=</span> i;</p>
+<p class="G">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;done <span class="H">=</span> <span class="H">true</span>;</p>
+<p class="G">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;last <span class="H">=</span> best_count <span class="H">-</span> chunk <span class="H">+</span> 1;</p>
+<p class="G">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="H">if</span>(best_count <span class="H">+</span> 1 <span class="H">&gt;=</span> 2 <span class="H">*</span> chunk)</p>
+<p class="G">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{</p>
+<p class="G">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;lvl <span class="H">=</span> GetHashLevel(best_count <span class="H">+</span> 1, hash1<span class="H">.</span>GetCount());</p>
+<p class="G">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;chunk <span class="H">=</span> 1 <span class="H">&lt;&lt;</span> lvl;</p>
+<p class="G">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;last <span class="H">=</span> best_count <span class="H">-</span> chunk <span class="H">+</span> 1;</p>
+<p class="G">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;hp1 <span class="H">=</span> <span class="H">&amp;</span>hash1<span class="H">[</span>lvl<span class="H">]</span>;</p>
+<p class="G">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;hp2 <span class="H">=</span> <span class="H">&amp;</span>hash2<span class="H">[</span>lvl<span class="H">]</span>;</p>
+<p class="G">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;h1 <span class="H">=</span> hp1<span class="H">-&gt;</span>begin() <span class="H">+</span> start1;</p>
+<p class="G">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="H">int</span> oi <span class="H">=</span> i;</p>
+<p class="G">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="H">for</span>(i <span class="H">=</span> hp2<span class="H">-&gt;</span>Find(<span class="H">*</span>h1); i <span class="H">&gt;=</span> 0 <span class="H">&amp;&amp;</span> i <span class="H">&lt;=</span> oi; i <span class="H">=</span> hp2<span class="H">-&gt;</span>FindNext(i))</p>
+<p class="G">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;;</p>
+<p class="G">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="H">continue</span>;</p>
+<p class="G">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</p>
+<p class="G">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</p>
+<p class="G">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</p>
+<p class="G">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;i <span class="H">=</span> hp2<span class="H">-&gt;</span>FindNext(i);</p>
+<p class="G">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</p>
+<p class="G">&nbsp;&nbsp;&nbsp;&nbsp;<span class="H">return</span> done;</p>
+<p class="G">}</p>
+<p class="G">&nbsp;</p>
+<p class="I">void<span class="J"> TextComparator</span>::<span class="J">Split(Array</span>&lt;<span class="J">TextSection</span>&gt;&amp;<span class="J"> dest, </span>int<span class="J"> start1, </span>int<span class="J"> end1, </span>int<span class="J"> start2, </span>int<span class="J"> end2) </span>const</p>
+<p class="G">{</p>
+<p class="G">&nbsp;&nbsp;&nbsp;&nbsp;ASSERT(start1 <span class="H">&lt;=</span> end1 <span class="H">&amp;&amp;</span> start2 <span class="H">&lt;=</span> end2);</p>
+<p class="G">&nbsp;&nbsp;&nbsp;&nbsp;<span class="H">while</span>(start1 <span class="H">&lt;</span> end1 <span class="H">&amp;&amp;</span> start2 <span class="H">&lt;</span> end2) {</p>
+<p class="G">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="H">int</span> new1 <span class="H">=</span> <span class="H">-</span>1, new2 <span class="H">=</span> <span class="H">-</span>1, count <span class="H">=</span> 0;</p>
+<p class="G">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="H">for</span>(<span class="H">int</span> i <span class="H">=</span> start1; i <span class="H">+</span> count <span class="H">&lt;</span> end1; i<span class="H">++</span>)</p>
+<p class="G">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="H">if</span>(Find(i, end1, start2, end2, new2, count))</p>
+<p class="G">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;new1 <span class="H">=</span> i;</p>
+<p class="G">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="H">if</span>(count <span class="H">==</span> 0)</p>
+<p class="G">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="H">break</span>; <span class="H">//</span> no match at all</p>
+<p class="G">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ASSERT(new1 <span class="H">&gt;=</span> start1 <span class="H">&amp;&amp;</span> new1 <span class="H">+</span> count <span class="H">&lt;=</span> end1);</p>
+<p class="G">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ASSERT(new2 <span class="H">&gt;=</span> start2 <span class="H">&amp;&amp;</span> new2 <span class="H">+</span> count <span class="H">&lt;=</span> end2);</p>
+<p class="G">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;dest<span class="H">.</span>Add(TextSection(new1, count, new2, count, <span class="H">true</span>));</p>
+<p class="G">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="H">if</span>(new1 <span class="H">-</span> start1 <span class="H">&gt;=</span> end1 <span class="H">-</span> new1 <span class="H">-</span> count) { <span class="H">//</span> head is longer <span class="H">-</span> recurse <span class="H">for</span> tail</p>
+<p class="G">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Split(dest, new1 <span class="H">+</span> count, end1, new2 <span class="H">+</span> count, end2);</p>
+<p class="G">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;end1 <span class="H">=</span> new1;</p>
+<p class="G">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;end2 <span class="H">=</span> new2;</p>
+<p class="G">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</p>
+<p class="G">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="H">else</span> { <span class="H">//</span> tail is longer <span class="H">-</span> recurse <span class="H">for</span> head</p>
+<p class="G">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Split(dest, start1, new1, start2, new2);</p>
+<p class="G">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;start1 <span class="H">=</span> new1 <span class="H">+</span> count;</p>
+<p class="G">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;start2 <span class="H">=</span> new2 <span class="H">+</span> count;</p>
+<p class="G">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</p>
+<p class="G">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ASSERT(start1 <span class="H">&lt;=</span> end1 <span class="H">&amp;&amp;</span> start2 <span class="H">&lt;=</span> end2);</p>
+<p class="G">&nbsp;&nbsp;&nbsp;&nbsp;}</p>
+<p class="G">&nbsp;&nbsp;&nbsp;&nbsp;<span class="H">if</span>(start1 <span class="H">&lt;</span> end1 <span class="H">||</span> start2 <span class="H">&lt;</span> end2)</p>
+<p class="G">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;dest<span class="H">.</span>Add(TextSection(start1, end1 <span class="H">-</span> start1, start2, end2 <span class="H">-</span> start2, <span class="H">false</span>));</p>
+<p class="G">}</p>
+<p class="G">&nbsp;</p>
+<p class="G">&nbsp;</p>
+<p class="G">&nbsp;</p>
+<p class="F">main.cpp</p>
+<p class="G">&nbsp;</p>
+<p class="G"><span class="H">#include</span> &quot;CompDir<span class="H">.</span>h&quot;</p>
+<p class="G"><span class="H">#</span>pragma hdrstop</p>
+<p class="G">&nbsp;</p>
+<p class="I">#define<span class="J"> LAYOUTFILE </span>&lt;<span class="J">CompDir</span>/<span class="J">CompDir</span>.<span class="J">lay</span>&gt;</p>
+<p class="I">#include<span class="J"> </span>&lt;<span class="J">CtrlCore</span>/<span class="J">lay</span>.<span class="J">h</span>&gt;</p>
+<p class="G">&nbsp;</p>
+<p class="I">#define<span class="J"> IMAGEFILE &nbsp;</span>&lt;<span class="J">CompDir</span>/<span class="J">CompDir</span>.<span class="J">iml</span>&gt;</p>
+<p class="G"><span class="H">#define</span> IMAGECLASS CompDirImg</p>
+<p class="I">#include<span class="J"> </span>&lt;<span class="J">Draw</span>/<span class="J">iml</span>.<span class="J">h</span>&gt;</p>
+<p class="G">&nbsp;</p>
+<p class="G">String NormalizePathCase(String fn)</p>
+<p class="G">{</p>
+<p class="G"><span class="H">#ifdef</span> PLATFORM_WIN32 <span class="H">//</span> <span class="H">!</span>PATH_CASE</p>
+<p class="G">&nbsp;&nbsp;&nbsp;&nbsp;<span class="H">return</span> ToLower(fn);</p>
+<p class="I">#else</p>
+<p class="G">&nbsp;&nbsp;&nbsp;&nbsp;<span class="H">return</span> fn;</p>
+<p class="I">#endif</p>
+<p class="G">}</p>
+<p class="G">&nbsp;</p>
+<p class="G"><span class="H">static</span> String ExpandTabs(String line, <span class="H">int</span> tabsize <span class="H">=</span> 4)</p>
+<p class="G">{</p>
+<p class="G">&nbsp;&nbsp;&nbsp;&nbsp;String out;</p>
+<p class="G">&nbsp;&nbsp;&nbsp;&nbsp;<span class="H">int</span> pos <span class="H">=</span> 0;</p>
+<p class="G">&nbsp;&nbsp;&nbsp;&nbsp;<span class="H">for</span>(<span class="H">const</span> <span class="H">char</span> <span class="H">*</span>p <span class="H">=</span> line; <span class="H">*</span>p; p<span class="H">++</span>)</p>
+<p class="G">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="H">if</span>(<span class="H">*</span>p <span class="H">==</span> '\t') {</p>
+<p class="G">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="H">int</span> left <span class="H">=</span> tabsize <span class="H">-</span> pos <span class="H">%</span> tabsize;</p>
+<p class="G">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;out<span class="H">.</span>Cat(' ', left);</p>
+<p class="G">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pos <span class="H">+=</span> left;</p>
+<p class="G">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</p>
+<p class="G">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="H">else</span> {</p>
+<p class="G">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;out<span class="H">.</span>Cat(<span class="H">*</span>p);</p>
+<p class="G">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pos<span class="H">++</span>;</p>
+<p class="G">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</p>
+<p class="G">&nbsp;&nbsp;&nbsp;&nbsp;<span class="H">return</span> out;</p>
+<p class="G">}</p>
+<p class="G">&nbsp;</p>
+<p class="G"><span class="H">class</span> DlgCompareDir <span class="H">:</span> <span class="H">public</span> WithCompareDirLayout<span class="H">&lt;</span>TopWindow<span class="H">&gt;</span> {</p>
+<p class="I">public:</p>
+<p class="G">&nbsp;&nbsp;&nbsp;&nbsp;<span class="H">typedef</span> DlgCompareDir CLASSNAME;</p>
+<p class="G">&nbsp;&nbsp;&nbsp;&nbsp;DlgCompareDir();</p>
+<p class="G">&nbsp;</p>
+<p class="G">&nbsp;&nbsp;&nbsp;&nbsp;<span class="H">void</span> Run();</p>
+<p class="G">&nbsp;</p>
+<p class="G">&nbsp;&nbsp;&nbsp;&nbsp;<span class="H">void</span> Serialize(Stream<span class="H">&amp;</span> stream);</p>
+<p class="G">&nbsp;</p>
+<p class="I">private:</p>
+<p class="G">&nbsp;&nbsp;&nbsp;&nbsp;<span class="H">void</span> CmdRefresh();</p>
+<p class="G">&nbsp;&nbsp;&nbsp;&nbsp;<span class="H">void</span> DoTreeCursor();</p>
+<p class="G">&nbsp;&nbsp;&nbsp;&nbsp;<span class="H">int</span> &nbsp;Refresh(String rel_path, <span class="H">int</span> parent);</p>
+<p class="G">&nbsp;&nbsp;&nbsp;&nbsp;<span class="H">void</span> DoBrowse(Ctrl <span class="H">*</span>field);</p>
+<p class="G">&nbsp;&nbsp;&nbsp;&nbsp;<span class="H">void</span> ToolTree(Bar<span class="H">&amp;</span> bar);</p>
+<p class="G">&nbsp;&nbsp;&nbsp;&nbsp;String GetTreePath() <span class="H">const</span>;</p>
+<p class="G">&nbsp;</p>
+<p class="I">private:</p>
+<p class="I"><span class="J">&nbsp;&nbsp;&nbsp;&nbsp;</span>struct<span class="J"> FileInfo </span>:<span class="J"> Moveable</span>&lt;<span class="J">FileInfo</span>&gt;</p>
+<p class="G">&nbsp;&nbsp;&nbsp;&nbsp;{</p>
+<p class="G">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;FileInfo() {}</p>
+<p class="G">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;FileInfo(String name, int64 size, Time time) <span class="H">:</span> name(name), size(size), time(time) {}</p>
+<p class="G">&nbsp;</p>
+<p class="G">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;String name;</p>
+<p class="G">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;int64 &nbsp;size;</p>
+<p class="G">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Time &nbsp;&nbsp;time;</p>
+<p class="G">&nbsp;&nbsp;&nbsp;&nbsp;};</p>
+<p class="G">&nbsp;</p>
+<p class="G">&nbsp;&nbsp;&nbsp;&nbsp;<span class="H">bool</span> FetchDir(String dir, VectorMap<span class="H">&lt;</span>String, FileInfo<span class="H">&gt;&amp;</span> files, VectorMap<span class="H">&lt;</span>String, String<span class="H">&gt;&amp;</span> dirs);</p>
+<p class="G">&nbsp;</p>
+<p class="G">&nbsp;&nbsp;&nbsp;&nbsp;FrameRight<span class="H">&lt;</span>Button<span class="H">&gt;</span> browse_a, browse_b;</p>
+<p class="G">&nbsp;&nbsp;&nbsp;&nbsp;TreeCtrl tree;</p>
+<p class="G">&nbsp;&nbsp;&nbsp;&nbsp;StaticRect editor;</p>
+<p class="G">&nbsp;&nbsp;&nbsp;&nbsp;LineEdit lineedit;</p>
+<p class="G">&nbsp;&nbsp;&nbsp;&nbsp;RichTextCtrl qtf;</p>
+<p class="G">&nbsp;&nbsp;&nbsp;&nbsp;String pa, pb, fm;</p>
+<p class="G">};</p>
+<p class="G">&nbsp;</p>
+<p class="G">DlgCompareDir<span class="H">::</span>DlgCompareDir()</p>
+<p class="G">{</p>
+<p class="G">&nbsp;&nbsp;&nbsp;&nbsp;CtrlLayout(<span class="H">*this</span>, &quot;Compare directories&quot;);</p>
+<p class="G">&nbsp;&nbsp;&nbsp;&nbsp;Sizeable()<span class="H">.</span>Zoomable();</p>
+<p class="G">&nbsp;&nbsp;&nbsp;&nbsp;refresh <span class="H">&lt;&lt;=</span> THISBACK(CmdRefresh);</p>
+<p class="G">&nbsp;&nbsp;&nbsp;&nbsp;splitter<span class="H">.</span>Vert(tree, editor);</p>
+<p class="G">&nbsp;&nbsp;&nbsp;&nbsp;editor <span class="H">&lt;&lt;</span> lineedit<span class="H">.</span>SizePos() <span class="H">&lt;&lt;</span> qtf<span class="H">.</span>SizePos();</p>
+<p class="G">&nbsp;&nbsp;&nbsp;&nbsp;qtf<span class="H">.</span>Background(White());</p>
+<p class="G">&nbsp;&nbsp;&nbsp;&nbsp;qtf<span class="H">.</span>SetFrame(InsetFrame());</p>
+<p class="G">&nbsp;&nbsp;&nbsp;&nbsp;path_a<span class="H">.</span>AddFrame(browse_a);</p>
+<p class="G">&nbsp;&nbsp;&nbsp;&nbsp;browse_a<span class="H">.</span>SetImage(CtrlImg<span class="H">::</span>right_arrow());</p>
+<p class="G">&nbsp;&nbsp;&nbsp;&nbsp;browse_a <span class="H">&lt;&lt;=</span> THISBACK1(DoBrowse, <span class="H">&amp;</span>path_a);</p>
+<p class="G">&nbsp;&nbsp;&nbsp;&nbsp;path_b<span class="H">.</span>AddFrame(browse_b);</p>
+<p class="G">&nbsp;&nbsp;&nbsp;&nbsp;browse_b<span class="H">.</span>SetImage(CtrlImg<span class="H">::</span>right_arrow());</p>
+<p class="G">&nbsp;&nbsp;&nbsp;&nbsp;browse_b <span class="H">&lt;&lt;=</span> THISBACK1(DoBrowse, <span class="H">&amp;</span>path_b);</p>
+<p class="G">&nbsp;&nbsp;&nbsp;&nbsp;file_mask <span class="H">&lt;&lt;=</span> &quot;<span class="H">*.</span>cpp <span class="H">*.</span>h <span class="H">*.</span>hpp <span class="H">*.</span>c <span class="H">*.</span>C <span class="H">*.</span>cxx <span class="H">*.</span>cc <span class="H">*.</span>lay <span class="H">*.</span>iml <span class="H">*.</span>upp <span class="H">*.</span>sch <span class="H">*.</span>dph&quot;;</p>
+<p class="G">&nbsp;&nbsp;&nbsp;&nbsp;tree<span class="H">.</span>WhenCursor <span class="H">=</span> THISBACK(DoTreeCursor);</p>
+<p class="G">&nbsp;&nbsp;&nbsp;&nbsp;lineedit<span class="H">.</span>SetReadOnly();</p>
+<p class="G">&nbsp;&nbsp;&nbsp;&nbsp;lineedit<span class="H">.</span>SetFont(Courier(14));</p>
+<p class="G">}</p>
+<p class="G">&nbsp;</p>
+<p class="G"><span class="H">void</span> DlgCompareDir<span class="H">::</span>Run()</p>
+<p class="G">{</p>
+<p class="G">&nbsp;&nbsp;&nbsp;&nbsp;TopWindow<span class="H">::</span>Run();</p>
+<p class="G">}</p>
+<p class="G">&nbsp;</p>
+<p class="G"><span class="H">void</span> DlgCompareDir<span class="H">::</span>Serialize(Stream<span class="H">&amp;</span> stream)</p>
+<p class="G">{</p>
+<p class="G">&nbsp;&nbsp;&nbsp;&nbsp;<span class="H">int</span> version <span class="H">=</span> 1;</p>
+<p class="G">&nbsp;&nbsp;&nbsp;&nbsp;stream <span class="H">/</span> version;</p>
+<p class="G">&nbsp;&nbsp;&nbsp;&nbsp;stream <span class="H">%</span> path_a <span class="H">%</span> path_b <span class="H">%</span> file_mask;</p>
+<p class="G">&nbsp;&nbsp;&nbsp;&nbsp;SerializePlacement(stream);</p>
+<p class="G">&nbsp;&nbsp;&nbsp;&nbsp;stream <span class="H">%</span> splitter;</p>
+<p class="G">}</p>
+<p class="G">&nbsp;</p>
+<p class="G"><span class="H">void</span> DlgCompareDir<span class="H">::</span>CmdRefresh()</p>
+<p class="G">{</p>
+<p class="G">&nbsp;&nbsp;&nbsp;&nbsp;pa <span class="H">=</span> <span class="H">~</span>path_a;</p>
+<p class="G">&nbsp;&nbsp;&nbsp;&nbsp;pb <span class="H">=</span> <span class="H">~</span>path_b;</p>
+<p class="G">&nbsp;&nbsp;&nbsp;&nbsp;fm <span class="H">=</span> <span class="H">~</span>file_mask;</p>
+<p class="G">&nbsp;&nbsp;&nbsp;&nbsp;tree<span class="H">.</span>Clear();</p>
+<p class="G">&nbsp;&nbsp;&nbsp;&nbsp;Image icon;</p>
+<p class="G">&nbsp;&nbsp;&nbsp;&nbsp;<span class="H">switch</span>(Refresh(Null, 0)) {</p>
+<p class="G">&nbsp;&nbsp;&nbsp;&nbsp;<span class="H">case</span> 0<span class="H">:</span> icon <span class="H">=</span> CtrlImg<span class="H">::</span>Dir(); <span class="H">break</span>;</p>
+<p class="G">&nbsp;&nbsp;&nbsp;&nbsp;<span class="H">case</span> 1<span class="H">:</span> icon <span class="H">=</span> CompDirImg<span class="H">::</span>a_dir(); <span class="H">break</span>;</p>
+<p class="G">&nbsp;&nbsp;&nbsp;&nbsp;<span class="H">case</span> 2<span class="H">:</span> icon <span class="H">=</span> CompDirImg<span class="H">::</span>b_dir(); <span class="H">break</span>;</p>
+<p class="G">&nbsp;&nbsp;&nbsp;&nbsp;<span class="H">case</span> 3<span class="H">:</span> icon <span class="H">=</span> CompDirImg<span class="H">::</span>ab_dir(); <span class="H">break</span>;</p>
+<p class="G">&nbsp;&nbsp;&nbsp;&nbsp;}</p>
+<p class="G">&nbsp;&nbsp;&nbsp;&nbsp;tree<span class="H">.</span>SetRoot(icon, &quot;Root&quot;);</p>
+<p class="G">}</p>
+<p class="G">&nbsp;</p>
+<p class="G"><span class="H">bool</span> DlgCompareDir<span class="H">::</span>FetchDir(String dir, VectorMap<span class="H">&lt;</span>String, FileInfo<span class="H">&gt;&amp;</span> files, VectorMap<span class="H">&lt;</span>String, String<span class="H">&gt;&amp;</span> dirs)</p>
+<p class="G">{</p>
+<p class="G">&nbsp;&nbsp;&nbsp;&nbsp;FindFile ff;</p>
+<p class="G">&nbsp;&nbsp;&nbsp;&nbsp;<span class="H">if</span>(<span class="H">!</span>ff<span class="H">.</span>Search(AppendFileName(dir, &quot;<span class="H">*</span>&quot;)))</p>
+<p class="G">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="H">return</span> <span class="H">false</span>;</p>
+<p class="I"><span class="J">&nbsp;&nbsp;&nbsp;&nbsp;</span>do</p>
+<p class="G">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="H">if</span>(ff<span class="H">.</span>IsFile() <span class="H">&amp;&amp;</span> PatternMatchMulti(fm, ff<span class="H">.</span>GetName()))</p>
+<p class="G">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;files<span class="H">.</span>Add(NormalizePathCase(ff<span class="H">.</span>GetName()), FileInfo(ff<span class="H">.</span>GetName(), ff<span class="H">.</span>GetLength(), ff<span class="H">.</span>GetLastWriteTime()));</p>
+<p class="G">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="H">else</span> <span class="H">if</span>(ff<span class="H">.</span>IsFolder())</p>
+<p class="G">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;dirs<span class="H">.</span>Add(NormalizePathCase(ff<span class="H">.</span>GetName()), ff<span class="H">.</span>GetName());</p>
+<p class="G">&nbsp;&nbsp;&nbsp;&nbsp;<span class="H">while</span>(ff<span class="H">.</span>Next());</p>
+<p class="G">&nbsp;&nbsp;&nbsp;&nbsp;<span class="H">return</span> <span class="H">true</span>;</p>
+<p class="G">}</p>
+<p class="G">&nbsp;</p>
+<p class="G"><span class="H">int</span> DlgCompareDir<span class="H">::</span>Refresh(String rel_path, <span class="H">int</span> parent)</p>
+<p class="G">{</p>
+<p class="G">&nbsp;&nbsp;&nbsp;&nbsp;FindFile ff;</p>
+<p class="G">&nbsp;&nbsp;&nbsp;&nbsp;VectorMap<span class="H">&lt;</span>String, FileInfo<span class="H">&gt;</span> afile, bfile;</p>
+<p class="G">&nbsp;&nbsp;&nbsp;&nbsp;VectorMap<span class="H">&lt;</span>String, String<span class="H">&gt;</span> adir, bdir;</p>
+<p class="G">&nbsp;&nbsp;&nbsp;&nbsp;String arel <span class="H">=</span> AppendFileName(pa, rel_path);</p>
+<p class="G">&nbsp;&nbsp;&nbsp;&nbsp;String brel <span class="H">=</span> AppendFileName(pb, rel_path);</p>
+<p class="G">&nbsp;&nbsp;&nbsp;&nbsp;<span class="H">int</span> done <span class="H">=</span> 0;</p>
+<p class="G">&nbsp;&nbsp;&nbsp;&nbsp;<span class="H">if</span>(<span class="H">!</span>FetchDir(arel, afile, adir))</p>
+<p class="G">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;done <span class="H">|=</span> 2;</p>
+<p class="G">&nbsp;&nbsp;&nbsp;&nbsp;<span class="H">if</span>(<span class="H">!</span>FetchDir(brel, bfile, bdir))</p>
+<p class="G">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;done <span class="H">|=</span> 1;</p>
+<p class="G">&nbsp;</p>
+<p class="G">&nbsp;&nbsp;&nbsp;&nbsp;Index<span class="H">&lt;</span>String<span class="H">&gt;</span> dir_index;</p>
+<p class="G">&nbsp;&nbsp;&nbsp;&nbsp;dir_index <span class="H">&lt;&lt;=</span> adir<span class="H">.</span>GetIndex();</p>
+<p class="G">&nbsp;&nbsp;&nbsp;&nbsp;FindAppend(dir_index, bdir<span class="H">.</span>GetKeys());</p>
+<p class="G">&nbsp;&nbsp;&nbsp;&nbsp;Vector<span class="H">&lt;</span>String<span class="H">&gt;</span> dirs(dir_index<span class="H">.</span>PickKeys());</p>
+<p class="G">&nbsp;&nbsp;&nbsp;&nbsp;Sort(dirs, GetLanguageInfo());</p>
+<p class="G">&nbsp;&nbsp;&nbsp;&nbsp;<span class="H">for</span>(<span class="H">int</span> i <span class="H">=</span> 0; i <span class="H">&lt;</span> dirs<span class="H">.</span>GetCount(); i<span class="H">++</span>) {</p>
+<p class="G">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="H">int</span> fa <span class="H">=</span> adir<span class="H">.</span>Find(dirs<span class="H">[</span>i<span class="H">]</span>), fb <span class="H">=</span> bdir<span class="H">.</span>Find(dirs<span class="H">[</span>i<span class="H">]</span>);</p>
+<p class="G">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;String dn <span class="H">=</span> (fb <span class="H">&gt;=</span> 0 <span class="H">?</span> bdir<span class="H">[</span>fb<span class="H">]</span> <span class="H">:</span> adir<span class="H">[</span>fa<span class="H">]</span>);</p>
+<p class="G">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="H">int</span> dirpar <span class="H">=</span> tree<span class="H">.</span>Add(parent, CtrlImg<span class="H">::</span>Dir(), dn);</p>
+<p class="G">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="H">int</span> dirdone <span class="H">=</span> Refresh(AppendFileName(rel_path, dirs<span class="H">[</span>i<span class="H">]</span>), dirpar);</p>
+<p class="G">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;done <span class="H">|=</span> dirdone;</p>
+<p class="G">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="H">switch</span>(dirdone) {</p>
+<p class="G">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="H">case</span> 0<span class="H">:</span> tree<span class="H">.</span>Remove(dirpar); <span class="H">break</span>;</p>
+<p class="G">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="H">case</span> 1<span class="H">:</span> tree<span class="H">.</span>SetNode(dirpar, TreeCtrl<span class="H">::</span>Node()<span class="H">.</span>SetImage(CompDirImg<span class="H">::</span>a_dir())<span class="H">.</span>Set(dn)); <span class="H">break</span>;</p>
+<p class="G">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="H">case</span> 2<span class="H">:</span> tree<span class="H">.</span>SetNode(dirpar, TreeCtrl<span class="H">::</span>Node()<span class="H">.</span>SetImage(CompDirImg<span class="H">::</span>b_dir())<span class="H">.</span>Set(dn)); <span class="H">break</span>;</p>
+<p class="G">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="H">case</span> 3<span class="H">:</span> tree<span class="H">.</span>SetNode(dirpar, TreeCtrl<span class="H">::</span>Node()<span class="H">.</span>SetImage(CompDirImg<span class="H">::</span>ab_dir())<span class="H">.</span>Set(dn)); <span class="H">break</span>;</p>
+<p class="G">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</p>
+<p class="G">&nbsp;&nbsp;&nbsp;&nbsp;}</p>
+<p class="G">&nbsp;&nbsp;&nbsp;&nbsp;Index<span class="H">&lt;</span>String<span class="H">&gt;</span> name_index;</p>
+<p class="G">&nbsp;&nbsp;&nbsp;&nbsp;name_index <span class="H">&lt;&lt;=</span> afile<span class="H">.</span>GetIndex();</p>
+<p class="G">&nbsp;&nbsp;&nbsp;&nbsp;FindAppend(name_index, bfile<span class="H">.</span>GetKeys());</p>
+<p class="G">&nbsp;&nbsp;&nbsp;&nbsp;Vector<span class="H">&lt;</span>String<span class="H">&gt;</span> names(name_index<span class="H">.</span>PickKeys());</p>
+<p class="G">&nbsp;&nbsp;&nbsp;&nbsp;Sort(names, GetLanguageInfo());</p>
+<p class="G">&nbsp;&nbsp;&nbsp;&nbsp;<span class="H">for</span>(<span class="H">int</span> i <span class="H">=</span> 0; i <span class="H">&lt;</span> names<span class="H">.</span>GetCount(); i<span class="H">++</span>) {</p>
+<p class="G">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="H">int</span> fa <span class="H">=</span> afile<span class="H">.</span>Find(names<span class="H">[</span>i<span class="H">]</span>), fb <span class="H">=</span> bfile<span class="H">.</span>Find(names<span class="H">[</span>i<span class="H">]</span>);</p>
+<p class="G">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="H">if</span>(fa <span class="H">&lt;</span> 0) {</p>
+<p class="G">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;tree<span class="H">.</span>Add(parent, CompDirImg<span class="H">::</span>b_file(), NFormat(&quot;<span class="H">%</span>s<span class="H">:</span> B (<span class="H">%</span>`, <span class="H">%</span>0n)&quot;, bfile<span class="H">[</span>fb<span class="H">].</span>name, bfile<span class="H">[</span>fb<span class="H">].</span>time, bfile<span class="H">[</span>fb<span class="H">].</span>size));</p>
+<p class="G">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;done <span class="H">|=</span> 2;</p>
+<p class="G">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</p>
+<p class="G">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="H">else</span> <span class="H">if</span>(fb <span class="H">&lt;</span> 0) {</p>
+<p class="G">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;tree<span class="H">.</span>Add(parent, CompDirImg<span class="H">::</span>a_file(), NFormat(&quot;<span class="H">%</span>s<span class="H">:</span> A (<span class="H">%</span>`, <span class="H">%</span>0n)&quot;, afile<span class="H">[</span>fa<span class="H">].</span>name, afile<span class="H">[</span>fa<span class="H">].</span>time, afile<span class="H">[</span>fa<span class="H">].</span>size));</p>
+<p class="G">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;done <span class="H">|=</span> 1;</p>
+<p class="G">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</p>
+<p class="G">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="H">else</span> <span class="H">if</span>(afile<span class="H">[</span>fa<span class="H">].</span>size <span class="H">!=</span> bfile<span class="H">[</span>fb<span class="H">].</span>size</p>
+<p class="G">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="H">||</span> LoadFile(AppendFileName(arel, names<span class="H">[</span>i<span class="H">]</span>)) <span class="H">!=</span> LoadFile(AppendFileName(brel, names<span class="H">[</span>i<span class="H">]</span>))) {</p>
+<p class="G">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;tree<span class="H">.</span>Add(parent, CompDirImg<span class="H">::</span>ab_file(), NFormat(&quot;<span class="H">%</span>s<span class="H">:</span> A (<span class="H">%</span>`, <span class="H">%</span>0n), B (<span class="H">%</span>`, <span class="H">%</span>0n)&quot;,</p>
+<p class="G">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;bfile<span class="H">[</span>fb<span class="H">].</span>name, afile<span class="H">[</span>fa<span class="H">].</span>time, afile<span class="H">[</span>fa<span class="H">].</span>size, bfile<span class="H">[</span>fb<span class="H">].</span>time, bfile<span class="H">[</span>fb<span class="H">].</span>size));</p>
+<p class="G">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;done <span class="H">|=</span> 3;</p>
+<p class="G">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</p>
+<p class="G">&nbsp;&nbsp;&nbsp;&nbsp;}</p>
+<p class="G">&nbsp;&nbsp;&nbsp;&nbsp;<span class="H">return</span> done;</p>
+<p class="G">}</p>
+<p class="G">&nbsp;</p>
+<p class="I"><span class="J">String DlgCompareDir</span>::<span class="J">GetTreePath() </span>const</p>
+<p class="G">{</p>
+<p class="G">&nbsp;&nbsp;&nbsp;&nbsp;<span class="H">int</span> i <span class="H">=</span> tree<span class="H">.</span>GetCursor();</p>
+<p class="G">&nbsp;&nbsp;&nbsp;&nbsp;<span class="H">if</span>(i <span class="H">&lt;</span> 0)</p>
+<p class="G">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="H">return</span> String<span class="H">::</span>GetVoid();</p>
+<p class="G">&nbsp;&nbsp;&nbsp;&nbsp;<span class="H">if</span>(i <span class="H">==</span> 0)</p>
+<p class="G">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="H">return</span> Null;</p>
+<p class="G">&nbsp;&nbsp;&nbsp;&nbsp;String s <span class="H">=</span> tree<span class="H">.</span>Get(i);</p>
+<p class="G">&nbsp;&nbsp;&nbsp;&nbsp;<span class="H">int</span> f <span class="H">=</span> s<span class="H">.</span>Find('<span class="H">:</span>');</p>
+<p class="G">&nbsp;&nbsp;&nbsp;&nbsp;<span class="H">if</span>(f <span class="H">&gt;=</span> 0)</p>
+<p class="G">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;s<span class="H">.</span>Trim(f);</p>
+<p class="G">&nbsp;&nbsp;&nbsp;&nbsp;<span class="H">while</span>((i <span class="H">=</span> tree<span class="H">.</span>GetParent(i)) <span class="H">!=</span> 0)</p>
+<p class="G">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;s <span class="H">=</span> AppendFileName(String(tree<span class="H">.</span>Get(i)), s);</p>
+<p class="G">&nbsp;&nbsp;&nbsp;&nbsp;<span class="H">return</span> s;</p>
+<p class="G">}</p>
+<p class="G">&nbsp;</p>
+<p class="G"><span class="H">void</span> DlgCompareDir<span class="H">::</span>DoTreeCursor()</p>
+<p class="G">{</p>
+<p class="G">&nbsp;&nbsp;&nbsp;&nbsp;String s <span class="H">=</span> GetTreePath();</p>
+<p class="G">&nbsp;&nbsp;&nbsp;&nbsp;<span class="H">if</span>(IsNull(s))</p>
+<p class="G">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="H">return</span>;</p>
+<p class="G">&nbsp;&nbsp;&nbsp;&nbsp;String fa <span class="H">=</span> AppendFileName(pa, s), fb <span class="H">=</span> AppendFileName(pb, s);</p>
+<p class="G">&nbsp;&nbsp;&nbsp;&nbsp;String da <span class="H">=</span> LoadFile(fa), db <span class="H">=</span> LoadFile(fb);</p>
+<p class="G">&nbsp;&nbsp;&nbsp;&nbsp;<span class="H">if</span>(<span class="H">!</span>IsNull(da) <span class="H">||</span> <span class="H">!</span>IsNull(db)) {</p>
+<p class="G">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="H">if</span>(IsNull(da) <span class="H">||</span> IsNull(db)) {</p>
+<p class="G">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;qtf<span class="H">.</span>Hide();</p>
+<p class="G">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;lineedit<span class="H">.</span>Show();</p>
+<p class="G">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;lineedit <span class="H">&lt;&lt;=</span> Nvl(db, da);</p>
+<p class="G">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</p>
+<p class="G">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="H">else</span> {</p>
+<p class="G">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;lineedit<span class="H">.</span>Hide();</p>
+<p class="G">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;qtf<span class="H">.</span>Show();</p>
+<p class="G">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;String comptext <span class="H">=</span> &quot;<span class="H">[</span>C2 &quot;;</p>
+<p class="G">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Vector<span class="H">&lt;</span>String<span class="H">&gt;</span> la <span class="H">=</span> GetStringLineMap(da), lb <span class="H">=</span> GetStringLineMap(db);</p>
+<p class="G">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Array<span class="H">&lt;</span>TextSection<span class="H">&gt;</span> sections <span class="H">=</span> CompareLineMaps(la, lb);</p>
+<p class="G">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="H">for</span>(<span class="H">int</span> s <span class="H">=</span> 0; s <span class="H">&lt;</span> sections<span class="H">.</span>GetCount(); s<span class="H">++</span>) {</p>
+<p class="G">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="H">const</span> TextSection<span class="H">&amp;</span> sec <span class="H">=</span> sections<span class="H">[</span>s<span class="H">]</span>;</p>
+<p class="G">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="H">if</span>(sec<span class="H">.</span>same) {</p>
+<p class="G">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;comptext <span class="H">&lt;&lt;</span> &quot;<span class="H">[</span>@(0<span class="H">.</span>0<span class="H">.</span>0) \1&quot;;</p>
+<p class="G">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="H">if</span>(sec<span class="H">.</span>count1 <span class="H">&lt;=</span> 6)</p>
+<p class="G">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="H">for</span>(<span class="H">int</span> i <span class="H">=</span> 0; i <span class="H">&lt;</span> sec<span class="H">.</span>count1; i<span class="H">++</span>)</p>
+<p class="G">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;comptext <span class="H">&lt;&lt;</span> ExpandTabs(la<span class="H">[</span>i <span class="H">+</span> sec<span class="H">.</span>start1<span class="H">]</span>) <span class="H">&lt;&lt;</span> '\n';</p>
+<p class="G">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="H">else</span> {</p>
+<p class="G">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="H">for</span>(<span class="H">int</span> i <span class="H">=</span> 0; i <span class="H">&lt;</span> 3; i<span class="H">++</span>)</p>
+<p class="G">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;comptext <span class="H">&lt;&lt;</span> ExpandTabs(la<span class="H">[</span>i <span class="H">+</span> sec<span class="H">.</span>start1<span class="H">]</span>) <span class="H">&lt;&lt;</span> '\n';</p>
+<p class="G">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;comptext <span class="H">&lt;&lt;</span> &quot;<span class="H">...</span>\n&quot;;</p>
+<p class="G">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="H">for</span>(<span class="H">int</span> i <span class="H">=</span> <span class="H">-</span>3; i <span class="H">&lt;</span> 0; i<span class="H">++</span>)</p>
+<p class="G">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;comptext <span class="H">&lt;&lt;</span> ExpandTabs(la<span class="H">[</span>i <span class="H">+</span> sec<span class="H">.</span>start1 <span class="H">+</span> sec<span class="H">.</span>count1<span class="H">]</span>) <span class="H">&lt;&lt;</span> '\n';</p>
+<p class="G">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</p>
+<p class="G">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;comptext <span class="H">&lt;&lt;</span> &quot;\1<span class="H">]</span>&quot;;</p>
+<p class="G">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</p>
+<p class="G">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="H">else</span> {</p>
+<p class="G">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="H">if</span>(sec<span class="H">.</span>count1) {</p>
+<p class="G">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;comptext <span class="H">&lt;&lt;</span> &quot;<span class="H">[</span>@(0<span class="H">.</span>160<span class="H">.</span>0) \1&quot;;</p>
+<p class="G">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="H">for</span>(<span class="H">int</span> i <span class="H">=</span> 0; i <span class="H">&lt;</span> sec<span class="H">.</span>count1; i<span class="H">++</span>)</p>
+<p class="G">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;comptext <span class="H">&lt;&lt;</span> ExpandTabs(la<span class="H">[</span>sec<span class="H">.</span>start1 <span class="H">+</span> i<span class="H">]</span>) <span class="H">&lt;&lt;</span> '\n';</p>
+<p class="G">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;comptext <span class="H">&lt;&lt;</span> &quot;\1<span class="H">]</span>&quot;;</p>
+<p class="G">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</p>
+<p class="G">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="H">if</span>(sec<span class="H">.</span>count2) {</p>
+<p class="G">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;comptext <span class="H">&lt;&lt;</span> &quot;<span class="H">[</span>@(0<span class="H">.</span>0<span class="H">.</span>255) \1&quot;;</p>
+<p class="G">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="H">for</span>(<span class="H">int</span> i <span class="H">=</span> 0; i <span class="H">&lt;</span> sec<span class="H">.</span>count2; i<span class="H">++</span>)</p>
+<p class="G">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;comptext <span class="H">&lt;&lt;</span> ExpandTabs(lb<span class="H">[</span>sec<span class="H">.</span>start2 <span class="H">+</span> i<span class="H">]</span>) <span class="H">&lt;&lt;</span> '\n';</p>
+<p class="G">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;comptext <span class="H">&lt;&lt;</span> &quot;\1<span class="H">]</span>&quot;;</p>
+<p class="G">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</p>
+<p class="G">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</p>
+<p class="G">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</p>
+<p class="G">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;qtf<span class="H">.</span>SetQTF(comptext);</p>
+<p class="G">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</p>
+<p class="G">&nbsp;&nbsp;&nbsp;&nbsp;}</p>
+<p class="G">}</p>
+<p class="G">&nbsp;</p>
+<p class="G"><span class="H">void</span> DlgCompareDir<span class="H">::</span>DoBrowse(Ctrl <span class="H">*</span>field)</p>
+<p class="G">{</p>
+<p class="G">&nbsp;&nbsp;&nbsp;&nbsp;FileSel fsel;</p>
+<p class="G">&nbsp;&nbsp;&nbsp;&nbsp;fsel<span class="H">.</span>AllFilesType();</p>
+<p class="G">&nbsp;&nbsp;&nbsp;&nbsp;<span class="H">static</span> String recent_dir;</p>
+<p class="G">&nbsp;&nbsp;&nbsp;&nbsp;fsel <span class="H">&lt;&lt;=</span> Nvl((String)<span class="H">~*</span>field, recent_dir);</p>
+<p class="G">&nbsp;&nbsp;&nbsp;&nbsp;<span class="H">if</span>(fsel<span class="H">.</span>ExecuteSelectDir())</p>
+<p class="G">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="H">*</span>field <span class="H">&lt;&lt;=</span> recent_dir <span class="H">=</span> <span class="H">~</span>fsel;</p>
+<p class="G">}</p>
+<p class="G">&nbsp;</p>
+<p class="G"><span class="H">void</span> DlgCompareDir<span class="H">::</span>ToolTree(Bar<span class="H">&amp;</span> bar)</p>
+<p class="G">{</p>
+<p class="G">}</p>
+<p class="G">&nbsp;</p>
+<p class="G">GUI_APP_MAIN</p>
+<p class="G">{</p>
+<p class="G">&nbsp;&nbsp;&nbsp;&nbsp;DlgCompareDir cmpdlg;</p>
+<p class="G">&nbsp;&nbsp;&nbsp;&nbsp;LoadFromFile(cmpdlg, ConfigFile());</p>
+<p class="G">&nbsp;&nbsp;&nbsp;&nbsp;cmpdlg<span class="H">.</span>Run();</p>
+<p class="G">&nbsp;&nbsp;&nbsp;&nbsp;StoreToFile(cmpdlg, ConfigFile());</p>
+<p class="G">}</p>
+<p class="G">&nbsp;</p>
+<p class="G">&nbsp;</p>
+<p class="G">&nbsp;</p>
+<p class="F">CompDir.lay</p>
+<p class="G">&nbsp;</p>
+<p class="G">LAYOUT(CompareDirLayout, 496, 492)</p>
+<p class="G">&nbsp;&nbsp;&nbsp;&nbsp;ITEM(Label, dv___0, SetLabel(t_(&quot;Folder <span class="H">&amp;</span>A<span class="H">:</span>&quot;))<span class="H">.</span>LeftPosZ(4, 52)<span class="H">.</span>TopPosZ(4, 19))</p>
+<p class="G">&nbsp;&nbsp;&nbsp;&nbsp;ITEM(EditField, path_a, HSizePosZ(56, 4)<span class="H">.</span>TopPosZ(4, 19))</p>
+<p class="G">&nbsp;&nbsp;&nbsp;&nbsp;ITEM(Label, dv___2, SetLabel(t_(&quot;Folder <span class="H">&amp;</span>B<span class="H">:</span>&quot;))<span class="H">.</span>LeftPosZ(4, 52)<span class="H">.</span>TopPosZ(26, 19))</p>
+<p class="G">&nbsp;&nbsp;&nbsp;&nbsp;ITEM(EditField, path_b, HSizePosZ(56, 4)<span class="H">.</span>TopPosZ(26, 19))</p>
+<p class="G">&nbsp;&nbsp;&nbsp;&nbsp;ITEM(Label, dv___4, SetLabel(t_(&quot;File <span class="H">&amp;</span>mask<span class="H">:</span>&quot;))<span class="H">.</span>LeftPosZ(4, 52)<span class="H">.</span>TopPosZ(48, 19))</p>
+<p class="G">&nbsp;&nbsp;&nbsp;&nbsp;ITEM(EditField, file_mask, HSizePosZ(56, 68)<span class="H">.</span>TopPosZ(48, 19))</p>
+<p class="G">&nbsp;&nbsp;&nbsp;&nbsp;ITEM(Button, refresh, SetLabel(t_(&quot;<span class="H">&amp;</span>Refresh&quot;))<span class="H">.</span>RightPosZ(4, 60)<span class="H">.</span>TopPosZ(48, 18))</p>
+<p class="G">&nbsp;&nbsp;&nbsp;&nbsp;ITEM(Splitter, splitter, HSizePosZ(4, 4)<span class="H">.</span>VSizePosZ(70, 4))</p>
+<p class="G">END_LAYOUT</p>
+<p class="G">&nbsp;</p>
+<p class="G">&nbsp;</p>
+<p class="G">&nbsp;</p>
+<p class="G">&nbsp;</p>
+<p class="G">&nbsp;</p>
+</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>
+<TABLE BORDER="0" WIDTH="100%"><TR><TD></TD>
+</TR>
+</TABLE>
+<TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" BGCOLOR="#FFFFFF" WIDTH="100%" style="border-style: solid; border-width: 1px; border-color: #6E89AE;padding: 10px;;"><TR><TD><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%"><TR><TD><p class="A"><span class="B"> </span><a href="www$uppweb$contribweb$en-us.html">Do you want to contribute?</a></p>
+</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>
+<script type="text/javascript">var a={'examples$CompDir$en-us.html':'English'};var p=window.location.pathname.split("/");p=p[p.length-1];var s='<select id="lang" onchange="window.location=document.getElementById(\'lang\').value;">';for(l in a){if(p==l){d=" selected=1"}else{d=""}s+='<option value="'+l+'"'+d+'>'+a[l]+'</option>'}s+='</select>';var d=document.createElement('div');d.innerHTML=s;var c=document.getElementById('langs');c.replaceChild(d,c.firstChild);document.getElementById('langbox').style.display='block';</script></BODY>

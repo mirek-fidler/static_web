@@ -1,0 +1,358 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en-us">
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
+<META NAME="Generator" CONTENT="U++ HTML Package">
+<META NAME="Description" CONTENT="Layout Designer is a tool that allows to create predefined views that can be directly used in application source code.">
+<TITLE>Layout Designer :: U++</TITLE>
+<STYLE TYPE="text/css"><!--
+.A{margin:0px 0px 0px 0px;text-indent:0px;text-align:left;color:#000000;font-family:sans-serif;font-size:10pt;font-weight:normal;font-style:normal;}
+.B{font-size:12pt;}
+.C{margin:0px 0px 16px 0px;text-indent:0px;text-align:left;color:#000000;font-family:serif;font-size:24pt;font-weight:bold;font-style:normal;}
+.D{margin:16px 0px 0px 0px;text-indent:0px;text-align:left;color:#000000;font-family:sans-serif;font-size:16pt;font-weight:bold;font-style:normal;}
+.E{margin:8px 0px 8px 0px;text-indent:0px;text-align:left;color:#000000;font-family:sans-serif;font-size:10pt;font-weight:normal;font-style:normal;line-height:150%}
+.F{margin:0px 0px 0px 0px;text-indent:0px;text-align:center;color:#000000;font-family:sans-serif;font-size:10pt;font-weight:normal;font-style:normal;}
+.G{display:list-item;list-style-type:disc;margin:8px 0px 8px 45px;text-indent:0px;text-align:left;color:#000000;font-family:sans-serif;font-size:10pt;font-weight:normal;font-style:normal;line-height:150%}
+.H{font-weight:bold;}
+.I{display:list-item;list-style-type:disc;margin:8px 0px 8px 77px;text-indent:0px;text-align:left;color:#000000;font-family:sans-serif;font-size:10pt;font-weight:normal;font-style:normal;line-height:150%}
+.J{margin:16px 0px 0px 0px;text-indent:0px;text-align:left;color:#000000;font-family:sans-serif;font-size:14pt;font-weight:bold;font-style:normal;}
+.K{margin:8px 0px 8px 57px;text-indent:0px;text-align:left;color:#000000;font-family:sans-serif;font-size:10pt;font-weight:normal;font-style:normal;line-height:150%}
+.L{margin:0px 0px 0px 115px;text-indent:0px;text-align:left;color:#008000;font-family:monospace;font-size:8pt;font-weight:normal;font-style:normal;}
+.M{margin:0px 0px 0px 115px;text-indent:0px;text-align:left;color:#000080;font-family:monospace;font-size:8pt;font-weight:normal;font-style:normal;}
+.N{margin:0px 0px 0px 115px;text-indent:0px;text-align:left;color:#000080;font-family:monospace;font-size:9pt;font-weight:normal;font-style:normal;}
+.O{margin:0px 0px 0px 64px;text-indent:0px;text-align:left;color:#000080;font-family:monospace;font-size:8pt;font-weight:normal;font-style:normal;}
+.P{margin:0px 0px 0px 64px;text-indent:0px;text-align:left;color:#000080;font-family:monospace;font-size:9pt;font-weight:normal;font-style:normal;}
+a.l1         { text-decoration:none; font-size: 8pt; font-family: sans-serif; font-weight: normal; }
+a.l1:link    { color:#000000; }
+a.l1:visited { color:#000080; }
+a.l1:hover   { color:#9933CC; }
+a.l1:active  { color:#000000; }
+a.l2         { text-decoration:none; font-size: 12pt; font-family: sans-serif; font-variant: small-caps; }
+a.l2:link    { color:#0066FF; }
+a.l2:visited { color:#FF6600; }
+a.l2:hover   { color:#BC0624; }
+a.l2:active  { color:#BC0024; }
+
+-->
+</STYLE>
+<META NAME="keywords" CONTENT="framework, toolkit, widget, c++, visual, studio, dev-cpp, builder, ide, class, component,wxwidgets, qt, rapid, application, development, rad, mfc, linux, macos, gui, sdl, directx, desktop"><META name="robots" content="index,follow">
+<LINK rel="alternate" type="application/rss+xml" title="SVN changes" href="svnchanges.xml">
+<LINK rel="shortcut icon" type="image/png" href="favicon.png">
+</HEAD><BODY BGCOLOR="#D2D9D2" ALINK="#800000" LINK="#000000" VLINK="#000080"><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%"><TR><TD COLSPAN="3"><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%" BGCOLOR="#FFFFFF" style="border: 1px solid #6E89AE;padding-left: 10px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;"><TR><TD><A HREF="index.html"><IMG SRC="0i.png" ALT="" BORDER="0"></A>
+</TD>
+<TD ALIGN="RIGHT" VALIGN="BOTTOM" STYLE="padding-bottom: 5px; background-image: url('1i.png')"><span style="font-size: 14pt; font-family: sans-serif;"><script type="text/javascript"><!--
+google_ad_client = "pub-1082147624384270";
+google_ad_width = 468;
+google_ad_height = 60;
+google_ad_format = "468x60_as";
+google_ad_type = "text_image";
+google_ad_channel = "";
+google_color_border = "336699";
+google_color_bg = "FFFFFF";
+google_color_link = "0000FF";
+google_color_text = "000000";
+google_color_url = "008000";
+//--></script>
+<script type="text/javascript"
+  src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+&nbsp;&nbsp;</span>
+</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>
+<TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%"><TR><TD COLSPAN="3" BGCOLOR="#D2D9D2" HEIGHT="6"></TD>
+</TR>
+<TR><TD VALIGN="TOP" ALIGN="CENTER"><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="160"><TR><TD ALIGN="CENTER"><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%" BGCOLOR="#FFFFFF" style="border-style: solid; border-width: 1px; border-color: #6E89AE;padding: 0px"><TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px;"><A HREF="www$uppweb$overview$en-us.html" CLASS="l1">Overview</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$examples$en-us.html" CLASS="l1">Examples</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$ss$en-us.html" CLASS="l1">Screenshots</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$comparison$en-us.html" CLASS="l1">Comparisons</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$apps$en-us.html" CLASS="l1">Applications</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$download$en-us.html" CLASS="l1">Download</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$documentation$en-us.html" CLASS="l1">Documentation</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$Tutorials$en-us.html" CLASS="l1">Tutorials</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="app$ide$UppHub$en-us.html" CLASS="l1">UppHub</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$Roadmap$en-us.html" CLASS="l1">Status & Roadmap</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$FAQ$en-us.html" CLASS="l1">FAQ</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="app$ide$About$en-us.html" CLASS="l1">Authors & License</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="https://www.ultimatepp.org/forums" CLASS="l1">Forums</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$Funding$en-us.html" CLASS="l1">Funding U++</A>
+</TD>
+</TR>
+</TABLE>
+<TABLE BORDER="0" WIDTH="100%"><TR><TD></TD>
+</TR>
+</TABLE>
+<TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%" BGCOLOR="#FFFFFF" style="border-style: solid; border-width: 1px; border-color: #6E89AE;padding: 0px"><TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('3i.png'); border: 0px solid black;padding-left:12px; padding-right:0px; padding-top:1px; padding-bottom:1px;color:#FFFFFF;"><B><span style="font-size: 8pt; font-family: sans-serif;">Search on this site</span>
+</B>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:6px; padding-right:0px; padding-top:4px; padding-bottom:4px;border-top: 1px solid #6E89AE;"><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%"><TR><TD><IMG SRC="4i.png" ALT="" BORDER="0"></TD>
+<TD><FORM ACTION="https://www.google.com/search" METHOD="GET" STYLE="margin:0px;padding:0px;"><INPUT TYPE="HIDDEN" NAME="ie" VALUE="UTF-8"><INPUT TYPE="HIDDEN" NAME="oe" VALUE="UTF-8"><INPUT TYPE="TEXT" NAME="q" SIZE="15" MAXLENGTH="256" placeholder="Site search"><INPUT TYPE="HIDDEN" NAME="sitesearch" VALUE="ultimatepp.org"></FORM>
+</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>
+<TABLE BORDER="0" WIDTH="100%"><TR><TD></TD>
+</TR>
+</TABLE>
+<br><div id="fb-root"></div>
+<script type="text/javascript">(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) {return;}
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+<div class="fb-like" data-href="https://www.facebook.com/pages/Upp-Framework/262346610476027?sk=wall" data-send="false" data-layout="button_count" data-width="160" data-show-faces="false" data-font="arial"></div>
+<br><br><script type="text/javascript"><!--
+google_ad_client = "pub-1082147624384270";
+google_ad_width = 160;
+google_ad_height = 600;
+google_ad_format = "160x600_as";
+google_ad_type = "text_image";
+google_ad_channel = "";
+google_color_border = "336699";
+google_color_bg = "FFFFFF";
+google_color_link = "0000FF";
+google_color_text = "000000";
+google_color_url = "008000";
+//--></script>
+<script type="text/javascript"
+  src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script><br><br><script type="text/javascript"><!--
+google_ad_client = "pub-1082147624384270";
+google_ad_width = 160;
+google_ad_height = 90;
+google_ad_format = "160x90_0ads_al_s";
+google_ad_channel = "";
+google_color_border = "336699";
+google_color_bg = "FFFFFF";
+google_color_link = "0000FF";
+google_color_text = "000000";
+google_color_url = "008000";
+//--></script>
+<script type="text/javascript"
+  src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+<br><br><script type="text/javascript"><!--
+google_ad_client = "pub-1082147624384270";
+google_ad_width = 160;
+google_ad_height = 600;
+google_ad_format = "160x600_as";
+google_ad_type = "text_image";
+google_ad_channel = "";
+google_color_border = "336699";
+google_color_bg = "FFFFFF";
+google_color_link = "0000FF";
+google_color_text = "000000";
+google_color_url = "008000";
+//--></script>
+<script type="text/javascript"
+  src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script><br><br><br><br><br><br><A HREF="https://sourceforge.net/projects/upp/"><IMG SRC="https://sourceforge.net/sflogo.php?group_id=93970&amp;type=2" ALT="SourceForge.net Logo" BORDER="0" WIDTH="125" HEIGHT="37"></A>
+<br><br><A HREF="https://flathub.org/en/apps/org.ultimatepp.TheIDE"><IMG SRC="5i.png" ALT="SourceForge.net Logo" BORDER="0" WIDTH="125" HEIGHT="37"></A>
+<br><br><div style="background-color:#ffffff;width:125;height:35"><A HREF="https://github.com/ultimatepp"><IMG SRC="6i.png" ALT="GitHub Logo" BORDER="0" WIDTH="125" HEIGHT="35"></A>
+</div><br><div style="background-color:#ffffff;width:125;height:35"><div style="height:5"></div><A HREF="https://discord.gg/8XzqQzXZzb"><IMG SRC="https://assets-global.website-files.com/6257adef93867e50d84d30e2/636e0b5061df29d55a92d945_full_logo_blurple_RGB.svg" ALT="Discord Logo" BORDER="0" WIDTH="125" HEIGHT="25"></A>
+</div><br></TD>
+</TR>
+</TABLE>
+</TD>
+<TD VALIGN="TOP" BGCOLOR="#D2D9D2"><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="6"><TR><TD></TD>
+</TR>
+</TABLE>
+</TD>
+<TD VALIGN="TOP" WIDTH="100%" BGCOLOR="#D2D9D2"><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" BGCOLOR="#FFFFFF" WIDTH="100%" style="border-style: solid; border-width: 1px; border-color: #6E89AE;padding: 10px;;"><TR><TD><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%"><TR><TD><p class="C">Layout Designer</p>
+<hr><p class="D">Table of contents</p>
+<p class="A">&nbsp;</p>
+<p class="A"><a href="app$ide$LayoutDes_en-us.html#1">1. Overview</a></p>
+<p class="A"><a href="app$ide$LayoutDes_en-us.html#2">2. Layouts management</a></p>
+<p class="A"> &nbsp;&nbsp;&nbsp;<a href="app$ide$LayoutDes_en-us.html#2_1">2.1 Creating new layout</a></p>
+<p class="A"><a href="app$ide$LayoutDes_en-us.html#3">3. Adding widget to layout</a></p>
+<p class="A"><a href="app$ide$LayoutDes_en-us.html#4">4. Toolbar commands</a></p>
+<p class="A"> &nbsp;&nbsp;&nbsp;<a href="app$ide$LayoutDes_en-us.html#4_1">4.1 Widget size scaling behavior</a></p>
+<p class="A"> &nbsp;&nbsp;&nbsp;<a href="app$ide$LayoutDes_en-us.html#4_2">4.2 Order of widgets</a></p>
+<p class="A"> &nbsp;&nbsp;&nbsp;<a href="app$ide$LayoutDes_en-us.html#4_3">4.3 Layout behavior settings</a></p>
+<p class="A"> &nbsp;&nbsp;&nbsp;<a href="app$ide$LayoutDes_en-us.html#4_4">4.4 Assistance</a></p>
+<p class="A"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="app$ide$LayoutDes_en-us.html#4_4_1">4.4.1 Automatic code generation for layout</a></p>
+<p class="A"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="app$ide$LayoutDes_en-us.html#4_4_2">4.4.2 Jumping to class that implements layout</a></p>
+<p class="A"><a href="app$ide$LayoutDes_en-us.html#5">5. Adding support for custom widgets</a></p>
+<p class="A"><a href="app$ide$LayoutDes_en-us.html#6">6. Under the hood</a></p>
+<p class="A">&nbsp;</p>
+<hr><p id="1" class="D">1. Overview</p>
+<p class="E">Layout Designer is a tool that allows to create predefined views that can be directly used in application source code. It significantly reduces the amount of time needed to create the program. It separates logic from user interface. This allows to use some modern software architectures like MVC (Model View Controller). Despite the fact that user interface code with U++ can be written without Layout Designer its usage significantly speed up the application creation process.</p>
+<p class="A">&nbsp;</p>
+<p class="F"><a href="app$ide$LayoutDes_en-us.html_0.png"><img src="app$ide$LayoutDes_en-us.html_0.png" border="0" alt="" style="width: 669px; height: 592px"></a></p>
+<p class="A">&nbsp;</p>
+<p class="E">The layout designer consists of the following key elements:</p>
+<p class="G"><span class="H">A</span> - list of layouts. One .lay file can contain multiple layouts.</p>
+<p class="G"><span class="H">B</span> - widgets list associated with selected layout.</p>
+<p class="G"><span class="H">C</span> - widget properties. They can be modified directly from layout designer..</p>
+<p class="I"><span class="H">C1</span> - widget type.</p>
+<p class="I"><span class="H">C2</span> - widget name.</p>
+<p class="G"><span class="H">D</span> - layout view.</p>
+<p class="G"><span class="H">E</span> - layout designer toolbar.</p>
+<p class="E">More information about using layouts in the source code can be found in the <a href="srcdoc$CtrlLib$Tutorial_en-us.html#16">GUI tutorial</a>.</p>
+<hr><p id="2" class="D">2. Layouts management</p>
+<p id="2_1" class="J">2.1. Creating new layout</p>
+<p class="E">After creating a new layout file, it doesn't posse any layouts. To create layout right click on layout list and select &quot;Add new layout..&quot; or &quot;Insert new layout..&quot;. The difference between these two options are the first one always insert at the end of the list. On the other hand the second will insert new layout before currently selected layout. Example below:</p>
+<p class="A">&nbsp;</p>
+<p class="F"><a href="app$ide$LayoutDes_en-us.html_1.png"><img src="app$ide$LayoutDes_en-us.html_1.png" border="0" alt="" style="width: 402px; height: 333px"></a></p>
+<p class="A">&nbsp;</p>
+<p class="E">After selecting one of these two options, the dialog will appear. In the dialog in order to create a new layout the name must be provided.</p>
+<hr><p id="3" class="D">3. Adding widget to layout</p>
+<p class="E">Adding new widget to the layout is simple. To do it right click on the layout view area and select concrete widget from the list. Example below:</p>
+<p class="A">&nbsp;</p>
+<p class="F"><a href="app$ide$LayoutDes_en-us.html_2.png"><img src="app$ide$LayoutDes_en-us.html_2.png" border="0" alt="" style="width: 732px; height: 849px"></a></p>
+<p class="A">&nbsp;</p>
+<p class="E">After that the widget will be placed on the layout view area. The initial position depends on the mouse position in which the menu has been invoked. The widget selection can be canceled by pressing Escape keyboard key or by left click on area that is not the widget selection menu. The whole system is intuitive and after few usage all problems disappear.</p>
+<p class="E">Standard U++ distribution bundles a dozen of widgets. They are mainly located in CtrlLib (Controls Library). All widgets definitions for Layout Designed are located in .usc files. The main one is located under the following path <a href="https://github.com/ultimatepp/ultimatepp/blob/master/uppsrc/CtrlLib/CtrlLib.usc"><span class="H">CtrlLib/CtrlLib.usc</span></a>. If you plan to write .usc file by yourself the file is a treasury of knowledge.</p>
+<p class="E">To each widget category can be assigned. It is used to distinguish the widget within layout editor.</p>
+<p class="G"><span class="H">Complex</span> -</p>
+<p class="G"><span class="H">Editors</span> -</p>
+<p class="G"><span class="H">Input fields</span> -</p>
+<p class="G"><span class="H">Progress</span> - </p>
+<p class="G"><span class="H">Push</span> -</p>
+<p class="G"><span class="H">Special</span> -</p>
+<p class="G"><span class="H">Static</span> - static widgets that do not offer any input.</p>
+<p class="G"><span class="H">All</span> - all available widgets.</p>
+<p class="G"><span class="H">User class </span>-<span class="H"> </span>this allows you to specify any widget that is within layout file include hierarchy. Very useful for all controls that do not have it's representation in .usc <a href="app$ide$LayoutDes_en-us.html#4">file</a>.</p>
+<p class="E">The widgets available in the layout designer can be extended by using other packages not only CtrlLib. One of the package that extends the list is GridCtrl.</p>
+<hr><p id="4" class="D">4. Toolbar commands</p>
+<p id="4_1" class="J">4.1 Widget size scaling behavior</p>
+<p class="E">Layout designer allows to specify how widget will behave upon layout size change. This will happen for example when user change window size on which given layout is placed. Upon selecting a particular widget by left-clicking on it, in the layout view the user should have access to the scaling options. This is show on the image below:</p>
+<p class="A">&nbsp;</p>
+<p class="F"><a href="app$ide$LayoutDes_en-us.html_3.png"><img src="app$ide$LayoutDes_en-us.html_3.png" border="0" alt="" style="width: 680px; height: 141px"></a></p>
+<p class="A">&nbsp;</p>
+<p class="E">Let's analyze each option available in scaling commands:</p>
+<p class="G">Horizontal scaling:</p>
+<p class="I"><a href="app$ide$LayoutDes_en-us.html_4.png"><img src="app$ide$LayoutDes_en-us.html_4.png" border="0" alt="" style="width: 16px; height: 16px"></a> - widget size will do not change and it will stay on the <span class="H">left</span> part of the layout.</p>
+<p class="I"><a href="app$ide$LayoutDes_en-us.html_5.png"><img src="app$ide$LayoutDes_en-us.html_5.png" border="0" alt="" style="width: 16px; height: 16px"></a> - widget size will do not change and it will stay on the <span class="H">right</span> part of the layout.</p>
+<p class="I"><a href="app$ide$LayoutDes_en-us.html_6.png"><img src="app$ide$LayoutDes_en-us.html_6.png" border="0" alt="" style="width: 16px; height: 16px"></a> - widget size will <span class="H">adapt</span> to the layout size from <span class="H">left to right</span>. This is typical <span class="H">vertical auto resizing</span> behavior.</p>
+<p class="I"><a href="app$ide$LayoutDes_en-us.html_7.png"><img src="app$ide$LayoutDes_en-us.html_7.png" border="0" alt="" style="width: 16px; height: 16px"></a> - widget size will do not change, however the widget will be placed by the <span class="H">horizontal center</span> of the layout.</p>
+<p class="G">Vertical scaling:</p>
+<p class="I"><a href="app$ide$LayoutDes_en-us.html_8.png"><img src="app$ide$LayoutDes_en-us.html_8.png" border="0" alt="" style="width: 16px; height: 16px"></a> - widget size will do not change and it will stay on the <span class="H">top</span> part of the layout.</p>
+<p class="I"><a href="app$ide$LayoutDes_en-us.html_9.png"><img src="app$ide$LayoutDes_en-us.html_9.png" border="0" alt="" style="width: 16px; height: 16px"></a> - widget size will do not change and it will stay on the <span class="H">bottom </span>part of the layout.</p>
+<p class="I"><a href="app$ide$LayoutDes_en-us.html_10.png"><img src="app$ide$LayoutDes_en-us.html_10.png" border="0" alt="" style="width: 16px; height: 16px"></a> - widget size will <span class="H">adapt</span> to the layout size from <span class="H">top to bottom</span>. This is typical <span class="H">vertical auto resizing</span> behavior.</p>
+<p class="I"><a href="app$ide$LayoutDes_en-us.html_11.png"><img src="app$ide$LayoutDes_en-us.html_11.png" border="0" alt="" style="width: 16px; height: 16px"></a> -widget size will do not change, however the widget will be placed by the <span class="H">vertical center</span> of the layout.</p>
+<p class="G">Predefined scaling:</p>
+<p class="I"><a href="app$ide$LayoutDes_en-us.html_12.png"><img src="app$ide$LayoutDes_en-us.html_12.png" border="0" alt="" style="width: 16px; height: 16px"></a> - the decision how to scale widget will be deduced by algorithm basing on widget type and it's current position.</p>
+<p class="I"><a href="app$ide$LayoutDes_en-us.html_13.png"><img src="app$ide$LayoutDes_en-us.html_13.png" border="0" alt="" style="width: 16px; height: 16px"></a> - the command resets to default scaling options for the widget. It will be set as left for horizontal and top for vertical.</p>
+<p id="4_2" class="J">4.2 Order of widgets</p>
+<p class="E">The order of the widgets in the layout matters. The widgets of the bottom of the list will be drawn first. It is very important when widgets overlap. Let's assume, non real world example. We have two buttons OK and Cancel and they are on the same position on the layout. The OK button is in the bottom of the list. The picture below presents the whole situation:</p>
+<p class="A">&nbsp;</p>
+<p class="F"><a href="app$ide$LayoutDes_en-us.html_14.png"><img src="app$ide$LayoutDes_en-us.html_14.png" border="0" alt="" style="width: 516px; height: 441px"></a></p>
+<p class="A">&nbsp;</p>
+<p class="E">As we may see in this case only the OK button is displayed to the user. The bottom rule can be used to combine widgets and to create layers. For example on the top of the list you could place StaticRect with the color:</p>
+<p class="A">&nbsp;</p>
+<p class="F"><a href="app$ide$LayoutDes_en-us.html_15.png"><img src="app$ide$LayoutDes_en-us.html_15.png" border="0" alt="" style="width: 501px; height: 380px"></a></p>
+<p class="A">&nbsp;</p>
+<p class="E">You could manipulate the order of the widget, by drag and drop or you could use ordering commands:</p>
+<p class="A">&nbsp;</p>
+<p class="F"><a href="app$ide$LayoutDes_en-us.html_16.png"><img src="app$ide$LayoutDes_en-us.html_16.png" border="0" alt="" style="width: 613px; height: 111px"></a></p>
+<p class="A">&nbsp;</p>
+<p class="E">Let's discuss all of available options included in this group:</p>
+<p class="G"><a href="app$ide$LayoutDes_en-us.html_17.png"><img src="app$ide$LayoutDes_en-us.html_17.png" border="0" alt="" style="width: 16px; height: 16px"></a> - move widget one position into the top.</p>
+<p class="G"><a href="app$ide$LayoutDes_en-us.html_18.png"><img src="app$ide$LayoutDes_en-us.html_18.png" border="0" alt="" style="width: 16px; height: 16px"></a> - move widget one position into the bottom.</p>
+<p class="G"><a href="app$ide$LayoutDes_en-us.html_19.png"><img src="app$ide$LayoutDes_en-us.html_19.png" border="0" alt="" style="width: 16px; height: 16px"></a> - deduce the desirable widgets position on the widget list. More than one widget must be selected. When one widget is select, the option is disabled.</p>
+<p id="4_3" class="J">4.3 Layout behavior settings</p>
+<p class="E">There are three operations that defines how the work with the layout looks like.They are shown below:</p>
+<p class="A">&nbsp;</p>
+<p class="F"><a href="app$ide$LayoutDes_en-us.html_20.png"><img src="app$ide$LayoutDes_en-us.html_20.png" border="0" alt="" style="width: 614px; height: 139px"></a></p>
+<p class="A">&nbsp;</p>
+<p class="E">Let's discuss each of them:</p>
+<p class="G"><a href="app$ide$LayoutDes_en-us.html_21.png"><img src="app$ide$LayoutDes_en-us.html_21.png" border="0" alt="" style="width: 16px; height: 16px"></a> -use grid while moving widgets. When enable the widget will be placed on the grid and while moving it could be only placed on the grid dots. The space between dots is set to 4 layout units. When disabled, the user have full control where to place widget with an accuracy of up to one layout unit.</p>
+<p class="K">By default, the option is <span class="H">enabled</span>.</p>
+<p class="G"><a href="app$ide$LayoutDes_en-us.html_22.png"><img src="app$ide$LayoutDes_en-us.html_22.png" border="0" alt="" style="width: 16px; height: 16px"></a> -ignore minimal size of the widget. In the .usc file there is an option to specify widget minimal size by overriding GetMinSize() method of ctrl:</p>
+<p class="L">// CtrlLib/CtrlLib.usc</p>
+<p class="M">ctrl ImageCtrl {</p>
+<p class="N"> &nbsp;&nbsp;&nbsp;group &quot;Static&quot;;</p>
+<p class="N">&nbsp;</p>
+<p class="N"> &nbsp;&nbsp;&nbsp;GetMinSize() { return Size(32, 32); }</p>
+<p class="K">When the option is enabled, above values will not be taken into account. So, the ImageCtrl could be smaller than 32x32 layout units. Where the first value represent height and the second width.</p>
+<p class="K">By default, the option is <span class="H">disabled</span>.</p>
+<p class="G"><a href="app$ide$LayoutDes_en-us.html_23.png"><img src="app$ide$LayoutDes_en-us.html_23.png" border="0" alt="" style="width: 16px; height: 16px"></a> - automatically change size of the widget when layout size changed in the editor. This will respect the scaling behavior settings. When disabled the widgets will stay in their current positions.</p>
+<p class="K">By default, the option is <span class="H">enabled</span>.</p>
+<p id="4_4" class="J">4.4 Assistance</p>
+<p id="4_4_1" class="J">4.4.1 Automatic code generation for layout</p>
+<p class="E">You could automatically generate code for your layout by executing &quot;Generate code..&quot; command. This will take into account only currently selected layout. The command is located in the following place:</p>
+<p class="A">&nbsp;</p>
+<p class="F"><a href="app$ide$LayoutDes_en-us.html_24.png"><img src="app$ide$LayoutDes_en-us.html_24.png" border="0" alt="" style="width: 595px; height: 54px"></a></p>
+<p class="A">&nbsp;</p>
+<p class="E">This will open the window in which you could specify generation options and upon accepting copy the code to the clipboard. The dialog image below:</p>
+<p class="A">&nbsp;</p>
+<p class="F"><a href="app$ide$LayoutDes_en-us.html_25.png"><img src="app$ide$LayoutDes_en-us.html_25.png" border="0" alt="" style="width: 874px; height: 704px"></a></p>
+<p class="A">&nbsp;</p>
+<p id="4_4_2" class="J">4.4.2 Jumping to class that implements layout</p>
+<p class="E">In order to jump to a certain class that implements layout in the code the following command should be used:</p>
+<p class="A">&nbsp;</p>
+<p class="F"><a href="app$ide$LayoutDes_en-us.html_26.png"><img src="app$ide$LayoutDes_en-us.html_26.png" border="0" alt="" style="width: 595px; height: 54px"></a></p>
+<p class="A">&nbsp;</p>
+<p class="E">Let's assume that the layout is named SelectPackageLayout then after executing command the implementation file (.cpp) in the separate tab should be opened. The cursor will be placed in layout usage declaration. This command is very useful for big projects with multiple layouts. The place to which the command jumps is present below:</p>
+<p class="A">&nbsp;</p>
+<p class="F"><a href="app$ide$LayoutDes_en-us.html_27.png"><img src="app$ide$LayoutDes_en-us.html_27.png" border="0" alt="" style="width: 698px; height: 71px"></a></p>
+<p class="A">&nbsp;</p>
+<p class="A">&nbsp;</p>
+<hr><p id="5" class="D">5. Adding support for custom widgets</p>
+<p class="E">For any widget Layout Designer support can be added. To do so <span class="H">.usc</span> file should be created in the package where the widget source code is located. After that, in .usc file the code that describes widget should be added. There is lesson <a href="srcdoc$CtrlLib$Tutorial_en-us.html#21"><span class="H">Creating and using custom widgets</span></a> in GUI tutorial where the whole process is explained.</p>
+<p class="E">More information about the scripting language that is used by .usc file interpreter can be found <a href="srcdoc$Esc$Esc_en-us.html">here</a>.</p>
+<hr><p id="6" class="D">6. Under the hood</p>
+<p class="E">Under the hood the Layout designer operates on <span class="H">.lay</span> file. It is text file that stores the collection of layouts. The exemplary layout store in that file looks as follow:</p>
+<p class="A">&nbsp;</p>
+<p class="O">LAYOUT(ConfigLayout, 724, 214)</p>
+<p class="P">&nbsp;&nbsp;&nbsp;&nbsp;ITEM(Upp::ArrayCtrl, list, AutoHideSb(true).HSizePosZ(4, 4).VSizePosZ(6, 32))</p>
+<p class="P">&nbsp;&nbsp;&nbsp;&nbsp;ITEM(Upp::Button, ok, SetLabel(t_(&quot;OK&quot;)).RightPosZ(88, 80).BottomPosZ(4, 22))</p>
+<p class="P">&nbsp;&nbsp;&nbsp;&nbsp;ITEM(Upp::Button, cancel, SetLabel(t_(&quot;Cancel&quot;)).RightPosZ(4, 80).BottomPosZ(4, 22))</p>
+<p class="P">END_LAYOUT</p>
+<p class="E">&nbsp;</p>
+</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>
+<TABLE BORDER="0" WIDTH="100%"><TR><TD></TD>
+</TR>
+</TABLE>
+<TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" BGCOLOR="#FFFFFF" WIDTH="100%" style="border-style: solid; border-width: 1px; border-color: #6E89AE;padding: 10px;;"><TR><TD><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%"><TR><TD><p class="A"><span class="B"> </span><a href="www$uppweb$contribweb$en-us.html">Do you want to contribute?</a></p>
+</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>
+<script type="text/javascript">var a={};var p=window.location.pathname.split("/");p=p[p.length-1];var s='<select id="lang" onchange="window.location=document.getElementById(\'lang\').value;">';for(l in a){if(p==l){d=" selected=1"}else{d=""}s+='<option value="'+l+'"'+d+'>'+a[l]+'</option>'}s+='</select>';var d=document.createElement('div');d.innerHTML=s;var c=document.getElementById('langs');c.replaceChild(d,c.firstChild);document.getElementById('langbox').style.display='block';</script></BODY>

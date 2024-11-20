@@ -1,0 +1,903 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en-us">
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
+<META NAME="Generator" CONTENT="U++ HTML Package">
+<TITLE>Vector :: U++</TITLE>
+<STYLE TYPE="text/css"><!--
+.A{margin:0px 0px 0px 0px;text-indent:0px;text-align:left;color:#000000;font-family:sans-serif;font-size:10pt;font-weight:normal;font-style:normal;}
+.B{font-size:12pt;}
+.C{border-collapse:collapse;table-layout:auto;border: 2px solid #000000;}
+.D{padding: 3px 5px 3px 5px;border-left: 1px solid #000000;border-top: 1px solid #000000;border-right: 1px solid #000000;border-bottom: 1px solid #000000;background-color:#712A00;vertical-align:middle;}
+.E{margin:0px 0px 0px 0px;text-indent:0px;text-align:left;color:#e0e0e0;font-family:sans-serif;font-size:16pt;font-weight:bold;font-style:normal;}
+.F{margin:0px 0px 0px 0px;text-indent:0px;text-align:left;color:#000000;font-family:sans-serif;font-size:6pt;font-weight:normal;font-style:normal;}
+.G{margin:0px 0px 5px 0px;text-indent:0px;text-align:left;color:#0000ff;font-family:sans-serif;font-size:12pt;font-weight:normal;font-style:normal;}
+.H{color:#000000;}
+.I{color:#008000;font-weight:bold;}
+.J{margin:0px 0px 5px 0px;text-indent:0px;text-align:left;color:#000000;font-family:sans-serif;font-size:10pt;font-weight:normal;font-style:normal;}
+.K{color:#0000ff;}
+.L{font-weight:bold;}
+.M{color:#800000;font-weight:bold;}
+.N{color:#008000;font-family:monospace;font-weight:bold;}
+.O{font-weight:bold;font-style:italic;}
+.P{margin:8px 0px 0px 0px;text-indent:0px;text-align:left;color:#000000;font-family:sans-serif;font-size:10pt;font-weight:normal;font-style:normal;}
+.Q{color:#008080;}
+.R{color:#800000;}
+.S{margin:0px 0px 0px 0px;text-indent:0px;text-align:left;color:#000000;font-family:sans-serif;font-size:10pt;font-weight:normal;font-style:italic;}
+.T{font-style:normal;}
+.U{color:#800000;font-style:normal;}
+.V{border-collapse:collapse;table-layout:auto;border: 2px solid #808080;}
+.W{padding: 3px 5px 3px 5px;border-left: 1px solid #808080;border-top: 1px solid #808080;border-right: 1px solid #808080;border-bottom: 1px solid #808080;background-color:#C0C0C0;vertical-align:middle;}
+.X{margin:0px 0px 0px 0px;text-indent:0px;text-align:left;color:#000000;font-family:sans-serif;font-size:10pt;font-weight:bold;font-style:normal;}
+.Y{margin:0px 0px 0px 57px;text-indent:0px;text-align:left;color:#000000;font-family:sans-serif;font-size:10pt;font-weight:normal;font-style:normal;}
+.Z{margin:0px 0px 0px 57px;text-indent:0px;text-align:left;color:#000080;font-family:sans-serif;font-size:8pt;font-weight:bold;font-style:normal;}
+.AA{color:#800000;font-family:monospace;font-weight:bold;}
+.AB{margin:0px 0px 5px 0px;text-indent:0px;text-align:left;color:#0000ff;font-family:sans-serif;font-size:10pt;font-weight:normal;font-style:normal;}
+.AC{color:#000000;font-weight:bold;}
+.AD{margin:3px 0px 0px 57px;text-indent:0px;text-align:left;color:#000000;font-family:sans-serif;font-size:8pt;font-weight:bold;font-style:normal;}
+.AE{margin:0px 0px 5px 0px;text-indent:0px;text-align:left;color:#404040;font-family:sans-serif;font-size:10pt;font-weight:normal;font-style:normal;}
+.AF{margin:0px 0px 5px 0px;text-indent:0px;text-align:left;color:#000000;font-family:sans-serif;font-size:10pt;font-weight:bold;font-style:normal;}
+.AG{color:#0000ff;font-weight:normal;}
+.AH{font-weight:normal;}
+a.l1         { text-decoration:none; font-size: 8pt; font-family: sans-serif; font-weight: normal; }
+a.l1:link    { color:#000000; }
+a.l1:visited { color:#000080; }
+a.l1:hover   { color:#9933CC; }
+a.l1:active  { color:#000000; }
+a.l2         { text-decoration:none; font-size: 12pt; font-family: sans-serif; font-variant: small-caps; }
+a.l2:link    { color:#0066FF; }
+a.l2:visited { color:#FF6600; }
+a.l2:hover   { color:#BC0624; }
+a.l2:active  { color:#BC0024; }
+
+-->
+</STYLE>
+<META NAME="keywords" CONTENT="framework, toolkit, widget, c++, visual, studio, dev-cpp, builder, ide, class, component,wxwidgets, qt, rapid, application, development, rad, mfc, linux, macos, gui, sdl, directx, desktop"><META name="robots" content="index,follow">
+<LINK rel="alternate" type="application/rss+xml" title="SVN changes" href="svnchanges.xml">
+<LINK rel="shortcut icon" type="image/png" href="favicon.png">
+</HEAD><BODY BGCOLOR="#D2D9D2" ALINK="#800000" LINK="#000000" VLINK="#000080"><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%"><TR><TD COLSPAN="3"><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%" BGCOLOR="#FFFFFF" style="border: 1px solid #6E89AE;padding-left: 10px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;"><TR><TD><A HREF="index.html"><IMG SRC="0i.png" ALT="" BORDER="0"></A>
+</TD>
+<TD ALIGN="RIGHT" VALIGN="BOTTOM" STYLE="padding-bottom: 5px; background-image: url('1i.png')"><span style="font-size: 14pt; font-family: sans-serif;"><script type="text/javascript"><!--
+google_ad_client = "pub-1082147624384270";
+google_ad_width = 468;
+google_ad_height = 60;
+google_ad_format = "468x60_as";
+google_ad_type = "text_image";
+google_ad_channel = "";
+google_color_border = "336699";
+google_color_bg = "FFFFFF";
+google_color_link = "0000FF";
+google_color_text = "000000";
+google_color_url = "008000";
+//--></script>
+<script type="text/javascript"
+  src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+&nbsp;&nbsp;</span>
+</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>
+<TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%"><TR><TD COLSPAN="3" BGCOLOR="#D2D9D2" HEIGHT="6"></TD>
+</TR>
+<TR><TD VALIGN="TOP" ALIGN="CENTER"><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="160"><TR><TD ALIGN="CENTER"><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%" BGCOLOR="#FFFFFF" style="border-style: solid; border-width: 1px; border-color: #6E89AE;padding: 0px"><TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px;"><A HREF="www$uppweb$overview$en-us.html" CLASS="l1">Overview</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$examples$en-us.html" CLASS="l1">Examples</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$ss$en-us.html" CLASS="l1">Screenshots</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$comparison$en-us.html" CLASS="l1">Comparisons</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$apps$en-us.html" CLASS="l1">Applications</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$download$en-us.html" CLASS="l1">Download</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$documentation$en-us.html" CLASS="l1">Documentation</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$Tutorials$en-us.html" CLASS="l1">Tutorials</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="app$ide$UppHub$en-us.html" CLASS="l1">UppHub</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$Roadmap$en-us.html" CLASS="l1">Status & Roadmap</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$FAQ$en-us.html" CLASS="l1">FAQ</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="app$ide$About$en-us.html" CLASS="l1">Authors & License</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="https://www.ultimatepp.org/forums" CLASS="l1">Forums</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$Funding$en-us.html" CLASS="l1">Funding U++</A>
+</TD>
+</TR>
+</TABLE>
+<TABLE BORDER="0" WIDTH="100%"><TR><TD></TD>
+</TR>
+</TABLE>
+<TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%" BGCOLOR="#FFFFFF" style="border-style: solid; border-width: 1px; border-color: #6E89AE;padding: 0px"><TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('3i.png'); border: 0px solid black;padding-left:12px; padding-right:0px; padding-top:1px; padding-bottom:1px;color:#FFFFFF;"><B><span style="font-size: 8pt; font-family: sans-serif;">Search on this site</span>
+</B>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:6px; padding-right:0px; padding-top:4px; padding-bottom:4px;border-top: 1px solid #6E89AE;"><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%"><TR><TD><IMG SRC="4i.png" ALT="" BORDER="0"></TD>
+<TD><FORM ACTION="https://www.google.com/search" METHOD="GET" STYLE="margin:0px;padding:0px;"><INPUT TYPE="HIDDEN" NAME="ie" VALUE="UTF-8"><INPUT TYPE="HIDDEN" NAME="oe" VALUE="UTF-8"><INPUT TYPE="TEXT" NAME="q" SIZE="15" MAXLENGTH="256" placeholder="Site search"><INPUT TYPE="HIDDEN" NAME="sitesearch" VALUE="ultimatepp.org"></FORM>
+</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>
+<TABLE BORDER="0" WIDTH="100%"><TR><TD></TD>
+</TR>
+</TABLE>
+<br><div id="fb-root"></div>
+<script type="text/javascript">(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) {return;}
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+<div class="fb-like" data-href="https://www.facebook.com/pages/Upp-Framework/262346610476027?sk=wall" data-send="false" data-layout="button_count" data-width="160" data-show-faces="false" data-font="arial"></div>
+<br><br><script type="text/javascript"><!--
+google_ad_client = "pub-1082147624384270";
+google_ad_width = 160;
+google_ad_height = 600;
+google_ad_format = "160x600_as";
+google_ad_type = "text_image";
+google_ad_channel = "";
+google_color_border = "336699";
+google_color_bg = "FFFFFF";
+google_color_link = "0000FF";
+google_color_text = "000000";
+google_color_url = "008000";
+//--></script>
+<script type="text/javascript"
+  src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script><br><br><script type="text/javascript"><!--
+google_ad_client = "pub-1082147624384270";
+google_ad_width = 160;
+google_ad_height = 90;
+google_ad_format = "160x90_0ads_al_s";
+google_ad_channel = "";
+google_color_border = "336699";
+google_color_bg = "FFFFFF";
+google_color_link = "0000FF";
+google_color_text = "000000";
+google_color_url = "008000";
+//--></script>
+<script type="text/javascript"
+  src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+<br><br><br><br><br><br><A HREF="https://sourceforge.net/projects/upp/"><IMG SRC="https://sourceforge.net/sflogo.php?group_id=93970&amp;type=2" ALT="SourceForge.net Logo" BORDER="0" WIDTH="125" HEIGHT="37"></A>
+<br><br><A HREF="https://flathub.org/en/apps/org.ultimatepp.TheIDE"><IMG SRC="5i.png" ALT="SourceForge.net Logo" BORDER="0" WIDTH="125" HEIGHT="37"></A>
+<br><br><div style="background-color:#ffffff;width:125;height:35"><A HREF="https://github.com/ultimatepp"><IMG SRC="6i.png" ALT="GitHub Logo" BORDER="0" WIDTH="125" HEIGHT="35"></A>
+</div><br><div style="background-color:#ffffff;width:125;height:35"><div style="height:5"></div><A HREF="https://discord.gg/8XzqQzXZzb"><IMG SRC="https://assets-global.website-files.com/6257adef93867e50d84d30e2/636e0b5061df29d55a92d945_full_logo_blurple_RGB.svg" ALT="Discord Logo" BORDER="0" WIDTH="125" HEIGHT="25"></A>
+</div><br></TD>
+</TR>
+</TABLE>
+</TD>
+<TD VALIGN="TOP" BGCOLOR="#D2D9D2"><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="6"><TR><TD></TD>
+</TR>
+</TABLE>
+</TD>
+<TD VALIGN="TOP" WIDTH="100%" BGCOLOR="#D2D9D2"><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" BGCOLOR="#FFFFFF" WIDTH="100%" style="border-style: solid; border-width: 1px; border-color: #6E89AE;padding: 10px;;"><TR><TD><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%"><TR><TD><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr><td width="100%"><table width="100%" class="C"><colgroup><col width="100%"></colgroup>
+<tr><td class="D"><p class="E">Vector</p>
+</td>
+</tr>
+</table></td>
+</tr></table>
+<p class="F">&nbsp;</p>
+<p id="noref" class="G">template<span class="H">&nbsp;&lt;</span>class<span class="H">&nbsp;</span><span class="I">T</span>&gt;</p>
+<p id="Vector::class" class="J"><span class="K">class</span>&nbsp;<span class="L">Vector</span>&nbsp;:&nbsp;<span class="K">public</span>&nbsp;<span class="M">MoveableAndDeepCopyOption</span><span class="K">&lt;</span>&nbsp;<span class="L">Vector</span><span class="K">&lt;</span><span class="I">T</span><span class="K">&gt;</span>&nbsp;&gt;</p>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td valign="top" width="89" bgcolor="#F0F0F0">
+<p class="A"><span class="N">T</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">Type of elements stored in Vector. T is required to be <a href="srcdoc$Core$Moveable$en-us.html"><span class="O">moveable</span></a><span class="O"> </span>and must have either <a href="srcdoc$Core$pick_$en-us.html"><span class="O">deep copy constructor</span></a>, <a href="srcdoc$Core$pick_$en-us.html"><span class="O">pick constructor</span></a> or <span class="O">default constructor</span>.</p></td></tr></table>
+<p class="P">The most effective flavor of basic random access container. Its features are derived from fact that it is implemented as simple C-like vector of elements.</p>
+<p class="P">Disadvantage of Vector is common requirement for elements to be stored in it - they must be <a href="srcdoc$Core$Moveable$en-us.html"><span class="O">moveable</span></a>. Another disadvantage is fact that many operations invalidate references (that means C++ references and pointers) to elements.</p>
+<p class="P">Like any other NTL container, Vector is <a href="srcdoc$Core$Moveable$en-us.html"><span class="O">moveable</span></a><span class="O"> </span>type with <a href="srcdoc$Core$pick_$en-us.html"><span class="O">pick and optional deep copy</span></a> transfer semantics. Calling methods of picked Vector is logic error with exception of</p>
+<p class="A">&nbsp;</p>
+<p class="A">void&nbsp;operator=(<span class="Q">pick_</span>&nbsp;<a href="Vector"><u>Vector</u></a>&amp;&nbsp;<span class="R">v</span>)</p>
+<p class="S"><span class="T">void operator&lt;&lt;=(const Vector&amp; </span><span class="U">v</span><span class="T">) </span>(defined using DeepCopyOptionTemplate)</p>
+<p class="A">void&nbsp;Clear()</p>
+<p class="A">bool&nbsp;IsPicked()&nbsp;const</p>
+<p class="A">&nbsp;</p>
+<p class="A">Optional deep copy is implemented through DeepCopyOptionTemplate macro.</p>
+<p class="A">&nbsp;</p>
+<p class="A">Vector provides access to internal C-like vector of elements (either using Begin or even using direct cast operator) a can be used as buffer for C-like functions, although <a href="src$Core$Buffer$en-us.html">Buffer</a> class might be more suitable in these cases.</p>
+<p class="F">&nbsp;</p>
+<p class="A">&nbsp;</p>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr><td width="100%"><table width="100%" class="V"><colgroup><col width="100%"></colgroup>
+<tr><td class="W"><p class="X">Constructor Detail</p>
+</td>
+</tr>
+</table></td>
+</tr></table>
+<p class="F">&nbsp;</p>
+<p id="Vector::Vector()" class="J"><span class="L">Vector</span>()</p>
+<p class="Y">Default constructor. Constructs empty Vector.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Upp::Vector::Vector(int)" class="J"><span class="K">explicit</span>&nbsp;<span class="L">Vector</span>(<span class="K">int</span>&nbsp;<span class="M">n</span>)</p>
+<p class="Y">Creates Vector of <span class="M">n</span> default constructed elements.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Upp::Vector::Vector(int,const T&)" class="J"><span class="K">explicit</span>&nbsp;<span class="L">Vector</span>(<span class="K">int</span>&nbsp;<span class="M">n</span>, <span class="K">const</span>&nbsp;<span class="I">T</span><span class="K">&amp;</span>&nbsp;<span class="M">init</span>)</p>
+<p class="Y">Creates Vector of <span class="M">n</span> elements copy constructed as <span class="M">init</span>.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Vector::Vector(pick_ Vector&)" class="J"><span class="L">Vector</span>(<span class="Q">pick_</span>&nbsp;<span class="L">Vector</span><span class="K">&amp;</span>&nbsp;<span class="M">v</span>)</p>
+<p class="Y">Pick constructor. Transfers source Vector in low constant time, but destroys it by picking.</p>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A">v</p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">Source Vector.</p></td></tr></table>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Vector::Vector(const Vector&,int)" class="J"><span class="L">Vector</span>(<span class="K">const</span>&nbsp;<span class="L">Vector</span><span class="K">&amp;</span>&nbsp;<span class="M">v</span>, <span class="K">int</span>)</p>
+<p class="Y">Optional deep copy constructor.</p>
+<p class="Z">Requires T to have deep copy constructor or optional deep copy constructor.</p>
+<p class="Y"><span class="AA">v</span>&nbsp;&nbsp;&nbsp;&nbsp;Source Vector. <span class="M">v</span>.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Vector::~Vector()" class="J"><span class="K">~</span><span class="L">Vector</span>()</p>
+<p class="Y">Destructor. Calls destructors of all elements in Vector.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Upp::Vector::Vector(std::initializer_list<T>)" class="J"><span class="L">Vector</span>(<a href="http://en.cppreference.com/w/cpp/utility/initializer_list"><u>std::initializer_list</u></a>&lt;<span class="I">T</span>&gt;&nbsp;<span class="M">init</span>)</p>
+<p class="Y">C++ 11 initialization.</p>
+<p class="F">&nbsp;</p>
+<p class="A">&nbsp;</p>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr><td width="100%"><table width="100%" class="V"><colgroup><col width="100%"></colgroup>
+<tr><td class="W"><p class="X">Public Member List</p>
+</td>
+</tr>
+</table></td>
+</tr></table>
+<p class="F">&nbsp;</p>
+<p id="Vector::Add()" class="J"><span class="I">T</span><span class="K">&amp;</span>&nbsp;<span class="L">Add</span>()</p>
+<p class="Y">Adds new default constructed element to Vector.</p>
+<p class="Z">Requires T to have default constructor.</p>
+<p class="Z">Invalidates iterators and references to Vector.</p>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="O">Return value</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">Reference to newly added default constructed element.</p></td></tr></table>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Upp::Vector::Create(Args...args)" class="J"><span class="K">template</span>&nbsp;&lt;<span class="K">class...</span>&nbsp;<span class="I">Args</span>&gt;&nbsp;<span class="I">T</span><span class="K">&amp;</span>&nbsp;<span class="L">Create</span>(<span class="I">Args</span><span class="K">...</span>&nbsp;args)</p>
+<p class="Y">Adds new element to Vector using args as constructor parameters.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Vector::Add(const T&)" class="J"><span class="I">T</span><span class="K">&amp;</span>&nbsp;<span class="L">Add</span>(<span class="K">const</span>&nbsp;<span class="I">T</span><span class="K">&amp;</span>&nbsp;<span class="M">x</span>)</p>
+<p class="Y">Adds new element with specified value to Vector.</p>
+<p class="Z">Requires T to have deep copy constructor.</p>
+<p class="Z">Invalidates iterators and references to Vector.</p>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="AA">x</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">The value that is copied to newly created element.</p></td></tr></table>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="O">Return value</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">Reference to new element in Vector.</p></td></tr></table>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Upp::Vector::Add(T&&)" class="J"><span class="I">T</span><span class="K">&amp;</span>&nbsp;<span class="L">Add</span>(<span class="I">T</span><span class="K">&amp;&amp;</span>&nbsp;<span class="M">x</span>)</p>
+<p class="Y">Adds new element to Vector and picks value of parameter to it. </p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Upp::Vector::Create(Args&&...)" class="J"><span class="K">template</span>&nbsp;&lt;<span class="K">class...</span>&nbsp;<span class="I">Args</span>&gt;&nbsp;<span class="I">T</span><span class="K">&amp;</span>&nbsp;<span class="L">Create</span>(<span class="I">Args</span><span class="K">&amp;&amp;...</span>&nbsp;args)</p>
+<p class="Y">Creates and adds a new element to the Array. <span class="M">args</span> are forwarded to constructor.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Vector::AddN(int)" class="J"><span class="K">void</span>&nbsp;<span class="L">AddN</span>(<span class="K">int</span>&nbsp;<span class="M">n</span>)</p>
+<p class="Y">Adds specified number of default constructed elements to Vector.</p>
+<p class="Z">Requires T to have default constructor.</p>
+<p class="Z">Invalidates iterators and references to Vector.</p>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="AA">n</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">Number of elements to add</p></td></tr></table>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Vector::operator[](int)const" class="AB">const<span class="H">&nbsp;</span><span class="I">T</span>&amp;<span class="H">&nbsp;</span><span class="AC">operator[]</span><span class="H">(</span>int<span class="H">&nbsp;</span><span class="M">i</span><span class="H">)&nbsp;</span>const</p>
+<p class="Y">Returns a reference to the element at specified position.</p>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="AA">i</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">Position of element.</p></td></tr></table>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="O">Return value</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">Constant reference to the element.</p></td></tr></table>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Vector::operator[](int)" class="J"><span class="I">T</span><span class="K">&amp;</span>&nbsp;<span class="L">operator[]</span>(<span class="K">int</span>&nbsp;<span class="M">i</span>)</p>
+<p class="Y">Returns a reference to the element at specified position.</p>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="AA">i</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">Position of element.</p></td></tr></table>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="O">Return value</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">Reference to the element.</p></td></tr></table>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Upp::Vector::Get(int,const T&)const" class="AB">const<span class="H">&nbsp;</span><span class="I">T</span>&amp;<span class="H">&nbsp;</span><span class="AC">Get</span><span class="H">(</span>int<span class="H">&nbsp;</span><span class="M">i</span><span class="H">, </span>const<span class="H">&nbsp;</span><span class="I">T</span>&amp;<span class="H">&nbsp;</span><span class="M">def</span><span class="H">)&nbsp;</span>const</p>
+<p id="Upp::Vector::Get(int,T&)" class="J"><span class="I">T</span><span class="K">&amp;</span>&nbsp;<span class="L">Get</span>(<span class="K">int</span>&nbsp;<span class="M">i</span>, <span class="I">T</span><span class="K">&amp;</span>&nbsp;<span class="M">def</span>)</p>
+<p class="Y">If <span class="M">i</span> is valid index (it is &gt;= 0 and &lt; GetCount()), returns the reference to the element at <span class="M">i</span>, otherwiser returns <span class="M">def</span>.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Vector::GetCount()const" class="AB">int<span class="H">&nbsp;</span><span class="AC">GetCount</span><span class="H">()&nbsp;</span>const</p>
+<p class="Y">Return the number of elements in Vector.</p>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="O">Return value</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">Actual number of elements.</p></td></tr></table>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Vector::IsEmpty()const" class="AB">bool<span class="H">&nbsp;</span><span class="AC">IsEmpty</span><span class="H">()&nbsp;</span>const</p>
+<p class="Y">Tests whether Vector &nbsp;is empty. Same as GetCount() == 0.</p>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="O">Return value</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">true if Vector is empty, false otherwise.</p></td></tr></table>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Vector::Trim(int)" class="J"><span class="K">void</span>&nbsp;<span class="L">Trim</span>(<span class="K">int</span>&nbsp;<span class="M">n</span>)</p>
+<p class="Y">Reduces number of elements in Vector to specified number. Required number must be less than or equal to actual number of elements in Vector. Capacity of Vector is however unchanged.</p>
+<p class="Z">Invalidates iterators to Vector.</p>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="AA">n</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">Required number of elements.</p></td></tr></table>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Vector::SetCount(int)" class="J"><span class="K">void</span>&nbsp;<span class="L">SetCount</span>(<span class="K">int</span>&nbsp;<span class="M">n</span>)</p>
+<p class="Y">Changes count of elements in Vector to specified value. If required number of elements is greater than actual number, newly added elements are default constructed. If Vector has to increase capacity, the new capacity will exactly match required number of elements (unlike <span class="L">SetCountR</span>).</p>
+<p class="Z">Requires T to have default constructor.</p>
+<p class="Z">Invalidates iterators and references to Vector.</p>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="AA">n</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">Required number of elements.</p></td></tr></table>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Vector::SetCount(int,const T&)" class="J"><span class="K">void</span>&nbsp;<span class="L">SetCount</span>(<span class="K">int</span>&nbsp;<span class="M">n</span>, <span class="K">const</span>&nbsp;<span class="I">T</span><span class="K">&amp;</span>&nbsp;<span class="M">init</span>)</p>
+<p class="Y">Changes count of elements in Vector to specified value. If required number of elements is greater than actual number, newly added elements are initialized to specified value using copy constructor. If Vector has to increase capacity, the new capacity will exactly match required number of elements (unlike <span class="L">SetCountR</span>).</p>
+<p class="Z">Requires T to have deep copy constructor.</p>
+<p class="Z">Invalidates iterators and references to Vector.</p>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="AA">n</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">Required number of elements.</p></td></tr></table>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="AA">init</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">Initialization value of newly added elements.</p></td></tr></table>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Vector::SetCountR(int)" class="J"><span class="K">void</span>&nbsp;<span class="L">SetCountR</span>(<span class="K">int</span>&nbsp;<span class="M">n</span>)</p>
+<p class="Y">Changes count of elements in Vector to specified value. If required number of elements is greater than actual number, newly added elements are default constructed. If Vector has to increase capacity, the new capacity will be greater than required number of elements (unlike <span class="L">SetCount</span>) to allow adding other elements without further increasing capacity.</p>
+<p class="Z">Requires T to have default constructor.</p>
+<p class="Z">Invalidates iterators and references to Vector.</p>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="AA">n</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">Required number of elements.</p></td></tr></table>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Vector::SetCountR(int,const T&)" class="J"><span class="K">void</span>&nbsp;<span class="L">SetCountR</span>(<span class="K">int</span>&nbsp;<span class="M">n</span>, <span class="K">const</span>&nbsp;<span class="I">T</span><span class="K">&amp;</span>&nbsp;<span class="M">init</span>)</p>
+<p class="Y">Changes count of elements in Vector to specified value. If required number of elements is greater than actual number, newly added elements are initialized to specified value using copy constructor. If Vector has to increase capacity, the new capacity will be greater than required number of elements (unlike <span class="L">SetCount</span>) to allow adding other elements without further increasing capacity.</p>
+<p class="Z">Requires T to have deep copy constructor.</p>
+<p class="Z">Invalidates iterators and references to Vector.</p>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="AA">n</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">Required number of elements.</p></td></tr></table>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="AA">init</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">Initialization value of newly added elements.</p></td></tr></table>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Vector::Clear()" class="J"><span class="K">void</span>&nbsp;<span class="L">Clear</span>()</p>
+<p class="Y">Removes all elements from Vector. Capacity is also cleared to zero.</p>
+<p class="Z">Invalidates iterators and references to Vector.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Vector::At(int)" class="J"><span class="I">T</span><span class="K">&amp;</span>&nbsp;<span class="L">At</span>(<span class="K">int</span>&nbsp;<span class="M">i</span>)</p>
+<p class="Y">If specified position is lower than number of elements in Vector (<span class="L">i &lt; GetCount()</span>), returns reference to element at specified position. Otherwise increases number of elements in Vector to <span class="L">i + 1</span>. Newly added elements are default constructed. If Vector has to increase capacity, the new capacity will be greater than required number of elements to allow adding other elements without further increasing capacity.</p>
+<p class="Z">Requires T to have default constructor.</p>
+<p class="Z">Invalidates iterators and references to Vector.</p>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="AA">i</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">Position of required element.</p></td></tr></table>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="O">Return value</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">Reference to required element.</p></td></tr></table>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Vector::At(int,const T&)" class="J"><span class="I">T</span><span class="K">&amp;</span>&nbsp;<span class="L">At</span>(<span class="K">int</span>&nbsp;<span class="M">i</span>, <span class="K">const</span>&nbsp;<span class="I">T</span><span class="K">&amp;</span>&nbsp;<span class="M">x</span>)</p>
+<p class="Y">If specified position is lower than number of elements in Vector (<span class="L">i &lt; GetCount()</span>), returns reference to element at specified position. Otherwise increases number of elements in Vector to <span class="L">i + 1</span>. Newly added elements are copy constructed from <span class="L">x</span>. If Vector has to increase capacity, the new capacity will be greater than required number of elements to allow adding other elements without further increasing capacity.</p>
+<p class="Z">Requires T to have deep copy constructor.</p>
+<p class="Z">Invalidates iterators and references to Vector.</p>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="AA">i</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">Position of required element.</p></td></tr></table>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="AA">x</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">Initialization value of newly added elements.</p></td></tr></table>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="O">Return value</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">Reference to required element.</p></td></tr></table>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Vector::Shrink()" class="J"><span class="K">void</span>&nbsp;<span class="L">Shrink</span>()</p>
+<p class="Y">Minimizes memory consumption of Vector by decreasing capacity to number of elements.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Vector::Reserve(int)" class="J"><span class="K">void</span>&nbsp;<span class="L">Reserve</span>(<span class="K">int</span>&nbsp;<span class="M">n</span>)</p>
+<p class="Y">Reserves capacity. If required capacity is greater than current capacity, capacity is increased to the required value.</p>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="AA">xtra</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">Required capacity.</p></td></tr></table>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Vector::GetAlloc()const" class="AB">int<span class="H">&nbsp;</span><span class="AC">GetAlloc</span><span class="H">()&nbsp;</span>const</p>
+<p class="Y">Returns current capacity of Vector.</p>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="O">Return value</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">Capacity of Vector.</p></td></tr></table>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Vector::Set(int,const T&,int)" class="J"><span class="K">void</span>&nbsp;<span class="L">Set</span>(<span class="K">int</span>&nbsp;<span class="M">i</span>, <span class="K">const</span>&nbsp;<span class="I">T</span><span class="K">&amp;</span>&nbsp;<span class="M">x</span>, <span class="K">int</span>&nbsp;<span class="M">count</span>)</p>
+<p class="Y">Sets requested number of elements starting at the position <span class="L">i</span> to the specified value. If required number of elements exceeds existing elements of Vector then elements are added to Vector.</p>
+<p class="Z">Requires T to have deep copy constructor.</p>
+<p class="Z">Invalidates iterators and references to Vector.</p>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="AA">i</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">Starting position.</p></td></tr></table>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="AA">x</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">Value.</p></td></tr></table>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="AA">count</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">Number of elements.</p></td></tr></table>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Vector::Set(int,const T&)" class="J"><span class="I">T</span><span class="K">&amp;</span>&nbsp;<span class="L">Set</span>(<span class="K">int</span>&nbsp;<span class="M">i</span>, <span class="K">const</span>&nbsp;<span class="I">T</span><span class="K">&amp;</span>&nbsp;<span class="M">x</span>)</p>
+<p id="Upp::Vector::Set(int,T&&)" class="J"><span class="I">T</span><span class="K">&amp;</span>&nbsp;<span class="L">Set</span>(<span class="K">int</span>&nbsp;<span class="M">i</span>, <span class="I">T</span><span class="K">&amp;&amp;</span>&nbsp;<span class="M">x</span>)</p>
+<p class="Y">Sets the element at <span class="M">i</span> to <span class="M">x</span> (adds default constructed elements as necessary) and returns a reference to this element.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Vector::Remove(int,int)" class="J"><span class="K">void</span>&nbsp;<span class="L">Remove</span>(<span class="K">int</span>&nbsp;<span class="M">i</span>, <span class="K">int</span>&nbsp;<span class="M">count</span>&nbsp;=&nbsp;<span class="R">1</span>)</p>
+<p class="Y">Removes requested number of elements.</p>
+<p class="Z">Invalidates iterators and references to Vector.</p>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="AA">i</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">Position.</p></td></tr></table>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="AA">count</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">Number of elements to remove.</p></td></tr></table>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Vector::Remove(const int*,int)" class="J"><span class="K">void</span>&nbsp;<span class="L">Remove</span>(<span class="K">const</span>&nbsp;<span class="K">int</span>&nbsp;*<span class="M">sorted_list</span>, <span class="K">int</span>&nbsp;<span class="M">n</span>)</p>
+<p class="Y">Removes multiple elements from Vector. Time of operation almost does not depend on number of elements.</p>
+<p class="Z">Invalidates iterators and references to Vector.</p>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="AA">sorted_list</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">Pointer to array of positions to remove. It must be sorted from lowest to greatest value.</p></td></tr></table>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="AA">n</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">Number of elements to remove.</p></td></tr></table>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Vector::Remove(const Vector<int>&)" class="J"><span class="K">void</span>&nbsp;<span class="L">Remove</span>(<span class="K">const</span>&nbsp;<a href="Vector"><u>Vector</u></a><span class="K">&lt;int&gt;&amp;</span>&nbsp;<span class="M">sorted_list</span>)</p>
+<p class="Y">Removes multiple elements from Vector. Same as <span class="L">Remove(sorted_list, sorted_list.GetCount())</span>.</p>
+<p class="Z">Invalidates iterators and references to Vector.</p>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="AA">sorted_list</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">Sorted Vector of positions to remove.</p></td></tr></table>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Upp::Vector::RemoveIf(Condition)" class="J"><span class="K">template</span>&nbsp;&lt;<span class="K">class</span>&nbsp;<span class="I">Condition</span>&gt;&nbsp;<span class="K">void</span>&nbsp;<span class="L">RemoveIf</span>(<span class="I">Condition</span>&nbsp;<span class="M">c</span>)</p>
+<p class="Y">Removes all elements that satisfy predicate <span class="M">c</span>. <span class="M">c</span> is a function object (usually a lambda) that has a single int parameter representing the index of an element and returns true when the element at the &nbsp;index is supposed to be removed.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Vector::InsertN(int,int)" class="J"><span class="K">void</span>&nbsp;<span class="L">InsertN</span>(<span class="K">int</span>&nbsp;<span class="M">i</span>, <span class="K">int</span>&nbsp;<span class="M">count</span>&nbsp;=&nbsp;<span class="R">1</span>)</p>
+<p class="Y">Inserts a specified number of default constructed elements at a specified position.</p>
+<p class="Z">Requires T to have default constructor.</p>
+<p class="Z">Invalidates iterators and references to Vector.</p>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="AA">i</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">Position.</p></td></tr></table>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="AA">count</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">Number of elements to insert.</p></td></tr></table>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Vector::Insert(int)" class="J"><span class="I">T</span><span class="K">&amp;</span>&nbsp;<span class="L">Insert</span>(<span class="K">int</span>&nbsp;<span class="M">i</span>)</p>
+<p class="Y">Inserts one default constructed element at the specified position.</p>
+<p class="AD">Requires T to have default constructor.</p>
+<p class="Z">Invalidates iterators and references to Vector.</p>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="AA">i</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">Position.</p></td></tr></table>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Vector::Insert(int,const T&,int)" class="J"><span class="K">void</span>&nbsp;<span class="L">Insert</span>(<span class="K">int</span>&nbsp;<span class="M">i</span>, <span class="K">const</span>&nbsp;<span class="I">T</span><span class="K">&amp;</span>&nbsp;<span class="M">x</span>, <span class="K">int</span>&nbsp;<span class="M">count</span>)</p>
+<p class="Y">Inserts a specified number of elements, setting them to a specified value.</p>
+<p class="Z">Requires T to have deep copy constructor.</p>
+<p class="Z">Invalidates iterators and references to Vector.</p>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="AA">i</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">Position.</p></td></tr></table>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="AA">x</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">Value of inserted elements.</p></td></tr></table>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="AA">count</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">Number of elements to insert.</p></td></tr></table>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Vector::Insert(int,const T&)" class="J"><span class="I">T</span><span class="K">&amp;</span>&nbsp;<span class="L">Insert</span>(<span class="K">int</span>&nbsp;<span class="M">i</span>, <span class="K">const</span>&nbsp;<span class="I">T</span><span class="K">&amp;</span>&nbsp;<span class="M">x</span>)</p>
+<p class="Y">Inserts element at position <span class="M">i</span> setting its value to <span class="M">x</span> and returns a reference to it.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Upp::Vector::Insert(int,T&&)" class="J"><span class="K">template</span>&nbsp;&lt;<span class="K">class</span>&nbsp;<span class="I">T</span>&gt;&nbsp;<span class="I">T</span><span class="K">&amp;</span>&nbsp;<span class="L">Insert</span>(<span class="K">int</span>&nbsp;<span class="M">q</span>, <span class="I">T</span><span class="K">&amp;&amp;</span>&nbsp;<span class="M">x</span>)</p>
+<p class="Y">Inserts an element at <span class="M">i</span> picking the content of <span class="M">x</span> and returns a reference to this new element.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Vector::Insert(int,const Vector&)" class="J"><span class="K">void</span>&nbsp;<span class="L">Insert</span>(<span class="K">int</span>&nbsp;<span class="M">i</span>, <span class="K">const</span>&nbsp;<a href="Vector"><u>Vector</u></a><span class="K">&amp;</span>&nbsp;<span class="M">x</span>)</p>
+<p class="Y">Inserts all elements from another Vector.</p>
+<p class="Z">Requires T to have deep copy constructor.</p>
+<p class="Z">Invalidates iterators and references to Vector.</p>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="AA">i</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">Position.</p></td></tr></table>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="AA">x</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">Source Vector.</p></td></tr></table>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Vector::Insert(int,const Vector&,int,int)" class="J"><span class="K">void</span>&nbsp;<span class="L">Insert</span>(<span class="K">int</span>&nbsp;<span class="M">i</span>, <span class="K">const</span>&nbsp;<a href="Vector"><u>Vector</u></a><span class="K">&amp;</span>&nbsp;<span class="M">x</span>, <span class="K">int</span>&nbsp;<span class="M">offset</span>, <span class="K">int</span>&nbsp;<span class="M">count</span>)</p>
+<p class="Y">Inserts a range of elements from another Vector.</p>
+<p class="Z">Requires T to have deep copy constructor.</p>
+<p class="Z">Invalidates iterators and references to Vector.</p>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="AA">i</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">Insertion position.</p></td></tr></table>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="AA">x</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">Source Vector.</p></td></tr></table>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="AA">offset</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">Position of first element in source Vector to be inserted.</p></td></tr></table>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="AA">count</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">Number of elements to insert.</p></td></tr></table>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Upp::Vector::Insert(int,Upp::Vector&&)" class="J"><span class="K">void</span>&nbsp;<span class="L">Insert</span>(<span class="K">int</span>&nbsp;<span class="M">i</span>, <a href="Upp::Vector"><u>Vector</u></a><span class="K">&amp;&amp;</span>&nbsp;<span class="M">x</span>)</p>
+<p class="Y">Inserts source Vector at specified position using pick transfer semantics. It is faster than deep copy insert, does not use deep copy constructor for T, but destroys source Vector.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Upp::Vector::Insert(int,std::initializer_list<T>)" class="J"><span class="K">void</span>&nbsp;<span class="L">Insert</span>(<span class="K">int</span>&nbsp;<span class="M">i</span>, <a href="std::initializer_list"><u>std::initializer_list</u></a>&lt;<span class="I">T</span>&gt;&nbsp;<span class="M">init</span>)</p>
+<p class="Y">Inserts C++11 style initialization list.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Upp::Vector::Append(std::initializer_list<T>)" class="J"><span class="K">void</span>&nbsp;<span class="L">Append</span>(std::initializer_list&lt;<span class="I">T</span>&gt;&nbsp;<span class="M">init</span>)</p>
+<p class="Y">Appends C++11 style initialization list.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Vector::InsertSplit(int,Vector<T>&,int)" class="J"><span class="K">void</span>&nbsp;<span class="L">InsertSplit</span>(<span class="K">int</span>&nbsp;<span class="M">i</span>, <a href="Vector"><u>Vector</u></a>&lt;<span class="I">T</span>&gt;&amp;&nbsp;<span class="M">v</span>, <span class="K">int</span>&nbsp;<span class="M">from</span>)</p>
+<p class="Y">Insert the part of source vector <span class="M">v</span> starting at element <span class="M">from</span> till the end at position <span class="M">i</span> and trims <span class="M">v</span> at <span class="M">from</span>, effectively splitting <span class="M">v</span> into two parts.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Vector::Append(const Vector&)" class="J"><span class="K">void</span>&nbsp;<span class="L">Append</span>(<span class="K">const</span>&nbsp;<a href="Vector"><u>Vector</u></a><span class="K">&amp;</span>&nbsp;<span class="M">x</span>)</p>
+<p class="Y">Appends all elements of source Vector.</p>
+<p class="Z">Requires T to have deep copy constructor.</p>
+<p class="Z">Invalidates iterators and references to Vector.</p>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="AA">x</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">Source Vector.</p></td></tr></table>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Vector::Append(const Vector&,int,int)" class="J"><span class="K">void</span>&nbsp;<span class="L">Append</span>(<span class="K">const</span>&nbsp;<a href="Vector"><u>Vector</u></a><span class="K">&amp;</span>&nbsp;<span class="M">x</span>, <span class="K">int</span>&nbsp;<span class="M">o</span>, <span class="K">int</span>&nbsp;<span class="M">c</span>)</p>
+<p class="Y">Appends a range of elements from source Vector.</p>
+<p class="Z">Requires T to have deep copy constructor.</p>
+<p class="Z">Invalidates iterators and references to Vector.</p>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="AA">x</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">Source Vector.</p></td></tr></table>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="AA">o</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">Position of first element in source Vector to be inserted.</p></td></tr></table>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="AA">c</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">Number of elements to insert.</p></td></tr></table>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Upp::Vector::Append(Upp::Vector&&)" class="J"><span class="K">void</span>&nbsp;<span class="L">Append</span>(<a href="Upp::Vector"><u>Vector</u></a><span class="K">&amp;&amp;</span>&nbsp;<span class="M">x</span>)</p>
+<p class="Y">Appends source Vector using pick transfer semantics. It is faster than deep copy insert, does not use deep copy constructor for T, but destroys source Vector by picking.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Vector::Swap(int,int)" class="J"><span class="K">void</span>&nbsp;<span class="L">Swap</span>(<span class="K">int</span>&nbsp;<span class="M">i1</span>, <span class="K">int</span>&nbsp;<span class="M">i2</span>)</p>
+<p class="Y">Swaps elements at <span class="M">i1</span> and <span class="M">i2</span>.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Vector::Drop(int)" class="J"><span class="K">void</span>&nbsp;<span class="L">Drop</span>(<span class="K">int</span>&nbsp;<span class="M">n</span>&nbsp;=&nbsp;<span class="R">1</span>)</p>
+<p class="Y">Drops specified number of last elements in the Vector (same as Trim(GetCount() - n)).</p>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="AA">n</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">Number of elements.</p></td></tr></table>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Vector::Top()" class="J"><span class="I">T</span><span class="K">&amp;</span>&nbsp;<span class="L">Top</span>()</p>
+<p class="Y">Returns reference to the last element in the Vector.</p>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="O">Return value</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">Reference of last element in the Vector.</p></td></tr></table>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Vector::Top()const" class="AB">const<span class="H">&nbsp;</span><span class="I">T</span>&amp;<span class="H">&nbsp;</span><span class="AC">Top</span><span class="H">()&nbsp;</span>const</p>
+<p class="Y">Returns constant reference to the last element in the Vector.</p>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="O">Return value</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">Reference of last element in the Vector.</p></td></tr></table>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Vector::Pop()" class="J"><span class="I">T</span>&nbsp;<span class="L">Pop</span>()</p>
+<p class="Y">Drops last element of Vector and returns its value.</p>
+<p class="Z">Requires T to have deep copy constructor.</p>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="O">Return value</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">Value of dropped element.</p></td></tr></table>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Vector::operator T*()" class="J"><span class="K">operator</span>&nbsp;<span class="I">T</span><span class="K">*</span>()</p>
+<p class="Y">Returns non-constant pointer to elements.</p>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="O">Return value</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">Pointer to elements.</p></td></tr></table>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Vector::operator const T*()const" class="AB">operator<span class="H">&nbsp;</span>const<span class="H">&nbsp;</span><span class="I">T</span>*<span class="H">()&nbsp;</span>const</p>
+<p class="Y">Returns constant pointer to elements.</p>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="O">Return value</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">Pointer to elements.</p></td></tr></table>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Vector::operator<<(const T&)" class="J"><a href="Vector"><u>Vector</u></a><span class="K">&amp;</span>&nbsp;<span class="L">operator&lt;&lt;</span>(<span class="K">const</span>&nbsp;<span class="I">T</span><span class="K">&amp;</span>&nbsp;<span class="M">x</span>)</p>
+<p class="Y">Operator equivalent of <span class="L">void Add(const T&amp;x)</span>. By returning reference to to Vector allows adding more elements in single expression, thus e.g. allowing to construct temporary Vector as part of expression like Foo((Vector&lt;int&gt;() &lt;&lt; 1 &lt;&lt; 2 &lt;&lt; 4)).</p>
+<p class="Z">Requires T to have deep copy constructor.</p>
+<p class="Z">Invalidates iterators and references to Vector.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Upp::Vector::operator<<(T&&)" class="J"><a href="Upp::Vector"><u>Vector</u></a><span class="K">&amp;</span>&nbsp;<span class="L">operator&lt;&lt;</span>(<span class="I">T</span><span class="K">&amp;&amp;</span>&nbsp;<span class="M">x</span>)</p>
+<p class="Y">Operator equivalent of <span class="L">void Add(TT&amp;x)</span>. By returning reference to to Vector allows adding more elements in single expression, thus e.g. allowing to construct temporary Vector as part of expression like.</p>
+<p class="Z">Requires T to have deep copy constructor.</p>
+<p class="Z">Invalidates iterators and references to Vector.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Vector::ToString()const" class="AB"><a href="String"><span class="H"><u>String</u></span></a><span class="H">&nbsp;</span><span class="AC">ToString</span><span class="H">()&nbsp;</span>const</p>
+<p class="Y">Converts container into String, mostly for debugging purposes.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Vector::operator==(const Vector<T>&)const" class="AB">bool<span class="H">&nbsp;</span><span class="AC">operator==</span><span class="H">(</span>const<span class="H">&nbsp;</span><a href="Vector"><span class="H"><u>Vector</u></span></a><span class="H">&lt;</span><span class="I">T</span><span class="H">&gt;&amp;&nbsp;</span><span class="M">b</span><span class="H">)&nbsp;</span>const</p>
+<p id="Vector::operator!=(const Vector<T>&)const" class="AB">bool<span class="H">&nbsp;</span><span class="AC">operator!=</span><span class="H">(</span>const<span class="H">&nbsp;</span><a href="Vector"><span class="H"><u>Vector</u></span></a><span class="H">&lt;</span><span class="I">T</span><span class="H">&gt;&amp;&nbsp;</span><span class="M">b</span><span class="H">)&nbsp;</span>const</p>
+<p class="Y">Compares two containers for (in)equality, using T::operator==.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Vector::Compare(const Vector<T>&)const" class="AB">int<span class="H">&nbsp;</span><span class="AC">Compare</span><span class="H">(</span>const<span class="H">&nbsp;</span><a href="Vector"><span class="H"><u>Vector</u></span></a><span class="H">&lt;</span><span class="I">T</span><span class="H">&gt;&amp;&nbsp;</span><span class="M">b</span><span class="H">)&nbsp;</span>const</p>
+<p id="Vector::operator<=(const Vector<T>&)const" class="AB">bool<span class="H">&nbsp;</span><span class="AC">operator&lt;=</span><span class="H">(</span>const<span class="H">&nbsp;</span><a href="Vector"><span class="H"><u>Vector</u></span></a><span class="H">&lt;</span><span class="I">T</span><span class="H">&gt;&amp;&nbsp;</span><span class="M">b</span><span class="H">)&nbsp;</span>const</p>
+<p id="Vector::operator>=(const Vector<T>&)const" class="AB">bool<span class="H">&nbsp;</span><span class="AC">operator&gt;=</span><span class="H">(</span>const<span class="H">&nbsp;</span><a href="Vector"><span class="H"><u>Vector</u></span></a><span class="H">&lt;</span><span class="I">T</span><span class="H">&gt;&amp;&nbsp;</span><span class="M">b</span><span class="H">)&nbsp;</span>const</p>
+<p id="Vector::operator<(const Vector<T>&)const" class="AB">bool<span class="H">&nbsp;</span><span class="AC">operator&lt;</span><span class="H">(</span>const<span class="H">&nbsp;</span><a href="Vector"><span class="H"><u>Vector</u></span></a><span class="H">&lt;</span><span class="I">T</span><span class="H">&gt;&amp;&nbsp;</span><span class="M">b</span><span class="H">)&nbsp;</span>const</p>
+<p id="Vector::operator>(const Vector<T>&)const" class="AB">bool<span class="H">&nbsp;</span><span class="AC">operator&gt;</span><span class="H">(</span>const<span class="H">&nbsp;</span><a href="Vector"><span class="H"><u>Vector</u></span></a><span class="H">&lt;</span><span class="I">T</span><span class="H">&gt;&amp;&nbsp;</span><span class="M">b</span><span class="H">)&nbsp;</span>const</p>
+<p class="Y">Lexicographically compares two containers, using SgnCompare for elements.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Vector::operator|(pick_ T&)" class="J"><a href="Vector"><u>Vector</u></a><span class="K">&amp;</span>&nbsp;<span class="L">operator|</span>(<span class="Q">pick_</span>&nbsp;<span class="I">T</span><span class="K">&amp;</span>&nbsp;<span class="M">x</span>)</p>
+<p class="Y">Operator replacement of <span class="L">void AddPick(pick_ T&amp;x)</span>. By returning reference to to Vector allows adding more elements in single expression, thus e.g. allowing to construct temporary Vector as part of expression.</p>
+<p class="Z">Requires T to have pick constructor.</p>
+<p class="Z">Invalidates iterators and references to Vector.</p>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="AA">x</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">Source instance of T that is to be picked.</p></td></tr></table>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="O">Return value</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">Reference to Vector (*this).</p></td></tr></table>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Vector::Serialize(Stream&)" class="J"><span class="K">void</span>&nbsp;<span class="L">Serialize</span>(<a href="Stream"><u>Stream</u></a><span class="K">&amp;</span>&nbsp;<span class="M">s</span>)</p>
+<p class="Y">Serializes content of Vector to/from Stream. Works only if NTL is used as part of UPP.</p>
+<p class="Z">Requires T to have serialization operator defined.</p>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="AA">s</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">Target/source stream.</p></td></tr></table>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Vector::operator=(pick_ Vector&)" class="J"><span class="K">void</span>&nbsp;<span class="L">operator=</span>(<span class="Q">pick_</span>&nbsp;<a href="Vector"><u>Vector</u></a><span class="K">&amp;</span>&nbsp;<span class="M">v</span>)</p>
+<p class="Y">Pick operator. Transfers source Vector in low constant time, but destroys it by picking.</p>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="AA">v</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">Source Vector.</p></td></tr></table>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Vector::IsPicked()const" class="AB">bool<span class="H">&nbsp;</span><span class="AC">IsPicked</span><span class="H">()&nbsp;</span>const</p>
+<p class="Y">Returns <span class="L">true</span> if Vector is in picked state.</p>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="O">Return value</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A"><span class="L">true</span> if Vector is in picked state, <span class="L">false</span> otherwise.</p></td></tr></table>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p class="AE"><span class="H">friend&nbsp;T&amp;&nbsp;operator&lt;&lt;=</span>(T&amp;&nbsp;<span class="R">dest</span>, <span class="K">const</span>&nbsp;T&amp;&nbsp;<span class="R">src</span>)</p>
+<p class="Y">Optional deep copy operator. Defined using DeepCopyOptionTemplate.</p>
+<p class="Z">Requires T to have deep copy operator or optional deep copy operator.</p>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="AA">v</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">Source Vector.</p></td></tr></table>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Vector::ValueType::typedef" class="AF"><span class="AG">typedef</span><span class="AH">&nbsp;T&nbsp;</span>ValueType</p>
+<p class="Y">Typedef of T for use in templated algorithms.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Vector::Iterator::typedef" class="AF"><span class="AG">typedef</span><span class="AH">&nbsp;T&nbsp;*</span>Iterator</p>
+<p class="Y">Iterator type. Iterator is guaranteed to be of T* type.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Vector::ConstIterator::typedef" class="AF"><span class="AG">typedef</span><span class="AH">&nbsp;</span><span class="AG">const</span><span class="AH">&nbsp;T&nbsp;*</span>ConstIterator</p>
+<p class="Y">Constant iterator type. Iterator is guaranteed to be of const T* type.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Vector::Begin()const" class="AB"><a href="Vector::ConstIterator"><span class="H"><u>ConstIterator</u></span></a><span class="H">&nbsp;</span><span class="AC">Begin</span><span class="H">()&nbsp;</span>const</p>
+<p class="Y">Returns constant iterator to the first element in Vector.</p>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="O">Return value</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">Iterator.</p></td></tr></table>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Vector::End()const" class="AB"><a href="Vector::ConstIterator"><span class="H"><u>ConstIterator</u></span></a><span class="H">&nbsp;</span><span class="AC">End</span><span class="H">()&nbsp;</span>const</p>
+<p class="Y">Returns constant iterator to the position just beyond the last element in Vector.</p>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="O">Return value</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">Iterator.</p></td></tr></table>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Vector::GetIter(int)const" class="AB"><a href="Vector::ConstIterator"><span class="H"><u>ConstIterator</u></span></a><span class="H">&nbsp;</span><span class="AC">GetIter</span><span class="H">(</span>int<span class="H">&nbsp;</span><span class="M">i</span><span class="H">)&nbsp;</span>const</p>
+<p class="Y">Returns constant iterator to the element at specified position. Same as <span class="L">Begin() + i</span>. Benefit of this methods is that in debug mode <span class="L">pos</span> is range checked.</p>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="AA">i</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">Required position.</p></td></tr></table>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="O">Return value</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">Iterator.</p></td></tr></table>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Vector::Begin()" class="J"><a href="Vector::Iterator"><u>Iterator</u></a>&nbsp;<span class="L">Begin</span>()</p>
+<p class="Y">Returns non-constant iterator to the first element in Vector.</p>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="O">Return value</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">Iterator.</p></td></tr></table>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Vector::End()" class="J"><a href="Vector::Iterator"><u>Iterator</u></a>&nbsp;<span class="L">End</span>()</p>
+<p class="Y">Returns non-constant iterator to the position just beyond the last element in Vector.</p>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="O">Return value</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">Iterator.</p></td></tr></table>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Vector::GetIter(int)" class="J"><a href="Vector::Iterator"><u>Iterator</u></a>&nbsp;<span class="L">GetIter</span>(<span class="K">int</span>&nbsp;<span class="M">i</span>)</p>
+<p class="Y">Returns non-constant iterator to the element at specified position. Same as <span class="L">Begin() + pos</span>. Benefit of this methods is that in debug mode <span class="L">pos</span> is range checked.</p>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="AA">i</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">Required position.</p></td></tr></table>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="O">Return value</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">Iterator.</p></td></tr></table>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="::Vector::Swap(::Vector&,::Vector&)" class="J"><span class="K">friend</span>&nbsp;<span class="K">void</span>&nbsp;<span class="L">Swap</span>(<u>Vector</u><span class="K">&amp;</span>&nbsp;<span class="M">a</span>, <u>Vector</u><span class="K">&amp;</span>&nbsp;<span class="M">b</span>)</p>
+<p class="Y">Specialization of generic <span class="L">Swap</span> for Vector. Swaps Vector in simple constant time operation.</p>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="AA">a</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">First Vector to swap.</p></td></tr></table>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="AA">b</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">Second Vector to swap.</p></td></tr></table>
+<p class="F">&nbsp;</p>
+<p class="A">&nbsp;</p>
+</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>
+<TABLE BORDER="0" WIDTH="100%"><TR><TD></TD>
+</TR>
+</TABLE>
+<TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" BGCOLOR="#FFFFFF" WIDTH="100%" style="border-style: solid; border-width: 1px; border-color: #6E89AE;padding: 10px;;"><TR><TD><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%"><TR><TD><p class="A"><span class="B"> </span><a href="www$uppweb$contribweb$en-us.html">Do you want to contribute?</a></p>
+</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>
+<script type="text/javascript">var a={};var p=window.location.pathname.split("/");p=p[p.length-1];var s='<select id="lang" onchange="window.location=document.getElementById(\'lang\').value;">';for(l in a){if(p==l){d=" selected=1"}else{d=""}s+='<option value="'+l+'"'+d+'>'+a[l]+'</option>'}s+='</select>';var d=document.createElement('div');d.innerHTML=s;var c=document.getElementById('langs');c.replaceChild(d,c.firstChild);document.getElementById('langbox').style.display='block';</script></BODY>

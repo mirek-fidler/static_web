@@ -1,0 +1,470 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en-us">
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
+<META NAME="Generator" CONTENT="U++ HTML Package">
+<TITLE>Demos / AddressBookXML :: U++</TITLE>
+<STYLE TYPE="text/css"><!--
+.A{margin:0px 0px 0px 0px;text-indent:0px;text-align:left;color:#000000;font-family:sans-serif;font-size:10pt;font-weight:normal;font-style:normal;}
+.B{font-size:12pt;}
+.C{margin:0px 0px 0px 0px;text-indent:0px;text-align:left;color:#000000;font-family:serif;font-size:24pt;font-weight:bold;font-style:normal;}
+.D{margin:0px 0px 0px 0px;text-indent:0px;text-align:left;color:#000000;font-family:sans-serif;font-size:12pt;font-weight:normal;font-style:normal;}
+.E{margin:0px 0px 0px 0px;text-indent:0px;text-align:left;color:#000000;font-family:sans-serif;font-size:16pt;font-weight:bold;font-style:normal;}
+.F{margin:0px 0px 0px 0px;text-indent:0px;text-align:left;color:#0000ff;font-family:monospace;font-size:9pt;font-weight:normal;font-style:normal;}
+.G{color:#000000;}
+.H{margin:0px 0px 0px 0px;text-indent:0px;text-align:left;color:#000000;font-family:monospace;font-size:9pt;font-weight:normal;font-style:normal;}
+.I{color:#0000ff;}
+a.l1         { text-decoration:none; font-size: 8pt; font-family: sans-serif; font-weight: normal; }
+a.l1:link    { color:#000000; }
+a.l1:visited { color:#000080; }
+a.l1:hover   { color:#9933CC; }
+a.l1:active  { color:#000000; }
+a.l2         { text-decoration:none; font-size: 12pt; font-family: sans-serif; font-variant: small-caps; }
+a.l2:link    { color:#0066FF; }
+a.l2:visited { color:#FF6600; }
+a.l2:hover   { color:#BC0624; }
+a.l2:active  { color:#BC0024; }
+
+-->
+</STYLE>
+<META NAME="keywords" CONTENT="framework, toolkit, widget, c++, visual, studio, dev-cpp, builder, ide, class, component,wxwidgets, qt, rapid, application, development, rad, mfc, linux, macos, gui, sdl, directx, desktop"><META name="robots" content="index,follow">
+<LINK rel="alternate" type="application/rss+xml" title="SVN changes" href="svnchanges.xml">
+<LINK rel="shortcut icon" type="image/png" href="favicon.png">
+</HEAD><BODY BGCOLOR="#D2D9D2" ALINK="#800000" LINK="#000000" VLINK="#000080"><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%"><TR><TD COLSPAN="3"><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%" BGCOLOR="#FFFFFF" style="border: 1px solid #6E89AE;padding-left: 10px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;"><TR><TD><A HREF="index.html"><IMG SRC="0i.png" ALT="" BORDER="0"></A>
+</TD>
+<TD ALIGN="RIGHT" VALIGN="BOTTOM" STYLE="padding-bottom: 5px; background-image: url('1i.png')"><span style="font-size: 14pt; font-family: sans-serif;"><script type="text/javascript"><!--
+google_ad_client = "pub-1082147624384270";
+google_ad_width = 468;
+google_ad_height = 60;
+google_ad_format = "468x60_as";
+google_ad_type = "text_image";
+google_ad_channel = "";
+google_color_border = "336699";
+google_color_bg = "FFFFFF";
+google_color_link = "0000FF";
+google_color_text = "000000";
+google_color_url = "008000";
+//--></script>
+<script type="text/javascript"
+  src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+&nbsp;&nbsp;</span>
+</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>
+<TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%"><TR><TD COLSPAN="3" BGCOLOR="#D2D9D2" HEIGHT="6"></TD>
+</TR>
+<TR><TD VALIGN="TOP" ALIGN="CENTER"><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="160"><TR><TD ALIGN="CENTER"><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%" BGCOLOR="#FFFFFF" style="border-style: solid; border-width: 1px; border-color: #6E89AE;padding: 0px"><TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px;"><A HREF="www$uppweb$overview$en-us.html" CLASS="l1">Overview</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$examples$en-us.html" CLASS="l1">Examples</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$ss$en-us.html" CLASS="l1">Screenshots</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$comparison$en-us.html" CLASS="l1">Comparisons</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$apps$en-us.html" CLASS="l1">Applications</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$download$en-us.html" CLASS="l1">Download</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$documentation$en-us.html" CLASS="l1">Documentation</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$Tutorials$en-us.html" CLASS="l1">Tutorials</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="app$ide$UppHub$en-us.html" CLASS="l1">UppHub</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$Roadmap$en-us.html" CLASS="l1">Status & Roadmap</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$FAQ$en-us.html" CLASS="l1">FAQ</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="app$ide$About$en-us.html" CLASS="l1">Authors & License</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="https://www.ultimatepp.org/forums" CLASS="l1">Forums</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$Funding$en-us.html" CLASS="l1">Funding U++</A>
+</TD>
+</TR>
+</TABLE>
+<TABLE BORDER="0" WIDTH="100%"><TR><TD></TD>
+</TR>
+</TABLE>
+<TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%" BGCOLOR="#FFFFFF" style="border-style: solid; border-width: 1px; border-color: #6E89AE;padding: 0px"><TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('3i.png'); border: 0px solid black;padding-left:12px; padding-right:0px; padding-top:1px; padding-bottom:1px;color:#FFFFFF;"><B><span style="font-size: 8pt; font-family: sans-serif;">Search on this site</span>
+</B>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:6px; padding-right:0px; padding-top:4px; padding-bottom:4px;border-top: 1px solid #6E89AE;"><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%"><TR><TD><IMG SRC="4i.png" ALT="" BORDER="0"></TD>
+<TD><FORM ACTION="https://www.google.com/search" METHOD="GET" STYLE="margin:0px;padding:0px;"><INPUT TYPE="HIDDEN" NAME="ie" VALUE="UTF-8"><INPUT TYPE="HIDDEN" NAME="oe" VALUE="UTF-8"><INPUT TYPE="TEXT" NAME="q" SIZE="15" MAXLENGTH="256" placeholder="Site search"><INPUT TYPE="HIDDEN" NAME="sitesearch" VALUE="ultimatepp.org"></FORM>
+</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>
+<TABLE BORDER="0" WIDTH="100%"><TR><TD></TD>
+</TR>
+</TABLE>
+<br><div id="fb-root"></div>
+<script type="text/javascript">(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) {return;}
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+<div class="fb-like" data-href="https://www.facebook.com/pages/Upp-Framework/262346610476027?sk=wall" data-send="false" data-layout="button_count" data-width="160" data-show-faces="false" data-font="arial"></div>
+<br><br><script type="text/javascript"><!--
+google_ad_client = "pub-1082147624384270";
+google_ad_width = 160;
+google_ad_height = 600;
+google_ad_format = "160x600_as";
+google_ad_type = "text_image";
+google_ad_channel = "";
+google_color_border = "336699";
+google_color_bg = "FFFFFF";
+google_color_link = "0000FF";
+google_color_text = "000000";
+google_color_url = "008000";
+//--></script>
+<script type="text/javascript"
+  src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script><br><br><script type="text/javascript"><!--
+google_ad_client = "pub-1082147624384270";
+google_ad_width = 160;
+google_ad_height = 90;
+google_ad_format = "160x90_0ads_al_s";
+google_ad_channel = "";
+google_color_border = "336699";
+google_color_bg = "FFFFFF";
+google_color_link = "0000FF";
+google_color_text = "000000";
+google_color_url = "008000";
+//--></script>
+<script type="text/javascript"
+  src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+<br><br><br><br><br><br><A HREF="https://sourceforge.net/projects/upp/"><IMG SRC="https://sourceforge.net/sflogo.php?group_id=93970&amp;type=2" ALT="SourceForge.net Logo" BORDER="0" WIDTH="125" HEIGHT="37"></A>
+<br><br><A HREF="https://flathub.org/en/apps/org.ultimatepp.TheIDE"><IMG SRC="5i.png" ALT="SourceForge.net Logo" BORDER="0" WIDTH="125" HEIGHT="37"></A>
+<br><br><div style="background-color:#ffffff;width:125;height:35"><A HREF="https://github.com/ultimatepp"><IMG SRC="6i.png" ALT="GitHub Logo" BORDER="0" WIDTH="125" HEIGHT="35"></A>
+</div><br><div style="background-color:#ffffff;width:125;height:35"><div style="height:5"></div><A HREF="https://discord.gg/8XzqQzXZzb"><IMG SRC="https://assets-global.website-files.com/6257adef93867e50d84d30e2/636e0b5061df29d55a92d945_full_logo_blurple_RGB.svg" ALT="Discord Logo" BORDER="0" WIDTH="125" HEIGHT="25"></A>
+</div><br></TD>
+</TR>
+</TABLE>
+</TD>
+<TD VALIGN="TOP" BGCOLOR="#D2D9D2"><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="6"><TR><TD></TD>
+</TR>
+</TABLE>
+</TD>
+<TD VALIGN="TOP" WIDTH="100%" BGCOLOR="#D2D9D2"><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" BGCOLOR="#FFFFFF" WIDTH="100%" style="border-style: solid; border-width: 1px; border-color: #6E89AE;padding: 10px;;"><TR><TD><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%"><TR><TD><p class="C">AddressBookXML</p>
+<p class="D">&nbsp;</p>
+<p class="D">Address book application, uses XML to store data (using SAX like U++ classes)</p>
+<p class="A">&nbsp;</p>
+<p class="A">&nbsp;</p>
+<p class="E">AddressBook.cpp</p>
+<p class="A">&nbsp;</p>
+<p class="F">#include<span class="G"> </span>&lt;<span class="G">CtrlLib</span>/<span class="G">CtrlLib</span>.<span class="G">h</span>&gt;</p>
+<p class="F">#include<span class="G"> </span>&lt;<span class="G">Report</span>/<span class="G">Report</span>.<span class="G">h</span>&gt;</p>
+<p class="H">&nbsp;</p>
+<p class="H"><span class="I">using</span> <span class="I">namespace</span> Upp;</p>
+<p class="H">&nbsp;</p>
+<p class="F">#define<span class="G"> LAYOUTFILE </span>&lt;<span class="G">AddressBookXML</span>/<span class="G">AddressBook</span>.<span class="G">lay</span>&gt;</p>
+<p class="F">#include<span class="G"> </span>&lt;<span class="G">CtrlCore</span>/<span class="G">lay</span>.<span class="G">h</span>&gt;</p>
+<p class="H">&nbsp;</p>
+<p class="H"><span class="I">class</span> AddressBook <span class="I">:</span> <span class="I">public</span> WithAddressBookLayout<span class="I">&lt;</span>TopWindow<span class="I">&gt;</span> {</p>
+<p class="H">&nbsp;&nbsp;&nbsp;&nbsp;WithModifyLayout<span class="I">&lt;</span>ParentCtrl<span class="I">&gt;</span> modify;</p>
+<p class="H">&nbsp;&nbsp;&nbsp;&nbsp;WithSearchLayout<span class="I">&lt;</span>ParentCtrl<span class="I">&gt;</span> search;</p>
+<p class="H">&nbsp;&nbsp;&nbsp;&nbsp;FileSel fs;</p>
+<p class="H">&nbsp;&nbsp;&nbsp;&nbsp;String &nbsp;filename;</p>
+<p class="H">&nbsp;</p>
+<p class="H">&nbsp;&nbsp;&nbsp;&nbsp;<span class="I">void</span> SetupSearch();</p>
+<p class="H">&nbsp;&nbsp;&nbsp;&nbsp;<span class="I">void</span> Add();</p>
+<p class="H">&nbsp;&nbsp;&nbsp;&nbsp;<span class="I">void</span> Change();</p>
+<p class="H">&nbsp;&nbsp;&nbsp;&nbsp;<span class="I">void</span> Search();</p>
+<p class="H">&nbsp;&nbsp;&nbsp;&nbsp;<span class="I">void</span> Open();</p>
+<p class="H">&nbsp;&nbsp;&nbsp;&nbsp;<span class="I">void</span> Save();</p>
+<p class="H">&nbsp;&nbsp;&nbsp;&nbsp;<span class="I">void</span> SaveAs();</p>
+<p class="H">&nbsp;&nbsp;&nbsp;&nbsp;<span class="I">void</span> Print();</p>
+<p class="H">&nbsp;&nbsp;&nbsp;&nbsp;<span class="I">void</span> Quit();</p>
+<p class="H">&nbsp;&nbsp;&nbsp;&nbsp;<span class="I">void</span> FileMenu(Bar<span class="I">&amp;</span> bar);</p>
+<p class="H">&nbsp;&nbsp;&nbsp;&nbsp;<span class="I">void</span> MainMenu(Bar<span class="I">&amp;</span> bar);</p>
+<p class="H">&nbsp;</p>
+<p class="H">&nbsp;&nbsp;&nbsp;&nbsp;<span class="I">typedef</span> AddressBook CLASSNAME;</p>
+<p class="H">&nbsp;</p>
+<p class="F">public:</p>
+<p class="H">&nbsp;&nbsp;&nbsp;&nbsp;<span class="I">void</span> Serialize(Stream<span class="I">&amp;</span> s);</p>
+<p class="H">&nbsp;</p>
+<p class="H">&nbsp;&nbsp;&nbsp;&nbsp;AddressBook();</p>
+<p class="H">};</p>
+<p class="H">&nbsp;</p>
+<p class="H">AddressBook<span class="I">::</span>AddressBook()</p>
+<p class="H">{</p>
+<p class="H">&nbsp;&nbsp;&nbsp;&nbsp;CtrlLayout(<span class="I">*this</span>, &quot;Address book&quot;);</p>
+<p class="H">&nbsp;&nbsp;&nbsp;&nbsp;CtrlLayout(modify);</p>
+<p class="H">&nbsp;&nbsp;&nbsp;&nbsp;CtrlLayout(search);</p>
+<p class="H">&nbsp;&nbsp;&nbsp;&nbsp;tab<span class="I">.</span>Add(modify, &quot;Modify&quot;);</p>
+<p class="H">&nbsp;&nbsp;&nbsp;&nbsp;tab<span class="I">.</span>Add(search, &quot;Search&quot;);</p>
+<p class="H">&nbsp;&nbsp;&nbsp;&nbsp;ActiveFocus(search<span class="I">.</span>name);</p>
+<p class="H">&nbsp;&nbsp;&nbsp;&nbsp;search<span class="I">.</span>oname <span class="I">=</span> <span class="I">true</span>;</p>
+<p class="H">&nbsp;&nbsp;&nbsp;&nbsp;search<span class="I">.</span>oname <span class="I">&lt;&lt;=</span> search<span class="I">.</span>osurname <span class="I">&lt;&lt;=</span> search<span class="I">.</span>oaddress</p>
+<p class="H">&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="I">&lt;&lt;=</span> search<span class="I">.</span>oemail <span class="I">&lt;&lt;=</span> THISBACK(SetupSearch);</p>
+<p class="H">&nbsp;&nbsp;&nbsp;&nbsp;array<span class="I">.</span>AddColumn(&quot;Name&quot;);</p>
+<p class="H">&nbsp;&nbsp;&nbsp;&nbsp;array<span class="I">.</span>AddColumn(&quot;Surname&quot;);</p>
+<p class="H">&nbsp;&nbsp;&nbsp;&nbsp;array<span class="I">.</span>AddColumn(&quot;Address&quot;);</p>
+<p class="H">&nbsp;&nbsp;&nbsp;&nbsp;array<span class="I">.</span>AddColumn(&quot;Email&quot;);</p>
+<p class="H">&nbsp;&nbsp;&nbsp;&nbsp;modify<span class="I">.</span>add <span class="I">&lt;&lt;=</span> THISBACK(Add);</p>
+<p class="H">&nbsp;&nbsp;&nbsp;&nbsp;modify<span class="I">.</span>change <span class="I">&lt;&lt;=</span> THISBACK(Change);</p>
+<p class="H">&nbsp;&nbsp;&nbsp;&nbsp;search<span class="I">.</span>search <span class="I">&lt;&lt;=</span> THISBACK(Search);</p>
+<p class="H">&nbsp;&nbsp;&nbsp;&nbsp;SetupSearch();</p>
+<p class="H">&nbsp;&nbsp;&nbsp;&nbsp;fs<span class="I">.</span>AllFilesType();</p>
+<p class="H">&nbsp;&nbsp;&nbsp;&nbsp;menu<span class="I">.</span>Set(THISBACK(MainMenu));</p>
+<p class="H">}</p>
+<p class="H">&nbsp;</p>
+<p class="H"><span class="I">void</span> AddressBook<span class="I">::</span>FileMenu(Bar<span class="I">&amp;</span> bar)</p>
+<p class="H">{</p>
+<p class="H">&nbsp;&nbsp;&nbsp;&nbsp;bar<span class="I">.</span>Add(&quot;Open<span class="I">..</span>&quot;, CtrlImg<span class="I">::</span>open(), THISBACK(Open));</p>
+<p class="H">&nbsp;&nbsp;&nbsp;&nbsp;bar<span class="I">.</span>Add(&quot;Save&quot;, CtrlImg<span class="I">::</span>save(), THISBACK(Save));</p>
+<p class="H">&nbsp;&nbsp;&nbsp;&nbsp;bar<span class="I">.</span>Add(&quot;Save as<span class="I">..</span>&quot;, CtrlImg<span class="I">::</span>save_as(), THISBACK(SaveAs));</p>
+<p class="H">&nbsp;&nbsp;&nbsp;&nbsp;bar<span class="I">.</span>Separator();</p>
+<p class="H">&nbsp;&nbsp;&nbsp;&nbsp;bar<span class="I">.</span>Add(&quot;Print&quot;, CtrlImg<span class="I">::</span>print(), THISBACK(Print));</p>
+<p class="H">&nbsp;&nbsp;&nbsp;&nbsp;bar<span class="I">.</span>Separator();</p>
+<p class="H">&nbsp;&nbsp;&nbsp;&nbsp;bar<span class="I">.</span>Add(&quot;Quit&quot;, THISBACK(Quit));</p>
+<p class="H">}</p>
+<p class="H">&nbsp;</p>
+<p class="H"><span class="I">void</span> AddressBook<span class="I">::</span>MainMenu(Bar<span class="I">&amp;</span> bar)</p>
+<p class="H">{</p>
+<p class="H">&nbsp;&nbsp;&nbsp;&nbsp;bar<span class="I">.</span>Add(&quot;File&quot;, THISBACK(FileMenu));</p>
+<p class="H">}</p>
+<p class="H">&nbsp;</p>
+<p class="H"><span class="I">void</span> AddressBook<span class="I">::</span>SetupSearch()</p>
+<p class="H">{</p>
+<p class="H">&nbsp;&nbsp;&nbsp;&nbsp;search<span class="I">.</span>name<span class="I">.</span>Enable(search<span class="I">.</span>oname);</p>
+<p class="H">&nbsp;&nbsp;&nbsp;&nbsp;search<span class="I">.</span>surname<span class="I">.</span>Enable(search<span class="I">.</span>osurname);</p>
+<p class="H">&nbsp;&nbsp;&nbsp;&nbsp;search<span class="I">.</span>address<span class="I">.</span>Enable(search<span class="I">.</span>oaddress);</p>
+<p class="H">&nbsp;&nbsp;&nbsp;&nbsp;search<span class="I">.</span>email<span class="I">.</span>Enable(search<span class="I">.</span>oemail);</p>
+<p class="H">}</p>
+<p class="H">&nbsp;</p>
+<p class="H"><span class="I">void</span> AddressBook<span class="I">::</span>Add()</p>
+<p class="H">{</p>
+<p class="H">&nbsp;&nbsp;&nbsp;&nbsp;array<span class="I">.</span>Add(<span class="I">~</span>modify<span class="I">.</span>name, <span class="I">~</span>modify<span class="I">.</span>surname, <span class="I">~</span>modify<span class="I">.</span>address, <span class="I">~</span>modify<span class="I">.</span>email);</p>
+<p class="H">&nbsp;&nbsp;&nbsp;&nbsp;array<span class="I">.</span>GoEnd();</p>
+<p class="H">&nbsp;&nbsp;&nbsp;&nbsp;modify<span class="I">.</span>name <span class="I">&lt;&lt;=</span> modify<span class="I">.</span>surname <span class="I">&lt;&lt;=</span> modify<span class="I">.</span>address <span class="I">&lt;&lt;=</span> modify<span class="I">.</span>email <span class="I">&lt;&lt;=</span> Null;</p>
+<p class="H">&nbsp;&nbsp;&nbsp;&nbsp;ActiveFocus(modify<span class="I">.</span>name);</p>
+<p class="H">}</p>
+<p class="H">&nbsp;</p>
+<p class="H"><span class="I">void</span> AddressBook<span class="I">::</span>Change()</p>
+<p class="H">{</p>
+<p class="H">&nbsp;&nbsp;&nbsp;&nbsp;<span class="I">if</span>(array<span class="I">.</span>IsCursor()) {</p>
+<p class="H">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;array<span class="I">.</span>Set(0, <span class="I">~</span>modify<span class="I">.</span>name);</p>
+<p class="H">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;array<span class="I">.</span>Set(1, <span class="I">~</span>modify<span class="I">.</span>surname);</p>
+<p class="H">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;array<span class="I">.</span>Set(2, <span class="I">~</span>modify<span class="I">.</span>address);</p>
+<p class="H">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;array<span class="I">.</span>Set(3, <span class="I">~</span>modify<span class="I">.</span>email);</p>
+<p class="H">&nbsp;&nbsp;&nbsp;&nbsp;}</p>
+<p class="H">}</p>
+<p class="H">&nbsp;</p>
+<p class="H"><span class="I">bool</span> Contains(<span class="I">const</span> String<span class="I">&amp;</span> text, <span class="I">const</span> String<span class="I">&amp;</span> substr)</p>
+<p class="H">{</p>
+<p class="H">&nbsp;&nbsp;&nbsp;&nbsp;<span class="I">for</span>(<span class="I">const</span> <span class="I">char</span> <span class="I">*</span>s <span class="I">=</span> text; s <span class="I">&lt;=</span> text<span class="I">.</span>End() <span class="I">-</span> substr<span class="I">.</span>GetLength(); s<span class="I">++</span>)</p>
+<p class="H">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="I">if</span>(strncmp(s, substr, substr<span class="I">.</span>GetLength()) <span class="I">==</span> 0)</p>
+<p class="H">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="I">return</span> <span class="I">true</span>;</p>
+<p class="H">&nbsp;&nbsp;&nbsp;&nbsp;<span class="I">return</span> <span class="I">false</span>;</p>
+<p class="H">}</p>
+<p class="H">&nbsp;</p>
+<p class="H"><span class="I">void</span> AddressBook<span class="I">::</span>Search()</p>
+<p class="H">{</p>
+<p class="H">&nbsp;&nbsp;&nbsp;&nbsp;<span class="I">if</span>(<span class="I">!</span>array<span class="I">.</span>GetCount()) <span class="I">return</span>;</p>
+<p class="H">&nbsp;&nbsp;&nbsp;&nbsp;<span class="I">bool</span> sc <span class="I">=</span> <span class="I">true</span>;</p>
+<p class="H">&nbsp;&nbsp;&nbsp;&nbsp;array<span class="I">.</span>ClearSelection();</p>
+<p class="H">&nbsp;&nbsp;&nbsp;&nbsp;<span class="I">for</span>(<span class="I">int</span> i <span class="I">=</span> 0; i <span class="I">&lt;</span> array<span class="I">.</span>GetCount(); i<span class="I">++</span>) {</p>
+<p class="F"><span class="G">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>if<span class="G">((</span>!<span class="G">search</span>.<span class="G">oname </span>||<span class="G"> Contains(array</span>.<span class="G">Get(i, 0), </span>~<span class="G">search</span>.<span class="G">name)) </span>&amp;&amp;</p>
+<p class="F"><span class="G">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;(</span>!<span class="G">search</span>.<span class="G">osurname </span>||<span class="G"> Contains(array</span>.<span class="G">Get(i, 1), </span>~<span class="G">search</span>.<span class="G">surname)) </span>&amp;&amp;</p>
+<p class="F"><span class="G">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;(</span>!<span class="G">search</span>.<span class="G">oaddress </span>||<span class="G"> Contains(array</span>.<span class="G">Get(i, 2), </span>~<span class="G">search</span>.<span class="G">address)) </span>&amp;&amp;</p>
+<p class="H">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;(<span class="I">!</span>search<span class="I">.</span>oemail <span class="I">||</span> Contains(array<span class="I">.</span>Get(i, 3), <span class="I">~</span>search<span class="I">.</span>email))) {</p>
+<p class="H">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;array<span class="I">.</span>Select(i);</p>
+<p class="H">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="I">if</span>(sc) {</p>
+<p class="H">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;array<span class="I">.</span>SetCursor(i);</p>
+<p class="H">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;array<span class="I">.</span>CenterCursor();</p>
+<p class="H">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sc <span class="I">=</span> <span class="I">false</span>;</p>
+<p class="H">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;};</p>
+<p class="H">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</p>
+<p class="H">&nbsp;&nbsp;&nbsp;&nbsp;}</p>
+<p class="H">}</p>
+<p class="H">&nbsp;</p>
+<p class="H"><span class="I">void</span> AddressBook<span class="I">::</span>Open()</p>
+<p class="H">{</p>
+<p class="H">&nbsp;&nbsp;&nbsp;&nbsp;<span class="I">if</span>(<span class="I">!</span>fs<span class="I">.</span>ExecuteOpen()) <span class="I">return</span>;</p>
+<p class="H">&nbsp;&nbsp;&nbsp;&nbsp;filename <span class="I">=</span> fs;</p>
+<p class="H">&nbsp;&nbsp;&nbsp;&nbsp;array<span class="I">.</span>Clear();</p>
+<p class="H">&nbsp;&nbsp;&nbsp;&nbsp;<span class="I">try</span> {</p>
+<p class="H">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;String d <span class="I">=</span> LoadFile(filename);</p>
+<p class="H">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;XmlParser p(d);</p>
+<p class="H">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="I">while</span>(<span class="I">!</span>p<span class="I">.</span>IsTag())</p>
+<p class="H">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;p<span class="I">.</span>Skip();</p>
+<p class="H">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;p<span class="I">.</span>PassTag(&quot;AddressBook&quot;);</p>
+<p class="H">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="I">while</span>(<span class="I">!</span>p<span class="I">.</span>IsEof()) {</p>
+<p class="H">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="I">if</span>(p<span class="I">.</span>Tag(&quot;person&quot;)) {</p>
+<p class="H">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;String name;</p>
+<p class="H">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;String surname;</p>
+<p class="H">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;String address;</p>
+<p class="H">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;String email;</p>
+<p class="H">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="I">while</span>(<span class="I">!</span>p<span class="I">.</span>End()) {</p>
+<p class="H">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="I">if</span>(p<span class="I">.</span>Tag(&quot;name&quot;))</p>
+<p class="H">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;name <span class="I">=</span> p<span class="I">.</span>ReadText();</p>
+<p class="F"><span class="G">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>else</p>
+<p class="H">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="I">if</span>(p<span class="I">.</span>Tag(&quot;surname&quot;))</p>
+<p class="H">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;surname <span class="I">=</span> p<span class="I">.</span>ReadText();</p>
+<p class="F"><span class="G">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>else</p>
+<p class="H">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="I">if</span>(p<span class="I">.</span>Tag(&quot;address&quot;))</p>
+<p class="H">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;address <span class="I">=</span> p<span class="I">.</span>ReadText();</p>
+<p class="F"><span class="G">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>else</p>
+<p class="H">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="I">if</span>(p<span class="I">.</span>Tag(&quot;email&quot;))</p>
+<p class="H">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;email <span class="I">=</span> p<span class="I">.</span>ReadText();</p>
+<p class="H">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="I">else</span> {</p>
+<p class="H">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;p<span class="I">.</span>Skip();</p>
+<p class="H">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="I">continue</span>;</p>
+<p class="H">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</p>
+<p class="H">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;p<span class="I">.</span>PassEnd();</p>
+<p class="H">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</p>
+<p class="H">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;array<span class="I">.</span>Add(name, surname, address, email);</p>
+<p class="H">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</p>
+<p class="F"><span class="G">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>else</p>
+<p class="H">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;p<span class="I">.</span>Skip();</p>
+<p class="H">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</p>
+<p class="H">&nbsp;&nbsp;&nbsp;&nbsp;}</p>
+<p class="H">&nbsp;&nbsp;&nbsp;&nbsp;<span class="I">catch</span>(XmlError) {</p>
+<p class="H">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Exclamation(&quot;Error reading the input file<span class="I">!</span>&quot;);</p>
+<p class="H">&nbsp;&nbsp;&nbsp;&nbsp;}</p>
+<p class="H">}</p>
+<p class="H">&nbsp;</p>
+<p class="H"><span class="I">void</span> AddressBook<span class="I">::</span>Save()</p>
+<p class="H">{</p>
+<p class="H">&nbsp;&nbsp;&nbsp;&nbsp;<span class="I">if</span>(IsEmpty(filename)) {</p>
+<p class="H">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SaveAs();</p>
+<p class="H">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="I">return</span>;</p>
+<p class="H">&nbsp;&nbsp;&nbsp;&nbsp;}</p>
+<p class="H">&nbsp;&nbsp;&nbsp;&nbsp;String xml;</p>
+<p class="H">&nbsp;&nbsp;&nbsp;&nbsp;<span class="I">for</span>(<span class="I">int</span> i <span class="I">=</span> 0; i <span class="I">&lt;</span> array<span class="I">.</span>GetCount(); i<span class="I">++</span>)</p>
+<p class="F"><span class="G">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;xml </span>&lt;&lt;</p>
+<p class="H">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;XmlTag(&quot;person&quot;) (</p>
+<p class="F"><span class="G">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;XmlTag(&quot;name&quot;)</span>.<span class="G">Text(array</span>.<span class="G">Get(i, 0)) </span>+</p>
+<p class="F"><span class="G">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;XmlTag(&quot;surname&quot;)</span>.<span class="G">Text(array</span>.<span class="G">Get(i, 1)) </span>+</p>
+<p class="F"><span class="G">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;XmlTag(&quot;address&quot;)</span>.<span class="G">Text(array</span>.<span class="G">Get(i, 2)) </span>+</p>
+<p class="H">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;XmlTag(&quot;email&quot;)<span class="I">.</span>Text(array<span class="I">.</span>Get(i, 3))</p>
+<p class="H">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;);</p>
+<p class="H">&nbsp;&nbsp;&nbsp;&nbsp;<span class="I">if</span>(<span class="I">!</span>SaveFile(filename, XmlDoc(&quot;AddressBook&quot;, xml)))</p>
+<p class="H">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Exclamation(&quot;Error saving the file<span class="I">!</span>&quot;);</p>
+<p class="H">}</p>
+<p class="H">&nbsp;</p>
+<p class="H"><span class="I">void</span> AddressBook<span class="I">::</span>SaveAs()</p>
+<p class="H">{</p>
+<p class="H">&nbsp;&nbsp;&nbsp;&nbsp;<span class="I">if</span>(<span class="I">!</span>fs<span class="I">.</span>ExecuteSaveAs()) <span class="I">return</span>;</p>
+<p class="H">&nbsp;&nbsp;&nbsp;&nbsp;filename <span class="I">=</span> fs;</p>
+<p class="H">&nbsp;&nbsp;&nbsp;&nbsp;Save();</p>
+<p class="H">}</p>
+<p class="H">&nbsp;</p>
+<p class="H"><span class="I">void</span> AddressBook<span class="I">::</span>Print()</p>
+<p class="H">{</p>
+<p class="H">&nbsp;&nbsp;&nbsp;&nbsp;String qtf;</p>
+<p class="H">&nbsp;&nbsp;&nbsp;&nbsp;qtf <span class="I">=</span> &quot;{{1<span class="I">:</span>1<span class="I">:</span>1<span class="I">:</span>1 Name<span class="I">::</span> Surname<span class="I">::</span> Address<span class="I">::</span> Email&quot;;</p>
+<p class="H">&nbsp;&nbsp;&nbsp;&nbsp;<span class="I">for</span>(<span class="I">int</span> i <span class="I">=</span> 0; i <span class="I">&lt;</span> array<span class="I">.</span>GetCount(); i<span class="I">++</span>)</p>
+<p class="H">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="I">for</span>(<span class="I">int</span> q <span class="I">=</span> 0; q <span class="I">&lt;</span> 4; q<span class="I">++</span>)</p>
+<p class="H">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;qtf <span class="I">&lt;&lt;</span> &quot;<span class="I">::</span> &quot; <span class="I">&lt;&lt;</span> DeQtf((String)array<span class="I">.</span>Get(i, q));</p>
+<p class="H">&nbsp;&nbsp;&nbsp;&nbsp;Report report;</p>
+<p class="H">&nbsp;&nbsp;&nbsp;&nbsp;report <span class="I">&lt;&lt;</span> qtf;</p>
+<p class="H">&nbsp;&nbsp;&nbsp;&nbsp;Perform(report);</p>
+<p class="H">}</p>
+<p class="H">&nbsp;</p>
+<p class="H"><span class="I">void</span> AddressBook<span class="I">::</span>Quit()</p>
+<p class="H">{</p>
+<p class="H">&nbsp;&nbsp;&nbsp;&nbsp;Break();</p>
+<p class="H">}</p>
+<p class="H">&nbsp;</p>
+<p class="H"><span class="I">void</span> AddressBook<span class="I">::</span>Serialize(Stream<span class="I">&amp;</span> s)</p>
+<p class="H">{</p>
+<p class="H">&nbsp;&nbsp;&nbsp;&nbsp;<span class="I">int</span> version <span class="I">=</span> 0;</p>
+<p class="H">&nbsp;&nbsp;&nbsp;&nbsp;s <span class="I">/</span> version;</p>
+<p class="H">&nbsp;&nbsp;&nbsp;&nbsp;s <span class="I">%</span> search<span class="I">.</span>oname <span class="I">%</span> search<span class="I">.</span>osurname <span class="I">%</span> search<span class="I">.</span>oaddress <span class="I">%</span> search<span class="I">.</span>oemail;</p>
+<p class="H">&nbsp;&nbsp;&nbsp;&nbsp;s <span class="I">%</span> fs;</p>
+<p class="H">&nbsp;&nbsp;&nbsp;&nbsp;SetupSearch();</p>
+<p class="H">}</p>
+<p class="H">&nbsp;</p>
+<p class="H">GUI_APP_MAIN</p>
+<p class="H">{</p>
+<p class="H">&nbsp;&nbsp;&nbsp;&nbsp;AddressBook ab;</p>
+<p class="H">&nbsp;&nbsp;&nbsp;&nbsp;LoadFromFile(ab);</p>
+<p class="H">&nbsp;&nbsp;&nbsp;&nbsp;ab<span class="I">.</span>Run();</p>
+<p class="H">&nbsp;&nbsp;&nbsp;&nbsp;StoreToFile(ab);</p>
+<p class="H">}</p>
+<p class="H">&nbsp;</p>
+<p class="H">&nbsp;</p>
+<p class="H">&nbsp;</p>
+<p class="E">AddressBook.lay</p>
+<p class="H">&nbsp;</p>
+<p class="H">LAYOUT(AddressBookLayout, 516, 456)</p>
+<p class="H">&nbsp;&nbsp;&nbsp;&nbsp;ITEM(MenuBar, menu, LeftPosZ(0, 200)<span class="I">.</span>TopPosZ(0, 20))</p>
+<p class="H">&nbsp;&nbsp;&nbsp;&nbsp;ITEM(TabCtrl, tab, LeftPosZ(8, 500)<span class="I">.</span>TopPosZ(32, 84))</p>
+<p class="H">&nbsp;&nbsp;&nbsp;&nbsp;ITEM(ArrayCtrl, array, LeftPosZ(8, 500)<span class="I">.</span>TopPosZ(124, 324))</p>
+<p class="H">END_LAYOUT</p>
+<p class="H">&nbsp;</p>
+<p class="H">LAYOUT(ModifyLayout, 480, 52)</p>
+<p class="H">&nbsp;&nbsp;&nbsp;&nbsp;ITEM(Label, dv___0, SetLabel(t_(&quot;<span class="I">&amp;</span>Name&quot;))<span class="I">.</span>LeftPosZ(8, 48)<span class="I">.</span>TopPosZ(8, 15))</p>
+<p class="H">&nbsp;&nbsp;&nbsp;&nbsp;ITEM(EditField, name, LeftPosZ(8, 96)<span class="I">.</span>TopPosZ(28, 19))</p>
+<p class="H">&nbsp;&nbsp;&nbsp;&nbsp;ITEM(Label, dv___2, SetLabel(t_(&quot;<span class="I">&amp;</span>Surname&quot;))<span class="I">.</span>LeftPosZ(108, 48)<span class="I">.</span>TopPosZ(8, 15))</p>
+<p class="H">&nbsp;&nbsp;&nbsp;&nbsp;ITEM(EditField, surname, LeftPosZ(108, 96)<span class="I">.</span>TopPosZ(28, 19))</p>
+<p class="H">&nbsp;&nbsp;&nbsp;&nbsp;ITEM(Label, dv___4, SetLabel(t_(&quot;<span class="I">&amp;</span>Address&quot;))<span class="I">.</span>LeftPosZ(208, 48)<span class="I">.</span>TopPosZ(8, 15))</p>
+<p class="H">&nbsp;&nbsp;&nbsp;&nbsp;ITEM(EditField, address, LeftPosZ(208, 96)<span class="I">.</span>TopPosZ(28, 19))</p>
+<p class="H">&nbsp;&nbsp;&nbsp;&nbsp;ITEM(Label, dv___6, SetLabel(t_(&quot;<span class="I">&amp;</span>Email&quot;))<span class="I">.</span>LeftPosZ(308, 48)<span class="I">.</span>TopPosZ(8, 15))</p>
+<p class="H">&nbsp;&nbsp;&nbsp;&nbsp;ITEM(EditField, email, LeftPosZ(308, 96)<span class="I">.</span>TopPosZ(28, 19))</p>
+<p class="H">&nbsp;&nbsp;&nbsp;&nbsp;ITEM(Button, add, SetLabel(t_(&quot;Ad<span class="I">&amp;</span>d&quot;))<span class="I">.</span>LeftPosZ(416, 56)<span class="I">.</span>TopPosZ(4, 20))</p>
+<p class="H">&nbsp;&nbsp;&nbsp;&nbsp;ITEM(Button, change, SetLabel(t_(&quot;<span class="I">&amp;</span>Change&quot;))<span class="I">.</span>LeftPosZ(416, 56)<span class="I">.</span>TopPosZ(28, 20))</p>
+<p class="H">END_LAYOUT</p>
+<p class="H">&nbsp;</p>
+<p class="H">LAYOUT(SearchLayout, 480, 56)</p>
+<p class="H">&nbsp;&nbsp;&nbsp;&nbsp;ITEM(Option, oname, SetLabel(t_(&quot;<span class="I">&amp;</span>Name&quot;))<span class="I">.</span>LeftPosZ(8, 56)<span class="I">.</span>TopPosZ(8, 18))</p>
+<p class="H">&nbsp;&nbsp;&nbsp;&nbsp;ITEM(EditField, name, LeftPosZ(8, 96)<span class="I">.</span>TopPosZ(28, 19))</p>
+<p class="H">&nbsp;&nbsp;&nbsp;&nbsp;ITEM(Option, osurname, SetLabel(t_(&quot;<span class="I">&amp;</span>Surname&quot;))<span class="I">.</span>LeftPosZ(108, 64)<span class="I">.</span>TopPosZ(8, 18))</p>
+<p class="H">&nbsp;&nbsp;&nbsp;&nbsp;ITEM(EditField, surname, LeftPosZ(108, 96)<span class="I">.</span>TopPosZ(28, 19))</p>
+<p class="H">&nbsp;&nbsp;&nbsp;&nbsp;ITEM(Option, oaddress, SetLabel(t_(&quot;<span class="I">&amp;</span>Address&quot;))<span class="I">.</span>LeftPosZ(208, 64)<span class="I">.</span>TopPosZ(8, 18))</p>
+<p class="H">&nbsp;&nbsp;&nbsp;&nbsp;ITEM(EditField, address, LeftPosZ(208, 96)<span class="I">.</span>TopPosZ(28, 19))</p>
+<p class="H">&nbsp;&nbsp;&nbsp;&nbsp;ITEM(Option, oemail, SetLabel(t_(&quot;<span class="I">&amp;</span>Email&quot;))<span class="I">.</span>LeftPosZ(308, 52)<span class="I">.</span>TopPosZ(8, 18))</p>
+<p class="H">&nbsp;&nbsp;&nbsp;&nbsp;ITEM(EditField, email, LeftPosZ(308, 96)<span class="I">.</span>TopPosZ(28, 19))</p>
+<p class="H">&nbsp;&nbsp;&nbsp;&nbsp;ITEM(Button, search, SetLabel(t_(&quot;<span class="I">&amp;</span>Search&quot;))<span class="I">.</span>LeftPosZ(416, 56)<span class="I">.</span>TopPosZ(28, 20))</p>
+<p class="H">END_LAYOUT</p>
+<p class="H">&nbsp;</p>
+<p class="H">&nbsp;</p>
+<p class="H">&nbsp;</p>
+<p class="H">&nbsp;</p>
+</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>
+<TABLE BORDER="0" WIDTH="100%"><TR><TD></TD>
+</TR>
+</TABLE>
+<TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" BGCOLOR="#FFFFFF" WIDTH="100%" style="border-style: solid; border-width: 1px; border-color: #6E89AE;padding: 10px;;"><TR><TD><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%"><TR><TD><p class="A"><span class="B"> </span><a href="www$uppweb$contribweb$en-us.html">Do you want to contribute?</a></p>
+</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>
+<script type="text/javascript">var a={'examples$AddressBookXML$en-us.html':'English'};var p=window.location.pathname.split("/");p=p[p.length-1];var s='<select id="lang" onchange="window.location=document.getElementById(\'lang\').value;">';for(l in a){if(p==l){d=" selected=1"}else{d=""}s+='<option value="'+l+'"'+d+'>'+a[l]+'</option>'}s+='</select>';var d=document.createElement('div');d.innerHTML=s;var c=document.getElementById('langs');c.replaceChild(d,c.firstChild);document.getElementById('langbox').style.display='block';</script></BODY>

@@ -1,0 +1,308 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en-us">
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
+<META NAME="Generator" CONTENT="U++ HTML Package">
+<META NAME="Description" CONTENT="Packages are centric to U++.  An executable application is built from a package.  A package can also build into a dynamic link library.">
+<TITLE>Packages, Assemblies and Nests :: U++</TITLE>
+<STYLE TYPE="text/css"><!--
+.A{margin:0px 0px 0px 0px;text-indent:0px;text-align:left;color:#000000;font-family:sans-serif;font-size:10pt;font-weight:normal;font-style:normal;}
+.B{font-size:12pt;}
+.C{margin:0px 0px 16px 0px;text-indent:0px;text-align:left;color:#000000;font-family:serif;font-size:24pt;font-weight:bold;font-style:normal;}
+.D{margin:16px 0px 0px 0px;text-indent:0px;text-align:left;color:#000000;font-family:sans-serif;font-size:16pt;font-weight:bold;font-style:normal;}
+.E{margin:0px 0px 0px 0px;text-indent:0px;text-align:left;color:#000000;font-family:sans-serif;font-size:12pt;font-weight:normal;font-style:normal;}
+.F{margin:8px 0px 8px 0px;text-indent:0px;text-align:left;color:#000000;font-family:sans-serif;font-size:10pt;font-weight:normal;font-style:normal;line-height:150%}
+.G{font-style:italic;}
+.H{display:list-item;list-style-type:disc;margin:0px 0px 0px 77px;text-indent:0px;text-align:left;color:#000000;font-family:sans-serif;font-size:10pt;font-weight:normal;font-style:normal;line-height:150%}
+.I{display:list-item;list-style-type:disc;margin:0px 0px 0px 77px;text-indent:0px;text-align:left;color:#000000;font-family:sans-serif;font-size:10pt;font-weight:normal;font-style:italic;line-height:150%}
+.J{font-style:normal;}
+.K{margin:8px 0px 8px 0px;text-indent:0px;text-align:left;color:#000000;font-family:sans-serif;font-size:10pt;font-weight:bold;font-style:normal;line-height:150%}
+.L{font-weight:normal;}
+.M{font-weight:bold;}
+.N{margin:0px 0px 0px 0px;text-indent:0px;text-align:left;color:#000000;font-family:sans-serif;font-size:10pt;font-weight:normal;font-style:normal;line-height:150%}
+.O{margin:0px 0px 0px 0px;text-indent:0px;text-align:center;color:#000000;font-family:sans-serif;font-size:12pt;font-weight:normal;font-style:normal;}
+.P{color:#aa2a96;font-weight:bold;}
+.Q{margin:3px 0px 0px 0px;text-indent:0px;text-align:left;color:#000080;font-family:monospace;font-size:10pt;font-weight:normal;font-style:normal;}
+.R{color:#8d2a96;font-weight:bold;}
+.S{margin:8px 0px 8px 0px;text-indent:0px;text-align:left;color:#000000;font-family:sans-serif;font-size:10pt;font-weight:normal;font-style:italic;line-height:150%}
+.T{color:#712a96;font-weight:bold;}
+.U{display:list-item;list-style-type:disc;margin:0px 0px 0px 52px;text-indent:0px;text-align:left;color:#000000;font-family:sans-serif;font-size:10pt;font-weight:normal;font-style:normal;line-height:150%}
+a.l1         { text-decoration:none; font-size: 8pt; font-family: sans-serif; font-weight: normal; }
+a.l1:link    { color:#000000; }
+a.l1:visited { color:#000080; }
+a.l1:hover   { color:#9933CC; }
+a.l1:active  { color:#000000; }
+a.l2         { text-decoration:none; font-size: 12pt; font-family: sans-serif; font-variant: small-caps; }
+a.l2:link    { color:#0066FF; }
+a.l2:visited { color:#FF6600; }
+a.l2:hover   { color:#BC0624; }
+a.l2:active  { color:#BC0024; }
+
+-->
+</STYLE>
+<META NAME="keywords" CONTENT="framework, toolkit, widget, c++, visual, studio, dev-cpp, builder, ide, class, component,wxwidgets, qt, rapid, application, development, rad, mfc, linux, macos, gui, sdl, directx, desktop"><META name="robots" content="index,follow">
+<LINK rel="alternate" type="application/rss+xml" title="SVN changes" href="svnchanges.xml">
+<LINK rel="shortcut icon" type="image/png" href="favicon.png">
+</HEAD><BODY BGCOLOR="#D2D9D2" ALINK="#800000" LINK="#000000" VLINK="#000080"><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%"><TR><TD COLSPAN="3"><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%" BGCOLOR="#FFFFFF" style="border: 1px solid #6E89AE;padding-left: 10px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;"><TR><TD><A HREF="index.html"><IMG SRC="0i.png" ALT="" BORDER="0"></A>
+</TD>
+<TD ALIGN="RIGHT" VALIGN="BOTTOM" STYLE="padding-bottom: 5px; background-image: url('1i.png')"><span style="font-size: 14pt; font-family: sans-serif;"><script type="text/javascript"><!--
+google_ad_client = "pub-1082147624384270";
+google_ad_width = 468;
+google_ad_height = 60;
+google_ad_format = "468x60_as";
+google_ad_type = "text_image";
+google_ad_channel = "";
+google_color_border = "336699";
+google_color_bg = "FFFFFF";
+google_color_link = "0000FF";
+google_color_text = "000000";
+google_color_url = "008000";
+//--></script>
+<script type="text/javascript"
+  src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+&nbsp;&nbsp;</span>
+</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>
+<TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%"><TR><TD COLSPAN="3" BGCOLOR="#D2D9D2" HEIGHT="6"></TD>
+</TR>
+<TR><TD VALIGN="TOP" ALIGN="CENTER"><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="160"><TR><TD ALIGN="CENTER"><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%" BGCOLOR="#FFFFFF" style="border-style: solid; border-width: 1px; border-color: #6E89AE;padding: 0px"><TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px;"><A HREF="www$uppweb$overview$en-us.html" CLASS="l1">Overview</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$examples$en-us.html" CLASS="l1">Examples</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$ss$en-us.html" CLASS="l1">Screenshots</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$comparison$en-us.html" CLASS="l1">Comparisons</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$apps$en-us.html" CLASS="l1">Applications</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$download$en-us.html" CLASS="l1">Download</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$documentation$en-us.html" CLASS="l1">Documentation</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$Tutorials$en-us.html" CLASS="l1">Tutorials</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="app$ide$UppHub$en-us.html" CLASS="l1">UppHub</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$Roadmap$en-us.html" CLASS="l1">Status & Roadmap</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$FAQ$en-us.html" CLASS="l1">FAQ</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="app$ide$About$en-us.html" CLASS="l1">Authors & License</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="https://www.ultimatepp.org/forums" CLASS="l1">Forums</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$Funding$en-us.html" CLASS="l1">Funding U++</A>
+</TD>
+</TR>
+</TABLE>
+<TABLE BORDER="0" WIDTH="100%"><TR><TD></TD>
+</TR>
+</TABLE>
+<TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%" BGCOLOR="#FFFFFF" style="border-style: solid; border-width: 1px; border-color: #6E89AE;padding: 0px"><TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('3i.png'); border: 0px solid black;padding-left:12px; padding-right:0px; padding-top:1px; padding-bottom:1px;color:#FFFFFF;"><B><span style="font-size: 8pt; font-family: sans-serif;">Search on this site</span>
+</B>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:6px; padding-right:0px; padding-top:4px; padding-bottom:4px;border-top: 1px solid #6E89AE;"><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%"><TR><TD><IMG SRC="4i.png" ALT="" BORDER="0"></TD>
+<TD><FORM ACTION="https://www.google.com/search" METHOD="GET" STYLE="margin:0px;padding:0px;"><INPUT TYPE="HIDDEN" NAME="ie" VALUE="UTF-8"><INPUT TYPE="HIDDEN" NAME="oe" VALUE="UTF-8"><INPUT TYPE="TEXT" NAME="q" SIZE="15" MAXLENGTH="256" placeholder="Site search"><INPUT TYPE="HIDDEN" NAME="sitesearch" VALUE="ultimatepp.org"></FORM>
+</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>
+<TABLE BORDER="0" WIDTH="100%"><TR><TD></TD>
+</TR>
+</TABLE>
+<br><div id="fb-root"></div>
+<script type="text/javascript">(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) {return;}
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+<div class="fb-like" data-href="https://www.facebook.com/pages/Upp-Framework/262346610476027?sk=wall" data-send="false" data-layout="button_count" data-width="160" data-show-faces="false" data-font="arial"></div>
+<br><br><script type="text/javascript"><!--
+google_ad_client = "pub-1082147624384270";
+google_ad_width = 160;
+google_ad_height = 600;
+google_ad_format = "160x600_as";
+google_ad_type = "text_image";
+google_ad_channel = "";
+google_color_border = "336699";
+google_color_bg = "FFFFFF";
+google_color_link = "0000FF";
+google_color_text = "000000";
+google_color_url = "008000";
+//--></script>
+<script type="text/javascript"
+  src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script><br><br><script type="text/javascript"><!--
+google_ad_client = "pub-1082147624384270";
+google_ad_width = 160;
+google_ad_height = 90;
+google_ad_format = "160x90_0ads_al_s";
+google_ad_channel = "";
+google_color_border = "336699";
+google_color_bg = "FFFFFF";
+google_color_link = "0000FF";
+google_color_text = "000000";
+google_color_url = "008000";
+//--></script>
+<script type="text/javascript"
+  src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+<br><br><br><br><br><br><A HREF="https://sourceforge.net/projects/upp/"><IMG SRC="https://sourceforge.net/sflogo.php?group_id=93970&amp;type=2" ALT="SourceForge.net Logo" BORDER="0" WIDTH="125" HEIGHT="37"></A>
+<br><br><A HREF="https://flathub.org/en/apps/org.ultimatepp.TheIDE"><IMG SRC="5i.png" ALT="SourceForge.net Logo" BORDER="0" WIDTH="125" HEIGHT="37"></A>
+<br><br><div style="background-color:#ffffff;width:125;height:35"><A HREF="https://github.com/ultimatepp"><IMG SRC="6i.png" ALT="GitHub Logo" BORDER="0" WIDTH="125" HEIGHT="35"></A>
+</div><br><div style="background-color:#ffffff;width:125;height:35"><div style="height:5"></div><A HREF="https://discord.gg/8XzqQzXZzb"><IMG SRC="https://assets-global.website-files.com/6257adef93867e50d84d30e2/636e0b5061df29d55a92d945_full_logo_blurple_RGB.svg" ALT="Discord Logo" BORDER="0" WIDTH="125" HEIGHT="25"></A>
+</div><br></TD>
+</TR>
+</TABLE>
+</TD>
+<TD VALIGN="TOP" BGCOLOR="#D2D9D2"><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="6"><TR><TD></TD>
+</TR>
+</TABLE>
+</TD>
+<TD VALIGN="TOP" WIDTH="100%" BGCOLOR="#D2D9D2"><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" BGCOLOR="#FFFFFF" WIDTH="100%" style="border-style: solid; border-width: 1px; border-color: #6E89AE;padding: 10px;;"><TR><TD><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%"><TR><TD><p class="C">Packages, Assemblies &amp; Nests</p>
+<hr><p class="D">Table of contents</p>
+<p class="E">&nbsp;</p>
+<p class="A"><a href="app$ide$PackagesAssembliesAndNests_en-us.html#1">1. Packages</a></p>
+<p class="A"><a href="app$ide$PackagesAssembliesAndNests_en-us.html#2">2. Assemblies</a></p>
+<p class="A"><a href="app$ide$PackagesAssembliesAndNests_en-us.html#3">3. Opening a package</a></p>
+<p class="A"><a href="app$ide$PackagesAssembliesAndNests_en-us.html#4">4. Nests</a></p>
+<p class="A"><a href="app$ide$PackagesAssembliesAndNests_en-us.html#5">5. The U++ examples assembly</a></p>
+<p class="A"><a href="app$ide$PackagesAssembliesAndNests_en-us.html#6">6. Include paths and #include directives</a></p>
+<p class="A"><a href="app$ide$PackagesAssembliesAndNests_en-us.html#7">7. Package locations</a></p>
+<p class="A"><a href="app$ide$PackagesAssembliesAndNests_en-us.html#8">8. Package/folder/file names</a></p>
+<p class="A"><a href="app$ide$PackagesAssembliesAndNests_en-us.html#9">9. Alternative #include path mechanisms</a></p>
+<p class="A"><a href="app$ide$PackagesAssembliesAndNests_en-us.html#10">10. Layout file #includes</a></p>
+<p class="E">&nbsp;</p>
+<hr><p id="1" class="D">1. Packages</p>
+<p class="F">Packages are centric to U++. &nbsp;An executable application is built from a package. &nbsp;A package can also build into a dynamic link library. &nbsp;A package can be used by other packages. &nbsp;A package corresponds to a single directory with the directory name being the name of the package. &nbsp;The package directory contains the package definition file (a plain text file with a .upp extension), which always has the same name as the package directory. &nbsp;The package definition file contains a list of the source files that make up the package, plus information on what type of package it is, how it should be built and what other packages it uses. &nbsp;The source files for the package are normally located in the package directory and its subdirectories, but they may be in any desired location. &nbsp;A package directory must be located in an assembly nest or in the sub-folders of a nest (see <span class="G">Package-locations </span>below).</p>
+<p class="F">The package definition file is maintained by TheIDE and you should never need to manipulate it manually. &nbsp;The package definition file is updated at various times by TheIDE, including :</p>
+<p class="H">When you add/remove source files to/from a package</p>
+<p class="H">When you add/remove packages used by the package</p>
+<p class="I"><span class="J">When you change package build settings using the </span>package-organizer</p>
+<p class="I"><span class="J">When you change the package build configurations using </span>main-package-configuration</p>
+<p class="H">When you change/assign custom build steps for the package</p>
+<p class="F">For more detail on configuring packages and assemblies, <a href="app$ide$ConfiguringPackagesAssemblies$en-us.html">see this</a>.</p>
+<p class="K"><span class="L">When a package is built, the compiler will be invoked for each of the source files that belong to the package and for any source files that belong to packages directly or indirectly used by the </span>main package.</p>
+<hr><p id="2" class="D">2. Assemblies</p>
+<p class="F">An assembly can be thought of as a collection of packages but it is actually just a set of paths which determine where U++ looks for the packages needed to build a package (or application). &nbsp;The assembly paths also determine where the compiler looks for files named in C++ #include directives. &nbsp;An assembly also specifies the root folder for the location for the output files (.obj, .exe etc) produced by a build plus the location of common files. &nbsp;The paths defined by the assembly are stored in an assembly definition file which has a .var extension and is stored in the U++ root installation directory. &nbsp;A package can be associated with multiple assemblies. &nbsp;Files produced by a build are actually placed in a sub-folder of the output root folder and the sub-folder is named according to the package name, the <span class="M">build flags</span> and the compiler that was used. &nbsp;e.g. for the HelloWorld example when built with MSVC++ 7.1 compiler, the output file folder is typically <span class="G">C:/upp/out/HelloWorld/MSC71.Gui.Main</span> where <span class="G">C:/upp/out</span> is specified as the output folder root in the assembly.</p>
+<hr><p id="3" class="D">3. Opening a package</p>
+<p class="N">To open a package, the <span class="G">Set-main-package</span> option on the File menu in TheIDE is used. The &quot;Select main package&quot; dialog will appear.</p>
+<p class="E">&nbsp;</p>
+<p class="O"><a href="app$ide$PackagesAssembliesAndNests_en-us.html_0.png"><img src="app$ide$PackagesAssembliesAndNests_en-us.html_0.png" border="0" alt="" style="width: 986px; height: 680px"></a></p>
+<p class="E">&nbsp;</p>
+<p class="F">First select an assembly in the left hand pane, then select one of the assembly's packages in the right hand pane. Click OK and the selected package will be opened in TheIDE with the package name shown in TheIDE application window title bar. &nbsp;The package that has been opened is referred to as the <span class="M">main package</span> and it appears first in the list of packages shown at the left-hand-side of TheIDE. &nbsp;To select a different <span class="M">main package</span>, the <span class="G">Set-main-package</span> option from the File menu can be used. &nbsp;For more detail on creating and configuring packages and assemblies, <a href="app$ide$ConfiguringPackagesAssemblies$en-us.html">see this</a>.</p>
+<p class="F">In TheIDE, a build command builds a package, not an assembly, but the assembly determines where the needed packages and include files are looked for. &nbsp;The Build option on TheIDE build-menu always builds the <span class="M">main package</span>. &nbsp;The build-package option can be used to build any of the packages that are directly or indirectly used by the <span class="M">main package</span> i.e. any of the packages displayed in the package list at the left hand side of TheIDE. &nbsp;On the Project menu in TheIDE, the <span class="G">add-package</span>, <span class="G">package-organizer</span> and <span class="G">main-package-configuration</span> options apply to the <span class="M">main package</span>. &nbsp;The <span class="G">project-export</span> option on the File menu exports the main package and all the packages that are directly and indirectly used by the main package, to any folder you choose.</p>
+<hr><p id="4" class="D">4. Nests</p>
+<p class="F">U++ requires that packages be organized into nests. &nbsp;A nest is actually just a directory containing a set of package directories and source files. &nbsp;An assembly defines an ordered list of nests (paths) and the packages contained in those nests form the packages of the assembly. &nbsp;The packages associated with an assembly are shown in the right hand pane of the <span class="G">Select-main-package</span> dialog when the assembly name is highlighted in the left hand pane. &nbsp;The nest paths specified in an assembly can also be used to set additional include paths for the compiler. See <span class="G">Include-paths-and-#include-directives</span> below for more detail.</p>
+<p class="F">The assembly containing all of the U++ library packages is uppsrc and the name of the associated nest is also uppsrc.</p>
+<hr><p id="5" class="D">5. The U++ examples assembly</p>
+<p class="F">The assembly containing all of the U++ examples (such as HelloWorld), is named &quot;examples&quot; and you can see it in the select-main-package dialog. &nbsp;It has two nests, &quot;examples&quot; and &quot;uppsrc&quot;. &nbsp;On the Windows platform, the path setting for the nests of the examples assembly might appear as follows :</p>
+<p class="F">C:/upp/examples;C:/upp/uppsrc</p>
+<p class="F">where C:\upp is the U++ root installation directory. &nbsp;A semicolon separates the path settings for each nest &nbsp;The examples nest contains all of the U++ examples packages and the uppsrc nest contains all of the U++ core library packages.</p>
+<p class="F">For portability, <span class="P"><u>forward slashes should be used in all path specifications</u></span> rather than back-slashes. &nbsp;This also applies to #include directives.</p>
+<hr><p id="6" class="D">6. Include paths and #include directives</p>
+<p class="F">The nest paths defined in an assembly determine where U++ looks for the assembly's packages. &nbsp;These paths are also added to the &quot;include path list&quot; for the compilation of source files via the &quot;-I&quot; (or equivalent) compiler command line option. &nbsp;e.g. for the examples assembly above, the -I command line setting (for GCC) would be </p>
+<p class="F">-IC:/upp/examples -IC:/upp/uppsrc</p>
+<p class="F">This means that the path names used in #include directives in C++ source files can begin with the name of a folder/package that is the member of an assembly nest. &nbsp;e.g. in the HelloWorld example hello.cpp file you will see</p>
+<p class="Q">#include &lt;CtrlLib/CtrlLib.h&gt;</p>
+<p class="F">CtrlLib is the name of a U++ library package in the uppsrc nest. &nbsp;Angle brackets should be used in a #include directive when #including U++ source files because this prevents the compiler from looking in the current directory for a folder named e.g. &quot;CtrlLib&quot;. &nbsp;i.e. with all U++ supported compilers, the angle brackets means the search for the included file begins with the paths specified in the -I directive. &nbsp;When #including files that are members of the same folder (or sub-folders) as the file doing the #include, then double quotes should be used instead of angle brackets.</p>
+<p class="F">On non-Windows platforms, folder names are case sensitive so <span class="R"><u>it is recommended that the correct case always be used</u></span> &nbsp;e.g. CtrlLib and not ctrllib.</p>
+<p class="F">See <span class="G">Alternative-#include-path-mechanisms</span> below for additional information.</p>
+<hr><p id="7" class="D">7. Package locations</p>
+<p class="F">A package folder does not have to be located in a top level nest folder. &nbsp;It may be located in a sub-folder of a nest folder if desired. &nbsp;For example, consider the following directory structure.</p>
+<p class="S">Nest1/Pkg1</p>
+<p class="S">Nest1/Project1/Pkg2</p>
+<p class="S">Nest1/Project1/Client/Pkg3</p>
+<p class="S">Nest1/Project1/Common</p>
+<p class="F">and an assembly nest path setting of</p>
+<p class="S">C:/upp/Nest1;C:/upp/uppsrc</p>
+<p class="F">Pkg1 is located in the top level Nest1 folder. Pkg2 is located in the Project1 sub-folder of Nest1. &nbsp;U++ searches all of the sub-folders of a nest to maximum depth when looking for packages.</p>
+<p class="F">A source file in Pkg3 can #include a source file in Pkg2 (File2.h) with</p>
+<p class="Q">#include &lt;Project1/Pkg2/File2.h&gt;</p>
+<p class="F">Double quotes can be used instead of angle brackets providing the Pkg3 folder does not contain a Project1 folder.</p>
+<p class="F">A source file in Pkg3 can #include a file from its own folder (File3.h) with either</p>
+<p class="Q">#include &quot;File3.h&quot;</p>
+<p class="N">or</p>
+<p class="Q">#include &lt;Project1/Client/Pkg3/File3.h&gt;</p>
+<p class="F">The organization of packages and #includes shown above allows the Project1 folder to be located in any nest.without changing any of the #includes.because all of the pathnames begin with Project1. &nbsp;It also allows an assembly to switch between different revisions of Project1 just by changing the assembly nest path setting.</p>
+<p class="F">When a package is created using the Create-new-package dialog, the package name must include some path information if the package is not a top level folder within a nest. e.g. for the Project1/Pkg2 package above, the package name needs to be entered as Project1/Pkg2. &nbsp;For Pkg1, the package name can be entered as just Pkg1 because the package is in a top level nest folder.</p>
+<p class="F">An assembly may contain multiple projects/applications or just one project. &nbsp;If there are multiple projects in an assembly then you need to consider the package/folder/file name issue described below.</p>
+<hr><p id="8" class="D">8. Package/folder/file names</p>
+<p class="F">It is usually necessary that the names of the folders and files that appear in the top level nest folders of an assembly be <span class="T"><u>unique across all the top level nest folders of that assembly</u></span> unless duplicated names are referenced using a complete path specification. &nbsp;This means that if an assembly includes the uppsrc nest, then the other nests of that assembly must not contain packages or folders that have the same name as folders/packages in the uppsrc nest. &nbsp;e.g. The HelloWorld examples nest cannot contain packages with names such as CtrlLib, RichEdit or Common because these are the names of uppsrc library packages.</p>
+<p class="F">Hence the names of uppsrc packages need to be avoided when choosing names for folders/packages that are located in a top level nest folder if the assembly includes the uppsrc nest. &nbsp;Refer to the uppsrc folder in the U++ installation path for the full list of uppsrc package/folder names. &nbsp;The names of uppsrc packages need to be avoided as folder names within any folder that is specified as an include path to the compiler (see <span class="G">alternative-include-path-mechanisms</span> below).</p>
+<p class="F">If a package is to be distributed to others, one way of avoiding a clash of package names is to locate them in a folder whose name is likely to be unique e.g. </p>
+<p class="F">Nest1/CZ1Soft/Pkg1. &nbsp;</p>
+<p class="F">and</p>
+<p class="Q">#include &lt;CZ1Soft/Pkg1/File1.h&gt;</p>
+<p class="F">CZ1Soft is a name that has a reasonable chance of being unique. &nbsp;The name of the Pkg1 folder can be anything because it is not a top level nest folder and.is not specified as an include path to the compiler.</p>
+<p class="F">If source files are placed directly in a nest folder (e.g. Nest1 above), then the names need to be unique across all nest folders of the assembly unless they are always accessed with either a complete path specification or with no path specification (in which case they need to be in the same folder as the including file). e.g.</p>
+<p class="U">#include &quot;File1.h&quot; contains no path specification.</p>
+<p class="U">#include &quot;../Pkg2/File2.h&quot; is a complete path specification.</p>
+<p class="U">#include &lt;Project1/Pkg2/File2.h&gt; is an incomplete path specification.</p>
+<p class="F">Note &quot;..&quot; in a path specification means &quot;parent folder&quot; i.e. up one level.</p>
+<hr><p id="9" class="D">9. Alternative #include path mechanisms</p>
+<p class="F">The nest paths specified in an assembly are normally used to identify the directory (or directory tree) where packages can be found and, as explained above, the &quot;normal&quot; method of #including header files is that when the header file name involves an incomplete path, the given pathname begins with the name of a top-level nest folder e.g. #include &lt;CtrlLib/CtrlLib.h&gt;. &nbsp;CtrlLib is the name of a top-level nest folder because it is located in the uppsrc nest.</p>
+<p class="F">Because the paths specified in an assembly are added to the &quot;include path list&quot; for the compiler (using -I or /I), you can use this mechanism to add directories to the include path list, even if those directories don't contain any packages. &nbsp;You need to remember that the search for packages looks in all sub-folders of the assembly nest paths and also that you may need to avoid using folder names that are the names of uppsrc packages (see the <span class="G">Package-folder-names</span> section above). &nbsp;The order of the -I (or /I) directives supplied to the compiler is the same as the order of the nest paths specified in the assembly and this determines the search order when the compiler looks for #include files.</p>
+<p class="F">e.g. suppose you have a folder, C:/SomeFolder, that contains a header file SomeHeader.h. &nbsp;You can add SomeFolder to the assembly nest path like this</p>
+<p class="F">C:/upp/examples;C:/upp/uppsrc;C:/SomeFolder</p>
+<p class="N">&nbsp;</p>
+<p class="N">In your source files you can now write</p>
+<p class="Q">#include &lt;SomeHeader.h&gt;</p>
+<p class="N">or</p>
+<p class="Q">#include &quot;SomeHeader.h&quot;</p>
+<p class="F">Angle brackets are preferred because they mean the search begins in paths specified in -I directives rather than in the folder containing the file doing the #include</p>
+<p class="F">.Providing the header files in the SomeFolder folder use angle brackets when #including uppsrc files, it will not matter if the SomeFolder folder contains directories that have the same name as uppsrc directories, because C:/SomeFolder is last in the assembly nest path list.</p>
+<p class="F">You can also use the <span class="G">package-organizer</span> in TheIDE to specify additional include paths. &nbsp;The <span class="G">package-organizer</span> allows you to enter additional switches to be passed to the compiler for all packages, for specific packages or for specific source files. &nbsp;This allows you to add a -I switch (or /I) to specify an include path. &nbsp;These switches get added to the compiler command line <span class="G">after</span> the -I switches for the assembly nest paths. &nbsp;To see how the compiler is invoked when a source file is compiled, turn on the <span class="G">verbose</span> option in the Setup menu in TheIDE. &nbsp;You can use <span class="M">build flags</span> to restrict the additional compiler switches to be in effect only when your own package's source files are being compiled. &nbsp;The <a href="app$ide$ConfiguringPackagesAssemblies$en-us.html"><span class="G">package-organizer</span></a> also allows you to specify compiler switches for specific files.</p>
+<hr><p id="10" class="D">10. Layout file #includes</p>
+<p class="F">A layout file contains a description of the GUI part of a project i.e. the layout of widgets etc. &nbsp;e.g. the AddressBook example in the examples assembly uses a layout file and the AddressBook.cpp file has the following two lines.</p>
+<p class="Q">#define LAYOUTFILE &lt;AddressBook/AddressBook.lay&gt;</p>
+<p class="Q">#include &lt;CtrlCore/lay.h&gt;</p>
+<p class="F">The #define for LAYOUTFILE should use angle brackets and not double quotes and must also include a path specification that starts with a top level folder of a nest. i.e. it should not be written as</p>
+<p class="Q">#define LAYOUTFILE &quot;AddressBook.lay&quot;</p>
+<p class="F">because the CtrlCore/lay.h file uses it to #include the layout file (multiple times) with</p>
+<p class="Q">#include LAYOUTFILE</p>
+<p class="F">&nbsp;</p>
+</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>
+<TABLE BORDER="0" WIDTH="100%"><TR><TD></TD>
+</TR>
+</TABLE>
+<TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" BGCOLOR="#FFFFFF" WIDTH="100%" style="border-style: solid; border-width: 1px; border-color: #6E89AE;padding: 10px;;"><TR><TD><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%"><TR><TD><p class="A"><span class="B"> </span><a href="www$uppweb$contribweb$en-us.html">Do you want to contribute?</a></p>
+</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>
+<script type="text/javascript">var a={};var p=window.location.pathname.split("/");p=p[p.length-1];var s='<select id="lang" onchange="window.location=document.getElementById(\'lang\').value;">';for(l in a){if(p==l){d=" selected=1"}else{d=""}s+='<option value="'+l+'"'+d+'>'+a[l]+'</option>'}s+='</select>';var d=document.createElement('div');d.innerHTML=s;var c=document.getElementById('langs');c.replaceChild(d,c.firstChild);document.getElementById('langbox').style.display='block';</script></BODY>

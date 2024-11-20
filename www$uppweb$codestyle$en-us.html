@@ -1,0 +1,314 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en-us">
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
+<META NAME="Generator" CONTENT="U++ HTML Package">
+<META NAME="Description" CONTENT="Code style has always been subject to a lot of discussions, some of them being really passionate and emotional.">
+<TITLE>Code style :: U++</TITLE>
+<STYLE TYPE="text/css"><!--
+.A{margin:0px 0px 0px 0px;text-indent:0px;text-align:left;color:#000000;font-family:sans-serif;font-size:10pt;font-weight:normal;font-style:normal;}
+.B{font-size:12pt;}
+.C{margin:0px 0px 16px 0px;text-indent:0px;text-align:left;color:#000000;font-family:serif;font-size:24pt;font-weight:bold;font-style:normal;}
+.D{margin:16px 0px 0px 0px;text-indent:0px;text-align:left;color:#000000;font-family:sans-serif;font-size:16pt;font-weight:bold;font-style:normal;}
+.E{margin:8px 0px 8px 0px;text-indent:0px;text-align:left;color:#000000;font-family:sans-serif;font-size:10pt;font-weight:normal;font-style:normal;line-height:150%}
+.F{display:list-item;list-style-type:disc;margin:8px 0px 8px 20px;text-indent:0px;text-align:left;color:#000000;font-family:sans-serif;font-size:10pt;font-weight:normal;font-style:normal;line-height:150%}
+.G{font-weight:bold;}
+.H{font-style:italic;}
+.I{font-family:monospace;}
+.J{display:list-item;list-style-type:disc;margin:8px 0px 8px 20px;text-indent:0px;text-align:left;color:#000000;font-family:monospace;font-size:10pt;font-weight:normal;font-style:normal;line-height:150%}
+.K{font-family:sans-serif;font-weight:bold;}
+.L{font-family:sans-serif;}
+.M{font-family:monospace;font-weight:bold;}
+.N{margin:0px 0px 0px 64px;text-indent:0px;text-align:left;color:#000000;font-family:monospace;font-size:10pt;font-weight:normal;font-style:normal;}
+.O{margin:8px 0px 8px 32px;text-indent:0px;text-align:left;color:#000000;font-family:sans-serif;font-size:10pt;font-weight:normal;font-style:normal;line-height:150%}
+.P{margin:8px 0px 8px 64px;text-indent:0px;text-align:left;color:#000000;font-family:monospace;font-size:10pt;font-weight:normal;font-style:normal;line-height:150%}
+.Q{margin:0px 0px 0px 0px;text-indent:0px;text-align:left;color:#1c2a96;font-family:monospace;font-size:10pt;font-weight:normal;font-style:normal;}
+.R{margin:0px 0px 0px 0px;text-indent:0px;text-align:left;color:#000000;font-family:sans-serif;font-size:14pt;font-weight:bold;font-style:normal;}
+a.l1         { text-decoration:none; font-size: 8pt; font-family: sans-serif; font-weight: normal; }
+a.l1:link    { color:#000000; }
+a.l1:visited { color:#000080; }
+a.l1:hover   { color:#9933CC; }
+a.l1:active  { color:#000000; }
+a.l2         { text-decoration:none; font-size: 12pt; font-family: sans-serif; font-variant: small-caps; }
+a.l2:link    { color:#0066FF; }
+a.l2:visited { color:#FF6600; }
+a.l2:hover   { color:#BC0624; }
+a.l2:active  { color:#BC0024; }
+
+-->
+</STYLE>
+<META NAME="keywords" CONTENT="framework, toolkit, widget, c++, visual, studio, dev-cpp, builder, ide, class, component,wxwidgets, qt, rapid, application, development, rad, mfc, linux, macos, gui, sdl, directx, desktop"><META name="robots" content="index,follow">
+<LINK rel="alternate" type="application/rss+xml" title="SVN changes" href="svnchanges.xml">
+<LINK rel="shortcut icon" type="image/png" href="favicon.png">
+</HEAD><BODY BGCOLOR="#D2D9D2" ALINK="#800000" LINK="#000000" VLINK="#000080"><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%"><TR><TD COLSPAN="3"><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%" BGCOLOR="#FFFFFF" style="border: 1px solid #6E89AE;padding-left: 10px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;"><TR><TD><A HREF="index.html"><IMG SRC="0i.png" ALT="" BORDER="0"></A>
+</TD>
+<TD ALIGN="RIGHT" VALIGN="BOTTOM" STYLE="padding-bottom: 5px; background-image: url('1i.png')"><span style="font-size: 14pt; font-family: sans-serif;"><script type="text/javascript"><!--
+google_ad_client = "pub-1082147624384270";
+google_ad_width = 468;
+google_ad_height = 60;
+google_ad_format = "468x60_as";
+google_ad_type = "text_image";
+google_ad_channel = "";
+google_color_border = "336699";
+google_color_bg = "FFFFFF";
+google_color_link = "0000FF";
+google_color_text = "000000";
+google_color_url = "008000";
+//--></script>
+<script type="text/javascript"
+  src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+&nbsp;&nbsp;</span>
+</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>
+<TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%"><TR><TD COLSPAN="3" BGCOLOR="#D2D9D2" HEIGHT="6"></TD>
+</TR>
+<TR><TD VALIGN="TOP" ALIGN="CENTER"><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="160"><TR><TD ALIGN="CENTER"><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%" BGCOLOR="#FFFFFF" style="border-style: solid; border-width: 1px; border-color: #6E89AE;padding: 0px"><TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px;"><A HREF="www$uppweb$overview$en-us.html" CLASS="l1">Overview</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$examples$en-us.html" CLASS="l1">Examples</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$ss$en-us.html" CLASS="l1">Screenshots</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$comparison$en-us.html" CLASS="l1">Comparisons</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$apps$en-us.html" CLASS="l1">Applications</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$download$en-us.html" CLASS="l1">Download</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$documentation$en-us.html" CLASS="l1">Documentation</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$Tutorials$en-us.html" CLASS="l1">Tutorials</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="app$ide$UppHub$en-us.html" CLASS="l1">UppHub</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$Roadmap$en-us.html" CLASS="l1">Status & Roadmap</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$FAQ$en-us.html" CLASS="l1">FAQ</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="app$ide$About$en-us.html" CLASS="l1">Authors & License</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="https://www.ultimatepp.org/forums" CLASS="l1">Forums</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$Funding$en-us.html" CLASS="l1">Funding U++</A>
+</TD>
+</TR>
+</TABLE>
+<TABLE BORDER="0" WIDTH="100%"><TR><TD></TD>
+</TR>
+</TABLE>
+<TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%" BGCOLOR="#FFFFFF" style="border-style: solid; border-width: 1px; border-color: #6E89AE;padding: 0px"><TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('3i.png'); border: 0px solid black;padding-left:12px; padding-right:0px; padding-top:1px; padding-bottom:1px;color:#FFFFFF;"><B><span style="font-size: 8pt; font-family: sans-serif;">Search on this site</span>
+</B>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:6px; padding-right:0px; padding-top:4px; padding-bottom:4px;border-top: 1px solid #6E89AE;"><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%"><TR><TD><IMG SRC="4i.png" ALT="" BORDER="0"></TD>
+<TD><FORM ACTION="https://www.google.com/search" METHOD="GET" STYLE="margin:0px;padding:0px;"><INPUT TYPE="HIDDEN" NAME="ie" VALUE="UTF-8"><INPUT TYPE="HIDDEN" NAME="oe" VALUE="UTF-8"><INPUT TYPE="TEXT" NAME="q" SIZE="15" MAXLENGTH="256" placeholder="Site search"><INPUT TYPE="HIDDEN" NAME="sitesearch" VALUE="ultimatepp.org"></FORM>
+</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>
+<TABLE BORDER="0" WIDTH="100%"><TR><TD></TD>
+</TR>
+</TABLE>
+<br><div id="fb-root"></div>
+<script type="text/javascript">(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) {return;}
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+<div class="fb-like" data-href="https://www.facebook.com/pages/Upp-Framework/262346610476027?sk=wall" data-send="false" data-layout="button_count" data-width="160" data-show-faces="false" data-font="arial"></div>
+<br><br><script type="text/javascript"><!--
+google_ad_client = "pub-1082147624384270";
+google_ad_width = 160;
+google_ad_height = 600;
+google_ad_format = "160x600_as";
+google_ad_type = "text_image";
+google_ad_channel = "";
+google_color_border = "336699";
+google_color_bg = "FFFFFF";
+google_color_link = "0000FF";
+google_color_text = "000000";
+google_color_url = "008000";
+//--></script>
+<script type="text/javascript"
+  src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script><br><br><script type="text/javascript"><!--
+google_ad_client = "pub-1082147624384270";
+google_ad_width = 160;
+google_ad_height = 90;
+google_ad_format = "160x90_0ads_al_s";
+google_ad_channel = "";
+google_color_border = "336699";
+google_color_bg = "FFFFFF";
+google_color_link = "0000FF";
+google_color_text = "000000";
+google_color_url = "008000";
+//--></script>
+<script type="text/javascript"
+  src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+<br><br><br><br><br><br><A HREF="https://sourceforge.net/projects/upp/"><IMG SRC="https://sourceforge.net/sflogo.php?group_id=93970&amp;type=2" ALT="SourceForge.net Logo" BORDER="0" WIDTH="125" HEIGHT="37"></A>
+<br><br><A HREF="https://flathub.org/en/apps/org.ultimatepp.TheIDE"><IMG SRC="5i.png" ALT="SourceForge.net Logo" BORDER="0" WIDTH="125" HEIGHT="37"></A>
+<br><br><div style="background-color:#ffffff;width:125;height:35"><A HREF="https://github.com/ultimatepp"><IMG SRC="6i.png" ALT="GitHub Logo" BORDER="0" WIDTH="125" HEIGHT="35"></A>
+</div><br><div style="background-color:#ffffff;width:125;height:35"><div style="height:5"></div><A HREF="https://discord.gg/8XzqQzXZzb"><IMG SRC="https://assets-global.website-files.com/6257adef93867e50d84d30e2/636e0b5061df29d55a92d945_full_logo_blurple_RGB.svg" ALT="Discord Logo" BORDER="0" WIDTH="125" HEIGHT="25"></A>
+</div><br></TD>
+</TR>
+</TABLE>
+</TD>
+<TD VALIGN="TOP" BGCOLOR="#D2D9D2"><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="6"><TR><TD></TD>
+</TR>
+</TABLE>
+</TD>
+<TD VALIGN="TOP" WIDTH="100%" BGCOLOR="#D2D9D2"><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" BGCOLOR="#FFFFFF" WIDTH="100%" style="border-style: solid; border-width: 1px; border-color: #6E89AE;padding: 10px;;"><TR><TD><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%"><TR><TD><p class="C">Ultimate++ code style</p>
+<p class="D">Introduction</p>
+<p class="E">Code style has always been subject to a lot of discussions, some of them being really passionate and emotional. Those of you already having seen the intimate details of Ultimate++ in uppsrc and maybe bazaar surely have a concept in a certain degree of order, functionality and maybe, like I did, even a certain beauty (yes, I am married in real world :), all hard to describe. For me the code felt useful, well structured and quite easy to read and thus easier to understand. And this is maybe the essence of good code style. All the things mentioned below are tiny little details that can help to achieve this overall perception in U++ code. Don't hesitate to look at the code in uppsrc to learn. I admit, that to 'learn' U++ style isn't done in a day because it isn't a fixed law. One needs to have worked with it for a while and feel some comfort with it. But this document should shorten the time.</p>
+<p class="E">If you like to contribute code or major fixes, you are encouraged to pay attention to these things. It makes life easier for the community, which usually keeps an eye on the changes made to the code base. It enables us (the community, of which you are about to be part of) to spot bugs fast and provide fast fixes. Having X coding styles mixed together in a project is just about the worst case. Though U++ is split in packages it is still considered one single project. So, please make sure you consider overall goals that will be introduced in the next paragraph.</p>
+<p class="D">Design</p>
+<p class="F">Produce clean, 'intuitive' and compact code, making <span class="G">usage </span>easy as well as reading (and ideally understanding) the code.</p>
+<p class="F"><span class="G">Use Topic++</span> (.tpp files) to comment your class usage, this is the prefered method of code commenting. Use separate files for API and implementation documentation. TheIDE can generate the appropriate files for you. Click on the little cyan rectangles next to functions, variables or classes. '<span class="H">New reference topic</span>&quot; adds to 'src.tpp', '<span class="H">New implementation topic</span>' adds to 'srcimp.tpp'. <span class="G">Provide also the &quot;Big picture&quot;</span> design aspects of your package / class, briefly outlined in the src.tpp as a header (see U++ class documentation as an example). This relieves a lot of headache when studying the code.</p>
+<p class="F"><span class="G">Be familiar with U++, use its facilities</span>. This is a general prerequisite anyway, but it means to have studied the existing code and its possibilities a bit. It might happen that you have invented things that U++ already provides for you and you could have saved your time. It also means to know, understand, and thus stick to the design pattern, i.e. when implementing new Ctrl's, like knowing that there is a <span class="I">virtual Updated() </span>function to be overridden to recalculate the Ctrl's state only, without repaint, and is called with <span class="I">Ctrl::Update() </span>in a generalized manner. Another example is the Callback idea or the NTL Containers.</p>
+<p class="F">Each <span class="G">class has got its own .h and</span> (maybe multiple) <span class="G">.cpp</span> (or .hpp for template), except for classes that are tight together really closely and belong together.</p>
+<p class="F">Include package files using &quot;<span class="H">Insert package directory file</span>&quot; mainly, instead of using &quot;<span class="H">Insert any file</span>&quot;. Otherwise <span class="G">use relative to package directory file paths</span> instead of absolute paths.</p>
+<p class="F">If you use a Bazaar package, include it to your Assembly doing this: &quot;<span class="H">File &gt; Set Main Package</span>&quot;, &quot;<span class="H">Assembly</span>&quot; area, right button, &quot;<span class="H">Edit assembly...</span>&quot; option, &quot;<span class="H">Package nests:</span>&quot; field, adding the absolute path to Bazaar at the end.</p>
+<p class="J"><span class="K">Include relative paths</span><span class="L"> instead of absolute in </span>#include<span class="L">s, like </span>#include &lt;Scatter/Scatter.h&gt;<span class="L"> instead of </span>#include &quot;/folderA/folderB/Scatter.h&quot;</p>
+<p class="F"><span class="G">Use the package idea</span> of U++. A package compounds one or more classes and its files, because they logically belong together and should all be available when using the package inside another package. A package should have an overall name and a .h with same name (which then can <span class="I">#include</span> the other class headers if any). Example: <span class="I">#include &lt;Core/Core.h&gt;</span>. This is the way you also should use other packages inside yours. (See 'Overview' for more info on packages) </p>
+<p class="F">Provide a <span class="G">Test / Demo package</span> for your package. Generally it is a good idea to have a 'MyPackage' and 'MyPackageTest' package shipped together, where functionality and Testing / Presenting is separated. Others won't need to trouble with the code too much if the can simply <span class="I">#include &lt;MyPackage/MyPackage.h&gt;</span>. a package whose usage they have observed in the Test package.</p>
+<p class="F"><span class="G">Avoid usage of new / delete</span> as hell. <span class="G">Use U++ NTL containers</span> for your data or encapsulate the allocation or deallocation of objects. Memory leaks can cause serious brain damage :). of course, don't mix new/delete with malloc/free. Pointers should only be used to really point to things and NOT to maintain the last reference to a dynamically allocated object (this should be done in containers, Array&lt;&gt;, Vector&lt;&gt;, One&lt;&gt;, Any&lt;&gt;, etc. <span class="G">everything belongs somewhere</span>...).</p>
+<p class="J"><span class="K">Avoid usage of &nbsp;</span><span class="G">#define constants</span><span class="L">, use compile time safe constants inside your class where possible. Example: </span>static const int MaxSize = 100;</p>
+<p class="F">Do not forget the <span class="M">virtual ~Destructor()</span>, As soon as your class is meant to be a base class (i.e. has any other virtual function) it should have a virtual destructor, even if it's empty.</p>
+<p class="F">Pay attention to implicit conversion. Some bugs come from constructors parametrized by default, which are used then as implicit conversion constructors. (you may protect with the 'explicit' keyword)</p>
+<p class="F">Maintain the <span class="G">const correctness. </span>Failing to do so opens doors to many bugs and makes the usage of your class difficult in classes that maintain it.</p>
+<p class="F"><span class="G">Use integer counter access</span>. Do not use iterators on the Containers. Example:</p>
+<p class="N">for(int i = 0; i &lt; vec.GetCount(); i++)</p>
+<p class="N">{</p>
+<p class="N"> &nbsp;&nbsp;&nbsp;vec[i] = 0;</p>
+<p class="N">}</p>
+<p class="F">User for each loop when you want to go over whole container.</p>
+<p class="F">Use positive action semantic. Think of general usage patterns, known to the user, like Add(), Remove(), Detach(). Example:</p>
+<p class="N">void Enable(bool e = true) { /*your code*/ }</p>
+<p class="N">void Disable() { return Enable(false); }</p>
+<p class="N">bool IsEnabled() const { /*your code*/ }</p>
+<p class="O">Upp code is both easier to read and to write because of little things like that.</p>
+<p class="F"><span class="G">Implement small functions in class definition itself</span>. Many functions only have 1 or 2 syntactically important statements (return *this doesn't count) and are maybe important to understand class function. A developer will first look in header file. Rule of thumb: &gt;3 statements should go into own implementation in .cpp file. Example:</p>
+<p class="P">String Right(int count) const { return Mid(GetLength() - count); }</p>
+<p class="J"><span class="L">Provide for Methods chaining in your class by returning *this, where logically useful. This makes it possible to </span>myControl.HSizePos().VSizePos().Enable().</p>
+<p class="F">Provide a <span class="I">String ToString() const; </span>Users will thank you if they can inspect an object in a preformatted way with <span class="I">LOG(objectInstance);</span> without having to setup own functions to show content during debug. Maybe it should be virtual to allow derived classes to extend it. This is heavily used in object design orientated languages like C#.</p>
+<p class="F">Think of providing a <span class="I">unsigned GetHashValue() const; </span>If it is logical, such a function can enable your object to directly be used as a Key in Upp containers like Index.</p>
+<p class="D">Class layout</p>
+<p class="E">A class is made for someone to use it and should expose most important info first. So keep the class components' order as following: (unneeded or unused parts can be left out)</p>
+<p class="A">&nbsp;</p>
+<p class="Q">class tempc </p>
+<p class="Q">&nbsp;&nbsp;&nbsp;&nbsp;: public EmptyClass</p>
+<p class="Q">&nbsp;&nbsp;&nbsp;&nbsp;, public Any</p>
+<p class="Q">{</p>
+<p class="Q">&nbsp;&nbsp;&nbsp;&nbsp;//FRIENDS</p>
+<p class="Q">&nbsp;&nbsp;&nbsp;&nbsp;friend class Ctrl;</p>
+<p class="Q">&nbsp;&nbsp;&nbsp;&nbsp;friend void Vector&lt;int&gt;::Clear();</p>
+<p class="Q">&nbsp;</p>
+<p class="Q">public:</p>
+<p class="Q">&nbsp;&nbsp;&nbsp;&nbsp;/*</p>
+<p class="Q">&nbsp;&nbsp;&nbsp;&nbsp;* all handling data structures and typedefs nesseccary for the usage of public classes API go here</p>
+<p class="Q">&nbsp;&nbsp;&nbsp;&nbsp;*/</p>
+<p class="Q">&nbsp;</p>
+<p class="Q">&nbsp;&nbsp;&nbsp;&nbsp;typedef unsigned HANDLE;</p>
+<p class="Q">&nbsp;&nbsp;&nbsp;&nbsp;typedef tempc CLASSNAME;</p>
+<p class="Q">&nbsp;</p>
+<p class="Q">&nbsp;&nbsp;&nbsp;&nbsp;struct SubStruct</p>
+<p class="Q">&nbsp;&nbsp;&nbsp;&nbsp;{}</p>
+<p class="Q">&nbsp;&nbsp;&nbsp;&nbsp;</p>
+<p class="Q">&nbsp;&nbsp;&nbsp;&nbsp;static const int AnIntConstant = 123;</p>
+<p class="Q">&nbsp;&nbsp;&nbsp;&nbsp;//static const float constf = 1.2f; //NOT POSSIBLE, arch dependant.</p>
+<p class="Q">&nbsp;</p>
+<p class="Q">&nbsp;&nbsp;&nbsp;&nbsp;//CTORS, DTORS, all concerning this class generation</p>
+<p class="Q">&nbsp;&nbsp;&nbsp;&nbsp;//INTERFACE, defines how to operate it</p>
+<p class="Q">&nbsp;</p>
+<p class="Q">&nbsp;&nbsp;&nbsp;&nbsp;//explicit</p>
+<p class="Q">&nbsp;&nbsp;&nbsp;&nbsp;tempc(int a = 0);</p>
+<p class="Q">&nbsp;&nbsp;&nbsp;&nbsp;virtual ~tempc() {}</p>
+<p class="Q">&nbsp;</p>
+<p class="Q">&nbsp;&nbsp;&nbsp;&nbsp;void AReadOnlyMethod() const { /*do something, bot dont change things in class*/ }</p>
+<p class="Q">&nbsp;&nbsp;&nbsp;&nbsp;void AWritableMethod() { /*here you can change your class state*/ }</p>
+<p class="Q">&nbsp;</p>
+<p class="Q">&nbsp;&nbsp;&nbsp;&nbsp;/*</p>
+<p class="Q">&nbsp;&nbsp;&nbsp;&nbsp;* Here follows the public available data, typically its place for a not close related members</p>
+<p class="Q">&nbsp;&nbsp;&nbsp;&nbsp;*/</p>
+<p class="Q">&nbsp;&nbsp;&nbsp;&nbsp;</p>
+<p class="Q">protected:</p>
+<p class="Q">&nbsp;&nbsp;&nbsp;&nbsp;/*</p>
+<p class="Q">&nbsp;&nbsp;&nbsp;&nbsp;* all handling data structures and typedefs interesting for the deriving classes go here</p>
+<p class="Q">&nbsp;&nbsp;&nbsp;&nbsp;*/</p>
+<p class="Q">&nbsp;</p>
+<p class="Q">&nbsp;&nbsp;&nbsp;&nbsp;/*</p>
+<p class="Q">&nbsp;&nbsp;&nbsp;&nbsp;* Here follows the interface, deriving classes might be interested in, accessing it directly.</p>
+<p class="Q">&nbsp;&nbsp;&nbsp;&nbsp;*/</p>
+<p class="Q">&nbsp;&nbsp;&nbsp;&nbsp;</p>
+<p class="Q">&nbsp;&nbsp;&nbsp;&nbsp;/*</p>
+<p class="Q">&nbsp;&nbsp;&nbsp;&nbsp;* Here follows the data, which mostly for performance reasons should be made available to derived classes</p>
+<p class="Q">&nbsp;&nbsp;&nbsp;&nbsp;*/</p>
+<p class="Q">&nbsp;&nbsp;&nbsp;&nbsp;</p>
+<p class="Q">private:</p>
+<p class="Q">&nbsp;&nbsp;&nbsp;&nbsp;/*</p>
+<p class="Q">&nbsp;&nbsp;&nbsp;&nbsp;* all handling data structures and typedefs which we use only internally, go here</p>
+<p class="Q">&nbsp;&nbsp;&nbsp;&nbsp;*/</p>
+<p class="Q">&nbsp;</p>
+<p class="Q">&nbsp;&nbsp;&nbsp;&nbsp;/*</p>
+<p class="Q">&nbsp;&nbsp;&nbsp;&nbsp;* Here follows the private interface, which mostly are own helper classes and functions</p>
+<p class="Q">&nbsp;&nbsp;&nbsp;&nbsp;*/</p>
+<p class="Q">&nbsp;</p>
+<p class="Q">&nbsp;&nbsp;&nbsp;&nbsp;/*</p>
+<p class="Q">&nbsp;&nbsp;&nbsp;&nbsp;* Here follows the private data, which only the class itself takes care of and none should ever know about.</p>
+<p class="Q">&nbsp;&nbsp;&nbsp;&nbsp;* in case of wrapper class this is mostly the objects that are wrapped</p>
+<p class="Q">&nbsp;&nbsp;&nbsp;&nbsp;*/</p>
+<p class="Q">};</p>
+<p class="A">&nbsp;</p>
+<p class="R">Readability</p>
+<p class="F">The <span class="G">default code style in TheIDE</span> is the first reference (Edit &gt; Advanced &gt; Format code in editor).</p>
+<p class="F"><span class="G">Use Pascal Case</span> for function names. (concatenated with capital letter at the beginning and on word boundaries, example:. <span class="I">void AddMemberElement(int a) </span>). <span class="G">Use small letters anywhere else</span>, especially in class members' names. <span class="G">Don't use Hungarian style</span> (Linus: &quot;Brain damage&quot;) or things like '<span class="I">m_myMember, _anotherMember, yetAnotherMember</span>'. Example: <span class="I">Font font; Size textsize; </span>Assist++ makes life so easy, that we do not need this to figure out if its a class member (Hit Ctrl+Space)</p>
+<p class="F">Stick to<span class="G"> implicit variable names semantic</span> inside function bodies if possible and useful. i,j,k,m,n,q, u mostly are integer counters or indexes in arrays, p is probably a pointer, a,b,c are typically bool, d is double, f is a float. v is a Vector or a Value, s is a String etc.. this makes code less typographic and focuses more on the algorithm used. But don't use such variables exclusively, please. a1 a2 and a3 are quite the same at first look :)</p>
+<p class="F">Tend to <span class="G">avoid comments</span> in general, except for necessary hints on important sections, critical for understanding. instead, <span class="G">focus and pursue a good design structure</span> in your package / class, which makes most comments disposable.</p>
+<p class="F"><span class="G">Use Tabs to intend code</span>, except in the header of a class, where many functions might have a single command body. This should be aligned with spaces (see container headers for example)</p>
+<p class="J"><span class="L">Put spaces around operators, example: </span>if(a &gt; 12) { /*code*/ }</p>
+<p class="J"><span class="L">The ampersand belongs to the object. example: </span>Ctrl&amp; GetCtrlRef();</p>
+<p class="F">Usually put static variable instantiation, CH_STYLE and other housekeeping stuff at the bottom.</p>
+<p class="A">&nbsp;</p>
+</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>
+<TABLE BORDER="0" WIDTH="100%"><TR><TD></TD>
+</TR>
+</TABLE>
+<TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" BGCOLOR="#FFFFFF" WIDTH="100%" style="border-style: solid; border-width: 1px; border-color: #6E89AE;padding: 10px;;"><TR><TD><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%"><TR><TD><p class="A"><span class="B"> </span><a href="www$uppweb$contribweb$en-us.html">Do you want to contribute?</a></p>
+</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>
+<script type="text/javascript">var a={'www$uppweb$codestyle$en-us.html':'English'};var p=window.location.pathname.split("/");p=p[p.length-1];var s='<select id="lang" onchange="window.location=document.getElementById(\'lang\').value;">';for(l in a){if(p==l){d=" selected=1"}else{d=""}s+='<option value="'+l+'"'+d+'>'+a[l]+'</option>'}s+='</select>';var d=document.createElement('div');d.innerHTML=s;var c=document.getElementById('langs');c.replaceChild(d,c.firstChild);document.getElementById('langbox').style.display='block';</script></BODY>

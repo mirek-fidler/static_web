@@ -1,0 +1,441 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en-us">
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
+<META NAME="Generator" CONTENT="U++ HTML Package">
+<META NAME="Description" CONTENT="Build flags are preprocesor values that are defined during compilation process. Some of theme are provided automatically.">
+<TITLE>Build flags :: U++</TITLE>
+<STYLE TYPE="text/css"><!--
+.A{margin:0px 0px 0px 0px;text-indent:0px;text-align:left;color:#000000;font-family:sans-serif;font-size:10pt;font-weight:normal;font-style:normal;}
+.B{font-size:12pt;}
+.C{margin:0px 0px 16px 0px;text-indent:0px;text-align:left;color:#000000;font-family:serif;font-size:24pt;font-weight:bold;font-style:normal;}
+.D{margin:16px 0px 0px 0px;text-indent:0px;text-align:left;color:#000000;font-family:sans-serif;font-size:16pt;font-weight:bold;font-style:normal;}
+.E{margin:8px 0px 8px 0px;text-indent:0px;text-align:left;color:#000000;font-family:sans-serif;font-size:10pt;font-weight:normal;font-style:normal;line-height:150%}
+.F{margin:0px 0px 0px 0px;text-indent:0px;text-align:center;color:#000000;font-family:sans-serif;font-size:10pt;font-weight:normal;font-style:normal;}
+.G{border-collapse:collapse;table-layout:auto;border: 2px solid #000000;}
+.H{padding: 3px 5px 3px 5px;border-left: 1px solid #000000;border-top: 1px solid #000000;border-right: 1px solid #000000;border-bottom: 1px solid #000000;background-color:#FFFFFF;vertical-align:middle;}
+.I{margin:8px 0px 8px 0px;text-indent:0px;text-align:left;color:#000000;font-family:sans-serif;font-size:10pt;font-weight:bold;font-style:normal;line-height:150%}
+.J{padding: 3px 5px 3px 5px;border-left: 1px solid #000000;border-top: 1px solid #000000;border-right: 1px solid #000000;border-bottom: 1px solid #000000;background-color:#FFFFFF;vertical-align:top;}
+a.l1         { text-decoration:none; font-size: 8pt; font-family: sans-serif; font-weight: normal; }
+a.l1:link    { color:#000000; }
+a.l1:visited { color:#000080; }
+a.l1:hover   { color:#9933CC; }
+a.l1:active  { color:#000000; }
+a.l2         { text-decoration:none; font-size: 12pt; font-family: sans-serif; font-variant: small-caps; }
+a.l2:link    { color:#0066FF; }
+a.l2:visited { color:#FF6600; }
+a.l2:hover   { color:#BC0624; }
+a.l2:active  { color:#BC0024; }
+
+-->
+</STYLE>
+<META NAME="keywords" CONTENT="framework, toolkit, widget, c++, visual, studio, dev-cpp, builder, ide, class, component,wxwidgets, qt, rapid, application, development, rad, mfc, linux, macos, gui, sdl, directx, desktop"><META name="robots" content="index,follow">
+<LINK rel="alternate" type="application/rss+xml" title="SVN changes" href="svnchanges.xml">
+<LINK rel="shortcut icon" type="image/png" href="favicon.png">
+</HEAD><BODY BGCOLOR="#D2D9D2" ALINK="#800000" LINK="#000000" VLINK="#000080"><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%"><TR><TD COLSPAN="3"><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%" BGCOLOR="#FFFFFF" style="border: 1px solid #6E89AE;padding-left: 10px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;"><TR><TD><A HREF="index.html"><IMG SRC="0i.png" ALT="" BORDER="0"></A>
+</TD>
+<TD ALIGN="RIGHT" VALIGN="BOTTOM" STYLE="padding-bottom: 5px; background-image: url('1i.png')"><span style="font-size: 14pt; font-family: sans-serif;"><script type="text/javascript"><!--
+google_ad_client = "pub-1082147624384270";
+google_ad_width = 468;
+google_ad_height = 60;
+google_ad_format = "468x60_as";
+google_ad_type = "text_image";
+google_ad_channel = "";
+google_color_border = "336699";
+google_color_bg = "FFFFFF";
+google_color_link = "0000FF";
+google_color_text = "000000";
+google_color_url = "008000";
+//--></script>
+<script type="text/javascript"
+  src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+&nbsp;&nbsp;</span>
+</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>
+<TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%"><TR><TD COLSPAN="3" BGCOLOR="#D2D9D2" HEIGHT="6"></TD>
+</TR>
+<TR><TD VALIGN="TOP" ALIGN="CENTER"><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="160"><TR><TD ALIGN="CENTER"><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%" BGCOLOR="#FFFFFF" style="border-style: solid; border-width: 1px; border-color: #6E89AE;padding: 0px"><TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px;"><A HREF="www$uppweb$overview$en-us.html" CLASS="l1">Overview</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$examples$en-us.html" CLASS="l1">Examples</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$ss$en-us.html" CLASS="l1">Screenshots</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$comparison$en-us.html" CLASS="l1">Comparisons</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$apps$en-us.html" CLASS="l1">Applications</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$download$en-us.html" CLASS="l1">Download</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$documentation$en-us.html" CLASS="l1">Documentation</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$Tutorials$en-us.html" CLASS="l1">Tutorials</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="app$ide$UppHub$en-us.html" CLASS="l1">UppHub</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$Roadmap$en-us.html" CLASS="l1">Status & Roadmap</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$FAQ$en-us.html" CLASS="l1">FAQ</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="app$ide$About$en-us.html" CLASS="l1">Authors & License</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="https://www.ultimatepp.org/forums" CLASS="l1">Forums</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$Funding$en-us.html" CLASS="l1">Funding U++</A>
+</TD>
+</TR>
+</TABLE>
+<TABLE BORDER="0" WIDTH="100%"><TR><TD></TD>
+</TR>
+</TABLE>
+<TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%" BGCOLOR="#FFFFFF" style="border-style: solid; border-width: 1px; border-color: #6E89AE;padding: 0px"><TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('3i.png'); border: 0px solid black;padding-left:12px; padding-right:0px; padding-top:1px; padding-bottom:1px;color:#FFFFFF;"><B><span style="font-size: 8pt; font-family: sans-serif;">Search on this site</span>
+</B>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:6px; padding-right:0px; padding-top:4px; padding-bottom:4px;border-top: 1px solid #6E89AE;"><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%"><TR><TD><IMG SRC="4i.png" ALT="" BORDER="0"></TD>
+<TD><FORM ACTION="https://www.google.com/search" METHOD="GET" STYLE="margin:0px;padding:0px;"><INPUT TYPE="HIDDEN" NAME="ie" VALUE="UTF-8"><INPUT TYPE="HIDDEN" NAME="oe" VALUE="UTF-8"><INPUT TYPE="TEXT" NAME="q" SIZE="15" MAXLENGTH="256" placeholder="Site search"><INPUT TYPE="HIDDEN" NAME="sitesearch" VALUE="ultimatepp.org"></FORM>
+</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>
+<TABLE BORDER="0" WIDTH="100%"><TR><TD></TD>
+</TR>
+</TABLE>
+<br><div id="fb-root"></div>
+<script type="text/javascript">(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) {return;}
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+<div class="fb-like" data-href="https://www.facebook.com/pages/Upp-Framework/262346610476027?sk=wall" data-send="false" data-layout="button_count" data-width="160" data-show-faces="false" data-font="arial"></div>
+<br><br><script type="text/javascript"><!--
+google_ad_client = "pub-1082147624384270";
+google_ad_width = 160;
+google_ad_height = 600;
+google_ad_format = "160x600_as";
+google_ad_type = "text_image";
+google_ad_channel = "";
+google_color_border = "336699";
+google_color_bg = "FFFFFF";
+google_color_link = "0000FF";
+google_color_text = "000000";
+google_color_url = "008000";
+//--></script>
+<script type="text/javascript"
+  src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script><br><br><script type="text/javascript"><!--
+google_ad_client = "pub-1082147624384270";
+google_ad_width = 160;
+google_ad_height = 90;
+google_ad_format = "160x90_0ads_al_s";
+google_ad_channel = "";
+google_color_border = "336699";
+google_color_bg = "FFFFFF";
+google_color_link = "0000FF";
+google_color_text = "000000";
+google_color_url = "008000";
+//--></script>
+<script type="text/javascript"
+  src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+<br><br><br><br><br><br><A HREF="https://sourceforge.net/projects/upp/"><IMG SRC="https://sourceforge.net/sflogo.php?group_id=93970&amp;type=2" ALT="SourceForge.net Logo" BORDER="0" WIDTH="125" HEIGHT="37"></A>
+<br><br><A HREF="https://flathub.org/en/apps/org.ultimatepp.TheIDE"><IMG SRC="5i.png" ALT="SourceForge.net Logo" BORDER="0" WIDTH="125" HEIGHT="37"></A>
+<br><br><div style="background-color:#ffffff;width:125;height:35"><A HREF="https://github.com/ultimatepp"><IMG SRC="6i.png" ALT="GitHub Logo" BORDER="0" WIDTH="125" HEIGHT="35"></A>
+</div><br><div style="background-color:#ffffff;width:125;height:35"><div style="height:5"></div><A HREF="https://discord.gg/8XzqQzXZzb"><IMG SRC="https://assets-global.website-files.com/6257adef93867e50d84d30e2/636e0b5061df29d55a92d945_full_logo_blurple_RGB.svg" ALT="Discord Logo" BORDER="0" WIDTH="125" HEIGHT="25"></A>
+</div><br></TD>
+</TR>
+</TABLE>
+</TD>
+<TD VALIGN="TOP" BGCOLOR="#D2D9D2"><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="6"><TR><TD></TD>
+</TR>
+</TABLE>
+</TD>
+<TD VALIGN="TOP" WIDTH="100%" BGCOLOR="#D2D9D2"><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" BGCOLOR="#FFFFFF" WIDTH="100%" style="border-style: solid; border-width: 1px; border-color: #6E89AE;padding: 10px;;"><TR><TD><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%"><TR><TD><p class="C">Build flags</p>
+<hr><p class="D">Table of contents</p>
+<p class="A">&nbsp;</p>
+<p class="A"><a href="app$ide$Flags_en-us.html#1">1. Introduction</a></p>
+<p class="A"><a href="app$ide$Flags_en-us.html#2">2. Main configuration flags</a></p>
+<p class="A"><a href="app$ide$Flags_en-us.html#3">3. Output method flags</a></p>
+<p class="A"><a href="app$ide$Flags_en-us.html#4">4. Platform flags</a></p>
+<p class="A"><a href="app$ide$Flags_en-us.html#5">5. Flags determining the builder</a></p>
+<p class="A"><a href="app$ide$Flags_en-us.html#6">6. Other flags</a></p>
+<p class="A">&nbsp;</p>
+<hr><p id="1" class="D">1. Introduction</p>
+<p class="E">Build flags are preprocesor values that are defined during compilation process. Some of theme are provided automatically. On the other hand we have a flags that can be defined by the user directly in TheIDE. Below screenshot presents where you can do it:</p>
+<p class="A">&nbsp;</p>
+<p class="F"><a href="app$ide$Flags$en-us.html_0.png"><img src="app$ide$Flags$en-us.html_0.png" border="0" alt="" style="width: 782px; height: 212px"></a></p>
+<p class="A">&nbsp;</p>
+<p class="E">You can posses several flags configuration and change it by selecting item in the drop down list ([2]). You can add new configuration or edit existing one in the flags editor ([1]) shown below:</p>
+<p class="A">&nbsp;</p>
+<p class="F"><a href="app$ide$Flags$en-us.html_1.png"><img src="app$ide$Flags$en-us.html_1.png" border="0" alt="" style="width: 554px; height: 210px"></a></p>
+<p class="A">&nbsp;</p>
+<p class="E">Flags can be combined for single configuration. Each flag needs to be separated with the space. For example we can have &quot;GUI USEMALLOC&quot;. This configuration will create GUI application without custom U++ allocator.</p>
+<hr><p id="2" class="D">2. Main configuration flags</p>
+<p class="E">Main configuration flags are provided by the user. Most of the time they are added automatically to the project. This situation happens when you create your package using our &quot;New Package&quot; creator. For example user creates &quot;CtrlLib&quot; application, then &quot;GUI&quot; flag is added automatically. Main configuration flags are located below:</p>
+<p class="A">&nbsp;</p>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr><td width="100%"><table width="100%" class="G"><colgroup><col width="24%"><col width="75%"></colgroup>
+<tr><td class="H"><p class="I">GUI</p>
+</td>
+<td class="H"><p class="E">Build GUI application.</p>
+</td>
+</tr>
+</table></td>
+</tr></table>
+<p class="A">&nbsp;</p>
+<p class="A">&nbsp;</p>
+<hr><p id="3" class="D">3. Output method flags</p>
+<p class="A">&nbsp;</p>
+<p class="A">These flags are added based on options in build method dialog.</p>
+<p class="A">&nbsp;</p>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr><td width="100%"><table width="100%" class="G"><colgroup><col width="24%"><col width="75%"></colgroup>
+<tr><td class="J"><p class="I">DEBUG</p>
+</td>
+<td class="H"><p class="E">Output mode is set to Debug (not Release).</p>
+</td>
+</tr>
+<tr><td class="J"><p class="I">DEBUG_MINIMAL</p>
+</td>
+<td class="H"><p class="E">Minimal debug information - depends on actual builder, usually it should provide line numbers information to debugger.</p>
+</td>
+</tr>
+<tr><td class="J"><p class="I">DEBUG_FULL</p>
+</td>
+<td class="H"><p class="E">Full debug info.</p>
+</td>
+</tr>
+<tr><td class="J"><p class="I">SHARED</p>
+</td>
+<td class="H"><p class="E">Prefer dynamic libraries when linking.</p>
+</td>
+</tr>
+<tr><td class="J"><p class="I">SO</p>
+</td>
+<td class="H"><p class="E">Link non-main packages as shared libraries (.dll/.so). Implies SHARED.</p>
+</td>
+</tr>
+<tr><td class="J"><p class="I">BLITZ</p>
+</td>
+<td class="H"><p class="E">Use blitz build.</p>
+</td>
+</tr>
+</table></td>
+</tr></table>
+<p class="A">&nbsp;</p>
+<p class="A">&nbsp;</p>
+<hr><p id="4" class="D">4. Platform flags</p>
+<p class="A">&nbsp;</p>
+<p class="A">These flags are added by builder based on target platform.</p>
+<p class="A">&nbsp;</p>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr><td width="100%"><table width="100%" class="G"><colgroup><col width="24%"><col width="75%"></colgroup>
+<tr><td class="H"><p class="I">ANDROID</p>
+</td>
+<td class="H"><p class="E">Android</p>
+</td>
+</tr>
+<tr><td class="H"><p class="I">WIN32</p>
+</td>
+<td class="H"><p class="E">Win32.</p>
+</td>
+</tr>
+<tr><td class="H"><p class="I">WIN64</p>
+</td>
+<td class="H"><p class="E">Win64</p>
+</td>
+</tr>
+<tr><td class="H"><p class="I">POSIX</p>
+</td>
+<td class="H"><p class="E">Anything else then WIN32</p>
+</td>
+</tr>
+<tr><td class="H"><p class="I">LINUX</p>
+</td>
+<td class="H"><p class="E">Linux</p>
+</td>
+</tr>
+<tr><td class="H"><p class="I">COCOA</p>
+</td>
+<td class="H"><p class="E">macOS</p>
+</td>
+</tr>
+<tr><td class="H"><p class="I">FREEBSD</p>
+</td>
+<td class="H"><p class="E">FreeBSD</p>
+</td>
+</tr>
+<tr><td class="H"><p class="I">OPENBSD</p>
+</td>
+<td class="H"><p class="E">OpenBSD</p>
+</td>
+</tr>
+<tr><td class="H"><p class="I">NETBSD</p>
+</td>
+<td class="H"><p class="E">NetBSD</p>
+</td>
+</tr>
+<tr><td class="H"><p class="I">SOLARIS</p>
+</td>
+<td class="H"><p class="E">Solaris</p>
+</td>
+</tr>
+</table></td>
+</tr></table>
+<p class="A">&nbsp;</p>
+<p class="A">&nbsp;</p>
+<hr><p id="5" class="D">5. Flags determining the builder</p>
+<p class="E">Following flags are provided by the currently selected build method:</p>
+<p class="A">&nbsp;</p>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr><td width="100%"><table width="100%" class="G"><colgroup><col width="24%"><col width="75%"></colgroup>
+<tr><td class="H"><p class="I">MSC71</p>
+</td>
+<td class="H"><p class="E">Microsoft Visual C++ 7.1</p>
+</td>
+</tr>
+<tr><td class="H"><p class="I">MSC8</p>
+</td>
+<td class="H"><p class="E">Microsoft Visual C++ 8.0</p>
+</td>
+</tr>
+<tr><td class="H"><p class="I">GCC</p>
+</td>
+<td class="H"><p class="E">GCC compiler in implicit mode (32 or 64).</p>
+</td>
+</tr>
+<tr><td class="H"><p class="I">GCC32</p>
+</td>
+<td class="H"><p class="E">GCC compiler in 32-bit mode (-m32)</p>
+</td>
+</tr>
+<tr><td class="H"><p class="I">CLANG</p>
+</td>
+<td class="H"><p class="E">CLANG compiler in implicit mode.</p>
+</td>
+</tr>
+<tr><td class="H"><p class="I">EVC_ARM</p>
+</td>
+<td class="H"><p class="E">Microsoft WinCE C++ ARM complier.</p>
+</td>
+</tr>
+<tr><td class="H"><p class="I">EVC_MIPS</p>
+</td>
+<td class="H"><p class="E">Microsoft WinCE C++ MIPS complier.</p>
+</td>
+</tr>
+<tr><td class="H"><p class="I">EVC_SH3</p>
+</td>
+<td class="H"><p class="E">Microsoft WinCE C++ SH3 complier.</p>
+</td>
+</tr>
+<tr><td class="H"><p class="I">EVC_SH4</p>
+</td>
+<td class="H"><p class="E">Microsoft WinCE C++ SH4 complier.</p>
+</td>
+</tr>
+<tr><td class="H"><p class="I">INTEL</p>
+</td>
+<td class="H"><p class="E">Intel C++.</p>
+</td>
+</tr>
+</table></td>
+</tr></table>
+<p class="A">&nbsp;</p>
+<p class="A">&nbsp;</p>
+<hr><p id="6" class="D">6. Other flags</p>
+<p class="E">These flags needs to be specify directly by the user. Available flags are located below:</p>
+<p class="A">&nbsp;</p>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr><td width="100%"><table width="100%" class="G"><colgroup><col width="24%"><col width="75%"></colgroup>
+<tr><td class="H"><p class="I">X11</p>
+</td>
+<td class="H"><p class="E">On POSIX systems turns on X11 backend.</p>
+</td>
+</tr>
+<tr><td class="H"><p class="I">NOGTK</p>
+</td>
+<td class="H"><p class="E">On POSIX systems turns on X11 backend and prevents linking against GTK libraries.</p>
+</td>
+</tr>
+<tr><td class="H"><p class="I">USEMALLOC</p>
+</td>
+<td class="H"><p class="E">Use malloc to allocate memory instead of U++ allocator.</p>
+</td>
+</tr>
+<tr><td class="H"><p class="I">NOAPPSQL</p>
+</td>
+<td class="H"><p class="E">Do not create global SQL/SQLR instances.</p>
+</td>
+</tr>
+<tr><td class="H"><p class="I">NOMYSQL</p>
+</td>
+<td class="H"><p class="E">Disable MySql package.</p>
+</td>
+</tr>
+<tr><td class="H"><p class="I">NOPOSTGRESQL</p>
+</td>
+<td class="H"><p class="E">Disable PostgreSQL package.</p>
+</td>
+</tr>
+<tr><td class="H"><p class="I">DLL</p>
+</td>
+<td class="H"><p class="E">Force target to be .DLL. Not typical for U++.</p>
+</td>
+</tr>
+<tr><td class="H"><p class="I">DEBUGCODE</p>
+</td>
+<td class="H"><p class="E">Allows debugging code in release mode (normally it is allowed in debug mode only).</p>
+</td>
+</tr>
+<tr><td class="H"><p class="I">MAKE_LIB</p>
+</td>
+<td class="H"><p class="E">Special mode that produces library file. This is to be used when converting U++ to regular library. All packages in workspace are placed into this library.</p>
+</td>
+</tr>
+<tr><td class="H"><p class="I">MAKE_MLIB</p>
+</td>
+<td class="H"><p class="E">Similar to MAKE_LIB, but only the main package put into the library.</p>
+</td>
+</tr>
+</table></td>
+</tr></table>
+<p class="A">&nbsp;</p>
+<p class="A">&nbsp;</p>
+</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>
+<TABLE BORDER="0" WIDTH="100%"><TR><TD></TD>
+</TR>
+</TABLE>
+<TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" BGCOLOR="#FFFFFF" WIDTH="100%" style="border-style: solid; border-width: 1px; border-color: #6E89AE;padding: 10px;;"><TR><TD><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%"><TR><TD><p class="A"><span class="B"> </span><a href="www$uppweb$contribweb$en-us.html">Do you want to contribute?</a></p>
+</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>
+<script type="text/javascript">var a={'app$ide$Flags$en-us.html':'English'};var p=window.location.pathname.split("/");p=p[p.length-1];var s='<select id="lang" onchange="window.location=document.getElementById(\'lang\').value;">';for(l in a){if(p==l){d=" selected=1"}else{d=""}s+='<option value="'+l+'"'+d+'>'+a[l]+'</option>'}s+='</select>';var d=document.createElement('div');d.innerHTML=s;var c=document.getElementById('langs');c.replaceChild(d,c.firstChild);document.getElementById('langbox').style.display='block';</script></BODY>

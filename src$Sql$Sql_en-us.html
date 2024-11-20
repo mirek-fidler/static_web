@@ -1,0 +1,442 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en-us">
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
+<META NAME="Generator" CONTENT="U++ HTML Package">
+<TITLE>Sql :: U++</TITLE>
+<STYLE TYPE="text/css"><!--
+.A{margin:0px 0px 0px 0px;text-indent:0px;text-align:left;color:#000000;font-family:sans-serif;font-size:10pt;font-weight:normal;font-style:normal;}
+.B{font-size:12pt;}
+.C{border-collapse:collapse;table-layout:auto;border: 2px solid #000000;}
+.D{padding: 3px 5px 3px 5px;border-left: 1px solid #000000;border-top: 1px solid #000000;border-right: 1px solid #000000;border-bottom: 1px solid #000000;background-color:#712A00;vertical-align:middle;}
+.E{margin:0px 0px 0px 0px;text-indent:0px;text-align:left;color:#e0e0e0;font-family:sans-serif;font-size:16pt;font-weight:bold;font-style:normal;}
+.F{margin:0px 0px 5px 0px;text-indent:0px;text-align:left;color:#0000ff;font-family:sans-serif;font-size:12pt;font-weight:normal;font-style:normal;}
+.G{margin:0px 0px 5px 0px;text-indent:0px;text-align:left;color:#000000;font-family:sans-serif;font-size:12pt;font-weight:bold;font-style:normal;}
+.H{color:#0000ff;font-weight:normal;}
+.I{font-weight:normal;}
+.J{margin:0px 0px 0px 57px;text-indent:0px;text-align:left;color:#000000;font-family:sans-serif;font-size:10pt;font-weight:normal;font-style:normal;}
+.K{margin:0px 0px 0px 0px;text-indent:0px;text-align:left;color:#000000;font-family:sans-serif;font-size:6pt;font-weight:normal;font-style:normal;}
+.L{border-collapse:collapse;table-layout:auto;border: 2px solid #808080;}
+.M{padding: 3px 5px 3px 5px;border-left: 1px solid #808080;border-top: 1px solid #808080;border-right: 1px solid #808080;border-bottom: 1px solid #808080;background-color:#C0C0C0;vertical-align:middle;}
+.N{margin:0px 0px 0px 0px;text-indent:0px;text-align:left;color:#000000;font-family:sans-serif;font-size:10pt;font-weight:bold;font-style:normal;}
+.O{margin:0px 0px 5px 0px;text-indent:0px;text-align:left;color:#000000;font-family:sans-serif;font-size:10pt;font-weight:normal;font-style:normal;}
+.P{font-weight:bold;}
+.Q{color:#0000ff;}
+.R{color:#800000;font-weight:bold;}
+.S{font-style:italic;}
+.T{margin:0px 0px 5px 0px;text-indent:0px;text-align:left;color:#0000ff;font-family:sans-serif;font-size:10pt;font-weight:normal;font-style:normal;}
+.U{color:#000000;}
+.V{color:#000000;font-weight:bold;}
+a.l1         { text-decoration:none; font-size: 8pt; font-family: sans-serif; font-weight: normal; }
+a.l1:link    { color:#000000; }
+a.l1:visited { color:#000080; }
+a.l1:hover   { color:#9933CC; }
+a.l1:active  { color:#000000; }
+a.l2         { text-decoration:none; font-size: 12pt; font-family: sans-serif; font-variant: small-caps; }
+a.l2:link    { color:#0066FF; }
+a.l2:visited { color:#FF6600; }
+a.l2:hover   { color:#BC0624; }
+a.l2:active  { color:#BC0024; }
+
+-->
+</STYLE>
+<META NAME="keywords" CONTENT="framework, toolkit, widget, c++, visual, studio, dev-cpp, builder, ide, class, component,wxwidgets, qt, rapid, application, development, rad, mfc, linux, macos, gui, sdl, directx, desktop"><META name="robots" content="index,follow">
+<LINK rel="alternate" type="application/rss+xml" title="SVN changes" href="svnchanges.xml">
+<LINK rel="shortcut icon" type="image/png" href="favicon.png">
+</HEAD><BODY BGCOLOR="#D2D9D2" ALINK="#800000" LINK="#000000" VLINK="#000080"><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%"><TR><TD COLSPAN="3"><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%" BGCOLOR="#FFFFFF" style="border: 1px solid #6E89AE;padding-left: 10px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;"><TR><TD><A HREF="index.html"><IMG SRC="0i.png" ALT="" BORDER="0"></A>
+</TD>
+<TD ALIGN="RIGHT" VALIGN="BOTTOM" STYLE="padding-bottom: 5px; background-image: url('1i.png')"><span style="font-size: 14pt; font-family: sans-serif;"><script type="text/javascript"><!--
+google_ad_client = "pub-1082147624384270";
+google_ad_width = 468;
+google_ad_height = 60;
+google_ad_format = "468x60_as";
+google_ad_type = "text_image";
+google_ad_channel = "";
+google_color_border = "336699";
+google_color_bg = "FFFFFF";
+google_color_link = "0000FF";
+google_color_text = "000000";
+google_color_url = "008000";
+//--></script>
+<script type="text/javascript"
+  src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+&nbsp;&nbsp;</span>
+</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>
+<TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%"><TR><TD COLSPAN="3" BGCOLOR="#D2D9D2" HEIGHT="6"></TD>
+</TR>
+<TR><TD VALIGN="TOP" ALIGN="CENTER"><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="160"><TR><TD ALIGN="CENTER"><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%" BGCOLOR="#FFFFFF" style="border-style: solid; border-width: 1px; border-color: #6E89AE;padding: 0px"><TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px;"><A HREF="www$uppweb$overview$en-us.html" CLASS="l1">Overview</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$examples$en-us.html" CLASS="l1">Examples</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$ss$en-us.html" CLASS="l1">Screenshots</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$comparison$en-us.html" CLASS="l1">Comparisons</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$apps$en-us.html" CLASS="l1">Applications</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$download$en-us.html" CLASS="l1">Download</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$documentation$en-us.html" CLASS="l1">Documentation</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$Tutorials$en-us.html" CLASS="l1">Tutorials</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="app$ide$UppHub$en-us.html" CLASS="l1">UppHub</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$Roadmap$en-us.html" CLASS="l1">Status & Roadmap</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$FAQ$en-us.html" CLASS="l1">FAQ</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="app$ide$About$en-us.html" CLASS="l1">Authors & License</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="https://www.ultimatepp.org/forums" CLASS="l1">Forums</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$Funding$en-us.html" CLASS="l1">Funding U++</A>
+</TD>
+</TR>
+</TABLE>
+<TABLE BORDER="0" WIDTH="100%"><TR><TD></TD>
+</TR>
+</TABLE>
+<TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%" BGCOLOR="#FFFFFF" style="border-style: solid; border-width: 1px; border-color: #6E89AE;padding: 0px"><TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('3i.png'); border: 0px solid black;padding-left:12px; padding-right:0px; padding-top:1px; padding-bottom:1px;color:#FFFFFF;"><B><span style="font-size: 8pt; font-family: sans-serif;">Search on this site</span>
+</B>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:6px; padding-right:0px; padding-top:4px; padding-bottom:4px;border-top: 1px solid #6E89AE;"><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%"><TR><TD><IMG SRC="4i.png" ALT="" BORDER="0"></TD>
+<TD><FORM ACTION="https://www.google.com/search" METHOD="GET" STYLE="margin:0px;padding:0px;"><INPUT TYPE="HIDDEN" NAME="ie" VALUE="UTF-8"><INPUT TYPE="HIDDEN" NAME="oe" VALUE="UTF-8"><INPUT TYPE="TEXT" NAME="q" SIZE="15" MAXLENGTH="256" placeholder="Site search"><INPUT TYPE="HIDDEN" NAME="sitesearch" VALUE="ultimatepp.org"></FORM>
+</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>
+<TABLE BORDER="0" WIDTH="100%"><TR><TD></TD>
+</TR>
+</TABLE>
+<br><div id="fb-root"></div>
+<script type="text/javascript">(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) {return;}
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+<div class="fb-like" data-href="https://www.facebook.com/pages/Upp-Framework/262346610476027?sk=wall" data-send="false" data-layout="button_count" data-width="160" data-show-faces="false" data-font="arial"></div>
+<br><br><script type="text/javascript"><!--
+google_ad_client = "pub-1082147624384270";
+google_ad_width = 160;
+google_ad_height = 600;
+google_ad_format = "160x600_as";
+google_ad_type = "text_image";
+google_ad_channel = "";
+google_color_border = "336699";
+google_color_bg = "FFFFFF";
+google_color_link = "0000FF";
+google_color_text = "000000";
+google_color_url = "008000";
+//--></script>
+<script type="text/javascript"
+  src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script><br><br><script type="text/javascript"><!--
+google_ad_client = "pub-1082147624384270";
+google_ad_width = 160;
+google_ad_height = 90;
+google_ad_format = "160x90_0ads_al_s";
+google_ad_channel = "";
+google_color_border = "336699";
+google_color_bg = "FFFFFF";
+google_color_link = "0000FF";
+google_color_text = "000000";
+google_color_url = "008000";
+//--></script>
+<script type="text/javascript"
+  src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+<br><br><br><br><br><br><A HREF="https://sourceforge.net/projects/upp/"><IMG SRC="https://sourceforge.net/sflogo.php?group_id=93970&amp;type=2" ALT="SourceForge.net Logo" BORDER="0" WIDTH="125" HEIGHT="37"></A>
+<br><br><A HREF="https://flathub.org/en/apps/org.ultimatepp.TheIDE"><IMG SRC="5i.png" ALT="SourceForge.net Logo" BORDER="0" WIDTH="125" HEIGHT="37"></A>
+<br><br><div style="background-color:#ffffff;width:125;height:35"><A HREF="https://github.com/ultimatepp"><IMG SRC="6i.png" ALT="GitHub Logo" BORDER="0" WIDTH="125" HEIGHT="35"></A>
+</div><br><div style="background-color:#ffffff;width:125;height:35"><div style="height:5"></div><A HREF="https://discord.gg/8XzqQzXZzb"><IMG SRC="https://assets-global.website-files.com/6257adef93867e50d84d30e2/636e0b5061df29d55a92d945_full_logo_blurple_RGB.svg" ALT="Discord Logo" BORDER="0" WIDTH="125" HEIGHT="25"></A>
+</div><br></TD>
+</TR>
+</TABLE>
+</TD>
+<TD VALIGN="TOP" BGCOLOR="#D2D9D2"><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="6"><TR><TD></TD>
+</TR>
+</TABLE>
+</TD>
+<TD VALIGN="TOP" WIDTH="100%" BGCOLOR="#D2D9D2"><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" BGCOLOR="#FFFFFF" WIDTH="100%" style="border-style: solid; border-width: 1px; border-color: #6E89AE;padding: 10px;;"><TR><TD><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%"><TR><TD><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr><td width="100%"><table width="100%" class="C"><colgroup><col width="100%"></colgroup>
+<tr><td class="D"><p class="E">Sql</p>
+</td>
+</tr>
+</table></td>
+</tr></table>
+<p class="F">&nbsp;</p>
+<p id="Sql::class" class="G"><span class="H">class</span><span class="I">&nbsp;</span>Sql</p>
+<p class="J">This class &nbsp;represents a SQL execution context. It is associated with SqlSession; several Sql contexts can be associated with single session. As there is usually single default SqlSession per process (or per thread), when session is not specified with constructor, this default session is used.</p>
+<p class="K">&nbsp;</p>
+<p class="A">&nbsp;</p>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr><td width="100%"><table width="100%" class="L"><colgroup><col width="100%"></colgroup>
+<tr><td class="M"><p class="N">Public Method List</p>
+</td>
+</tr>
+</table></td>
+</tr></table>
+<p class="K">&nbsp;</p>
+<p id="Sql::Compile(const SqlStatement&)" class="O"><a href="String"><u>String</u></a>&nbsp;<span class="P">Compile</span>(<span class="Q">const</span>&nbsp;<a href="SqlStatement"><u>SqlStatement</u></a><span class="Q">&amp;</span>&nbsp;<span class="R">s</span>)</p>
+<p class="J">Compiles SqlExp based statement <span class="R">s</span> for SQL dialect associated with the session of this Sql.</p>
+<p class="K">&nbsp;</p>
+<hr><p class="K">&nbsp;</p>
+<p id="Sql::Clear()" class="O"><span class="Q">void</span>&nbsp;<span class="P">Clear</span>()</p>
+<p class="J">Clears the current SQL statement.</p>
+<p class="K">&nbsp;</p>
+<hr><p class="K">&nbsp;</p>
+<p id="Sql::SetParam(int,const Value&)" class="O"><span class="Q">void</span>&nbsp;<span class="P">SetParam</span>(<span class="Q">int</span>&nbsp;<span class="R">i</span>, <span class="Q">const</span>&nbsp;<a href="Value"><u>Value</u></a><span class="Q">&amp;</span>&nbsp;<span class="R">val</span>)</p>
+<p class="J">Sets the positional parameter <span class="R">i</span> to <span class="R">val</span>. Positional parameters are expressed as '?' in the statement.</p>
+<p class="K">&nbsp;</p>
+<hr><p class="K">&nbsp;</p>
+<p id="Sql::SetStatement(const String&)" class="O"><span class="Q">void</span>&nbsp;<span class="P">SetStatement</span>(<span class="Q">const</span>&nbsp;<a href="String"><u>String</u></a><span class="Q">&amp;</span>&nbsp;<span class="R">s</span>)</p>
+<p class="J">Assigns SQL statement <span class="R">s</span>.</p>
+<p class="K">&nbsp;</p>
+<hr><p class="K">&nbsp;</p>
+<p id="Sql::SetStatement(const SqlStatement&)" class="O"><span class="Q">void</span>&nbsp;<span class="P">SetStatement</span>(<span class="Q">const</span>&nbsp;<a href="SqlStatement"><u>SqlStatement</u></a><span class="Q">&amp;</span>&nbsp;<span class="R">s</span>)</p>
+<p class="J">Assingle SqlExp statement.</p>
+<p class="K">&nbsp;</p>
+<hr><p class="K">&nbsp;</p>
+<p id="Sql::Execute()" class="O"><span class="Q">bool</span>&nbsp;<span class="P">Execute</span>()</p>
+<p class="J">Executes Sql statement assigned by SetStatement. Note that with some databases, prepared statements are used and if statement has not changed, Execute runs previously prepared statement.</p>
+<p class="K">&nbsp;</p>
+<hr><p class="K">&nbsp;</p>
+<p id="Sql::Run()" class="O"><span class="Q">bool</span>&nbsp;<span class="P">Run</span>()</p>
+<p class="J">Same as Execute().</p>
+<p class="K">&nbsp;</p>
+<hr><p class="K">&nbsp;</p>
+<p id="Sql::Execute(const String&)" class="O"><span class="Q">bool</span>&nbsp;<span class="P">Execute</span>(<span class="Q">const</span>&nbsp;<a href="String"><u>String</u></a><span class="Q">&amp;</span>&nbsp;<span class="R">s</span>)</p>
+<p class="J">Same as SetStatement(<span class="R">s</span>); return Execute().</p>
+<p class="K">&nbsp;</p>
+<hr><p class="K">&nbsp;</p>
+<p id="Sql::Execute(const SqlStatement&)" class="O"><span class="Q">bool</span>&nbsp;<span class="P">Execute</span>(<span class="Q">const</span>&nbsp;<a href="SqlStatement"><u>SqlStatement</u></a><span class="Q">&amp;</span>&nbsp;<span class="R">s</span>)</p>
+<p class="J">Same as SetStatement(<span class="R">s</span>); return Execute().</p>
+<p class="K">&nbsp;</p>
+<hr><p class="K">&nbsp;</p>
+<p id="Sql::Run(const Value&[,const Value&v2...])" class="O"><span class="Q">bool</span>&nbsp;<span class="P">Run</span>(<span class="Q">const</span>&nbsp;<a href="Value"><u>Value</u></a><span class="Q">&amp;</span>&nbsp;<span class="R">v1</span>&nbsp;[, <span class="Q">const</span>&nbsp;<a href="Value"><u>Value</u></a><span class="Q">&amp;</span>&nbsp;<span class="R">v2</span>&nbsp;...])</p>
+<p class="J">Runs current statment with set of positional parameters. This is especially useful for (re)executing prepared statements.</p>
+<p class="K">&nbsp;</p>
+<hr><p class="K">&nbsp;</p>
+<p id="Sql::Execute(const String&,const Value&[,const Value&v2...])" class="O"><span class="Q">bool</span>&nbsp;<span class="P">Execute</span>(<span class="Q">const</span>&nbsp;<a href="String"><u>String</u></a><span class="Q">&amp;</span>&nbsp;<span class="R">s</span>, <span class="Q">const</span>&nbsp;<a href="Value"><u>Value</u></a><span class="Q">&amp;</span>&nbsp;<span class="R">v1</span>&nbsp;[, <span class="Q">const</span>&nbsp;<a href="Value"><u>Value</u></a><span class="Q">&amp;</span>&nbsp;v2&nbsp;...])</p>
+<p class="J">Assigns a new statement and executes it with a set of position parameters.</p>
+<p class="K">&nbsp;</p>
+<hr><p class="K">&nbsp;</p>
+<p id="Sql::Fetch()" class="O"><span class="Q">bool</span>&nbsp;<span class="P">Fetch</span>()</p>
+<p class="J">Attempts to fetch a new row from database (assumes that the previous statement executes was <span class="S">select</span> or some other statement with result set). If the row was fetched, returns true.</p>
+<p class="K">&nbsp;</p>
+<hr><p class="K">&nbsp;</p>
+<p id="Sql::Fetch(Ref[,Ref v2...])" class="O"><span class="Q">bool</span>&nbsp;<span class="P">Fetch</span>(<a href="Ref"><u>Ref</u></a>&nbsp;<span class="R">v1</span>&nbsp;[, <a href="Ref"><u>Ref</u></a>&nbsp;<span class="R">v2</span>&nbsp;...])</p>
+<p class="J">Performs Fetch and then assigns fetched values into referenced variables.</p>
+<p class="K">&nbsp;</p>
+<hr><p class="K">&nbsp;</p>
+<p id="Sql::Fetch(Vector<Value>&)" class="O"><span class="Q">bool</span>&nbsp;<span class="P">Fetch</span>(<a href="Vector"><u>Vector</u></a>&lt;<a href="Value"><u>Value</u></a>&gt;&amp;&nbsp;<span class="R">row</span>)</p>
+<p class="J">Performs Fetch and assigns fetched values into <span class="R">row</span>.</p>
+<p class="K">&nbsp;</p>
+<hr><p class="K">&nbsp;</p>
+<p id="Sql::Fetch(ValueMap&)" class="O"><span class="Q">bool</span>&nbsp;<span class="P">Fetch</span>(<a href="ValueMap"><u>ValueMap</u></a><span class="Q">&amp;</span>&nbsp;<span class="R">row</span>)</p>
+<p class="J">Performs Fetch and assigns fetched values into <span class="R">row</span>.</p>
+<p class="K">&nbsp;</p>
+<hr><p class="K">&nbsp;</p>
+<p id="Sql::Fetch(Fields)" class="O"><span class="Q">bool</span>&nbsp;<span class="P">Fetch</span>(<a href="Fields"><u>Fields</u></a>&nbsp;<span class="R">fields</span>)</p>
+<p class="J">Performs Fetch and assigns fetched values into <span class="R">fields</span>. Fields usually represent some S_* table row structure based on .sch file.</p>
+<p class="K">&nbsp;</p>
+<hr><p class="K">&nbsp;</p>
+<p id="Sql::GetRowsProcessed()const" class="T">int<span class="U">&nbsp;</span><span class="V">GetRowsProcessed</span><span class="U">()&nbsp;</span>const</p>
+<p class="J">After <span class="S">update</span> statement, this returns a number of rows that have been affected. Note that for some databases, this is the number of rows that really changed, for others, this is the number of rows that match <span class="S">where</span>.</p>
+<p class="J">After <span class="S">insert</span> statement, this returns a number of rows deleted.</p>
+<p class="K">&nbsp;</p>
+<hr><p class="K">&nbsp;</p>
+<p id="Sql::GetColumns()const" class="T">int<span class="U">&nbsp;</span><span class="V">GetColumns</span><span class="U">()&nbsp;</span>const</p>
+<p id="Sql::GetColumnCount()const" class="T">int<span class="U">&nbsp;</span><span class="V">GetColumnCount</span><span class="U">()&nbsp;</span>const</p>
+<p class="J">Returns the number of columns of resultset after executing <span class="S">select</span> statement.</p>
+<p class="K">&nbsp;</p>
+<hr><p class="K">&nbsp;</p>
+<p id="Sql::GetColumn(int,Ref)const" class="T">void<span class="U">&nbsp;</span><span class="V">GetColumn</span><span class="U">(</span>int<span class="U">&nbsp;</span><span class="R">i</span><span class="U">, </span><a href="Ref"><span class="U"><u>Ref</u></span></a><span class="U">&nbsp;</span><span class="R">r</span><span class="U">)&nbsp;</span>const</p>
+<p class="J">Sets value referenced by <span class="R">r</span> to the fetched value at column <span class="R">i</span>. Only valid after successfull Fetch and if there exists column <span class="R">i</span> in the resultset.</p>
+<p class="K">&nbsp;</p>
+<hr><p class="K">&nbsp;</p>
+<p id="Sql::GetColumn(SqlId,Ref)const" class="T">void<span class="U">&nbsp;</span><span class="V">GetColumn</span><span class="U">(</span><a href="SqlId"><span class="U"><u>SqlId</u></span></a><span class="U">&nbsp;</span><span class="R">colid</span><span class="U">, </span><a href="Ref"><span class="U"><u>Ref</u></span></a><span class="U">&nbsp;</span><span class="R">r</span><span class="U">)&nbsp;</span>const</p>
+<p class="J">Sets value referenced by <span class="R">r</span> to the fetched value at column with name <span class="R">colid</span> (match is case insensitive). Only valid after successfull Fetch and if there exists column <span class="R">colid</span> in the resultset.</p>
+<p class="K">&nbsp;</p>
+<hr><p class="K">&nbsp;</p>
+<p id="Sql::operator[](int)const" class="T"><a href="Value"><span class="U"><u>Value</u></span></a><span class="U">&nbsp;</span><span class="V">operator[]</span><span class="U">(</span>int<span class="U">&nbsp;</span><span class="R">i</span><span class="U">)&nbsp;</span>const</p>
+<p class="J">Returns the fetched value at column <span class="R">i</span>. Only valid after successfull Fetch and if there exists column <span class="R">i</span> in the resultset.</p>
+<p class="K">&nbsp;</p>
+<hr><p class="K">&nbsp;</p>
+<p id="Sql::operator[](SqlId)const" class="T"><a href="Value"><span class="U"><u>Value</u></span></a><span class="U">&nbsp;</span><span class="V">operator[]</span><span class="U">(</span><a href="SqlId"><span class="U"><u>SqlId</u></span></a><span class="U">&nbsp;</span><span class="R">colid</span><span class="U">)&nbsp;</span>const</p>
+<p class="J">Returns the fetched value at column with name <span class="R">colid</span> (match is case insensitive). Only valid after successfull Fetch and if there exists column <span class="R">colid</span> in the resultset.</p>
+<p class="K">&nbsp;</p>
+<hr><p class="K">&nbsp;</p>
+<p id="Sql::GetColumnInfo(int)const" class="T">const<span class="U">&nbsp;</span><a href="SqlColumnInfo"><span class="U"><u>SqlColumnInfo</u></span></a>&amp;<span class="U">&nbsp;</span><span class="V">GetColumnInfo</span><span class="U">(</span>int<span class="U">&nbsp;</span><span class="R">i</span><span class="U">)&nbsp;</span>const</p>
+<p class="J">Returns the information about column <span class="R">i</span> after executing <span class="S">select</span> statement.</p>
+<p class="K">&nbsp;</p>
+<hr><p class="K">&nbsp;</p>
+<p id="Sql::GetRow()const" class="T"><a href="Vector"><span class="U"><u>Vector</u></span></a><span class="U">&lt;</span><a href="Value"><span class="U"><u>Value</u></span></a><span class="U">&gt;&nbsp;</span><span class="V">GetRow</span><span class="U">()&nbsp;</span>const</p>
+<p class="J">Returns the whole fetched row. Only valid after successfull Fetch.</p>
+<p class="K">&nbsp;</p>
+<hr><p class="K">&nbsp;</p>
+<p id="Sql::GetRowMap()const" class="T"><a href="ValueMap"><span class="U"><u>ValueMap</u></span></a><span class="U">&nbsp;</span><span class="V">GetRowMap</span><span class="U">()&nbsp;</span>const</p>
+<p id="Upp::Sql::operator~()const" class="T"><a href="Upp::ValueMap"><span class="U"><u>ValueMap</u></span></a><span class="U">&nbsp;</span><span class="V">operator~</span><span class="U">()&nbsp;</span>const</p>
+<p class="J">Returns the whole fetched row, keys of ValueMap are names of columns. Only valid after successfull Fetch.</p>
+<p class="K">&nbsp;</p>
+<hr><p class="K">&nbsp;</p>
+<p id="Sql::operator Vector<Value>()const" class="T"><span class="V">operator&nbsp;Vector&lt;Value&gt;</span><span class="U">()&nbsp;</span>const</p>
+<p class="J">Returns GetRow(). Only valid after successfull Fetch.</p>
+<p class="K">&nbsp;</p>
+<hr><p class="K">&nbsp;</p>
+<p id="Sql::Get(Fields)" class="O"><span class="Q">void</span>&nbsp;<span class="P">Get</span>(<a href="Fields"><u>Fields</u></a>&nbsp;<span class="R">fields</span>)</p>
+<p class="J">Retrieves fetched row as <span class="R">fields</span>. Fields usually represent some S_* table row structure based on .sch file. Only valid after successfull Fetch.</p>
+<p class="K">&nbsp;</p>
+<hr><p class="K">&nbsp;</p>
+<p id="Sql::Cancel()" class="O"><span class="Q">void</span>&nbsp;<span class="P">Cancel</span>()</p>
+<p class="J">Cancels the current statement. This in practice means that the rest of resultset is released.</p>
+<p class="K">&nbsp;</p>
+<hr><p class="K">&nbsp;</p>
+<p id="Sql::Insert(Fields)" class="O"><span class="Q">bool</span>&nbsp;<span class="P">Insert</span>(<a href="Fields"><u>Fields</u></a>&nbsp;<span class="R">nf</span>)</p>
+<p class="J">Executes <span class="S">insert</span> statement that inserts Fields <span class="R">nf</span> into database. Fields usually represent some S_* table row structure based on .sch file.</p>
+<p class="K">&nbsp;</p>
+<hr><p class="K">&nbsp;</p>
+<p id="Sql::Insert(Fields,const char*)" class="O"><span class="Q">bool</span>&nbsp;<span class="P">Insert</span>(<a href="Fields"><u>Fields</u></a>&nbsp;<span class="R">nf</span>, <span class="Q">const</span>&nbsp;<span class="Q">char</span>&nbsp;*<span class="R">table</span>)</p>
+<p id="Sql::Insert(Fields,SqlId)" class="O"><span class="Q">bool</span>&nbsp;<span class="P">Insert</span>(<a href="Fields"><u>Fields</u></a>&nbsp;<span class="R">nf</span>, <a href="SqlId"><u>SqlId</u></a>&nbsp;<span class="R">table</span>)</p>
+<p class="J">Executes <span class="S">insert</span> statement that inserts Fields <span class="R">nf</span> columns into database, but uses different table as target. Fields usually represent some S_* table row structure based on .sch file.</p>
+<p class="K">&nbsp;</p>
+<hr><p class="K">&nbsp;</p>
+<p id="Sql::InsertNoKey(Fields)" class="O"><span class="Q">bool</span>&nbsp;<span class="P">InsertNoKey</span>(<a href="Fields"><u>Fields</u></a>&nbsp;<span class="R">nf</span>)</p>
+<p class="J">Executes <span class="S">insert</span> statement that inserts Fields <span class="R">nf</span> into database, first column of <span class="R">nf</span> is not used (this column usually contains key). Fields usually represent some S_* table row structure based on .sch file.</p>
+<p class="K">&nbsp;</p>
+<hr><p class="K">&nbsp;</p>
+<p id="Sql::InsertNoKey(Fields,const char*)" class="O"><span class="Q">bool</span>&nbsp;<span class="P">InsertNoKey</span>(<a href="Fields"><u>Fields</u></a>&nbsp;<span class="R">nf</span>, <span class="Q">const</span>&nbsp;<span class="Q">char</span>&nbsp;*<span class="R">table</span>)</p>
+<p id="Sql::InsertNoKey(Fields,SqlId)" class="O"><span class="Q">bool</span>&nbsp;<span class="P">InsertNoKey</span>(<a href="Fields"><u>Fields</u></a>&nbsp;<span class="R">nf</span>, <a href="SqlId"><u>SqlId</u></a>&nbsp;<span class="R">table</span>)</p>
+<p class="J">Executes <span class="S">insert</span> statement that inserts Fields <span class="R">nf</span> columns into database, but uses different table as target. First column of <span class="R">nf</span> is not used (this column usually contains primary key). Fields usually represent some S_* table row structure based on .sch file.</p>
+<p class="K">&nbsp;</p>
+<hr><p class="K">&nbsp;</p>
+<p id="Sql::InsertNoNulls(Fields)" class="O"><span class="Q">bool</span>&nbsp;<span class="P">InsertNoNulls</span>(<a href="Fields"><u>Fields</u></a>&nbsp;<span class="R">nf</span>)</p>
+<p class="J">Executes <span class="S">insert</span> statement that inserts Fields <span class="R">nf</span> into database, columns that are null are not used. Fields usually represent some S_* table row structure based on .sch file.</p>
+<p class="K">&nbsp;</p>
+<hr><p class="K">&nbsp;</p>
+<p id="Sql::InsertNoNulls(Fields,const char*)" class="O"><span class="Q">bool</span>&nbsp;<span class="P">InsertNoNulls</span>(<a href="Fields"><u>Fields</u></a>&nbsp;<span class="R">nf</span>, <span class="Q">const</span>&nbsp;<span class="Q">char</span>&nbsp;*<span class="R">table</span>)</p>
+<p id="Sql::InsertNoNulls(Fields,SqlId)" class="O"><span class="Q">bool</span>&nbsp;<span class="P">InsertNoNulls</span>(<a href="Fields"><u>Fields</u></a>&nbsp;<span class="R">nf</span>, <a href="SqlId"><u>SqlId</u></a>&nbsp;<span class="R">table</span>)</p>
+<p class="J">Executes <span class="S">insert</span> statement that inserts Fields <span class="R">nf</span> columns into database, but uses different table as target. Columns that are null are not used. Fields usually represent some S_* table row structure based on .sch file.</p>
+<p class="K">&nbsp;</p>
+<hr><p class="K">&nbsp;</p>
+<p id="Sql::Update(Fields)" class="O"><span class="Q">bool</span>&nbsp;<span class="P">Update</span>(<a href="Fields"><u>Fields</u></a>&nbsp;<span class="R">nf</span>)</p>
+<p class="J">Executes <span class="S">update</span> statement that updates a table row in the database. First column of <span class="R">nf</span> is used as primary key (for <span class="S">where</span> part of statement). Fields usually represent some S_* table row structure based on .sch file.</p>
+<p class="K">&nbsp;</p>
+<hr><p class="K">&nbsp;</p>
+<p id="Sql::Update(Fields,const char*)" class="O"><span class="Q">bool</span>&nbsp;<span class="P">Update</span>(<a href="Fields"><u>Fields</u></a>&nbsp;<span class="R">nf</span>, <span class="Q">const</span>&nbsp;<span class="Q">char</span>&nbsp;*<span class="R">table</span>)</p>
+<p id="Sql::Update(Fields,SqlId)" class="O"><span class="Q">bool</span>&nbsp;<span class="P">Update</span>(<a href="Fields"><u>Fields</u></a>&nbsp;<span class="R">nf</span>, <a href="SqlId"><u>SqlId</u></a>&nbsp;<span class="R">table</span>)</p>
+<p class="J">Executes <span class="S">update</span> statement that updates a table row in the database, but uses different table as target. First column of <span class="R">nf</span> is used as primary key (for <span class="S">where</span> part of statement). Fields usually represent some S_* table row structure based on .sch file.</p>
+<p class="K">&nbsp;</p>
+<hr><p class="K">&nbsp;</p>
+<p id="Sql::Delete(const char*,const char*,const Value&)" class="O"><span class="Q">bool</span>&nbsp;<span class="P">Delete</span>(<span class="Q">const</span>&nbsp;<span class="Q">char</span>&nbsp;*<span class="R">table</span>, <span class="Q">const</span>&nbsp;<span class="Q">char</span>&nbsp;*<span class="R">key</span>, <span class="Q">const</span>&nbsp;<a href="Value"><u>Value</u></a><span class="Q">&amp;</span>&nbsp;<span class="R">keyval</span>)</p>
+<p id="Sql::Delete(SqlId,SqlId,const Value&)" class="O"><span class="Q">bool</span>&nbsp;<span class="P">Delete</span>(<a href="SqlId"><u>SqlId</u></a>&nbsp;<span class="R">table</span>, <a href="SqlId"><u>SqlId</u></a>&nbsp;<span class="R">key</span>, <span class="Q">const</span>&nbsp;<a href="Value"><u>Value</u></a><span class="Q">&amp;</span>&nbsp;<span class="R">keyval</span>)</p>
+<p class="J">Removes a table row from the databases. This is sort of deprecated in favor of SqlExp Delete.</p>
+<p class="K">&nbsp;</p>
+<hr><p class="K">&nbsp;</p>
+<p id="Sql::ToString()const" class="T"><a href="String"><span class="U"><u>String</u></span></a><span class="U">&nbsp;</span><span class="V">ToString</span><span class="U">()&nbsp;</span>const</p>
+<p class="J">Returns the current SQL statement.</p>
+<p class="K">&nbsp;</p>
+<hr><p class="K">&nbsp;</p>
+<p id="Sql::operator*(const SqlStatement&)" class="O"><span class="Q">bool</span>&nbsp;<span class="P">operator*</span>(<span class="Q">const</span>&nbsp;<a href="SqlStatement"><u>SqlStatement</u></a><span class="Q">&amp;</span>&nbsp;<span class="R">q</span>)</p>
+<p class="J">Same as Execute(Compile(q)).</p>
+<p class="K">&nbsp;</p>
+<hr><p class="K">&nbsp;</p>
+<p id="Sql::operator%(const SqlStatement&)" class="O"><a href="Value"><u>Value</u></a>&nbsp;<span class="P">operator%</span>(<span class="Q">const</span>&nbsp;<a href="SqlStatement"><u>SqlStatement</u></a><span class="Q">&amp;</span>&nbsp;<span class="R">q</span>)</p>
+<p class="J">Executes a query, fetches a single row and returns the value of first column. If there is no row in resultset, returns Null. In case of error, returns ErrorValue (which is also interpreted as Null).</p>
+<p class="K">&nbsp;</p>
+<hr><p class="K">&nbsp;</p>
+<p id="Sql::operator^(const SqlStatement&)" class="O"><a href="ValueMap"><u>ValueMap</u></a>&nbsp;<span class="P">operator^</span>(<span class="Q">const</span>&nbsp;<a href="SqlStatement"><u>SqlStatement</u></a><span class="Q">&amp;</span>&nbsp;<span class="R">q</span>)</p>
+<p class="J">Executes a query, fetches a single row and returns this row as ValueMap where keys are names of columns. If there is no row in resultset or in case of error returns empty ValueMap.</p>
+<p class="K">&nbsp;</p>
+<hr><p class="K">&nbsp;</p>
+<p id="Sql::operator/(const SqlStatement&)" class="O"><a href="ValueArray"><u>ValueArray</u></a>&nbsp;<span class="P">operator/</span>(<span class="Q">const</span>&nbsp;<a href="SqlStatement"><u>SqlStatement</u></a><span class="Q">&amp;</span>&nbsp;<span class="R">q</span>)</p>
+<p class="J">Executes a query and returns the resultset as ValueArray of ValueMaps (keys are column names). If there is no row in resultset or in case of error returns empty ValueArray.</p>
+<p class="K">&nbsp;</p>
+<hr><p class="K">&nbsp;</p>
+<p id="Sql::GetSession()const" class="T"><a href="SqlSession"><span class="U"><u>SqlSession</u></span></a>&amp;<span class="U">&nbsp;</span><span class="V">GetSession</span><span class="U">()&nbsp;</span>const</p>
+<p class="J">Returns the associated SqlSession.</p>
+<p class="K">&nbsp;</p>
+<hr><p class="K">&nbsp;</p>
+<p id="Sql::GetDialect()const" class="T">int<span class="U">&nbsp;</span><span class="V">GetDialect</span><span class="U">()&nbsp;</span>const</p>
+<p class="J">Returns the SQL dialect of associated SqlSession.</p>
+<p class="K">&nbsp;</p>
+<hr><p class="K">&nbsp;</p>
+<p id="Sql::GetInsertedId()const" class="T"><a href="Value"><span class="U"><u>Value</u></span></a><span class="U">&nbsp;</span><span class="V">GetInsertedId</span><span class="U">()&nbsp;</span>const</p>
+<p class="J">For databases with auto-increment options of primary keys, returns the last value of primary key inserted. (Note that for PGSQL, it is required that the auto-increment primary key is named &quot;ID&quot;).</p>
+<hr><p class="K">&nbsp;</p>
+<p id="Sql::IsOpen()" class="O"><span class="Q">bool</span>&nbsp;<span class="P">IsOpen</span>()</p>
+<p class="J">Returns true there is associated SqlSession this this instance and the SqlSession is connected to database.</p>
+<p class="K">&nbsp;</p>
+<hr><p class="K">&nbsp;</p>
+<p id="Sql::Sql(SqlSource&)" class="O"><span class="P">Sql</span>(<a href="SqlSource"><u>SqlSource</u></a><span class="Q">&amp;</span>&nbsp;<span class="R">src</span>)</p>
+<p class="J">Creates Sql instance associated with session <span class="R">src</span>. (SqlSession is derived from SqlSource, which serves some special internal purposes).</p>
+<p class="K">&nbsp;</p>
+<hr><p class="K">&nbsp;</p>
+<p id="Sql::Sql()" class="O"><span class="P">Sql</span>()</p>
+<p class="J">Creates Sql instance associated with default session.</p>
+<p class="K">&nbsp;</p>
+<hr><p class="K">&nbsp;</p>
+<p id="Sql::Sql(const char*)" class="O"><span class="P">Sql</span>(<span class="Q">const</span>&nbsp;<span class="Q">char</span>&nbsp;*<span class="R">stmt</span>)</p>
+<p class="J">Creates Sql instance associated with default session and assigns it a statement.</p>
+<p class="K">&nbsp;</p>
+<hr><p class="K">&nbsp;</p>
+<p id="Sql::Sql(const SqlStatement&)" class="O"><span class="P">Sql</span>(<span class="Q">const</span>&nbsp;<a href="SqlStatement"><u>SqlStatement</u></a><span class="Q">&amp;</span>&nbsp;<span class="R">s</span>)</p>
+<p class="J">Creates Sql instance associated with default session and assigns it a SqlExp statement.</p>
+<p class="K">&nbsp;</p>
+<hr><p class="K">&nbsp;</p>
+<p id="Sql::Sql(const char*,SqlSource&)" class="O"><span class="P">Sql</span>(<span class="Q">const</span>&nbsp;<span class="Q">char</span>&nbsp;*<span class="R">stmt</span>, <a href="SqlSource"><u>SqlSource</u></a><span class="Q">&amp;</span>&nbsp;<span class="R">session</span>)</p>
+<p class="J">Creates Sql instance associated with <span class="R">session</span> and assigns it a statement.</p>
+<p class="K">&nbsp;</p>
+<hr><p class="K">&nbsp;</p>
+<p id="Sql::Sql(const SqlStatement&,SqlSource&)" class="O"><span class="P">Sql</span>(<span class="Q">const</span>&nbsp;<a href="SqlStatement"><u>SqlStatement</u></a><span class="Q">&amp;</span>&nbsp;<span class="R">s</span>, <a href="SqlSource"><u>SqlSource</u></a><span class="Q">&amp;</span>&nbsp;<span class="R">session</span>)</p>
+<p class="J">Creates Sql instance associated with <span class="R">session</span> and assigns it a SqlExp statement.</p>
+<p class="K">&nbsp;</p>
+<hr><p class="K">&nbsp;</p>
+<p id="Sql::PerThread(bool)" class="O"><span class="Q">static</span> <span class="Q">void</span>&nbsp;<span class="P">PerThread</span>(<span class="Q">bool</span>&nbsp;<span class="R">b</span>&nbsp;=&nbsp;<span class="Q">true</span>)</p>
+<p class="J">In multithreded mode, activates mode where each thread has assigned unique per-thread default session (otherwise default session is shared).</p>
+<p class="K">&nbsp;</p>
+<p class="A">&nbsp;</p>
+</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>
+<TABLE BORDER="0" WIDTH="100%"><TR><TD></TD>
+</TR>
+</TABLE>
+<TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" BGCOLOR="#FFFFFF" WIDTH="100%" style="border-style: solid; border-width: 1px; border-color: #6E89AE;padding: 10px;;"><TR><TD><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%"><TR><TD><p class="A"><span class="B"> </span><a href="www$uppweb$contribweb$en-us.html">Do you want to contribute?</a></p>
+</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>
+<script type="text/javascript">var a={};var p=window.location.pathname.split("/");p=p[p.length-1];var s='<select id="lang" onchange="window.location=document.getElementById(\'lang\').value;">';for(l in a){if(p==l){d=" selected=1"}else{d=""}s+='<option value="'+l+'"'+d+'>'+a[l]+'</option>'}s+='</select>';var d=document.createElement('div');d.innerHTML=s;var c=document.getElementById('langs');c.replaceChild(d,c.firstChild);document.getElementById('langbox').style.display='block';</script></BODY>

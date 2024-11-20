@@ -1,0 +1,1046 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en-us">
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
+<META NAME="Generator" CONTENT="U++ HTML Package">
+<TITLE>Examples / GridCtrlTest :: U++</TITLE>
+<STYLE TYPE="text/css"><!--
+.A{margin:0px 0px 0px 0px;text-indent:0px;text-align:left;color:#000000;font-family:sans-serif;font-size:10pt;font-weight:normal;font-style:normal;}
+.B{font-size:12pt;}
+.C{margin:0px 0px 0px 0px;text-indent:0px;text-align:left;color:#000000;font-family:serif;font-size:24pt;font-weight:bold;font-style:normal;}
+.D{margin:0px 0px 0px 0px;text-indent:0px;text-align:left;color:#000000;font-family:sans-serif;font-size:12pt;font-weight:normal;font-style:normal;}
+.E{margin:0px 0px 0px 0px;text-indent:0px;text-align:left;color:#000000;font-family:sans-serif;font-size:16pt;font-weight:bold;font-style:normal;}
+.F{margin:0px 0px 0px 0px;text-indent:0px;text-align:left;color:#000000;font-family:monospace;font-size:9pt;font-weight:normal;font-style:normal;}
+.G{color:#0000ff;}
+.H{margin:0px 0px 0px 0px;text-indent:0px;text-align:left;color:#0000ff;font-family:monospace;font-size:9pt;font-weight:normal;font-style:normal;}
+.I{color:#000000;}
+a.l1         { text-decoration:none; font-size: 8pt; font-family: sans-serif; font-weight: normal; }
+a.l1:link    { color:#000000; }
+a.l1:visited { color:#000080; }
+a.l1:hover   { color:#9933CC; }
+a.l1:active  { color:#000000; }
+a.l2         { text-decoration:none; font-size: 12pt; font-family: sans-serif; font-variant: small-caps; }
+a.l2:link    { color:#0066FF; }
+a.l2:visited { color:#FF6600; }
+a.l2:hover   { color:#BC0624; }
+a.l2:active  { color:#BC0024; }
+
+-->
+</STYLE>
+<META NAME="keywords" CONTENT="framework, toolkit, widget, c++, visual, studio, dev-cpp, builder, ide, class, component,wxwidgets, qt, rapid, application, development, rad, mfc, linux, macos, gui, sdl, directx, desktop"><META name="robots" content="index,follow">
+<LINK rel="alternate" type="application/rss+xml" title="SVN changes" href="svnchanges.xml">
+<LINK rel="shortcut icon" type="image/png" href="favicon.png">
+</HEAD><BODY BGCOLOR="#D2D9D2" ALINK="#800000" LINK="#000000" VLINK="#000080"><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%"><TR><TD COLSPAN="3"><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%" BGCOLOR="#FFFFFF" style="border: 1px solid #6E89AE;padding-left: 10px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;"><TR><TD><A HREF="index.html"><IMG SRC="0i.png" ALT="" BORDER="0"></A>
+</TD>
+<TD ALIGN="RIGHT" VALIGN="BOTTOM" STYLE="padding-bottom: 5px; background-image: url('1i.png')"><span style="font-size: 14pt; font-family: sans-serif;"><script type="text/javascript"><!--
+google_ad_client = "pub-1082147624384270";
+google_ad_width = 468;
+google_ad_height = 60;
+google_ad_format = "468x60_as";
+google_ad_type = "text_image";
+google_ad_channel = "";
+google_color_border = "336699";
+google_color_bg = "FFFFFF";
+google_color_link = "0000FF";
+google_color_text = "000000";
+google_color_url = "008000";
+//--></script>
+<script type="text/javascript"
+  src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+&nbsp;&nbsp;</span>
+</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>
+<TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%"><TR><TD COLSPAN="3" BGCOLOR="#D2D9D2" HEIGHT="6"></TD>
+</TR>
+<TR><TD VALIGN="TOP" ALIGN="CENTER"><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="160"><TR><TD ALIGN="CENTER"><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%" BGCOLOR="#FFFFFF" style="border-style: solid; border-width: 1px; border-color: #6E89AE;padding: 0px"><TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px;"><A HREF="www$uppweb$overview$en-us.html" CLASS="l1">Overview</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$examples$en-us.html" CLASS="l1">Examples</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$ss$en-us.html" CLASS="l1">Screenshots</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$comparison$en-us.html" CLASS="l1">Comparisons</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$apps$en-us.html" CLASS="l1">Applications</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$download$en-us.html" CLASS="l1">Download</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$documentation$en-us.html" CLASS="l1">Documentation</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$Tutorials$en-us.html" CLASS="l1">Tutorials</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="app$ide$UppHub$en-us.html" CLASS="l1">UppHub</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$Roadmap$en-us.html" CLASS="l1">Status & Roadmap</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$FAQ$en-us.html" CLASS="l1">FAQ</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="app$ide$About$en-us.html" CLASS="l1">Authors & License</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="https://www.ultimatepp.org/forums" CLASS="l1">Forums</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$Funding$en-us.html" CLASS="l1">Funding U++</A>
+</TD>
+</TR>
+</TABLE>
+<TABLE BORDER="0" WIDTH="100%"><TR><TD></TD>
+</TR>
+</TABLE>
+<TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%" BGCOLOR="#FFFFFF" style="border-style: solid; border-width: 1px; border-color: #6E89AE;padding: 0px"><TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('3i.png'); border: 0px solid black;padding-left:12px; padding-right:0px; padding-top:1px; padding-bottom:1px;color:#FFFFFF;"><B><span style="font-size: 8pt; font-family: sans-serif;">Search on this site</span>
+</B>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:6px; padding-right:0px; padding-top:4px; padding-bottom:4px;border-top: 1px solid #6E89AE;"><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%"><TR><TD><IMG SRC="4i.png" ALT="" BORDER="0"></TD>
+<TD><FORM ACTION="https://www.google.com/search" METHOD="GET" STYLE="margin:0px;padding:0px;"><INPUT TYPE="HIDDEN" NAME="ie" VALUE="UTF-8"><INPUT TYPE="HIDDEN" NAME="oe" VALUE="UTF-8"><INPUT TYPE="TEXT" NAME="q" SIZE="15" MAXLENGTH="256" placeholder="Site search"><INPUT TYPE="HIDDEN" NAME="sitesearch" VALUE="ultimatepp.org"></FORM>
+</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>
+<TABLE BORDER="0" WIDTH="100%"><TR><TD></TD>
+</TR>
+</TABLE>
+<br><div id="fb-root"></div>
+<script type="text/javascript">(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) {return;}
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+<div class="fb-like" data-href="https://www.facebook.com/pages/Upp-Framework/262346610476027?sk=wall" data-send="false" data-layout="button_count" data-width="160" data-show-faces="false" data-font="arial"></div>
+<br><br><script type="text/javascript"><!--
+google_ad_client = "pub-1082147624384270";
+google_ad_width = 160;
+google_ad_height = 600;
+google_ad_format = "160x600_as";
+google_ad_type = "text_image";
+google_ad_channel = "";
+google_color_border = "336699";
+google_color_bg = "FFFFFF";
+google_color_link = "0000FF";
+google_color_text = "000000";
+google_color_url = "008000";
+//--></script>
+<script type="text/javascript"
+  src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script><br><br><script type="text/javascript"><!--
+google_ad_client = "pub-1082147624384270";
+google_ad_width = 160;
+google_ad_height = 90;
+google_ad_format = "160x90_0ads_al_s";
+google_ad_channel = "";
+google_color_border = "336699";
+google_color_bg = "FFFFFF";
+google_color_link = "0000FF";
+google_color_text = "000000";
+google_color_url = "008000";
+//--></script>
+<script type="text/javascript"
+  src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+<br><br><br><br><br><br><A HREF="https://sourceforge.net/projects/upp/"><IMG SRC="https://sourceforge.net/sflogo.php?group_id=93970&amp;type=2" ALT="SourceForge.net Logo" BORDER="0" WIDTH="125" HEIGHT="37"></A>
+<br><br><A HREF="https://flathub.org/en/apps/org.ultimatepp.TheIDE"><IMG SRC="5i.png" ALT="SourceForge.net Logo" BORDER="0" WIDTH="125" HEIGHT="37"></A>
+<br><br><div style="background-color:#ffffff;width:125;height:35"><A HREF="https://github.com/ultimatepp"><IMG SRC="6i.png" ALT="GitHub Logo" BORDER="0" WIDTH="125" HEIGHT="35"></A>
+</div><br><div style="background-color:#ffffff;width:125;height:35"><div style="height:5"></div><A HREF="https://discord.gg/8XzqQzXZzb"><IMG SRC="https://assets-global.website-files.com/6257adef93867e50d84d30e2/636e0b5061df29d55a92d945_full_logo_blurple_RGB.svg" ALT="Discord Logo" BORDER="0" WIDTH="125" HEIGHT="25"></A>
+</div><br></TD>
+</TR>
+</TABLE>
+</TD>
+<TD VALIGN="TOP" BGCOLOR="#D2D9D2"><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="6"><TR><TD></TD>
+</TR>
+</TABLE>
+</TD>
+<TD VALIGN="TOP" WIDTH="100%" BGCOLOR="#D2D9D2"><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" BGCOLOR="#FFFFFF" WIDTH="100%" style="border-style: solid; border-width: 1px; border-color: #6E89AE;padding: 10px;;"><TR><TD><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%"><TR><TD><p class="C">GridCtrlTest</p>
+<p class="D">&nbsp;</p>
+<p class="D">Application for testing GridCtrl control</p>
+<p class="A">&nbsp;</p>
+<p class="A">&nbsp;</p>
+<p class="E">GridCtrlTest.h</p>
+<p class="A">&nbsp;</p>
+<p class="F"><span class="G">#ifndef</span> _GridTest_GridCtrlTest_h_</p>
+<p class="F"><span class="G">#define</span> _GridTest_GridCtrlTest_h_</p>
+<p class="F">&nbsp;</p>
+<p class="H">#include<span class="I"> </span>&lt;<span class="I">CtrlLib</span>/<span class="I">CtrlLib</span>.<span class="I">h</span>&gt;</p>
+<p class="H">#include<span class="I"> </span>&lt;<span class="I">GridCtrl</span>/<span class="I">GridCtrl</span>.<span class="I">h</span>&gt;</p>
+<p class="F">&nbsp;</p>
+<p class="F"><span class="G">using</span> <span class="G">namespace</span> Upp;</p>
+<p class="F">&nbsp;</p>
+<p class="F"><span class="G">#include</span> &quot;Panel<span class="G">.</span>h&quot;</p>
+<p class="F">&nbsp;</p>
+<p class="H">#define<span class="I"> &nbsp;LAYOUTFILE </span>&lt;<span class="I">GridCtrlTest</span>/<span class="I">GridCtrlTest</span>.<span class="I">lay</span>&gt;</p>
+<p class="H">#include<span class="I"> </span>&lt;<span class="I">CtrlCore</span>/<span class="I">lay</span>.<span class="I">h</span>&gt;</p>
+<p class="F">&nbsp;</p>
+<p class="F"><span class="G">struct</span> Test <span class="G">:</span> <span class="G">public</span> Ctrl</p>
+<p class="F">{</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">virtual</span> <span class="G">void</span> Init() <span class="G">=</span> 0;</p>
+<p class="F">};</p>
+<p class="F">&nbsp;</p>
+<p class="F"><span class="G">struct</span> BasicTest <span class="G">:</span> Test</p>
+<p class="F">{</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;GridCtrl grid;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;BasicTest()</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;{</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Add(grid<span class="G">.</span>SizePos());</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;}</p>
+<p class="F">};</p>
+<p class="F">&nbsp;</p>
+<p class="F"><span class="G">struct</span> TestMain <span class="G">:</span> BasicTest</p>
+<p class="F">{</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;EditInt edit0;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;EditInt edit1;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;EditString edit2;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;DropTime dt;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;EditInt ei;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;EditString ee0, ee1;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;DropList list, colors, names, numbers;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">void</span> Init();</p>
+<p class="F">};</p>
+<p class="F">&nbsp;</p>
+<p class="F"><span class="G">struct</span> TestExcelGrid <span class="G">:</span> BasicTest</p>
+<p class="F">{</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">void</span> Init();</p>
+<p class="F">};</p>
+<p class="F">&nbsp;</p>
+<p class="F"><span class="G">struct</span> TestPropertyGrid <span class="G">:</span> BasicTest</p>
+<p class="F">{</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">void</span> Init();</p>
+<p class="F">};</p>
+<p class="F">&nbsp;</p>
+<p class="F"><span class="G">struct</span> TestFocusLost <span class="G">:</span> Test</p>
+<p class="F">{</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;Splitter spl;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;GridCtrl grid0;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;GridCtrl grid1;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">void</span> Init();</p>
+<p class="F">};</p>
+<p class="F">&nbsp;</p>
+<p class="F"><span class="G">struct</span> TestArrayCtrl <span class="G">:</span> Test</p>
+<p class="F">{</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;EditInt e0, e1;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;ArrayCtrl arr;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">void</span> Init();</p>
+<p class="F">};</p>
+<p class="F">&nbsp;</p>
+<p class="H">struct<span class="I"> App </span>:<span class="I"> </span>public<span class="I"> WithGridPanel</span>&lt;<span class="I">TopWindow</span>&gt;</p>
+<p class="F">{</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">typedef</span> App CLASSNAME;</p>
+<p class="F">&nbsp;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;Splitter spl;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;TestMain testMain;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;TestExcelGrid testExcelGrid;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;TestPropertyGrid testPropertyGrid;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;TestFocusLost testFocusLost;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;TestArrayCtrl testArrayCtrl;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">void</span> TabChange();</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">void</span> Init();</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">void</span> Serialize(Stream <span class="G">&amp;</span>s);</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">void</span> Resort();</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">void</span> ToXml();</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">void</span> FromXml();</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;App();</p>
+<p class="F">};</p>
+<p class="F">&nbsp;</p>
+<p class="H">#endif</p>
+<p class="F">&nbsp;</p>
+<p class="F">&nbsp;</p>
+<p class="F">&nbsp;</p>
+<p class="E">Panel.h</p>
+<p class="F">&nbsp;</p>
+<p class="F"><span class="G">#ifndef</span> _GridTest_Panel_h_</p>
+<p class="F"><span class="G">#define</span> _GridTest_Panel_h_</p>
+<p class="F">&nbsp;</p>
+<p class="H">#include<span class="I"> </span>&lt;<span class="I">CtrlLib</span>/<span class="I">CtrlLib</span>.<span class="I">h</span>&gt;</p>
+<p class="H">#include<span class="I"> </span>&lt;<span class="I">GridCtrl</span>/<span class="I">GridCtrl</span>.<span class="I">h</span>&gt;</p>
+<p class="F">&nbsp;</p>
+<p class="F"><span class="G">using</span> <span class="G">namespace</span> Upp;</p>
+<p class="F">&nbsp;</p>
+<p class="H">#define<span class="I"> &nbsp;LAYOUTFILE </span>&lt;<span class="I">GridCtrlTest</span>/<span class="I">Panel</span>.<span class="I">lay</span>&gt;</p>
+<p class="H">#include<span class="I"> </span>&lt;<span class="I">CtrlCore</span>/<span class="I">lay</span>.<span class="I">h</span>&gt;</p>
+<p class="F">&nbsp;</p>
+<p class="H">struct<span class="I"> Panel </span>:<span class="I"> WithPanelLayout</span>&lt;<span class="I">ParentCtrl</span>&gt;</p>
+<p class="F">{</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;GridCtrl<span class="G">*</span> grid;</p>
+<p class="F">&nbsp;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;WithEditOptionsLayout<span class="G">&lt;</span>ParentCtrl<span class="G">&gt;</span> editopt;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;WithLookOptionsLayout<span class="G">&lt;</span>ParentCtrl<span class="G">&gt;</span> lookopt;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;WithColorsOptionsLayout<span class="G">&lt;</span>ParentCtrl<span class="G">&gt;</span> colsopt;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;WithNumberLayout<span class="G">&lt;</span>ParentCtrl<span class="G">&gt;</span> numsopt;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">void</span> LookOptions(<span class="G">int</span> n);</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">void</span> ColorsOptions(<span class="G">int</span> n);</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">void</span> EditOptions(<span class="G">int</span> n);</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">void</span> Actions(<span class="G">int</span> n);</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">void</span> Init(GridCtrl<span class="G">&amp;</span> g);</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;Panel();</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">typedef</span> Panel CLASSNAME;</p>
+<p class="F">};</p>
+<p class="F">&nbsp;</p>
+<p class="H">#endif</p>
+<p class="F">&nbsp;</p>
+<p class="F">&nbsp;</p>
+<p class="F">&nbsp;</p>
+<p class="E">Panel.cpp</p>
+<p class="F">&nbsp;</p>
+<p class="F"><span class="G">#include</span> &quot;Panel<span class="G">.</span>h&quot;</p>
+<p class="F">&nbsp;</p>
+<p class="F">Panel<span class="G">::</span>Panel()</p>
+<p class="F">{</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;CtrlLayout(<span class="G">*this</span>);</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;CtrlLayout(editopt);</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;CtrlLayout(lookopt);</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;CtrlLayout(colsopt);</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;CtrlLayout(numsopt);</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;opts<span class="G">.</span>Add(lookopt, &quot;Look&quot;);</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;opts<span class="G">.</span>Add(editopt, &quot;Edit&quot;);</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;opts<span class="G">.</span>Add(colsopt, &quot;Colors&quot;);</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;opts<span class="G">.</span>Add(numsopt, &quot;Numbers&quot;);</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;lookopt<span class="G">.</span>indicator &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">&lt;&lt;</span> <span class="G">[=]</span> { LookOptions(0); };</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;lookopt<span class="G">.</span>hgrid &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">&lt;&lt;</span> <span class="G">[=]</span> { LookOptions(1); };</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;lookopt<span class="G">.</span>vgrid &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">&lt;&lt;</span> <span class="G">[=]</span> { LookOptions(2); };</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;lookopt<span class="G">.</span>resizing_cols &nbsp;&nbsp;&nbsp;&nbsp;<span class="G">&lt;&lt;</span> <span class="G">[=]</span> { LookOptions(3); };</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;lookopt<span class="G">.</span>resizing_rows &nbsp;&nbsp;&nbsp;&nbsp;<span class="G">&lt;&lt;</span> <span class="G">[=]</span> { LookOptions(4); };</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;lookopt<span class="G">.</span>live_cursor &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">&lt;&lt;</span> <span class="G">[=]</span> { LookOptions(5); };</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;lookopt<span class="G">.</span>resize_paint_mode <span class="G">&lt;&lt;</span> <span class="G">[=]</span> { LookOptions(6); };</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;lookopt<span class="G">.</span>resize_col_mode &nbsp;&nbsp;<span class="G">&lt;&lt;</span> <span class="G">[=]</span> { LookOptions(7); };</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;lookopt<span class="G">.</span>resize_row_mode &nbsp;&nbsp;<span class="G">&lt;&lt;</span> <span class="G">[=]</span> { LookOptions(8); };</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;lookopt<span class="G">.</span>moving_cols &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">&lt;&lt;</span> <span class="G">[=]</span> { LookOptions(9); };</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;lookopt<span class="G">.</span>moving_rows &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">&lt;&lt;</span> <span class="G">[=]</span> { LookOptions(10); };</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;lookopt<span class="G">.</span>full_col_resizing <span class="G">&lt;&lt;</span> <span class="G">[=]</span> { LookOptions(11); };</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;lookopt<span class="G">.</span>full_row_resizing <span class="G">&lt;&lt;</span> <span class="G">[=]</span> { LookOptions(12); };</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;lookopt<span class="G">.</span>repaint &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">&lt;&lt;</span> <span class="G">[=]</span> { LookOptions(13); };</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;lookopt<span class="G">.</span>disable &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">&lt;&lt;</span> <span class="G">[=]</span> { LookOptions(14); };</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;lookopt<span class="G">.</span>chameleon &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">&lt;&lt;</span> <span class="G">[=]</span> { LookOptions(15); };</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;lookopt<span class="G">.</span>draw_focus &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">&lt;&lt;</span> <span class="G">[=]</span> { LookOptions(16); };</p>
+<p class="F">&nbsp;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;editopt<span class="G">.</span>multiline &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">&lt;&lt;</span> <span class="G">[=]</span> { EditOptions(0); };</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;editopt<span class="G">.</span>select_row &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">&lt;&lt;</span> <span class="G">[=]</span> { EditOptions(1); };</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;editopt<span class="G">.</span>sorting &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">&lt;&lt;</span> <span class="G">[=]</span> { EditOptions(2); };</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;editopt<span class="G">.</span>multisort &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">&lt;&lt;</span> <span class="G">[=]</span> { EditOptions(3); };</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;editopt<span class="G">.</span>tab_changes_row &nbsp;&nbsp;<span class="G">&lt;&lt;</span> <span class="G">[=]</span> { EditOptions(4); };</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;editopt<span class="G">.</span>tab_adds_row &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">&lt;&lt;</span> <span class="G">[=]</span> { EditOptions(5); };</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;editopt<span class="G">.</span>edit_mode &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">&lt;&lt;</span> <span class="G">[=]</span> { EditOptions(6); };</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;editopt<span class="G">.</span>one_click_edit &nbsp;&nbsp;&nbsp;<span class="G">&lt;&lt;</span> <span class="G">[=]</span> { EditOptions(7); };</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;editopt<span class="G">.</span>enter_like_tab &nbsp;&nbsp;&nbsp;<span class="G">&lt;&lt;</span> <span class="G">[=]</span> { EditOptions(8); };</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;colsopt<span class="G">.</span>theme<span class="G">.</span>Add(<span class="G">-</span>1, &quot;Flat&quot;);</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;colsopt<span class="G">.</span>theme<span class="G">.</span>Add(0, &quot;Cairo&quot;);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;colsopt<span class="G">.</span>theme<span class="G">.</span>Add(1, &quot;Gray&quot;);</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;colsopt<span class="G">.</span>theme<span class="G">.</span>Add(2, &quot;Plastik&quot;);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;colsopt<span class="G">.</span>theme<span class="G">.</span>Add(3, &quot;Lipstik&quot;);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;colsopt<span class="G">.</span>theme<span class="G">.</span>Add(4, &quot;Alloy&quot;);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;colsopt<span class="G">.</span>theme<span class="G">.</span>Add(5, &quot;Unknown 01&quot;);</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;colsopt<span class="G">.</span>theme<span class="G">.</span>Add(6, &quot;Default&quot;);</p>
+<p class="F">&nbsp;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;lookopt<span class="G">.</span>resize_paint_mode<span class="G">.</span>Add(0, &quot;Line&quot;);</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;lookopt<span class="G">.</span>resize_paint_mode<span class="G">.</span>Add(1, &quot;Line <span class="G">+</span> Fixed&quot;);</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;lookopt<span class="G">.</span>resize_paint_mode<span class="G">.</span>Add(2, &quot;Fixed <span class="G">+</span> NonFixed&quot;);</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;lookopt<span class="G">.</span>resize_col_mode<span class="G">.</span>Add(0, &quot;Absolute&quot;);</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;lookopt<span class="G">.</span>resize_col_mode<span class="G">.</span>Add(1, &quot;Proportional&quot;);</p>
+<p class="F">&nbsp;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;lookopt<span class="G">.</span>resize_row_mode<span class="G">.</span>Add(0, &quot;Absolute&quot;);</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;lookopt<span class="G">.</span>resize_row_mode<span class="G">.</span>Add(1, &quot;Proportional&quot;);</p>
+<p class="F">&nbsp;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;colsopt<span class="G">.</span>theme &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">&lt;&lt;</span> <span class="G">[=]</span> { ColorsOptions(0); };</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;colsopt<span class="G">.</span>odd_color &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">&lt;&lt;</span> <span class="G">[=]</span> { ColorsOptions(1); };</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;colsopt<span class="G">.</span>even_color &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">&lt;&lt;</span> <span class="G">[=]</span> { ColorsOptions(2); };</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;colsopt<span class="G">.</span>odd_even_mode &nbsp;&nbsp;&nbsp;&nbsp;<span class="G">&lt;&lt;</span> <span class="G">[=]</span> { ColorsOptions(3); };</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;colsopt<span class="G">.</span>grid_color &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">&lt;&lt;</span> <span class="G">[=]</span> { ColorsOptions(4); };</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;colsopt<span class="G">.</span>focus_color &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">&lt;&lt;</span> <span class="G">[=]</span> { ColorsOptions(5); };</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;colsopt<span class="G">.</span>live_color &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">&lt;&lt;</span> <span class="G">[=]</span> { ColorsOptions(6); };</p>
+<p class="F">&nbsp;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;colsopt<span class="G">.</span>odd_color<span class="G">.</span>NoRampWheel();</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;colsopt<span class="G">.</span>even_color<span class="G">.</span>NoRampWheel();</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;colsopt<span class="G">.</span>grid_color<span class="G">.</span>NoRampWheel()<span class="G">.</span>NotNull();</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;colsopt<span class="G">.</span>focus_color<span class="G">.</span>NoRampWheel();</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;colsopt<span class="G">.</span>live_color<span class="G">.</span>NoRampWheel();</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;numsopt<span class="G">.</span>total_cols &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">&lt;&lt;</span> <span class="G">[=]</span> { Actions(0); };</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;numsopt<span class="G">.</span>total_rows &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">&lt;&lt;</span> <span class="G">[=]</span> { Actions(1); };</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;numsopt<span class="G">.</span>fixed_cols &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">&lt;&lt;</span> <span class="G">[=]</span> { Actions(2); };</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;numsopt<span class="G">.</span>fixed_rows &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">&lt;&lt;</span> <span class="G">[=]</span> { Actions(3); };</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;numsopt<span class="G">.</span>total_cols<span class="G">.</span>Disable();</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;clear_grid &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">&lt;&lt;</span> <span class="G">[=]</span> { Actions(4); };</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;reset_grid &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">&lt;&lt;</span> <span class="G">[=]</span> { Actions(5); };</p>
+<p class="F">&nbsp;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">#ifndef</span> flagDEBUG</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;debug<span class="G">.</span>Hide();</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;level<span class="G">.</span>Hide();</p>
+<p class="H"><span class="I">&nbsp;&nbsp;&nbsp;&nbsp;</span>#else</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;clear &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">&lt;&lt;</span> <span class="G">[=]</span> { Actions(400); };</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;debug &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">&lt;&lt;</span> <span class="G">[=]</span> { Actions(401); };</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;level &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">&lt;&lt;</span> <span class="G">[=]</span> { Actions(402); };</p>
+<p class="H"><span class="I">&nbsp;&nbsp;&nbsp;&nbsp;</span>#endif</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;level<span class="G">.</span>Add(0, &quot;All&quot;)</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;<span class="G">.</span>Add(1, &quot;1&quot;)</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;<span class="G">.</span>Add(2, &quot;2&quot;)</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;<span class="G">.</span>Add(3, &quot;3&quot;);</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;level <span class="G">&lt;&lt;=</span> 0;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;dlog <span class="G">=</span> <span class="G">&amp;</span>log0;</p>
+<p class="F">}</p>
+<p class="F">&nbsp;</p>
+<p class="F"><span class="G">void</span> Panel<span class="G">::</span>Init(GridCtrl<span class="G">&amp;</span> g)</p>
+<p class="F">{</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;grid <span class="G">=</span> <span class="G">&amp;</span>g;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;numsopt<span class="G">.</span>total_cols &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">&lt;&lt;=</span> grid<span class="G">-&gt;</span>total_cols;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;numsopt<span class="G">.</span>total_rows &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">&lt;&lt;=</span> grid<span class="G">-&gt;</span>total_rows;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;numsopt<span class="G">.</span>fixed_cols &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">&lt;&lt;=</span> grid<span class="G">-&gt;</span>fixed_cols;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;numsopt<span class="G">.</span>fixed_rows &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">&lt;&lt;=</span> grid<span class="G">-&gt;</span>fixed_rows;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;lookopt<span class="G">.</span>indicator &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">&lt;&lt;=</span> grid<span class="G">-&gt;</span>indicator;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;lookopt<span class="G">.</span>hgrid &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">&lt;&lt;=</span> grid<span class="G">-&gt;</span>horz_grid;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;lookopt<span class="G">.</span>vgrid &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">&lt;&lt;=</span> grid<span class="G">-&gt;</span>vert_grid;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;lookopt<span class="G">.</span>resizing_cols &nbsp;&nbsp;&nbsp;&nbsp;<span class="G">&lt;&lt;=</span> grid<span class="G">-&gt;</span>resizing_cols;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;lookopt<span class="G">.</span>resizing_rows &nbsp;&nbsp;&nbsp;&nbsp;<span class="G">&lt;&lt;=</span> grid<span class="G">-&gt;</span>resizing_rows;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;lookopt<span class="G">.</span>live_cursor &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">&lt;&lt;=</span> grid<span class="G">-&gt;</span>live_cursor;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;lookopt<span class="G">.</span>moving_cols &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">&lt;&lt;=</span> grid<span class="G">-&gt;</span>moving_cols;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;lookopt<span class="G">.</span>moving_rows &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">&lt;&lt;=</span> grid<span class="G">-&gt;</span>moving_rows;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;lookopt<span class="G">.</span>full_col_resizing <span class="G">&lt;&lt;=</span> grid<span class="G">-&gt;</span>full_col_resizing;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;lookopt<span class="G">.</span>full_row_resizing <span class="G">&lt;&lt;=</span> grid<span class="G">-&gt;</span>full_row_resizing;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;lookopt<span class="G">.</span>disable &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">&lt;&lt;=</span> <span class="G">!</span>grid<span class="G">-&gt;</span>IsEnabled();</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;lookopt<span class="G">.</span>chameleon &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">&lt;&lt;=</span> grid<span class="G">-&gt;</span>chameleon;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;lookopt<span class="G">.</span>draw_focus &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">&lt;&lt;=</span> grid<span class="G">-&gt;</span>draw_focus;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;editopt<span class="G">.</span>multiline &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">&lt;&lt;=</span> grid<span class="G">-&gt;</span>multi_select;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;editopt<span class="G">.</span>select_row &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">&lt;&lt;=</span> grid<span class="G">-&gt;</span>select_row;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;editopt<span class="G">.</span>sorting &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">&lt;&lt;=</span> grid<span class="G">-&gt;</span>sorting;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;editopt<span class="G">.</span>multisort &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">&lt;&lt;=</span> grid<span class="G">-&gt;</span>sorting_multicol;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;editopt<span class="G">.</span>tab_changes_row &nbsp;&nbsp;<span class="G">&lt;&lt;=</span> grid<span class="G">-&gt;</span>tab_changes_row;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;editopt<span class="G">.</span>tab_adds_row &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">&lt;&lt;=</span> grid<span class="G">-&gt;</span>tab_adds_row;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;editopt<span class="G">.</span>edit_mode &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">=</span> grid<span class="G">-&gt;</span>edit_mode;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;editopt<span class="G">.</span>one_click_edit &nbsp;&nbsp;&nbsp;<span class="G">&lt;&lt;=</span> grid<span class="G">-&gt;</span>one_click_edit;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;lookopt<span class="G">.</span>resize_paint_mode <span class="G">&lt;&lt;=</span> grid<span class="G">-&gt;</span>resize_paint_mode;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;lookopt<span class="G">.</span>resize_col_mode &nbsp;&nbsp;<span class="G">&lt;&lt;=</span> grid<span class="G">-&gt;</span>resize_col_mode;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;lookopt<span class="G">.</span>resize_row_mode &nbsp;&nbsp;<span class="G">&lt;&lt;=</span> grid<span class="G">-&gt;</span>resize_row_mode;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;colsopt<span class="G">.</span>theme &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">&lt;&lt;=</span> grid<span class="G">-&gt;</span>display<span class="G">-&gt;</span>theme;</p>
+<p class="F">&nbsp;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;colsopt<span class="G">.</span>odd_even_mode &nbsp;&nbsp;&nbsp;&nbsp;<span class="G">&lt;&lt;=</span> grid<span class="G">-&gt;</span>coloring_mode;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;colsopt<span class="G">.</span>odd_color &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">&lt;&lt;=</span> grid<span class="G">-&gt;</span>bg_odd;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;colsopt<span class="G">.</span>even_color &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">&lt;&lt;=</span> grid<span class="G">-&gt;</span>bg_even;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;colsopt<span class="G">.</span>grid_color &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">&lt;&lt;=</span> grid<span class="G">-&gt;</span>fg_grid;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;colsopt<span class="G">.</span>focus_color &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">&lt;&lt;=</span> grid<span class="G">-&gt;</span>bg_focus;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;colsopt<span class="G">.</span>live_color &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">&lt;&lt;=</span> grid<span class="G">-&gt;</span>bg_live;</p>
+<p class="F">}</p>
+<p class="F">&nbsp;</p>
+<p class="F"><span class="G">void</span> Panel<span class="G">::</span>LookOptions(<span class="G">int</span> n)</p>
+<p class="F">{</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">switch</span>(n)</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;{</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">case</span> 0<span class="G">:</span>&nbsp;&nbsp;&nbsp;&nbsp; grid<span class="G">-&gt;</span>Indicator(lookopt<span class="G">.</span>indicator); &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">break</span>;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">case</span> 1<span class="G">:</span>&nbsp;&nbsp;&nbsp;&nbsp; grid<span class="G">-&gt;</span>HorzGrid(lookopt<span class="G">.</span>hgrid); &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">break</span>;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">case</span> 2<span class="G">:</span>&nbsp;&nbsp;&nbsp;&nbsp; grid<span class="G">-&gt;</span>VertGrid(lookopt<span class="G">.</span>vgrid); &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">break</span>;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">case</span> 3<span class="G">:</span>&nbsp;&nbsp;&nbsp;&nbsp; grid<span class="G">-&gt;</span>ResizingCols(lookopt<span class="G">.</span>resizing_cols);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">break</span>;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">case</span> 4<span class="G">:</span>&nbsp;&nbsp;&nbsp;&nbsp; grid<span class="G">-&gt;</span>ResizingRows(lookopt<span class="G">.</span>resizing_rows);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">break</span>;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">case</span> 5<span class="G">:</span> &nbsp;grid<span class="G">-&gt;</span>LiveCursor(lookopt<span class="G">.</span>live_cursor);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">break</span>;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">case</span> 6<span class="G">:</span>&nbsp;&nbsp;&nbsp;&nbsp; grid<span class="G">-&gt;</span>ResizePaintMode(lookopt<span class="G">.</span>resize_paint_mode<span class="G">.</span>GetIndex()); <span class="G">break</span>;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">case</span> 7<span class="G">:</span>&nbsp;&nbsp;&nbsp;&nbsp; grid<span class="G">-&gt;</span>ResizeColMode(lookopt<span class="G">.</span>resize_col_mode<span class="G">.</span>GetIndex()); &nbsp;&nbsp;&nbsp;&nbsp;<span class="G">break</span>;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">case</span> 8<span class="G">:</span> &nbsp;grid<span class="G">-&gt;</span>ResizeRowMode(lookopt<span class="G">.</span>resize_row_mode<span class="G">.</span>GetIndex()); &nbsp;&nbsp;&nbsp;&nbsp;<span class="G">break</span>;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">case</span> 9<span class="G">:</span> &nbsp;grid<span class="G">-&gt;</span>MovingCols(lookopt<span class="G">.</span>moving_cols); &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">break</span>;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">case</span> 10<span class="G">:</span> grid<span class="G">-&gt;</span>MovingRows(lookopt<span class="G">.</span>moving_rows); &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">break</span>;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">case</span> 11<span class="G">:</span> grid<span class="G">-&gt;</span>FullColResizing(lookopt<span class="G">.</span>full_col_resizing); &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">break</span>;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">case</span> 12<span class="G">:</span> grid<span class="G">-&gt;</span>FullRowResizing(lookopt<span class="G">.</span>full_row_resizing); &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">break</span>;</p>
+<p class="H"><span class="I">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>case<span class="I"> 13</span>:</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">#ifdef</span> flagDEBUG</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Ctrl<span class="G">::</span>ShowRepaint((<span class="G">int</span>) lookopt<span class="G">.</span>repaint <span class="G">?</span> 20 <span class="G">:</span> 0);</p>
+<p class="H"><span class="I">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>#endif</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">break</span>;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">case</span> 14<span class="G">:</span> grid<span class="G">-&gt;</span>Enable(<span class="G">!</span>lookopt<span class="G">.</span>disable);&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">break</span>;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">case</span> 15<span class="G">:</span> grid<span class="G">-&gt;</span>Chameleon(lookopt<span class="G">.</span>chameleon); &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">break</span>;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">case</span> 16<span class="G">:</span> grid<span class="G">-&gt;</span>DrawFocus(lookopt<span class="G">.</span>draw_focus); &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">break</span>;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;}</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;grid<span class="G">-&gt;</span>Repaint();</p>
+<p class="F">}</p>
+<p class="F">&nbsp;</p>
+<p class="F"><span class="G">void</span> Panel<span class="G">::</span>ColorsOptions(<span class="G">int</span> n)</p>
+<p class="F">{</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">switch</span>(n)</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;{</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">case</span> 0<span class="G">:</span> grid<span class="G">-&gt;</span>GetDisplay()<span class="G">.</span>SetTheme(<span class="G">~</span>colsopt<span class="G">.</span>theme); &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">break</span>;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">case</span> 1<span class="G">:</span> grid<span class="G">-&gt;</span>OddColor(SColorText, <span class="G">~</span>colsopt<span class="G">.</span>odd_color); &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">break</span>;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">case</span> 2<span class="G">:</span> grid<span class="G">-&gt;</span>EvenColor(SColorText, <span class="G">~</span>colsopt<span class="G">.</span>even_color); &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">break</span>;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">case</span> 3<span class="G">:</span> grid<span class="G">-&gt;</span>ColoringMode(colsopt<span class="G">.</span>odd_even_mode); &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">break</span>;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">case</span> 4<span class="G">:</span> grid<span class="G">-&gt;</span>GridColor(<span class="G">~</span>colsopt<span class="G">.</span>grid_color); &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">break</span>;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">case</span> 5<span class="G">:</span> grid<span class="G">-&gt;</span>FocusColor(SColorText, <span class="G">~</span>colsopt<span class="G">.</span>focus_color); &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">break</span>;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">case</span> 6<span class="G">:</span> grid<span class="G">-&gt;</span>LiveColor(SColorText, <span class="G">~</span>colsopt<span class="G">.</span>live_color); &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">break</span>;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;}</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;grid<span class="G">-&gt;</span>Repaint();</p>
+<p class="F">}</p>
+<p class="F">&nbsp;</p>
+<p class="F"><span class="G">void</span> Panel<span class="G">::</span>EditOptions(<span class="G">int</span> n)</p>
+<p class="F">{</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">switch</span>(n)</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;{</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">case</span> 0<span class="G">:</span>&nbsp;&nbsp;&nbsp;&nbsp;grid<span class="G">-&gt;</span>MultiSelect(editopt<span class="G">.</span>multiline); &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">break</span>;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">case</span> 1<span class="G">:</span>&nbsp;&nbsp;&nbsp;&nbsp;grid<span class="G">-&gt;</span>SelectRow(editopt<span class="G">.</span>select_row); &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">break</span>;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">case</span> 2<span class="G">:</span>&nbsp;&nbsp;&nbsp;&nbsp;grid<span class="G">-&gt;</span>Sorting(editopt<span class="G">.</span>sorting); &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">break</span>;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">case</span> 3<span class="G">:</span>&nbsp;&nbsp;&nbsp;&nbsp;grid<span class="G">-&gt;</span>MultiSorting(editopt<span class="G">.</span>multisort); &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">break</span>;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">case</span> 4<span class="G">:</span>&nbsp;&nbsp;&nbsp;&nbsp;grid<span class="G">-&gt;</span>TabChangesRow(editopt<span class="G">.</span>tab_changes_row); &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">break</span>;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">case</span> 5<span class="G">:</span>&nbsp;&nbsp;&nbsp;&nbsp;grid<span class="G">-&gt;</span>TabAddsRow(editopt<span class="G">.</span>tab_adds_row);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">break</span>;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">case</span> 6<span class="G">:</span> grid<span class="G">-&gt;</span>EditMode(editopt<span class="G">.</span>edit_mode); &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">break</span>;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">case</span> 7<span class="G">:</span> grid<span class="G">-&gt;</span>OneClickEdit(editopt<span class="G">.</span>one_click_edit); &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">break</span>;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">case</span> 8<span class="G">:</span> grid<span class="G">-&gt;</span>EnterLikeTab(editopt<span class="G">.</span>enter_like_tab); &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">break</span>;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;}</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;grid<span class="G">-&gt;</span>Repaint();</p>
+<p class="F">}</p>
+<p class="F">&nbsp;</p>
+<p class="F"><span class="G">void</span> Panel<span class="G">::</span>Actions(<span class="G">int</span> n)</p>
+<p class="F">{</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">switch</span>(n)</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;{</p>
+<p class="H"><span class="I">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>case<span class="I"> 0</span>:</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{</p>
+<p class="H"><span class="I">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>/*</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">int</span> cnt <span class="G">=</span> grid<span class="G">-&gt;</span>GetColumnCount();</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">if</span>(cnt <span class="G">&lt;</span> numsopt<span class="G">.</span>total_cols)</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;grid<span class="G">-&gt;</span>AddColumn(numsopt<span class="G">.</span>total_cols <span class="G">-</span> cnt);</p>
+<p class="H"><span class="I">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>else</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;grid<span class="G">-&gt;</span>RemoveColumn(cnt <span class="G">-</span> numsopt<span class="G">.</span>total_cols);</p>
+<p class="H"><span class="I">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>*/</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">break</span>;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</p>
+<p class="H"><span class="I">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>case<span class="I"> 1</span>:</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">int</span> cnt <span class="G">=</span> grid<span class="G">-&gt;</span>total_rows;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">if</span>(cnt <span class="G">&lt;</span> numsopt<span class="G">.</span>total_rows)</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;grid<span class="G">-&gt;</span>Append(numsopt<span class="G">.</span>total_rows <span class="G">-</span> cnt);</p>
+<p class="H"><span class="I">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>else</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;grid<span class="G">-&gt;</span>RemoveLast(cnt <span class="G">-</span> numsopt<span class="G">.</span>total_rows);</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">break</span>;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">case</span> 2<span class="G">:</span> grid<span class="G">-&gt;</span>SetFixedCols(numsopt<span class="G">.</span>fixed_cols); <span class="G">break</span>;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">case</span> 3<span class="G">:</span>&nbsp;&nbsp;&nbsp;&nbsp;grid<span class="G">-&gt;</span>SetFixedRows(numsopt<span class="G">.</span>fixed_rows); <span class="G">break</span>;</p>
+<p class="F">&nbsp;</p>
+<p class="H"><span class="I">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>case<span class="I"> 4</span>:</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;grid<span class="G">-&gt;</span>Clear();</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;grid<span class="G">-&gt;</span>RefreshTop();</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">break</span>;</p>
+<p class="H"><span class="I">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>case<span class="I"> 5</span>:</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;grid<span class="G">-&gt;</span>Reset();</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">break</span>;</p>
+<p class="H"><span class="I">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>case<span class="I"> 400</span>:</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;log0<span class="G">.</span>Clear();</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">break</span>;</p>
+<p class="H"><span class="I">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>case<span class="I"> 401</span>:</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;grid<span class="G">-&gt;</span>Debug(0);</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">break</span>;</p>
+<p class="H"><span class="I">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>case<span class="I"> 402</span>:</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;dlev <span class="G">=</span> <span class="G">~</span>level;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">break</span>;</p>
+<p class="H"><span class="I">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>case<span class="I"> 403</span>:</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;grid<span class="G">-&gt;</span>ReSort();</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">break</span>;</p>
+<p class="H"><span class="I">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>case<span class="I"> 666</span>:</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Close();</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;}</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;grid<span class="G">-&gt;</span>Repaint();</p>
+<p class="F">}</p>
+<p class="F">&nbsp;</p>
+<p class="F">&nbsp;</p>
+<p class="F">&nbsp;</p>
+<p class="E">TestMain.cpp</p>
+<p class="F">&nbsp;</p>
+<p class="F"><span class="G">#include</span> &quot;GridCtrlTest<span class="G">.</span>h&quot;</p>
+<p class="F">&nbsp;</p>
+<p class="F"><span class="G">void</span> TestMain<span class="G">::</span>Init()</p>
+<p class="F">{</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">const</span> <span class="G">int</span> names_cnt <span class="G">=</span> 6;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">const</span> <span class="G">int</span> colors_cnt <span class="G">=</span> 4;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">const</span> <span class="G">int</span> numbers_cnt <span class="G">=</span> 10;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">const</span> <span class="G">char</span> <span class="G">*</span> s_names<span class="G">[]</span> <span class="G">=</span> { &quot;Jack&quot;, &quot;This is a very <span class="G">long</span> multiline text\n\n\n1234\n5678\nThis text is absolutely about nothing interesting<span class="G">.</span> This text is absolutely about nothing interesting<span class="G">.</span> This text is absolutely about nothing interesting<span class="G">.</span> This text is absolutely about nothing interesting<span class="G">.</span> This text is absolutely about nothing interesting<span class="G">.</span> This text is absolutely about nothing interesting<span class="G">.</span> This text is absolutely about nothing interesting<span class="G">.</span>&quot;, &quot;Smith&quot;, &quot;Billy&quot;, &quot;Eve&quot;, &quot;Pamela&quot; };</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">const</span> <span class="G">char</span> <span class="G">*</span> s_colors<span class="G">[]</span> <span class="G">=</span> { &quot;Red&quot;, &quot;Blue&quot;, &quot;White&quot;, &quot;Black&quot; };</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;grid<span class="G">.</span>Inserting(<span class="G">false</span>);</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;grid<span class="G">.</span>Appending(<span class="G">!false</span>);</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;grid<span class="G">.</span>Moving();</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;grid<span class="G">.</span>Removing();</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;grid<span class="G">.</span>Navigating();</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;grid<span class="G">.</span>Searching();</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;grid<span class="G">.</span>Editing();</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;grid<span class="G">.</span>Hiding();</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;grid<span class="G">.</span>Duplicating();</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;grid<span class="G">.</span>AfterBeforeInserting();</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;grid<span class="G">.</span>Accepting()<span class="G">.</span>Canceling();</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;grid<span class="G">.</span>Clipboard();</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;grid<span class="G">.</span>SummaryRow();</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">const</span> <span class="G">int</span> total_cols <span class="G">=</span> 15;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">const</span> <span class="G">int</span> total_rows <span class="G">=</span> 10;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">for</span>(<span class="G">int</span> i <span class="G">=</span> 0; i <span class="G">&lt;</span> total_cols; i<span class="G">++</span>)</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;{</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;String name <span class="G">=</span> Format(&quot;Column <span class="G">%</span>d&quot;, i <span class="G">+</span> 1);</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">int</span> size <span class="G">=</span> rand() <span class="G">%</span> 40 <span class="G">+</span> 50;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;grid<span class="G">.</span>AddColumn((<span class="G">const</span> <span class="G">char</span> <span class="G">*</span>)name)<span class="G">.</span>Width(size);</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;}</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">for</span>(<span class="G">int</span> i <span class="G">=</span> 0; i <span class="G">&lt;</span> names_cnt; i<span class="G">++</span>)</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;names<span class="G">.</span>Add(i, s_names<span class="G">[</span>i<span class="G">]</span>);</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">for</span>(<span class="G">int</span> i <span class="G">=</span> 0; i <span class="G">&lt;</span> colors_cnt; i<span class="G">++</span>)</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;colors<span class="G">.</span>Add(i, s_colors<span class="G">[</span>i<span class="G">]</span>);</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">for</span>(<span class="G">int</span> i <span class="G">=</span> 0; i <span class="G">&lt;</span> numbers_cnt; i<span class="G">++</span>)</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;numbers<span class="G">.</span>Add(i, Format(&quot;Number <span class="G">%</span>d&quot;, i));</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;grid<span class="G">.</span>GetColumn(1)<span class="G">.</span>Edit(names)<span class="G">.</span>SetConvert(names)<span class="G">.</span>Default(0)<span class="G">.</span>SetImage(CtrlImg<span class="G">::</span>go_forward());</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;grid<span class="G">.</span>GetColumn(2)<span class="G">.</span>Edit(numbers)<span class="G">.</span>SetConvert(numbers)<span class="G">.</span>Default(1);</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;grid<span class="G">.</span>GetColumn(3)<span class="G">.</span>Edit(colors)<span class="G">.</span>SetConvert(colors)<span class="G">.</span>Default(2);</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;grid<span class="G">.</span>GetColumn(4)<span class="G">.</span>Edit(edit0)<span class="G">.</span>DoCount();</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;grid<span class="G">.</span>GetColumn(5)<span class="G">.</span>Edit(edit1)<span class="G">.</span>DoSum(&quot;Sum<span class="G">:</span> <span class="G">%</span>` $&quot;);</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;grid<span class="G">.</span>GetColumn(6)<span class="G">.</span>Edit(dt)<span class="G">.</span>DoMin();</p>
+<p class="F">&nbsp;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;grid<span class="G">.</span>GetColumn(9)<span class="G">.</span>Option();</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;grid<span class="G">.</span>GetColumn(10)<span class="G">.</span>Option();</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;grid<span class="G">.</span>GetColumn(11)<span class="G">.</span>Option();</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;grid<span class="G">.</span>GetColumn(total_cols <span class="G">-</span> 1)<span class="G">.</span>Min(40)<span class="G">.</span>Max(40);</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;grid<span class="G">.</span>GetColumn(total_cols <span class="G">-</span> 2)<span class="G">.</span>Fixed(50);</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;grid<span class="G">.</span>GetColumn(total_cols <span class="G">-</span> 3)<span class="G">.</span>Fixed(40);</p>
+<p class="F">&nbsp;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;grid<span class="G">.</span>SetDefaultRowHeight(DPI(26));&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;grid<span class="G">.</span>AddRow(total_rows);</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;grid<span class="G">.</span>FixedPaste();</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;Date curdate <span class="G">=</span> GetSysDate();</p>
+<p class="F">&nbsp;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">for</span>(<span class="G">int</span> i <span class="G">=</span> 0; i <span class="G">&lt;</span> total_rows; i<span class="G">++</span>)</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;{</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">for</span>(<span class="G">int</span> j <span class="G">=</span> 0; j <span class="G">&lt;</span> total_cols; j<span class="G">++</span>)</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">switch</span>(j)</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">case</span> 0<span class="G">:</span> grid<span class="G">.</span>Set(i, j, Value(i <span class="G">+</span> 1)); <span class="G">break</span>;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">case</span> 1<span class="G">:</span> grid<span class="G">.</span>Set(i, j, rand() <span class="G">%</span> (names_cnt <span class="G">-</span> 1)); <span class="G">break</span>;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">case</span> 2<span class="G">:</span> grid<span class="G">.</span>Set(i, j, rand() <span class="G">%</span> (numbers_cnt <span class="G">-</span> 1)); <span class="G">break</span>;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">case</span> 3<span class="G">:</span> grid<span class="G">.</span>Set(i, j, rand() <span class="G">%</span> (colors_cnt <span class="G">-</span> 1)); <span class="G">break</span>;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">case</span> 6<span class="G">:</span> grid<span class="G">.</span>Set(i, j, Date(curdate<span class="G">.</span>year, curdate<span class="G">.</span>month, rand() <span class="G">%</span> 27 <span class="G">+</span> 1)); <span class="G">break</span>;</p>
+<p class="H"><span class="I">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>case<span class="I"> 9</span>:</p>
+<p class="H"><span class="I">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>case<span class="I"> 10</span>:</p>
+<p class="H"><span class="I">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>case<span class="I"> 11</span>:</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">case</span> 7<span class="G">:</span> grid<span class="G">.</span>Set(i, j, rand() <span class="G">%</span> 1); <span class="G">break</span>;</p>
+<p class="H"><span class="I">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>default:</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;grid<span class="G">.</span>Set(i, j, Value(rand() <span class="G">%</span> 500)); &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;}</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;grid<span class="G">.</span>EvenColor();</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;grid<span class="G">.</span>ColoringMode(2);</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;grid<span class="G">.</span>Indicator();</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;grid<span class="G">.</span>EditCell();</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;grid<span class="G">.</span>MultiSelect();</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;grid<span class="G">.</span>SelectRow();</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;grid<span class="G">.</span>Sorting();</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;grid<span class="G">.</span>MovingCols(1)<span class="G">.</span>MovingRows(1);</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;grid<span class="G">.</span>SetToolBar();</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;grid<span class="G">.</span>Dragging();</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;grid<span class="G">.</span>SetCursor(0);</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;grid<span class="G">.</span>DrawFocus();</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;grid<span class="G">.</span>AddColumn()<span class="G">.</span>WrapText();&nbsp;&nbsp;&nbsp;&nbsp;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;grid<span class="G">.</span>SetCtrl(0, 0, ei);</p>
+<p class="F">}</p>
+<p class="F">&nbsp;</p>
+<p class="F">&nbsp;</p>
+<p class="F">&nbsp;</p>
+<p class="E">TestArrayCtrl.cpp</p>
+<p class="F">&nbsp;</p>
+<p class="F"><span class="G">#include</span> &quot;GridCtrlTest<span class="G">.</span>h&quot;</p>
+<p class="F">&nbsp;</p>
+<p class="F"><span class="G">void</span> MakeDropList(One<span class="G">&lt;</span>Ctrl<span class="G">&gt;&amp;</span> ctrl)</p>
+<p class="F">{</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;ctrl<span class="G">.</span>Create<span class="G">&lt;</span>DropList<span class="G">&gt;</span>()</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;<span class="G">.</span>Add(Null, &quot;&quot;)</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;<span class="G">.</span>Add(0, &quot;None&quot;)</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;<span class="G">.</span>Add(1, &quot;Minimal&quot;)</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;<span class="G">.</span>Add(2, &quot;Full&quot;);&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;</p>
+<p class="F">}</p>
+<p class="F">&nbsp;</p>
+<p class="F"><span class="G">void</span> MakeButton(One<span class="G">&lt;</span>Ctrl<span class="G">&gt;&amp;</span> ctrl)</p>
+<p class="F">{</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;ctrl<span class="G">.</span>Create<span class="G">&lt;</span>Button<span class="G">&gt;</span>();</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;ctrl<span class="G">-&gt;</span>WantFocus();</p>
+<p class="F">}</p>
+<p class="F">&nbsp;</p>
+<p class="F"><span class="G">void</span> MakeCheck(One<span class="G">&lt;</span>Ctrl<span class="G">&gt;&amp;</span> ctrl)</p>
+<p class="F">{</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;ctrl<span class="G">.</span>Create<span class="G">&lt;</span>Option<span class="G">&gt;</span>();</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;ctrl<span class="G">-&gt;</span>WantFocus();</p>
+<p class="F">}</p>
+<p class="F">&nbsp;</p>
+<p class="F"><span class="G">void</span> MakeEdit(One<span class="G">&lt;</span>Ctrl<span class="G">&gt;&amp;</span> ctrl)</p>
+<p class="F">{</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;ctrl<span class="G">.</span>Create<span class="G">&lt;</span>EditInt<span class="G">&gt;</span>();</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;ctrl<span class="G">-&gt;</span>WantFocus();</p>
+<p class="F">}</p>
+<p class="F">&nbsp;</p>
+<p class="F"><span class="G">void</span> TestArrayCtrl<span class="G">::</span>Init()</p>
+<p class="F">{</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;arr<span class="G">.</span>HeaderTab(0)<span class="G">.</span>SetRatio(10);</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;arr<span class="G">.</span>HeaderObject()<span class="G">.</span>Absolute();</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;arr<span class="G">.</span>MultiSelect();</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;arr<span class="G">.</span>Inserting();</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;arr<span class="G">.</span>SetLineCy(DPI(20));</p>
+<p class="F">&nbsp;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">const</span> <span class="G">int</span> total_cols <span class="G">=</span> 15;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">const</span> <span class="G">int</span> total_rows <span class="G">=</span> 10;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">for</span>(<span class="G">int</span> i <span class="G">=</span> 0; i <span class="G">&lt;</span> total_cols; i<span class="G">++</span>)</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;{</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;String name <span class="G">=</span> Format(&quot;Column <span class="G">%</span>d&quot;, i <span class="G">+</span> 1);</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">int</span> size <span class="G">=</span> rand() <span class="G">%</span> 40 <span class="G">+</span> 50;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;arr<span class="G">.</span>AddColumn((<span class="G">const</span> <span class="G">char</span> <span class="G">*</span>)name, size);</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;}</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;arr<span class="G">.</span>SetCount(50);</p>
+<p class="F">&nbsp;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;arr<span class="G">.</span>ColumnAt(1)<span class="G">.</span>Ctrls(MakeDropList);</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;arr<span class="G">.</span>ColumnAt(2)<span class="G">.</span>Ctrls(MakeButton);</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;arr<span class="G">.</span>ColumnAt(3)<span class="G">.</span>Ctrls(MakeEdit);</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;arr<span class="G">.</span>ColumnAt(1)<span class="G">.</span>Edit(e0);</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;arr<span class="G">.</span>ColumnAt(2)<span class="G">.</span>Edit(e1);</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;Add(arr<span class="G">.</span>SizePos());</p>
+<p class="F">}</p>
+<p class="F">&nbsp;</p>
+<p class="F">&nbsp;</p>
+<p class="F">&nbsp;</p>
+<p class="E">TestFocusLost.cpp</p>
+<p class="F">&nbsp;</p>
+<p class="F"><span class="G">#include</span> &quot;GridCtrlTest<span class="G">.</span>h&quot;</p>
+<p class="F">&nbsp;</p>
+<p class="F"><span class="G">void</span> TestFocusLost<span class="G">::</span>Init()</p>
+<p class="F">{</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;Add(spl<span class="G">.</span>SizePos());</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;spl<span class="G">.</span>Horz(grid0, grid1);</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;grid0<span class="G">.</span>AddColumn(&quot;Key&quot;);</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;grid0<span class="G">.</span>AddColumn(&quot;Value&quot;);</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;grid1<span class="G">.</span>AddColumn(&quot;Key&quot;);</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;grid1<span class="G">.</span>AddColumn(&quot;Value&quot;);</p>
+<p class="F">}</p>
+<p class="F">&nbsp;</p>
+<p class="F">&nbsp;</p>
+<p class="F">&nbsp;</p>
+<p class="E">TestExcelGrid.cpp</p>
+<p class="F">&nbsp;</p>
+<p class="F"><span class="G">#include</span> &quot;GridCtrlTest<span class="G">.</span>h&quot;</p>
+<p class="F">&nbsp;</p>
+<p class="F"><span class="G">void</span> TestExcelGrid<span class="G">::</span>Init()</p>
+<p class="F">{</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">const</span> <span class="G">int</span> total_cols <span class="G">=</span> 50;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">for</span>(<span class="G">int</span> i <span class="G">=</span> 0; i <span class="G">&lt;</span> total_cols; i<span class="G">++</span>)</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;{</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;String name <span class="G">=</span> Format(&quot;Column <span class="G">%</span>d&quot;, i <span class="G">+</span> 1);</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;grid<span class="G">.</span>AddColumn((<span class="G">const</span> <span class="G">char</span> <span class="G">*</span>)name)<span class="G">.</span>Width(80);</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;}</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;grid<span class="G">.</span>SelectRow(<span class="G">false</span>);</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;grid<span class="G">.</span>SetRowCount(200);</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;grid<span class="G">.</span>ResizePaintMode(1);</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;grid<span class="G">.</span>Absolute();</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;grid<span class="G">.</span>Clipboard();</p>
+<p class="F">}</p>
+<p class="F">&nbsp;</p>
+<p class="F">&nbsp;</p>
+<p class="E">TestPropertyGrid.cpp</p>
+<p class="F">&nbsp;</p>
+<p class="F"><span class="G">#include</span> &quot;GridCtrlTest<span class="G">.</span>h&quot;</p>
+<p class="F">&nbsp;</p>
+<p class="F"><span class="G">void</span> TestPropertyGrid<span class="G">::</span>Init()</p>
+<p class="F">{</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;grid<span class="G">.</span>AddColumn(&quot;Property&quot;);</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;grid<span class="G">.</span>AddColumn(&quot;Value&quot;);</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;grid<span class="G">.</span>Add(&quot;Name&quot;, &quot;Window&quot;);</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;grid<span class="G">.</span>SetCtrl(1, <span class="G">new</span> EditString());</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;grid<span class="G">.</span>Add(&quot;Title&quot;, &quot;User account&quot;);</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;grid<span class="G">.</span>SetCtrl(1, <span class="G">new</span> EditString());</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;grid<span class="G">.</span>Add(&quot;Width&quot;, 500);</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;grid<span class="G">.</span>SetCtrl(1, <span class="G">new</span> EditInt());</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;grid<span class="G">.</span>Add(&quot;Height&quot;, 600);</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;grid<span class="G">.</span>SetCtrl(1, <span class="G">new</span> EditInt());</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;grid<span class="G">.</span>Add(&quot;Editable&quot;, &quot;<span class="G">false</span>&quot;);</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;grid<span class="G">.</span>Add(&quot;Background&quot;, Red());</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;grid<span class="G">.</span>SetCtrl(1, <span class="G">new</span> ColorPusher());</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;grid<span class="G">.</span>Add(&quot;Hint&quot;, &quot;This window is big&quot;);</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;grid<span class="G">.</span>SetCtrl(1, <span class="G">new</span> EditString());</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;grid<span class="G">.</span>DrawFocus();</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;</p>
+<p class="F">}</p>
+<p class="F">&nbsp;</p>
+<p class="F">&nbsp;</p>
+<p class="F">&nbsp;</p>
+<p class="E">GridCtrlTest.cpp</p>
+<p class="F">&nbsp;</p>
+<p class="F"><span class="G">#include</span> &quot;GridCtrlTest<span class="G">.</span>h&quot;</p>
+<p class="F">&nbsp;</p>
+<p class="F"><span class="G">void</span> MakeGrid(One<span class="G">&lt;</span>Ctrl<span class="G">&gt;&amp;</span> ctrl)</p>
+<p class="F">{</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;GridCtrl <span class="G">&amp;</span>c <span class="G">=</span> ctrl<span class="G">.</span>Create<span class="G">&lt;</span>GridCtrl<span class="G">&gt;</span>();</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;c<span class="G">.</span>AddColumn(&quot;Column 1&quot;);</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;c<span class="G">.</span>AddColumn(&quot;Column 2&quot;);</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;c<span class="G">.</span>AddColumn(&quot;Column 3&quot;);</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;c<span class="G">.</span>MovingCols();</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;c<span class="G">.</span>MovingRows();</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;c<span class="G">.</span>Add(&quot;Hello&quot;, 1, 2);</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;c<span class="G">.</span>Add(&quot;Daniel&quot;, 12, 10);</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;c<span class="G">.</span>Add(&quot;Ala&quot;, 17, 23);</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;c<span class="G">.</span>Add(&quot;Baby&quot;, 22, 8);</p>
+<p class="F">}</p>
+<p class="F">&nbsp;</p>
+<p class="F">App<span class="G">::</span>App()</p>
+<p class="F">{</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;CtrlLayout(<span class="G">*this</span>, &quot;Grid Test Panel&quot;);</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;tab<span class="G">.</span>Add(testMain<span class="G">.</span>SizePos(), &quot;Main&quot;);</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;tab<span class="G">.</span>Add(testExcelGrid<span class="G">.</span>SizePos(), &quot;Excel grid&quot;);</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;tab<span class="G">.</span>Add(testPropertyGrid<span class="G">.</span>SizePos(), &quot;Property grid&quot;);</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;tab<span class="G">.</span>Add(testArrayCtrl<span class="G">.</span>SizePos(), &quot;ArrayCtrl&quot;);</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;tab<span class="G">.</span>Add(testFocusLost<span class="G">.</span>SizePos(), &quot;Focus lost&quot;);</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;tab <span class="G">&lt;&lt;</span> <span class="G">[=]</span> { TabChange(); };</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;resort <span class="G">&lt;&lt;</span> <span class="G">[=]</span> { Resort(); };</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;toxml <span class="G">&lt;&lt;</span> <span class="G">[=]</span> { ToXml(); };</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;fromxml <span class="G">&lt;&lt;</span> <span class="G">[=]</span> { FromXml(); };</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;Sizeable()<span class="G">.</span>Zoomable();<span class="G">//.</span>BackPaint(<span class="G">!false</span>);&nbsp;&nbsp;&nbsp;&nbsp;</p>
+<p class="F">}</p>
+<p class="F">&nbsp;</p>
+<p class="F"><span class="G">void</span> App<span class="G">::</span>Init()</p>
+<p class="F">{</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;testMain<span class="G">.</span>Init();</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;testExcelGrid<span class="G">.</span>Init();</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;testPropertyGrid<span class="G">.</span>Init();</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;testFocusLost<span class="G">.</span>Init();</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;testArrayCtrl<span class="G">.</span>Init();</p>
+<p class="F">&nbsp;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;panel<span class="G">.</span>Init(testMain<span class="G">.</span>grid);&nbsp;&nbsp;&nbsp;&nbsp;</p>
+<p class="F">}</p>
+<p class="F">&nbsp;</p>
+<p class="F"><span class="G">void</span> App<span class="G">::</span>TabChange()</p>
+<p class="F">{</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">int</span> t <span class="G">=</span> tab<span class="G">.</span>Get();</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">if</span>(t <span class="G">==</span> 0)</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;panel<span class="G">.</span>Init(testMain<span class="G">.</span>grid);</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">else</span> <span class="G">if</span>(t <span class="G">==</span> 1)</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;panel<span class="G">.</span>Init(testExcelGrid<span class="G">.</span>grid);</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">else</span> <span class="G">if</span>(t <span class="G">==</span> 2)</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;panel<span class="G">.</span>Init(testPropertyGrid<span class="G">.</span>grid);</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">else</span> <span class="G">if</span>(t <span class="G">==</span> 4)</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;panel<span class="G">.</span>Init(testFocusLost<span class="G">.</span>grid0);</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;dlog<span class="G">-&gt;</span>Clear();</p>
+<p class="F">}</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+<p class="F"><span class="G">void</span> App<span class="G">::</span>Serialize(Stream <span class="G">&amp;</span>s)</p>
+<p class="F">{</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;SerializePlacement(s);</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;s <span class="G">%</span> panel<span class="G">.</span>level;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">if</span>(s<span class="G">.</span>IsLoading())</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;dlev <span class="G">=</span> <span class="G">~</span>panel<span class="G">.</span>level;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+<p class="F">}</p>
+<p class="F">&nbsp;</p>
+<p class="F"><span class="G">void</span> App<span class="G">::</span>Resort()</p>
+<p class="F">{</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;panel<span class="G">.</span>grid<span class="G">-&gt;</span>ReSort();</p>
+<p class="F">}</p>
+<p class="F">&nbsp;</p>
+<p class="F"><span class="G">void</span> App<span class="G">::</span>ToXml()</p>
+<p class="F">{</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;String s <span class="G">=</span> StoreAsXML(<span class="G">*</span>panel<span class="G">.</span>grid, &quot;grid<span class="G">-</span>values&quot;);</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;FileOut f(ConfigFile(&quot;grid<span class="G">.</span>xml&quot;));</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;f <span class="G">&lt;&lt;</span> s;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;f<span class="G">.</span>Close();</p>
+<p class="F">}</p>
+<p class="F">&nbsp;</p>
+<p class="F"><span class="G">void</span> App<span class="G">::</span>FromXml()</p>
+<p class="F">{</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;String s <span class="G">=</span> LoadFile(ConfigFile(&quot;grid<span class="G">.</span>xml&quot;));</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;LoadFromXML(<span class="G">*</span>panel<span class="G">.</span>grid, s);</p>
+<p class="F">}</p>
+<p class="F">&nbsp;</p>
+<p class="F">GUI_APP_MAIN</p>
+<p class="F">{</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;SetLanguage(LNGC_('E','N','E','N', CHARSET_UTF8));</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;App app;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;LoadFromFile(app);</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;app<span class="G">.</span>Init();</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;app<span class="G">.</span>Run();</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;StoreToFile(app);</p>
+<p class="F">}</p>
+<p class="F">&nbsp;</p>
+<p class="F">&nbsp;</p>
+<p class="F">&nbsp;</p>
+<p class="E">Panel.lay</p>
+<p class="F">&nbsp;</p>
+<p class="F">LAYOUT(EditOptionsLayout, 180, 264)</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;ITEM(Upp<span class="G">::</span>Option, multiline, SetLabel(t_(&quot;Multiline select (MLB <span class="G">+</span> CTRL)&quot;))<span class="G">.</span>LeftPosZ(4, 160)<span class="G">.</span>TopPosZ(4, 15))</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;ITEM(Upp<span class="G">::</span>Option, select_row, SetLabel(t_(&quot;Select row&quot;))<span class="G">.</span>LeftPosZ(4, 160)<span class="G">.</span>TopPosZ(20, 15))</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;ITEM(Upp<span class="G">::</span>Option, sorting, SetLabel(t_(&quot;Auto sort&quot;))<span class="G">.</span>LeftPosZ(4, 160)<span class="G">.</span>VCenterPosZ(15, 32))</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;ITEM(Upp<span class="G">::</span>Option, multisort, SetLabel(t_(&quot;Multicolumn sort&quot;))<span class="G">.</span>LeftPosZ(4, 160)<span class="G">.</span>VCenterPosZ(15, 48))</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;ITEM(Upp<span class="G">::</span>Option, tab_adds_row, SetLabel(t_(&quot;Tab adds row&quot;))<span class="G">.</span>LeftPosZ(4, 160)<span class="G">.</span>TopPosZ(52, 15))</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;ITEM(Upp<span class="G">::</span>Option, one_click_edit, SetLabel(t_(&quot;One click edit&quot;))<span class="G">.</span>LeftPosZ(4, 160)<span class="G">.</span>TopPosZ(112, 15))</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;ITEM(Upp<span class="G">::</span>Option, enter_like_tab, SetLabel(t_(&quot;Enter like tab&quot;))<span class="G">.</span>LeftPosZ(4, 160)<span class="G">.</span>TopPosZ(128, 15))</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;ITEM(Upp<span class="G">::</span>Option, tab_changes_row, SetLabel(t_(&quot;Tab changes row&quot;))<span class="G">.</span>LeftPosZ(4, 160)<span class="G">.</span>TopPosZ(36, 15))</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;ITEM(Upp<span class="G">::</span>Switch, edit_mode, SetLabel(t_(&quot;Edit row\nEdit cell&quot;))<span class="G">.</span>LeftPosZ(4, 160)<span class="G">.</span>TopPosZ(72, 32))</p>
+<p class="F">END_LAYOUT</p>
+<p class="F">&nbsp;</p>
+<p class="F">LAYOUT(LookOptionsLayout, 180, 468)</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;ITEM(Upp<span class="G">::</span>Label, dv___0, SetLabel(t_(&quot;Resize paint mode&quot;))<span class="G">.</span>LeftPosZ(4, 160)<span class="G">.</span>TopPosZ(252, 16))</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;ITEM(Upp<span class="G">::</span>DropList, resize_paint_mode, LeftPosZ(4, 160)<span class="G">.</span>TopPosZ(268, 19))</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;ITEM(Upp<span class="G">::</span>Label, dv___2, SetLabel(t_(&quot;Resize col mode&quot;))<span class="G">.</span>LeftPosZ(4, 88)<span class="G">.</span>TopPosZ(292, 16))</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;ITEM(Upp<span class="G">::</span>DropList, resize_col_mode, LeftPosZ(4, 88)<span class="G">.</span>TopPosZ(312, 19))</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;ITEM(Upp<span class="G">::</span>Label, dv___4, SetLabel(t_(&quot;Resize row mode&quot;))<span class="G">.</span>LeftPosZ(4, 88)<span class="G">.</span>TopPosZ(336, 16))</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;ITEM(Upp<span class="G">::</span>DropList, resize_row_mode, LeftPosZ(4, 88)<span class="G">.</span>TopPosZ(352, 19))</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;ITEM(Upp<span class="G">::</span>Option, indicator, SetLabel(t_(&quot;Indicator&quot;))<span class="G">.</span>LeftPosZ(4, 160)<span class="G">.</span>TopPosZ(4, 15))</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;ITEM(Upp<span class="G">::</span>Option, hgrid, SetLabel(t_(&quot;Horizontal grid&quot;))<span class="G">.</span>LeftPosZ(4, 160)<span class="G">.</span>TopPosZ(20, 15))</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;ITEM(Upp<span class="G">::</span>Option, vgrid, SetLabel(t_(&quot;Vertical grid&quot;))<span class="G">.</span>LeftPosZ(4, 160)<span class="G">.</span>TopPosZ(36, 15))</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;ITEM(Upp<span class="G">::</span>Option, live_cursor, SetLabel(t_(&quot;Live cursor&quot;))<span class="G">.</span>LeftPosZ(4, 160)<span class="G">.</span>TopPosZ(52, 15))</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;ITEM(Upp<span class="G">::</span>Option, repaint, SetLabel(t_(&quot;Show repaints&quot;))<span class="G">.</span>LeftPosZ(4, 160)<span class="G">.</span>TopPosZ(68, 15))</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;ITEM(Upp<span class="G">::</span>Option, disable, SetLabel(t_(&quot;Disable&quot;))<span class="G">.</span>LeftPosZ(4, 160)<span class="G">.</span>TopPosZ(84, 15))</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;ITEM(Upp<span class="G">::</span>Option, chameleon, SetLabel(t_(&quot;Chameleon&quot;))<span class="G">.</span>LeftPosZ(4, 160)<span class="G">.</span>TopPosZ(100, 15))</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;ITEM(Upp<span class="G">::</span>Option, draw_focus, SetLabel(t_(&quot;Draw focus&quot;))<span class="G">.</span>LeftPosZ(4, 160)<span class="G">.</span>TopPosZ(116, 15))</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;ITEM(Upp<span class="G">::</span>Option, resizing_cols, SetLabel(t_(&quot;Resizing columns&quot;))<span class="G">.</span>LeftPosZ(4, 160)<span class="G">.</span>TopPosZ(140, 15))</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;ITEM(Upp<span class="G">::</span>Option, resizing_rows, SetLabel(t_(&quot;Resizing rows&quot;))<span class="G">.</span>LeftPosZ(4, 160)<span class="G">.</span>TopPosZ(156, 15))</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;ITEM(Upp<span class="G">::</span>Option, moving_cols, SetLabel(t_(&quot;Moving columns&quot;))<span class="G">.</span>LeftPosZ(4, 160)<span class="G">.</span>TopPosZ(172, 15))</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;ITEM(Upp<span class="G">::</span>Option, moving_rows, SetLabel(t_(&quot;Moving rows&quot;))<span class="G">.</span>LeftPosZ(4, 160)<span class="G">.</span>TopPosZ(188, 15))</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;ITEM(Upp<span class="G">::</span>Option, full_col_resizing, SetLabel(t_(&quot;Full column resizing&quot;))<span class="G">.</span>LeftPosZ(4, 160)<span class="G">.</span>TopPosZ(212, 15))</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;ITEM(Upp<span class="G">::</span>Option, full_row_resizing, SetLabel(t_(&quot;Full row resizing&quot;))<span class="G">.</span>LeftPosZ(4, 160)<span class="G">.</span>TopPosZ(228, 15))</p>
+<p class="F">END_LAYOUT</p>
+<p class="F">&nbsp;</p>
+<p class="F">LAYOUT(NumberLayout, 180, 272)</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;ITEM(Upp<span class="G">::</span>EditIntSpin, total_cols, Min(1)<span class="G">.</span>NotNull(<span class="G">true</span>)<span class="G">.</span>LeftPosZ(4, 44)<span class="G">.</span>TopPosZ(4, 20))</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;ITEM(Upp<span class="G">::</span>Label, dv___1, SetLabel(t_(&quot;Number of columns&quot;))<span class="G">.</span>LeftPosZ(52, 124)<span class="G">.</span>TopPosZ(4, 19))</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;ITEM(Upp<span class="G">::</span>EditIntSpin, total_rows, Min(1)<span class="G">.</span>NotNull(<span class="G">true</span>)<span class="G">.</span>LeftPosZ(4, 44)<span class="G">.</span>TopPosZ(28, 20))</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;ITEM(Upp<span class="G">::</span>Label, dv___3, SetLabel(t_(&quot;Number of rows&quot;))<span class="G">.</span>LeftPosZ(52, 124)<span class="G">.</span>TopPosZ(28, 19))</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;ITEM(Upp<span class="G">::</span>EditIntSpin, fixed_cols, Min(0)<span class="G">.</span>NotNull(<span class="G">true</span>)<span class="G">.</span>LeftPosZ(4, 44)<span class="G">.</span>TopPosZ(52, 20))</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;ITEM(Upp<span class="G">::</span>Label, dv___5, SetLabel(t_(&quot;Number of fixed columns&quot;))<span class="G">.</span>LeftPosZ(52, 124)<span class="G">.</span>TopPosZ(52, 19))</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;ITEM(Upp<span class="G">::</span>EditIntSpin, fixed_rows, Min(0)<span class="G">.</span>NotNull(<span class="G">true</span>)<span class="G">.</span>LeftPosZ(4, 44)<span class="G">.</span>TopPosZ(76, 20))</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;ITEM(Upp<span class="G">::</span>Label, dv___7, SetLabel(t_(&quot;Number of fixed rows&quot;))<span class="G">.</span>LeftPosZ(52, 124)<span class="G">.</span>TopPosZ(76, 19))</p>
+<p class="F">END_LAYOUT</p>
+<p class="F">&nbsp;</p>
+<p class="F">LAYOUT(ColorsOptionsLayout, 180, 200)</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;ITEM(Upp<span class="G">::</span>Label, dv___0, SetLabel(t_(&quot;Fixed theme&quot;))<span class="G">.</span>LeftPosZ(4, 80)<span class="G">.</span>TopPosZ(4, 16))</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;ITEM(Upp<span class="G">::</span>Label, dv___1, SetLabel(t_(&quot;Odd color&quot;))<span class="G">.</span>LeftPosZ(4, 80)<span class="G">.</span>TopPosZ(31, 20))</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;ITEM(Upp<span class="G">::</span>DropList, theme, LeftPosZ(88, 88)<span class="G">.</span>TopPosZ(3, 19))</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;ITEM(Upp<span class="G">::</span>ColorPusher, odd_color, LeftPosZ(88, 76)<span class="G">.</span>TopPosZ(31, 20))</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;ITEM(Upp<span class="G">::</span>Label, dv___4, SetLabel(t_(&quot;Even color&quot;))<span class="G">.</span>LeftPosZ(4, 80)<span class="G">.</span>TopPosZ(55, 20))</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;ITEM(Upp<span class="G">::</span>ColorPusher, even_color, LeftPosZ(88, 76)<span class="G">.</span>TopPosZ(55, 20))</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;ITEM(Upp<span class="G">::</span>Label, dv___6, SetLabel(t_(&quot;Grid color&quot;))<span class="G">.</span>LeftPosZ(4, 80)<span class="G">.</span>TopPosZ(104, 20))</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;ITEM(Upp<span class="G">::</span>ColorPusher, grid_color, LeftPosZ(88, 76)<span class="G">.</span>TopPosZ(104, 20))</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;ITEM(Upp<span class="G">::</span>Label, dv___8, SetLabel(t_(&quot;Focus color&quot;))<span class="G">.</span>LeftPosZ(4, 80)<span class="G">.</span>TopPosZ(128, 20))</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;ITEM(Upp<span class="G">::</span>ColorPusher, focus_color, LeftPosZ(88, 76)<span class="G">.</span>TopPosZ(128, 20))</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;ITEM(Upp<span class="G">::</span>Label, dv___10, SetLabel(t_(&quot;Live cursor color&quot;))<span class="G">.</span>LeftPosZ(4, 80)<span class="G">.</span>TopPosZ(152, 20))</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;ITEM(Upp<span class="G">::</span>ColorPusher, live_color, LeftPosZ(88, 76)<span class="G">.</span>TopPosZ(152, 20))</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;ITEM(Upp<span class="G">::</span>Switch, odd_even_mode, SetLabel(t_(&quot;Off\nColumn\nRow&quot;))<span class="G">.</span>LeftPosZ(4, 160)<span class="G">.</span>TopPosZ(80, 15))</p>
+<p class="F">END_LAYOUT</p>
+<p class="F">&nbsp;</p>
+<p class="F">LAYOUT(PanelLayout, 408, 572)</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;ITEM(Upp<span class="G">::</span>Button, clear_grid, SetLabel(t_(&quot;Clear grid&quot;))<span class="G">.</span>RightPosZ(308, 96)<span class="G">.</span>BottomPosZ(4, 20))</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;ITEM(Upp<span class="G">::</span>Button, reset_grid, SetLabel(t_(&quot;Reset grid&quot;))<span class="G">.</span>RightPosZ(208, 92)<span class="G">.</span>BottomPosZ(4, 20))</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;ITEM(Upp<span class="G">::</span>LineEdit, log0, SetFont(Upp<span class="G">::</span>MonospaceZ(12))<span class="G">.</span>RightPosZ(4, 200)<span class="G">.</span>VSizePosZ(4, 28))</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;ITEM(Upp<span class="G">::</span>Button, clear, SetLabel(t_(&quot;Clear&quot;))<span class="G">.</span>RightPosZ(4, 64)<span class="G">.</span>BottomPosZ(4, 20))</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;ITEM(Upp<span class="G">::</span>Button, debug, SetLabel(t_(&quot;Debug&quot;))<span class="G">.</span>RightPosZ(140, 64)<span class="G">.</span>BottomPosZ(4, 20))</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;ITEM(Upp<span class="G">::</span>TabCtrl, opts, RightPosZ(208, 196)<span class="G">.</span>VSizePosZ(4, 28))</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;ITEM(Upp<span class="G">::</span>DropList, level, RightPosZ(72, 64)<span class="G">.</span>BottomPosZ(5, 19))</p>
+<p class="F">END_LAYOUT</p>
+<p class="F">&nbsp;</p>
+<p class="F">&nbsp;</p>
+<p class="F">&nbsp;</p>
+<p class="F">&nbsp;</p>
+<p class="E">GridCtrlTest.lay</p>
+<p class="F">&nbsp;</p>
+<p class="F">LAYOUT(GridPanel, 896, 540)</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;ITEM(Upp<span class="G">::</span>TabCtrl, tab, HSizePosZ(4, 412)<span class="G">.</span>VSizePosZ(4, 28))</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;ITEM(Upp<span class="G">::</span>Button, resort, SetLabel(t_(&quot;Resort&quot;))<span class="G">.</span>LeftPosZ(4, 104)<span class="G">.</span>BottomPosZ(4, 20))</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;ITEM(Upp<span class="G">::</span>Button, toxml, SetLabel(t_(&quot;To XML&quot;))<span class="G">.</span>LeftPosZ(112, 56)<span class="G">.</span>BottomPosZ(4, 20))</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;ITEM(Upp<span class="G">::</span>Button, fromxml, SetLabel(t_(&quot;From XML&quot;))<span class="G">.</span>LeftPosZ(172, 56)<span class="G">.</span>BottomPosZ(4, 20))</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;ITEM(Panel, panel, RightPosZ(4, 404)<span class="G">.</span>VSizePosZ(4, 0))</p>
+<p class="F">END_LAYOUT</p>
+<p class="F">&nbsp;</p>
+<p class="F">LAYOUT(Test, 564, 356)</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;ITEM(Upp<span class="G">::</span>GridCtrl, dv___0, Indicator(<span class="G">true</span>)<span class="G">.</span>MovingCols(<span class="G">true</span>)<span class="G">.</span>MovingRows(<span class="G">true</span>)<span class="G">.</span>LiveCursor(<span class="G">true</span>)<span class="G">.</span>LeftPosZ(112, 312)<span class="G">.</span>TopPosZ(48, 202))</p>
+<p class="F">END_LAYOUT</p>
+<p class="F">&nbsp;</p>
+<p class="F">LAYOUT(DynamicLayout, 380, 216)</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;ITEM(Upp<span class="G">::</span>Button, create, SetLabel(t_(&quot;Create Grid&quot;))<span class="G">.</span>LeftPosZ(4, 72)<span class="G">.</span>TopPosZ(4, 24))</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;ITEM(Upp<span class="G">::</span>Button, remove, SetLabel(t_(&quot;Remove Grid&quot;))<span class="G">.</span>LeftPosZ(80, 72)<span class="G">.</span>TopPosZ(4, 24))</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;ITEM(Splitter, spl, HSizePosZ(4, 4)<span class="G">.</span>VSizePosZ(32, 4))</p>
+<p class="F">END_LAYOUT</p>
+<p class="F">&nbsp;</p>
+<p class="F">LAYOUT(DisplayLayout, 400, 200)</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;ITEM(Upp<span class="G">::</span>LabelBox, dv___0, HSizePosZ(4, 8)<span class="G">.</span>VSizePosZ(12, 16))</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;ITEM(Upp<span class="G">::</span>Button, dv___1, SetLabel(t_(&quot;Button&quot;))<span class="G">.</span>RightPosZ(32, 76)<span class="G">.</span>TopPosZ(72, 32))</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;ITEM(Upp<span class="G">::</span>DocEdit, dv___2, LeftPosZ(20, 168)<span class="G">.</span>TopPosZ(48, 104))</p>
+<p class="F">END_LAYOUT</p>
+<p class="F">&nbsp;</p>
+<p class="F">LAYOUT(GridTestMain, 628, 520)</p>
+<p class="F">END_LAYOUT</p>
+<p class="F">&nbsp;</p>
+<p class="F">&nbsp;</p>
+<p class="F">&nbsp;</p>
+<p class="F">&nbsp;</p>
+<p class="F">&nbsp;</p>
+</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>
+<TABLE BORDER="0" WIDTH="100%"><TR><TD></TD>
+</TR>
+</TABLE>
+<TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" BGCOLOR="#FFFFFF" WIDTH="100%" style="border-style: solid; border-width: 1px; border-color: #6E89AE;padding: 10px;;"><TR><TD><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%"><TR><TD><p class="A"><span class="B"> </span><a href="www$uppweb$contribweb$en-us.html">Do you want to contribute?</a></p>
+</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>
+<script type="text/javascript">var a={'reference$GridCtrlTest$en-us.html':'English'};var p=window.location.pathname.split("/");p=p[p.length-1];var s='<select id="lang" onchange="window.location=document.getElementById(\'lang\').value;">';for(l in a){if(p==l){d=" selected=1"}else{d=""}s+='<option value="'+l+'"'+d+'>'+a[l]+'</option>'}s+='</select>';var d=document.createElement('div');d.innerHTML=s;var c=document.getElementById('langs');c.replaceChild(d,c.firstChild);document.getElementById('langbox').style.display='block';</script></BODY>

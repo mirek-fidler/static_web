@@ -1,0 +1,1436 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en-us">
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
+<META NAME="Generator" CONTENT="U++ HTML Package">
+<TITLE>Examples / LinuxFb :: U++</TITLE>
+<STYLE TYPE="text/css"><!--
+.A{margin:0px 0px 0px 0px;text-indent:0px;text-align:left;color:#000000;font-family:sans-serif;font-size:10pt;font-weight:normal;font-style:normal;}
+.B{font-size:12pt;}
+.C{margin:0px 0px 0px 0px;text-indent:0px;text-align:left;color:#000000;font-family:serif;font-size:24pt;font-weight:bold;font-style:normal;}
+.D{margin:0px 0px 0px 0px;text-indent:0px;text-align:left;color:#000000;font-family:sans-serif;font-size:12pt;font-weight:normal;font-style:normal;}
+.E{margin:0px 0px 0px 0px;text-indent:0px;text-align:left;color:#000000;font-family:sans-serif;font-size:16pt;font-weight:bold;font-style:normal;}
+.F{margin:0px 0px 0px 0px;text-indent:0px;text-align:left;color:#000000;font-family:monospace;font-size:9pt;font-weight:normal;font-style:normal;}
+.G{color:#0000ff;}
+.H{margin:0px 0px 0px 0px;text-indent:0px;text-align:left;color:#0000ff;font-family:monospace;font-size:9pt;font-weight:normal;font-style:normal;}
+.I{color:#000000;}
+a.l1         { text-decoration:none; font-size: 8pt; font-family: sans-serif; font-weight: normal; }
+a.l1:link    { color:#000000; }
+a.l1:visited { color:#000080; }
+a.l1:hover   { color:#9933CC; }
+a.l1:active  { color:#000000; }
+a.l2         { text-decoration:none; font-size: 12pt; font-family: sans-serif; font-variant: small-caps; }
+a.l2:link    { color:#0066FF; }
+a.l2:visited { color:#FF6600; }
+a.l2:hover   { color:#BC0624; }
+a.l2:active  { color:#BC0024; }
+
+-->
+</STYLE>
+<META NAME="keywords" CONTENT="framework, toolkit, widget, c++, visual, studio, dev-cpp, builder, ide, class, component,wxwidgets, qt, rapid, application, development, rad, mfc, linux, macos, gui, sdl, directx, desktop"><META name="robots" content="index,follow">
+<LINK rel="alternate" type="application/rss+xml" title="SVN changes" href="svnchanges.xml">
+<LINK rel="shortcut icon" type="image/png" href="favicon.png">
+</HEAD><BODY BGCOLOR="#D2D9D2" ALINK="#800000" LINK="#000000" VLINK="#000080"><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%"><TR><TD COLSPAN="3"><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%" BGCOLOR="#FFFFFF" style="border: 1px solid #6E89AE;padding-left: 10px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;"><TR><TD><A HREF="index.html"><IMG SRC="0i.png" ALT="" BORDER="0"></A>
+</TD>
+<TD ALIGN="RIGHT" VALIGN="BOTTOM" STYLE="padding-bottom: 5px; background-image: url('1i.png')"><span style="font-size: 14pt; font-family: sans-serif;"><script type="text/javascript"><!--
+google_ad_client = "pub-1082147624384270";
+google_ad_width = 468;
+google_ad_height = 60;
+google_ad_format = "468x60_as";
+google_ad_type = "text_image";
+google_ad_channel = "";
+google_color_border = "336699";
+google_color_bg = "FFFFFF";
+google_color_link = "0000FF";
+google_color_text = "000000";
+google_color_url = "008000";
+//--></script>
+<script type="text/javascript"
+  src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+&nbsp;&nbsp;</span>
+</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>
+<TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%"><TR><TD COLSPAN="3" BGCOLOR="#D2D9D2" HEIGHT="6"></TD>
+</TR>
+<TR><TD VALIGN="TOP" ALIGN="CENTER"><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="160"><TR><TD ALIGN="CENTER"><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%" BGCOLOR="#FFFFFF" style="border-style: solid; border-width: 1px; border-color: #6E89AE;padding: 0px"><TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px;"><A HREF="www$uppweb$overview$en-us.html" CLASS="l1">Overview</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$examples$en-us.html" CLASS="l1">Examples</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$ss$en-us.html" CLASS="l1">Screenshots</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$comparison$en-us.html" CLASS="l1">Comparisons</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$apps$en-us.html" CLASS="l1">Applications</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$download$en-us.html" CLASS="l1">Download</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$documentation$en-us.html" CLASS="l1">Documentation</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$Tutorials$en-us.html" CLASS="l1">Tutorials</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="app$ide$UppHub$en-us.html" CLASS="l1">UppHub</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$Roadmap$en-us.html" CLASS="l1">Status & Roadmap</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$FAQ$en-us.html" CLASS="l1">FAQ</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="app$ide$About$en-us.html" CLASS="l1">Authors & License</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="https://www.ultimatepp.org/forums" CLASS="l1">Forums</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$Funding$en-us.html" CLASS="l1">Funding U++</A>
+</TD>
+</TR>
+</TABLE>
+<TABLE BORDER="0" WIDTH="100%"><TR><TD></TD>
+</TR>
+</TABLE>
+<TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%" BGCOLOR="#FFFFFF" style="border-style: solid; border-width: 1px; border-color: #6E89AE;padding: 0px"><TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('3i.png'); border: 0px solid black;padding-left:12px; padding-right:0px; padding-top:1px; padding-bottom:1px;color:#FFFFFF;"><B><span style="font-size: 8pt; font-family: sans-serif;">Search on this site</span>
+</B>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:6px; padding-right:0px; padding-top:4px; padding-bottom:4px;border-top: 1px solid #6E89AE;"><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%"><TR><TD><IMG SRC="4i.png" ALT="" BORDER="0"></TD>
+<TD><FORM ACTION="https://www.google.com/search" METHOD="GET" STYLE="margin:0px;padding:0px;"><INPUT TYPE="HIDDEN" NAME="ie" VALUE="UTF-8"><INPUT TYPE="HIDDEN" NAME="oe" VALUE="UTF-8"><INPUT TYPE="TEXT" NAME="q" SIZE="15" MAXLENGTH="256" placeholder="Site search"><INPUT TYPE="HIDDEN" NAME="sitesearch" VALUE="ultimatepp.org"></FORM>
+</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>
+<TABLE BORDER="0" WIDTH="100%"><TR><TD></TD>
+</TR>
+</TABLE>
+<br><div id="fb-root"></div>
+<script type="text/javascript">(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) {return;}
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+<div class="fb-like" data-href="https://www.facebook.com/pages/Upp-Framework/262346610476027?sk=wall" data-send="false" data-layout="button_count" data-width="160" data-show-faces="false" data-font="arial"></div>
+<br><br><script type="text/javascript"><!--
+google_ad_client = "pub-1082147624384270";
+google_ad_width = 160;
+google_ad_height = 600;
+google_ad_format = "160x600_as";
+google_ad_type = "text_image";
+google_ad_channel = "";
+google_color_border = "336699";
+google_color_bg = "FFFFFF";
+google_color_link = "0000FF";
+google_color_text = "000000";
+google_color_url = "008000";
+//--></script>
+<script type="text/javascript"
+  src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script><br><br><script type="text/javascript"><!--
+google_ad_client = "pub-1082147624384270";
+google_ad_width = 160;
+google_ad_height = 90;
+google_ad_format = "160x90_0ads_al_s";
+google_ad_channel = "";
+google_color_border = "336699";
+google_color_bg = "FFFFFF";
+google_color_link = "0000FF";
+google_color_text = "000000";
+google_color_url = "008000";
+//--></script>
+<script type="text/javascript"
+  src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+<br><br><br><br><br><br><A HREF="https://sourceforge.net/projects/upp/"><IMG SRC="https://sourceforge.net/sflogo.php?group_id=93970&amp;type=2" ALT="SourceForge.net Logo" BORDER="0" WIDTH="125" HEIGHT="37"></A>
+<br><br><A HREF="https://flathub.org/en/apps/org.ultimatepp.TheIDE"><IMG SRC="5i.png" ALT="SourceForge.net Logo" BORDER="0" WIDTH="125" HEIGHT="37"></A>
+<br><br><div style="background-color:#ffffff;width:125;height:35"><A HREF="https://github.com/ultimatepp"><IMG SRC="6i.png" ALT="GitHub Logo" BORDER="0" WIDTH="125" HEIGHT="35"></A>
+</div><br><div style="background-color:#ffffff;width:125;height:35"><div style="height:5"></div><A HREF="https://discord.gg/8XzqQzXZzb"><IMG SRC="https://assets-global.website-files.com/6257adef93867e50d84d30e2/636e0b5061df29d55a92d945_full_logo_blurple_RGB.svg" ALT="Discord Logo" BORDER="0" WIDTH="125" HEIGHT="25"></A>
+</div><br></TD>
+</TR>
+</TABLE>
+</TD>
+<TD VALIGN="TOP" BGCOLOR="#D2D9D2"><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="6"><TR><TD></TD>
+</TR>
+</TABLE>
+</TD>
+<TD VALIGN="TOP" WIDTH="100%" BGCOLOR="#D2D9D2"><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" BGCOLOR="#FFFFFF" WIDTH="100%" style="border-style: solid; border-width: 1px; border-color: #6E89AE;padding: 10px;;"><TR><TD><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%"><TR><TD><p class="C">LinuxFb</p>
+<p class="D">&nbsp;</p>
+<p class="D">&nbsp;</p>
+<p class="A">&nbsp;</p>
+<p class="A">&nbsp;</p>
+<p class="E">Keys.h</p>
+<p class="A">&nbsp;</p>
+<p class="F"><span class="G">#ifndef</span> _LinuxFb_Keys_h_</p>
+<p class="F"><span class="G">#define</span> _LinuxFb_Keys_h_</p>
+<p class="F">&nbsp;</p>
+<p class="F"><span class="G">//</span>translation of linux keycodes from MEDIUMRAM to ultimate</p>
+<p class="F"><span class="G">//</span>thanks goes to svgalib</p>
+<p class="F">&nbsp;</p>
+<p class="F">K_BACK &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">=</span> SCANCODE_BACKSPACE <span class="G">+</span> K_DELTA,</p>
+<p class="F">K_BACKSPACE &nbsp;<span class="G">=</span> SCANCODE_BACKSPACE <span class="G">+</span> K_DELTA,</p>
+<p class="F">&nbsp;</p>
+<p class="F"><span class="G">//</span>handled extra in fbKEYtoK</p>
+<p class="F">K_TAB &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">=</span> 9, <span class="G">//</span>SCANCODE_TAB</p>
+<p class="F">&nbsp;</p>
+<p class="F">K_SPACE &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">=</span> 32, <span class="G">//</span>SCANCODE_SPACE</p>
+<p class="F">&nbsp;</p>
+<p class="F">K_RETURN &nbsp;&nbsp;&nbsp;&nbsp;<span class="G">=</span> 13, <span class="G">//</span>SCANCODE_ENTER</p>
+<p class="F">K_ENTER &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">=</span> K_RETURN,</p>
+<p class="F">&nbsp;</p>
+<p class="F">K_SHIFT_KEY &nbsp;<span class="G">=</span> SCANCODE_LEFTSHIFT <span class="G">+</span> K_DELTA,</p>
+<p class="F">K_CTRL_KEY &nbsp;&nbsp;<span class="G">=</span> SCANCODE_LEFTCONTROL <span class="G">+</span> K_DELTA,</p>
+<p class="F">K_ALT_KEY &nbsp;&nbsp;&nbsp;<span class="G">=</span> SCANCODE_LEFTALT <span class="G">+</span> K_DELTA,</p>
+<p class="F">K_CAPSLOCK &nbsp;&nbsp;<span class="G">=</span> SCANCODE_CAPSLOCK <span class="G">+</span> K_DELTA,</p>
+<p class="F">K_ESCAPE &nbsp;&nbsp;&nbsp;&nbsp;<span class="G">=</span> SCANCODE_ESCAPE <span class="G">+</span> K_DELTA,</p>
+<p class="F">K_PRIOR &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">=</span> SCANCODE_PAGEUP <span class="G">+</span> K_DELTA,</p>
+<p class="F">K_PAGEUP &nbsp;&nbsp;&nbsp;&nbsp;<span class="G">=</span> SCANCODE_PAGEUP <span class="G">+</span> K_DELTA,</p>
+<p class="F">K_NEXT &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">=</span> SCANCODE_PAGEDOWN <span class="G">+</span> K_DELTA,</p>
+<p class="F">K_PAGEDOWN &nbsp;&nbsp;<span class="G">=</span> SCANCODE_PAGEDOWN <span class="G">+</span> K_DELTA,</p>
+<p class="F">K_END &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">=</span> SCANCODE_END <span class="G">+</span> K_DELTA,</p>
+<p class="F">K_HOME &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">=</span> SCANCODE_HOME <span class="G">+</span> K_DELTA,</p>
+<p class="F">K_LEFT &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">=</span> SCANCODE_CURSORBLOCKLEFT <span class="G">+</span> K_DELTA,</p>
+<p class="F">K_UP &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">=</span> SCANCODE_CURSORBLOCKUP <span class="G">+</span> K_DELTA,</p>
+<p class="F">K_RIGHT &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">=</span> SCANCODE_CURSORBLOCKRIGHT <span class="G">+</span> K_DELTA,</p>
+<p class="F">K_DOWN &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">=</span> SCANCODE_CURSORBLOCKDOWN <span class="G">+</span> K_DELTA,</p>
+<p class="F">K_INSERT &nbsp;&nbsp;&nbsp;&nbsp;<span class="G">=</span> SCANCODE_INSERT <span class="G">+</span> K_DELTA,</p>
+<p class="F">K_DELETE &nbsp;&nbsp;&nbsp;&nbsp;<span class="G">=</span> SCANCODE_REMOVE <span class="G">+</span> K_DELTA,</p>
+<p class="F">&nbsp;</p>
+<p class="F">K_NUMPAD0 &nbsp;&nbsp;&nbsp;<span class="G">=</span> SCANCODE_KEYPAD0 <span class="G">+</span> K_DELTA,</p>
+<p class="F">K_NUMPAD1 &nbsp;&nbsp;&nbsp;<span class="G">=</span> SCANCODE_KEYPAD1 <span class="G">+</span> K_DELTA,</p>
+<p class="F">K_NUMPAD2 &nbsp;&nbsp;&nbsp;<span class="G">=</span> SCANCODE_KEYPAD2 <span class="G">+</span> K_DELTA,</p>
+<p class="F">K_NUMPAD3 &nbsp;&nbsp;&nbsp;<span class="G">=</span> SCANCODE_KEYPAD3 <span class="G">+</span> K_DELTA,</p>
+<p class="F">K_NUMPAD4 &nbsp;&nbsp;&nbsp;<span class="G">=</span> SCANCODE_KEYPAD4 <span class="G">+</span> K_DELTA,</p>
+<p class="F">K_NUMPAD5 &nbsp;&nbsp;&nbsp;<span class="G">=</span> SCANCODE_KEYPAD5 <span class="G">+</span> K_DELTA,</p>
+<p class="F">K_NUMPAD6 &nbsp;&nbsp;&nbsp;<span class="G">=</span> SCANCODE_KEYPAD6 <span class="G">+</span> K_DELTA,</p>
+<p class="F">K_NUMPAD7 &nbsp;&nbsp;&nbsp;<span class="G">=</span> SCANCODE_KEYPAD7 <span class="G">+</span> K_DELTA,</p>
+<p class="F">K_NUMPAD8 &nbsp;&nbsp;&nbsp;<span class="G">=</span> SCANCODE_KEYPAD8 <span class="G">+</span> K_DELTA,</p>
+<p class="F">K_NUMPAD9 &nbsp;&nbsp;&nbsp;<span class="G">=</span> SCANCODE_KEYPAD9 <span class="G">+</span> K_DELTA,</p>
+<p class="F">K_MULTIPLY &nbsp;&nbsp;<span class="G">=</span> SCANCODE_KEYPADMULTIPLY <span class="G">+</span> K_DELTA,</p>
+<p class="F">K_ADD &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">=</span> SCANCODE_KEYPADPLUS <span class="G">+</span> K_DELTA,</p>
+<p class="F">K_SEPARATOR &nbsp;<span class="G">=</span> SCANCODE_KEYPADPERIOD <span class="G">+</span> K_DELTA,</p>
+<p class="F">K_SUBTRACT &nbsp;&nbsp;<span class="G">=</span> SCANCODE_KEYPADMINUS <span class="G">+</span> K_DELTA,</p>
+<p class="F">K_DECIMAL &nbsp;&nbsp;&nbsp;<span class="G">=</span> SCANCODE_KEYPADPERIOD <span class="G">+</span> K_DELTA,</p>
+<p class="F">K_DIVIDE &nbsp;&nbsp;&nbsp;&nbsp;<span class="G">=</span> SCANCODE_KEYPADDIVIDE <span class="G">+</span> K_DELTA,</p>
+<p class="F">K_SCROLL &nbsp;&nbsp;&nbsp;&nbsp;<span class="G">=</span> SCANCODE_SCROLLLOCK <span class="G">+</span> K_DELTA,</p>
+<p class="F">&nbsp;</p>
+<p class="F">K_F1 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">=</span> SCANCODE_F1 <span class="G">+</span> K_DELTA,</p>
+<p class="F">K_F2 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">=</span> SCANCODE_F2 <span class="G">+</span> K_DELTA,</p>
+<p class="F">K_F3 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">=</span> SCANCODE_F3 <span class="G">+</span> K_DELTA,</p>
+<p class="F">K_F4 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">=</span> SCANCODE_F4 <span class="G">+</span> K_DELTA,</p>
+<p class="F">K_F5 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">=</span> SCANCODE_F5 <span class="G">+</span> K_DELTA,</p>
+<p class="F">K_F6 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">=</span> SCANCODE_F6 <span class="G">+</span> K_DELTA,</p>
+<p class="F">K_F7 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">=</span> SCANCODE_F7 <span class="G">+</span> K_DELTA,</p>
+<p class="F">K_F8 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">=</span> SCANCODE_F8 <span class="G">+</span> K_DELTA,</p>
+<p class="F">K_F9 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">=</span> SCANCODE_F9 <span class="G">+</span> K_DELTA,</p>
+<p class="F">K_F10 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">=</span> SCANCODE_F10 <span class="G">+</span> K_DELTA,</p>
+<p class="F">K_F11 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">=</span> SCANCODE_F11 <span class="G">+</span> K_DELTA,</p>
+<p class="F">K_F12 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">=</span> SCANCODE_F12 <span class="G">+</span> K_DELTA,</p>
+<p class="F">&nbsp;</p>
+<p class="F">K_A &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">=</span> SCANCODE_A <span class="G">+</span> K_DELTA,</p>
+<p class="F">K_B &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">=</span> SCANCODE_B <span class="G">+</span> K_DELTA,</p>
+<p class="F">K_C &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">=</span> SCANCODE_C <span class="G">+</span> K_DELTA,</p>
+<p class="F">K_D &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">=</span> SCANCODE_D <span class="G">+</span> K_DELTA,</p>
+<p class="F">K_E &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">=</span> SCANCODE_E <span class="G">+</span> K_DELTA,</p>
+<p class="F">K_F &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">=</span> SCANCODE_F <span class="G">+</span> K_DELTA,</p>
+<p class="F">K_G &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">=</span> SCANCODE_G <span class="G">+</span> K_DELTA,</p>
+<p class="F">K_H &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">=</span> SCANCODE_H <span class="G">+</span> K_DELTA,</p>
+<p class="F">K_I &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">=</span> SCANCODE_I <span class="G">+</span> K_DELTA,</p>
+<p class="F">K_J &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">=</span> SCANCODE_J <span class="G">+</span> K_DELTA,</p>
+<p class="F">K_K &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">=</span> SCANCODE_K <span class="G">+</span> K_DELTA,</p>
+<p class="F">K_L &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">=</span> SCANCODE_L <span class="G">+</span> K_DELTA,</p>
+<p class="F">K_M &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">=</span> SCANCODE_M <span class="G">+</span> K_DELTA,</p>
+<p class="F">K_N &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">=</span> SCANCODE_N <span class="G">+</span> K_DELTA,</p>
+<p class="F">K_O &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">=</span> SCANCODE_O <span class="G">+</span> K_DELTA,</p>
+<p class="F">K_P &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">=</span> SCANCODE_P <span class="G">+</span> K_DELTA,</p>
+<p class="F">K_Q &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">=</span> SCANCODE_Q <span class="G">+</span> K_DELTA,</p>
+<p class="F">K_R &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">=</span> SCANCODE_R <span class="G">+</span> K_DELTA,</p>
+<p class="F">K_S &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">=</span> SCANCODE_S <span class="G">+</span> K_DELTA,</p>
+<p class="F">K_T &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">=</span> SCANCODE_T <span class="G">+</span> K_DELTA,</p>
+<p class="F">K_U &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">=</span> SCANCODE_U <span class="G">+</span> K_DELTA,</p>
+<p class="F">K_V &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">=</span> SCANCODE_V <span class="G">+</span> K_DELTA,</p>
+<p class="F">K_W &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">=</span> SCANCODE_W <span class="G">+</span> K_DELTA,</p>
+<p class="F">K_X &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">=</span> SCANCODE_X <span class="G">+</span> K_DELTA,</p>
+<p class="F">K_Y &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">=</span> SCANCODE_Y <span class="G">+</span> K_DELTA,</p>
+<p class="F">K_Z &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">=</span> SCANCODE_Z <span class="G">+</span> K_DELTA,</p>
+<p class="F">K_0 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">=</span> SCANCODE_0 <span class="G">+</span> K_DELTA,</p>
+<p class="F">K_1 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">=</span> SCANCODE_1 <span class="G">+</span> K_DELTA,</p>
+<p class="F">K_2 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">=</span> SCANCODE_2 <span class="G">+</span> K_DELTA,</p>
+<p class="F">K_3 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">=</span> SCANCODE_3 <span class="G">+</span> K_DELTA,</p>
+<p class="F">K_4 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">=</span> SCANCODE_4 <span class="G">+</span> K_DELTA,</p>
+<p class="F">K_5 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">=</span> SCANCODE_5 <span class="G">+</span> K_DELTA,</p>
+<p class="F">K_6 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">=</span> SCANCODE_6 <span class="G">+</span> K_DELTA,</p>
+<p class="F">K_7 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">=</span> SCANCODE_7 <span class="G">+</span> K_DELTA,</p>
+<p class="F">K_8 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">=</span> SCANCODE_8 <span class="G">+</span> K_DELTA,</p>
+<p class="F">K_9 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">=</span> SCANCODE_9 <span class="G">+</span> K_DELTA,</p>
+<p class="F">&nbsp;</p>
+<p class="F">K_CTRL_LBRACKET &nbsp;<span class="G">=</span> K_CTRL<span class="G">|</span>219<span class="G">|</span>K_DELTA,</p>
+<p class="F">K_CTRL_RBRACKET &nbsp;<span class="G">=</span> K_CTRL<span class="G">|</span>221<span class="G">|</span>K_DELTA,</p>
+<p class="F">K_CTRL_MINUS &nbsp;&nbsp;&nbsp;&nbsp;<span class="G">=</span> K_CTRL<span class="G">|</span>0xbd<span class="G">|</span>K_DELTA,</p>
+<p class="F">K_CTRL_GRAVE &nbsp;&nbsp;&nbsp;&nbsp;<span class="G">=</span> K_CTRL<span class="G">|</span>0xc0<span class="G">|</span>K_DELTA,</p>
+<p class="F">K_CTRL_SLASH &nbsp;&nbsp;&nbsp;&nbsp;<span class="G">=</span> K_CTRL<span class="G">|</span>0xbf<span class="G">|</span>K_DELTA,</p>
+<p class="F">K_CTRL_BACKSLASH <span class="G">=</span> K_CTRL<span class="G">|</span>0xdc<span class="G">|</span>K_DELTA,</p>
+<p class="F">K_CTRL_COMMA &nbsp;&nbsp;&nbsp;&nbsp;<span class="G">=</span> K_CTRL<span class="G">|</span>0xbc<span class="G">|</span>K_DELTA,</p>
+<p class="F">K_CTRL_PERIOD &nbsp;&nbsp;&nbsp;<span class="G">=</span> K_CTRL<span class="G">|</span>0xbe<span class="G">|</span>K_DELTA,</p>
+<p class="F">K_CTRL_SEMICOLON <span class="G">=</span> K_CTRL<span class="G">|</span>0xbe<span class="G">|</span>K_DELTA,</p>
+<p class="F">K_CTRL_EQUAL &nbsp;&nbsp;&nbsp;&nbsp;<span class="G">=</span> K_CTRL<span class="G">|</span>0xbb<span class="G">|</span>K_DELTA,</p>
+<p class="F">K_CTRL_APOSTROPHE<span class="G">=</span> K_CTRL<span class="G">|</span>0xde<span class="G">|</span>K_DELTA,</p>
+<p class="F">&nbsp;</p>
+<p class="F">K_BREAK &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">=</span> SCANCODE_BREAK <span class="G">+</span> K_DELTA, <span class="G">//</span>SCANCODE_BREAK_ALTERNATIVE</p>
+<p class="F">&nbsp;</p>
+<p class="H">#endif</p>
+<p class="F">&nbsp;</p>
+<p class="F">&nbsp;</p>
+<p class="F">&nbsp;</p>
+<p class="E">LinuxFb.h</p>
+<p class="F">&nbsp;</p>
+<p class="F"><span class="G">#ifndef</span> _LinuxFb_LinuxFb_h_</p>
+<p class="F"><span class="G">#define</span> _LinuxFb_LinuxFb_h_</p>
+<p class="F">&nbsp;</p>
+<p class="H">#include<span class="I"> </span>&lt;<span class="I">Framebuffer</span>/<span class="I">Framebuffer</span>.<span class="I">h</span>&gt;</p>
+<p class="F">&nbsp;</p>
+<p class="H">#include<span class="I"> </span>&lt;<span class="I">CtrlCore</span>/<span class="I">stdids</span>.<span class="I">h</span>&gt;</p>
+<p class="F">&nbsp;</p>
+<p class="F"><span class="G">//</span>used with thanks from svgalib</p>
+<p class="F"><span class="G">#include</span> &quot;vgakeyboard<span class="G">.</span>h&quot;</p>
+<p class="F">&nbsp;</p>
+<p class="H">#endif</p>
+<p class="F">&nbsp;</p>
+<p class="F">&nbsp;</p>
+<p class="F">&nbsp;</p>
+<p class="F">&nbsp;</p>
+<p class="E">vgakeyboard.h</p>
+<p class="F">&nbsp;</p>
+<p class="H">/*<span class="I"> Keyboard interface </span>for<span class="I"> svgalib</span>.<span class="I"> </span>*/</p>
+<p class="H">/*<span class="I"> Can be used independently</span>.<span class="I"> </span>*/</p>
+<p class="F">&nbsp;</p>
+<p class="F"><span class="G">#ifndef</span> VGAKEYBOARD_H</p>
+<p class="F"><span class="G">#define</span> VGAKEYBOARD_H</p>
+<p class="F">&nbsp;</p>
+<p class="F"><span class="G">#ifdef</span> __cplusplus</p>
+<p class="F"><span class="G">extern</span> &quot;C&quot;</p>
+<p class="F">{</p>
+<p class="H">#endif</p>
+<p class="F">&nbsp;</p>
+<p class="F"><span class="G">#define</span> SCANCODE_ESCAPE&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1</p>
+<p class="F">&nbsp;</p>
+<p class="F"><span class="G">#define</span> SCANCODE_1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2</p>
+<p class="F"><span class="G">#define</span> SCANCODE_2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3</p>
+<p class="F"><span class="G">#define</span> SCANCODE_3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4</p>
+<p class="F"><span class="G">#define</span> SCANCODE_4&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;5</p>
+<p class="F"><span class="G">#define</span> SCANCODE_5&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;6</p>
+<p class="F"><span class="G">#define</span> SCANCODE_6&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;7</p>
+<p class="F"><span class="G">#define</span> SCANCODE_7&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;8</p>
+<p class="F"><span class="G">#define</span> SCANCODE_8&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;9</p>
+<p class="F"><span class="G">#define</span> SCANCODE_9&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;10</p>
+<p class="F"><span class="G">#define</span> SCANCODE_0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;11</p>
+<p class="F">&nbsp;</p>
+<p class="F"><span class="G">#define</span> SCANCODE_MINUS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;12</p>
+<p class="F"><span class="G">#define</span> SCANCODE_EQUAL&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;13</p>
+<p class="F">&nbsp;</p>
+<p class="F"><span class="G">#define</span> SCANCODE_BACKSPACE&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;14</p>
+<p class="F"><span class="G">#define</span> SCANCODE_TAB&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;15</p>
+<p class="F">&nbsp;</p>
+<p class="F"><span class="G">#define</span> SCANCODE_Q&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;16</p>
+<p class="F"><span class="G">#define</span> SCANCODE_W&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;17</p>
+<p class="F"><span class="G">#define</span> SCANCODE_E&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;18</p>
+<p class="F"><span class="G">#define</span> SCANCODE_R&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;19</p>
+<p class="F"><span class="G">#define</span> SCANCODE_T&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;20</p>
+<p class="F"><span class="G">#define</span> SCANCODE_Y&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;21</p>
+<p class="F"><span class="G">#define</span> SCANCODE_U&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;22</p>
+<p class="F"><span class="G">#define</span> SCANCODE_I&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;23</p>
+<p class="F"><span class="G">#define</span> SCANCODE_O&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;24</p>
+<p class="F"><span class="G">#define</span> SCANCODE_P&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;25</p>
+<p class="F"><span class="G">#define</span> SCANCODE_BRACKET_LEFT&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;26</p>
+<p class="F"><span class="G">#define</span> SCANCODE_BRACKET_RIGHT&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;27</p>
+<p class="F">&nbsp;</p>
+<p class="F"><span class="G">#define</span> SCANCODE_ENTER&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;28</p>
+<p class="F">&nbsp;</p>
+<p class="F"><span class="G">#define</span> SCANCODE_LEFTCONTROL&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;29</p>
+<p class="F">&nbsp;</p>
+<p class="F"><span class="G">#define</span> SCANCODE_A&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;30</p>
+<p class="F"><span class="G">#define</span> SCANCODE_S&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;31</p>
+<p class="F"><span class="G">#define</span> SCANCODE_D&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;32</p>
+<p class="F"><span class="G">#define</span> SCANCODE_F&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;33</p>
+<p class="F"><span class="G">#define</span> SCANCODE_G&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;34</p>
+<p class="F"><span class="G">#define</span> SCANCODE_H&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;35</p>
+<p class="F"><span class="G">#define</span> SCANCODE_J&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;36</p>
+<p class="F"><span class="G">#define</span> SCANCODE_K&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;37</p>
+<p class="F"><span class="G">#define</span> SCANCODE_L&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;38</p>
+<p class="F"><span class="G">#define</span> SCANCODE_SEMICOLON&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;39</p>
+<p class="F"><span class="G">#define</span> SCANCODE_APOSTROPHE&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;40</p>
+<p class="F"><span class="G">#define</span> SCANCODE_GRAVE&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;41</p>
+<p class="F">&nbsp;</p>
+<p class="F"><span class="G">#define</span> SCANCODE_LEFTSHIFT&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;42</p>
+<p class="F"><span class="G">#define</span> SCANCODE_BACKSLASH&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;43</p>
+<p class="F">&nbsp;</p>
+<p class="F"><span class="G">#define</span> SCANCODE_Z&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;44</p>
+<p class="F"><span class="G">#define</span> SCANCODE_X&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;45</p>
+<p class="F"><span class="G">#define</span> SCANCODE_C&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;46</p>
+<p class="F"><span class="G">#define</span> SCANCODE_V&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;47</p>
+<p class="F"><span class="G">#define</span> SCANCODE_B&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;48</p>
+<p class="F"><span class="G">#define</span> SCANCODE_N&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;49</p>
+<p class="F"><span class="G">#define</span> SCANCODE_M&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;50</p>
+<p class="F"><span class="G">#define</span> SCANCODE_COMMA&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;51</p>
+<p class="F"><span class="G">#define</span> SCANCODE_PERIOD&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;52</p>
+<p class="F"><span class="G">#define</span> SCANCODE_SLASH&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;53</p>
+<p class="F">&nbsp;</p>
+<p class="F"><span class="G">#define</span> SCANCODE_RIGHTSHIFT&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;54</p>
+<p class="F"><span class="G">#define</span> SCANCODE_KEYPADMULTIPLY&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;55</p>
+<p class="F">&nbsp;</p>
+<p class="F"><span class="G">#define</span> SCANCODE_LEFTALT&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;56</p>
+<p class="F"><span class="G">#define</span> SCANCODE_SPACE&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;57</p>
+<p class="F"><span class="G">#define</span> SCANCODE_CAPSLOCK&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;58</p>
+<p class="F">&nbsp;</p>
+<p class="F"><span class="G">#define</span> SCANCODE_F1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;59</p>
+<p class="F"><span class="G">#define</span> SCANCODE_F2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;60</p>
+<p class="F"><span class="G">#define</span> SCANCODE_F3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;61</p>
+<p class="F"><span class="G">#define</span> SCANCODE_F4&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;62</p>
+<p class="F"><span class="G">#define</span> SCANCODE_F5&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;63</p>
+<p class="F"><span class="G">#define</span> SCANCODE_F6&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;64</p>
+<p class="F"><span class="G">#define</span> SCANCODE_F7&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;65</p>
+<p class="F"><span class="G">#define</span> SCANCODE_F8&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;66</p>
+<p class="F"><span class="G">#define</span> SCANCODE_F9&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;67</p>
+<p class="F"><span class="G">#define</span> SCANCODE_F10&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;68</p>
+<p class="F">&nbsp;</p>
+<p class="F"><span class="G">#define</span> SCANCODE_NUMLOCK&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;69</p>
+<p class="F"><span class="G">#define</span> SCANCODE_SCROLLLOCK&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;70</p>
+<p class="F">&nbsp;</p>
+<p class="F"><span class="G">#define</span> SCANCODE_KEYPAD7&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;71</p>
+<p class="F"><span class="G">#define</span> SCANCODE_CURSORUPLEFT&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;71</p>
+<p class="F"><span class="G">#define</span> SCANCODE_KEYPAD8&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;72</p>
+<p class="F"><span class="G">#define</span> SCANCODE_CURSORUP&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;72</p>
+<p class="F"><span class="G">#define</span> SCANCODE_KEYPAD9&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;73</p>
+<p class="F"><span class="G">#define</span> SCANCODE_CURSORUPRIGHT&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;73</p>
+<p class="F"><span class="G">#define</span> SCANCODE_KEYPADMINUS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;74</p>
+<p class="F"><span class="G">#define</span> SCANCODE_KEYPAD4&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;75</p>
+<p class="F"><span class="G">#define</span> SCANCODE_CURSORLEFT&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;75</p>
+<p class="F"><span class="G">#define</span> SCANCODE_KEYPAD5&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;76</p>
+<p class="F"><span class="G">#define</span> SCANCODE_KEYPAD6&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;77</p>
+<p class="F"><span class="G">#define</span> SCANCODE_CURSORRIGHT&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;77</p>
+<p class="F"><span class="G">#define</span> SCANCODE_KEYPADPLUS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;78</p>
+<p class="F"><span class="G">#define</span> SCANCODE_KEYPAD1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;79</p>
+<p class="F"><span class="G">#define</span> SCANCODE_CURSORDOWNLEFT&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;79</p>
+<p class="F"><span class="G">#define</span> SCANCODE_KEYPAD2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;80</p>
+<p class="F"><span class="G">#define</span> SCANCODE_CURSORDOWN&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;80</p>
+<p class="F"><span class="G">#define</span> SCANCODE_KEYPAD3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;81</p>
+<p class="F"><span class="G">#define</span> SCANCODE_CURSORDOWNRIGHT&nbsp;&nbsp;&nbsp;&nbsp;81</p>
+<p class="F"><span class="G">#define</span> SCANCODE_KEYPAD0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;82</p>
+<p class="F"><span class="G">#define</span> SCANCODE_KEYPADPERIOD&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;83</p>
+<p class="F">&nbsp;</p>
+<p class="F"><span class="G">#define</span> SCANCODE_LESS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;86</p>
+<p class="F">&nbsp;</p>
+<p class="F"><span class="G">#define</span> SCANCODE_F11&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;87</p>
+<p class="F"><span class="G">#define</span> SCANCODE_F12&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;88</p>
+<p class="F">&nbsp;</p>
+<p class="F"><span class="G">#define</span> SCANCODE_KEYPADENTER&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;96</p>
+<p class="F"><span class="G">#define</span> SCANCODE_RIGHTCONTROL&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;97</p>
+<p class="F"><span class="G">#define</span> SCANCODE_CONTROL&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;97</p>
+<p class="F"><span class="G">#define</span> SCANCODE_KEYPADDIVIDE&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;98</p>
+<p class="F"><span class="G">#define</span> SCANCODE_PRINTSCREEN&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;99</p>
+<p class="F"><span class="G">#define</span> SCANCODE_RIGHTALT&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;100</p>
+<p class="H">#define<span class="I"> SCANCODE_BREAK&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;101&nbsp;&nbsp;&nbsp;&nbsp;</span>/*<span class="I"> Beware</span>:<span class="I"> is 119 &nbsp;&nbsp;&nbsp;&nbsp;</span>*/</p>
+<p class="H">#define<span class="I"> SCANCODE_BREAK_ALTERNATIVE&nbsp;&nbsp;&nbsp;&nbsp;119&nbsp;&nbsp;&nbsp;&nbsp;</span>/*<span class="I"> on some keyboards</span>!<span class="I"> </span>*/</p>
+<p class="F">&nbsp;</p>
+<p class="F"><span class="G">#define</span> SCANCODE_HOME&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;102</p>
+<p class="H">#define<span class="I"> SCANCODE_CURSORBLOCKUP&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;103&nbsp;&nbsp;&nbsp;&nbsp;</span>/*<span class="I"> Cursor key block </span>*/</p>
+<p class="F"><span class="G">#define</span> SCANCODE_PAGEUP&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;104</p>
+<p class="H">#define<span class="I"> SCANCODE_CURSORBLOCKLEFT&nbsp;&nbsp;&nbsp;&nbsp;105&nbsp;&nbsp;&nbsp;&nbsp;</span>/*<span class="I"> Cursor key block </span>*/</p>
+<p class="H">#define<span class="I"> SCANCODE_CURSORBLOCKRIGHT&nbsp;&nbsp;&nbsp;&nbsp;106&nbsp;&nbsp;&nbsp;&nbsp;</span>/*<span class="I"> Cursor key block </span>*/</p>
+<p class="F"><span class="G">#define</span> SCANCODE_END&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;107</p>
+<p class="H">#define<span class="I"> SCANCODE_CURSORBLOCKDOWN&nbsp;&nbsp;&nbsp;&nbsp;108&nbsp;&nbsp;&nbsp;&nbsp;</span>/*<span class="I"> Cursor key block </span>*/</p>
+<p class="F"><span class="G">#define</span> SCANCODE_PAGEDOWN&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;109</p>
+<p class="F"><span class="G">#define</span> SCANCODE_INSERT&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;110</p>
+<p class="F"><span class="G">#define</span> SCANCODE_REMOVE&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;111</p>
+<p class="F">&nbsp;</p>
+<p class="F"><span class="G">#define</span> SCANCODE_RIGHTWIN&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;126</p>
+<p class="F"><span class="G">#define</span> SCANCODE_LEFTWIN&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;125</p>
+<p class="F">&nbsp;</p>
+<p class="F"><span class="G">#define</span> KEY_EVENTRELEASE 0</p>
+<p class="F"><span class="G">#define</span> KEY_EVENTPRESS 1</p>
+<p class="F">&nbsp;</p>
+<p class="F"><span class="G">#define</span> MAX_KEYNAME_LEN 20</p>
+<p class="F">&nbsp;</p>
+<p class="H">/*<span class="I"> Initialize keyboard handler (brings keyboard into RAW mode)</span>.<span class="I"> Returns </span>*/</p>
+<p class="H">/*<span class="I"> 0 </span>if<span class="I"> succesful, </span>-<span class="I">1 otherwise</span>.<span class="I"> </span>*/</p>
+<p class="F"> &nbsp;&nbsp;&nbsp;<span class="G">int</span> keyboard_init(<span class="G">void</span>);</p>
+<p class="H">/*<span class="I"> Similar, but returns console fd </span>if<span class="I"> succesful</span>.<span class="I"> </span>*/</p>
+<p class="F"> &nbsp;&nbsp;&nbsp;<span class="G">int</span> keyboard_init_return_fd(<span class="G">void</span>);</p>
+<p class="H">/*<span class="I"> Set event handler invoked by keyboard_update()</span>.<span class="I"> </span>*/</p>
+<p class="F"> &nbsp;&nbsp;&nbsp;<span class="G">typedef</span> <span class="G">void</span> (<span class="G">*</span>__keyboard_handler) (<span class="G">int</span> scancode, <span class="G">int</span> press);</p>
+<p class="F"> &nbsp;&nbsp;&nbsp;<span class="G">void</span> keyboard_seteventhandler(__keyboard_handler handler);</p>
+<p class="H">/*<span class="I"> Return keyboard to normal state</span>.<span class="I"> </span>*/</p>
+<p class="F"> &nbsp;&nbsp;&nbsp;<span class="G">void</span> keyboard_close(<span class="G">void</span>);</p>
+<p class="H">/*<span class="I"> Read raw keyboard device </span>and<span class="I"> handle events</span>.<span class="I"> Returns 0 </span>if<span class="I"> no event</span>.<span class="I"> </span>*/</p>
+<p class="F"> &nbsp;&nbsp;&nbsp;<span class="G">int</span> keyboard_update(<span class="G">void</span>);</p>
+<p class="H">/*<span class="I"> Similar to keyboard_update, but wait </span>for<span class="I"> an event to happen</span>.<span class="I"> </span>*/</p>
+<p class="H">/*<span class="I"> </span>[<span class="I">This doesn't seem to work very well </span>--<span class="I"> use select on fd</span>]<span class="I"> </span>*/</p>
+<p class="F"> &nbsp;&nbsp;&nbsp;<span class="G">void</span> keyboard_waitforupdate(<span class="G">void</span>);</p>
+<p class="F">&nbsp;</p>
+<p class="H">/*<span class="I"> keyboard_init sets </span>default<span class="I"> event handler that keeps track of complete </span>*/</p>
+<p class="H">/*<span class="I"> keyboard state</span>:<span class="I"> </span>*/</p>
+<p class="F">&nbsp;</p>
+<p class="H">/*<span class="I"> Result of keypressed</span>.<span class="I"> </span>*/</p>
+<p class="F"><span class="G">#define</span> KEY_NOTPRESSED 0</p>
+<p class="F"><span class="G">#define</span> KEY_PRESSED 1</p>
+<p class="F">&nbsp;</p>
+<p class="H">/*<span class="I"> Modes </span>for<span class="I"> translatekeys</span>.<span class="I"> </span>*/</p>
+<p class="H">#define<span class="I"> TRANSLATE_CURSORKEYS 1&nbsp;&nbsp;&nbsp;&nbsp;</span>/*<span class="I"> Map cursor block to keypad cursor</span>.<span class="I"> </span>*/</p>
+<p class="H">#define<span class="I"> TRANSLATE_DIAGONAL 2&nbsp;&nbsp;&nbsp;&nbsp;</span>/*<span class="I"> Map keypad diagonal to keypad cursor</span>.<span class="I"> </span>*/</p>
+<p class="H">#define<span class="I"> TRANSLATE_KEYPADENTER 4&nbsp;&nbsp;&nbsp;&nbsp;</span>/*<span class="I"> Map keypad enter to main enter key</span>.<span class="I"> </span>*/</p>
+<p class="H">#define<span class="I"> DONT_CATCH_CTRLC 8&nbsp;&nbsp;&nbsp;&nbsp;</span>/*<span class="I"> Disable Crtl</span>-<span class="I">C check</span>.<span class="I"> </span>*/</p>
+<p class="F">&nbsp;</p>
+<p class="H">/*<span class="I"> Revert to </span>default<span class="I"> handler</span>.<span class="I"> </span>*/</p>
+<p class="F"> &nbsp;&nbsp;&nbsp;<span class="G">void</span> keyboard_setdefaulteventhandler(<span class="G">void</span>);</p>
+<p class="H">/*<span class="I"> Return pointer to buffer holding state of each key (scancode)</span>.<span class="I"> </span>*/</p>
+<p class="H">/*<span class="I"> Value 1 corresponds to key that is pressed, 0 means </span>not<span class="I"> pressed</span>.<span class="I"> </span>*/</p>
+<p class="F"> &nbsp;&nbsp;&nbsp;<span class="G">char</span> <span class="G">*</span>keyboard_getstate(<span class="G">void</span>);</p>
+<p class="H">/*<span class="I"> Force keyboard state to nothing pressed (all zeroes)</span>.<span class="I"> </span>*/</p>
+<p class="F"> &nbsp;&nbsp;&nbsp;<span class="G">void</span> keyboard_clearstate(<span class="G">void</span>);</p>
+<p class="H">/*<span class="I"> Let </span>default<span class="I"> handler translate cursor key block events to numeric keypad </span>*/</p>
+<p class="H">/*<span class="I"> cursor key events </span>and<span class="I"> other translations</span>.<span class="I"> </span>*/</p>
+<p class="F"> &nbsp;&nbsp;&nbsp;<span class="G">void</span> keyboard_translatekeys(<span class="G">int</span> mask);</p>
+<p class="F">&nbsp;</p>
+<p class="H">/*<span class="I"> Return nonzero </span>if<span class="I"> key is depressed</span>.<span class="I"> </span>*/</p>
+<p class="F"> &nbsp;&nbsp;&nbsp;<span class="G">int</span> keyboard_keypressed(<span class="G">int</span> scancode);</p>
+<p class="F">&nbsp;</p>
+<p class="F"><span class="G">#ifdef</span> __cplusplus</p>
+<p class="F">}</p>
+<p class="F">&nbsp;</p>
+<p class="H">#endif</p>
+<p class="H">#endif</p>
+<p class="F">&nbsp;</p>
+<p class="F">&nbsp;</p>
+<p class="F">&nbsp;</p>
+<p class="E">LinuxFbLocal.h</p>
+<p class="F">&nbsp;</p>
+<p class="F"><span class="G">#ifndef</span> _LinuxFb_LinuxFbLocal_h</p>
+<p class="F"><span class="G">#define</span> _LinuxFb_LinuxFbLocal_h</p>
+<p class="F">&nbsp;</p>
+<p class="H">#include<span class="I"> </span>&lt;<span class="I">CtrlCore</span>/<span class="I">CtrlCore</span>.<span class="I">h</span>&gt;</p>
+<p class="F">&nbsp;</p>
+<p class="H">#include<span class="I"> </span>&lt;<span class="I">unistd</span>.<span class="I">h</span>&gt;</p>
+<p class="H">#include<span class="I"> </span>&lt;<span class="I">stdio</span>.<span class="I">h</span>&gt;</p>
+<p class="H">#include<span class="I"> </span>&lt;<span class="I">fcntl</span>.<span class="I">h</span>&gt;</p>
+<p class="H">#include<span class="I"> </span>&lt;<span class="I">linux</span>/<span class="I">fb</span>.<span class="I">h</span>&gt;</p>
+<p class="H">#include<span class="I"> </span>&lt;<span class="I">sys</span>/<span class="I">mman</span>.<span class="I">h</span>&gt;</p>
+<p class="H">#include<span class="I"> </span>&lt;<span class="I">sys</span>/<span class="I">ioctl</span>.<span class="I">h</span>&gt;</p>
+<p class="F">&nbsp;</p>
+<p class="H">#include<span class="I"> </span>&lt;<span class="I">sys</span>/<span class="I">types</span>.<span class="I">h</span>&gt;</p>
+<p class="H">#include<span class="I"> </span>&lt;<span class="I">termios</span>.<span class="I">h</span>&gt;</p>
+<p class="F">&nbsp;</p>
+<p class="H">#include<span class="I"> </span>&lt;<span class="I">linux</span>/<span class="I">vt</span>.<span class="I">h</span>&gt;</p>
+<p class="H">#include<span class="I"> </span>&lt;<span class="I">linux</span>/<span class="I">kd</span>.<span class="I">h</span>&gt;</p>
+<p class="F"><span class="G">//</span>conflicts with upp</p>
+<p class="H">//#include<span class="I"> </span>&lt;<span class="I">linux</span>/<span class="I">keyboard</span>.<span class="I">h</span>&gt;</p>
+<p class="F">&nbsp;</p>
+<p class="F">NAMESPACE_UPP</p>
+<p class="F">&nbsp;</p>
+<p class="F"><span class="G">//</span>video</p>
+<p class="F"><span class="G">extern</span> <span class="G">int</span> fbfd;</p>
+<p class="F"><span class="G">extern</span> <span class="G">struct</span> fb_var_screeninfo vinfo;</p>
+<p class="F"><span class="G">extern</span> <span class="G">struct</span> fb_fix_screeninfo finfo;</p>
+<p class="F"><span class="G">extern</span> <span class="G">long</span> <span class="G">int</span> screensize;</p>
+<p class="F"><span class="G">extern</span> <span class="G">char</span> <span class="G">*</span>fbp;</p>
+<p class="F">&nbsp;</p>
+<p class="F"><span class="G">//</span>mouse</p>
+<p class="F"><span class="G">extern</span> <span class="G">int</span> mouse_fd;</p>
+<p class="F"><span class="G">extern</span> <span class="G">bool</span> mouse_imps2;</p>
+<p class="F"><span class="G">extern</span> Point mousep;</p>
+<p class="F"><span class="G">extern</span> dword mouseb;</p>
+<p class="F">&nbsp;</p>
+<p class="F"><span class="G">//</span>keyb</p>
+<p class="F"><span class="G">extern</span> <span class="G">int</span> keyb_fd;</p>
+<p class="F"><span class="G">extern</span> <span class="G">int</span> cvt;</p>
+<p class="F"><span class="G">extern</span> dword modkeys;</p>
+<p class="F">&nbsp;</p>
+<p class="F"><span class="G">int</span> has_imps2(<span class="G">int</span> fd);</p>
+<p class="F"><span class="G">int</span> set_imps2(<span class="G">int</span> fd, <span class="G">int</span> b);</p>
+<p class="F"><span class="G">void</span> dupkmap(<span class="G">int</span> fd);</p>
+<p class="F">&nbsp;</p>
+<p class="F"><span class="G">void</span> handle_mouse();</p>
+<p class="F"><span class="G">void</span> handle_keyboard();</p>
+<p class="F"><span class="G">void</span> switchvt(<span class="G">int</span> ii);</p>
+<p class="F">&nbsp;</p>
+<p class="F"><span class="G">void</span> SaveModKeys(dword keycode, dword pressed);</p>
+<p class="F">dword fbKEYtoK(dword keycode);</p>
+<p class="F">dword TranslateUnicode(dword keycode);</p>
+<p class="F">&nbsp;</p>
+<p class="F">END_UPP_NAMESPACE</p>
+<p class="F">&nbsp;</p>
+<p class="H">#endif</p>
+<p class="F">&nbsp;</p>
+<p class="F">&nbsp;</p>
+<p class="F">&nbsp;</p>
+<p class="F">&nbsp;</p>
+<p class="E">Local.h</p>
+<p class="F">&nbsp;</p>
+<p class="F"><span class="G">#ifdef</span> PLATFORM_POSIX</p>
+<p class="F">&nbsp;</p>
+<p class="F"><span class="G">void</span> FBInit(<span class="G">const</span> String<span class="G">&amp;</span> fbdevice);</p>
+<p class="F"><span class="G">void</span> FBDeInit();</p>
+<p class="F">&nbsp;</p>
+<p class="F"><span class="G">#define</span> GUI_APP_MAIN \</p>
+<p class="F"><span class="G">void</span> GuiMainFn_();\</p>
+<p class="F">\</p>
+<p class="F"><span class="G">int</span> main(<span class="G">int</span> argc, <span class="G">const</span> <span class="G">char</span> <span class="G">**</span>argv, <span class="G">const</span> <span class="G">char</span> <span class="G">**</span>envptr) { \</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;UPP<span class="G">::</span>AppInit__(argc, argv, envptr); \</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;FBInit(&quot;<span class="G">/</span>dev<span class="G">/</span>fb0&quot;); \</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;GuiMainFn_(); \</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;UPP<span class="G">::</span>Ctrl<span class="G">::</span>CloseTopCtrls(); \</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;FBDeInit(); \</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">return</span> UPP<span class="G">::</span>GetExitCode(); \</p>
+<p class="F">} \</p>
+<p class="F">\</p>
+<p class="F"><span class="G">void</span> GuiMainFn_()</p>
+<p class="F">&nbsp;</p>
+<p class="H">#endif</p>
+<p class="F">&nbsp;</p>
+<p class="F">&nbsp;</p>
+<p class="F">&nbsp;</p>
+<p class="F">&nbsp;</p>
+<p class="E">Proc.cpp</p>
+<p class="F">&nbsp;</p>
+<p class="F"><span class="G">#include</span> &quot;LinuxFbLocal<span class="G">.</span>h&quot;</p>
+<p class="F">&nbsp;</p>
+<p class="F">NAMESPACE_UPP</p>
+<p class="F">&nbsp;</p>
+<p class="F"><span class="G">#define</span> LLOG(x) &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">//</span>LOG(x)</p>
+<p class="F">&nbsp;</p>
+<p class="F"><span class="G">bool</span> GetMouseLeft() &nbsp;&nbsp;{ <span class="G">return</span> mouseb <span class="G">&amp;</span> (1<span class="G">&lt;&lt;</span>0); }</p>
+<p class="F"><span class="G">bool</span> GetMouseRight() &nbsp;{ <span class="G">return</span> mouseb <span class="G">&amp;</span> (1<span class="G">&lt;&lt;</span>1); }</p>
+<p class="F"><span class="G">bool</span> GetMouseMiddle() { <span class="G">return</span> mouseb <span class="G">&amp;</span> (1<span class="G">&lt;&lt;</span>2); }</p>
+<p class="F">&nbsp;</p>
+<p class="F"><span class="G">void</span> purgefd(<span class="G">int</span> fd)</p>
+<p class="F">{</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;fd_set fdset;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">struct</span> timeval tv;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">char</span> temp<span class="G">[</span>64<span class="G">]</span>;</p>
+<p class="F">&nbsp;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;FD_ZERO(<span class="G">&amp;</span>fdset);</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;FD_SET(fd, <span class="G">&amp;</span>fdset);</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;tv<span class="G">.</span>tv_sec <span class="G">=</span> 0;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;tv<span class="G">.</span>tv_usec <span class="G">=</span> 0;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">while</span>(select(fd<span class="G">+</span>1, <span class="G">&amp;</span>fdset, 0, 0, <span class="G">&amp;</span>tv) <span class="G">&gt;</span> 0)</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;read(fd, temp, <span class="G">sizeof</span>(temp));</p>
+<p class="F">}</p>
+<p class="F">&nbsp;</p>
+<p class="F"><span class="G">int</span> set_imps2(<span class="G">int</span> fd, <span class="G">int</span> b)</p>
+<p class="F">{</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;uint8 set<span class="G">[]</span> <span class="G">=</span> {0xf3, 200, 0xf3, 100, 0xf3, 80};</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;uint8 reset<span class="G">[]</span> <span class="G">=</span> {0xff};</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">int</span> retval <span class="G">=</span> 0;</p>
+<p class="F">&nbsp;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">if</span>(b <span class="G">&amp;&amp;</span> write(fd, <span class="G">&amp;</span>set, <span class="G">sizeof</span>(set)) <span class="G">!=</span> <span class="G">sizeof</span>(set))</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">return</span> 0;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">//</span>SDL says <span class="G">not</span> to reset, some mice wont work with it</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">if</span>(<span class="G">!</span>b <span class="G">&amp;&amp;</span> write(fd, <span class="G">&amp;</span>reset, <span class="G">sizeof</span> (reset)) <span class="G">!=</span> <span class="G">sizeof</span>(reset))</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">return</span> 0;</p>
+<p class="F">&nbsp;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;purgefd(fd);</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">return</span> 1;</p>
+<p class="F">}</p>
+<p class="F">&nbsp;</p>
+<p class="F"><span class="G">int</span> has_imps2(<span class="G">int</span> fd)</p>
+<p class="F">{</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;uint8 query <span class="G">=</span> 0xF2;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;purgefd(fd);</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">if</span>(write(fd, <span class="G">&amp;</span>query, <span class="G">sizeof</span> (query)) <span class="G">!=</span> <span class="G">sizeof</span>(query))</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">return</span> 0;</p>
+<p class="F">&nbsp;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;uint8 ch <span class="G">=</span> 0;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;fd_set fdset;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">struct</span> timeval tv;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">while</span>(1) {</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;FD_ZERO(<span class="G">&amp;</span>fdset);</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;FD_SET(fd, <span class="G">&amp;</span>fdset);</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;tv<span class="G">.</span>tv_sec <span class="G">=</span> 1;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;tv<span class="G">.</span>tv_usec <span class="G">=</span> 0;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">if</span>(select(fd<span class="G">+</span>1, <span class="G">&amp;</span>fdset, 0, 0, <span class="G">&amp;</span>tv) <span class="G">&lt;</span> 1) <span class="G">break</span>;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">if</span>(read(fd, <span class="G">&amp;</span>ch, <span class="G">sizeof</span>(ch)) <span class="G">!=</span> <span class="G">sizeof</span>(ch)) <span class="G">break</span>;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">switch</span>(ch) {</p>
+<p class="H"><span class="I">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>case<span class="I"> 0xFA</span>:</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">case</span> 0xAA<span class="G">:</span> <span class="G">continue</span>;</p>
+<p class="H"><span class="I">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>case<span class="I"> 3</span>:</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">case</span> 4<span class="G">:</span> <span class="G">return</span> 1;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">default:</span> <span class="G">return</span> 0;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;}</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">return</span> 0;</p>
+<p class="F">}</p>
+<p class="F">&nbsp;</p>
+<p class="F">dword lastbdowntime<span class="G">[</span>8<span class="G">]</span> <span class="G">=</span> {0};</p>
+<p class="F">dword isdblclick<span class="G">[</span>8<span class="G">]</span> <span class="G">=</span> {0};</p>
+<p class="F">&nbsp;</p>
+<p class="F"><span class="G">void</span> handle_button(dword ct, dword mouseb, dword bm, <span class="G">int</span> i,</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;dword df, dword rf, dword dbf, dword uf)</p>
+<p class="F">{</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;dword m <span class="G">=</span> (1<span class="G">&lt;&lt;</span>i);</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">if</span>(bm <span class="G">&amp;</span> m)</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;{</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">if</span>(mouseb <span class="G">&amp;</span> m) <span class="G">//</span>down</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">if</span>(isdblclick<span class="G">[</span>i<span class="G">]</span> <span class="G">&amp;&amp;</span> (abs(<span class="G">int</span>(ct) <span class="G">-</span> <span class="G">int</span>(lastbdowntime<span class="G">[</span>i<span class="G">]</span>)) <span class="G">&lt;</span> 400))</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Ctrl<span class="G">::</span>DoMouseFB(dbf, mousep);</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;isdblclick<span class="G">[</span>i<span class="G">]</span> <span class="G">=</span> 0; <span class="G">//</span>reset, to go ahead sending repeats</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">else</span> <span class="G">if</span>(<span class="G">!</span>isdblclick<span class="G">[</span>i<span class="G">]</span>)</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">//</span>Ctrl<span class="G">::</span>DoMouseFB(rf, mousep);</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</p>
+<p class="H"><span class="I">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>else</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;lastbdowntime<span class="G">[</span>i<span class="G">]</span> <span class="G">=</span> ct;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;isdblclick<span class="G">[</span>i<span class="G">]</span> <span class="G">=</span> 0; <span class="G">//</span>prepare <span class="G">for</span> repeat</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Ctrl<span class="G">::</span>DoMouseFB(df, mousep);</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">else</span> <span class="G">//</span>up</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;isdblclick<span class="G">[</span>i<span class="G">]</span> <span class="G">=</span> 1; <span class="G">//</span>indicate maybe a dblclick</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Ctrl<span class="G">::</span>DoMouseFB(uf, mousep);</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;}</p>
+<p class="F">}</p>
+<p class="F">&nbsp;</p>
+<p class="F"><span class="G">void</span> handle_mouse()</p>
+<p class="F">{</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">static</span> <span class="G">int</span> offs <span class="G">=</span> 0;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">static</span> <span class="G">unsigned</span> <span class="G">char</span> buf<span class="G">[</span>BUFSIZ<span class="G">]</span>;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">static</span> <span class="G">int</span> rel <span class="G">=</span> 1;</p>
+<p class="F">&nbsp;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">int</span> i, n;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">int</span> b <span class="G">=</span> 0;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">int</span> dx <span class="G">=</span> 0, dy <span class="G">=</span> 0, dz <span class="G">=</span> 0;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">int</span> rdsize <span class="G">=</span> (<span class="G">!</span>mouse_imps2)<span class="G">?</span>(3)<span class="G">:</span>(4);</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;n <span class="G">=</span> read(mouse_fd, <span class="G">&amp;</span>buf<span class="G">[</span>offs<span class="G">]</span>, BUFSIZ<span class="G">-</span>offs);</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">if</span>(n <span class="G">&lt;</span> 0) <span class="G">return</span>;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;n <span class="G">+=</span> offs;</p>
+<p class="F">&nbsp;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">for</span>(i<span class="G">=</span>0; i<span class="G">&lt;</span>(n<span class="G">-</span>(rdsize<span class="G">-</span>1)); i <span class="G">+=</span> rdsize) {</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">if</span>((buf<span class="G">[</span>i<span class="G">]</span> <span class="G">&amp;</span> 0xC0) <span class="G">!=</span> 0) {</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;i <span class="G">-=</span> (rdsize<span class="G">-</span>1);</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">continue</span>;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">if</span>(<span class="G">!</span>mouse_imps2)</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{</p>
+<p class="H"><span class="I">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;b </span>=<span class="I"> (buf</span>[<span class="I">i</span>]<span class="I"> </span>&amp;<span class="I"> 0x07); </span>/*<span class="I">MRL</span>*/</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;dx <span class="G">=</span> (buf<span class="G">[</span>i<span class="G">]</span> <span class="G">&amp;</span> 0x10) <span class="G">?</span> buf<span class="G">[</span>i<span class="G">+</span>1<span class="G">]</span> <span class="G">-</span> 256 <span class="G">:</span> buf<span class="G">[</span>i<span class="G">+</span>1<span class="G">]</span>;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;dy <span class="G">=</span> (buf<span class="G">[</span>i<span class="G">]</span> <span class="G">&amp;</span> 0x20) <span class="G">?</span> <span class="G">-</span>(buf<span class="G">[</span>i<span class="G">+</span>2<span class="G">]</span> <span class="G">-</span> 256) <span class="G">:</span> <span class="G">-</span>buf<span class="G">[</span>i<span class="G">+</span>2<span class="G">]</span>;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</p>
+<p class="H"><span class="I">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>else</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{</p>
+<p class="H"><span class="I">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;b </span>=<span class="I"> (buf</span>[<span class="I">i</span>]<span class="I"> </span>&amp;<span class="I"> 0xC7); </span>/*<span class="I">54</span>...<span class="I">MRL</span>*/</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;dx <span class="G">=</span> (buf<span class="G">[</span>i<span class="G">]</span> <span class="G">&amp;</span> 0x10) <span class="G">?</span> buf<span class="G">[</span>i<span class="G">+</span>1<span class="G">]</span> <span class="G">-</span> 256 <span class="G">:</span> buf<span class="G">[</span>i<span class="G">+</span>1<span class="G">]</span>;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;dy <span class="G">=</span> (buf<span class="G">[</span>i<span class="G">]</span> <span class="G">&amp;</span> 0x20) <span class="G">?</span> <span class="G">-</span>(buf<span class="G">[</span>i<span class="G">+</span>2<span class="G">]</span> <span class="G">-</span> 256) <span class="G">:</span> <span class="G">-</span>buf<span class="G">[</span>i<span class="G">+</span>2<span class="G">]</span>; </p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;dz <span class="G">=</span> (<span class="G">char</span>)buf<span class="G">[</span>i<span class="G">+</span>3<span class="G">]</span>;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</p>
+<p class="F">&nbsp;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">if</span>(dx <span class="G">||</span> dy)</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;mousep<span class="G">.</span>x <span class="G">+=</span> dx;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;mousep<span class="G">.</span>y <span class="G">+=</span> dy;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;mousep<span class="G">.</span>x <span class="G">=</span> minmax(mousep<span class="G">.</span>x, 0, <span class="G">int</span>(vinfo<span class="G">.</span>xres));</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;mousep<span class="G">.</span>y <span class="G">=</span> minmax(mousep<span class="G">.</span>y, 0, <span class="G">int</span>(vinfo<span class="G">.</span>yres));</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Ctrl<span class="G">::</span>DoMouseFB(Ctrl<span class="G">::</span>MOUSEMOVE, mousep);</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</p>
+<p class="F">&nbsp;</p>
+<p class="F">&nbsp;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;dword bm <span class="G">=</span> b <span class="G">^</span> mouseb;</p>
+<p class="H"><span class="I">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;mouseb </span>=<span class="I"> b; </span>//for<span class="I"> GetMouse</span>*</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;dword ct <span class="G">=</span> GetTickCount();</p>
+<p class="F">&nbsp;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;handle_button(ct, mouseb, bm, 0, Ctrl<span class="G">::</span>LEFTDOWN, Ctrl<span class="G">::</span>LEFTREPEAT, Ctrl<span class="G">::</span>LEFTDOUBLE, Ctrl<span class="G">::</span>LEFTUP);</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;handle_button(ct, mouseb, bm, 1, Ctrl<span class="G">::</span>RIGHTDOWN, Ctrl<span class="G">::</span>RIGHTREPEAT, Ctrl<span class="G">::</span>RIGHTDOUBLE, Ctrl<span class="G">::</span>RIGHTUP);</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;handle_button(ct, mouseb, bm, 2, Ctrl<span class="G">::</span>MIDDLEDOWN, Ctrl<span class="G">::</span>MIDDLEREPEAT, Ctrl<span class="G">::</span>MIDDLEDOUBLE, Ctrl<span class="G">::</span>MIDDLEUP);</p>
+<p class="F">&nbsp;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">if</span>(dz) Ctrl<span class="G">::</span>DoMouseFB(Ctrl<span class="G">::</span>MOUSEWHEEL, mousep, dz<span class="G">*</span>120);</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;}</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">if</span>(i <span class="G">&lt;</span> n) {</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;memcpy(buf, <span class="G">&amp;</span>buf<span class="G">[</span>i<span class="G">]</span>, (n<span class="G">-</span>i));</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;offs <span class="G">=</span> (n<span class="G">-</span>i);</p>
+<p class="H"><span class="I">&nbsp;&nbsp;&nbsp;&nbsp;} </span>else</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;offs <span class="G">=</span> 0;</p>
+<p class="F">}</p>
+<p class="F">&nbsp;</p>
+<p class="F"><span class="G">void</span> handle_keyboard()</p>
+<p class="F">{</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">unsigned</span> <span class="G">char</span> buf<span class="G">[</span>BUFSIZ<span class="G">]</span>;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">int</span> n;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">int</span> keyup;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">int</span> keycode;</p>
+<p class="F">&nbsp;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;n <span class="G">=</span> read(keyb_fd, buf, BUFSIZ);</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">for</span>(<span class="G">int</span> i<span class="G">=</span>0; i<span class="G">&lt;</span>n; <span class="G">++</span>i) {</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;keycode <span class="G">=</span> buf<span class="G">[</span>i<span class="G">]</span> <span class="G">&amp;</span> 0x7F;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;keyup <span class="G">=</span> (buf<span class="G">[</span>i<span class="G">]</span> <span class="G">&amp;</span> 0x80)<span class="G">?</span>(K_KEYUP)<span class="G">:</span>(0);</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">bool</span> b;</p>
+<p class="F">&nbsp;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SaveModKeys(keycode, <span class="G">!</span>keyup);</p>
+<p class="F">&nbsp;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">//</span>we dont support both sides, fall back to left</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">switch</span>(keycode)</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">case</span> SCANCODE_RIGHTALT<span class="G">:</span> keycode <span class="G">=</span> SCANCODE_LEFTALT; <span class="G">break</span>;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">case</span> SCANCODE_RIGHTSHIFT<span class="G">:</span> keycode <span class="G">=</span> SCANCODE_LEFTSHIFT; <span class="G">break</span>;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">case</span> SCANCODE_RIGHTCONTROL<span class="G">:</span> keycode <span class="G">=</span> SCANCODE_LEFTCONTROL; <span class="G">break</span>;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</p>
+<p class="F">&nbsp;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;dword uppcode <span class="G">=</span> fbKEYtoK(keycode) <span class="G">|</span> keyup;</p>
+<p class="F">&nbsp;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">if</span>(<span class="G">!</span>keyup <span class="G">&amp;&amp;</span> uppcode <span class="G">==</span> K_SPACE)</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;uppcode <span class="G">=</span> 0; <span class="G">//</span>prevent <span class="G">double</span> send with unicode</p>
+<p class="F">&nbsp;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">//</span>vtswitch</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">int</span> vtck <span class="G">=</span> uppcode <span class="G">&amp;</span> (K_DELTA <span class="G">|</span> 0xFFFF);</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">switch</span>(vtck) {</p>
+<p class="H"><span class="I">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;</span>case<span class="I"> K_F11</span>:</p>
+<p class="H"><span class="I">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;</span>case<span class="I"> K_F12</span>:</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;vtck <span class="G">-=</span> 18; <span class="G">//</span>dirty hack<span class="G">:</span> after F10 doesnt come F11, see vgakeyboard<span class="G">.</span>h</p>
+<p class="H"><span class="I">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;</span>case<span class="I"> K_F1</span>:</p>
+<p class="H"><span class="I">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;</span>case<span class="I"> K_F2</span>:</p>
+<p class="H"><span class="I">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;</span>case<span class="I"> K_F3</span>:</p>
+<p class="H"><span class="I">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;</span>case<span class="I"> K_F4</span>:</p>
+<p class="H"><span class="I">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;</span>case<span class="I"> K_F5</span>:</p>
+<p class="H"><span class="I">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;</span>case<span class="I"> K_F6</span>:</p>
+<p class="H"><span class="I">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;</span>case<span class="I"> K_F7</span>:</p>
+<p class="H"><span class="I">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;</span>case<span class="I"> K_F8</span>:</p>
+<p class="H"><span class="I">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;</span>case<span class="I"> K_F9</span>:</p>
+<p class="H"><span class="I">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;</span>case<span class="I"> K_F10</span>:</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">if</span>(GetCtrl() <span class="G">&amp;&amp;</span> GetAlt()) {</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">int</span> ii <span class="G">=</span> vtck <span class="G">-</span> K_F1 <span class="G">+</span> 1;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">if</span>(<span class="G">!</span>keyup)</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;switchvt(ii);</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">return</span>;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</p>
+<p class="F">&nbsp;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">//</span>first, the upp keycode</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">if</span>(uppcode)</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;b <span class="G">=</span> Ctrl<span class="G">::</span>DoKeyFB(uppcode, 1);</p>
+<p class="F">&nbsp;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">//</span>second, the unicode translation <span class="G">for</span> a keypress</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">if</span>(<span class="G">!</span>keyup)</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;dword unicode <span class="G">=</span> TranslateUnicode(keycode);</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">if</span>(unicode <span class="G">&gt;=</span> 32 <span class="G">&amp;&amp;</span> unicode <span class="G">!=</span> 127)</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;b <span class="G">=</span> Ctrl<span class="G">::</span>DoKeyFB(unicode, 1);</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</p>
+<p class="F">&nbsp;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">//</span>helper quit</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">if</span>(uppcode <span class="G">==</span> (K_SHIFT_CTRL <span class="G">|</span> K_ESCAPE))</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Ctrl<span class="G">::</span>EndSession();</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;}</p>
+<p class="F">}</p>
+<p class="F">&nbsp;</p>
+<p class="F">END_UPP_NAMESPACE</p>
+<p class="F">&nbsp;</p>
+<p class="F">&nbsp;</p>
+<p class="F">&nbsp;</p>
+<p class="E">Win.cpp</p>
+<p class="F">&nbsp;</p>
+<p class="F"><span class="G">#include</span> &quot;LinuxFbLocal<span class="G">.</span>h&quot;</p>
+<p class="F">&nbsp;</p>
+<p class="F"><span class="G">#define</span> LLOG(x) &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">//</span>LOG(x)</p>
+<p class="F">&nbsp;</p>
+<p class="F">NAMESPACE_UPP</p>
+<p class="F">&nbsp;</p>
+<p class="F"><span class="G">//</span>video</p>
+<p class="F"><span class="G">int</span> fbfd <span class="G">=</span> <span class="G">-</span>1;</p>
+<p class="F"><span class="G">struct</span> fb_var_screeninfo vinfo;</p>
+<p class="F"><span class="G">struct</span> fb_fix_screeninfo finfo;</p>
+<p class="F"><span class="G">long</span> <span class="G">int</span> screensize <span class="G">=</span> 0;</p>
+<p class="F"><span class="G">char</span> <span class="G">*</span>fbp <span class="G">=</span> 0;</p>
+<p class="F">&nbsp;</p>
+<p class="F"><span class="G">//</span>mouse</p>
+<p class="F"><span class="G">int</span> mouse_fd <span class="G">=</span> <span class="G">-</span>1;</p>
+<p class="F"><span class="G">bool</span> mouse_imps2 <span class="G">=</span> <span class="G">false</span>;</p>
+<p class="F">Point mousep;</p>
+<p class="F">dword mouseb <span class="G">=</span> 0;</p>
+<p class="F">&nbsp;</p>
+<p class="F"><span class="G">//</span>keyb</p>
+<p class="F"><span class="G">int</span> keyb_fd <span class="G">=</span> <span class="G">-</span>1;</p>
+<p class="F"><span class="G">int</span> cvt <span class="G">=</span> <span class="G">-</span>1;</p>
+<p class="F">&nbsp;</p>
+<p class="H">//</p>
+<p class="F">&nbsp;</p>
+<p class="F"><span class="G">int</span> oldvt;</p>
+<p class="F"><span class="G">struct</span> termios oldtermios;</p>
+<p class="F"><span class="G">int</span> oldmode;</p>
+<p class="F">&nbsp;</p>
+<p class="F"><span class="G">int</span> entervt()</p>
+<p class="F">{</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">struct</span> termios kt;</p>
+<p class="F">&nbsp;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">if</span>(cvt <span class="G">&gt;</span> 0) {</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">struct</span> vt_stat vtst;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">if</span>(ioctl(keyb_fd, VT_GETSTATE, <span class="G">&amp;</span>vtst) <span class="G">==</span> 0)</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;oldvt <span class="G">=</span> vtst<span class="G">.</span>v_active;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">if</span>(ioctl(keyb_fd, VT_ACTIVATE, cvt) <span class="G">==</span> 0)</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ioctl(keyb_fd, VT_WAITACTIVE, cvt);</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;}</p>
+<p class="F">&nbsp;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">if</span>(tcgetattr(keyb_fd, <span class="G">&amp;</span>oldtermios) <span class="G">&lt;</span> 0) {</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;fprintf(stderr, &quot;Error<span class="G">:</span> saving terminal attributes&quot;);</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">return</span> <span class="G">-</span>1;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;}</p>
+<p class="F">&nbsp;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">if</span>(ioctl(keyb_fd, KDGKBMODE, <span class="G">&amp;</span>oldmode) <span class="G">&lt;</span> 0) {</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;fprintf(stderr, &quot;Error<span class="G">:</span> saving keyboard mode&quot;);</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">return</span> <span class="G">-</span>1;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;}</p>
+<p class="F">&nbsp;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;kt <span class="G">=</span> oldtermios;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;kt<span class="G">.</span>c_lflag <span class="G">&amp;=</span> <span class="G">~</span>(ICANON <span class="G">|</span> ECHO <span class="G">|</span> ISIG);</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;kt<span class="G">.</span>c_iflag <span class="G">&amp;=</span> <span class="G">~</span>(ISTRIP <span class="G">|</span> IGNCR <span class="G">|</span> ICRNL <span class="G">|</span> INLCR <span class="G">|</span> IXOFF <span class="G">|</span> IXON);</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;kt<span class="G">.</span>c_cc<span class="G">[</span>VMIN<span class="G">]</span> <span class="G">=</span> 0;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;kt<span class="G">.</span>c_cc<span class="G">[</span>VTIME<span class="G">]</span> <span class="G">=</span> 0;</p>
+<p class="F">&nbsp;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">if</span>(tcsetattr(keyb_fd, TCSAFLUSH, <span class="G">&amp;</span>kt) <span class="G">&lt;</span> 0) {</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;fprintf(stderr, &quot;Error<span class="G">:</span> setting <span class="G">new</span> terminal attributes&quot;);</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">return</span> <span class="G">-</span>1;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;}</p>
+<p class="F">&nbsp;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">if</span>(ioctl(keyb_fd, KDSKBMODE, K_MEDIUMRAW) <span class="G">&lt;</span> 0) {</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;fprintf(stderr, &quot;Error<span class="G">:</span> setting keyboard in mediumraw mode&quot;);</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">return</span> <span class="G">-</span>1;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;}</p>
+<p class="F">&nbsp;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">if</span>(ioctl(keyb_fd, KDSETMODE, KD_GRAPHICS) <span class="G">&lt;</span> 0) {</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;fprintf(stderr, &quot;Error<span class="G">:</span> setting keyboard in graphics mode&quot;);</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">return</span> <span class="G">-</span>1;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;}</p>
+<p class="F">&nbsp;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;ioctl(keyb_fd, VT_LOCKSWITCH, 1);</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">return</span> 0;</p>
+<p class="F">}</p>
+<p class="F">&nbsp;</p>
+<p class="F"><span class="G">void</span> switchvt_pre()</p>
+<p class="F">{</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;ioctl(keyb_fd, KDSETMODE, KD_TEXT);</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;ioctl(keyb_fd, VT_UNLOCKSWITCH, 1);</p>
+<p class="F">}</p>
+<p class="F">&nbsp;</p>
+<p class="F"><span class="G">void</span> switchvt_post()</p>
+<p class="F">{</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;ioctl(keyb_fd, VT_LOCKSWITCH, 1);</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;ioctl(keyb_fd, KDSETMODE, KD_GRAPHICS);</p>
+<p class="F">}</p>
+<p class="F">&nbsp;</p>
+<p class="F"><span class="G">int</span> switched_away <span class="G">=</span> 0;</p>
+<p class="F">&nbsp;</p>
+<p class="F"><span class="G">void</span> switchvt(<span class="G">int</span> ii)</p>
+<p class="F">{</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">struct</span> vt_stat vtst;</p>
+<p class="F">&nbsp;</p>
+<p class="H"><span class="I">&nbsp;&nbsp;&nbsp;&nbsp;</span>/*<span class="I"> Figure out whether </span>or<span class="I"> </span>not<span class="I"> we're switching to a </span>new<span class="I"> console </span>*/</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">if</span>(ioctl(keyb_fd, VT_GETSTATE, <span class="G">&amp;</span>vtst) <span class="G">&lt;</span> 0)</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;{</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;fprintf(stderr, &quot;Error<span class="G">:</span> could <span class="G">not</span> read tty state&quot;);</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">return</span>;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;}</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">if</span>(ii <span class="G">==</span> vtst<span class="G">.</span>v_active)</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">return</span>;</p>
+<p class="F">&nbsp;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;LLOG(&quot;trying to <span class="G">switch</span> to VT &quot; <span class="G">&lt;&lt;</span> ii);</p>
+<p class="F">&nbsp;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;GuiLock __;</p>
+<p class="F">&nbsp;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;switchvt_pre();</p>
+<p class="F">&nbsp;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">if</span>(ioctl(keyb_fd, VT_ACTIVATE, ii) <span class="G">==</span> 0) {</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ioctl(keyb_fd, VT_WAITACTIVE, ii);</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;switched_away <span class="G">=</span> 1;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">return</span>;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;}</p>
+<p class="F">&nbsp;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;switchvt_post();</p>
+<p class="F">}</p>
+<p class="F">&nbsp;</p>
+<p class="F"><span class="G">void</span> leavevt()</p>
+<p class="F">{</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">if</span>(oldmode <span class="G">&lt;</span> 0) <span class="G">return</span>;</p>
+<p class="F">&nbsp;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">if</span>(ioctl(keyb_fd, KDSETMODE, KD_TEXT) <span class="G">&lt;</span> 0)</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;fprintf(stderr, &quot;Error<span class="G">:</span> setting keyboard in text mode&quot;);</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">if</span>(ioctl(keyb_fd, KDSKBMODE, oldmode) <span class="G">&lt;</span> 0)</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;fprintf(stderr, &quot;Error<span class="G">:</span> restoring keyboard mode&quot;);</p>
+<p class="F">&nbsp;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">if</span>(tcsetattr(keyb_fd, TCSAFLUSH, <span class="G">&amp;</span>oldtermios) <span class="G">&lt;</span> 0)</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;fprintf(stderr, &quot;Error<span class="G">:</span> setting <span class="G">new</span> terminal attributes&quot;);</p>
+<p class="F">&nbsp;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;oldmode <span class="G">=</span> <span class="G">-</span>1;</p>
+<p class="F">&nbsp;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;ioctl(keyb_fd, VT_UNLOCKSWITCH, 1);</p>
+<p class="F">&nbsp;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">if</span>(oldvt <span class="G">&gt;</span> 0)</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ioctl(keyb_fd, VT_ACTIVATE, oldvt);</p>
+<p class="F">}</p>
+<p class="F">&nbsp;</p>
+<p class="F"><span class="G">int</span> pend <span class="G">=</span> 0;</p>
+<p class="F">&nbsp;</p>
+<p class="F"><span class="G">//</span>returns 0 <span class="G">if</span> timeout, 1 <span class="G">for</span> mouse, 2 <span class="G">for</span> keyboard</p>
+<p class="F"><span class="G">//</span>common <span class="G">for</span> waitforevents <span class="G">and</span> sleep </p>
+<p class="F"><span class="G">int</span> readevents(<span class="G">int</span> ms)</p>
+<p class="F">{</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;fd_set fdset;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">int</span> max_fd;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">static</span> <span class="G">struct</span> timeval to;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;to<span class="G">.</span>tv_sec <span class="G">=</span> ms <span class="G">/</span> 1000;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;to<span class="G">.</span>tv_usec <span class="G">=</span> ms <span class="G">%</span> 1000 <span class="G">*</span> 1000;</p>
+<p class="F">&nbsp;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">if</span>(switched_away) {</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">struct</span> vt_stat vtst;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;GuiLock __;</p>
+<p class="H"><span class="I">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>if<span class="I">((ioctl(keyb_fd, VT_GETSTATE, </span>&amp;<span class="I">vtst) </span>==<span class="I"> 0) </span>&amp;&amp;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;vtst<span class="G">.</span>v_active <span class="G">==</span> cvt) {</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;switched_away <span class="G">=</span> 0;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;switchvt_post();</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;}</p>
+<p class="F">&nbsp;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;FD_ZERO(<span class="G">&amp;</span>fdset);</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;max_fd <span class="G">=</span> 0;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">if</span>(mouse_fd <span class="G">&gt;=</span> 0) {</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;FD_SET(mouse_fd, <span class="G">&amp;</span>fdset);</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">if</span>(max_fd <span class="G">&lt;</span> mouse_fd) max_fd <span class="G">=</span> mouse_fd;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;}</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">if</span>(keyb_fd <span class="G">&gt;=</span> 0) {</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;FD_SET(keyb_fd, <span class="G">&amp;</span>fdset);</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">if</span>(max_fd <span class="G">&lt;</span> keyb_fd) max_fd <span class="G">=</span> keyb_fd;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;}</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">if</span>(select(max_fd<span class="G">+</span>1, <span class="G">&amp;</span>fdset, NULL, NULL, <span class="G">&amp;</span>to) <span class="G">&gt;</span> 0) {</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">if</span>(mouse_fd <span class="G">&gt;=</span> 0) {</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">if</span>(FD_ISSET(mouse_fd, <span class="G">&amp;</span>fdset)) <span class="G">return</span> 1;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">if</span>(keyb_fd <span class="G">&gt;=</span> 0) {</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">if</span>(FD_ISSET(keyb_fd, <span class="G">&amp;</span>fdset)) <span class="G">return</span> 2;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;}</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">return</span> 0;</p>
+<p class="F">}</p>
+<p class="F">&nbsp;</p>
+<p class="H">//</p>
+<p class="F">&nbsp;</p>
+<p class="F"><span class="G">void</span> FBQuitSession()</p>
+<p class="F">{</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;Ctrl<span class="G">::</span>EndSession();</p>
+<p class="F">}</p>
+<p class="F">&nbsp;</p>
+<p class="F"><span class="G">bool</span> FBIsWaitingEvent()</p>
+<p class="F">{</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;pend <span class="G">=</span> readevents(0);</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">return</span> pend <span class="G">&gt;</span> 0;</p>
+<p class="F">}</p>
+<p class="F">&nbsp;</p>
+<p class="F"><span class="G">bool</span> FBProcessEvent(<span class="G">bool</span> <span class="G">*</span>quit)</p>
+<p class="F">{</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">if</span>(pend)</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;{</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">if</span>(pend <span class="G">&amp;</span> 1) handle_mouse();</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">if</span>(pend <span class="G">&amp;</span> 2) handle_keyboard();</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pend <span class="G">=</span> 0; <span class="G">//</span>need to reset, since with repeated call is <span class="G">not</span> updated here, would stuck</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">return</span> <span class="G">true</span>;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;}</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">return</span> <span class="G">false</span>;</p>
+<p class="F">}</p>
+<p class="F">&nbsp;</p>
+<p class="F"><span class="G">void</span> FBSleep(<span class="G">int</span> ms)</p>
+<p class="F">{</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;pend <span class="G">=</span> readevents(ms); <span class="G">//</span>interruptable sleep</p>
+<p class="F">&nbsp;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">//</span>keep queue busy, see SDLFb<span class="G">/</span>Win<span class="G">.</span>cpp <span class="G">for</span> why</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">//this</span> indicates that some stuff is pending, returning <span class="G">true</span> in FBProcessEvent</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">//while</span> nothing is actually processed</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;pend <span class="G">|=</span> 4;</p>
+<p class="F">}</p>
+<p class="F">&nbsp;</p>
+<p class="F"><span class="G">void</span> FBInitUpdate()</p>
+<p class="F">{</p>
+<p class="F">&nbsp;</p>
+<p class="F">}</p>
+<p class="F">&nbsp;</p>
+<p class="F"><span class="G">void</span> FBUpdate(<span class="G">const</span> Rect<span class="G">&amp;</span> inv)</p>
+<p class="F">{</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">if</span>(switched_away) <span class="G">return</span>; <span class="G">//</span>backdraw</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">//</span>FIXME accelerate</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">const</span> ImageBuffer<span class="G">&amp;</span> framebuffer <span class="G">=</span> Ctrl<span class="G">::</span>GetFrameBuffer();</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;memcpy(fbp, <span class="G">~</span>framebuffer, framebuffer<span class="G">.</span>GetLength() <span class="G">*</span> <span class="G">sizeof</span>(RGBA));</p>
+<p class="F">}</p>
+<p class="F">&nbsp;</p>
+<p class="F"><span class="G">void</span> FBFlush()</p>
+<p class="F">{</p>
+<p class="F">&nbsp;</p>
+<p class="F">}</p>
+<p class="F">&nbsp;</p>
+<p class="F"><span class="G">void</span> FBInit(<span class="G">const</span> String<span class="G">&amp;</span> fbdevice)</p>
+<p class="F">{</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;Ctrl<span class="G">::</span>InitFB();</p>
+<p class="F">&nbsp;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;fbfd <span class="G">=</span> open(fbdevice, O_RDWR);</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">if</span> (<span class="G">!</span>fbfd) {</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;fprintf(stderr, &quot;Error<span class="G">:</span> cannot open framebuffer device<span class="G">.</span>\n&quot;);</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;exit(<span class="G">-</span>1);</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;}</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;LLOG(&quot;The framebuffer device was opened successfully<span class="G">.</span>\n&quot;);</p>
+<p class="F">&nbsp;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">if</span> (ioctl(fbfd, FBIOGET_FSCREENINFO, <span class="G">&amp;</span>finfo)) {</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;fprintf(stderr, &quot;Error reading fixed information<span class="G">.</span>\n&quot;);</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;exit(<span class="G">-</span>2);</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;}</p>
+<p class="F">&nbsp;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">if</span> (ioctl(fbfd, FBIOGET_VSCREENINFO, <span class="G">&amp;</span>vinfo)) {</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;fprintf(stderr, &quot;Error reading variable information<span class="G">.</span>\n&quot;);</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;exit(<span class="G">-</span>3);</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;}</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;RLOG(&quot;Framebuffer opened<span class="G">:</span> &quot; <span class="G">&lt;&lt;</span> fbdevice <span class="G">&lt;&lt;</span> &quot;<span class="G">:</span> &quot; <span class="G">&lt;&lt;</span> vinfo<span class="G">.</span>xres <span class="G">&lt;&lt;</span> &quot;x&quot; <span class="G">&lt;&lt;</span> vinfo<span class="G">.</span>yres <span class="G">&lt;&lt;</span> &quot; @ &quot; <span class="G">&lt;&lt;</span> vinfo<span class="G">.</span>bits_per_pixel);</p>
+<p class="F">&nbsp;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;screensize <span class="G">=</span> vinfo<span class="G">.</span>xres <span class="G">*</span> vinfo<span class="G">.</span>yres <span class="G">*</span> vinfo<span class="G">.</span>bits_per_pixel <span class="G">/</span> 8; <span class="G">//</span>bytes</p>
+<p class="F">&nbsp;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;fbp <span class="G">=</span> (<span class="G">char*</span>)mmap(0, screensize, PROT_READ <span class="G">|</span> PROT_WRITE, MAP_SHARED, fbfd, 0);</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">if</span>((intptr_t)fbp <span class="G">==</span> <span class="G">-</span>1) {</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;fprintf(stderr, &quot;Error<span class="G">:</span> failed to map framebuffer device to memory<span class="G">.</span>\n&quot;);</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;exit(<span class="G">-</span>4);</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;}</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;LLOG(&quot;The framebuffer device was mapped to memory successfully<span class="G">.</span>\n&quot;);</p>
+<p class="F">&nbsp;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;Size fbsz(vinfo<span class="G">.</span>xres, vinfo<span class="G">.</span>yres);</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;Ctrl<span class="G">::</span>SetFramebufferSize(fbsz);</p>
+<p class="F">&nbsp;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">//</span>mouse</p>
+<p class="F">&nbsp;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">//</span>mousep <span class="G">=</span> fbsz <span class="G">/</span> 2;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;mousep<span class="G">.</span>Clear();&nbsp;&nbsp;&nbsp;&nbsp;</p>
+<p class="F">&nbsp;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">static</span> <span class="G">const</span> <span class="G">char</span> <span class="G">*</span>mice<span class="G">[]</span> <span class="G">=</span> {</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&quot;<span class="G">/</span>dev<span class="G">/</span>input<span class="G">/</span>mice&quot;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;, &quot;<span class="G">/</span>dev<span class="G">/</span>usbmouse&quot;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;, &quot;<span class="G">/</span>dev<span class="G">/</span>psaux&quot;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;, NULL</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;};</p>
+<p class="F">&nbsp;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">for</span>(<span class="G">int</span> i<span class="G">=</span>0; (mouse_fd <span class="G">&lt;</span> 0) <span class="G">&amp;&amp;</span> mice<span class="G">[</span>i<span class="G">]</span>; <span class="G">++</span>i) {</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;mouse_fd <span class="G">=</span> open(mice<span class="G">[</span>i<span class="G">]</span>, O_RDWR, 0);</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">if</span>(mouse_fd <span class="G">&lt;</span> 0) mouse_fd <span class="G">=</span> open(mice<span class="G">[</span>i<span class="G">]</span>, O_RDONLY, 0);</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">if</span>(mouse_fd <span class="G">&gt;=</span> 0) {</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;set_imps2(mouse_fd, 1);</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">if</span>(mouse_imps2 <span class="G">=</span> has_imps2(mouse_fd)) {</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;LLOG(&quot;IMPS2 mouse enabled<span class="G">:</span> &quot; <span class="G">&lt;&lt;</span> mice<span class="G">[</span>i<span class="G">]</span>);</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</p>
+<p class="H"><span class="I">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>else</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;RLOG(&quot;no IMPS2 mouse present&quot;);</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</p>
+<p class="H"><span class="I">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>else</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;fprintf(stderr, &quot;Error<span class="G">:</span> failed to open <span class="G">%</span>s<span class="G">.</span>\n&quot;, mice<span class="G">[</span>i<span class="G">]</span>);</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;}</p>
+<p class="F">&nbsp;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">//</span>keyb</p>
+<p class="F">&nbsp;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">static</span> <span class="G">const</span> <span class="G">char*</span> <span class="G">const</span> tty0<span class="G">[]</span> <span class="G">=</span> {</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&quot;<span class="G">/</span>dev<span class="G">/</span>tty0&quot;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;, &quot;<span class="G">/</span>dev<span class="G">/</span>vc<span class="G">/</span>0&quot;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;, NULL</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;};</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">static</span> <span class="G">const</span> <span class="G">char*</span> <span class="G">const</span> vcs<span class="G">[]</span> <span class="G">=</span> {</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&quot;<span class="G">/</span>dev<span class="G">/</span>vc<span class="G">/</span>&quot;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;, &quot;<span class="G">/</span>dev<span class="G">/</span>tty&quot;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;, NULL</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;};</p>
+<p class="F">&nbsp;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">int</span> tfd <span class="G">=</span> <span class="G">-</span>1;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">for</span>(<span class="G">int</span> i<span class="G">=</span>0; tty0<span class="G">[</span>i<span class="G">]</span> <span class="G">&amp;&amp;</span> (tfd <span class="G">&lt;</span> 0); <span class="G">++</span>i)</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;tfd <span class="G">=</span> open(tty0<span class="G">[</span>i<span class="G">]</span>, O_WRONLY, 0);</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">if</span>(tfd <span class="G">&lt;</span> 0)</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;tfd <span class="G">=</span> dup(0);</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;ASSERT(tfd<span class="G">&gt;=</span>0);</p>
+<p class="F">&nbsp;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;ioctl(tfd, VT_OPENQRY, <span class="G">&amp;</span>cvt);</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;close(tfd);</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;LLOG(&quot;probable <span class="G">new</span> VT<span class="G">:</span> &quot; <span class="G">&lt;&lt;</span> cvt);</p>
+<p class="F">&nbsp;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">if</span>(geteuid() <span class="G">!=</span> 0)</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;{</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;fprintf(stderr, &quot;Error<span class="G">:</span> <span class="G">not</span> running as ROOT, mouse handling pobably unavailable\n&quot;);</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;}</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">else</span> <span class="G">if</span>(cvt <span class="G">&gt;</span> 0) {</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;LLOG(&quot;<span class="G">try</span> to open the NEW assigned VT<span class="G">:</span> &quot; <span class="G">&lt;&lt;</span> cvt);</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">for</span>(<span class="G">int</span> i<span class="G">=</span>0; vcs<span class="G">[</span>i<span class="G">]</span> <span class="G">&amp;&amp;</span> (keyb_fd <span class="G">&lt;</span> 0); <span class="G">++</span>i) {</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">char</span> path<span class="G">[</span>32<span class="G">]</span>;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;snprintf(path, 32, &quot;<span class="G">%</span>s<span class="G">%</span>d&quot;, vcs<span class="G">[</span>i<span class="G">]</span>, cvt);</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;keyb_fd <span class="G">=</span> open(path, O_RDWR, 0);</p>
+<p class="F">&nbsp;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">if</span>(keyb_fd <span class="G">&lt;</span> 0)</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">continue</span>;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;LLOG(&quot;TTY path opened<span class="G">:</span> &quot; <span class="G">&lt;&lt;</span> path);</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;tfd <span class="G">=</span> open(&quot;<span class="G">/</span>dev<span class="G">/</span>tty&quot;, O_RDWR, 0);</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">if</span>(tfd <span class="G">&gt;=</span> 0) {</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;LLOG(&quot;detaching from local stdin<span class="G">/</span>out<span class="G">/</span>err&quot;);</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ioctl(tfd, TIOCNOTTY, 0);</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;close(tfd);</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</p>
+<p class="H"><span class="I">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>else</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;fprintf(stderr, &quot;Error<span class="G">:</span> detaching from local stdin<span class="G">/</span>out<span class="G">/</span>err\n&quot;);</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;}</p>
+<p class="F">&nbsp;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">if</span>(keyb_fd <span class="G">&lt;</span> 0) {</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;LLOG(&quot;Using already assigned VT, must <span class="G">not</span> detach&quot;);</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">struct</span> vt_stat vtst;</p>
+<p class="F">&nbsp;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;keyb_fd <span class="G">=</span> open(&quot;<span class="G">/</span>dev<span class="G">/</span>tty&quot;, O_RDWR);</p>
+<p class="F">&nbsp;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">if</span>(ioctl(keyb_fd, VT_GETSTATE, <span class="G">&amp;</span>vtst) <span class="G">&lt;</span> 0) {</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;cvt <span class="G">=</span> 0;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;} <span class="G">else</span> {</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;cvt <span class="G">=</span> vtst<span class="G">.</span>v_active;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;}</p>
+<p class="F">&nbsp;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">if</span>(cvt<span class="G">&gt;</span>0)</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;fprintf(stdout, &quot;started on VT <span class="G">%</span>d\n&quot;, cvt);</p>
+<p class="F">&nbsp;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;ASSERT(keyb_fd<span class="G">&gt;=</span>0);</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;oldmode <span class="G">=</span> <span class="G">-</span>1;</p>
+<p class="F">&nbsp;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;{</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">int</span> d;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">if</span>(ioctl(keyb_fd, KDGKBMODE, <span class="G">&amp;</span>d) <span class="G">&lt;</span> 0) {</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;close(keyb_fd);</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;keyb_fd <span class="G">=</span> <span class="G">-</span>1;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;fprintf(stderr, &quot;Error<span class="G">:</span> opening a console terminal&quot;);</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;exit(5);</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;}</p>
+<p class="F">&nbsp;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;LLOG(&quot;tty opened<span class="G">:</span> &quot; <span class="G">&lt;&lt;</span> keyb_fd);</p>
+<p class="F">&nbsp;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;dupkmap(keyb_fd);</p>
+<p class="F">&nbsp;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;entervt();</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;pend <span class="G">=</span> 4; <span class="G">//</span>fake video expose event to cause first paint</p>
+<p class="F">}</p>
+<p class="F">&nbsp;</p>
+<p class="F"><span class="G">void</span> FBDeInit()</p>
+<p class="F">{</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;Ctrl<span class="G">::</span>ExitFB();</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;munmap(fbp, screensize);</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;close(fbfd);</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;leavevt();</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;close(mouse_fd);</p>
+<p class="F">}</p>
+<p class="F">&nbsp;</p>
+<p class="F">END_UPP_NAMESPACE</p>
+<p class="F">&nbsp;</p>
+<p class="F">&nbsp;</p>
+<p class="F">&nbsp;</p>
+<p class="E">keymap.cpp</p>
+<p class="F">&nbsp;</p>
+<p class="F"><span class="G">#include</span> &quot;LinuxFbLocal<span class="G">.</span>h&quot;</p>
+<p class="F">&nbsp;</p>
+<p class="F"><span class="G">#define</span> LLOG(x) &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">//</span>LOG(x)</p>
+<p class="F">&nbsp;</p>
+<p class="F">NAMESPACE_UPP</p>
+<p class="F">&nbsp;</p>
+<p class="F">dword modkeys <span class="G">=</span> 0;</p>
+<p class="F">&nbsp;</p>
+<p class="F"><span class="G">enum</span> KMOD {</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;KMOD_NONE &nbsp;<span class="G">=</span> 0x00,</p>
+<p class="F">&nbsp;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;KMOD_LSHIFT<span class="G">=</span> 0x01,</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;KMOD_RSHIFT<span class="G">=</span> 0x02,</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;KMOD_LCTRL <span class="G">=</span> 0x04,</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;KMOD_RCTRL <span class="G">=</span> 0x08,</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;KMOD_LALT &nbsp;<span class="G">=</span> 0x10,</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;KMOD_RALT &nbsp;<span class="G">=</span> 0x20,</p>
+<p class="F">&nbsp;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;KMOD_CAPS &nbsp;<span class="G">=</span> 0x40,</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;KMOD_NUM &nbsp;&nbsp;<span class="G">=</span> 0x80,</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;KMOD_CTRL <span class="G">=</span> KMOD_LCTRL <span class="G">|</span> KMOD_RCTRL,</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;KMOD_SHIFT <span class="G">=</span> KMOD_LSHIFT <span class="G">|</span> KMOD_RSHIFT,</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;KMOD_ALT <span class="G">=</span> KMOD_LALT <span class="G">|</span> KMOD_RALT,</p>
+<p class="F">};</p>
+<p class="F">&nbsp;</p>
+<p class="F"><span class="G">#define</span> CHFLAG(w, m, b) <span class="G">if</span>(b) w <span class="G">|=</span> m; <span class="G">else</span> w <span class="G">&amp;=</span> <span class="G">~</span>m;</p>
+<p class="F"><span class="G">void</span> SaveModKeys(dword keycode, dword pressed)</p>
+<p class="F">{</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">switch</span>(keycode)</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;{</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">case</span> SCANCODE_LEFTSHIFT<span class="G">:</span> CHFLAG(modkeys, KMOD_LSHIFT, pressed) <span class="G">break</span>;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">case</span> SCANCODE_RIGHTSHIFT<span class="G">:</span> CHFLAG(modkeys, KMOD_RSHIFT, pressed) <span class="G">break</span>;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">case</span> SCANCODE_LEFTCONTROL<span class="G">:</span> CHFLAG(modkeys, KMOD_LCTRL, pressed) <span class="G">break</span>;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">case</span> SCANCODE_RIGHTCONTROL<span class="G">:</span> CHFLAG(modkeys, KMOD_RCTRL, pressed) <span class="G">break</span>;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">case</span> SCANCODE_LEFTALT<span class="G">:</span> CHFLAG(modkeys, KMOD_LALT, pressed) <span class="G">break</span>;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">case</span> SCANCODE_RIGHTALT<span class="G">:</span> CHFLAG(modkeys, KMOD_RALT, pressed) <span class="G">break</span>;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">case</span> SCANCODE_CAPSLOCK<span class="G">:</span> CHFLAG(modkeys, KMOD_CAPS, pressed) <span class="G">break</span>;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">case</span> SCANCODE_NUMLOCK<span class="G">:</span> CHFLAG(modkeys, KMOD_NUM, pressed) <span class="G">break</span>;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;}</p>
+<p class="F">}</p>
+<p class="F">&nbsp;</p>
+<p class="F"><span class="G">bool</span> GetShift() &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{ <span class="G">return</span> modkeys <span class="G">&amp;</span> KMOD_SHIFT; }</p>
+<p class="F"><span class="G">bool</span> GetCtrl() &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{ <span class="G">return</span> modkeys <span class="G">&amp;</span> KMOD_CTRL; }</p>
+<p class="F"><span class="G">bool</span> GetAlt() &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{ <span class="G">return</span> modkeys <span class="G">&amp;</span> KMOD_ALT; }</p>
+<p class="F"><span class="G">bool</span> GetCapsLock() &nbsp;&nbsp;&nbsp;{ <span class="G">return</span> modkeys <span class="G">&amp;</span> KMOD_CAPS; }</p>
+<p class="F">&nbsp;</p>
+<p class="F">dword fbKEYtoK(dword chr) {</p>
+<p class="F">&nbsp;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">if</span>(chr <span class="G">==</span> SCANCODE_TAB)</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;chr <span class="G">=</span> K_TAB;</p>
+<p class="H"><span class="I">&nbsp;&nbsp;&nbsp;&nbsp;</span>else</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">if</span>(chr <span class="G">==</span> SCANCODE_SPACE)</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;chr <span class="G">=</span> K_SPACE;</p>
+<p class="H"><span class="I">&nbsp;&nbsp;&nbsp;&nbsp;</span>else</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">if</span>(chr <span class="G">==</span> SCANCODE_ENTER)</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;chr <span class="G">=</span> K_RETURN;</p>
+<p class="H"><span class="I">&nbsp;&nbsp;&nbsp;&nbsp;</span>else</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;chr <span class="G">=</span> chr <span class="G">+</span> K_DELTA;</p>
+<p class="F">&nbsp;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">//if</span> the mod keys themselves, no need to have CTRL<span class="G">+</span> xxx behaviour indicator</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">if</span>(chr <span class="G">==</span> K_ALT_KEY <span class="G">||</span> chr <span class="G">==</span> K_CTRL_KEY <span class="G">||</span> chr <span class="G">==</span> K_SHIFT_KEY)</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">return</span> chr;</p>
+<p class="F">&nbsp;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">if</span>(GetCtrl()) chr <span class="G">|=</span> K_CTRL;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">if</span>(GetAlt()) chr <span class="G">|=</span> K_ALT;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">if</span>(GetShift()) chr <span class="G">|=</span> K_SHIFT;</p>
+<p class="F">&nbsp;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">return</span> chr;</p>
+<p class="F">}</p>
+<p class="F">&nbsp;</p>
+<p class="F">END_UPP_NAMESPACE</p>
+<p class="F">&nbsp;</p>
+<p class="F"><span class="G">//</span>kernel defines conflict with some upp K_ enums, like K_SHIFT, K_ALT, K_CTRL</p>
+<p class="F"><span class="G">//</span>so we separate as much as possible</p>
+<p class="H">#include<span class="I"> </span>&lt;<span class="I">linux</span>/<span class="I">keyboard</span>.<span class="I">h</span>&gt;</p>
+<p class="F">&nbsp;</p>
+<p class="F">NAMESPACE_UPP</p>
+<p class="F">&nbsp;</p>
+<p class="F"><span class="G">//</span>The kernel copy of translation tables</p>
+<p class="F"><span class="G">//</span>from a console keycode in MEDIUMRAW to unicode</p>
+<p class="F"><span class="G">static</span> uint16 kmap<span class="G">[</span>MAX_NR_KEYMAPS<span class="G">][</span>NR_KEYS<span class="G">]</span>;</p>
+<p class="F">&nbsp;</p>
+<p class="F"><span class="G">void</span> dupkmap(<span class="G">int</span> fd)</p>
+<p class="F">{</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">struct</span> kbentry entry;</p>
+<p class="F">&nbsp;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">if</span>(fd <span class="G">&lt;</span> 0) <span class="G">return</span>;</p>
+<p class="F">&nbsp;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">for</span>(<span class="G">int</span> m<span class="G">=</span>0; m<span class="G">&lt;</span>MAX_NR_KEYMAPS; <span class="G">++</span>m) {</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;memset(kmap<span class="G">[</span>m<span class="G">]</span>, 0, NR_KEYS<span class="G">*sizeof</span>(uint16));</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">for</span>(<span class="G">int</span> i<span class="G">=</span>0; i<span class="G">&lt;</span>NR_KEYS; <span class="G">++</span>i) {</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;entry<span class="G">.</span>kb_table <span class="G">=</span> m; entry<span class="G">.</span>kb_index <span class="G">=</span> i;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">if</span>(ioctl(fd, KDGKBENT, <span class="G">&amp;</span>entry) <span class="G">&lt;</span> 0)</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;fprintf(stderr, &quot;Error<span class="G">:</span> reading keymap\n&quot;);</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">return</span>;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</p>
+<p class="F">&nbsp;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">if</span>(entry<span class="G">.</span>kb_value <span class="G">==</span> K_ENTER ) entry<span class="G">.</span>kb_value <span class="G">=</span> K(KT_ASCII,13);</p>
+<p class="F">&nbsp;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">//</span>correct numpad</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">if</span>(KTYP(entry<span class="G">.</span>kb_value) <span class="G">==</span> KT_PAD) {</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">switch</span>(entry<span class="G">.</span>kb_value) {</p>
+<p class="H"><span class="I">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>case<span class="I"> K_P0</span>:</p>
+<p class="H"><span class="I">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>case<span class="I"> K_P1</span>:</p>
+<p class="H"><span class="I">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>case<span class="I"> K_P2</span>:</p>
+<p class="H"><span class="I">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>case<span class="I"> K_P3</span>:</p>
+<p class="H"><span class="I">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>case<span class="I"> K_P4</span>:</p>
+<p class="H"><span class="I">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>case<span class="I"> K_P5</span>:</p>
+<p class="H"><span class="I">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>case<span class="I"> K_P6</span>:</p>
+<p class="H"><span class="I">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>case<span class="I"> K_P7</span>:</p>
+<p class="H"><span class="I">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>case<span class="I"> K_P8</span>:</p>
+<p class="H"><span class="I">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>case<span class="I"> K_P9</span>:</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;kmap<span class="G">[</span>m<span class="G">][</span>i<span class="G">]=</span>entry<span class="G">.</span>kb_value;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;kmap<span class="G">[</span>m<span class="G">][</span>i<span class="G">]+=</span> '0';</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">break</span>;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">case</span> K_PPLUS<span class="G">:</span> &nbsp;kmap<span class="G">[</span>m<span class="G">][</span>i<span class="G">]=</span>K(KT_ASCII,'<span class="G">+</span>'); <span class="G">break</span>;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">case</span> K_PMINUS<span class="G">:</span> kmap<span class="G">[</span>m<span class="G">][</span>i<span class="G">]=</span>K(KT_ASCII,'<span class="G">-</span>'); <span class="G">break</span>;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">case</span> K_PSTAR<span class="G">:</span> &nbsp;kmap<span class="G">[</span>m<span class="G">][</span>i<span class="G">]=</span>K(KT_ASCII,'<span class="G">*</span>'); <span class="G">break</span>;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">case</span> K_PSLASH<span class="G">:</span> kmap<span class="G">[</span>m<span class="G">][</span>i<span class="G">]=</span>K(KT_ASCII,'<span class="G">/</span>'); <span class="G">break</span>;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">case</span> K_PENTER<span class="G">:</span> kmap<span class="G">[</span>m<span class="G">][</span>i<span class="G">]=</span>K(KT_ASCII,'\r'); <span class="G">break</span>;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">case</span> K_PCOMMA<span class="G">:</span> kmap<span class="G">[</span>m<span class="G">][</span>i<span class="G">]=</span>K(KT_ASCII,','); <span class="G">break</span>;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">case</span> K_PDOT<span class="G">:</span> &nbsp;&nbsp;kmap<span class="G">[</span>m<span class="G">][</span>i<span class="G">]=</span>K(KT_ASCII,'<span class="G">.</span>'); <span class="G">break</span>;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">default:</span> <span class="G">break</span>;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</p>
+<p class="F">&nbsp;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">if</span>((KTYP(entry<span class="G">.</span>kb_value) <span class="G">==</span> KT_LATIN)</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">||</span> (KTYP(entry<span class="G">.</span>kb_value) <span class="G">==</span> KT_ASCII)</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">||</span> (KTYP(entry<span class="G">.</span>kb_value) <span class="G">==</span> KT_LETTER)</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;)</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;kmap<span class="G">[</span>m<span class="G">][</span>i<span class="G">]</span> <span class="G">=</span> entry<span class="G">.</span>kb_value;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;}</p>
+<p class="F">}</p>
+<p class="F">&nbsp;</p>
+<p class="F">dword TranslateUnicode(dword keycode)</p>
+<p class="F">{</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">int</span> m <span class="G">=</span> 0;</p>
+<p class="F">&nbsp;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">if</span>(modkeys <span class="G">&amp;</span> KMOD_SHIFT) m <span class="G">|=</span> (1<span class="G">&lt;&lt;</span>KG_SHIFT);</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">if</span>(modkeys <span class="G">&amp;</span> KMOD_CTRL) m <span class="G">|=</span> (1<span class="G">&lt;&lt;</span>KG_CTRL);</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">if</span>(modkeys <span class="G">&amp;</span> KMOD_LALT) m <span class="G">|=</span> (1<span class="G">&lt;&lt;</span>KG_ALT);</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">if</span>(modkeys <span class="G">&amp;</span> KMOD_RALT) m <span class="G">|=</span> (1<span class="G">&lt;&lt;</span>KG_ALTGR);</p>
+<p class="F">&nbsp;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">//</span>CAPS changes shift meaning in both directions</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">if</span>((modkeys <span class="G">&amp;</span> KMOD_CAPS) </p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">&amp;&amp;</span> KTYP(kmap<span class="G">[</span>m<span class="G">][</span>keycode<span class="G">]</span>) <span class="G">==</span> KT_LETTER</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;)</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;m <span class="G">^=</span> (1<span class="G">&lt;&lt;</span>KG_SHIFT);</p>
+<p class="F">&nbsp;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">//</span>num pad handling stays same so far</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">if</span>((modkeys <span class="G">&amp;</span> KMOD_NUM)</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">&amp;&amp;</span> KTYP(kmap<span class="G">[</span>m<span class="G">][</span>keycode<span class="G">]</span>) <span class="G">==</span> KT_PAD</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;)</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">return</span> KVAL(kmap<span class="G">[</span>m<span class="G">][</span>keycode<span class="G">]</span>);</p>
+<p class="H"><span class="I">&nbsp;&nbsp;&nbsp;&nbsp;</span>else</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">return</span> KVAL(kmap<span class="G">[</span>m<span class="G">][</span>keycode<span class="G">]</span>);</p>
+<p class="F">}</p>
+<p class="F">&nbsp;</p>
+<p class="F">END_UPP_NAMESPACE</p>
+<p class="F">&nbsp;</p>
+<p class="F">&nbsp;</p>
+<p class="F">&nbsp;</p>
+<p class="F">&nbsp;</p>
+</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>
+<TABLE BORDER="0" WIDTH="100%"><TR><TD></TD>
+</TR>
+</TABLE>
+<TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" BGCOLOR="#FFFFFF" WIDTH="100%" style="border-style: solid; border-width: 1px; border-color: #6E89AE;padding: 10px;;"><TR><TD><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%"><TR><TD><p class="A"><span class="B"> </span><a href="www$uppweb$contribweb$en-us.html">Do you want to contribute?</a></p>
+</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>
+<script type="text/javascript">var a={'reference$LinuxFb$en-us.html':'English'};var p=window.location.pathname.split("/");p=p[p.length-1];var s='<select id="lang" onchange="window.location=document.getElementById(\'lang\').value;">';for(l in a){if(p==l){d=" selected=1"}else{d=""}s+='<option value="'+l+'"'+d+'>'+a[l]+'</option>'}s+='</select>';var d=document.createElement('div');d.innerHTML=s;var c=document.getElementById('langs');c.replaceChild(d,c.firstChild);document.getElementById('langbox').style.display='block';</script></BODY>

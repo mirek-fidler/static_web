@@ -1,0 +1,715 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en-us">
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
+<META NAME="Generator" CONTENT="U++ HTML Package">
+<TITLE>Character set support :: U++</TITLE>
+<STYLE TYPE="text/css"><!--
+.A{margin:0px 0px 0px 0px;text-indent:0px;text-align:left;color:#000000;font-family:sans-serif;font-size:10pt;font-weight:normal;font-style:normal;}
+.B{font-size:12pt;}
+.C{border-collapse:collapse;table-layout:auto;border: 2px solid #000000;}
+.D{padding: 3px 5px 3px 5px;border-left: 1px solid #000000;border-top: 1px solid #000000;border-right: 1px solid #000000;border-bottom: 1px solid #000000;background-color:#712A00;vertical-align:middle;}
+.E{margin:0px 0px 0px 0px;text-indent:0px;text-align:left;color:#e0e0e0;font-family:sans-serif;font-size:16pt;font-weight:bold;font-style:normal;}
+.F{margin:8px 0px 0px 0px;text-indent:0px;text-align:left;color:#000000;font-family:sans-serif;font-size:10pt;font-weight:normal;font-style:normal;}
+.G{border-collapse:collapse;table-layout:auto;border: 1px solid #000000;}
+.H{padding: 3px 5px 3px 5px;border-left: 0px solid #000000;border-top: 0px solid #000000;border-right: 0px solid #000000;border-bottom: 0px solid #000000;background-color:#FFFFFF;vertical-align:top;}
+.I{margin:0px 0px 0px 0px;text-indent:0px;text-align:left;color:#000000;font-family:sans-serif;font-size:10pt;font-weight:bold;font-style:normal;}
+.J{margin:0px 0px 5px 0px;text-indent:0px;text-align:left;color:#000000;font-family:sans-serif;font-size:10pt;font-weight:bold;font-style:normal;}
+.K{margin:0px 0px 0px 57px;text-indent:0px;text-align:left;color:#000000;font-family:sans-serif;font-size:10pt;font-weight:normal;font-style:normal;}
+.L{margin:0px 0px 0px 0px;text-indent:0px;text-align:left;color:#000000;font-family:sans-serif;font-size:6pt;font-weight:normal;font-style:normal;}
+.M{margin:0px 0px 5px 0px;text-indent:0px;text-align:left;color:#000000;font-family:sans-serif;font-size:10pt;font-weight:normal;font-style:normal;}
+.N{color:#0000ff;}
+.O{font-weight:bold;}
+.P{color:#800000;}
+.Q{border-collapse:collapse;table-layout:auto;border: 2px solid #808080;}
+.R{padding: 3px 5px 3px 5px;border-left: 1px solid #808080;border-top: 1px solid #808080;border-right: 1px solid #808080;border-bottom: 1px solid #808080;background-color:#C0C0C0;vertical-align:middle;}
+.S{color:#800000;font-weight:bold;}
+.T{font-weight:bold;font-style:italic;}
+a.l1         { text-decoration:none; font-size: 8pt; font-family: sans-serif; font-weight: normal; }
+a.l1:link    { color:#000000; }
+a.l1:visited { color:#000080; }
+a.l1:hover   { color:#9933CC; }
+a.l1:active  { color:#000000; }
+a.l2         { text-decoration:none; font-size: 12pt; font-family: sans-serif; font-variant: small-caps; }
+a.l2:link    { color:#0066FF; }
+a.l2:visited { color:#FF6600; }
+a.l2:hover   { color:#BC0624; }
+a.l2:active  { color:#BC0024; }
+
+-->
+</STYLE>
+<META NAME="keywords" CONTENT="framework, toolkit, widget, c++, visual, studio, dev-cpp, builder, ide, class, component,wxwidgets, qt, rapid, application, development, rad, mfc, linux, macos, gui, sdl, directx, desktop"><META name="robots" content="index,follow">
+<LINK rel="alternate" type="application/rss+xml" title="SVN changes" href="svnchanges.xml">
+<LINK rel="shortcut icon" type="image/png" href="favicon.png">
+</HEAD><BODY BGCOLOR="#D2D9D2" ALINK="#800000" LINK="#000000" VLINK="#000080"><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%"><TR><TD COLSPAN="3"><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%" BGCOLOR="#FFFFFF" style="border: 1px solid #6E89AE;padding-left: 10px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;"><TR><TD><A HREF="index.html"><IMG SRC="0i.png" ALT="" BORDER="0"></A>
+</TD>
+<TD ALIGN="RIGHT" VALIGN="BOTTOM" STYLE="padding-bottom: 5px; background-image: url('1i.png')"><span style="font-size: 14pt; font-family: sans-serif;"><script type="text/javascript"><!--
+google_ad_client = "pub-1082147624384270";
+google_ad_width = 468;
+google_ad_height = 60;
+google_ad_format = "468x60_as";
+google_ad_type = "text_image";
+google_ad_channel = "";
+google_color_border = "336699";
+google_color_bg = "FFFFFF";
+google_color_link = "0000FF";
+google_color_text = "000000";
+google_color_url = "008000";
+//--></script>
+<script type="text/javascript"
+  src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+&nbsp;&nbsp;</span>
+</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>
+<TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%"><TR><TD COLSPAN="3" BGCOLOR="#D2D9D2" HEIGHT="6"></TD>
+</TR>
+<TR><TD VALIGN="TOP" ALIGN="CENTER"><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="160"><TR><TD ALIGN="CENTER"><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%" BGCOLOR="#FFFFFF" style="border-style: solid; border-width: 1px; border-color: #6E89AE;padding: 0px"><TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px;"><A HREF="www$uppweb$overview$en-us.html" CLASS="l1">Overview</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$examples$en-us.html" CLASS="l1">Examples</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$ss$en-us.html" CLASS="l1">Screenshots</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$comparison$en-us.html" CLASS="l1">Comparisons</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$apps$en-us.html" CLASS="l1">Applications</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$download$en-us.html" CLASS="l1">Download</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$documentation$en-us.html" CLASS="l1">Documentation</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$Tutorials$en-us.html" CLASS="l1">Tutorials</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="app$ide$UppHub$en-us.html" CLASS="l1">UppHub</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$Roadmap$en-us.html" CLASS="l1">Status & Roadmap</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$FAQ$en-us.html" CLASS="l1">FAQ</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="app$ide$About$en-us.html" CLASS="l1">Authors & License</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="https://www.ultimatepp.org/forums" CLASS="l1">Forums</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$Funding$en-us.html" CLASS="l1">Funding U++</A>
+</TD>
+</TR>
+</TABLE>
+<TABLE BORDER="0" WIDTH="100%"><TR><TD></TD>
+</TR>
+</TABLE>
+<TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%" BGCOLOR="#FFFFFF" style="border-style: solid; border-width: 1px; border-color: #6E89AE;padding: 0px"><TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('3i.png'); border: 0px solid black;padding-left:12px; padding-right:0px; padding-top:1px; padding-bottom:1px;color:#FFFFFF;"><B><span style="font-size: 8pt; font-family: sans-serif;">Search on this site</span>
+</B>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:6px; padding-right:0px; padding-top:4px; padding-bottom:4px;border-top: 1px solid #6E89AE;"><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%"><TR><TD><IMG SRC="4i.png" ALT="" BORDER="0"></TD>
+<TD><FORM ACTION="https://www.google.com/search" METHOD="GET" STYLE="margin:0px;padding:0px;"><INPUT TYPE="HIDDEN" NAME="ie" VALUE="UTF-8"><INPUT TYPE="HIDDEN" NAME="oe" VALUE="UTF-8"><INPUT TYPE="TEXT" NAME="q" SIZE="15" MAXLENGTH="256" placeholder="Site search"><INPUT TYPE="HIDDEN" NAME="sitesearch" VALUE="ultimatepp.org"></FORM>
+</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>
+<TABLE BORDER="0" WIDTH="100%"><TR><TD></TD>
+</TR>
+</TABLE>
+<br><div id="fb-root"></div>
+<script type="text/javascript">(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) {return;}
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+<div class="fb-like" data-href="https://www.facebook.com/pages/Upp-Framework/262346610476027?sk=wall" data-send="false" data-layout="button_count" data-width="160" data-show-faces="false" data-font="arial"></div>
+<br><br><script type="text/javascript"><!--
+google_ad_client = "pub-1082147624384270";
+google_ad_width = 160;
+google_ad_height = 600;
+google_ad_format = "160x600_as";
+google_ad_type = "text_image";
+google_ad_channel = "";
+google_color_border = "336699";
+google_color_bg = "FFFFFF";
+google_color_link = "0000FF";
+google_color_text = "000000";
+google_color_url = "008000";
+//--></script>
+<script type="text/javascript"
+  src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script><br><br><script type="text/javascript"><!--
+google_ad_client = "pub-1082147624384270";
+google_ad_width = 160;
+google_ad_height = 90;
+google_ad_format = "160x90_0ads_al_s";
+google_ad_channel = "";
+google_color_border = "336699";
+google_color_bg = "FFFFFF";
+google_color_link = "0000FF";
+google_color_text = "000000";
+google_color_url = "008000";
+//--></script>
+<script type="text/javascript"
+  src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+<br><br><br><br><br><br><A HREF="https://sourceforge.net/projects/upp/"><IMG SRC="https://sourceforge.net/sflogo.php?group_id=93970&amp;type=2" ALT="SourceForge.net Logo" BORDER="0" WIDTH="125" HEIGHT="37"></A>
+<br><br><A HREF="https://flathub.org/en/apps/org.ultimatepp.TheIDE"><IMG SRC="5i.png" ALT="SourceForge.net Logo" BORDER="0" WIDTH="125" HEIGHT="37"></A>
+<br><br><div style="background-color:#ffffff;width:125;height:35"><A HREF="https://github.com/ultimatepp"><IMG SRC="6i.png" ALT="GitHub Logo" BORDER="0" WIDTH="125" HEIGHT="35"></A>
+</div><br><div style="background-color:#ffffff;width:125;height:35"><div style="height:5"></div><A HREF="https://discord.gg/8XzqQzXZzb"><IMG SRC="https://assets-global.website-files.com/6257adef93867e50d84d30e2/636e0b5061df29d55a92d945_full_logo_blurple_RGB.svg" ALT="Discord Logo" BORDER="0" WIDTH="125" HEIGHT="25"></A>
+</div><br></TD>
+</TR>
+</TABLE>
+</TD>
+<TD VALIGN="TOP" BGCOLOR="#D2D9D2"><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="6"><TR><TD></TD>
+</TR>
+</TABLE>
+</TD>
+<TD VALIGN="TOP" WIDTH="100%" BGCOLOR="#D2D9D2"><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" BGCOLOR="#FFFFFF" WIDTH="100%" style="border-style: solid; border-width: 1px; border-color: #6E89AE;padding: 10px;;"><TR><TD><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%"><TR><TD><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr><td width="100%"><table width="100%" class="C"><colgroup><col width="100%"></colgroup>
+<tr><td class="D"><p class="E">Character set support</p>
+</td>
+</tr>
+</table></td>
+</tr></table>
+<p class="F">While in ideal world every text resource would be encoded in Unicode or UTF-8, in practice we have to deal with many 8-bit encodings. U++ has <a href="src$Core$CharSet$en-us.html#AddCharSet(const char*,const word*,byte)">extensible</a> support for various encoding (charsets). It directly defines following constants to express charset (names are self-explanatory):</p>
+<p class="A">&nbsp;</p>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr><td width="100%"><table width="100%" class="G"><colgroup><col width="33%"><col width="33%"><col width="33%"></colgroup>
+<tr><td class="H"><p class="I">CHARSET_ISO8859_1</p>
+<p class="I">CHARSET_ISO8859_2</p>
+<p class="I">CHARSET_ISO8859_3</p>
+<p class="I">CHARSET_ISO8859_4</p>
+<p class="I">CHARSET_ISO8859_5</p>
+<p class="I">CHARSET_ISO8859_6</p>
+<p class="I">CHARSET_ISO8859_7</p>
+<p class="I">CHARSET_ISO8859_8</p>
+<p class="I">CHARSET_ISO8859_9</p>
+</td>
+<td class="H"><p class="I">CHARSET_ISO8859_10</p>
+<p class="I">CHARSET_ISO8859_13</p>
+<p class="I">CHARSET_ISO8859_14</p>
+<p class="I">CHARSET_ISO8859_15</p>
+<p class="I">CHARSET_ISO8859_16</p>
+<p class="I">CHARSET_WIN1250</p>
+<p class="I">CHARSET_WIN1251</p>
+<p class="I">CHARSET_WIN1252</p>
+<p class="I">CHARSET_WIN1253</p>
+</td>
+<td class="H"><p class="I">CHARSET_WIN1254</p>
+<p class="I">CHARSET_WIN1255</p>
+<p class="I">CHARSET_WIN1256</p>
+<p class="I">CHARSET_WIN1257</p>
+<p class="I">CHARSET_WIN1258</p>
+<p class="I">CHARSET_KOI8_R</p>
+<p class="I">CHARSET_CP852</p>
+<p class="I">CHARSET_MJK</p>
+<p class="I">CHARSET_CP850</p>
+</td>
+</tr>
+</table></td>
+</tr></table>
+<p class="F">There are also some special charset values</p>
+<p class="A">&nbsp;</p>
+<p id="CHARSET_DEFAULT" class="J">CHARSET_DEFAULT</p>
+<p class="K">Represents &quot;default&quot; charset. Default charset can be set using SetDefaultCharset and used instead &quot;real&quot; charset in most charset-related operations (and is usually used as default value of parameter). Guaranteed to be equal to 0.</p>
+<p class="L">&nbsp;</p>
+<hr><p class="L">&nbsp;</p>
+<p id="CHARSET_TOASCII" class="J">CHARSET_TOASCII</p>
+<p class="K">This charset, used in charset conversion</p>
+<p class="L">&nbsp;</p>
+<hr><p class="L">&nbsp;</p>
+<p id="CHARSET_UTF8" class="J">CHARSET_UTF8</p>
+<p class="K">UTF-8 encoding.</p>
+<p class="L">&nbsp;</p>
+<hr><p class="L">&nbsp;</p>
+<p id="DEFAULTCHAR" class="M"><span class="N">enum</span>&nbsp;<span class="O">DEFAULTCHAR</span>&nbsp;=&nbsp;<span class="P">0</span>x1f&nbsp;</p>
+<p class="K">This special value is used as result of conversion in place of characters that do not exist in target charset.</p>
+<p class="L">&nbsp;</p>
+<p class="A">&nbsp;</p>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr><td width="100%"><table width="100%" class="Q"><colgroup><col width="100%"></colgroup>
+<tr><td class="R"><p class="I">Function List</p>
+</td>
+</tr>
+</table></td>
+</tr></table>
+<p class="L">&nbsp;</p>
+<p id="GetDefaultCharset()" class="M"><a href="byte"><u>byte</u></a>&nbsp;<span class="O">GetDefaultCharset</span>()</p>
+<p class="K">Returns the current default charset.</p>
+<p class="L">&nbsp;</p>
+<hr><p class="L">&nbsp;</p>
+<p id="SetDefaultCharset(byte)" class="M"><span class="N">void</span>&nbsp;<span class="O">SetDefaultCharset</span>(<a href="byte"><u>byte</u></a>&nbsp;<span class="S">charset</span>)</p>
+<p class="K">Sets the default <span class="S">charset</span>. This is to support legacy application; new applications should always use UTF8.</p>
+<p class="L">&nbsp;</p>
+<hr><p class="L">&nbsp;</p>
+<p id="ResolveCharset(byte)" class="M"><a href="byte"><u>byte</u></a>&nbsp;<span class="O">ResolveCharset</span>(<a href="byte"><u>byte</u></a>&nbsp;<span class="S">charset</span>)</p>
+<p class="K">If <span class="S">charset</span>.is DEFAULT_CHARSET, returns GetDefaultCharset(), otherwise returns <span class="S">charset</span>.</p>
+<p class="L">&nbsp;</p>
+<hr><p class="L">&nbsp;</p>
+<p id="AddCharSet(const char*,const word*,byte)" class="M"><a href="byte"><u>byte</u></a>&nbsp;<span class="O">AddCharSet</span>(<span class="N">const</span>&nbsp;<span class="N">char</span>&nbsp;*<span class="S">name</span>, <span class="N">const</span>&nbsp;<a href="word"><u>word</u></a>&nbsp;*<span class="S">table</span>, <a href="byte"><u>byte</u></a>&nbsp;<span class="S">systemcharset</span>&nbsp;=&nbsp;CHARSET_DEFAULT)</p>
+<p class="K">Adds a new charset named <span class="S">name</span>. <span class="S">table</span> must point to 128 elements and contains UNICODE code-points for character values 128-255. Character codes that are not defined in UNICODE or in new charset should be set to CUNDEF. <span class="S">systemcharset </span>can contain equivalent &quot;typical&quot; charset of host platform as optional auxiliary information. Returns a code for the new charset. <span class="S">table</span> must exist till the end of program (only pointer to it is stored).</p>
+<p class="L">&nbsp;</p>
+<hr><p class="L">&nbsp;</p>
+<p id="AddCharSetE(const char*,word*,byte)" class="M"><a href="byte"><u>byte</u></a>&nbsp;<span class="O">AddCharSetE</span>(<span class="N">const</span>&nbsp;<span class="N">char</span>&nbsp;*<span class="S">name</span>, <a href="word"><u>word</u></a>&nbsp;*<span class="S">table</span>, <a href="byte"><u>byte</u></a>&nbsp;<span class="S">systemcharset</span>&nbsp;=&nbsp;CHARSET_DEFAULT)</p>
+<p class="K">This is similar to <a href="src$Core$CharSet$en-us.html#AddCharSet(const char*,const word*,byte)">AddCharSet</a>, but any CUNDEF values in <span class="S">table</span> are replaced in characters in special private range 0xee00-0xeeff. U++ uses this area as &quot;unicode error escape&quot;, mapping there makes possible to loss-lessly convert to unicode and back even if some characters do not have assigned code-points. <span class="S">table</span> must exist till the end of program (only pointer to it is stored).</p>
+<p class="L">&nbsp;</p>
+<hr><p class="L">&nbsp;</p>
+<p id="CharsetName(byte)" class="M"><span class="N">const</span>&nbsp;<span class="N">char</span>&nbsp;*<span class="O">CharsetName</span>(<a href="byte"><u>byte</u></a>&nbsp;<span class="S">charset</span>)</p>
+<p class="K">Returns the name of <span class="S">charset </span>code.</p>
+<p class="L">&nbsp;</p>
+<hr><p class="L">&nbsp;</p>
+<p id="CharsetCount()" class="M"><span class="N">int</span>&nbsp;<span class="O">CharsetCount</span>()</p>
+<p class="K">Returns the total count of charset (UTF-8 excluded). It is guaranteed that charset code numeric value for &quot;real&quot; charset is in range 1...CharsetCount().</p>
+<p class="L">&nbsp;</p>
+<hr><p class="L">&nbsp;</p>
+<p id="CharsetByName(const char*)" class="M"><span class="N">int</span>&nbsp;<span class="O">CharsetByName</span>(<span class="N">const</span>&nbsp;<span class="N">char</span>&nbsp;*<span class="S">name</span>)</p>
+<p class="K">Tries to find charset code by <span class="S">name</span>. Comparison is case insensitive and ignores any characters other that digits and alphas. If charset is not identified, returns 0 (which is the same as CHARSET_DEFAULT).</p>
+<p class="L">&nbsp;</p>
+<hr><p class="L">&nbsp;</p>
+<p id="SystemCharset(byte)" class="M"><a href="byte"><u>byte</u></a>&nbsp;<span class="O">SystemCharset</span>(<a href="byte"><u>byte</u></a>&nbsp;<span class="S">charset</span>)</p>
+<p class="K">Attempt to retrieve host platform typical charset for <span class="S">charset</span>. If unsuccessful, returns 0.</p>
+<p class="L">&nbsp;</p>
+<hr><p class="L">&nbsp;</p>
+<p id="ToUnicode(int,byte)" class="M"><span class="N">int</span>&nbsp;<span class="O">ToUnicode</span>(<span class="N">int</span>&nbsp;<span class="S">chr</span>, <a href="byte"><u>byte</u></a>&nbsp;<span class="S">charset</span>)</p>
+<p class="K">Convert 8-bit encoded character to unicode. <span class="S">charset </span>cannot be CHARSET_UTF8.</p>
+<p class="L">&nbsp;</p>
+<hr><p class="L">&nbsp;</p>
+<p id="FromUnicode(wchar,byte,int)" class="M"><span class="N">int</span>&nbsp;<span class="O">FromUnicode</span>(<a href="wchar"><u>wchar</u></a>&nbsp;<span class="S">wchr</span>, <a href="byte"><u>byte</u></a>&nbsp;<span class="S">charset</span>, <span class="N">int</span>&nbsp;<span class="S">defchar</span>&nbsp;=&nbsp;DEFAULTCHAR)</p>
+<p class="K">Converts unicode character to 8-bit encoding. If codepoint does not exist in given <span class="S">charset</span>, returns <span class="S">defchar</span>. <span class="S">charset </span>cannot be CHARSET_UTF8.</p>
+<p class="L">&nbsp;</p>
+<hr><p class="L">&nbsp;</p>
+<p id="ToUnicode(wchar*,const char*,int,byte)" class="M"><span class="N">void</span>&nbsp;<span class="O">ToUnicode</span>(<a href="wchar"><u>wchar</u></a>&nbsp;*<span class="S">ws</span>, <span class="N">const</span>&nbsp;<span class="N">char</span>&nbsp;*<span class="S">s</span>, <span class="N">int</span>&nbsp;<span class="S">n</span>, <a href="byte"><u>byte</u></a>&nbsp;<span class="S">charset</span>)</p>
+<p class="K">Converts an array of 8-bit characters to UNICODE. Both arrays, <span class="S">ws</span> and <span class="S">s</span>, must have (at least) <span class="S">n</span> elements. <span class="S">charset </span>cannot be CHARSET_UTF8.</p>
+<p class="L">&nbsp;</p>
+<hr><p class="L">&nbsp;</p>
+<p id="FromUnicode(char*,const wchar*,int,byte,int)" class="M"><span class="N">void</span>&nbsp;<span class="O">FromUnicode</span>(<span class="N">char</span>&nbsp;*<span class="S">s</span>, <span class="N">const</span>&nbsp;<a href="wchar"><u>wchar</u></a>&nbsp;*<span class="S">ws</span>, <span class="N">int</span>&nbsp;<span class="S">n</span>, <a href="byte"><u>byte</u></a>&nbsp;<span class="S">charset</span>, <span class="N">int</span>&nbsp;<span class="S">defchar</span>&nbsp;=&nbsp;DEFAULTCHAR)</p>
+<p class="K">Converts an array of 8-bit characters to UNICODE. Both arrays, <span class="S">ws</span> and <span class="S">s</span>, must have (at least) <span class="S">n</span> elements. <span class="S">charset </span>cannot be CHARSET_UTF8.</p>
+<p class="L">&nbsp;</p>
+<hr><p class="L">&nbsp;</p>
+<p id="ConvertCharset(char*,byte,const char*,byte,int)" class="M"><span class="N">void</span>&nbsp;<span class="O">ConvertCharset</span>(<span class="N">char</span>&nbsp;*<span class="S">t</span>, <a href="byte"><u>byte</u></a>&nbsp;<span class="S">tcharset</span>, <span class="N">const</span>&nbsp;<span class="N">char</span>&nbsp;*<span class="S">s</span>, <a href="byte"><u>byte</u></a>&nbsp;<span class="S">scharset</span>, <span class="N">int</span>&nbsp;<span class="S">n</span>)</p>
+<p class="K">Converts an array of 8-bit characters <span class="S">s</span> with encoding <span class="S">scharset</span> to another 8-bit array with encoding <span class="S">tcharset</span>. Both arrays must have (at least) <span class="S">n</span> elements. Neither <span class="S">tcharset</span> or<span class="S"> scharset </span>can be CHARSET_UTF8.</p>
+<p class="L">&nbsp;</p>
+<hr><p class="L">&nbsp;</p>
+<p id="ToUnicode(const String&,byte)" class="M"><a href="WString"><u>WString</u></a>&nbsp;<span class="O">ToUnicode</span>(<span class="N">const</span>&nbsp;<a href="String"><u>String</u></a><span class="N">&amp;</span>&nbsp;<span class="S">src</span>, <a href="byte"><u>byte</u></a>&nbsp;<span class="S">charset</span>)</p>
+<p class="K">Converts <span class="S">src</span> encoded in <span class="S">charset</span> to UNICODE. <span class="S">charset</span> <span class="T">can</span> be CHARSET_UTF8. Invalid bytes are error-escaped using 0xEExx private range.</p>
+<p class="L">&nbsp;</p>
+<hr><p class="L">&nbsp;</p>
+<p id="ToUnicode(const char*,int,byte)" class="M"><a href="WString"><u>WString</u></a>&nbsp;<span class="O">ToUnicode</span>(<span class="N">const</span>&nbsp;<span class="N">char</span>&nbsp;*<span class="S">src</span>, <span class="N">int</span>&nbsp;<span class="S">n</span>, <a href="byte"><u>byte</u></a>&nbsp;<span class="S">charset</span>)</p>
+<p class="K">Converts <span class="S">n</span> characters starting at <span class="S">src</span> encoded in <span class="S">charset</span> to UNICODE. <span class="S">charset</span> <span class="T">can</span> be CHARSET_UTF8. Invalid bytes are error-escaped using 0xEExx private range.</p>
+<p class="L">&nbsp;</p>
+<hr><p class="L">&nbsp;</p>
+<p id="FromUnicodeBuffer(const wchar*,int,byte,int)" class="M"><a href="String"><u>String</u></a>&nbsp;<span class="O">FromUnicodeBuffer</span>(<span class="N">const</span>&nbsp;<a href="wchar"><u>wchar</u></a>&nbsp;*<span class="S">src</span>, <span class="N">int</span>&nbsp;<span class="S">len</span>, <a href="byte"><u>byte</u></a>&nbsp;<span class="S">charset</span>&nbsp;=&nbsp;CHARSET_DEFAULT, <span class="N">int</span>&nbsp;<span class="S">defchar</span>&nbsp;=&nbsp;DEFAULTCHAR)</p>
+<p class="K">Converts <span class="S">len</span> UNICODE characters from <span class="S">src</span> to 8-bit encoding <span class="S">charset</span>. <span class="S">charset</span> <span class="T">can</span> be CHARSET_UTF8. Error-escape characters 0xEExx are converted to xx bytes. If code-point does not exist in target encoding, <span class="S">defchar </span>is used as result of conversion.</p>
+<p class="L">&nbsp;</p>
+<hr><p class="L">&nbsp;</p>
+<p id="Upp::FromUnicodeBuffer(const Upp::wchar*)" class="M"><a href="Upp::String"><u>String</u></a>&nbsp;<span class="O">FromUnicodeBuffer</span>(<span class="N">const</span>&nbsp;<a href="Upp::wchar"><u>wchar</u></a>&nbsp;*<span class="S">src</span>)</p>
+<p class="K">Same as FromUnicodeBuffer(<span class="S">src</span> , wstrlen(<span class="S">src</span>)).</p>
+<p class="L">&nbsp;</p>
+<hr><p class="L">&nbsp;</p>
+<p id="FromUnicode(const WString&,byte,int)" class="M"><a href="String"><u>String</u></a>&nbsp;<span class="O">FromUnicode</span>(<span class="N">const</span>&nbsp;<a href="WString"><u>WString</u></a><span class="N">&amp;</span>&nbsp;<span class="S">src</span>, <a href="byte"><u>byte</u></a>&nbsp;<span class="S">charset</span>&nbsp;=&nbsp;CHARSET_DEFAULT, <span class="N">int</span>&nbsp;<span class="S">defchar</span>&nbsp;=&nbsp;DEFAULTCHAR)</p>
+<p class="K">Converts UNICODE <span class="S">src</span> to 8-bit encoding <span class="S">charset</span>. <span class="S">charset</span> <span class="T">can</span> be CHARSET_UTF8. Error-escape characters 0xEExx are converted to xx bytes. If code-point does not exist in target encoding, <span class="S">defchar </span>is used as result of conversion.</p>
+<p class="L">&nbsp;</p>
+<hr><p class="L">&nbsp;</p>
+<p id="ToCharset(byte,const String&,byte,int)" class="M"><a href="String"><u>String</u></a>&nbsp;<span class="O">ToCharset</span>(<a href="byte"><u>byte</u></a>&nbsp;<span class="S">charset</span>, <span class="N">const</span>&nbsp;<a href="String"><u>String</u></a><span class="N">&amp;</span>&nbsp;<span class="S">s</span>, <a href="byte"><u>byte</u></a>&nbsp;<span class="S">scharset</span>&nbsp;=&nbsp;CHARSET_DEFAULT, <span class="N">int</span>&nbsp;<span class="S">defchar</span>&nbsp;=&nbsp;DEFAULTCHAR)</p>
+<p class="K">Converts <span class="S">src</span> encoded in <span class="S">scharset</span> to <span class="S">charset</span>. <span class="S">charset</span> <span class="T">can</span> be CHARSET_UTF8. Error-escape characters can be used if one of charsets is CHARSET_UTF8. If code-point does not exist in target encoding, <span class="S">defchar </span>is used as result of conversion.</p>
+<p class="L">&nbsp;</p>
+<hr><p class="L">&nbsp;</p>
+<p id="IsLetter(int)" class="M"><span class="N">bool</span>&nbsp;<span class="O">IsLetter</span>(<span class="N">int</span>&nbsp;<span class="S">c</span>)</p>
+<p class="K">Returns true if <span class="S">c</span> &lt; 2048 and it represents a letter.</p>
+<p class="L">&nbsp;</p>
+<hr><p class="L">&nbsp;</p>
+<p id="IsUpper(int)" class="M"><span class="N">bool</span>&nbsp;<span class="O">IsUpper</span>(<span class="N">int</span>&nbsp;<span class="S">c</span>)</p>
+<p class="K">Returns true if <span class="S">c</span> &lt; 2048 and it is upper-case UNICODE code-point.</p>
+<p class="L">&nbsp;</p>
+<hr><p class="L">&nbsp;</p>
+<p id="IsLower(int)" class="M"><span class="N">bool</span>&nbsp;<span class="O">IsLower</span>(<span class="N">int</span>&nbsp;<span class="S">c</span>)</p>
+<p class="K">Returns true if <span class="S">c</span> &lt; 2048 and it is lower-case UNICODE code-point.</p>
+<p class="L">&nbsp;</p>
+<hr><p class="L">&nbsp;</p>
+<p id="ToUpper(int)" class="M"><span class="N">int</span>&nbsp;<span class="O">ToUpper</span>(<span class="N">int</span>&nbsp;<span class="S">c</span>)</p>
+<p class="K">If <span class="S">c</span> &lt; 2048 and it is lower-case, returns respective UNICODE upper-case character, otherwise returns <span class="S">c</span>.</p>
+<p class="L">&nbsp;</p>
+<hr><p class="L">&nbsp;</p>
+<p id="ToLower(int)" class="M"><span class="N">int</span>&nbsp;<span class="O">ToLower</span>(<span class="N">int</span>&nbsp;<span class="S">c</span>)</p>
+<p class="K">If <span class="S">c</span> &lt; 2048 and it is upper-case, returns respective UNICODE lower-case character, otherwise returns <span class="S">c</span>.</p>
+<p class="L">&nbsp;</p>
+<hr><p class="L">&nbsp;</p>
+<p id="ToAscii(int)" class="M"><span class="N">int</span>&nbsp;<span class="O">ToAscii</span>(<span class="N">int</span>&nbsp;<span class="S">c</span>)</p>
+<p class="K">Returns UNICODE <span class="S">c</span> 'converted' to basic ASCII. Conversion is performed by removing any diacritical marks. If such conversion is not possible, returns 32 (space).</p>
+<p class="L">&nbsp;</p>
+<hr><p class="L">&nbsp;</p>
+<p id="Upp::ToUpperAscii(int)" class="M"><span class="N">char</span>&nbsp;<span class="O">ToUpperAscii</span>(<span class="N">int</span>&nbsp;<span class="S">c</span>)</p>
+<p class="K">Same as ToUpper(ToAscii(<span class="S">c</span>) (but faster).</p>
+<p class="L">&nbsp;</p>
+<hr><p class="L">&nbsp;</p>
+<p id="Upp::ToLowerAscii(int)" class="M"><span class="N">char</span>&nbsp;<span class="O">ToLowerAscii</span>(<span class="N">int</span>&nbsp;<span class="S">c</span>)</p>
+<p class="K">Same as ToLower(ToAscii(<span class="S">c</span>) (but faster).</p>
+<p class="L">&nbsp;</p>
+<hr><p class="L">&nbsp;</p>
+<p id="IsLetter(char)" class="M"><span class="N">bool</span>&nbsp;<span class="O">IsLetter</span>(<span class="N">char</span>&nbsp;<span class="S">c</span>)</p>
+<p id="IsLetter(signed char)" class="M"><span class="N">bool</span>&nbsp;<span class="O">IsLetter</span>(<span class="N">signed</span>&nbsp;<span class="N">char</span>&nbsp;<span class="S">c</span>)</p>
+<p class="K">Returns <a href="src$Core$CharSet$en-us.html#IsLetter(int)">IsLetter</a>((byte)<span class="S">c</span>).</p>
+<p class="L">&nbsp;</p>
+<hr><p class="L">&nbsp;</p>
+<p id="IsUpper(char)" class="M"><span class="N">bool</span>&nbsp;<span class="O">IsUpper</span>(<span class="N">char</span>&nbsp;<span class="S">c</span>)</p>
+<p id="IsUpper(signed char)" class="M"><span class="N">bool</span>&nbsp;<span class="O">IsUpper</span>(<span class="N">signed</span>&nbsp;<span class="N">char</span>&nbsp;<span class="S">c</span>)</p>
+<p class="K">Returns <a href="src$Core$CharSet$en-us.html#IsUpper(int)">IsUpper</a>((byte)<span class="S">c</span>).</p>
+<p class="L">&nbsp;</p>
+<hr><p class="L">&nbsp;</p>
+<p id="IsLower(char)" class="M"><span class="N">bool</span>&nbsp;<span class="O">IsLower</span>(<span class="N">char</span>&nbsp;<span class="S">c</span>)</p>
+<p id="IsLower(signed char)" class="M"><span class="N">bool</span>&nbsp;<span class="O">IsLower</span>(<span class="N">signed</span>&nbsp;<span class="N">char</span>&nbsp;<span class="S">c</span>)</p>
+<p class="K">Returns <a href="src$Core$CharSet$en-us.html#IsLower(int)">IsLower</a>((byte)<span class="S">c</span>).</p>
+<p class="L">&nbsp;</p>
+<hr><p class="L">&nbsp;</p>
+<p id="ToUpper(char)" class="M"><span class="N">int</span>&nbsp;<span class="O">ToUpper</span>(<span class="N">char</span>&nbsp;<span class="S">c</span>)</p>
+<p id="ToUpper(signed char)" class="M"><span class="N">int</span>&nbsp;<span class="O">ToUpper</span>(<span class="N">signed</span>&nbsp;<span class="N">char</span>&nbsp;<span class="S">c</span>)</p>
+<p class="K">Returns <a href="src$Core$CharSet$en-us.html#ToUpper(int)">ToUpper</a>((byte)<span class="S">c</span>).</p>
+<p class="L">&nbsp;</p>
+<hr><p class="L">&nbsp;</p>
+<p id="ToLower(char)" class="M"><span class="N">int</span>&nbsp;<span class="O">ToLower</span>(<span class="N">char</span>&nbsp;<span class="S">c</span>)</p>
+<p id="ToLower(signed char)" class="M"><span class="N">int</span>&nbsp;<span class="O">ToLower</span>(<span class="N">signed</span>&nbsp;<span class="N">char</span>&nbsp;<span class="S">c</span>)</p>
+<p class="K">Returns <a href="src$Core$CharSet$en-us.html#ToLower(int)">ToLower</a>((byte)<span class="S">c</span>).</p>
+<p class="L">&nbsp;</p>
+<hr><p class="L">&nbsp;</p>
+<p id="ToAscii(char)" class="M"><span class="N">int</span>&nbsp;<span class="O">ToAscii</span>(<span class="N">char</span>&nbsp;<span class="S">c</span>)</p>
+<p id="ToAscii(signed char)" class="M"><span class="N">int</span>&nbsp;<span class="O">ToAscii</span>(<span class="N">signed</span>&nbsp;<span class="N">char</span>&nbsp;<span class="S">c</span>)</p>
+<p class="K">Returns <a href="src$Core$CharSet$en-us.html#ToAscii(int)">ToAscii</a>((byte)<span class="S">c</span>).</p>
+<p class="L">&nbsp;</p>
+<hr><p class="L">&nbsp;</p>
+<p id="Upp::ToUpperAscii(signed char)" class="M"><span class="N">char</span>&nbsp;<span class="O">ToUpperAscii</span>(<span class="N">signed</span>&nbsp;<span class="N">char</span>&nbsp;<span class="S">c</span>)</p>
+<p class="K">Same as ToUpper(ToAscii(<span class="S">c</span>)).</p>
+<p class="L">&nbsp;</p>
+<hr><p class="L">&nbsp;</p>
+<p id="Upp::ToLowerAscii(signed char)" class="M"><span class="N">char</span>&nbsp;<span class="O">ToLowerAscii</span>(<span class="N">signed</span>&nbsp;<span class="N">char</span>&nbsp;<span class="S">c</span>)</p>
+<p class="K">Same as ToLower(ToAscii(<span class="S">c</span>)).</p>
+<p class="L">&nbsp;</p>
+<hr><p class="L">&nbsp;</p>
+<p id="Upp::ToUpperAscii(char)" class="M"><span class="N">char</span>&nbsp;<span class="O">ToUpperAscii</span>(<span class="N">char</span>&nbsp;<span class="S">c</span>)</p>
+<p class="K">Same as ToUpper(ToAscii(<span class="S">c</span>)).</p>
+<p class="L">&nbsp;</p>
+<hr><p class="L">&nbsp;</p>
+<p id="Upp::ToLowerAscii(char)" class="M"><span class="N">char</span>&nbsp;<span class="O">ToLowerAscii</span>(<span class="N">char</span>&nbsp;<span class="S">c</span>)</p>
+<p class="K">Same as ToLower(ToAscii(<span class="S">c</span>)).</p>
+<p class="L">&nbsp;</p>
+<hr><p class="L">&nbsp;</p>
+<p id="IsLetter(wchar)" class="M"><span class="N">bool</span>&nbsp;<span class="O">IsLetter</span>(<a href="wchar"><u>wchar</u></a>&nbsp;<span class="S">c</span>)</p>
+<p class="K">Returns <a href="src$Core$CharSet$en-us.html#IsLetter(int)">IsLetter</a>(<span class="S">c</span>).</p>
+<p class="L">&nbsp;</p>
+<hr><p class="L">&nbsp;</p>
+<p id="IsUpper(wchar)" class="M"><span class="N">bool</span>&nbsp;<span class="O">IsUpper</span>(<a href="wchar"><u>wchar</u></a>&nbsp;<span class="S">c</span>)</p>
+<p class="K">Returns <a href="src$Core$CharSet$en-us.html#IsUpper(int)">IsUpper</a>(<span class="S">c</span>).</p>
+<p class="L">&nbsp;</p>
+<hr><p class="L">&nbsp;</p>
+<p id="IsLower(wchar)" class="M"><span class="N">bool</span>&nbsp;<span class="O">IsLower</span>(<a href="wchar"><u>wchar</u></a>&nbsp;<span class="S">c</span>)</p>
+<p class="K">Returns <a href="src$Core$CharSet$en-us.html#IsLower(int)">IsLower</a>(<span class="S">c</span>).</p>
+<p class="L">&nbsp;</p>
+<hr><p class="L">&nbsp;</p>
+<p id="ToUpper(wchar)" class="M"><span class="N">int</span>&nbsp;<span class="O">ToUpper</span>(<a href="wchar"><u>wchar</u></a>&nbsp;<span class="S">c</span>)</p>
+<p class="K">Returns <a href="src$Core$CharSet$en-us.html#ToUpper(int)">ToUpper</a>(<span class="S">c</span>).</p>
+<p class="L">&nbsp;</p>
+<hr><p class="L">&nbsp;</p>
+<p id="ToLower(wchar)" class="M"><span class="N">int</span>&nbsp;<span class="O">ToLower</span>(<a href="wchar"><u>wchar</u></a>&nbsp;<span class="S">c</span>)</p>
+<p class="K">Returns <a href="src$Core$CharSet$en-us.html#ToLower(int)">ToLower</a>(<span class="S">c</span>).</p>
+<p class="L">&nbsp;</p>
+<hr><p class="L">&nbsp;</p>
+<p id="ToAscii(wchar)" class="M"><span class="N">int</span>&nbsp;<span class="O">ToAscii</span>(<a href="wchar"><u>wchar</u></a>&nbsp;<span class="S">c</span>)</p>
+<p class="K">Returns <a href="src$Core$CharSet$en-us.html#ToAscii(int)">ToAscii</a>(<span class="S">c</span>).</p>
+<p class="L">&nbsp;</p>
+<hr><p class="L">&nbsp;</p>
+<p id="Upp::ToUpperAscii(Upp::wchar)" class="M"><span class="N">char</span>&nbsp;<span class="O">ToUpperAscii</span>(<a href="Upp::wchar"><u>wchar</u></a>&nbsp;<span class="S">c</span>)</p>
+<p class="K">Same as ToUpper(ToAscii(<span class="S">c</span>)).</p>
+<p class="L">&nbsp;</p>
+<hr><p class="L">&nbsp;</p>
+<p id="Upp::ToLowerAscii(Upp::wchar)" class="M"><span class="N">char</span>&nbsp;<span class="O">ToLowerAscii</span>(<a href="Upp::wchar"><u>wchar</u></a>&nbsp;<span class="S">c</span>)</p>
+<p class="K">Same as ToLower(ToAscii(<span class="S">c</span>)).</p>
+<p class="L">&nbsp;</p>
+<hr><p class="L">&nbsp;</p>
+<p id="IsDigit(int)" class="M"><span class="N">bool</span>&nbsp;<span class="O">IsDigit</span>(<span class="N">int</span>&nbsp;<span class="S">c</span>)</p>
+<p class="K">Returns true if <span class="S">c</span> is a digit: <span class="S">c</span> &gt;= '0' &amp;&amp; <span class="S">c</span> &lt;= '9'.</p>
+<p class="L">&nbsp;</p>
+<hr><p class="L">&nbsp;</p>
+<p id="IsAlpha(int)" class="M"><span class="N">bool</span>&nbsp;<span class="O">IsAlpha</span>(<span class="N">int</span>&nbsp;<span class="S">c</span>)</p>
+<p class="K">Returns true if <span class="S">c</span>.is <span class="T">ASCII</span> alphabetic character: <span class="S">c</span> &gt;= 'A' &amp;&amp; <span class="S">c</span> &lt;= 'Z' || <span class="S">c</span> &gt;= 'a' &amp;&amp; <span class="S">c</span> &lt;= 'z'.</p>
+<p class="L">&nbsp;</p>
+<hr><p class="L">&nbsp;</p>
+<p id="IsAlNum(int)" class="M"><span class="N">bool</span>&nbsp;<span class="O">IsAlNum</span>(<span class="N">int</span>&nbsp;<span class="S">c</span>)</p>
+<p class="K">Returns true if <span class="S">c</span>.is either digit or <span class="T">ASCII </span>alphabetic character.</p>
+<p class="L">&nbsp;</p>
+<hr><p class="L">&nbsp;</p>
+<p id="IsLeNum(int)" class="M"><span class="N">bool</span>&nbsp;<span class="O">IsLeNum</span>(<span class="N">int</span>&nbsp;<span class="S">c</span>)</p>
+<p class="K">Returns true if <span class="S">c</span>.is either digit or <span class="T">UNICODE</span> letter &lt; 2048.</p>
+<p class="L">&nbsp;</p>
+<hr><p class="L">&nbsp;</p>
+<p id="IsPunct(int)" class="M"><span class="N">bool</span>&nbsp;<span class="O">IsPunct</span>(<span class="N">int</span>&nbsp;<span class="S">c</span>)</p>
+<p class="K">Returns true if: <span class="S">c</span> != ' ' &amp;&amp; !IsAlNum(<span class="S">c</span>).</p>
+<p class="L">&nbsp;</p>
+<hr><p class="L">&nbsp;</p>
+<p id="IsSpace(int)" class="M"><span class="N">bool</span>&nbsp;<span class="O">IsSpace</span>(<span class="N">int</span>&nbsp;<span class="S">c</span>)</p>
+<p class="K">Returns true <span class="S">c </span>is one of ' ', '\f', '\n', '\r', '\v', '\t'.</p>
+<p class="L">&nbsp;</p>
+<hr><p class="L">&nbsp;</p>
+<p id="IsXDigit(int)" class="M"><span class="N">bool</span>&nbsp;<span class="O">IsXDigit</span>(<span class="N">int</span>&nbsp;<span class="S">c</span>)</p>
+<p class="K">Returns true <span class="S">c</span>.is hexadecimal digit (0-9, a-f, A-F).</p>
+<p class="L">&nbsp;</p>
+<hr><p class="L">&nbsp;</p>
+<p id="Upp::IsDoubleWidth(int)" class="M"><span class="N">bool</span>&nbsp;<span class="O">IsDoubleWidth</span>(<span class="N">int</span>&nbsp;<span class="S">c</span>)</p>
+<p class="K">Returns true if <span class="S">c</span> is a double-width UNICODE character (like CJK ideograph).</p>
+<p class="L">&nbsp;</p>
+<hr><p class="L">&nbsp;</p>
+<p id="Upp::Utf8ToAscii(const Upp::String&)" class="M"><a href="Upp::String"><u>String</u></a>&nbsp;<span class="O">Utf8ToAscii</span>(<span class="N">const</span>&nbsp;<a href="Upp::String"><u>String</u></a><span class="N">&amp;</span>&nbsp;<span class="S">src</span>)</p>
+<p class="K">Returns UTF-8 String 'converted' to basic ASCII. Conversion is performed by removing any diacritical marks. If such conversion is not possible, returns 32 (space).</p>
+<p class="L">&nbsp;</p>
+<hr><p class="L">&nbsp;</p>
+<p id="Upp::Utf8ToUpperAscii(const Upp::String&)" class="M"><a href="Upp::String"><u>String</u></a>&nbsp;<span class="O">Utf8ToUpperAscii</span>(<span class="N">const</span>&nbsp;<a href="Upp::String"><u>String</u></a><span class="N">&amp;</span>&nbsp;<span class="S">src</span>)</p>
+<p class="K">Same as ToUpper(ToAscii(<span class="S">src</span>) but faster.</p>
+<p class="L">&nbsp;</p>
+<hr><p class="L">&nbsp;</p>
+<p id="Upp::Utf8ToLowerAscii(const Upp::String&)" class="M"><a href="Upp::String"><u>String</u></a>&nbsp;<span class="O">Utf8ToLowerAscii</span>(<span class="N">const</span>&nbsp;<a href="Upp::String"><u>String</u></a><span class="N">&amp;</span>&nbsp;<span class="S">src</span>)</p>
+<p class="K">Same as ToLower(ToAscii(<span class="S">src</span>) but faster.</p>
+<p class="L">&nbsp;</p>
+<hr><p class="L">&nbsp;</p>
+<p id="ToUpper(wchar*,const wchar*,int)" class="M"><span class="N">void</span>&nbsp;<span class="O">ToUpper</span>(<a href="wchar"><u>wchar</u></a>&nbsp;*<span class="S">t</span>, <span class="N">const</span>&nbsp;<a href="wchar"><u>wchar</u></a>&nbsp;*<span class="S">s</span>, <span class="N">int</span>&nbsp;<span class="S">len</span>)</p>
+<p class="K">Converts UNICODE array to upper-case.</p>
+<p class="L">&nbsp;</p>
+<hr><p class="L">&nbsp;</p>
+<p id="ToLower(wchar*,const wchar*,int)" class="M"><span class="N">void</span>&nbsp;<span class="O">ToLower</span>(<a href="wchar"><u>wchar</u></a>&nbsp;*<span class="S">t</span>, <span class="N">const</span>&nbsp;<a href="wchar"><u>wchar</u></a>&nbsp;*<span class="S">s</span>, <span class="N">int</span>&nbsp;<span class="S">len</span>)</p>
+<p class="K">Converts UNICODE array to lower-case.</p>
+<p class="L">&nbsp;</p>
+<hr><p class="L">&nbsp;</p>
+<p id="ToAscii(wchar*,const wchar*,int)" class="M"><span class="N">void</span>&nbsp;<span class="O">ToAscii</span>(<a href="wchar"><u>wchar</u></a>&nbsp;*<span class="S">t</span>, <span class="N">const</span>&nbsp;<a href="wchar"><u>wchar</u></a>&nbsp;*<span class="S">s</span>, <span class="N">int</span>&nbsp;<span class="S">len</span>)</p>
+<p class="K">Converts UNICODE array to basic ASCII (see <a href="src$Core$CharSet$en-us.html#ToAscii(int)">ToAscii</a>).</p>
+<p class="L">&nbsp;</p>
+<hr><p class="L">&nbsp;</p>
+<p id="ToUpper(wchar*,int)" class="M"><span class="N">void</span>&nbsp;<span class="O">ToUpper</span>(<a href="wchar"><u>wchar</u></a>&nbsp;*<span class="S">s</span>, <span class="N">int</span>&nbsp;<span class="S">len</span>)</p>
+<p class="K">Converts UNICODE array to upper-case.</p>
+<p class="L">&nbsp;</p>
+<hr><p class="L">&nbsp;</p>
+<p id="ToLower(wchar*,int)" class="M"><span class="N">void</span>&nbsp;<span class="O">ToLower</span>(<a href="wchar"><u>wchar</u></a>&nbsp;*<span class="S">s</span>, <span class="N">int</span>&nbsp;<span class="S">len</span>)</p>
+<p class="K">Converts UNICODE array to lower-case.</p>
+<p class="L">&nbsp;</p>
+<hr><p class="L">&nbsp;</p>
+<p id="ToAscii(wchar*,int)" class="M"><span class="N">void</span>&nbsp;<span class="O">ToAscii</span>(<a href="wchar"><u>wchar</u></a>&nbsp;*<span class="S">s</span>, <span class="N">int</span>&nbsp;<span class="S">len</span>)</p>
+<p class="K">Converts UNICODE array to basic ASCII (see <a href="src$Core$CharSet$en-us.html#ToAscii(int)">ToAscii</a>).</p>
+<p class="L">&nbsp;</p>
+<hr><p class="L">&nbsp;</p>
+<p id="IsLetter(int,byte)" class="M"><span class="N">bool</span>&nbsp;<span class="O">IsLetter</span>(<span class="N">int</span>&nbsp;<span class="S">c</span>, <a href="byte"><u>byte</u></a>&nbsp;<span class="S">charset</span>)</p>
+<p class="K">Returns true if character <span class="S">c</span> encoded using 8-bit <span class="S">charset</span> is letter.</p>
+<p class="L">&nbsp;</p>
+<hr><p class="L">&nbsp;</p>
+<p id="IsUpper(int,byte)" class="M"><span class="N">bool</span>&nbsp;<span class="O">IsUpper</span>(<span class="N">int</span>&nbsp;<span class="S">c</span>, <a href="byte"><u>byte</u></a>&nbsp;<span class="S">charset</span>)</p>
+<p class="K">Returns true if character <span class="S">c</span> encoded using 8-bit <span class="S">charset</span> is upper-case letter.</p>
+<p class="L">&nbsp;</p>
+<hr><p class="L">&nbsp;</p>
+<p id="IsLower(int,byte)" class="M"><span class="N">bool</span>&nbsp;<span class="O">IsLower</span>(<span class="N">int</span>&nbsp;<span class="S">c</span>, <a href="byte"><u>byte</u></a>&nbsp;<span class="S">charset</span>)</p>
+<p class="K">Returns true if character <span class="S">c</span> encoded using 8-bit <span class="S">charset</span> is lower-case letter.</p>
+<p class="L">&nbsp;</p>
+<hr><p class="L">&nbsp;</p>
+<p id="ToUpper(int,byte)" class="M"><span class="N">int</span>&nbsp;<span class="O">ToUpper</span>(<span class="N">int</span>&nbsp;<span class="S">c</span>, <a href="byte"><u>byte</u></a>&nbsp;<span class="S">charset</span>)</p>
+<p class="K">Converts character <span class="S">c</span> encoded using 8-bit charset to upper-case if it is letter, otherwise returns it unchanged.</p>
+<p class="L">&nbsp;</p>
+<hr><p class="L">&nbsp;</p>
+<p id="ToLower(int,byte)" class="M"><span class="N">int</span>&nbsp;<span class="O">ToLower</span>(<span class="N">int</span>&nbsp;<span class="S">c</span>, <a href="byte"><u>byte</u></a>&nbsp;<span class="S">charset</span>)</p>
+<p class="K">Converts character <span class="S">c</span> encoded using 8-bit charset to lower-case if it is letter, otherwise returns it unchanged.</p>
+<p class="L">&nbsp;</p>
+<hr><p class="L">&nbsp;</p>
+<p id="ToAscii(int,byte)" class="M"><span class="N">int</span>&nbsp;<span class="O">ToAscii</span>(<span class="N">int</span>&nbsp;<span class="S">c</span>, <a href="byte"><u>byte</u></a>&nbsp;<span class="S">charset</span>)</p>
+<p class="K">Converts character <span class="S">c</span> encoded using 8-bit charset to basic ASCII character by removing diacritical markings. If <span class="S">c</span> is not letter, returns it unchanged.</p>
+<p class="L">&nbsp;</p>
+<hr><p class="L">&nbsp;</p>
+<p id="ToUpper(char*,const char*,int,byte)" class="M"><span class="N">void</span>&nbsp;<span class="O">ToUpper</span>(<span class="N">char</span>&nbsp;*<span class="S">t</span>, <span class="N">const</span>&nbsp;<span class="N">char</span>&nbsp;*<span class="S">s</span>, <span class="N">int</span>&nbsp;<span class="S">len</span>, <a href="byte"><u>byte</u></a>&nbsp;<span class="S">charset</span>&nbsp;=&nbsp;CHARSET_DEFAULT)</p>
+<p class="K">Converts array <span class="S">s </span>of <span class="S">len</span> characters with encoding <span class="S">charset</span> to upper-case (using <a href="src$Core$CharSet$en-us.html#IsUpper(int,byte)">ToUpper</a>). Stores result to <span class="S">t</span>.</p>
+<p class="L">&nbsp;</p>
+<hr><p class="L">&nbsp;</p>
+<p id="ToLower(char*,const char*,int,byte)" class="M"><span class="N">void</span>&nbsp;<span class="O">ToLower</span>(<span class="N">char</span>&nbsp;*<span class="S">t</span>, <span class="N">const</span>&nbsp;<span class="N">char</span>&nbsp;*<span class="S">s</span>, <span class="N">int</span>&nbsp;<span class="S">len</span>, <a href="byte"><u>byte</u></a>&nbsp;<span class="S">charset</span>&nbsp;=&nbsp;CHARSET_DEFAULT)</p>
+<p class="K">Converts array <span class="S">s </span>of <span class="S">len</span> characters with encoding <span class="S">charset</span> to lower-case (using <a href="src$Core$CharSet$en-us.html#IsLower(int,byte)">ToLower</a>). Stores result to <span class="S">t</span>.</p>
+<p class="L">&nbsp;</p>
+<hr><p class="L">&nbsp;</p>
+<p id="ToAscii(char*,const char*,int,byte)" class="M"><span class="N">void</span>&nbsp;<span class="O">ToAscii</span>(<span class="N">char</span>&nbsp;*<span class="S">t</span>, <span class="N">const</span>&nbsp;<span class="N">char</span>&nbsp;*<span class="S">s</span>, <span class="N">int</span>&nbsp;<span class="S">len</span>, <a href="byte"><u>byte</u></a>&nbsp;<span class="S">charset</span>&nbsp;=&nbsp;CHARSET_DEFAULT)</p>
+<p class="K">Converts array <span class="S">s </span>of <span class="S">len</span> characters with encoding <span class="S">charset</span> to basic ASCII (using <a href="src$Core$CharSet$en-us.html#ToAscii(int,byte)">ToAscii</a>). Stores result to <span class="S">t</span>.</p>
+<p class="L">&nbsp;</p>
+<hr><p class="L">&nbsp;</p>
+<p id="ToUpper(char*,int,byte)" class="M"><span class="N">void</span>&nbsp;<span class="O">ToUpper</span>(<span class="N">char</span>&nbsp;*<span class="S">s</span>, <span class="N">int</span>&nbsp;<span class="S">len</span>, <a href="byte"><u>byte</u></a>&nbsp;<span class="S">charset</span>&nbsp;=&nbsp;CHARSET_DEFAULT)</p>
+<p class="K">Converts array <span class="S">s </span>of <span class="S">len</span> characters with encoding <span class="S">charset</span> to upper-case (using ToUpper). Stores result back to <span class="S">s</span>.</p>
+<p class="L">&nbsp;</p>
+<hr><p class="L">&nbsp;</p>
+<p id="ToLower(char*,int,byte)" class="M"><span class="N">void</span>&nbsp;<span class="O">ToLower</span>(<span class="N">char</span>&nbsp;*<span class="S">s</span>, <span class="N">int</span>&nbsp;<span class="S">len</span>, <a href="byte"><u>byte</u></a>&nbsp;<span class="S">charset</span>&nbsp;=&nbsp;CHARSET_DEFAULT)</p>
+<p class="K">Converts array <span class="S">s </span>of <span class="S">len</span> characters with encoding <span class="S">charset</span> to lower-case (using ToLower). Stores result back to <span class="S">s</span>.</p>
+<p class="L">&nbsp;</p>
+<hr><p class="L">&nbsp;</p>
+<p id="ToAscii(char*,int,byte)" class="M"><span class="N">void</span>&nbsp;<span class="O">ToAscii</span>(<span class="N">char</span>&nbsp;*<span class="S">s</span>, <span class="N">int</span>&nbsp;<span class="S">len</span>, <a href="byte"><u>byte</u></a>&nbsp;<span class="S">charset</span>&nbsp;=&nbsp;CHARSET_DEFAULT)</p>
+<p class="K">Converts array <span class="S">s </span>of <span class="S">len</span> characters with encoding <span class="S">charset</span> to basic ASCII (using ToAscii). Stores result back to <span class="S">s</span>.</p>
+<p class="L">&nbsp;</p>
+<hr><p class="L">&nbsp;</p>
+<p id="InitCaps(const wchar*)" class="M"><a href="WString"><u>WString</u></a>&nbsp;<span class="O">InitCaps</span>(<span class="N">const</span>&nbsp;<a href="wchar"><u>wchar</u></a>&nbsp;*<span class="S">s</span>)</p>
+<p class="K">Converts input zero-terminated UNICODE string.so that first letters in each word (letters that are next to whitespace) are upper-case, rest is lower-case.</p>
+<p class="L">&nbsp;</p>
+<hr><p class="L">&nbsp;</p>
+<p id="InitCaps(const WString&)" class="M"><a href="WString"><u>WString</u></a>&nbsp;<span class="O">InitCaps</span>(<span class="N">const</span>&nbsp;<a href="WString"><u>WString</u></a><span class="N">&amp;</span>&nbsp;<span class="S">s</span>)</p>
+<p class="K">Converts UNICODE string.so that first letters in each word (letters that are next to whitespace) are upper-case, rest is lower-case.</p>
+<p class="L">&nbsp;</p>
+<hr><p class="L">&nbsp;</p>
+<p id="ToUpper(const WString&)" class="M"><a href="WString"><u>WString</u></a>&nbsp;<span class="O">ToUpper</span>(<span class="N">const</span>&nbsp;<a href="WString"><u>WString</u></a><span class="N">&amp;</span>&nbsp;<span class="S">w</span>)</p>
+<p class="K">Converts UNICODE string to upper-case.</p>
+<p class="L">&nbsp;</p>
+<hr><p class="L">&nbsp;</p>
+<p id="ToLower(const WString&)" class="M"><a href="WString"><u>WString</u></a>&nbsp;<span class="O">ToLower</span>(<span class="N">const</span>&nbsp;<a href="WString"><u>WString</u></a><span class="N">&amp;</span>&nbsp;<span class="S">w</span>)</p>
+<p class="K">Converts UNICODE string to lower-case.</p>
+<p class="L">&nbsp;</p>
+<hr><p class="L">&nbsp;</p>
+<p id="ToAscii(const WString&)" class="M"><a href="WString"><u>WString</u></a>&nbsp;<span class="O">ToAscii</span>(<span class="N">const</span>&nbsp;<a href="WString"><u>WString</u></a><span class="N">&amp;</span>&nbsp;<span class="S">w</span>)</p>
+<p class="K">Converts UNICODE string to basic ASCII by removing diacritical markings.</p>
+<p class="L">&nbsp;</p>
+<hr><p class="L">&nbsp;</p>
+<p id="InitCaps(const char*,byte)" class="M"><a href="String"><u>String</u></a>&nbsp;<span class="O">InitCaps</span>(<span class="N">const</span>&nbsp;<span class="N">char</span>&nbsp;*<span class="S">s</span>, <a href="byte"><u>byte</u></a>&nbsp;<span class="S">charset</span>&nbsp;=&nbsp;CHARSET_DEFAULT)</p>
+<p class="K">Converts input zero-terminated 8-bit string.encoded in <span class="S">charset</span> so that first letters in each word (letters that are next to whitespace) are upper-case, rest is lower-case. <span class="S">charset</span> can be CHARSET_UTF8.</p>
+<p class="L">&nbsp;</p>
+<hr><p class="L">&nbsp;</p>
+<p id="ToUpper(const String&,byte)" class="M"><a href="String"><u>String</u></a>&nbsp;<span class="O">ToUpper</span>(<span class="N">const</span>&nbsp;<a href="String"><u>String</u></a><span class="N">&amp;</span>&nbsp;<span class="S">s</span>, <a href="byte"><u>byte</u></a>&nbsp;<span class="S">charset</span>&nbsp;=&nbsp;CHARSET_DEFAULT)</p>
+<p class="K">Converts input 8-bit string.encoded in <span class="S">charset</span> to upper-case. <span class="S">charset</span> can be CHARSET_UTF8.</p>
+<p class="L">&nbsp;</p>
+<hr><p class="L">&nbsp;</p>
+<p id="ToLower(const String&,byte)" class="M"><a href="String"><u>String</u></a>&nbsp;<span class="O">ToLower</span>(<span class="N">const</span>&nbsp;<a href="String"><u>String</u></a><span class="N">&amp;</span>&nbsp;<span class="S">s</span>, <a href="byte"><u>byte</u></a>&nbsp;<span class="S">charset</span>&nbsp;=&nbsp;CHARSET_DEFAULT)</p>
+<p class="K">Converts input 8-bit string.encoded in <span class="S">charset</span> to lower-case. <span class="S">charset</span> can be CHARSET_UTF8.</p>
+<p class="L">&nbsp;</p>
+<hr><p class="L">&nbsp;</p>
+<p id="ToAscii(const String&,byte)" class="M"><a href="String"><u>String</u></a>&nbsp;<span class="O">ToAscii</span>(<span class="N">const</span>&nbsp;<a href="String"><u>String</u></a><span class="N">&amp;</span>&nbsp;<span class="S">s</span>, <a href="byte"><u>byte</u></a>&nbsp;<span class="S">charset</span>&nbsp;=&nbsp;CHARSET_DEFAULT)</p>
+<p class="K">Converts input 8-bit string.encoded in <span class="S">charset</span> to basic ASCII by removing diacritical markings. <span class="S">charset</span> can be CHARSET_UTF8.</p>
+<p class="L">&nbsp;</p>
+<hr><p class="L">&nbsp;</p>
+<p id="Upp::ToUpperAscii(const Upp::String&,Upp::byte)" class="M"><a href="Upp::String"><u>String</u></a>&nbsp;<span class="O">ToUpperAscii</span>(<span class="N">const</span>&nbsp;<a href="Upp::String"><u>String</u></a><span class="N">&amp;</span>&nbsp;<span class="S">s</span>, <a href="Upp::byte"><u>byte</u></a>&nbsp;<span class="S">charset</span>)</p>
+<p class="K">Same as ToUpper(ToAscii(<span class="S">s</span>), <span class="S">charset</span>), but faster.</p>
+<p class="L">&nbsp;</p>
+<hr><p class="L">&nbsp;</p>
+<p id="Upp::ToLowerAscii(const Upp::String&,Upp::byte)" class="M"><a href="Upp::String"><u>String</u></a>&nbsp;<span class="O">ToLowerAscii</span>(<span class="N">const</span>&nbsp;<a href="Upp::String"><u>String</u></a><span class="N">&amp;</span>&nbsp;<span class="S">s</span>, <a href="Upp::byte"><u>byte</u></a>&nbsp;<span class="S">charset</span>)</p>
+<p class="K">Same as ToLower(ToAscii(<span class="S">s</span>), <span class="S">charset</span>), but faster.</p>
+<p class="L">&nbsp;</p>
+<hr><p class="L">&nbsp;</p>
+<p id="ToUpper(const char*,byte)" class="M"><a href="String"><u>String</u></a>&nbsp;<span class="O">ToUpper</span>(<span class="N">const</span>&nbsp;<span class="N">char</span>&nbsp;*<span class="S">s</span>, <a href="byte"><u>byte</u></a>&nbsp;<span class="S">charset</span>&nbsp;=&nbsp;CHARSET_DEFAULT)</p>
+<p class="K">Converts input zero-terminated 8-bit string.encoded in <span class="S">charset</span> to upper-case. <span class="S">charset</span> can be CHARSET_UTF8.</p>
+<p class="L">&nbsp;</p>
+<hr><p class="L">&nbsp;</p>
+<p id="ToLower(const char*,byte)" class="M"><a href="String"><u>String</u></a>&nbsp;<span class="O">ToLower</span>(<span class="N">const</span>&nbsp;<span class="N">char</span>&nbsp;*<span class="S">s</span>, <a href="byte"><u>byte</u></a>&nbsp;<span class="S">charset</span>&nbsp;=&nbsp;CHARSET_DEFAULT)</p>
+<p class="K">Converts input zero-terminated 8-bit string.encoded in <span class="S">charset</span> to lower-case. <span class="S">charset</span> can be CHARSET_UTF8.</p>
+<p class="L">&nbsp;</p>
+<hr><p class="L">&nbsp;</p>
+<p id="ToAscii(const char*,byte)" class="M"><a href="String"><u>String</u></a>&nbsp;<span class="O">ToAscii</span>(<span class="N">const</span>&nbsp;<span class="N">char</span>&nbsp;*<span class="S">s</span>, <a href="byte"><u>byte</u></a>&nbsp;<span class="S">charset</span>&nbsp;=&nbsp;CHARSET_DEFAULT)</p>
+<p class="K">Converts input zero-terminated 8-bit string.encoded in charset to basic ASCII by removing diacritical markings. charset can be CHARSET_UTF8.</p>
+<p class="L">&nbsp;</p>
+<hr><p class="L">&nbsp;</p>
+<p id="LoadStreamBOMW(Stream&,byte)" class="M"><a href="WString"><u>WString</u></a>&nbsp;<span class="O">LoadStreamBOMW</span>(<a href="Stream"><u>Stream</u></a><span class="N">&amp;</span>&nbsp;<span class="S">in</span>, <a href="byte"><u>byte</u></a>&nbsp;<span class="S">def_charset</span>)</p>
+<p class="K">Reads stream into UNICODE string, granting optional BOM UNICODE mark. If there is no BOM, text is considered to be in <span class="S">def_charset</span>.</p>
+<p class="L">&nbsp;</p>
+<hr><p class="L">&nbsp;</p>
+<p id="LoadStreamBOMW(Stream&)" class="M"><a href="WString"><u>WString</u></a>&nbsp;<span class="O">LoadStreamBOMW</span>(<a href="Stream"><u>Stream</u></a><span class="N">&amp;</span>&nbsp;<span class="S">in</span>)</p>
+<p class="K">Reads stream into UNICODE string, granting optional BOM UNICODE mark. If there is no BOM, text is considered to be in host defined encoding. (e.g. set by linux locale).</p>
+<p class="L">&nbsp;</p>
+<hr><p class="L">&nbsp;</p>
+<p id="LoadStreamBOM(Stream&,byte)" class="M"><a href="String"><u>String</u></a>&nbsp;<span class="O">LoadStreamBOM</span>(<a href="Stream"><u>Stream</u></a><span class="N">&amp;</span>&nbsp;<span class="S">in</span>, <a href="byte"><u>byte</u></a>&nbsp;<span class="S">def_charset</span>)</p>
+<p class="K">Reads stream into 8-bit string with default encoding, granting optional BOM UNICODE mark. If there is no BOM, text is considered to be in <span class="S">def_charset</span> .</p>
+<p class="L">&nbsp;</p>
+<hr><p class="L">&nbsp;</p>
+<p id="LoadStreamBOM(Stream&)" class="M"><a href="String"><u>String</u></a>&nbsp;<span class="O">LoadStreamBOM</span>(<a href="Stream"><u>Stream</u></a><span class="N">&amp;</span>&nbsp;<span class="S">in</span>)</p>
+<p class="K">Reads stream into 8-bit string with default encoding, granting optional BOM UNICODE mark. If there is no BOM, text is considered to be in host defined encoding. (e.g. set by linux locale).</p>
+<p class="L">&nbsp;</p>
+<hr><p class="L">&nbsp;</p>
+<p id="LoadFileBOMW(const char*,byte)" class="M"><a href="WString"><u>WString</u></a>&nbsp;<span class="O">LoadFileBOMW</span>(<span class="N">const</span>&nbsp;<span class="N">char</span>&nbsp;*<span class="S">path</span>, <a href="byte"><u>byte</u></a>&nbsp;<span class="S">def_charset</span>)</p>
+<p class="K">Reads file into UNICODE string, granting optional BOM UNICODE mark. If there is no BOM, text is considered to be in <span class="S">def_charset</span>. If the file cannot be read, returns WString::GetVoid().</p>
+<p class="L">&nbsp;</p>
+<hr><p class="L">&nbsp;</p>
+<p id="LoadFileBOMW(const char*)" class="M"><a href="WString"><u>WString</u></a>&nbsp;<span class="O">LoadFileBOMW</span>(<span class="N">const</span>&nbsp;<span class="N">char</span>&nbsp;*<span class="S">path</span>)</p>
+<p class="K">Reads file into UNICODE string, granting optional BOM UNICODE mark. If there is no BOM, text is considered to be in host defined encoding. (e.g. set by linux locale). If the file cannot be read, returns WString::GetVoid().</p>
+<p class="L">&nbsp;</p>
+<hr><p class="L">&nbsp;</p>
+<p id="LoadFileBOM(const char*,byte)" class="M"><a href="String"><u>String</u></a>&nbsp;<span class="O">LoadFileBOM</span>(<span class="N">const</span>&nbsp;<span class="N">char</span>&nbsp;*<span class="S">path</span>, <a href="byte"><u>byte</u></a>&nbsp;<span class="S">def_charset</span>)</p>
+<p class="K">Reads file into 8-bit string with default encoding, granting optional BOM UNICODE mark. If there is no BOM, text is considered to be in <span class="S">def_charset</span> . If the file cannot be read, returns String::GetVoid().</p>
+<p class="L">&nbsp;</p>
+<hr><p class="L">&nbsp;</p>
+<p id="LoadFileBOM(const char*)" class="M"><a href="String"><u>String</u></a>&nbsp;<span class="O">LoadFileBOM</span>(<span class="N">const</span>&nbsp;<span class="N">char</span>&nbsp;*<span class="S">path</span>)</p>
+<p class="K">Reads file into 8-bit string with default encoding, granting optional BOM UNICODE mark. If there is no BOM, text is considered to be in host defined encoding. (e.g. set by linux locale). If the file cannot be read, returns String::GetVoid().</p>
+<p class="L">&nbsp;</p>
+<hr><p class="L">&nbsp;</p>
+<p id="SaveStreamBOM(Stream&,const WString&)" class="M"><span class="N">bool</span>&nbsp;<span class="O">SaveStreamBOM</span>(<a href="Stream"><u>Stream</u></a><span class="N">&amp;</span>&nbsp;<span class="S">out</span>, <span class="N">const</span>&nbsp;<a href="WString"><u>WString</u></a><span class="N">&amp;</span>&nbsp;<span class="S">data</span>)</p>
+<p class="K">Saves stream in 16-bit UNICODE format, with BOM header. Returns true on success.</p>
+<p class="L">&nbsp;</p>
+<hr><p class="L">&nbsp;</p>
+<p id="SaveFileBOM(const char*,const WString&)" class="M"><span class="N">bool</span>&nbsp;<span class="O">SaveFileBOM</span>(<span class="N">const</span>&nbsp;<span class="N">char</span>&nbsp;*<span class="S">path</span>, <span class="N">const</span>&nbsp;<a href="WString"><u>WString</u></a><span class="N">&amp;</span>&nbsp;<span class="S">data</span>)</p>
+<p class="K">Saves file in 16-bit UNICODE format, with BOM header. Returns true on success.</p>
+<p class="L">&nbsp;</p>
+<hr><p class="L">&nbsp;</p>
+<p id="SaveStreamBOMUtf8(Stream&,const String&)" class="M"><span class="N">bool</span>&nbsp;<span class="O">SaveStreamBOMUtf8</span>(<a href="Stream"><u>Stream</u></a><span class="N">&amp;</span>&nbsp;<span class="S">out</span>, <span class="N">const</span>&nbsp;<a href="String"><u>String</u></a><span class="N">&amp;</span>&nbsp;<span class="S">data</span>)</p>
+<p class="K">Saves 8-bit string in default encoding to the stream. Returns true on success.</p>
+<p class="L">&nbsp;</p>
+<hr><p class="L">&nbsp;</p>
+<p id="SaveFileBOMUtf8(const char*,const String&)" class="M"><span class="N">bool</span>&nbsp;<span class="O">SaveFileBOMUtf8</span>(<span class="N">const</span>&nbsp;<span class="N">char</span>&nbsp;*<span class="S">path</span>, <span class="N">const</span>&nbsp;<a href="String"><u>String</u></a><span class="N">&amp;</span>&nbsp;<span class="S">data</span>)</p>
+<p class="K">Saves 8-bit string in default encoding to the file. Returns true on success.</p>
+<p class="L">&nbsp;</p>
+<hr><p class="L">&nbsp;</p>
+<p id="Upp::Utf8BOM(Upp::Stream&)" class="M"><span class="N">bool</span>&nbsp;<span class="O">Utf8BOM</span>(<a href="Upp::Stream"><u>Stream</u></a><span class="N">&amp;</span>&nbsp;<span class="S">in</span>)</p>
+<p class="K">Tests for and skips UTF-8 BOM mark in the seekable Stream <span class="S">in</span>.</p>
+<p class="L">&nbsp;</p>
+<hr><p class="L">&nbsp;</p>
+<p id="FromUtf8(const char*,int)" class="M"><a href="WString"><u>WString</u></a>&nbsp;<span class="O">FromUtf8</span>(<span class="N">const</span>&nbsp;<span class="N">char</span>&nbsp;*<span class="S">_s</span>, <span class="N">int</span>&nbsp;<span class="S">len</span>)</p>
+<p class="K">Converts UTF-8 to UNICODE string. Any wrong bytes and sequences are converted to private 0xEExx range. Deprecated, use ToUtf16.</p>
+<p class="L">&nbsp;</p>
+<hr><p class="L">&nbsp;</p>
+<p id="FromUtf8(const char*)" class="M"><a href="WString"><u>WString</u></a>&nbsp;<span class="O">FromUtf8</span>(<span class="N">const</span>&nbsp;<span class="N">char</span>&nbsp;*<span class="S">_s</span>)</p>
+<p class="K">Converts zero-terminted UTF-8 string to UNICODE. Any wrong bytes and sequences are converted to private 0xEExx range. Deprecated, use ToUtf16.</p>
+<p class="L">&nbsp;</p>
+<hr><p class="L">&nbsp;</p>
+<p id="FromUtf8(const String&)" class="M"><a href="WString"><u>WString</u></a>&nbsp;<span class="O">FromUtf8</span>(<span class="N">const</span>&nbsp;<a href="String"><u>String</u></a><span class="N">&amp;</span>&nbsp;<span class="S">s</span>)</p>
+<p class="K">Converts UTF-8 string to UNICODE. Any wrong bytes and sequences are converted to private 0xEExx range. Deprecated, use ToUtf16.</p>
+<p class="L">&nbsp;</p>
+<hr><p class="L">&nbsp;</p>
+<p id="utf8check(const char*,int)" class="M"><span class="N">bool</span>&nbsp;<span class="O">utf8check</span>(<span class="N">const</span>&nbsp;<span class="N">char</span>&nbsp;*<span class="S">_s</span>, <span class="N">int</span>&nbsp;<span class="S">len</span>)</p>
+<p class="K">Checks whether array contains a valid UTF-8 sequence. Deprecated, use CheckUtf8.</p>
+<p class="L">&nbsp;</p>
+<hr><p class="L">&nbsp;</p>
+<p id="utf8len(const char*,int)" class="M"><span class="N">int</span>&nbsp;<span class="O">utf8len</span>(<span class="N">const</span>&nbsp;<span class="N">char</span>&nbsp;*<span class="S">s</span>, <span class="N">int</span>&nbsp;<span class="S">len</span>)</p>
+<p class="K">Returns a number of UNICODE characters in UTF-8 text. Error-escaped 0xEExx characters for ill-formed parts of UTF-8 are correctly accounted for. Deprecated, use Utf16Len.</p>
+<p class="L">&nbsp;</p>
+<hr><p class="L">&nbsp;</p>
+<p id="utf8len(const char*)" class="M"><span class="N">int</span>&nbsp;<span class="O">utf8len</span>(<span class="N">const</span>&nbsp;<span class="N">char</span>&nbsp;*<span class="S">s</span>)</p>
+<p class="K">Returns a number of UNICODE characters in zero-terminated UTF-8 text. Error-escaped 0xEExx characters for ill-formed parts of UTF-8 are correctly accounted for. Deprecated, use Utf16Len.</p>
+<p class="L">&nbsp;</p>
+<hr><p class="L">&nbsp;</p>
+<p id="lenAsUtf8(const wchar*,int)" class="M"><span class="N">int</span>&nbsp;<span class="O">lenAsUtf8</span>(<span class="N">const</span>&nbsp;<a href="wchar"><u>wchar</u></a>&nbsp;*<span class="S">s</span>, <span class="N">int</span>&nbsp;<span class="S">len</span>)</p>
+<p class="K">Returns number of bytes of UNICODE text when UTF-8 encoded. Deprecated, use Utf8Len.</p>
+<p class="L">&nbsp;</p>
+<hr><p class="L">&nbsp;</p>
+<p id="lenAsUtf8(const wchar*)" class="M"><span class="N">int</span>&nbsp;<span class="O">lenAsUtf8</span>(<span class="N">const</span>&nbsp;<a href="wchar"><u>wchar</u></a>&nbsp;*<span class="S">s</span>)</p>
+<p class="K">Returns number of bytes of UNICODE zero-terminated text when UTF-8 encoded. Deprecated, use Utf8Len.</p>
+<p class="A">&nbsp;</p>
+</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>
+<TABLE BORDER="0" WIDTH="100%"><TR><TD></TD>
+</TR>
+</TABLE>
+<TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" BGCOLOR="#FFFFFF" WIDTH="100%" style="border-style: solid; border-width: 1px; border-color: #6E89AE;padding: 10px;;"><TR><TD><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%"><TR><TD><p class="A"><span class="B"> </span><a href="www$uppweb$contribweb$en-us.html">Do you want to contribute?</a></p>
+</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>
+<script type="text/javascript">var a={};var p=window.location.pathname.split("/");p=p[p.length-1];var s='<select id="lang" onchange="window.location=document.getElementById(\'lang\').value;">';for(l in a){if(p==l){d=" selected=1"}else{d=""}s+='<option value="'+l+'"'+d+'>'+a[l]+'</option>'}s+='</select>';var d=document.createElement('div');d.innerHTML=s;var c=document.getElementById('langs');c.replaceChild(d,c.firstChild);document.getElementById('langbox').style.display='block';</script></BODY>

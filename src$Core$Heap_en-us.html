@@ -1,0 +1,326 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en-us">
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
+<META NAME="Generator" CONTENT="U++ HTML Package">
+<TITLE>Heap functions :: U++</TITLE>
+<STYLE TYPE="text/css"><!--
+.A{margin:0px 0px 0px 0px;text-indent:0px;text-align:left;color:#000000;font-family:sans-serif;font-size:10pt;font-weight:normal;font-style:normal;}
+.B{font-size:12pt;}
+.C{border-collapse:collapse;table-layout:auto;border: 2px solid #000000;}
+.D{padding: 3px 5px 3px 5px;border-left: 1px solid #000000;border-top: 1px solid #000000;border-right: 1px solid #000000;border-bottom: 1px solid #000000;background-color:#712A00;vertical-align:middle;}
+.E{margin:0px 0px 0px 0px;text-indent:0px;text-align:left;color:#e0e0e0;font-family:sans-serif;font-size:16pt;font-weight:bold;font-style:normal;}
+.F{margin:0px 0px 0px 0px;text-indent:0px;text-align:left;color:#000000;font-family:sans-serif;font-size:6pt;font-weight:normal;font-style:normal;}
+.G{border-collapse:collapse;table-layout:auto;border: 2px solid #808080;}
+.H{padding: 3px 5px 3px 5px;border-left: 1px solid #808080;border-top: 1px solid #808080;border-right: 1px solid #808080;border-bottom: 1px solid #808080;background-color:#C0C0C0;vertical-align:middle;}
+.I{margin:0px 0px 0px 0px;text-indent:0px;text-align:left;color:#000000;font-family:sans-serif;font-size:10pt;font-weight:bold;font-style:normal;}
+.J{margin:0px 0px 5px 0px;text-indent:0px;text-align:left;color:#000000;font-family:sans-serif;font-size:10pt;font-weight:normal;font-style:normal;}
+.K{color:#0000ff;}
+.L{font-weight:bold;}
+.M{color:#800000;font-weight:bold;}
+.N{margin:0px 0px 0px 57px;text-indent:0px;text-align:left;color:#000000;font-family:sans-serif;font-size:10pt;font-weight:normal;font-style:normal;}
+.O{color:#008000;font-weight:bold;}
+.P{margin:0px 0px 5px 0px;text-indent:0px;text-align:left;color:#000000;font-family:sans-serif;font-size:10pt;font-weight:bold;font-style:normal;}
+.Q{color:#0000ff;font-weight:normal;}
+.R{font-weight:normal;}
+a.l1         { text-decoration:none; font-size: 8pt; font-family: sans-serif; font-weight: normal; }
+a.l1:link    { color:#000000; }
+a.l1:visited { color:#000080; }
+a.l1:hover   { color:#9933CC; }
+a.l1:active  { color:#000000; }
+a.l2         { text-decoration:none; font-size: 12pt; font-family: sans-serif; font-variant: small-caps; }
+a.l2:link    { color:#0066FF; }
+a.l2:visited { color:#FF6600; }
+a.l2:hover   { color:#BC0624; }
+a.l2:active  { color:#BC0024; }
+
+-->
+</STYLE>
+<META NAME="keywords" CONTENT="framework, toolkit, widget, c++, visual, studio, dev-cpp, builder, ide, class, component,wxwidgets, qt, rapid, application, development, rad, mfc, linux, macos, gui, sdl, directx, desktop"><META name="robots" content="index,follow">
+<LINK rel="alternate" type="application/rss+xml" title="SVN changes" href="svnchanges.xml">
+<LINK rel="shortcut icon" type="image/png" href="favicon.png">
+</HEAD><BODY BGCOLOR="#D2D9D2" ALINK="#800000" LINK="#000000" VLINK="#000080"><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%"><TR><TD COLSPAN="3"><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%" BGCOLOR="#FFFFFF" style="border: 1px solid #6E89AE;padding-left: 10px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;"><TR><TD><A HREF="index.html"><IMG SRC="0i.png" ALT="" BORDER="0"></A>
+</TD>
+<TD ALIGN="RIGHT" VALIGN="BOTTOM" STYLE="padding-bottom: 5px; background-image: url('1i.png')"><span style="font-size: 14pt; font-family: sans-serif;"><script type="text/javascript"><!--
+google_ad_client = "pub-1082147624384270";
+google_ad_width = 468;
+google_ad_height = 60;
+google_ad_format = "468x60_as";
+google_ad_type = "text_image";
+google_ad_channel = "";
+google_color_border = "336699";
+google_color_bg = "FFFFFF";
+google_color_link = "0000FF";
+google_color_text = "000000";
+google_color_url = "008000";
+//--></script>
+<script type="text/javascript"
+  src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+&nbsp;&nbsp;</span>
+</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>
+<TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%"><TR><TD COLSPAN="3" BGCOLOR="#D2D9D2" HEIGHT="6"></TD>
+</TR>
+<TR><TD VALIGN="TOP" ALIGN="CENTER"><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="160"><TR><TD ALIGN="CENTER"><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%" BGCOLOR="#FFFFFF" style="border-style: solid; border-width: 1px; border-color: #6E89AE;padding: 0px"><TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px;"><A HREF="www$uppweb$overview$en-us.html" CLASS="l1">Overview</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$examples$en-us.html" CLASS="l1">Examples</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$ss$en-us.html" CLASS="l1">Screenshots</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$comparison$en-us.html" CLASS="l1">Comparisons</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$apps$en-us.html" CLASS="l1">Applications</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$download$en-us.html" CLASS="l1">Download</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$documentation$en-us.html" CLASS="l1">Documentation</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$Tutorials$en-us.html" CLASS="l1">Tutorials</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="app$ide$UppHub$en-us.html" CLASS="l1">UppHub</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$Roadmap$en-us.html" CLASS="l1">Status & Roadmap</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$FAQ$en-us.html" CLASS="l1">FAQ</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="app$ide$About$en-us.html" CLASS="l1">Authors & License</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="https://www.ultimatepp.org/forums" CLASS="l1">Forums</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$Funding$en-us.html" CLASS="l1">Funding U++</A>
+</TD>
+</TR>
+</TABLE>
+<TABLE BORDER="0" WIDTH="100%"><TR><TD></TD>
+</TR>
+</TABLE>
+<TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%" BGCOLOR="#FFFFFF" style="border-style: solid; border-width: 1px; border-color: #6E89AE;padding: 0px"><TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('3i.png'); border: 0px solid black;padding-left:12px; padding-right:0px; padding-top:1px; padding-bottom:1px;color:#FFFFFF;"><B><span style="font-size: 8pt; font-family: sans-serif;">Search on this site</span>
+</B>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:6px; padding-right:0px; padding-top:4px; padding-bottom:4px;border-top: 1px solid #6E89AE;"><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%"><TR><TD><IMG SRC="4i.png" ALT="" BORDER="0"></TD>
+<TD><FORM ACTION="https://www.google.com/search" METHOD="GET" STYLE="margin:0px;padding:0px;"><INPUT TYPE="HIDDEN" NAME="ie" VALUE="UTF-8"><INPUT TYPE="HIDDEN" NAME="oe" VALUE="UTF-8"><INPUT TYPE="TEXT" NAME="q" SIZE="15" MAXLENGTH="256" placeholder="Site search"><INPUT TYPE="HIDDEN" NAME="sitesearch" VALUE="ultimatepp.org"></FORM>
+</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>
+<TABLE BORDER="0" WIDTH="100%"><TR><TD></TD>
+</TR>
+</TABLE>
+<br><div id="fb-root"></div>
+<script type="text/javascript">(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) {return;}
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+<div class="fb-like" data-href="https://www.facebook.com/pages/Upp-Framework/262346610476027?sk=wall" data-send="false" data-layout="button_count" data-width="160" data-show-faces="false" data-font="arial"></div>
+<br><br><script type="text/javascript"><!--
+google_ad_client = "pub-1082147624384270";
+google_ad_width = 160;
+google_ad_height = 600;
+google_ad_format = "160x600_as";
+google_ad_type = "text_image";
+google_ad_channel = "";
+google_color_border = "336699";
+google_color_bg = "FFFFFF";
+google_color_link = "0000FF";
+google_color_text = "000000";
+google_color_url = "008000";
+//--></script>
+<script type="text/javascript"
+  src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script><br><br><script type="text/javascript"><!--
+google_ad_client = "pub-1082147624384270";
+google_ad_width = 160;
+google_ad_height = 90;
+google_ad_format = "160x90_0ads_al_s";
+google_ad_channel = "";
+google_color_border = "336699";
+google_color_bg = "FFFFFF";
+google_color_link = "0000FF";
+google_color_text = "000000";
+google_color_url = "008000";
+//--></script>
+<script type="text/javascript"
+  src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+<br><br><br><br><br><br><A HREF="https://sourceforge.net/projects/upp/"><IMG SRC="https://sourceforge.net/sflogo.php?group_id=93970&amp;type=2" ALT="SourceForge.net Logo" BORDER="0" WIDTH="125" HEIGHT="37"></A>
+<br><br><A HREF="https://flathub.org/en/apps/org.ultimatepp.TheIDE"><IMG SRC="5i.png" ALT="SourceForge.net Logo" BORDER="0" WIDTH="125" HEIGHT="37"></A>
+<br><br><div style="background-color:#ffffff;width:125;height:35"><A HREF="https://github.com/ultimatepp"><IMG SRC="6i.png" ALT="GitHub Logo" BORDER="0" WIDTH="125" HEIGHT="35"></A>
+</div><br><div style="background-color:#ffffff;width:125;height:35"><div style="height:5"></div><A HREF="https://discord.gg/8XzqQzXZzb"><IMG SRC="https://assets-global.website-files.com/6257adef93867e50d84d30e2/636e0b5061df29d55a92d945_full_logo_blurple_RGB.svg" ALT="Discord Logo" BORDER="0" WIDTH="125" HEIGHT="25"></A>
+</div><br></TD>
+</TR>
+</TABLE>
+</TD>
+<TD VALIGN="TOP" BGCOLOR="#D2D9D2"><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="6"><TR><TD></TD>
+</TR>
+</TABLE>
+</TD>
+<TD VALIGN="TOP" WIDTH="100%" BGCOLOR="#D2D9D2"><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" BGCOLOR="#FFFFFF" WIDTH="100%" style="border-style: solid; border-width: 1px; border-color: #6E89AE;padding: 10px;;"><TR><TD><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%"><TR><TD><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr><td width="100%"><table width="100%" class="C"><colgroup><col width="100%"></colgroup>
+<tr><td class="D"><p class="E">Heap</p>
+</td>
+</tr>
+</table></td>
+</tr></table>
+<p class="F">&nbsp;</p>
+<p class="A">U++ has its own high-performance allocator that is finetuned for use with U++. Globals operators new/delete are normally overloaded to use this allocator, unless it is not possible or unless flagUSEMALLOC macro is defined (e.g. main package configuration contains USEMALLOC).</p>
+<p class="A">&nbsp;</p>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr><td width="100%"><table width="100%" class="G"><colgroup><col width="100%"></colgroup>
+<tr><td class="H"><p class="I">Basic allocation functions</p>
+</td>
+</tr>
+</table></td>
+</tr></table>
+<p class="F">&nbsp;</p>
+<p id="Upp::MemoryAllocPermanent(size_t)" class="J"><span class="K">void</span>&nbsp;*<span class="L">MemoryAllocPermanent</span>(<a href="size_t"><u>size_t</u></a>&nbsp;<span class="M">size</span>)</p>
+<p class="N">Allocates a memory block of <span class="M">size</span> bytes. This pointer is permanent and cannot be released, it is also ignored in leak checks.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Upp::MemoryAllocSz(size_t&)" class="J"><span class="K">void</span>&nbsp;*<span class="L">MemoryAllocSz</span>(<a href="size_t"><u>size_t</u></a><span class="K">&amp;</span>&nbsp;<span class="M">size</span>)</p>
+<p class="N">Allocates a memory block of at least <span class="M">size</span> bytes. <span class="M">size</span> is set to the real number of bytes in the block that can be used by an application. Guaranteed alignment is specified in <span class="L">UPP_HEAP_ALIGNMENT</span> constant (currently 16). The minimal real size of returned block in release mode is <span class="L">UPP_HEAP_MINBLOCK</span> (currently 32).</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Upp::MemoryAlloc(size_t)" class="J"><span class="K">void</span>&nbsp;*<span class="L">MemoryAlloc</span>(<a href="size_t"><u>size_t</u></a>&nbsp;<span class="M">size</span>)</p>
+<p class="N">Allocates a memory block of at least <span class="M">size</span> bytes.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Upp::MemoryFree(void*)" class="J"><span class="K">void</span>&nbsp;<span class="L">MemoryFree</span>(<span class="K">void</span>&nbsp;*<span class="M">ptr</span>)</p>
+<p class="N">Frees block previously allocated in MemoryAllocSz or MemoryAlloc.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Upp::MemoryAlloc32()" class="J"><span class="K">void</span>&nbsp;*<span class="L">MemoryAlloc32</span>()</p>
+<p class="N">Allocates memory block of exactly 32 bytes. This has the same functionality as MemoryAlloc(32), but is slightly faster.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Upp::MemoryFree32(void*)" class="J"><span class="K">void</span>&nbsp;<span class="L">MemoryFree32</span>(<span class="K">void</span>&nbsp;*<span class="M">ptr</span>)</p>
+<p class="N">Frees a memory block previously allocated by MemoryAlloc32. This has the same functionality as MemoryFree(<span class="M">ptr</span>), but is slightly faster.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Upp::MemoryTryRealloc(void*,size_t&)" class="J"><span class="K">bool</span>&nbsp;<span class="L">MemoryTryRealloc</span>(<span class="K">void</span>&nbsp;*<span class="M">ptr</span>, <a href="size_t"><u>size_t</u></a><span class="K">&amp;</span>&nbsp;<span class="M">newsize</span>)</p>
+<p class="N">Attempts to change the size of block at <span class="M">ptr</span> to something closer to <span class="M">newsize</span>. The real value is returned in <span class="M">newsize</span>. Returns true on success.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Upp::TinyAlloc(int)" class="J"><span class="K">void</span>&nbsp;*<span class="L">TinyAlloc</span>(<span class="K">int</span>&nbsp;<span class="M">size</span>)</p>
+<p class="N">Allocates the block of <span class="M">size</span> bytes. This allows for allocation of smaller real size blocks (normally the minimal size of block returned is 32 bytes), but requires the block to be freed with TinyFree.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Upp::TinyFree(int,void*)" class="J"><span class="K">void</span>&nbsp;<span class="L">TinyFree</span>(<span class="K">int</span>&nbsp;<span class="M">size</span>, <span class="K">void</span>&nbsp;*<span class="M">ptr</span>)</p>
+<p class="N">Frees the block allocated with TinyAlloc, <span class="M">size</span> has to be the same as during allocation.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Upp::tiny_new(Args...args)" class="J"><span class="K">template</span>&nbsp;&lt;<span class="K">class</span>&nbsp;<span class="O">T</span>, <span class="K">class...</span>&nbsp;<span class="O">Args</span>&gt;&nbsp;<span class="O">T</span>&nbsp;*<span class="L">tiny_new</span>(<span class="O">Args</span><span class="K">...</span>&nbsp;args)</p>
+<p class="N">Allocates single object with TinyAlloc and initializes it (with placement new).</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Upp::tiny_delete(T*)" class="J"><span class="K">template</span>&nbsp;&lt;<span class="K">class</span>&nbsp;<span class="O">T</span>&gt;&nbsp;<span class="K">void</span>&nbsp;<span class="L">tiny_delete</span>(<span class="O">T</span>&nbsp;*<span class="M">ptr</span>)</p>
+<p class="N">Deletes object allocated with tiny_new.</p>
+<p class="A">&nbsp;</p>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr><td width="100%"><table width="100%" class="G"><colgroup><col width="100%"></colgroup>
+<tr><td class="H"><p class="I">Heap diagnostics</p>
+</td>
+</tr>
+</table></td>
+</tr></table>
+<p class="F">&nbsp;</p>
+<p id="Upp::GetMemoryBlockSize(void*)" class="J"><a href="size_t"><u>size_t</u></a>&nbsp;<span class="L">GetMemoryBlockSize</span>(<span class="K">void</span>&nbsp;*<span class="M">ptr</span>)</p>
+<p class="N">Returns the size of block in bytes.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Upp::MemoryCheck()" class="J"><span class="K">void</span>&nbsp;<span class="L">MemoryCheck</span>()</p>
+<p class="N">Checks the heap for any errors (caused by e.g. buffer overrides).</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Upp::MemoryDumpLarge()" class="J"><span class="K">void</span>&nbsp;<span class="L">MemoryDumpLarge</span>()</p>
+<p class="N">Dumps a list of large allocations (1-64KB) to the standard log.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Upp::MemoryDumpHuge()" class="J"><span class="K">void</span>&nbsp;<span class="L">MemoryDumpHuge</span>()</p>
+<p class="N">Dups a list of huge allocations (normally 64KB - 16MB) to the standard log.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Upp::MemoryUsedKb()" class="J"><span class="K">int</span>&nbsp;<span class="L">MemoryUsedKb</span>()</p>
+<p class="N">Returns the currently used memory.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Upp::MemoryUsedKbMax()" class="J"><span class="K">int</span>&nbsp;<span class="L">MemoryUsedKbMax</span>()</p>
+<p class="N">Returns the peak memory usage.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Upp::MemoryLimitKb(int)" class="J"><span class="K">void</span>&nbsp;<span class="L">MemoryLimitKb</span>(<span class="K">int</span>&nbsp;<span class="M">kb</span>)</p>
+<p class="N">This debug / diagnostics function limits memory usage to <span class="M">kb</span> KBs. If the application allocates more, it stops with error.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Upp::MemoryGetCurrentSerial()" class="J"><a href="Upp::dword"><u>dword</u></a>&nbsp;<span class="L">MemoryGetCurrentSerial</span>()</p>
+<p class="N">In debug mode, returns the serial number of the next allocated block. This number is eventually listed in the log in case there are any leaks.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Upp::MemoryIgnoreNonMainLeaks()" class="J"><span class="K">void</span>&nbsp;<span class="L">MemoryIgnoreNonMainLeaks</span>()</p>
+<p class="N">Makes leaks detector ignore leaks by global constructors.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Upp::MemoryIgnoreNonUppThreadsLeaks()" class="J"><span class="K">void</span>&nbsp;<span class="L">MemoryIgnoreNonUppThreadsLeaks</span>()</p>
+<p class="N">Makes leaks dectector ignore leaks created by threads that are not launched by U++ Thread class.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Upp::MemoryIgnoreLeaksBegin()" class="J"><span class="K">void</span>&nbsp;<span class="L">MemoryIgnoreLeaksBegin</span>()</p>
+<p class="N">Makes leak detector ignore leaks of blocks allocated until <span class="L">MemoryIgnoreLeaksEnd </span>is called. Calls can be nested. This is especially useful when working with 3rd party code that might e.g. create static leaks (memory is allocated just once, but library does not bother to deallocate on exit).</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Upp::MemoryIgnoreLeaksEnd()" class="J"><span class="K">void</span>&nbsp;<span class="L">MemoryIgnoreLeaksEnd</span>()</p>
+<p class="N">Ends the suppression started by MemoryIgnoreLeaksBegin.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Upp::MemoryIgnoreLeaksBlock::struct" class="P"><span class="Q">struct</span><span class="R">&nbsp;</span>MemoryIgnoreLeaksBlock</p>
+<p class="N">This helper class calls <span class="L">MemoryIgnoreLeaksBegin</span> in constructor and <span class="L">MemoryIgnoreLeaksEnd</span>, in other works supresses leaks till the end of block.</p>
+<p class="F">&nbsp;</p>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr><td width="100%"><table width="100%" class="G"><colgroup><col width="100%"></colgroup>
+<tr><td class="H"><p class="I">Heap tuning</p>
+</td>
+</tr>
+</table></td>
+</tr></table>
+<p class="A">&nbsp;</p>
+<p class="A">Heap tuning is provided through MemoryOptions class. Constructor of this class sets the default values to individual parameters, destructor applies them to the heap subsystem.</p>
+</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>
+<TABLE BORDER="0" WIDTH="100%"><TR><TD></TD>
+</TR>
+</TABLE>
+<TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" BGCOLOR="#FFFFFF" WIDTH="100%" style="border-style: solid; border-width: 1px; border-color: #6E89AE;padding: 10px;;"><TR><TD><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%"><TR><TD><p class="A"><span class="B"> </span><a href="www$uppweb$contribweb$en-us.html">Do you want to contribute?</a></p>
+</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>
+<script type="text/javascript">var a={};var p=window.location.pathname.split("/");p=p[p.length-1];var s='<select id="lang" onchange="window.location=document.getElementById(\'lang\').value;">';for(l in a){if(p==l){d=" selected=1"}else{d=""}s+='<option value="'+l+'"'+d+'>'+a[l]+'</option>'}s+='</select>';var d=document.createElement('div');d.innerHTML=s;var c=document.getElementById('langs');c.replaceChild(d,c.firstChild);document.getElementById('langbox').style.display='block';</script></BODY>

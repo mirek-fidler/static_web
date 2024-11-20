@@ -1,0 +1,682 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en-us">
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
+<META NAME="Generator" CONTENT="U++ HTML Package">
+<TITLE>TextCtrl :: U++</TITLE>
+<STYLE TYPE="text/css"><!--
+.A{margin:0px 0px 0px 0px;text-indent:0px;text-align:left;color:#000000;font-family:sans-serif;font-size:10pt;font-weight:normal;font-style:normal;}
+.B{font-size:12pt;}
+.C{border-collapse:collapse;table-layout:auto;border: 2px solid #000000;}
+.D{padding: 3px 5px 3px 5px;border-left: 1px solid #000000;border-top: 1px solid #000000;border-right: 1px solid #000000;border-bottom: 1px solid #000000;background-color:#800000;vertical-align:middle;}
+.E{margin:0px 0px 0px 0px;text-indent:0px;text-align:left;color:#e5e5e5;font-family:sans-serif;font-size:16pt;font-weight:bold;font-style:normal;}
+.F{margin:0px 0px 0px 0px;text-indent:0px;text-align:left;color:#000000;font-family:sans-serif;font-size:6pt;font-weight:normal;font-style:normal;}
+.G{margin:0px 0px 5px 0px;text-indent:0px;text-align:left;color:#800000;font-family:sans-serif;font-size:12pt;font-weight:bold;font-style:normal;}
+.H{color:#0000ff;font-weight:normal;}
+.I{color:#000000;font-weight:normal;}
+.J{color:#000000;}
+.K{margin:8px 0px 0px 0px;text-indent:0px;text-align:left;color:#000000;font-family:sans-serif;font-size:10pt;font-weight:normal;font-style:normal;}
+.L{border-collapse:collapse;table-layout:auto;border: 2px solid #808080;}
+.M{padding: 3px 5px 3px 5px;border-left: 1px solid #808080;border-top: 1px solid #808080;border-right: 1px solid #808080;border-bottom: 1px solid #808080;background-color:#C0C0C0;vertical-align:middle;}
+.N{margin:0px 0px 0px 0px;text-indent:0px;text-align:left;color:#000000;font-family:sans-serif;font-size:10pt;font-weight:bold;font-style:normal;}
+.O{margin:0px 0px 5px 0px;text-indent:0px;text-align:left;color:#000000;font-family:sans-serif;font-size:10pt;font-weight:normal;font-style:normal;}
+.P{color:#0000ff;}
+.Q{font-weight:bold;}
+.R{margin:0px 0px 0px 57px;text-indent:0px;text-align:left;color:#000000;font-family:sans-serif;font-size:10pt;font-weight:normal;font-style:normal;}
+.S{color:#800000;font-weight:bold;}
+.T{margin:0px 0px 5px 0px;text-indent:0px;text-align:left;color:#000000;font-family:sans-serif;font-size:10pt;font-weight:bold;font-style:normal;}
+.U{font-weight:normal;}
+.V{margin:0px 0px 5px 0px;text-indent:0px;text-align:left;color:#0000ff;font-family:sans-serif;font-size:10pt;font-weight:normal;font-style:normal;}
+.W{color:#000000;font-weight:bold;}
+.X{color:#800000;}
+.Y{padding: 3px 5px 3px 5px;border-left: 1px solid #000000;border-top: 1px solid #000000;border-right: 1px solid #000000;border-bottom: 1px solid #000000;background-color:#FFFFFF;vertical-align:middle;}
+.Z{margin:0px 0px 0px 0px;text-indent:0px;text-align:left;color:#000000;font-family:sans-serif;font-size:9pt;font-weight:bold;font-style:normal;}
+.AA{margin:0px 0px 0px 0px;text-indent:0px;text-align:left;color:#000000;font-family:sans-serif;font-size:9pt;font-weight:normal;font-style:normal;}
+.AB{margin:0px 0px 5px 0px;text-indent:0px;text-align:left;color:#000000;font-family:sans-serif;font-size:12pt;font-weight:bold;font-style:normal;}
+a.l1         { text-decoration:none; font-size: 8pt; font-family: sans-serif; font-weight: normal; }
+a.l1:link    { color:#000000; }
+a.l1:visited { color:#000080; }
+a.l1:hover   { color:#9933CC; }
+a.l1:active  { color:#000000; }
+a.l2         { text-decoration:none; font-size: 12pt; font-family: sans-serif; font-variant: small-caps; }
+a.l2:link    { color:#0066FF; }
+a.l2:visited { color:#FF6600; }
+a.l2:hover   { color:#BC0624; }
+a.l2:active  { color:#BC0024; }
+
+-->
+</STYLE>
+<META NAME="keywords" CONTENT="framework, toolkit, widget, c++, visual, studio, dev-cpp, builder, ide, class, component,wxwidgets, qt, rapid, application, development, rad, mfc, linux, macos, gui, sdl, directx, desktop"><META name="robots" content="index,follow">
+<LINK rel="alternate" type="application/rss+xml" title="SVN changes" href="svnchanges.xml">
+<LINK rel="shortcut icon" type="image/png" href="favicon.png">
+</HEAD><BODY BGCOLOR="#D2D9D2" ALINK="#800000" LINK="#000000" VLINK="#000080"><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%"><TR><TD COLSPAN="3"><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%" BGCOLOR="#FFFFFF" style="border: 1px solid #6E89AE;padding-left: 10px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;"><TR><TD><A HREF="index.html"><IMG SRC="0i.png" ALT="" BORDER="0"></A>
+</TD>
+<TD ALIGN="RIGHT" VALIGN="BOTTOM" STYLE="padding-bottom: 5px; background-image: url('1i.png')"><span style="font-size: 14pt; font-family: sans-serif;"><script type="text/javascript"><!--
+google_ad_client = "pub-1082147624384270";
+google_ad_width = 468;
+google_ad_height = 60;
+google_ad_format = "468x60_as";
+google_ad_type = "text_image";
+google_ad_channel = "";
+google_color_border = "336699";
+google_color_bg = "FFFFFF";
+google_color_link = "0000FF";
+google_color_text = "000000";
+google_color_url = "008000";
+//--></script>
+<script type="text/javascript"
+  src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+&nbsp;&nbsp;</span>
+</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>
+<TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%"><TR><TD COLSPAN="3" BGCOLOR="#D2D9D2" HEIGHT="6"></TD>
+</TR>
+<TR><TD VALIGN="TOP" ALIGN="CENTER"><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="160"><TR><TD ALIGN="CENTER"><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%" BGCOLOR="#FFFFFF" style="border-style: solid; border-width: 1px; border-color: #6E89AE;padding: 0px"><TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px;"><A HREF="www$uppweb$overview$en-us.html" CLASS="l1">Overview</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$examples$en-us.html" CLASS="l1">Examples</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$ss$en-us.html" CLASS="l1">Screenshots</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$comparison$en-us.html" CLASS="l1">Comparisons</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$apps$en-us.html" CLASS="l1">Applications</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$download$en-us.html" CLASS="l1">Download</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$documentation$en-us.html" CLASS="l1">Documentation</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$Tutorials$en-us.html" CLASS="l1">Tutorials</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="app$ide$UppHub$en-us.html" CLASS="l1">UppHub</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$Roadmap$en-us.html" CLASS="l1">Status & Roadmap</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$FAQ$en-us.html" CLASS="l1">FAQ</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="app$ide$About$en-us.html" CLASS="l1">Authors & License</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="https://www.ultimatepp.org/forums" CLASS="l1">Forums</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$Funding$en-us.html" CLASS="l1">Funding U++</A>
+</TD>
+</TR>
+</TABLE>
+<TABLE BORDER="0" WIDTH="100%"><TR><TD></TD>
+</TR>
+</TABLE>
+<TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%" BGCOLOR="#FFFFFF" style="border-style: solid; border-width: 1px; border-color: #6E89AE;padding: 0px"><TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('3i.png'); border: 0px solid black;padding-left:12px; padding-right:0px; padding-top:1px; padding-bottom:1px;color:#FFFFFF;"><B><span style="font-size: 8pt; font-family: sans-serif;">Search on this site</span>
+</B>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:6px; padding-right:0px; padding-top:4px; padding-bottom:4px;border-top: 1px solid #6E89AE;"><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%"><TR><TD><IMG SRC="4i.png" ALT="" BORDER="0"></TD>
+<TD><FORM ACTION="https://www.google.com/search" METHOD="GET" STYLE="margin:0px;padding:0px;"><INPUT TYPE="HIDDEN" NAME="ie" VALUE="UTF-8"><INPUT TYPE="HIDDEN" NAME="oe" VALUE="UTF-8"><INPUT TYPE="TEXT" NAME="q" SIZE="15" MAXLENGTH="256" placeholder="Site search"><INPUT TYPE="HIDDEN" NAME="sitesearch" VALUE="ultimatepp.org"></FORM>
+</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>
+<TABLE BORDER="0" WIDTH="100%"><TR><TD></TD>
+</TR>
+</TABLE>
+<br><div id="fb-root"></div>
+<script type="text/javascript">(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) {return;}
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+<div class="fb-like" data-href="https://www.facebook.com/pages/Upp-Framework/262346610476027?sk=wall" data-send="false" data-layout="button_count" data-width="160" data-show-faces="false" data-font="arial"></div>
+<br><br><script type="text/javascript"><!--
+google_ad_client = "pub-1082147624384270";
+google_ad_width = 160;
+google_ad_height = 600;
+google_ad_format = "160x600_as";
+google_ad_type = "text_image";
+google_ad_channel = "";
+google_color_border = "336699";
+google_color_bg = "FFFFFF";
+google_color_link = "0000FF";
+google_color_text = "000000";
+google_color_url = "008000";
+//--></script>
+<script type="text/javascript"
+  src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script><br><br><script type="text/javascript"><!--
+google_ad_client = "pub-1082147624384270";
+google_ad_width = 160;
+google_ad_height = 90;
+google_ad_format = "160x90_0ads_al_s";
+google_ad_channel = "";
+google_color_border = "336699";
+google_color_bg = "FFFFFF";
+google_color_link = "0000FF";
+google_color_text = "000000";
+google_color_url = "008000";
+//--></script>
+<script type="text/javascript"
+  src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+<br><br><br><br><br><br><A HREF="https://sourceforge.net/projects/upp/"><IMG SRC="https://sourceforge.net/sflogo.php?group_id=93970&amp;type=2" ALT="SourceForge.net Logo" BORDER="0" WIDTH="125" HEIGHT="37"></A>
+<br><br><A HREF="https://flathub.org/en/apps/org.ultimatepp.TheIDE"><IMG SRC="5i.png" ALT="SourceForge.net Logo" BORDER="0" WIDTH="125" HEIGHT="37"></A>
+<br><br><div style="background-color:#ffffff;width:125;height:35"><A HREF="https://github.com/ultimatepp"><IMG SRC="6i.png" ALT="GitHub Logo" BORDER="0" WIDTH="125" HEIGHT="35"></A>
+</div><br><div style="background-color:#ffffff;width:125;height:35"><div style="height:5"></div><A HREF="https://discord.gg/8XzqQzXZzb"><IMG SRC="https://assets-global.website-files.com/6257adef93867e50d84d30e2/636e0b5061df29d55a92d945_full_logo_blurple_RGB.svg" ALT="Discord Logo" BORDER="0" WIDTH="125" HEIGHT="25"></A>
+</div><br></TD>
+</TR>
+</TABLE>
+</TD>
+<TD VALIGN="TOP" BGCOLOR="#D2D9D2"><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="6"><TR><TD></TD>
+</TR>
+</TABLE>
+</TD>
+<TD VALIGN="TOP" WIDTH="100%" BGCOLOR="#D2D9D2"><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" BGCOLOR="#FFFFFF" WIDTH="100%" style="border-style: solid; border-width: 1px; border-color: #6E89AE;padding: 10px;;"><TR><TD><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%"><TR><TD><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr><td width="100%"><table width="100%" class="C"><colgroup><col width="100%"></colgroup>
+<tr><td class="D"><p class="E">TextCtrl</p>
+</td>
+</tr>
+</table></td>
+</tr></table>
+<p class="F">&nbsp;</p>
+<p id="TextCtrl::class" class="G"><span class="H">class</span><span class="I">&nbsp;</span><span class="J">TextCtrl</span><span class="I">&nbsp;:&nbsp;</span><span class="H">public</span><span class="I">&nbsp;</span>Ctrl<span class="I">, </span><span class="H">protected</span><span class="I">&nbsp;</span>TextArrayOps</p>
+<p class="K">A base class that implements operations common for DocEdit (raw text editor where lines - LF delimited sections - are displayed as paragraphs - wrapped when they do not fit the width) and LineEdit.(where lines are simply lines and are never wrapped). TextCtrl works in UNICODE, but is able performing conversions to any of predefined charsets. The Value of TextCtrl is contained text; setting it is the same as using Set method, reading is equivalent to Get method.</p>
+<p class="F">&nbsp;</p>
+<p class="A">&nbsp;</p>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr><td width="100%"><table width="100%" class="L"><colgroup><col width="100%"></colgroup>
+<tr><td class="M"><p class="N">Protected Method List</p>
+</td>
+</tr>
+</table></td>
+</tr></table>
+<p class="F">&nbsp;</p>
+<p id="TextCtrl::SelectionChanged()" class="O"><span class="P">virtual</span> <span class="P">void</span>&nbsp;<span class="Q">SelectionChanged</span>()</p>
+<p class="R">Selection anchor or cursor has changed. (called even when there is no selection, just cursor). If you override this, you should call base-class version in the body.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="TextCtrl::ClearLines()" class="O"><span class="P">virtual</span> <span class="P">void</span>&nbsp;<span class="Q">ClearLines</span>()</p>
+<p class="R">The content was removed (e.g. Clear or Load operations). If you override this, you should call base-class version in the body.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="TextCtrl::InsertLines(int,int)" class="O"><span class="P">virtual</span> <span class="P">void</span>&nbsp;<span class="Q">InsertLines</span>(<span class="P">int</span>&nbsp;<span class="S">line</span>, <span class="P">int</span>&nbsp;<span class="S">count</span>)</p>
+<p class="R"><span class="S">count</span> lines at <span class="S">line</span> position were inserted. If you override this, you should call base-class version in the body.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="TextCtrl::RemoveLines(int,int)" class="O"><span class="P">virtual</span> <span class="P">void</span>&nbsp;<span class="Q">RemoveLines</span>(<span class="P">int</span>&nbsp;<span class="S">line</span>, <span class="P">int</span>&nbsp;<span class="S">count</span>)</p>
+<p class="R"><span class="S">count</span> lines at <span class="S">line</span> position were removed. If you override this, you should call base-class version in the body.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="TextCtrl::PreInsert(int,const WString&)" class="O"><span class="P">virtual</span> <span class="P">void</span>&nbsp;<span class="Q">PreInsert</span>(<span class="P">int</span>&nbsp;<span class="S">pos</span>, <span class="P">const</span>&nbsp;<a href="WString"><u>WString</u></a><span class="P">&amp;</span>&nbsp;<span class="S">text</span>)</p>
+<p class="R">Called before any <span class="S">text</span> gets inserted at <span class="S">pos.</span> If you override this, you should call base-class version in the body.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="TextCtrl::PostInsert(int,const WString&)" class="O"><span class="P">virtual</span> <span class="P">void</span>&nbsp;<span class="Q">PostInsert</span>(<span class="P">int</span>&nbsp;<span class="S">pos</span>, <span class="P">const</span>&nbsp;<a href="WString"><u>WString</u></a><span class="P">&amp;</span>&nbsp;<span class="S">text</span>)</p>
+<p class="R">Called after <span class="S">text</span> was inserted at <span class="S">pos.</span> If you override this, you should call base-class version in the body.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="TextCtrl::PreRemove(int,int)" class="O"><span class="P">virtual</span> <span class="P">void</span>&nbsp;<span class="Q">PreRemove</span>(<span class="P">int</span>&nbsp;<span class="S">pos</span>, <span class="P">int</span>&nbsp;<span class="S">size</span>)</p>
+<p class="R">Called before <span class="S">size</span> characters get removed from the <span class="S">pos</span>. If you override this, you should call base-class version in the body.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="TextCtrl::PostRemove(int,int)" class="O"><span class="P">virtual</span> <span class="P">void</span>&nbsp;<span class="Q">PostRemove</span>(<span class="P">int</span>&nbsp;<span class="S">pos</span>, <span class="P">int</span>&nbsp;<span class="S">size</span>)</p>
+<p class="R">Called after <span class="S">size</span> characters was removed from the <span class="S">pos</span>. &nbsp;If you override this, you should call base-class version in the body.</p>
+<p class="F">&nbsp;</p>
+<p class="A">&nbsp;</p>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr><td width="100%"><table width="100%" class="L"><colgroup><col width="100%"></colgroup>
+<tr><td class="M"><p class="N">Public Method List</p>
+</td>
+</tr>
+</table></td>
+</tr></table>
+<p class="F">&nbsp;</p>
+<p id="TextCtrl::RefreshLine(int)" class="O"><span class="P">virtual</span> <span class="P">void</span>&nbsp;<span class="Q">RefreshLine</span>(<span class="P">int</span>&nbsp;<span class="S">i</span>)</p>
+<p class="R">This virtual method is called by TextCtrl when the content of line <span class="S">i</span> is changed. If you override this, you should call base-class version in the body.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="TextCtrl::WhenBar" class="T"><a href="Callback1"><span class="U"><u>Callback1</u></span></a><span class="H">&lt;</span><span class="U">Bar</span><span class="H">&amp;&gt;</span><span class="U">&nbsp;</span>WhenBar</p>
+<p class="R">This callback is invoked when user right-clicks the widget and should specify local menu. It is initialized by the constructor to the StdBar method. &nbsp;</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="TextCtrl::WhenState" class="T"><a href="Callback"><span class="U"><u>Callback</u></span></a><span class="U">&nbsp;</span>WhenState</p>
+<p class="R">This callback is invoked when the status of widget changes from not-modified to modified (&quot;dirty&quot;) or back.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="TextCtrl::WhenSel" class="T"><a href="Callback"><span class="U"><u>Callback</u></span></a><span class="U">&nbsp;</span>WhenSel</p>
+<p class="R">Called when cursor or selection changes.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Upp::TextCtrl::WhenViewLoading" class="T"><a href="Upp::Event"><span class="U"><u>Event</u></span></a><span class="U">&lt;</span><a href="Upp::int64"><span class="U"><u>int64</u></span></a><span class="U">&gt;&nbsp;</span>WhenViewMapping</p>
+<p class="R">Called during mapping view stream with current position in the stream.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="TextCtrl::CachePos(int)" class="O"><span class="P">void</span>&nbsp;<span class="Q">CachePos</span>(<span class="P">int</span>&nbsp;<span class="S">pos</span>)</p>
+<p class="R">This is specific optimization hint to the widget saying that following operations will be performed near <span class="S">pos</span>. Unlikely to be used in the client code.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="TextCtrl::CacheLinePos(int)" class="O"><span class="P">void</span>&nbsp;<span class="Q">CacheLinePos</span>(<span class="P">int</span>&nbsp;<span class="S">linei</span>)</p>
+<p class="R">This is specific optimization hint to the widget saying that following operations will be performed near line <span class="S">linei</span>. Unlikely to be used in the client code.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="TextCtrl::Load(Stream&,byte)" class="O"><span class="P">int</span>&nbsp;<span class="Q">Load</span>(<a href="Stream"><u>Stream</u></a><span class="P">&amp;</span>&nbsp;<span class="S">s</span>, <a href="byte"><u>byte</u></a>&nbsp;<span class="S">charset</span>&nbsp;=&nbsp;CHARSET_DEFAULT)</p>
+<p class="R">Loads the text from the stream with defined <span class="S">charset</span>. Function returns the detected line endings mode - LE_CRLF, LE_LF or LE_DEFAULT if there were no line endings in the file. If file is bigger then the limit set by MaxLength, editor is put into 'truncated' and read-only mode.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="TextCtrl::IsTruncated()const" class="V">bool<span class="J">&nbsp;</span><span class="W">IsTruncated</span><span class="J">()&nbsp;</span>const</p>
+<p class="R">Indicates that last Load had to truncate the size because of MaxLength limit.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="TextCtrl::Save(Stream&,byte,int)const" class="V">void<span class="J">&nbsp;</span><span class="W">Save</span><span class="J">(</span><a href="Stream"><span class="J"><u>Stream</u></span></a>&amp;<span class="J">&nbsp;</span><span class="S">s</span><span class="J">, </span><a href="byte"><span class="J"><u>byte</u></span></a><span class="J">&nbsp;</span><span class="S">charset</span><span class="J">&nbsp;=&nbsp;CHARSET_DEFAULT, </span>int<span class="J">&nbsp;</span><span class="S">line_endings</span><span class="J">&nbsp;=&nbsp;LE_DEFAULT)&nbsp;</span>const</p>
+<p class="R">Saves the text to the stream with defined <span class="S">charset</span>. Characters that cannot be represented in suggested <span class="S">charset</span> are saved as '?'. <span class="S">line_endings</span> parameter sets the line ending mode. LE_DEFAULT uses platform specific line endings (CRLF in Windows, LF in POSIX), LE_CRLF sets CRLF line endings, LE_LF sets LF line endings). If IsTruncated is true, Save is blocked.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="TextCtrl::GetInvalidCharPos(byte)const" class="V">int<span class="J">&nbsp;</span><span class="W">GetInvalidCharPos</span><span class="J">(</span><a href="byte"><span class="J"><u>byte</u></span></a><span class="J">&nbsp;</span><span class="S">charset</span><span class="J">&nbsp;=&nbsp;CHARSET_DEFAULT)&nbsp;</span>const</p>
+<p class="R">Returns the position of the first character that cannot be represented <span class="S">charset</span>. If there is none, returns negative value.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="TextCtrl::CheckCharset(byte)const" class="V">bool<span class="J">&nbsp;</span><span class="W">CheckCharset</span><span class="J">(</span><a href="byte"><span class="J"><u>byte</u></span></a><span class="J">&nbsp;</span><span class="S">charset</span><span class="J">&nbsp;=&nbsp;CHARSET_DEFAULT)&nbsp;</span>const</p>
+<p class="R">Same as GetInvalidCharPos(charset) &lt; 0.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="TextCtrl::Set(const WString&)" class="O"><span class="P">void</span>&nbsp;<span class="Q">Set</span>(<span class="P">const</span>&nbsp;<a href="WString"><u>WString</u></a><span class="P">&amp;</span>&nbsp;<span class="S">s</span>)</p>
+<p id="TextCtrl::Set(const String&,byte)" class="O"><span class="P">void</span>&nbsp;<span class="Q">Set</span>(<span class="P">const</span>&nbsp;<a href="String"><u>String</u></a><span class="P">&amp;</span>&nbsp;<span class="S">s</span>, <a href="byte"><u>byte</u></a>&nbsp;<span class="S">charset</span>&nbsp;=&nbsp;CHARSET_DEFAULT)</p>
+<p class="R">Sets the text in the widget.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="TextCtrl::Get(byte)const" class="V"><a href="String"><span class="J"><u>String</u></span></a><span class="J">&nbsp;</span><span class="W">Get</span><span class="J">(</span><a href="byte"><span class="J"><u>byte</u></span></a><span class="J">&nbsp;</span><span class="S">charset</span><span class="J">&nbsp;=&nbsp;CHARSET_DEFAULT)&nbsp;</span>const</p>
+<p class="R">Gets the text in the widget.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Upp::TextCtrl::Get(Upp::int64,int,Upp::byte)const" class="V"><a href="Upp::String"><span class="J"><u>String</u></span></a><span class="J">&nbsp;</span><span class="W">Get</span><span class="J">(</span><a href="Upp::int64"><span class="J"><u>int64</u></span></a><span class="J">&nbsp;</span><span class="S">pos</span><span class="J">, </span>int<span class="J">&nbsp;</span><span class="S">size</span><span class="J">, </span><a href="Upp::byte"><span class="J"><u>byte</u></span></a><span class="J">&nbsp;</span><span class="S">charset</span><span class="J">&nbsp;=&nbsp;CHARSET_DEFAULT)&nbsp;</span>const</p>
+<p class="R">Gets the part of text in the widget.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Upp::TextCtrl::GetW(Upp::int64,int)const" class="V"><a href="Upp::WString"><span class="J"><u>WString</u></span></a><span class="J">&nbsp;</span><span class="W">GetW</span><span class="J">(</span><a href="Upp::int64"><span class="J"><u>int64</u></span></a><span class="J">&nbsp;</span><span class="S">pos</span><span class="J">, </span>int<span class="J">&nbsp;</span><span class="S">size</span><span class="J">)&nbsp;</span>const</p>
+<p class="R">Gets the part of text in the widget in UNICODE.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="TextCtrl::GetW()const" class="V"><a href="WString"><span class="J"><u>WString</u></span></a><span class="J">&nbsp;</span><span class="W">GetW</span><span class="J">()&nbsp;</span>const</p>
+<p class="R">Gets the text in the widget in UNICODE.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="TextCtrl::ClearDirty()" class="O"><span class="P">void</span>&nbsp;<span class="Q">ClearDirty</span>()</p>
+<p class="R">Clears dirty flag. Note that the difference between &quot;dirty&quot; flag and &quot;modified&quot; flag of Ctrl interface is that &quot;dirty&quot; flag can get cleared by undo operation, when the text is restored to the original state (one after setting it or at ClearDirty).</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="TextCtrl::IsDirty()const" class="V">bool<span class="J">&nbsp;</span><span class="W">IsDirty</span><span class="J">()&nbsp;</span>const</p>
+<p class="R">Tests if text is different from &quot;original&quot; state (one after setting it or at ClearDirty).</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="TextCtrl::Clear()" class="O"><span class="P">void</span>&nbsp;<span class="Q">Clear</span>()</p>
+<p class="R">Empties the text.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Upp::TextCtrl::GetLine(Upp::int64)const" class="V">int<span class="J">&nbsp;</span><span class="W">GetLine</span><span class="J">(</span><a href="Upp::int64"><span class="J"><u>int64</u></span></a><span class="J">&nbsp;</span><span class="S">pos</span><span class="J">)&nbsp;</span>const</p>
+<p class="R">Similar to GetLinePos, but does not alter <span class="S">pos</span> parameter.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="TextCtrl::GetLinePos(int&)const" class="V">int<span class="J">&nbsp;</span><span class="W">GetLinePos</span><span class="J">(</span>int&amp;<span class="J">&nbsp;</span><span class="S">pos</span><span class="J">)&nbsp;</span>const</p>
+<p class="R">Returns the line where character at offset <span class="S">pos</span> resides; <span class="S">pos</span> is altered to contain the position withing the line.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="TextCtrl::GetPos(int,int)const" class="V">int<span class="J">&nbsp;</span><span class="W">GetPos</span><span class="J">(</span>int<span class="J">&nbsp;</span><span class="S">line</span><span class="J">, </span>int<span class="J">&nbsp;</span><span class="S">column</span><span class="J">)&nbsp;</span>const</p>
+<p class="R">Returns the offset of character at <span class="S">line</span> and <span class="S">column</span> index within the line.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="TextCtrl::GetPos(int)const" class="V">int<span class="J">&nbsp;</span><span class="W">GetPos</span><span class="J">(</span>int<span class="J">&nbsp;</span><span class="S">line</span><span class="J">)&nbsp;</span>const</p>
+<p class="R">Same as GetPos(<span class="S">line</span>, 0).</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="TextCtrl::GetUtf8Line(int)const" class="V">const<span class="J">&nbsp;</span><a href="String"><span class="J"><u>String</u></span></a>&amp;<span class="J">&nbsp;</span><span class="W">GetUtf8Line</span><span class="J">(</span>int<span class="J">&nbsp;</span><span class="S">i</span><span class="J">)&nbsp;</span>const</p>
+<p class="R">Returns the line <span class="S">i</span> in UTF-8 encoding.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="TextCtrl::GetWLine(int)const" class="V"><a href="WString"><span class="J"><u>WString</u></span></a><span class="J">&nbsp;</span><span class="W">GetWLine</span><span class="J">(</span>int<span class="J">&nbsp;</span><span class="S">i</span><span class="J">)&nbsp;</span>const</p>
+<p class="R">Returns the line <span class="S">i</span> in UNICODE.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="TextCtrl::GetEncodedLine(int,byte)const" class="V"><a href="String"><span class="J"><u>String</u></span></a><span class="J">&nbsp;</span><span class="W">GetEncodedLine</span><span class="J">(</span>int<span class="J">&nbsp;</span><span class="S">i</span><span class="J">, </span><a href="byte"><span class="J"><u>byte</u></span></a><span class="J">&nbsp;</span><span class="S">charset</span><span class="J">&nbsp;=&nbsp;CHARSET_DEFAULT)&nbsp;</span>const</p>
+<p class="R">Returns the line <span class="S">i</span> required encoding.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="TextCtrl::GetLineLength(int)const" class="V">int<span class="J">&nbsp;</span><span class="W">GetLineLength</span><span class="J">(</span>int<span class="J">&nbsp;</span><span class="S">i</span><span class="J">)&nbsp;</span>const</p>
+<p class="R">Returns the length of line <span class="S">i</span>.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="TextCtrl::GetLineCount()const" class="V">int<span class="J">&nbsp;</span><span class="W">GetLineCount</span><span class="J">()&nbsp;</span>const</p>
+<p class="R">Returns the number of lines.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Upp::TextCtrl::GetChar(Upp::int64)const" class="V">int<span class="J">&nbsp;</span><span class="W">GetChar</span><span class="J">(</span><a href="Upp::int64"><span class="J"><u>int64</u></span></a><span class="J">&nbsp;</span><span class="S">pos</span><span class="J">)&nbsp;</span>const</p>
+<p id="Upp::TextCtrl::operator[](Upp::int64)const" class="V">int<span class="J">&nbsp;</span><span class="W">operator[]</span><span class="J">(</span><a href="Upp::int64"><span class="J"><u>int64</u></span></a><span class="J">&nbsp;</span><span class="S">pos</span><span class="J">)&nbsp;</span>const</p>
+<p class="R">Returns the UNICODE character at <span class="S">pos</span> offset.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Upp::TextCtrl::GetChar()const" class="V">int<span class="J">&nbsp;</span><span class="W">GetChar</span><span class="J">()&nbsp;</span>const</p>
+<p class="R">Returns UNICODE character at cursor, or 0 if cursor is behind the last character.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="TextCtrl::GetLength()const" class="V">int<span class="J">&nbsp;</span><span class="W">GetLength</span><span class="J">()&nbsp;</span>const</p>
+<p class="R">Returns the total number of characters in the text.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="TextCtrl::GetCursor()const" class="V">int<span class="J">&nbsp;</span><span class="W">GetCursor</span><span class="J">()&nbsp;</span>const</p>
+<p class="R">Returns the position of cursor.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Upp::TextCtrl::GetCursorLine()const" class="V">int<span class="J">&nbsp;</span><span class="W">GetCursorLine</span><span class="J">()&nbsp;</span>const</p>
+<p class="R">Same as GetLine(GetCursor).</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Upp::TextCtrl::SetSelection(Upp::int64,Upp::int64)" class="O"><span class="P">void</span>&nbsp;<span class="Q">SetSelection</span>(<a href="Upp::int64"><u>int64</u></a>&nbsp;<span class="S">anchor</span>&nbsp;=&nbsp;<span class="X">0</span>, <a href="Upp::int64"><u>int64</u></a>&nbsp;<span class="S">cursor</span>&nbsp;=&nbsp;<span class="X">2147483647</span>&nbsp;)</p>
+<p class="R">Sets the selection. If <span class="S">anchor</span> or <span class="S">cursor</span> are out of range, they are &quot;fixed&quot;. If they are equal, method changes the position of cursor.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="TextCtrl::IsSelection()const" class="V">bool<span class="J">&nbsp;</span><span class="W">IsSelection</span><span class="J">()&nbsp;</span>const</p>
+<p class="R">Tests whether there is non-empty normal selection.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="TextCtrl::IsRectSelection()const" class="V">bool<span class="J">&nbsp;</span><span class="W">IsRectSelection</span><span class="J">()&nbsp;</span>const</p>
+<p class="R">Returns true if there is rectangular selection.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="TextCtrl::IsAnySelection()const" class="V">bool<span class="J">&nbsp;</span><span class="W">IsAnySelection</span><span class="J">()&nbsp;</span>const</p>
+<p class="R">Returns true if there is either rectangular or normal selection.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="TextCtrl::GetSelection(int&,int&)const" class="V">bool<span class="J">&nbsp;</span><span class="W">GetSelection</span><span class="J">(</span>int&amp;<span class="J">&nbsp;</span><span class="S">l</span><span class="J">, </span>int&amp;<span class="J">&nbsp;</span><span class="S">h</span><span class="J">)&nbsp;</span>const</p>
+<p id="Upp::TextCtrl::GetSelection(Upp::int64&,Upp::int64&)const" class="V">bool<span class="J">&nbsp;</span><span class="W">GetSelection</span><span class="J">(</span><a href="Upp::int64"><span class="J"><u>int64</u></span></a>&amp;<span class="J">&nbsp;</span><span class="S">l</span><span class="J">, </span><a href="Upp::int64"><span class="J"><u>int64</u></span></a>&amp;<span class="J">&nbsp;</span><span class="S">h</span><span class="J">)&nbsp;</span>const</p>
+<p class="R">Returns the selection lower and upper bounds. int64 version is only useful in view mode. In view mode, 32 bit version returns false if the range is larger than 2GB.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="TextCtrl::GetSelection(byte)const" class="V"><a href="String"><span class="J"><u>String</u></span></a><span class="J">&nbsp;</span><span class="W">GetSelection</span><span class="J">(</span><a href="byte"><span class="J"><u>byte</u></span></a><span class="J">&nbsp;</span><span class="S">charset</span><span class="J">&nbsp;=&nbsp;CHARSET_DEFAULT)&nbsp;</span>const</p>
+<p class="R">Returns the selected text in given <span class="S">charset</span>.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="TextCtrl::GetSelectionW()const" class="V"><a href="WString"><span class="J"><u>WString</u></span></a><span class="J">&nbsp;</span><span class="W">GetSelectionW</span><span class="J">()&nbsp;</span>const</p>
+<p class="R">Returns the selected text in UNICODE.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="TextCtrl::ClearSelection()" class="O"><span class="P">void</span>&nbsp;<span class="Q">ClearSelection</span>()</p>
+<p class="R">Cancels the selection.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="TextCtrl::RemoveSelection()" class="O"><span class="P">bool</span>&nbsp;<span class="Q">RemoveSelection</span>()</p>
+<p class="R">Deletes the selection text.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Upp::TextCtrl::SetCursor(Upp::int64)" class="O"><span class="P">void</span>&nbsp;<span class="Q">SetCursor</span>(<a href="Upp::int64"><u>int64</u></a>&nbsp;<span class="S">cursor</span>)</p>
+<p class="R">Places cursor at new position.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="TextCtrl::Paste(const WString&)" class="O"><span class="P">int</span>&nbsp;<span class="Q">Paste</span>(<span class="P">const</span>&nbsp;<a href="WString"><u>WString</u></a><span class="P">&amp;</span>&nbsp;<span class="S">text</span>)</p>
+<p class="R">Pastes <span class="S">text</span> at current cursor position.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="TextCtrl::Insert(int,const WString&)" class="O"><span class="P">int</span>&nbsp;<span class="Q">Insert</span>(<span class="P">int</span>&nbsp;<span class="S">pos</span>, <span class="P">const</span>&nbsp;<a href="WString"><u>WString</u></a><span class="P">&amp;</span>&nbsp;<span class="S">txt</span>)</p>
+<p class="R">Inserts <span class="S">txt</span> at <span class="S">pos</span>. Returns a number of characters inserted.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="TextCtrl::Insert(int,const String&,byte)" class="O"><span class="P">int</span>&nbsp;<span class="Q">Insert</span>(<span class="P">int</span>&nbsp;<span class="S">pos</span>, <span class="P">const</span>&nbsp;<a href="String"><u>String</u></a><span class="P">&amp;</span>&nbsp;<span class="S">txt</span>, <a href="byte"><u>byte</u></a>&nbsp;<span class="S">charset</span>&nbsp;=&nbsp;CHARSET_DEFAULT)</p>
+<p class="R">Inserts <span class="S">txt</span> encoded with <span class="S">charset </span>at <span class="S">pos</span>. Returns a number of characters inserted.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="TextCtrl::Insert(int,const char*)" class="O"><span class="P">int</span>&nbsp;<span class="Q">Insert</span>(<span class="P">int</span>&nbsp;<span class="S">pos</span>, <span class="P">const</span>&nbsp;<span class="P">char</span>&nbsp;*<span class="S">txt</span>)</p>
+<p class="R">Inserts <span class="S">txt</span> at <span class="S">pos</span> using default charset. Returns a number of characters inserted.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="TextCtrl::Remove(int,int)" class="O"><span class="P">void</span>&nbsp;<span class="Q">Remove</span>(<span class="P">int</span>&nbsp;<span class="S">pos</span>, <span class="P">int</span>&nbsp;<span class="S">size</span>)</p>
+<p class="R">Removes the text.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Upp::TextCtrl::Append(const Upp::WString&)" class="O"><span class="P">int</span>&nbsp;<span class="Q">Append</span>(<span class="P">const</span>&nbsp;<a href="Upp::WString"><u>WString</u></a><span class="P">&amp;</span>&nbsp;<span class="S">txt</span>)</p>
+<p class="R">Same as Insert(GetLength(), <span class="S">txt</span>).</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Upp::TextCtrl::Append(const Upp::String&,Upp::byte)" class="O"><span class="P">int</span>&nbsp;<span class="Q">Append</span>(<span class="P">const</span>&nbsp;<a href="Upp::String"><u>String</u></a><span class="P">&amp;</span>&nbsp;<span class="S">txt</span>, <a href="Upp::byte"><u>byte</u></a>&nbsp;<span class="S">charset</span>&nbsp;=&nbsp;CHARSET_DEFAULT)</p>
+<p class="R">Same as Insert(GetLength(), <span class="S">txt</span>, <span class="S">charset</span>).</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Upp::TextCtrl::Append(const char*)" class="O"><span class="P">int</span>&nbsp;<span class="Q">Append</span>(<span class="P">const</span>&nbsp;<span class="P">char</span>&nbsp;*<span class="S">txt</span>)</p>
+<p class="R">Same as Append(WString(<span class="S">txt</span>)).</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="TextCtrl::NextUndo()" class="O"><span class="P">void</span>&nbsp;<span class="Q">NextUndo</span>()</p>
+<p class="R">Marks the beginning of next undo block. All text altering operations (inserts and removes) are recorded into undo buffer in sections where each sections represents single user action. NextUndo tells TextCtrl that the next altering operation belongs to the new section. Note that NextUndo does not create a new section (yet); calling it twice without any altering operation in between is the same as calling it once.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="TextCtrl::Undo()" class="O"><span class="P">void</span>&nbsp;<span class="Q">Undo</span>()</p>
+<p class="R">Performs undo.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="TextCtrl::Redo()" class="O"><span class="P">void</span>&nbsp;<span class="Q">Redo</span>()</p>
+<p class="R">Performs redo.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="TextCtrl::IsUndo()const" class="V">bool<span class="J">&nbsp;</span><span class="W">IsUndo</span><span class="J">()&nbsp;</span>const</p>
+<p class="R">Tests whether there are some undo records.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="TextCtrl::IsRedo()const" class="V">bool<span class="J">&nbsp;</span><span class="W">IsRedo</span><span class="J">()&nbsp;</span>const</p>
+<p class="R">Tests whether there are some redo records.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="TextCtrl::ClearUndo()" class="O"><span class="P">void</span>&nbsp;<span class="Q">ClearUndo</span>()</p>
+<p class="R">Clears all undo and redo records.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="TextCtrl::ClearRedo()" class="O"><span class="P">void</span>&nbsp;<span class="Q">ClearRedo</span>()</p>
+<p class="R">Clears redo records.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="TextCtrl::PickUndoData()" class="O"><a href="TextCtrl::UndoData"><u>UndoData</u></a>&nbsp;<span class="Q">PickUndoData</span>()</p>
+<p class="R">Picks undo and redo record. This is useful when single widget is used to edit various text, this allows to change undo/redo records with the text. Must be followed by either SetPickUndoData or ClearUndo before performing any text altering operation.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Upp::TextCtrl::SetPickUndoData(Upp::TextCtrl::UndoData&&)" class="O"><span class="P">void</span>&nbsp;<span class="Q">SetPickUndoData</span>(<a href="Upp::TextCtrl::UndoData"><u>TextCtrl::UndoData</u></a><span class="P">&amp;&amp;</span>&nbsp;<span class="S">data</span>)</p>
+<p class="R">Sets the undo/redo records. <span class="X">data</span> is picked (destroyed) during the operation.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="TextCtrl::Cut()" class="O"><span class="P">void</span>&nbsp;<span class="Q">Cut</span>()</p>
+<p class="R">Performs Cut.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="TextCtrl::Copy()" class="O"><span class="P">void</span>&nbsp;<span class="Q">Copy</span>()</p>
+<p class="R">Performs Copy.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="TextCtrl::Paste()" class="O"><span class="P">void</span>&nbsp;<span class="Q">Paste</span>()</p>
+<p class="R">Performs Paste.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="TextCtrl::SelectAll()" class="O"><span class="P">void</span>&nbsp;<span class="Q">SelectAll</span>()</p>
+<p class="R">Selects the whole text.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="TextCtrl::StdBar(Bar&)" class="O"><span class="P">void</span>&nbsp;<span class="Q">StdBar</span>(<a href="Bar"><u>Bar</u></a><span class="P">&amp;</span>&nbsp;<span class="S">menu</span>)</p>
+<p class="R">Provides the standard local <span class="S">menu</span>.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="TextCtrl::SetCharset(byte)" class="O"><span class="P">void</span>&nbsp;<span class="Q">SetCharset</span>(<a href="byte"><u>byte</u></a>&nbsp;<span class="S">cs</span>)</p>
+<p class="R">Sets the input character encoding of widget. This character set is used to decide which characters can be entered by the user into the text.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="TextCtrl::GetCharset()const" class="V"><a href="byte"><span class="J"><u>byte</u></span></a><span class="J">&nbsp;</span><span class="W">GetCharset</span><span class="J">()&nbsp;</span>const</p>
+<p class="R">Returns the value set by SetCharset.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="TextCtrl::SetColor(int,Color)" class="O"><span class="P">void</span>&nbsp;<span class="Q">SetColor</span>(<span class="P">int</span>&nbsp;<span class="S">i</span>, <a href="Color"><u>Color</u></a>&nbsp;<span class="S">c</span>)</p>
+<p class="R">Sets one of colors used to display the text.</p>
+<p class="F">&nbsp;</p>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr><td><table border="0" width= 57px><tr><td></td></tr></table></td>
+<td width="100%"><table width="100%" class="C"><colgroup><col width="44%"><col width="55%"></colgroup>
+<tr><td class="Y"><p class="Z"><span class="U">TextCtrl::</span>INK_NORMAL</p>
+</td>
+<td class="Y"><p class="AA">Normal text color.</p>
+</td>
+</tr>
+<tr><td class="Y"><p class="Z"><span class="U">TextCtrl::</span>INK_DISABLED</p>
+</td>
+<td class="Y"><p class="AA">Text color when widget is disabled. </p>
+</td>
+</tr>
+<tr><td class="Y"><p class="Z"><span class="U">TextCtrl::</span>INK_SELECTED</p>
+</td>
+<td class="Y"><p class="AA">Selected text color.</p>
+</td>
+</tr>
+<tr><td class="Y"><p class="Z"><span class="U">TextCtrl::</span>PAPER_NORMAL</p>
+</td>
+<td class="Y"><p class="AA">Normal paper color.</p>
+</td>
+</tr>
+<tr><td class="Y"><p class="Z"><span class="U">TextCtrl::</span>PAPER_READONLY</p>
+</td>
+<td class="Y"><p class="AA">Paper color when widget is read-only.</p>
+</td>
+</tr>
+<tr><td class="Y"><p class="Z"><span class="U">TextCtrl::</span>PAPER_SELECTED</p>
+</td>
+<td class="Y"><p class="AA">Selected paper color.</p>
+</td>
+</tr>
+<tr><td class="Y"><p class="Z"><span class="U">TextCtrl::</span>COLOR_COUNT</p>
+</td>
+<td class="Y"><p class="AA">Total number of color indexes.</p>
+</td>
+</tr>
+</table></td>
+<td><table border="0" width= 172px><tr><td></td></tr></table></td></tr></table>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="TextCtrl::GetColor(int)const" class="V"><a href="Color"><span class="J"><u>Color</u></span></a><span class="J">&nbsp;</span><span class="W">GetColor</span><span class="J">(</span>int<span class="J">&nbsp;</span><span class="S">i</span><span class="J">)&nbsp;</span>const</p>
+<p class="R">Gets the color used to display the text.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Upp::TextCtrl::View(Upp::Stream&,Upp::byte)" class="O"><span class="P">int</span>&nbsp;<span class="Q">View</span>(<a href="Upp::Stream"><u>Stream</u></a><span class="P">&amp;</span>&nbsp;<span class="S">s</span>, <a href="Upp::byte"><u>byte</u></a>&nbsp;<span class="S">charset</span>&nbsp;=&nbsp;CHARSET_DEFAULT)</p>
+<p class="R">Initiates the view mode. In view mode, file is not loaded, but displayed while loading it from the stream as necessary. TextCtrl retains a reference to <span class="S">s</span> so it must exist for the whole time it is displayed in TextCtrl. TextCtrl is in read-only mode for view operations. View allows viewing of files &gt;2GB, therefore some functions have 64-bit counterparts working in view mode only. View actually needs to scan the file to create a map of file; this operation is performed in background (via PostCallbacks), application can use SerializeViewMap to store cache this map for particular file.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Upp::TextCtrl::WaitView(int,bool)" class="O"><span class="P">void</span>&nbsp;<span class="Q">WaitView</span>(<span class="P">int</span>&nbsp;<span class="S">line</span>, <span class="P">bool</span>&nbsp;<span class="S">progress</span>)</p>
+<p class="R">While mapping of file for view is in progress, makes sure that the file is mapped up to <span class="S">line</span> or EOF. If <span class="S">progress</span> is true, progress is displayed.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Upp::TextCtrl::LockViewMapping()" class="O"><span class="P">void</span>&nbsp;<span class="Q">LockViewMapping</span>()</p>
+<p class="R">Stops background mapping of file for view.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Upp::TextCtrl::UnlockViewMapping()" class="O"><span class="P">void</span>&nbsp;<span class="Q">UnlockViewMapping</span>()</p>
+<p class="R">Continues mapping of file for view.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Upp::TextCtrl::SerializeViewMap(Upp::Stream&)" class="O"><span class="P">void</span>&nbsp;<span class="Q">SerializeViewMap</span>(<a href="Upp::Stream"><u>Stream</u></a><span class="P">&amp;</span>&nbsp;<span class="S">s</span>)</p>
+<p class="R">Serializes the file view map.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Upp::TextCtrl::IsView()const" class="V">bool<span class="J">&nbsp;</span><span class="W">IsView</span><span class="J">()&nbsp;</span>const</p>
+<p class="R">Returns true if TextCtrl is in view mode.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Upp::TextCtrl::GetViewSize()const" class="V"><a href="Upp::int64"><span class="J"><u>int64</u></span></a><span class="J">&nbsp;</span><span class="W">GetViewSize</span><span class="J">()&nbsp;</span>const</p>
+<p class="R">Returns GetSize of view stream.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Upp::TextCtrl::GetLinePos64(Upp::int64&)const" class="V">int<span class="J">&nbsp;</span><span class="W">GetLinePos64</span><span class="J">(</span><a href="Upp::int64"><span class="J"><u>int64</u></span></a>&amp;<span class="J">&nbsp;</span><span class="S">pos</span><span class="J">)&nbsp;</span>const</p>
+<p id="Upp::TextCtrl::GetPos64(int,int)const" class="V"><a href="Upp::int64"><span class="J"><u>int64</u></span></a><span class="J">&nbsp;</span><span class="W">GetPos64</span><span class="J">(</span>int<span class="J">&nbsp;</span><span class="S">ln</span><span class="J">, </span>int<span class="J">&nbsp;</span><span class="S">lpos</span><span class="J">)&nbsp;</span>const</p>
+<p id="Upp::TextCtrl::GetLength64()const" class="V"><a href="Upp::int64"><span class="J"><u>int64</u></span></a><span class="J">&nbsp;</span><span class="W">GetLength64</span><span class="J">()&nbsp;</span>const</p>
+<p id="Upp::TextCtrl::GetCursor64()const" class="V"><a href="Upp::int64"><span class="J"><u>int64</u></span></a><span class="J">&nbsp;</span><span class="W">GetCursor64</span><span class="J">()&nbsp;</span>const</p>
+<p class="R">These are variants of GetLinePos, GetPos, GetLength and GetCursor64 for view mode (where values &gt; INT_MAX are possible).</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="TextCtrl::UndoSteps(int)" class="O"><a href="TextCtrl"><u>TextCtrl</u></a><span class="P">&amp;</span>&nbsp;<span class="Q">UndoSteps</span>(<span class="P">int</span>&nbsp;<span class="S">n</span>)</p>
+<p class="R">Sets the maximum number of undo steps.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="TextCtrl::ProcessTab(bool)" class="O"><a href="TextCtrl"><u>TextCtrl</u></a><span class="P">&amp;</span>&nbsp;<span class="Q">ProcessTab</span>(<span class="P">bool</span>&nbsp;<span class="S">b</span>&nbsp;=&nbsp;<span class="P">true</span>)</p>
+<p class="R">If active (default), widget accepts K_TAB keystrokes (inserts '\t').</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="TextCtrl::NoProcessTab()" class="O"><a href="TextCtrl"><u>TextCtrl</u></a><span class="P">&amp;</span>&nbsp;<span class="Q">NoProcessTab</span>()</p>
+<p class="R">Same as ProcessTab(false).</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="TextCtrl::ProcessEnter(bool)" class="O"><a href="TextCtrl"><u>TextCtrl</u></a><span class="P">&amp;</span>&nbsp;<span class="Q">ProcessEnter</span>(<span class="P">bool</span>&nbsp;<span class="S">b</span>&nbsp;=&nbsp;<span class="P">true</span>)</p>
+<p class="R">If active (non-default), widget accepts K_ENTER keystrokes (inserts a new line).</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="TextCtrl::NoProcessEnter()" class="O"><a href="TextCtrl"><u>TextCtrl</u></a><span class="P">&amp;</span>&nbsp;<span class="Q">NoProcessEnter</span>()</p>
+<p class="R">Same as ProcessEnter(false).</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="TextCtrl::NoBackground(bool)" class="O"><a href="TextCtrl"><u>TextCtrl</u></a><span class="P">&amp;</span>&nbsp;<span class="Q">NoBackground</span>(<span class="P">bool</span>&nbsp;<span class="S">b</span>&nbsp;=&nbsp;<span class="P">true</span>)</p>
+<p class="R">Sets the widget into transparent mode - background is not painted and Transparent is activated - a result, anything painted behind the widget is visible, allowing client code to provide any background it needs.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="TextCtrl::MaxLength(int)" class="O"><a href="TextCtrl"><u>TextCtrl</u></a><span class="P">&amp;</span>&nbsp;<span class="Q">MaxLength</span>(<span class="P">int</span>&nbsp;<span class="S">len</span>)</p>
+<p class="R">Sets the maximum size of text in unicode characters. Has to be less than 1Gchars. The default is 400Mchars.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="TextCtrl::IsProcessTab()" class="O"><span class="P">bool</span>&nbsp;<span class="Q">IsProcessTab</span>()</p>
+<p class="R">Tests whether ProcessTab mode is active.</p>
+<p class="F">&nbsp;</p>
+<p class="A">&nbsp;</p>
+<p class="A">&nbsp;</p>
+<p class="A">&nbsp;</p>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr><td width="100%"><table width="100%" class="C"><colgroup><col width="100%"></colgroup>
+<tr><td class="D"><p class="E">TextCtrl::UndoData</p>
+</td>
+</tr>
+</table></td>
+</tr></table>
+<p class="F">&nbsp;</p>
+<p id="TextCtrl::UndoData::struct" class="AB"><span class="H">struct</span><span class="U">&nbsp;</span>UndoData</p>
+<p class="K">This structure contains informations about undo/redo state of the widget. It can be with PickUndoData and SetPickUndoDate to store and restore undo/redo state.</p>
+<p class="F">&nbsp;</p>
+<p class="A">&nbsp;</p>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr><td width="100%"><table width="100%" class="L"><colgroup><col width="100%"></colgroup>
+<tr><td class="M"><p class="N">Public Method List</p>
+</td>
+</tr>
+</table></td>
+</tr></table>
+<p class="F">&nbsp;</p>
+<p id="TextCtrl::UndoData::Clear()" class="O"><span class="P">void</span>&nbsp;<span class="Q">Clear</span>()</p>
+<p class="R">Clears the undo/redo state</p>
+<p class="F">&nbsp;</p>
+<p class="F">.</p>
+</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>
+<TABLE BORDER="0" WIDTH="100%"><TR><TD></TD>
+</TR>
+</TABLE>
+<TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" BGCOLOR="#FFFFFF" WIDTH="100%" style="border-style: solid; border-width: 1px; border-color: #6E89AE;padding: 10px;;"><TR><TD><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%"><TR><TD><p class="A"><span class="B"> </span><a href="www$uppweb$contribweb$en-us.html">Do you want to contribute?</a></p>
+</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>
+<script type="text/javascript">var a={'src$CtrlLib$TextCtrl$en-us.html':'English'};var p=window.location.pathname.split("/");p=p[p.length-1];var s='<select id="lang" onchange="window.location=document.getElementById(\'lang\').value;">';for(l in a){if(p==l){d=" selected=1"}else{d=""}s+='<option value="'+l+'"'+d+'>'+a[l]+'</option>'}s+='</select>';var d=document.createElement('div');d.innerHTML=s;var c=document.getElementById('langs');c.replaceChild(d,c.firstChild);document.getElementById('langbox').style.display='block';</script></BODY>

@@ -1,0 +1,1867 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en-us">
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
+<META NAME="Generator" CONTENT="U++ HTML Package">
+<TITLE>Streams :: U++</TITLE>
+<STYLE TYPE="text/css"><!--
+.A{margin:0px 0px 0px 0px;text-indent:0px;text-align:left;color:#000000;font-family:sans-serif;font-size:10pt;font-weight:normal;font-style:normal;}
+.B{font-size:12pt;}
+.C{border-collapse:collapse;table-layout:auto;border: 2px solid #000000;}
+.D{padding: 3px 5px 3px 5px;border-left: 1px solid #000000;border-top: 1px solid #000000;border-right: 1px solid #000000;border-bottom: 1px solid #000000;background-color:#712A00;vertical-align:middle;}
+.E{margin:0px 0px 0px 0px;text-indent:0px;text-align:left;color:#e0e0e0;font-family:sans-serif;font-size:16pt;font-weight:bold;font-style:normal;}
+.F{margin:0px 0px 0px 0px;text-indent:0px;text-align:left;color:#000000;font-family:sans-serif;font-size:6pt;font-weight:normal;font-style:normal;}
+.G{margin:0px 0px 5px 0px;text-indent:0px;text-align:left;color:#000000;font-family:sans-serif;font-size:12pt;font-weight:bold;font-style:normal;}
+.H{color:#0000ff;font-weight:normal;}
+.I{font-weight:normal;}
+.J{margin:8px 0px 0px 0px;text-indent:0px;text-align:left;color:#000000;font-family:sans-serif;font-size:10pt;font-weight:normal;font-style:normal;}
+.K{display:list-item;list-style-type:disc;margin:0px 0px 0px 20px;text-indent:0px;text-align:left;color:#000000;font-family:sans-serif;font-size:10pt;font-weight:normal;font-style:normal;}
+.L{border-collapse:collapse;table-layout:auto;border: 0px solid #000000;}
+.M{padding: 0px 0px 0px 5px;border-left: 10px solid #000000;border-top: 10px solid #000000;border-right: 10px solid #000000;border-bottom: 10px solid #000000;background-color:#E0E0E0;vertical-align:middle;}
+.N{margin:0px 0px 0px 0px;text-indent:0px;text-align:left;color:#000000;font-family:sans-serif;font-size:8pt;font-weight:normal;font-style:normal;}
+.O{padding: 0px 0px 0px 5px;border-left: 6px solid ;border-top: 6px solid ;border-right: 6px solid ;border-bottom: 6px solid ;background-color:#FFFFFF;vertical-align:middle;}
+.P{margin:0px 0px 0px 0px;text-indent:0px;text-align:left;color:#000080;font-family:monospace;font-size:10pt;font-weight:bold;font-style:normal;}
+.Q{border-collapse:collapse;table-layout:auto;border: 2px solid #808080;}
+.R{padding: 3px 5px 3px 5px;border-left: 1px solid #808080;border-top: 1px solid #808080;border-right: 1px solid #808080;border-bottom: 1px solid #808080;background-color:#C0C0C0;vertical-align:middle;}
+.S{margin:0px 0px 0px 0px;text-indent:0px;text-align:left;color:#000000;font-family:sans-serif;font-size:10pt;font-weight:bold;font-style:normal;}
+.T{margin:0px 0px 5px 0px;text-indent:0px;text-align:left;color:#000000;font-family:sans-serif;font-size:10pt;font-weight:bold;font-style:normal;}
+.U{margin:0px 0px 0px 57px;text-indent:0px;text-align:left;color:#000080;font-family:sans-serif;font-size:8pt;font-weight:bold;font-style:normal;}
+.V{margin:0px 0px 0px 57px;text-indent:0px;text-align:left;color:#000000;font-family:sans-serif;font-size:10pt;font-weight:normal;font-style:normal;}
+.W{font-weight:bold;}
+.X{margin:0px 0px 5px 0px;text-indent:0px;text-align:left;color:#000000;font-family:sans-serif;font-size:10pt;font-weight:normal;font-style:normal;}
+.Y{color:#0000ff;}
+.Z{color:#800000;font-weight:bold;}
+.AA{color:#800000;font-family:monospace;font-weight:bold;}
+.AB{font-weight:bold;font-style:italic;}
+.AC{margin:0px 0px 5px 0px;text-indent:0px;text-align:left;color:#0000ff;font-family:sans-serif;font-size:10pt;font-weight:normal;font-style:normal;}
+.AD{color:#000000;}
+.AE{color:#000000;font-weight:bold;}
+.AF{margin:0px 0px 5px 0px;text-indent:0px;text-align:left;color:#800000;font-family:sans-serif;font-size:10pt;font-weight:normal;font-style:normal;}
+.AG{color:#800000;}
+.AH{margin:0px 0px 0px 0px;text-indent:0px;text-align:left;color:#000000;font-family:sans-serif;font-size:12pt;font-weight:normal;font-style:normal;}
+.AI{margin:0px 0px 5px 0px;text-indent:0px;text-align:left;color:#800000;font-family:sans-serif;font-size:12pt;font-weight:bold;font-style:normal;}
+.AJ{color:#000000;font-weight:normal;}
+.AK{font-style:italic;}
+a.l1         { text-decoration:none; font-size: 8pt; font-family: sans-serif; font-weight: normal; }
+a.l1:link    { color:#000000; }
+a.l1:visited { color:#000080; }
+a.l1:hover   { color:#9933CC; }
+a.l1:active  { color:#000000; }
+a.l2         { text-decoration:none; font-size: 12pt; font-family: sans-serif; font-variant: small-caps; }
+a.l2:link    { color:#0066FF; }
+a.l2:visited { color:#FF6600; }
+a.l2:hover   { color:#BC0624; }
+a.l2:active  { color:#BC0024; }
+
+-->
+</STYLE>
+<META NAME="keywords" CONTENT="framework, toolkit, widget, c++, visual, studio, dev-cpp, builder, ide, class, component,wxwidgets, qt, rapid, application, development, rad, mfc, linux, macos, gui, sdl, directx, desktop"><META name="robots" content="index,follow">
+<LINK rel="alternate" type="application/rss+xml" title="SVN changes" href="svnchanges.xml">
+<LINK rel="shortcut icon" type="image/png" href="favicon.png">
+</HEAD><BODY BGCOLOR="#D2D9D2" ALINK="#800000" LINK="#000000" VLINK="#000080"><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%"><TR><TD COLSPAN="3"><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%" BGCOLOR="#FFFFFF" style="border: 1px solid #6E89AE;padding-left: 10px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;"><TR><TD><A HREF="index.html"><IMG SRC="0i.png" ALT="" BORDER="0"></A>
+</TD>
+<TD ALIGN="RIGHT" VALIGN="BOTTOM" STYLE="padding-bottom: 5px; background-image: url('1i.png')"><span style="font-size: 14pt; font-family: sans-serif;"><script type="text/javascript"><!--
+google_ad_client = "pub-1082147624384270";
+google_ad_width = 468;
+google_ad_height = 60;
+google_ad_format = "468x60_as";
+google_ad_type = "text_image";
+google_ad_channel = "";
+google_color_border = "336699";
+google_color_bg = "FFFFFF";
+google_color_link = "0000FF";
+google_color_text = "000000";
+google_color_url = "008000";
+//--></script>
+<script type="text/javascript"
+  src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+&nbsp;&nbsp;</span>
+</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>
+<TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%"><TR><TD COLSPAN="3" BGCOLOR="#D2D9D2" HEIGHT="6"></TD>
+</TR>
+<TR><TD VALIGN="TOP" ALIGN="CENTER"><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="160"><TR><TD ALIGN="CENTER"><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%" BGCOLOR="#FFFFFF" style="border-style: solid; border-width: 1px; border-color: #6E89AE;padding: 0px"><TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px;"><A HREF="www$uppweb$overview$en-us.html" CLASS="l1">Overview</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$examples$en-us.html" CLASS="l1">Examples</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$ss$en-us.html" CLASS="l1">Screenshots</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$comparison$en-us.html" CLASS="l1">Comparisons</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$apps$en-us.html" CLASS="l1">Applications</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$download$en-us.html" CLASS="l1">Download</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$documentation$en-us.html" CLASS="l1">Documentation</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$Tutorials$en-us.html" CLASS="l1">Tutorials</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="app$ide$UppHub$en-us.html" CLASS="l1">UppHub</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$Roadmap$en-us.html" CLASS="l1">Status & Roadmap</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$FAQ$en-us.html" CLASS="l1">FAQ</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="app$ide$About$en-us.html" CLASS="l1">Authors & License</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="https://www.ultimatepp.org/forums" CLASS="l1">Forums</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$Funding$en-us.html" CLASS="l1">Funding U++</A>
+</TD>
+</TR>
+</TABLE>
+<TABLE BORDER="0" WIDTH="100%"><TR><TD></TD>
+</TR>
+</TABLE>
+<TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%" BGCOLOR="#FFFFFF" style="border-style: solid; border-width: 1px; border-color: #6E89AE;padding: 0px"><TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('3i.png'); border: 0px solid black;padding-left:12px; padding-right:0px; padding-top:1px; padding-bottom:1px;color:#FFFFFF;"><B><span style="font-size: 8pt; font-family: sans-serif;">Search on this site</span>
+</B>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:6px; padding-right:0px; padding-top:4px; padding-bottom:4px;border-top: 1px solid #6E89AE;"><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%"><TR><TD><IMG SRC="4i.png" ALT="" BORDER="0"></TD>
+<TD><FORM ACTION="https://www.google.com/search" METHOD="GET" STYLE="margin:0px;padding:0px;"><INPUT TYPE="HIDDEN" NAME="ie" VALUE="UTF-8"><INPUT TYPE="HIDDEN" NAME="oe" VALUE="UTF-8"><INPUT TYPE="TEXT" NAME="q" SIZE="15" MAXLENGTH="256" placeholder="Site search"><INPUT TYPE="HIDDEN" NAME="sitesearch" VALUE="ultimatepp.org"></FORM>
+</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>
+<TABLE BORDER="0" WIDTH="100%"><TR><TD></TD>
+</TR>
+</TABLE>
+<br><div id="fb-root"></div>
+<script type="text/javascript">(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) {return;}
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+<div class="fb-like" data-href="https://www.facebook.com/pages/Upp-Framework/262346610476027?sk=wall" data-send="false" data-layout="button_count" data-width="160" data-show-faces="false" data-font="arial"></div>
+<br><br><script type="text/javascript"><!--
+google_ad_client = "pub-1082147624384270";
+google_ad_width = 160;
+google_ad_height = 600;
+google_ad_format = "160x600_as";
+google_ad_type = "text_image";
+google_ad_channel = "";
+google_color_border = "336699";
+google_color_bg = "FFFFFF";
+google_color_link = "0000FF";
+google_color_text = "000000";
+google_color_url = "008000";
+//--></script>
+<script type="text/javascript"
+  src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script><br><br><script type="text/javascript"><!--
+google_ad_client = "pub-1082147624384270";
+google_ad_width = 160;
+google_ad_height = 90;
+google_ad_format = "160x90_0ads_al_s";
+google_ad_channel = "";
+google_color_border = "336699";
+google_color_bg = "FFFFFF";
+google_color_link = "0000FF";
+google_color_text = "000000";
+google_color_url = "008000";
+//--></script>
+<script type="text/javascript"
+  src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+<br><br><br><br><br><br><A HREF="https://sourceforge.net/projects/upp/"><IMG SRC="https://sourceforge.net/sflogo.php?group_id=93970&amp;type=2" ALT="SourceForge.net Logo" BORDER="0" WIDTH="125" HEIGHT="37"></A>
+<br><br><A HREF="https://flathub.org/en/apps/org.ultimatepp.TheIDE"><IMG SRC="5i.png" ALT="SourceForge.net Logo" BORDER="0" WIDTH="125" HEIGHT="37"></A>
+<br><br><div style="background-color:#ffffff;width:125;height:35"><A HREF="https://github.com/ultimatepp"><IMG SRC="6i.png" ALT="GitHub Logo" BORDER="0" WIDTH="125" HEIGHT="35"></A>
+</div><br><div style="background-color:#ffffff;width:125;height:35"><div style="height:5"></div><A HREF="https://discord.gg/8XzqQzXZzb"><IMG SRC="https://assets-global.website-files.com/6257adef93867e50d84d30e2/636e0b5061df29d55a92d945_full_logo_blurple_RGB.svg" ALT="Discord Logo" BORDER="0" WIDTH="125" HEIGHT="25"></A>
+</div><br></TD>
+</TR>
+</TABLE>
+</TD>
+<TD VALIGN="TOP" BGCOLOR="#D2D9D2"><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="6"><TR><TD></TD>
+</TR>
+</TABLE>
+</TD>
+<TD VALIGN="TOP" WIDTH="100%" BGCOLOR="#D2D9D2"><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" BGCOLOR="#FFFFFF" WIDTH="100%" style="border-style: solid; border-width: 1px; border-color: #6E89AE;padding: 10px;;"><TR><TD><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%"><TR><TD><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr><td width="100%"><table width="100%" class="C"><colgroup><col width="100%"></colgroup>
+<tr><td class="D"><p class="E">Stream</p>
+</td>
+</tr>
+</table></td>
+</tr></table>
+<p class="F">&nbsp;</p>
+<p id="Stream::class" class="G"><span class="H">class</span><span class="I">&nbsp;</span>Stream</p>
+<p class="J">Stream is the base class of all U++ streams.</p>
+<p class="A">U++ streams generally serve in two different roles:</p>
+<p class="K">As basic raw binary streams, which includes text input and output.</p>
+<p class="K">As binary serialization target/source. This mainly needs to store flag indicating serialization direction.</p>
+<p class="A">&nbsp;</p>
+<p class="A">While Stream offers a basic interface for stream based operations, more specific operations are handled by one of the following classes derived from Stream:</p>
+<p class="A">&nbsp;</p>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr><td width="100%"><table width="100%" class="L"><colgroup><col width="9%"><col width="9%"><col width="9%"><col width="9%"><col width="9%"><col width="9%"><col width="9%"><col width="10%"><col width="10%"><col width="10%"></colgroup>
+<tr><td class="M" colspan=3><p class="N"><a href="src$Core$Stream$en-us.html#::Stream::class Stream">Stream</a></p>
+</td>
+<td class="O"><p class="A">&nbsp;</p>
+</td>
+<td class="O"><p class="A">&nbsp;</p>
+</td>
+<td class="O"><p class="A">&nbsp;</p>
+</td>
+<td class="O"><p class="A">&nbsp;</p>
+</td>
+<td class="O"><p class="A">&nbsp;</p>
+</td>
+<td class="O"><p class="A">&nbsp;</p>
+</td>
+<td class="O"><p class="A">&nbsp;</p>
+</td>
+</tr>
+<tr><td class="O"><p class="A">&nbsp;</p>
+</td>
+<td class="M" colspan=3><p class="N"><a href="src$Core$Stream$en-us.html#::StringStream::class StringStream">StringStream</a></p>
+</td>
+<td class="O"><p class="A">&nbsp;</p>
+</td>
+<td class="O"><p class="A">&nbsp;</p>
+</td>
+<td class="O"><p class="A">&nbsp;</p>
+</td>
+<td class="O"><p class="A">&nbsp;</p>
+</td>
+<td class="O"><p class="A">&nbsp;</p>
+</td>
+<td class="O"><p class="A">&nbsp;</p>
+</td>
+</tr>
+<tr><td class="O"><p class="A">&nbsp;</p>
+</td>
+<td class="M" colspan=3><p class="N"><a href="src$Core$Stream$en-us.html#::MemStream::class MemStream">MemStream</a></p>
+</td>
+<td class="O"><p class="A">&nbsp;</p>
+</td>
+<td class="O"><p class="A">&nbsp;</p>
+</td>
+<td class="O"><p class="A">&nbsp;</p>
+</td>
+<td class="O"><p class="A">&nbsp;</p>
+</td>
+<td class="O"><p class="A">&nbsp;</p>
+</td>
+<td class="O"><p class="A">&nbsp;</p>
+</td>
+</tr>
+<tr><td class="O"><p class="A">&nbsp;</p>
+</td>
+<td class="O"><p class="A">&nbsp;</p>
+</td>
+<td class="M" colspan=3><p class="N"><a href="src$Core$Stream$en-us.html#::MemReadStream::class MemReadStream">MemReadStream</a></p>
+</td>
+<td class="O"><p class="A">&nbsp;</p>
+</td>
+<td class="O"><p class="A">&nbsp;</p>
+</td>
+<td class="O"><p class="A">&nbsp;</p>
+</td>
+<td class="O"><p class="A">&nbsp;</p>
+</td>
+<td class="O"><p class="A">&nbsp;</p>
+</td>
+</tr>
+<tr><td class="O"><p class="A">&nbsp;</p>
+</td>
+<td class="M" colspan=3><p class="N"><a href="src$Core$Stream$en-us.html#::BufferStream::class BufferStream">BufferStream</a></p>
+</td>
+<td class="O"><p class="A">&nbsp;</p>
+</td>
+<td class="O"><p class="A">&nbsp;</p>
+</td>
+<td class="O"><p class="A">&nbsp;</p>
+</td>
+<td class="O"><p class="A">&nbsp;</p>
+</td>
+<td class="O"><p class="A">&nbsp;</p>
+</td>
+<td class="O"><p class="A">&nbsp;</p>
+</td>
+</tr>
+<tr><td class="O"><p class="A">&nbsp;</p>
+</td>
+<td class="O"><p class="A">&nbsp;</p>
+</td>
+<td class="M" colspan=3><p class="N"><a href="src$Core$Stream$en-us.html#::BlockStream::class BlockStream">BlockStream</a></p>
+</td>
+<td class="O"><p class="A">&nbsp;</p>
+</td>
+<td class="O"><p class="A">&nbsp;</p>
+</td>
+<td class="O"><p class="A">&nbsp;</p>
+</td>
+<td class="O"><p class="A">&nbsp;</p>
+</td>
+<td class="O"><p class="A">&nbsp;</p>
+</td>
+</tr>
+<tr><td class="O"><p class="A">&nbsp;</p>
+</td>
+<td class="O"><p class="A">&nbsp;</p>
+</td>
+<td class="O"><p class="A">&nbsp;</p>
+</td>
+<td class="M" colspan=3><p class="N"><a href="src$Core$Stream$en-us.html#::FileStream::class FileStream">FileStream</a></p>
+</td>
+<td class="O"><p class="A">&nbsp;</p>
+</td>
+<td class="O"><p class="A">&nbsp;</p>
+</td>
+<td class="O"><p class="A">&nbsp;</p>
+</td>
+<td class="O"><p class="A">&nbsp;</p>
+</td>
+</tr>
+<tr><td class="O"><p class="A">&nbsp;</p>
+</td>
+<td class="O"><p class="A">&nbsp;</p>
+</td>
+<td class="O"><p class="A">&nbsp;</p>
+</td>
+<td class="O"><p class="A">&nbsp;</p>
+</td>
+<td class="M" colspan=3><p class="N"><a href="src$Core$Stream$en-us.html#::FileIn::class FileIn">FileIn</a></p>
+</td>
+<td class="O"><p class="A">&nbsp;</p>
+</td>
+<td class="O"><p class="A">&nbsp;</p>
+</td>
+<td class="O"><p class="A">&nbsp;</p>
+</td>
+</tr>
+<tr><td class="O"><p class="A">&nbsp;</p>
+</td>
+<td class="O"><p class="A">&nbsp;</p>
+</td>
+<td class="O"><p class="A">&nbsp;</p>
+</td>
+<td class="O"><p class="A">&nbsp;</p>
+</td>
+<td class="M" colspan=3><p class="N"><a href="src$Core$Stream$en-us.html#::FileOut::class FileOut">FileOut</a></p>
+</td>
+<td class="O"><p class="A">&nbsp;</p>
+</td>
+<td class="O"><p class="A">&nbsp;</p>
+</td>
+<td class="O"><p class="A">&nbsp;</p>
+</td>
+</tr>
+<tr><td class="O"><p class="A">&nbsp;</p>
+</td>
+<td class="O"><p class="A">&nbsp;</p>
+</td>
+<td class="O"><p class="A">&nbsp;</p>
+</td>
+<td class="O"><p class="A">&nbsp;</p>
+</td>
+<td class="M" colspan=3><p class="N"><a href="src$Core$Stream$en-us.html#::FileAppend::class FileAppend">FileAppend</a></p>
+</td>
+<td class="O"><p class="A">&nbsp;</p>
+</td>
+<td class="O"><p class="A">&nbsp;</p>
+</td>
+<td class="O"><p class="A">&nbsp;</p>
+</td>
+</tr>
+<tr><td class="O"><p class="A">&nbsp;</p>
+</td>
+<td class="O"><p class="A">&nbsp;</p>
+</td>
+<td class="M" colspan=3><p class="N"><a href="src$Core$Stream$en-us.html#::SizeStream::class SizeStream">SizeStream</a></p>
+</td>
+<td class="O"><p class="A">&nbsp;</p>
+</td>
+<td class="O"><p class="A">&nbsp;</p>
+</td>
+<td class="O"><p class="A">&nbsp;</p>
+</td>
+<td class="O"><p class="A">&nbsp;</p>
+</td>
+<td class="O"><p class="A">&nbsp;</p>
+</td>
+</tr>
+<tr><td class="O"><p class="A">&nbsp;</p>
+</td>
+<td class="O"><p class="A">&nbsp;</p>
+</td>
+<td class="M" colspan=3><p class="N"><a href="src$Core$Stream$en-us.html#::CompareStream::class CompareStream">CompareStream</a></p>
+</td>
+<td class="O"><p class="A">&nbsp;</p>
+</td>
+<td class="O"><p class="A">&nbsp;</p>
+</td>
+<td class="O"><p class="A">&nbsp;</p>
+</td>
+<td class="O"><p class="A">&nbsp;</p>
+</td>
+<td class="O"><p class="A">&nbsp;</p>
+</td>
+</tr>
+</table></td>
+</tr></table>
+<p class="F">&nbsp;</p>
+<p class="A">&nbsp;</p>
+<p class="A">In order to achieve optimal performance of buffered stream operations, the most frequent operations have a little bit more complicated implementation that demands proper definition of virtual methods, as they must correctly adjust some protected data members of Stream. Therefore the implementation of some method can be considered a part of interface definition:</p>
+<p class="A">&nbsp;</p>
+<p class="P">void &nbsp;Stream::Put(int c)</p>
+<p class="P">{</p>
+<p class="P">&nbsp;&nbsp;&nbsp;&nbsp;if(ptr &lt; wrlim)</p>
+<p class="P">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*ptr++ = c;</p>
+<p class="P">&nbsp;&nbsp;&nbsp;&nbsp;else</p>
+<p class="P">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;_Put(c);</p>
+<p class="P">}</p>
+<p class="P">&nbsp;</p>
+<p class="P">int &nbsp;Stream::Term()</p>
+<p class="P">{</p>
+<p class="P">&nbsp;&nbsp;&nbsp;&nbsp;return ptr &lt; rdlim ? *ptr : _Term();</p>
+<p class="P">}</p>
+<p class="P">&nbsp;</p>
+<p class="P">int &nbsp;Stream::Get()</p>
+<p class="P">{</p>
+<p class="P">&nbsp;&nbsp;&nbsp;&nbsp;return ptr &lt; rdlim ? *ptr++ : _Get();</p>
+<p class="P">}</p>
+<p class="P">&nbsp;</p>
+<p class="P">int64 Stream::GetPos() const</p>
+<p class="P">{</p>
+<p class="P">&nbsp;&nbsp;&nbsp;&nbsp;return dword(ptr - buffer) + pos;</p>
+<p class="P">}</p>
+<p class="A">&nbsp;</p>
+<p class="A">&nbsp;</p>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr><td width="100%"><table width="100%" class="Q"><colgroup><col width="100%"></colgroup>
+<tr><td class="R"><p class="S">Protected members</p>
+</td>
+</tr>
+</table></td>
+</tr></table>
+<p class="F">&nbsp;</p>
+<p id="Stream::pos" class="T"><a href="src$Core$PrimitiveDataTypes$en-us.html#Upp::int64::typedef"><span class="I"><u>int64</u></span></a><span class="I">&nbsp;</span>pos</p>
+<p class="U">Protected.</p>
+<p class="V">Position of buffer in the stream.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Stream::buffer" class="T"><a href="src$Core$PrimitiveDataTypes$en-us.html#Upp::byte::typedef"><span class="I"><u>byte</u></span></a><span class="I">&nbsp;*</span>buffer</p>
+<p class="U">Protected.</p>
+<p class="V">Pointer to beginning of buffer.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Stream::ptr" class="T"><a href="src$Core$PrimitiveDataTypes$en-us.html#Upp::byte::typedef"><span class="I"><u>byte</u></span></a><span class="I">&nbsp;*</span>ptr</p>
+<p class="U">Protected.</p>
+<p class="V">Pointer to current input/output byte.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Stream::rdlim" class="T"><a href="src$Core$PrimitiveDataTypes$en-us.html#Upp::byte::typedef"><span class="I"><u>byte</u></span></a><span class="I">&nbsp;*</span>rdlim</p>
+<p class="U">Protected.</p>
+<p class="V">Read limit. <span class="W">Get</span> method returns values from buffer as long as <span class="W">ptr &lt; rdlim</span>.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Stream::wrlim" class="T"><a href="src$Core$PrimitiveDataTypes$en-us.html#Upp::byte::typedef"><span class="I"><u>byte</u></span></a><span class="I">&nbsp;*</span>wrlim</p>
+<p class="U">Protected.</p>
+<p class="V">Write limit. <span class="W">Put</span> method returns values from buffer as long as <span class="W">ptr &lt; wrlim</span>.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Stream::_Put(int)" class="X"><span class="Y">virtual</span> <span class="Y">void</span>&nbsp;<span class="W">_Put</span>(<span class="Y">int</span>&nbsp;<span class="Z">w</span>)</p>
+<p class="V">Called by <span class="W">Put</span> method in case that output byte cannot be stored into buffer (<span class="W">ptr &gt;= wrlim</span>). If Stream wants to use buffering, this method should adjust <span class="W">buffer</span>, <span class="W">ptr</span> and <span class="W">wrlim</span>.</p>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="AA">w</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">Byte to store.</p></td></tr></table>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Stream::_Term()" class="X"><span class="Y">virtual</span> <span class="Y">int</span>&nbsp;<span class="W">_Term</span>()</p>
+<p class="V">Called by <span class="W">Term</span> method in case that input byte is not in buffer (<span class="W">ptr &gt;= rdlim</span>). If Stream wants to use buffering, this method should adjust <span class="W">buffer</span>, <span class="W">ptr</span> and <span class="W">rdlim</span>.</p>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="AB">Return value</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">Value at current position in the stream. Current position is not advanced.</p></td></tr></table>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Stream::_Get()" class="X"><span class="Y">virtual</span> <span class="Y">int</span>&nbsp;<span class="W">_Get</span>()</p>
+<p class="V">Called by <span class="W">Get</span> method in case that input byte is not in buffer (<span class="W">ptr &gt;= rdlim</span>). If Stream wants to use buffering, this method should adjust <span class="W">buffer</span>, <span class="W">ptr</span> and <span class="W">rdlim</span>.</p>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="AB">Return value</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">Value read from the stream.</p></td></tr></table>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Stream::_Put(const void*,dword)" class="X"><span class="Y">virtual</span> <span class="Y">void</span>&nbsp;<span class="W">_Put</span>(<span class="Y">const</span>&nbsp;<span class="Y">void</span>&nbsp;*<span class="Z">data</span>, <a href="src$Core$PrimitiveDataTypes$en-us.html#Upp::dword::typedef"><u>dword</u></a>&nbsp;<span class="Z">size</span>)</p>
+<p class="V">Directly called by <span class="W">Put</span> method. Writes a block of binary data.</p>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="AA">data</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">Pointer to data.</p></td></tr></table>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="AA">size</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">Size.</p></td></tr></table>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Stream::_Get(void*,dword)" class="X"><span class="Y">virtual</span> <a href="src$Core$PrimitiveDataTypes$en-us.html#Upp::dword::typedef"><u>dword</u></a>&nbsp;<span class="W">_Get</span>(<span class="Y">void</span>&nbsp;*<span class="Z">data</span>, <a href="src$Core$PrimitiveDataTypes$en-us.html#Upp::dword::typedef"><u>dword</u></a>&nbsp;<span class="Z">size</span>)</p>
+<p class="V">Directly called by <span class="W">Get</span> method. </p>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="AA">data</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A"></p></td></tr></table>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="AA">size</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A"></p></td></tr></table>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="AB">Return value</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A"></p></td></tr></table>
+<p class="F">&nbsp;</p>
+<p class="A">&nbsp;</p>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr><td width="100%"><table width="100%" class="Q"><colgroup><col width="100%"></colgroup>
+<tr><td class="R"><p class="S">Constructor Detail</p>
+</td>
+</tr>
+</table></td>
+</tr></table>
+<p class="F">&nbsp;</p>
+<p id="Stream::Stream()" class="X"><span class="W">Stream</span>()</p>
+<p class="V">Default constructor. Sets stream into Loading serialization mode and zero level indentation. All protected variables are set to 0 / NULL.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Stream::Stream(const Stream&)" class="X"><span class="W">Stream</span>(<span class="Y">const</span>&nbsp;<span class="W">Stream</span><span class="Y">&amp;</span>&nbsp;<span class="Z">s</span>)</p>
+<p class="V">Default copy constructor.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Stream::~Stream()" class="X"><span class="Y">~</span><span class="W">Stream</span>()</p>
+<p class="V">Default destructor.</p>
+<p class="F">&nbsp;</p>
+<p class="A">&nbsp;</p>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr><td width="100%"><table width="100%" class="Q"><colgroup><col width="100%"></colgroup>
+<tr><td class="R"><p class="S">Public Member List: Raw Operations</p>
+</td>
+</tr>
+</table></td>
+</tr></table>
+<p class="F">&nbsp;</p>
+<p id="Stream::Seek(int64)" class="X"><span class="Y">virtual</span> <span class="Y">void</span>&nbsp;<span class="W">Seek</span>(<a href="src$Core$PrimitiveDataTypes$en-us.html#Upp::int64::typedef"><u>int64</u></a>&nbsp;<span class="Z">pos</span>)</p>
+<p class="V">Seeks to given position.</p>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="AA">pos</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">Position.</p></td></tr></table>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Upp::Stream::SetVersion(int)" class="X"><span class="Y">void</span>&nbsp;<span class="W">SetVersion</span>(<span class="Y">int</span>&nbsp;<span class="Z">ver</span>)</p>
+<p class="V">Sets the arbitrary number <span class="Z">ver</span> to the stream. Client code can use it in any way it needs, but it is designed to store the the version information during serialization.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Upp::Stream::GetVersion()const" class="AC">int<span class="AD">&nbsp;</span><span class="AE">GetVersion</span><span class="AD">()&nbsp;</span>const</p>
+<p class="V">Reads the number set by SetVersion.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Stream::GetSize()const" class="AC">virtual<span class="AD"> </span><a href="src$Core$PrimitiveDataTypes$en-us.html#Upp::int64::typedef"><span class="AD"><u>int64</u></span></a><span class="AD">&nbsp;</span><span class="AE">GetSize</span><span class="AD">()&nbsp;</span>const</p>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="W">Return value</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">Size of stream.</p></td></tr></table>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Stream::SetSize(int64)" class="X"><span class="Y">virtual</span> <span class="Y">void</span>&nbsp;<span class="W">SetSize</span>(<a href="src$Core$PrimitiveDataTypes$en-us.html#Upp::int64::typedef"><u>int64</u></a>&nbsp;<span class="Z">size</span>)</p>
+<p class="V">Alters the size of the stream.</p>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="AA">size</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">New size.</p></td></tr></table>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Stream::Flush()" class="X"><span class="Y">virtual</span> <span class="Y">void</span>&nbsp;<span class="W">Flush</span>()</p>
+<p class="V">If stream has any internal buffers (like <span class="W">FileStream</span>), writes these buffers to OS.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Stream::Close()" class="X"><span class="Y">virtual</span> <span class="Y">void</span>&nbsp;<span class="W">Close</span>()</p>
+<p class="V">Closes stream.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Stream::IsOpen()const" class="AF"><span class="Y">virtual</span><span class="AD"> </span><span class="Y">bool</span><span class="AD">&nbsp;</span><span class="AE">IsOpen</span><span class="AD">()&nbsp;</span><span class="Y">const</span><span class="AD">&nbsp;=&nbsp;</span>0</p>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="W">Return value</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">true if stream is open.</p></td></tr></table>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Stream::IsError()const" class="AC">bool<span class="AD">&nbsp;</span><span class="AE">IsError</span><span class="AD">()&nbsp;</span>const</p>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="W">Return value</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">true if error was encountered during stream operations since opening it or last <span class="W">ClearError</span> call - error code is non-zero.</p></td></tr></table>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Stream::IsOK()const" class="AC">bool<span class="AD">&nbsp;</span><span class="AE">IsOK</span><span class="AD">()&nbsp;</span>const</p>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="AB">Return value</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">!IsError().</p></td></tr></table>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Stream::SetError(int)" class="X"><span class="Y">void</span>&nbsp;<span class="W">SetError</span>(<span class="Y">int</span>&nbsp;<span class="Z">c</span>&nbsp;=&nbsp;<span class="AG">0</span>)</p>
+<p class="V">Sets stream error code.</p>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="AA">c</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">Error code.</p></td></tr></table>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Stream::SetLastError()" class="X"><span class="Y">void</span>&nbsp;<span class="W">SetLastError</span>()</p>
+<p class="V">Sets stream error to last OS-specific error (obtained e.g. by GetLastError call in Win32 or in errno in Posix). This error can be interpreted by GetErrorMessage function.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Stream::GetError()const" class="AC">int<span class="AD">&nbsp;</span><span class="AE">GetError</span><span class="AD">()&nbsp;</span>const</p>
+<p class="V">Returns current error-code. Zero indicates no error.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Upp::Stream::GetErrorText()const" class="AC"><a href="Upp::String"><span class="AD"><u>String</u></span></a><span class="AD">&nbsp;</span><span class="AE">GetErrorText</span><span class="AD">()&nbsp;</span>const</p>
+<p class="V">Returns the text description of the last error.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Stream::ClearError()" class="X"><span class="Y">void</span>&nbsp;<span class="W">ClearError</span>()</p>
+<p class="V">Clears error code.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Stream::GetPos()const" class="AC"><a href="src$Core$PrimitiveDataTypes$en-us.html#Upp::int64::typedef"><span class="AD"><u>int64</u></span></a><span class="AD">&nbsp;</span><span class="AE">GetPos</span><span class="AD">()&nbsp;</span>const</p>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="AB">Return value</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">Current position in the stream.</p></td></tr></table>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Stream::GetLeft()const" class="AC"><a href="src$Core$PrimitiveDataTypes$en-us.html#Upp::int64::typedef"><span class="AD"><u>int64</u></span></a><span class="AD">&nbsp;</span><span class="AE">GetLeft</span><span class="AD">()&nbsp;</span>const</p>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="AB">Return value</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">Bytes between current position and the end of stream - equivalent to GetSize() - GetPos().</p></td></tr></table>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Stream::SeekEnd(int64)" class="X"><span class="Y">void</span>&nbsp;<span class="W">SeekEnd</span>(<a href="src$Core$PrimitiveDataTypes$en-us.html#Upp::int64::typedef"><u>int64</u></a>&nbsp;<span class="Z">rel</span>&nbsp;=&nbsp;<span class="AG">0</span>)</p>
+<p class="V">Sets current position in the stream relative to the end of stream. Same as Seek(GetSize() + rel).</p>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="AA">rel</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">Position - should be less or equal to zero.</p></td></tr></table>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Stream::SeekCur(int64)" class="X"><span class="Y">void</span>&nbsp;<span class="W">SeekCur</span>(<a href="src$Core$PrimitiveDataTypes$en-us.html#Upp::int64::typedef"><u>int64</u></a>&nbsp;<span class="Z">rel</span>)</p>
+<p class="V">Sets current position in the stream relative to the current position. Same as Seek(GetPos() + rel).</p>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="AA">rel</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">Relative offset.</p></td></tr></table>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Stream::IsEof()" class="X"><span class="Y">bool</span>&nbsp;<span class="W">IsEof</span>()</p>
+<p class="V">There are no more byte to be read from the stream. Is also true in case of error.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Stream::Put(int)" class="X"><span class="Y">void</span>&nbsp;<span class="W">Put</span>(<span class="Y">int</span>&nbsp;<span class="Z">c</span>)</p>
+<p class="V">Puts single byte into the output stream.</p>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="AA">c</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">Byte.</p></td></tr></table>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Stream::Term()" class="X"><span class="Y">int</span>&nbsp;<span class="W">Term</span>()</p>
+<p id="Stream::Peek()" class="X"><span class="Y">int</span>&nbsp;<span class="W">Peek</span>()</p>
+<p class="V">Peeks byte from input stream not advancing current position. If there are no more bytes in input stream or error occurred, negative value is returned.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Stream::Get()" class="X"><span class="Y">int</span>&nbsp;<span class="W">Get</span>()</p>
+<p class="V">Reads single byte from input stream, advancing current position. If there are no more bytes in input stream or error occurred, negative value is returned.</p>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="AB">Return value</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">Byte read from input stream.</p></td></tr></table>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Stream::PeekPtr(int)" class="X"><span class="Y">const</span>&nbsp;<a href="src$Core$PrimitiveDataTypes$en-us.html#Upp::byte::typedef"><u>byte</u></a>&nbsp;*<span class="W">PeekPtr</span>(<span class="Y">int</span>&nbsp;<span class="Z">size</span>&nbsp;=&nbsp;<span class="AG">1</span>)</p>
+<p class="V">This is a special optimization method; it might return a pointer to data of <span class="Z">size</span> bytes at current position in the stream, but it is allowed to return NULL - in that case you need to use Get to load data. PeekPtr does not move the position forward, you need to use some of Seek methods to do that.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Stream::GetPtr(int)" class="X"><span class="Y">const</span>&nbsp;<a href="src$Core$PrimitiveDataTypes$en-us.html#Upp::byte::typedef"><u>byte</u></a>&nbsp;*<span class="W">GetPtr</span>(<span class="Y">int</span>&nbsp;<span class="Z">size</span>&nbsp;=&nbsp;<span class="AG">1</span>)</p>
+<p class="V">This is a special optimization method; it might return a pointer to data of <span class="Z">size</span> bytes at current position in the stream, but it is allowed to return NULL - in that case you need to use Get to load data. Unlike PeekPtr, it advances stream by <span class="Z">size</span>.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Stream::PutPtr(int)" class="X"><a href="src$Core$PrimitiveDataTypes$en-us.html#Upp::byte::typedef"><u>byte</u></a>&nbsp;*<span class="W">PutPtr</span>(<span class="Y">int</span>&nbsp;<span class="Z">size</span>&nbsp;=&nbsp;<span class="AG">1</span>)</p>
+<p class="V">This is a special optimization method; it might return a writable pointer where you can write output data of <span class="Z">size</span> bytes, but it is allowed to return NULL - in that case you need to output data using Put. Advances stream by <span class="Z">size</span>.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Stream::GetSzPtr(int&)" class="X"><span class="Y">const</span>&nbsp;<a href="src$Core$PrimitiveDataTypes$en-us.html#Upp::byte::typedef"><u>byte</u></a>&nbsp;*<span class="W">GetSzPtr</span>(<span class="Y">int&amp;</span>&nbsp;<span class="Z">size</span>)</p>
+<p class="V">This is a special optimization method, it returns a pointer to data at current position of stream, sets <span class="Z">size</span> to the maximal possible amount of bytes that can be read from this pointer and advances stream by this size. <span class="Z">size</span> can be set to zero, in that case stream has to be read by another means (e.g. Get).</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Stream::Put(const void*,int)" class="X"><span class="Y">void</span>&nbsp;<span class="W">Put</span>(<span class="Y">const</span>&nbsp;<span class="Y">void</span>&nbsp;*<span class="Z">data</span>, <span class="Y">int</span>&nbsp;<span class="Z">size</span>)</p>
+<p class="V">Writes a block of raw binary data to the output stream.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Stream::Get(void*,int)" class="X"><span class="Y">int</span>&nbsp;<span class="W">Get</span>(<span class="Y">void</span>&nbsp;*<span class="Z">data</span>, <span class="Y">int</span>&nbsp;<span class="Z">size</span>)</p>
+<p class="V">Reads at most <span class="Z">size</span> bytes from the stream to <span class="Z">data</span>. Returns the number of bytes actually read.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Stream::Get(int)" class="X"><a href="String"><u>String</u></a>&nbsp;<span class="W">Get</span>(<span class="Y">int</span>&nbsp;<span class="Z">size</span>)</p>
+<p class="V">Reads at most <span class="Z">size</span> bytes from the input stream and returns result as String.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Stream::GetAll(int)" class="X"><a href="String"><u>String</u></a>&nbsp;<span class="W">GetAll</span>(<span class="Y">int</span>&nbsp;<span class="Z">size</span>)</p>
+<p class="V">Reads exactly <span class="Z">size</span> bytes from the input stream and returns result as String. If there is not enough bytes left, returns String::GetVoid(). Note that is <span class="Z">size</span> is large (currently &gt; 4MB), function reads result in chunks in order to avoid problems with corrupted streams, e.g. situation where the <span class="Z">size</span> is obtained from the stream, is corrupted and too big and allocating that much memory would cause out-of-memory situation.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Upp::Stream::Skip(int)" class="X"><span class="Y">int</span>&nbsp;<span class="W">Skip</span>(<span class="Y">int</span>&nbsp;<span class="Z">size</span>)</p>
+<p class="V">Skips <span class="Z">size</span> bytes in input Stream. This is similar to SeekCur(<span class="Z">size</span>), however it works with Streams that do not support seeking. Returns a number of bytes actually skipped (can be less than required because of EOF).</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Stream::GetAll(void*,int)" class="X"><span class="Y">bool</span>&nbsp;<span class="W">GetAll</span>(<span class="Y">void</span>&nbsp;*<span class="Z">data</span>, <span class="Y">int</span>&nbsp;<span class="Z">size</span>)</p>
+<p class="V">Reads <span class="Z">size</span> bytes from the stream to memory at <span class="Z">data</span>. If there is not enough data in the stream, LoadError is invoked (that in turn might throw an exception). Returns true if required number of bytes was read.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Stream::Put64(const void*,int64)" class="X"><span class="Y">void</span>&nbsp;<span class="W">Put64</span>(<span class="Y">const</span>&nbsp;<span class="Y">void</span>&nbsp;*<span class="Z">data</span>, <a href="src$Core$PrimitiveDataTypes$en-us.html#Upp::int64::typedef"><u>int64</u></a>&nbsp;<span class="Z">size</span>)</p>
+<p class="V">Writes a block of raw binary data to the output stream, unlike regular Put, block size can be greater than 2GB, if CPU is 64 bit.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Stream::Get64(void*,int64)" class="X"><a href="src$Core$PrimitiveDataTypes$en-us.html#Upp::int64::typedef"><u>int64</u></a>&nbsp;<span class="W">Get64</span>(<span class="Y">void</span>&nbsp;*<span class="Z">data</span>, <a href="src$Core$PrimitiveDataTypes$en-us.html#Upp::int64::typedef"><u>int64</u></a>&nbsp;<span class="Z">size</span>)</p>
+<p class="V">Reads at most <span class="Z">size</span> bytes from the stream to <span class="Z">data</span>. Returns the number of bytes actually read. Unlike regular Get, block size can be greater than 2GB, if CPU is 64 bit.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Stream::GetAll64(void*,int64)" class="X"><span class="Y">bool</span>&nbsp;<span class="W">GetAll64</span>(<span class="Y">void</span>&nbsp;*<span class="Z">data</span>, <a href="src$Core$PrimitiveDataTypes$en-us.html#Upp::int64::typedef"><u>int64</u></a>&nbsp;<span class="Z">size</span>)</p>
+<p class="V">Reads <span class="Z">size</span> bytes from the stream to memory at <span class="Z">data</span>. If there is not enough data in the stream, LoadError is invoked (that in turn might throw an exception). Returns true if required number of bytes was read. Unlike regular Get, block size can be greater than 2GB, if CPU is 64 bit.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Upp::Stream::Get(Upp::Huge&,size_t)" class="X"><a href="size_t"><u>size_t</u></a>&nbsp;<span class="W">Get</span>(<a href="Upp::Huge"><u>Huge</u></a><span class="Y">&amp;</span>&nbsp;<span class="Z">h</span>, <a href="size_t"><u>size_t</u></a>&nbsp;<span class="Z">size</span>)</p>
+<p class="V">Reads data into <span class="Z">h</span>, returns the size read.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Upp::Stream::GetAll(Upp::Huge&,size_t)" class="X"><span class="Y">bool</span>&nbsp;<span class="W">GetAll</span>(<a href="Upp::Huge"><u>Huge</u></a><span class="Y">&amp;</span>&nbsp;<span class="Z">h</span>, <a href="size_t"><u>size_t</u></a>&nbsp;<span class="Z">size</span>)</p>
+<p class="V">Reads data into <span class="Z">h</span>, returns the size read. If there is not enough data in the stream, LoadError is invoked (that in turn might throw an exception).</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Stream::LoadThrowing()" class="X"><span class="Y">void</span>&nbsp;<span class="W">LoadThrowing</span>()</p>
+<p class="V">Sets stream into the mode that throws LoadingError exception when LoadError is invoked. This mode is typical for serialization usage of stream.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Stream::LoadError()" class="X"><span class="Y">void</span>&nbsp;<span class="W">LoadError</span>()</p>
+<p class="V">Performs SetError(ERROR_LOADING_FAILED). If Stream set to the LoadThrowing mode (by LoadThrowing() method), LoadingError exception is thrown.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Stream::Get8()" class="X"><span class="Y">int</span>&nbsp;<span class="W">Get8</span>()</p>
+<p class="V">Reads a single byte from the stream. If there is not enough data in the stream, LoadError is invoked (that in turn might throw an exception) - this is the difference from Get() method.</p>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="AB">Return value</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">Byte from stream or -1.</p></td></tr></table>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Stream::Get16()" class="X"><span class="Y">int</span>&nbsp;<span class="W">Get16</span>()</p>
+<p class="V">Reads 16-bit value from the stream in platform specific format (either little-endian or big-endian). If there is not enough data in the stream, LoadError is invoked (that in turn might throw an exception) and -1 returned.</p>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="AB">Return value</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">16-bit value.</p></td></tr></table>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Stream::Get32()" class="X"><span class="Y">int</span>&nbsp;<span class="W">Get32</span>()</p>
+<p class="V">Reads 32-bit value from the stream in platform specific format (either little-endian or big-endian). If there is not enough data in the stream, LoadError is invoked (that in turn might throw an exception) and -1 returned (but that is a valid return value as well).</p>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="AB">Return value</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">32-bit value.</p></td></tr></table>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Stream::Get64()" class="X"><a href="src$Core$PrimitiveDataTypes$en-us.html#Upp::int64::typedef"><u>int64</u></a>&nbsp;<span class="W">Get64</span>()</p>
+<p class="V">Reads 64-bit value from the stream in platform specific format (either little-endian or big-endian). If there is not enough data in the stream, LoadError is invoked (that in turn might throw an exception) and -1 returned (but that is a valid return value as well).</p>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="AB">Return value</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">64-bit value.</p></td></tr></table>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Stream::Get16le()" class="X"><span class="Y">int</span>&nbsp;<span class="W">Get16le</span>()</p>
+<p class="V">Reads 16-bit value from the stream in the little-endian mode. If there is not enough data in the stream, LoadError is invoked (that in turn might throw an exception) and -1 returned.</p>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="AB">Return value</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">16-bit value.</p></td></tr></table>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Stream::Get32le()" class="X"><span class="Y">int</span>&nbsp;<span class="W">Get32le</span>()</p>
+<p class="V">Reads 32-bit value from the stream in the little-endian mode. If there is not enough data in the stream, LoadError is invoked (that in turn might throw an exception) and -1 returned (but that is a valid return value as well).</p>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="AB">Return value</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">32-bit value.</p></td></tr></table>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Stream::Get64le()" class="X"><a href="src$Core$PrimitiveDataTypes$en-us.html#Upp::int64::typedef"><u>int64</u></a>&nbsp;<span class="W">Get64le</span>()</p>
+<p class="V">Reads 64-bit value from the stream in the little-endian mode. If there is not enough data in the stream, LoadError is invoked (that in turn might throw an exception) and -1 returned (but that is a valid value return as well).</p>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="AB">Return value</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">64-bit value.</p></td></tr></table>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Stream::Get16be()" class="X"><span class="Y">int</span>&nbsp;<span class="W">Get16be</span>()</p>
+<p class="V">Reads 16-bit value from the stream in the big-endian mode. If there is not enough data in the stream, LoadError is invoked (that in turn might throw an exception) and -1 is returned.</p>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="AB">Return value</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">16-bit value.</p></td></tr></table>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Stream::Get32be()" class="X"><span class="Y">int</span>&nbsp;<span class="W">Get32be</span>()</p>
+<p class="V">Reads 32-bit value from the stream in the big-endian mode. If there is not enough data in the stream, LoadError is invoked (that in turn might throw an exception) and -1 returned (but that is a valid value return as well).</p>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="AB">Return value</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">32-bit value.</p></td></tr></table>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Stream::Get64be()" class="X"><a href="src$Core$PrimitiveDataTypes$en-us.html#Upp::int64::typedef"><u>int64</u></a>&nbsp;<span class="W">Get64be</span>()</p>
+<p class="V">Reads 64-bit value from the stream in the big-endian mode. If there is not enough data in the stream, LoadError is invoked (that in turn might throw an exception) and -1 returned (but that is a valid value return as well).</p>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="AB">Return value</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">64-bit value.</p></td></tr></table>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Stream::GetLine()" class="X"><a href="String"><u>String</u></a>&nbsp;<span class="W">GetLine</span>()</p>
+<p class="V">Reads single line from the stream. Line is delimited by '\n' character or the end of file (or error). '\r' characters are ignored.</p>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="AB">Return value</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">Line from the stream.</p></td></tr></table>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Stream::GetUtf8()" class="X"><span class="Y">int</span>&nbsp;<span class="W">GetUtf8</span>()</p>
+<p class="V">Reads single Utf8 encoded value from the stream.</p>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="AB">Return value</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">Utf-8 value.</p></td></tr></table>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Stream::Put16(word)" class="X"><span class="Y">void</span>&nbsp;<span class="W">Put16</span>(<a href="src$Core$PrimitiveDataTypes$en-us.html#Upp::word::typedef"><u>word</u></a>&nbsp;<span class="Z">q</span>)</p>
+<p class="V">Writes 16-bit value <span class="Z">q </span>in platform specific format (either little-endian or big-endian).</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Stream::Put32(dword)" class="X"><span class="Y">void</span>&nbsp;<span class="W">Put32</span>(<a href="src$Core$PrimitiveDataTypes$en-us.html#Upp::dword::typedef"><u>dword</u></a>&nbsp;<span class="Z">q</span>)</p>
+<p class="V">Writes 32-bit value <span class="Z">q </span>in platform specific format (either little-endian or big-endian).</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Stream::Put64(int64)" class="X"><span class="Y">void</span>&nbsp;<span class="W">Put64</span>(<a href="src$Core$PrimitiveDataTypes$en-us.html#Upp::int64::typedef"><u>int64</u></a>&nbsp;<span class="Z">q</span>)</p>
+<p class="V">Writes 64-bit value <span class="Z">q </span>in platform specific format (either little-endian or big-endian).</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Stream::Put16le(word)" class="X"><span class="Y">void</span>&nbsp;<span class="W">Put16le</span>(<a href="src$Core$PrimitiveDataTypes$en-us.html#Upp::word::typedef"><u>word</u></a>&nbsp;<span class="Z">q</span>)</p>
+<p class="V">Writes 16-bit value <span class="Z">q </span>in little-endian mode.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Stream::Put32le(dword)" class="X"><span class="Y">void</span>&nbsp;<span class="W">Put32le</span>(<a href="src$Core$PrimitiveDataTypes$en-us.html#Upp::dword::typedef"><u>dword</u></a>&nbsp;<span class="Z">q</span>)</p>
+<p class="V">Writes 32-bit value <span class="Z">q </span>in little-endian mode.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Stream::Put64le(int64)" class="X"><span class="Y">void</span>&nbsp;<span class="W">Put64le</span>(<a href="src$Core$PrimitiveDataTypes$en-us.html#Upp::int64::typedef"><u>int64</u></a>&nbsp;<span class="Z">q</span>)</p>
+<p class="V">Writes 64-bit value <span class="Z">q </span>in little-endian mode.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Stream::Put16be(word)" class="X"><span class="Y">void</span>&nbsp;<span class="W">Put16be</span>(<a href="src$Core$PrimitiveDataTypes$en-us.html#Upp::word::typedef"><u>word</u></a>&nbsp;<span class="Z">q</span>)</p>
+<p class="V">Writes 16-bit value <span class="Z">q </span>in big-endian mode.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Stream::Put32be(dword)" class="X"><span class="Y">void</span>&nbsp;<span class="W">Put32be</span>(<a href="src$Core$PrimitiveDataTypes$en-us.html#Upp::dowrd::typedef"><u>dword</u></a>&nbsp;<span class="Z">q</span>)</p>
+<p class="V">Writes 32-bit value <span class="Z">q </span>in big-endian mode.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Stream::Put64be(int64)" class="X"><span class="Y">void</span>&nbsp;<span class="W">Put64be</span>(<a href="src$Core$PrimitiveDataTypes$en-us.html#Upp::int64::typedef"><u>int64</u></a>&nbsp;<span class="Z">q</span>)</p>
+<p class="V">Writes 64-bit value <span class="Z">q </span>in big-endian mode.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Stream::PutUtf8(int)" class="X"><span class="Y">void</span>&nbsp;<span class="W">PutUtf8</span>(<span class="Y">int</span>&nbsp;<span class="Z">c</span>)</p>
+<p class="V">Puts a single Utf8 value to the stream.</p>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="AA">c</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">Value.</p></td></tr></table>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Stream::Put(const char*)" class="X"><span class="Y">void</span>&nbsp;<span class="W">Put</span>(<span class="Y">const</span>&nbsp;<span class="Y">char</span>&nbsp;*<span class="Z">s</span>)</p>
+<p class="V">Writes zero terminated string to the stream (zero is not written).</p>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="AA">s</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">String to write.</p></td></tr></table>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Stream::Put(const String&)" class="X"><span class="Y">void</span>&nbsp;<span class="W">Put</span>(<span class="Y">const</span>&nbsp;<a href="String"><u>String</u></a><span class="Y">&amp;</span>&nbsp;<span class="Z">s</span>)</p>
+<p class="V">Writes String to the the stream. String can contain zero characters.</p>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="AA">s</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">String to write.</p></td></tr></table>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Stream::Put(int,int)" class="X"><span class="Y">void</span>&nbsp;<span class="W">Put</span>(<span class="Y">int</span>&nbsp;<span class="Z">c</span>, <span class="Y">int</span>&nbsp;<span class="Z">count</span>)</p>
+<p class="V">Writes single byte to the stream requested number of times.</p>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="AA">c</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">Byte to write.</p></td></tr></table>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="AA">count</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">Repeat count.</p></td></tr></table>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Stream::Put0(int)" class="X"><span class="Y">void</span>&nbsp;<span class="W">Put0</span>(<span class="Y">int</span>&nbsp;<span class="Z">count</span>)</p>
+<p class="V">Writes zero byte to the stream requested number of times. This variation is mainly provided because Put(0, count) causes ambiguity as 0 is considered as NULL pointer too...</p>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="AA">count</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">Repeat count.</p></td></tr></table>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Stream::PutCrLf()" class="X"><span class="Y">void</span>&nbsp;<span class="W">PutCrLf</span>()</p>
+<p class="V">Writes CR-LF pair to the stream. </p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Stream::PutEol()" class="X"><span class="Y">void</span>&nbsp;<span class="W">PutEol</span>()</p>
+<p class="V">Writes platform specific &quot;end of line&quot; to the stream. It is CR-LF pair on Win32 platform or single LF on Posix platform.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Stream::operator<<(EOLenum)" class="X"><a href="Stream"><u>Stream</u></a><span class="Y">&amp;</span>&nbsp;<span class="W">operator&lt;&lt;</span>(EOLenum)</p>
+<p class="V">This is the same as PutEol. EOLenum contains single value, EOL. This is operator allows more convenient way to express PutEol in the chain of &lt;&lt; operators.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Stream::PutLine(const char*)" class="X"><span class="Y">void</span>&nbsp;<span class="W">PutLine</span>(<span class="Y">const</span>&nbsp;<span class="Y">char</span>&nbsp;*<span class="Z">s</span>)</p>
+<p class="V">Writes a line to stream - equivalent of Put(s); PutEol();</p>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="AA">s</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">Zero-terminated string.</p></td></tr></table>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Stream::PutLine(const String&)" class="X"><span class="Y">void</span>&nbsp;<span class="W">PutLine</span>(<span class="Y">const</span>&nbsp;<a href="String"><u>String</u></a><span class="Y">&amp;</span>&nbsp;<span class="Z">s</span>)</p>
+<p class="V">Writes a line to stream - equivalent of Put(s); PutEol();</p>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="AA">s</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">String.</p></td></tr></table>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Stream::Put(Stream&,int64,dword)" class="X"><span class="Y">void</span>&nbsp;<span class="W">Put</span>(<a href="Stream"><u>Stream</u></a><span class="Y">&amp;</span>&nbsp;<span class="Z">s</span>, <a href="src$Core$PrimitiveDataTypes$en-us.html#Upp::int64::typedef"><u>int64</u></a>&nbsp;<span class="Z">size</span>&nbsp;=&nbsp;INT64_MAX, <a href="src$Core$PrimitiveDataTypes$en-us.html#Upp::dword::typedef"><u>dword</u></a>&nbsp;<span class="Z">click</span>&nbsp;=&nbsp;<span class="AG">4096</span>)</p>
+<p class="V">Writes a content of specified stream to the stream.</p>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="AA">s</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">Input stream.</p></td></tr></table>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="AA">size</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">Maximum number of bytes to write. Default value INT64_MAX means whole input stream from current position to the end is written.</p></td></tr></table>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="AA">click</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">Size of buffer used for copying.</p></td></tr></table>
+<p class="F">&nbsp;</p>
+<p class="A">&nbsp;</p>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr><td width="100%"><table width="100%" class="Q"><colgroup><col width="100%"></colgroup>
+<tr><td class="R"><p class="S">Public Member List: Serialization Support</p>
+</td>
+</tr>
+</table></td>
+</tr></table>
+<p class="F">&nbsp;</p>
+<p id="Stream::SetLoading()" class="X"><span class="Y">void</span>&nbsp;<span class="W">SetLoading</span>()</p>
+<p class="V">Sets the stream into the loading mode.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Stream::SetStoring()" class="X"><span class="Y">void</span>&nbsp;<span class="W">SetStoring</span>()</p>
+<p class="V">Sets the stream into the storing mode.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Stream::IsLoading()const" class="AC">bool<span class="AD">&nbsp;</span><span class="AE">IsLoading</span><span class="AD">()&nbsp;</span>const</p>
+<p class="V">Returns true if stream is in loading mode.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Stream::IsStoring()const" class="AC">bool<span class="AD">&nbsp;</span><span class="AE">IsStoring</span><span class="AD">()&nbsp;</span>const</p>
+<p class="V">Returns true if stream is in storing mode.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Upp::Stream::SerializeRaw(Upp::byte*,Upp::int64)" class="X"><span class="Y">void</span>&nbsp;<span class="W">SerializeRaw</span>(<a href="src$Core$PrimitiveDataTypes$en-us.html#Upp::byte::typedef"><u>byte</u></a>&nbsp;*<span class="Z">data</span>, <a href="src$Core$PrimitiveDataTypes$en-us.html#Upp::int64::typedef"><u>int64</u></a>&nbsp;<span class="Z">count</span>)</p>
+<p id="Upp::Stream::SerializeRaw(Upp::word*,Upp::int64)" class="X"><span class="Y">void</span>&nbsp;<span class="W">SerializeRaw</span>(<a href="src$Core$PrimitiveDataTypes$en-us.html#Upp::word::typedef"><u>word</u></a>&nbsp;*<span class="Z">data</span>, <a href="src$Core$PrimitiveDataTypes$en-us.html#Upp::int64::typedef"><u>int64</u></a>&nbsp;<span class="Z">count</span>)</p>
+<p id="Upp::Stream::SerializeRaw(Upp::int16*,Upp::int64)" class="X"><span class="Y">void</span> <span class="W">SerializeRaw</span>(int16 <span class="Y">*</span><span class="Z">data</span>, int64 <span class="Z">count</span>)</p>
+<p id="Upp::Stream::SerializeRaw(Upp::dword*,Upp::int64)" class="X"><span class="Y">void</span>&nbsp;<span class="W">SerializeRaw</span>(<a href="src$Core$PrimitiveDataTypes$en-us.html#Upp::dword::typedef"><u>dword</u></a>&nbsp;*<span class="Z">data</span>, <a href="src$Core$PrimitiveDataTypes$en-us.html#Upp::int64::typedef"><u>int64</u></a>&nbsp;<span class="Z">count</span>)</p>
+<p id="Upp::Stream::SerializeRaw(int*,Upp::int64)" class="X"><span class="Y">void</span> <span class="W">SerializeRaw</span>(<span class="Y">int</span> <span class="Y">*</span><span class="Z">data</span>, int64 <span class="Z">count</span>)</p>
+<p id="Upp::Stream::SerializeRaw(Upp::uint64*,Upp::int64)" class="X"><span class="Y">void</span>&nbsp;<span class="W">SerializeRaw</span>(<a href="src$Core$PrimitiveDataTypes$en-us.html#Upp::uint64::typedef"><u>uint64</u></a>&nbsp;*<span class="Z">data</span>, <a href="src$Core$PrimitiveDataTypes$en-us.html#Upp::int64::typedef"><u>int64</u></a>&nbsp;<span class="Z">count</span>)</p>
+<p id="Upp::Stream::SerializeRaw(float*,Upp::int64)" class="X"><span class="Y">void</span> <span class="W">SerializeRaw</span>(<span class="Y">float</span> <span class="Y">*</span><span class="Z">data</span>, int64 <span class="Z">count</span>)</p>
+<p id="Upp::Stream::SerializeRaw(double*,Upp::int64)" class="X"><span class="Y">void</span> <span class="W">SerializeRaw</span>(<span class="Y">double</span> <span class="Y">*</span><span class="Z">data</span>, int64 <span class="Z">count</span>)</p>
+<p class="V">Serializes raw data. Might invoke LoadError if there is not enough data to load. Data are always stored in little-endian mode (conversion performed on BE systems as necessary).</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Stream::SerializeRLE(byte*,int)" class="X"><span class="Y">void</span>&nbsp;<span class="W">SerializeRLE</span>(<a href="src$Core$PrimitiveDataTypes$en-us.html#Upp::byte::typedef"><u>byte</u></a>&nbsp;*<span class="Z">data</span>, <span class="Y">int</span>&nbsp;<span class="Z">count</span>)</p>
+<p class="V">Serializes raw data, using simple RLE compression.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Stream::operator%(bool&)" class="X"><a href="Stream"><u>Stream</u></a><span class="Y">&amp;</span>&nbsp;<span class="W">operator%</span>(<span class="Y">bool&amp;</span>&nbsp;<span class="Z">d</span>)</p>
+<p class="V">Serializes bool variable <span class="Z">d</span>. Might invoke LoadError if there is not enough data to load. Returns <span class="W">*this</span> for chaining.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Stream::operator%(char&)" class="X"><a href="Stream"><u>Stream</u></a><span class="Y">&amp;</span>&nbsp;<span class="W">operator%</span>(<span class="Y">char&amp;</span>&nbsp;<span class="Z">d</span>)</p>
+<p class="V">Serializes char variable <span class="Z">d</span>. Might invoke LoadError if there is not enough data to load. Returns <span class="W">*this</span> for chaining.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Stream::operator%(signed char&)" class="X"><a href="Stream"><u>Stream</u></a><span class="Y">&amp;</span>&nbsp;<span class="W">operator%</span>(<span class="Y">signed</span>&nbsp;<span class="Y">char&amp;</span>&nbsp;<span class="Z">d</span>)</p>
+<p class="V">Serializes signed char variable <span class="Z">d</span>. Might invoke LoadError if there is not enough data to load. Returns <span class="W">*this</span> for chaining.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Stream::operator%(unsigned char&)" class="X"><a href="Stream"><u>Stream</u></a><span class="Y">&amp;</span>&nbsp;<span class="W">operator%</span>(<span class="Y">unsigned</span>&nbsp;<span class="Y">char&amp;</span>&nbsp;<span class="Z">d</span>)</p>
+<p class="V">Serializes unsigned char variable <span class="Z">d</span>. Might invoke LoadError if there is not enough data to load. Returns <span class="W">*this</span> for chaining.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Stream::operator%(short&)" class="X"><a href="Stream"><u>Stream</u></a><span class="Y">&amp;</span>&nbsp;<span class="W">operator%</span>(<span class="Y">short&amp;</span>&nbsp;<span class="Z">d</span>)</p>
+<p class="V">Serializes short variable <span class="Z">d</span>. Might invoke LoadError if there is not enough data to load. Returns <span class="W">*this</span> for chaining.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Stream::operator%(unsigned short&)" class="X"><a href="Stream"><u>Stream</u></a><span class="Y">&amp;</span>&nbsp;<span class="W">operator%</span>(<span class="Y">unsigned</span>&nbsp;<span class="Y">short&amp;</span>&nbsp;<span class="Z">d</span>)</p>
+<p class="V">Serializes unsigned short variable <span class="Z">d</span>. Might invoke LoadError if there is not enough data to load. Returns <span class="W">*this</span> for chaining.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Stream::operator%(int&)" class="X"><a href="Stream"><u>Stream</u></a><span class="Y">&amp;</span>&nbsp;<span class="W">operator%</span>(<span class="Y">int&amp;</span>&nbsp;<span class="Z">d</span>)</p>
+<p class="V">Serializes int variable <span class="Z">d</span>. Might invoke LoadError if there is not enough data to load. Returns <span class="W">*this</span> for chaining.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Stream::operator%(unsigned int&)" class="X"><a href="Stream"><u>Stream</u></a><span class="Y">&amp;</span>&nbsp;<span class="W">operator%</span>(<span class="Y">unsigned</span>&nbsp;<span class="Y">int&amp;</span>&nbsp;<span class="Z">d</span>)</p>
+<p class="V">Serializes unsigned int variable <span class="Z">d</span>. Might invoke LoadError if there is not enough data to load. Returns <span class="W">*this</span> for chaining.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Stream::operator%(long&)" class="X"><a href="Stream"><u>Stream</u></a><span class="Y">&amp;</span>&nbsp;<span class="W">operator%</span>(<span class="Y">long&amp;</span>&nbsp;<span class="Z">d</span>)</p>
+<p class="V">Serializes long variable <span class="Z">d</span>. Might invoke LoadError if there is not enough data to load. Returns <span class="W">*this</span> for chaining.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Stream::operator%(unsigned long&)" class="X"><a href="Stream"><u>Stream</u></a><span class="Y">&amp;</span>&nbsp;<span class="W">operator%</span>(<span class="Y">unsigned</span>&nbsp;<span class="Y">long&amp;</span>&nbsp;<span class="Z">d</span>)</p>
+<p class="V">Serializes unsigned long variable <span class="Z">d</span>. Might invoke LoadError if there is not enough data to load. Returns <span class="W">*this</span> for chaining.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Stream::operator%(float&)" class="X"><a href="Stream"><u>Stream</u></a><span class="Y">&amp;</span>&nbsp;<span class="W">operator%</span>(<span class="Y">float&amp;</span>&nbsp;<span class="Z">d</span>)</p>
+<p class="V">Serializes float variable <span class="Z">d</span>. Might invoke LoadError if there is not enough data to load. Returns <span class="W">*this</span> for chaining.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Stream::operator%(double&)" class="X"><a href="Stream"><u>Stream</u></a><span class="Y">&amp;</span>&nbsp;<span class="W">operator%</span>(<span class="Y">double&amp;</span>&nbsp;<span class="Z">d</span>)</p>
+<p class="V">Serializes double variable <span class="Z">d</span>. Might invoke LoadError if there is not enough data to load. Returns <span class="W">*this</span> for chaining.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Stream::operator%(int64&)" class="X"><a href="Stream"><u>Stream</u></a><span class="Y">&amp;</span>&nbsp;<span class="W">operator%</span>(<a href="src$Core$PrimitiveDataTypes$en-us.html#Upp::int64::typedef"><u>int64</u></a><span class="Y">&amp;</span>&nbsp;<span class="Z">d</span>)</p>
+<p class="V">Serializes int64 variable <span class="Z">d</span>. Might invoke LoadError if there is not enough data to load. Returns <span class="W">*this</span> for chaining.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Stream::operator%(uint64&)" class="X"><a href="Stream"><u>Stream</u></a><span class="Y">&amp;</span>&nbsp;<span class="W">operator%</span>(<a href="src$Core$PrimitiveDataTypes$en-us.html#Upp::uint64::typedef"><u>uint64</u></a><span class="Y">&amp;</span>&nbsp;<span class="Z">d</span>)</p>
+<p class="V">Serializes uint64 variable <span class="Z">d</span>. Might invoke LoadError if there is not enough data to load. Returns <span class="W">*this</span> for chaining.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Stream::operator%(String&)" class="X"><a href="Stream"><u>Stream</u></a><span class="Y">&amp;</span>&nbsp;<span class="W">operator%</span>(<a href="String"><u>String</u></a><span class="Y">&amp;</span>&nbsp;<span class="Z">s</span>)</p>
+<p class="V">Serializes String variable <span class="Z">s</span>. Might invoke LoadError if there is not enough data to load or input data are invalid. Returns <span class="W">*this</span> for chaining.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Stream::operator/(String&)" class="X"><a href="Stream"><u>Stream</u></a><span class="Y">&amp;</span>&nbsp;<span class="W">operator/</span>(<a href="String"><u>String</u></a><span class="Y">&amp;</span>&nbsp;<span class="Z">s</span>)</p>
+<p class="V">Serializes String variable <span class="Z">s </span>using RLE compression and packed format for length. Might invoke LoadError if there is not enough data to load or input data are invalid. Returns <span class="W">*this</span> for chaining.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Stream::operator%(WString&)" class="X"><a href="Stream"><u>Stream</u></a><span class="Y">&amp;</span>&nbsp;<span class="W">operator%</span>(<a href="WString"><u>WString</u></a><span class="Y">&amp;</span>&nbsp;<span class="Z">s</span>)</p>
+<p class="V">Serializes WString variable. Might invoke LoadError if there is not enough data to load or input data are invalid. Returns <span class="W">*this</span> for chaining.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Stream::operator/(WString&)" class="X"><a href="Stream"><u>Stream</u></a><span class="Y">&amp;</span>&nbsp;<span class="W">operator/</span>(<a href="WString"><u>WString</u></a><span class="Y">&amp;</span>&nbsp;<span class="Z">s</span>)</p>
+<p class="V">Serializes String variable using RLE compression and packed format for length. Might invoke LoadError if there is not enough data to load or input data are invalid. Returns <span class="W">*this</span> for chaining.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Stream::Pack(dword&)" class="X"><span class="Y">void</span>&nbsp;<span class="W">Pack</span>(<a href="src$Core$PrimitiveDataTypes$en-us.html#Upp::dword::typedef"><u>dword</u></a><span class="Y">&amp;</span>&nbsp;<span class="Z">i</span>)</p>
+<p class="V">Serializes dword value using format optimized for storing small values. Values 0..254 are stored as serializes as single byte, other values result in 5 bytes. Might invoke LoadError if there is not enough data to load or input data are invalid.</p>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="AA">i</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">Variable to serialize.</p></td></tr></table>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Stream::operator/(int&)" class="X"><a href="Stream"><u>Stream</u></a><span class="Y">&amp;</span>&nbsp;<span class="W">operator/</span>(<span class="Y">int&amp;</span>&nbsp;<span class="Z">i</span>)</p>
+<p class="V">Serializes int value using format optimized for storing small values. Might invoke LoadError if there is not enough data to load or input data are invalid.</p>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="AA">i</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">Variable to serialize.</p></td></tr></table>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="AB">Return value</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">*this for chaining.</p></td></tr></table>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Stream::operator/(unsigned int&)" class="X"><a href="Stream"><u>Stream</u></a><span class="Y">&amp;</span>&nbsp;<span class="W">operator/</span>(<span class="Y">unsigned</span>&nbsp;<span class="Y">int&amp;</span>&nbsp;<span class="Z">i</span>)</p>
+<p class="V">Serializes unsigned int value using format optimized for storing small values. Might invoke LoadError if there is not enough data to load or input data are invalid.</p>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="AA">i</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">Variable to serialize.</p></td></tr></table>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="AB">Return value</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">*this for chaining.</p></td></tr></table>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Stream::Magic(dword)" class="X"><span class="Y">void</span>&nbsp;<span class="W">Magic</span>(<a href="src$Core$PrimitiveDataTypes$en-us.html#Upp::dword::typedef"><u>dword</u></a>&nbsp;<span class="Z">magic</span>&nbsp;=&nbsp;<span class="AG">0</span>x7d674d7b)</p>
+<p class="V">Serializes &quot;magic value&quot; to ensure stream integrity. When loading, this value is loaded and checked - mismatch results in invoking LoadError.</p>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="AA">magic</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">Magic value.</p></td></tr></table>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Stream::Pack(bool&,bool&,bool&,bool&,bool&,bool&,bool&,bool&)" class="X"><span class="Y">void</span>&nbsp;<span class="W">Pack</span>(<span class="Y">bool&amp;</span>&nbsp;<span class="Z">a</span>, <span class="Y">bool&amp;</span>&nbsp;<span class="Z">b</span>, <span class="Y">bool&amp;</span>&nbsp;<span class="Z">c</span>, <span class="Y">bool&amp;</span>&nbsp;<span class="Z">d</span>, <span class="Y">bool&amp;</span>&nbsp;<span class="Z">e</span>, <span class="Y">bool&amp;</span>&nbsp;<span class="Z">f</span>, <span class="Y">bool&amp;</span>&nbsp;<span class="Z">g</span>, <span class="Y">bool&amp;</span>&nbsp;<span class="Z">h</span>)</p>
+<p class="V">Serializes a set of boolean values compressed into single byte.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Stream::Pack(bool&,bool&,bool&,bool&,bool&,bool&,bool&)" class="X"><span class="Y">void</span>&nbsp;<span class="W">Pack</span>(<span class="Y">bool&amp;</span>&nbsp;<span class="Z">a</span>, <span class="Y">bool&amp;</span>&nbsp;<span class="Z">b</span>, <span class="Y">bool&amp;</span>&nbsp;<span class="Z">c</span>, <span class="Y">bool&amp;</span>&nbsp;<span class="Z">d</span>, <span class="Y">bool&amp;</span>&nbsp;<span class="Z">e</span>, <span class="Y">bool&amp;</span>&nbsp;<span class="Z">f</span>, <span class="Y">bool&amp;</span>&nbsp;<span class="Z">g</span>)</p>
+<p class="V">Serializes a set of boolean values compressed into single byte.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Stream::Pack(bool&,bool&,bool&,bool&,bool&,bool&)" class="X"><span class="Y">void</span>&nbsp;<span class="W">Pack</span>(<span class="Y">bool&amp;</span>&nbsp;<span class="Z">a</span>, <span class="Y">bool&amp;</span>&nbsp;<span class="Z">b</span>, <span class="Y">bool&amp;</span>&nbsp;<span class="Z">c</span>, <span class="Y">bool&amp;</span>&nbsp;<span class="Z">d</span>, <span class="Y">bool&amp;</span>&nbsp;<span class="Z">e</span>, <span class="Y">bool&amp;</span>&nbsp;<span class="Z">f</span>)</p>
+<p class="V">Serializes a set of boolean values compressed into single byte.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Stream::Pack(bool&,bool&,bool&,bool&,bool&)" class="X"><span class="Y">void</span>&nbsp;<span class="W">Pack</span>(<span class="Y">bool&amp;</span>&nbsp;<span class="Z">a</span>, <span class="Y">bool&amp;</span>&nbsp;<span class="Z">b</span>, <span class="Y">bool&amp;</span>&nbsp;<span class="Z">c</span>, <span class="Y">bool&amp;</span>&nbsp;<span class="Z">d</span>, <span class="Y">bool&amp;</span>&nbsp;<span class="Z">e</span>)</p>
+<p class="V">Serializes a set of boolean values compressed into single byte.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Stream::Pack(bool&,bool&,bool&,bool&)" class="X"><span class="Y">void</span>&nbsp;<span class="W">Pack</span>(<span class="Y">bool&amp;</span>&nbsp;<span class="Z">a</span>, <span class="Y">bool&amp;</span>&nbsp;<span class="Z">b</span>, <span class="Y">bool&amp;</span>&nbsp;<span class="Z">c</span>, <span class="Y">bool&amp;</span>&nbsp;<span class="Z">d</span>)</p>
+<p class="V">Serializes a set of boolean values compressed into single byte.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Stream::Pack(bool&,bool&,bool&)" class="X"><span class="Y">void</span>&nbsp;<span class="W">Pack</span>(<span class="Y">bool&amp;</span>&nbsp;<span class="Z">a</span>, <span class="Y">bool&amp;</span>&nbsp;<span class="Z">b</span>, <span class="Y">bool&amp;</span>&nbsp;<span class="Z">c</span>)</p>
+<p class="V">Serializes a set of boolean values compressed into single byte.</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Stream::Pack(bool&,bool&)" class="X"><span class="Y">void</span>&nbsp;<span class="W">Pack</span>(<span class="Y">bool&amp;</span>&nbsp;<span class="Z">a</span>, <span class="Y">bool&amp;</span>&nbsp;<span class="Z">b</span>)</p>
+<p class="V">Serializes a set of boolean values compressed into single byte.</p>
+<p class="F">&nbsp;</p>
+<p class="AH">&nbsp;</p>
+<p class="AH">&nbsp;</p>
+<p class="A">&nbsp;</p>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr><td width="100%"><table width="100%" class="C"><colgroup><col width="100%"></colgroup>
+<tr><td class="D"><p class="E">StringStream</p>
+</td>
+</tr>
+</table></td>
+</tr></table>
+<p class="F">&nbsp;</p>
+<p id="StringStream::class" class="AI"><span class="H">class</span><span class="AJ">&nbsp;</span><span class="AD">StringStream</span><span class="AJ">&nbsp;:&nbsp;</span><span class="H">public</span><span class="AJ">&nbsp;</span>Stream</p>
+<p class="J">StringStream is stream that uses String as storage medium. The maximum output size is limited to 2GB (maximum String size limit).</p>
+<p class="V">&nbsp;</p>
+<p class="A"><span class="AK">Derived from</span> <a href="src$Core$Stream$en-us.html#::Stream::class Stream">Stream</a></p>
+<p class="F">&nbsp;</p>
+<p class="A">&nbsp;</p>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr><td width="100%"><table width="100%" class="Q"><colgroup><col width="100%"></colgroup>
+<tr><td class="R"><p class="S">Constructor Detail</p>
+</td>
+</tr>
+</table></td>
+</tr></table>
+<p class="F">&nbsp;</p>
+<p id="StringStream::StringStream()" class="X"><span class="W">StringStream</span>()</p>
+<p class="V">Consructs empty stream and sets it into Storing serialization mode (like <span class="W">Create</span>).</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="StringStream::StringStream(const String&)" class="X"><span class="W">StringStream</span>(<span class="Y">const</span>&nbsp;<a href="String"><u>String</u></a><span class="Y">&amp;</span>&nbsp;<span class="Z">data</span>)</p>
+<p class="V">Constructs stream with specified content and sets it into Loading serialization mode (like <span class="W">Open</span>).</p>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="AA">data</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">Content of stream.</p></td></tr></table>
+<p class="F">&nbsp;</p>
+<p class="A">&nbsp;</p>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr><td width="100%"><table width="100%" class="Q"><colgroup><col width="100%"></colgroup>
+<tr><td class="R"><p class="S">Public Member List: Serialization Support</p>
+</td>
+</tr>
+</table></td>
+</tr></table>
+<p class="F">&nbsp;</p>
+<p id="StringStream::Open(const String&)" class="X"><span class="Y">void</span>&nbsp;<span class="W">Open</span>(<span class="Y">const</span>&nbsp;<a href="String"><u>String</u></a><span class="Y">&amp;</span>&nbsp;<span class="Z">data</span>)</p>
+<p class="V">Sets the content of stream to specified String and sets it into the Loading serialization mode.</p>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="AA">data</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">Content of stream.</p></td></tr></table>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Upp::StringStream::Limit(int)" class="X"><span class="Y">void</span>&nbsp;<span class="W">Limit</span>(<span class="Y">int</span>&nbsp;<span class="Z">sz</span>)</p>
+<p class="V">Sets the output size limit. Exception StringStream::LimitExc is thrown if this the output size reaches this limit.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="StringStream::Create()" class="X"><span class="Y">void</span>&nbsp;<span class="W">Create</span>()</p>
+<p class="V">Creates empty StringStream and sets it into Storing serialization mode.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="StringStream::Reserve(int)" class="X"><span class="Y">void</span>&nbsp;<span class="W">Reserve</span>(<span class="Y">int</span>&nbsp;<span class="Z">n</span>)</p>
+<p class="V">Reserves additional <span class="Z">n</span> bytes of internal storage as optimization hint. This might speedup the operation in certain cases if you know how much data approximately will be put into StringStream.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="StringStream::GetResult()" class="X"><a href="String"><u>String</u></a>&nbsp;<span class="W">GetResult</span>()</p>
+<p class="V">Returns resulting String.</p>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="AB">Return value</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">Result.</p></td></tr></table>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="StringStream::operator String()" class="X"><span class="W">operator&nbsp;String</span>()</p>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="AB">Return value</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A"><a href="src$Core$Stream$en-us.html#StringStream::GetResult()">GetResult</a>().</p></td></tr></table>
+<p class="AH">&nbsp;</p>
+<p class="AH">&nbsp;</p>
+<p class="AH">&nbsp;</p>
+<p class="A">&nbsp;</p>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr><td width="100%"><table width="100%" class="C"><colgroup><col width="100%"></colgroup>
+<tr><td class="D"><p class="E">MemStream</p>
+</td>
+</tr>
+</table></td>
+</tr></table>
+<p class="F">&nbsp;</p>
+<p id="MemStream::class" class="AI"><span class="H">class</span><span class="AJ">&nbsp;</span><span class="AD">MemStream</span><span class="AJ">&nbsp;:&nbsp;</span><span class="H">public</span><span class="AJ">&nbsp;</span>Stream</p>
+<p class="J">Stream that is using raw memory as its content.</p>
+<p class="V">&nbsp;</p>
+<p class="A"><span class="AK">Derived from</span> <a href="src$Core$Stream$en-us.html#::Stream::class Stream">Stream</a></p>
+<p class="F">&nbsp;</p>
+<p class="A">&nbsp;</p>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr><td width="100%"><table width="100%" class="Q"><colgroup><col width="100%"></colgroup>
+<tr><td class="R"><p class="S">Constructor Detail</p>
+</td>
+</tr>
+</table></td>
+</tr></table>
+<p class="F">&nbsp;</p>
+<p id="MemStream::MemStream(void*,int)" class="X"><span class="W">MemStream</span>(<span class="Y">void</span>&nbsp;*<span class="Z">data</span>, <span class="Y">int</span>&nbsp;<span class="Z">size</span>)</p>
+<p class="V">Constructs <span class="W">MemStream</span> at specified memory buffer.</p>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="AA">data</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">Pointer to the stream content.</p></td></tr></table>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="AA">size</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">Size.</p></td></tr></table>
+<p class="AH">&nbsp;</p>
+<p class="AH">&nbsp;</p>
+<p class="AH">&nbsp;</p>
+<p class="A">&nbsp;</p>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr><td width="100%"><table width="100%" class="C"><colgroup><col width="100%"></colgroup>
+<tr><td class="D"><p class="E">MemReadStream</p>
+</td>
+</tr>
+</table></td>
+</tr></table>
+<p class="F">&nbsp;</p>
+<p id="MemReadStream::class" class="AI"><span class="H">class</span><span class="AJ">&nbsp;</span><span class="AD">MemReadStream</span><span class="AJ">&nbsp;:&nbsp;</span><span class="H">public</span><span class="AJ">&nbsp;</span>MemStream</p>
+<p class="J">Read-only stream using raw memory as content.</p>
+<p class="V">&nbsp;</p>
+<p class="A"><span class="AK">Derived from</span> <a href="src$Core$Stream$en-us.html#::MemStream::class MemStream">MemStream</a></p>
+<p class="F">&nbsp;</p>
+<p class="A">&nbsp;</p>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr><td width="100%"><table width="100%" class="Q"><colgroup><col width="100%"></colgroup>
+<tr><td class="R"><p class="S">Constructor Detail</p>
+</td>
+</tr>
+</table></td>
+</tr></table>
+<p class="F">&nbsp;</p>
+<p id="MemReadStream::MemReadStream(const void*,int)" class="X"><span class="W">MemReadStream</span>(<span class="Y">const</span>&nbsp;<span class="Y">void</span>&nbsp;*<span class="Z">data</span>, <span class="Y">int</span>&nbsp;<span class="Z">size</span>)</p>
+<p class="V">Constructs <span class="W">MemStream</span> at specified memory buffer.</p>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="AA">data</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">Pointer to the stream content.</p></td></tr></table>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="AA">size</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">Size.</p></td></tr></table>
+<p class="F">&nbsp;</p>
+<p class="AH">&nbsp;</p>
+<p class="AH">&nbsp;</p>
+<p class="A">&nbsp;</p>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr><td width="100%"><table width="100%" class="C"><colgroup><col width="100%"></colgroup>
+<tr><td class="D"><p class="E">BlockStream</p>
+</td>
+</tr>
+</table></td>
+</tr></table>
+<p class="F">&nbsp;</p>
+<p id="BlockStream::class" class="AI"><span class="H">class</span><span class="AJ">&nbsp;</span><span class="AD">BlockStream</span><span class="AJ">&nbsp;:&nbsp;</span><span class="H">public</span><span class="AJ">&nbsp;</span>Stream</p>
+<p class="J">BlockStream implements operations needed to manage streams that are able to read or write a block of data at random positon. BlockStream provides buffered implementation of such stream. It implements all virtual methods of Stream, with exception of <span class="W">IsOpen</span> and <span class="W">Close</span>, using new virtual methods <span class="W">Read</span>, <span class="W">Write</span> and <span class="W">SetStreamSize</span>.</p>
+<p class="V">&nbsp;</p>
+<p class="A"><span class="AK">Derived from</span> <a href="src$Core$Stream$en-us.html#::BufferStream::class BufferStream">BufferStream</a></p>
+<p class="F">&nbsp;</p>
+<p class="A">&nbsp;</p>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr><td width="100%"><table width="100%" class="Q"><colgroup><col width="100%"></colgroup>
+<tr><td class="R"><p class="S">Public Member List</p>
+</td>
+</tr>
+</table></td>
+</tr></table>
+<p class="F">&nbsp;</p>
+<p class="A"><span class="Y">enum</span>&nbsp;{&nbsp;<span class="Z">READ</span>, <span class="Z">CREATE</span>, <span class="Z">APPEND</span>, <span class="Z">READWRITE</span>, <span class="Z">NOWRITESHARE</span>, <span class="Z">DELETESHARE</span>, <span class="Z">NOREADSHARE</span>, <span class="Z">SHAREMASK</span>&nbsp;}</p>
+<p class="V">This enum defines basic operation modes of BlockStream (used combined with binary or).</p>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p id="::BlockStream::READ" class="A"><span class="AA">READ</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p id="::BlockStream::READ" class="A">Read mode.</p></td></tr></table>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p id="::BlockStream::CREATE" class="A"><span class="AA">CREATE</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p id="::BlockStream::CREATE" class="A">Write mode.</p></td></tr></table>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p id="::BlockStream::APPEND" class="A"><span class="AA">APPEND</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p id="::BlockStream::APPEND" class="A">Append mode - means that initial position in the stream is at the end of it.</p></td></tr></table>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p id="::BlockStream::READWRITE" class="A"><span class="AA">READWRITE</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p id="::BlockStream::READWRITE" class="A">Enables subsequent streams full access to stream.</p></td></tr></table>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p id="::BlockStream::NOWRITESHARE" class="A"><span class="AA">NOWRITESHARE</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p id="::BlockStream::NOWRITESHARE" class="A">Disables subsequent streams to write to the stream.</p></td></tr></table>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p id="::BlockStream::DELETESHARE" class="A"><span class="AA">DELETESHARE</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p id="::BlockStream::DELETESHARE" class="A">Enables subsequent streams to delete the stream.</p></td></tr></table>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p id="::BlockStream::NOREADSHARE" class="A"><span class="AA">NOREADSHARE</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p id="::BlockStream::NOREADSHARE" class="A">Disables subsequent streams to read the stream.</p></td></tr></table>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="BlockStream::SetBufferSize(dword)" class="X"><span class="Y">void</span>&nbsp;<span class="W">SetBufferSize</span>(<a href="src$Core$PrimitiveDataTypes$en-us.html#Upp::dword::typedef"><u>dword</u></a>&nbsp;<span class="Z">newsize</span>)</p>
+<p class="V">Sets a new size of internal buffer.</p>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="AA">newsize</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">The new size of buffer.</p></td></tr></table>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="BlockStream::GetBufferSize()const" class="AC"><a href="src$Core$PrimitiveDataTypes$en-us.html#Upp::dword::typedef"><span class="AD"><u>dword</u></span></a><span class="AD">&nbsp;</span><span class="AE">GetBufferSize</span><span class="AD">()&nbsp;</span>const</p>
+<p class="V"><span class="AB">Return value</span>&nbsp;&nbsp;&nbsp;&nbsp;Size of buffer.</p>
+<p class="F">&nbsp;</p>
+<p class="A">&nbsp;</p>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr><td width="100%"><table width="100%" class="Q"><colgroup><col width="100%"></colgroup>
+<tr><td class="R"><p class="S">Protected Member List</p>
+</td>
+</tr>
+</table></td>
+</tr></table>
+<p class="F">&nbsp;</p>
+<p id="BlockStream::Read(int64,void*,dword)" class="X"><span class="Y">virtual</span> <a href="src$Core$PrimitiveDataTypes$en-us.html#Upp::dword::typedef"><u>dword</u></a>&nbsp;<span class="W">Read</span>(<a href="src$Core$PrimitiveDataTypes$en-us.html#Upp::int64::typedef"><u>int64</u></a>&nbsp;<span class="Z">at</span>, <span class="Y">void</span>&nbsp;*<span class="Z">ptr</span>, <a href="src$Core$PrimitiveDataTypes$en-us.html#Upp::dword::typedef"><u>dword</u></a>&nbsp;<span class="Z">size</span>)</p>
+<p class="V">Implementation of this virtual method in derived class should read a block of data at specified position in media.</p>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="AA">at</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">Position in media.</p></td></tr></table>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="AA">ptr</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">Pointer to buffer to receive data.</p></td></tr></table>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="AA">size</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">Requested size of data.</p></td></tr></table>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="AB">Return value</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">Size of data read.</p></td></tr></table>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="BlockStream::Write(int64,const void*,dword)" class="X"><span class="Y">virtual</span> <span class="Y">void</span>&nbsp;<span class="W">Write</span>(<a href="src$Core$PrimitiveDataTypes$en-us.html#Upp::int64::typedef"><u>int64</u></a>&nbsp;<span class="Z">at</span>, <span class="Y">const</span>&nbsp;<span class="Y">void</span>&nbsp;*<span class="Z">data</span>, <a href="src$Core$PrimitiveDataTypes$en-us.html#Upp::dword::typedef"><u>dword</u></a>&nbsp;<span class="Z">size</span>)</p>
+<p class="V">Implementation of this virtual method in derived method should write a block of data at specified position in media.</p>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="AA">at</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">Position in media.</p></td></tr></table>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="AA">data</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">Pointer to &nbsp;data.</p></td></tr></table>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="AA">size</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">Size of data.</p></td></tr></table>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="BlockStream::SetStreamSize(int64)" class="X"><span class="Y">virtual</span> <span class="Y">void</span>&nbsp;<span class="W">SetStreamSize</span>(<a href="src$Core$PrimitiveDataTypes$en-us.html#Upp::int64::typedef"><u>int64</u></a>&nbsp;<span class="Z">size</span>)</p>
+<p class="V">Implementation of this virtual method in derived class should adjust the size of media.</p>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="AA">size</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">Requested new size of media.</p></td></tr></table>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="BlockStream::GetStreamSize()const" class="AC"><a href="src$Core$PrimitiveDataTypes$en-us.html#Upp::int64::typedef"><span class="AD"><u>int64</u></span></a><span class="AD">&nbsp;</span><span class="AE">GetStreamSize</span><span class="AD">()&nbsp;</span>const</p>
+<p class="V">Returns current media size. Note that this might be different from current GetSize() - media size adjustment can be deffered to flushing the buffer.</p>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="AB">Return value</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">Current media size.</p></td></tr></table>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="BlockStream::OpenInit(dword,int64)" class="X"><span class="Y">void</span>&nbsp;<span class="W">OpenInit</span>(<a href="src$Core$PrimitiveDataTypes$en-us.html#Upp::dword::typedef"><u>dword</u></a>&nbsp;<span class="Z">mode</span>, <a href="src$Core$PrimitiveDataTypes$en-us.html#Upp::int64::typedef"><u>int64</u></a>&nbsp;<span class="Z">file_size</span>)</p>
+<p class="V">Initializes the BlockStream to specified mode and actual media size.</p>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="AA">mode</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">Mode.</p></td></tr></table>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="AA">file_size</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">Actual media size.</p></td></tr></table>
+<p class="F">&nbsp;</p>
+<p class="AH">&nbsp;</p>
+<p class="AH">&nbsp;</p>
+<p class="A">&nbsp;</p>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr><td width="100%"><table width="100%" class="C"><colgroup><col width="100%"></colgroup>
+<tr><td class="D"><p class="E">FileStream</p>
+</td>
+</tr>
+</table></td>
+</tr></table>
+<p class="F">&nbsp;</p>
+<p id="FileStream::class" class="AI"><span class="H">class</span><span class="AJ">&nbsp;</span><span class="AD">FileStream</span><span class="AJ">&nbsp;:&nbsp;</span><span class="H">public</span><span class="AJ">&nbsp;</span>BlockStream</p>
+<p class="J">Classical file stream.</p>
+<p class="J">&nbsp;</p>
+<p class="A"><span class="AK">Derived from</span> <a href="src$Core$Stream$en-us.html#::BlockStream::class BlockStream">BlockStream</a></p>
+<p class="F">&nbsp;</p>
+<p class="A">&nbsp;</p>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr><td width="100%"><table width="100%" class="Q"><colgroup><col width="100%"></colgroup>
+<tr><td class="R"><p class="S">Constructor Detail</p>
+</td>
+</tr>
+</table></td>
+</tr></table>
+<p class="F">&nbsp;</p>
+<p id="FileStream::FileStream(const char*,dword)" class="X"><span class="W">FileStream</span>(<span class="Y">const</span>&nbsp;<span class="Y">char</span>&nbsp;*<span class="Z">filename</span>, <a href="src$Core$PrimitiveDataTypes$en-us.html#Upp::dword::typedef"><u>dword</u></a>&nbsp;<span class="Z">mode</span>)</p>
+<p class="V">Opens file stream in specified mode (as defined in BlockStream).</p>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="AA">filename</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">The name of the file.</p></td></tr></table>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="AA">mode</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">Open mode.</p></td></tr></table>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="FileStream::FileStream(const char*,dword,mode_t)" class="X"><span class="W">FileStream</span>(<span class="Y">const</span>&nbsp;<span class="Y">char</span>&nbsp;*<span class="Z">filename</span>, <a href="src$Core$PrimitiveDataTypes$en-us.html#Upp::dword::typedef"><u>dword</u></a>&nbsp;<span class="Z">mode</span>, mode_t&nbsp;<span class="Z">acm</span>&nbsp;=&nbsp;<span class="AG">0644</span>)</p>
+<p class="U">Posix specific.</p>
+<p class="V">Opens file stream in specified mode (as defined in BlockStream) and specific POSIX access rights.</p>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="AA">filename</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">The name of the file.</p></td></tr></table>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="AA">mode</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">Open mode.</p></td></tr></table>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="AA">acm</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">Access rights.</p></td></tr></table>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="FileStream::FileStream(int)" class="X"><span class="W">FileStream</span>(<span class="Y">int</span>&nbsp;<span class="Z">std_handle</span>)</p>
+<p class="U">Posix specific.</p>
+<p class="V">Assigns existing file handle to FileStream.</p>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="AA">std_handle</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">File handle of open file. FileStream takes ownership of this handle.</p></td></tr></table>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="FileStream::FileStream()" class="X"><span class="W">FileStream</span>()</p>
+<p class="V">Creates empty unopened FileStream.</p>
+<p class="F">&nbsp;</p>
+<p class="A">&nbsp;</p>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr><td width="100%"><table width="100%" class="Q"><colgroup><col width="100%"></colgroup>
+<tr><td class="R"><p class="S">Public Member List</p>
+</td>
+</tr>
+</table></td>
+</tr></table>
+<p class="F">&nbsp;</p>
+<p id="FileStream::operator bool()const" class="AC"><span class="AE">operator&nbsp;bool</span><span class="AD">()&nbsp;</span>const</p>
+<p class="V"><span class="AB">Return value</span>&nbsp;&nbsp;&nbsp;&nbsp;True if stream is open.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="FileStream::GetTime()const" class="AC"><a href="FileTime"><span class="AD"><u>FileTime</u></span></a><span class="AD">&nbsp;</span><span class="AE">GetTime</span><span class="AD">()&nbsp;</span>const</p>
+<p class="V">Returns last-write time of stream.</p>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="AB">Return value</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">FileTime structure.</p></td></tr></table>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="FileStream::SetTime(const FileTime&)" class="X"><span class="Y">void</span>&nbsp;<span class="W">SetTime</span>(<span class="Y">const</span>&nbsp;<a href="FileTime"><u>FileTime</u></a><span class="Y">&amp;</span>&nbsp;<span class="Z">tm</span>)</p>
+<p class="V">Sets the last modification time of stream.</p>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="AA">tm</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">FileTime structure.</p></td></tr></table>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="FileStream::Open(const char*,dword)" class="X"><span class="Y">bool</span>&nbsp;<span class="W">Open</span>(<span class="Y">const</span>&nbsp;<span class="Y">char</span>&nbsp;*<span class="Z">filename</span>, <a href="dword"><u>dword</u></a>&nbsp;<span class="Z">mode</span>)</p>
+<p class="U">Posix specific.</p>
+<p class="V">Opens file stream in specified mode (as defined in BlockStream) and specific POSIX access rights. <span class="Z">mode</span> can be one of READ, CREATE, APPEND, READWRITE possibly combined (using '|') with flag NOWRITESHARE. This enforces exclusive write access to the file.</p>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="AA">filename</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">The name of the file.</p></td></tr></table>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="AA">mode</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">Open mode.</p></td></tr></table>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="FileStream::Open(const char*,dword,mode_t)" class="X"><span class="Y">bool</span>&nbsp;<span class="W">Open</span>(<span class="Y">const</span>&nbsp;<span class="Y">char</span>&nbsp;*<span class="Z">filename</span>, <a href="dword"><u>dword</u></a>&nbsp;<span class="Z">mode</span>, mode_t&nbsp;<span class="Z">acm</span>&nbsp;=&nbsp;<span class="AG">0644</span>)</p>
+<p class="U">Posix specific.</p>
+<p class="V">Opens file stream in specified mode (as defined in BlockStream) and specific POSIX access rights. <span class="Z">mode</span> can be one of READ, CREATE, APPEND, READWRITE possibly combined (using '|') with flag NOWRITESHARE. This flag uses flock system call to enforce exclusive write access to the file. In READ, if file does not exist, function fails. In CREATE mode, files is always created empty. In APPEND and READWRITE modes, file is created if it does not already exist.</p>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="AA">filename</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">The name of the file.</p></td></tr></table>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="AA">mode</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">Open mode.</p></td></tr></table>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="AA">acm</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">Access rights.</p></td></tr></table>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="FileStream::GetHandle()const" class="AC"><span class="AD">HANDLE&nbsp;</span><span class="AE">GetHandle</span><span class="AD">()&nbsp;</span>const</p>
+<p class="V"><span class="AB">Return value</span>&nbsp;&nbsp;&nbsp;&nbsp;File handle, either POSIX or WIN32.</p>
+<p class="F">&nbsp;</p>
+<p class="AH">&nbsp;</p>
+<p class="AH">&nbsp;</p>
+<p class="A">&nbsp;</p>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr><td width="100%"><table width="100%" class="C"><colgroup><col width="100%"></colgroup>
+<tr><td class="D"><p class="E">FileIn</p>
+</td>
+</tr>
+</table></td>
+</tr></table>
+<p class="F">&nbsp;</p>
+<p id="FileIn::class" class="AI"><span class="H">class</span><span class="AJ">&nbsp;</span><span class="AD">FileIn</span><span class="AJ">&nbsp;:&nbsp;</span><span class="H">public</span><span class="AJ">&nbsp;</span>FileStream</p>
+<p class="J">Simple helper class that represents FileStream in read mode.</p>
+<p class="A">&nbsp;</p>
+<p class="J"><span class="AK">Derived from</span> <a href="src$Core$Stream$en-us.html#::FileStream::class FileStream">FileStream</a></p>
+<p class="F">&nbsp;</p>
+<p class="A">&nbsp;</p>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr><td width="100%"><table width="100%" class="Q"><colgroup><col width="100%"></colgroup>
+<tr><td class="R"><p class="S">Constructor Detail</p>
+</td>
+</tr>
+</table></td>
+</tr></table>
+<p class="F">&nbsp;</p>
+<p id="FileIn::FileIn(const char*)" class="X"><span class="W">FileIn</span>(<span class="Y">const</span>&nbsp;<span class="Y">char</span>&nbsp;*<span class="Z">fn</span>)</p>
+<p class="V">Opens file for reading.</p>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="AA">fn</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">File name.</p></td></tr></table>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="FileIn::FileIn()" class="X"><span class="W">FileIn</span>()</p>
+<p class="V">Constructs empty FileStream.</p>
+<p class="F">&nbsp;</p>
+<p class="A">&nbsp;</p>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr><td width="100%"><table width="100%" class="Q"><colgroup><col width="100%"></colgroup>
+<tr><td class="R"><p class="S">Public Member List</p>
+</td>
+</tr>
+</table></td>
+</tr></table>
+<p class="F">&nbsp;</p>
+<p id="FileIn::Open(const char*)" class="X"><span class="Y">bool</span>&nbsp;<span class="W">Open</span>(<span class="Y">const</span>&nbsp;<span class="Y">char</span>&nbsp;*<span class="Z">fn</span>)</p>
+<p class="V">Opens file for reading.</p>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="AA">fn</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">File name.</p></td></tr></table>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="AB">Return value</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">True if open was successful.</p></td></tr></table>
+<p class="F">&nbsp;</p>
+<p class="AH">&nbsp;</p>
+<p class="AH">&nbsp;</p>
+<p class="A">&nbsp;</p>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr><td width="100%"><table width="100%" class="C"><colgroup><col width="100%"></colgroup>
+<tr><td class="D"><p class="E">FileOut</p>
+</td>
+</tr>
+</table></td>
+</tr></table>
+<p class="F">&nbsp;</p>
+<p id="FileOut::class" class="AI"><span class="H">class</span><span class="AJ">&nbsp;</span><span class="AD">FileOut</span><span class="AJ">&nbsp;:&nbsp;</span><span class="H">public</span><span class="AJ">&nbsp;</span>FileStream</p>
+<p class="J">Simple helper class that represents FileStream in write mode.</p>
+<p class="V">&nbsp;</p>
+<p class="A"><span class="AK">Derived from</span> <a href="src$Core$Stream$en-us.html#::FileStream::class FileStream">FileStream</a></p>
+<p class="F">&nbsp;</p>
+<p class="A">&nbsp;</p>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr><td width="100%"><table width="100%" class="Q"><colgroup><col width="100%"></colgroup>
+<tr><td class="R"><p class="S">Constructor Detail</p>
+</td>
+</tr>
+</table></td>
+</tr></table>
+<p class="F">&nbsp;</p>
+<p id="FileOut::FileOut(const char*)" class="X"><span class="W">FileOut</span>(<span class="Y">const</span>&nbsp;<span class="Y">char</span>&nbsp;*<span class="Z">fn</span>)</p>
+<p class="V">Opens file for writing.</p>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="AA">fn</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">File name.</p></td></tr></table>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="FileOut::FileOut()" class="X"><span class="W">FileOut</span>()</p>
+<p class="V">Constructs non-opened FileStream.</p>
+<p class="F">&nbsp;</p>
+<p class="A">&nbsp;</p>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr><td width="100%"><table width="100%" class="Q"><colgroup><col width="100%"></colgroup>
+<tr><td class="R"><p class="S">Public Member List</p>
+</td>
+</tr>
+</table></td>
+</tr></table>
+<p class="F">&nbsp;</p>
+<p id="FileOut::Open(const char*)" class="X"><span class="Y">bool</span>&nbsp;<span class="W">Open</span>(<span class="Y">const</span>&nbsp;<span class="Y">char</span>&nbsp;*<span class="Z">fn</span>)</p>
+<p class="V">Opens file for writing.</p>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="AA">fn</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">File name.</p></td></tr></table>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="AB">Return value</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">True if open was successful.</p></td></tr></table>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="FileOut::Open(const char*,mode_t)" class="X"><span class="Y">bool</span>&nbsp;<span class="W">Open</span>(<span class="Y">const</span>&nbsp;<span class="Y">char</span>&nbsp;*<span class="Z">fn</span>, mode_t&nbsp;<span class="Z">acm</span>&nbsp;=&nbsp;<span class="AG">0644</span>)</p>
+<p class="V">Opens file for writing.</p>
+<p class="U">POSIX specific</p>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="AA">fn</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">File name.</p></td></tr></table>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="Z">acm</span><span class="AG"></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A"></span>File mode</p></td></tr></table>
+<p class="V"><span class="AB">Return value</span>&nbsp;&nbsp;&nbsp;&nbsp;True if open was successful.</p>
+<p class="F">&nbsp;</p>
+<p class="A">&nbsp;</p>
+<p class="AH">&nbsp;</p>
+<p class="AH">&nbsp;</p>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr><td width="100%"><table width="100%" class="C"><colgroup><col width="100%"></colgroup>
+<tr><td class="D"><p class="E">FileAppend</p>
+</td>
+</tr>
+</table></td>
+</tr></table>
+<p class="F">&nbsp;</p>
+<p id="FileAppend::class" class="AI"><span class="H">class</span><span class="AJ">&nbsp;</span><span class="AD">FileAppend</span><span class="AJ">&nbsp;:&nbsp;</span><span class="H">public</span><span class="AJ">&nbsp;</span>FileStream</p>
+<p class="J">Simple helper class that represents FileStream in append mode - that in fact means in write mode with current position at the end of the file.</p>
+<p class="V">&nbsp;</p>
+<p class="A"><span class="AK">Derived from</span> FileStream</p>
+<p class="F">&nbsp;</p>
+<p class="A">&nbsp;</p>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr><td width="100%"><table width="100%" class="Q"><colgroup><col width="100%"></colgroup>
+<tr><td class="R"><p class="S">Constructor Detail</p>
+</td>
+</tr>
+</table></td>
+</tr></table>
+<p class="F">&nbsp;</p>
+<p id="FileAppend::FileAppend(const char*)" class="X"><span class="W">FileAppend</span>(<span class="Y">const</span>&nbsp;<span class="Y">char</span>&nbsp;*<span class="Z">fn</span>)</p>
+<p class="V">Opens file in append mode.</p>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="AA">fn</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">File name.</p></td></tr></table>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="FileAppend::FileAppend()" class="X"><span class="W">FileAppend</span>()</p>
+<p class="V">Constructs empty FileStream.</p>
+<p class="F">&nbsp;</p>
+<p class="A">&nbsp;</p>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr><td width="100%"><table width="100%" class="Q"><colgroup><col width="100%"></colgroup>
+<tr><td class="R"><p class="S">Public Member List</p>
+</td>
+</tr>
+</table></td>
+</tr></table>
+<p class="F">&nbsp;</p>
+<p id="FileAppend::Open(const char*)" class="X"><span class="Y">bool</span>&nbsp;<span class="W">Open</span>(<span class="Y">const</span>&nbsp;<span class="Y">char</span>&nbsp;*<span class="Z">fn</span>)</p>
+<p class="V">Opens file in append mode.</p>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="AA">fn</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">File name.</p></td></tr></table>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="AB">Return value</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">true when Open was successful.</p></td></tr></table>
+<p class="F">&nbsp;</p>
+<p class="AH">&nbsp;</p>
+<p class="AH">&nbsp;</p>
+<p class="A">&nbsp;</p>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr><td width="100%"><table width="100%" class="C"><colgroup><col width="100%"></colgroup>
+<tr><td class="D"><p class="E">SizeStream</p>
+</td>
+</tr>
+</table></td>
+</tr></table>
+<p class="F">&nbsp;</p>
+<p id="SizeStream::class" class="AI"><span class="H">class</span><span class="AJ">&nbsp;</span><span class="AD">SizeStream</span><span class="AJ">&nbsp;:&nbsp;</span><span class="H">public</span><span class="AJ">&nbsp;</span>Stream</p>
+<p class="J">Special output stream that in fact does not store output data, only counts the total number of bytes written.</p>
+<p class="V">&nbsp;</p>
+<p class="A"><span class="AK">Derived from</span> <a href="src$Core$Stream$en-us.html#::BufferStream::class BufferStream">BufferStream</a></p>
+<p class="F">&nbsp;</p>
+<p class="A">&nbsp;</p>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr><td width="100%"><table width="100%" class="Q"><colgroup><col width="100%"></colgroup>
+<tr><td class="R"><p class="S">Constructor Detail</p>
+</td>
+</tr>
+</table></td>
+</tr></table>
+<p class="F">&nbsp;</p>
+<p id="::SizeStream::SizeStream()" class="A"><span class="W">SizeStream</span>()</p>
+<p class="V">Default constructor.</p>
+<p class="F">&nbsp;</p>
+<p class="A">&nbsp;</p>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr><td width="100%"><table width="100%" class="Q"><colgroup><col width="100%"></colgroup>
+<tr><td class="R"><p class="S">Public Member List</p>
+</td>
+</tr>
+</table></td>
+</tr></table>
+<p class="F">&nbsp;</p>
+<p id="SizeStream::Open()" class="X"><span class="Y">void</span>&nbsp;<span class="W">Open</span>()</p>
+<p class="V">Reopens data - resets the counter of output bytes.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="SizeStream::operator int64()const" class="AC"><span class="AE">operator&nbsp;int64</span><span class="AD">()&nbsp;</span>const</p>
+<p class="V">Returns current number of bytes written.</p>
+<p class="F">&nbsp;</p>
+<p class="A">&nbsp;</p>
+<p class="AH">&nbsp;</p>
+<p class="A">&nbsp;</p>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr><td width="100%"><table width="100%" class="C"><colgroup><col width="100%"></colgroup>
+<tr><td class="D"><p class="E">CompareStream</p>
+</td>
+</tr>
+</table></td>
+</tr></table>
+<p class="F">&nbsp;</p>
+<p id="CompareStream::class" class="AI"><span class="H">class</span><span class="AJ">&nbsp;</span><span class="AD">CompareStream</span><span class="AJ">&nbsp;:&nbsp;</span><span class="H">public</span><span class="AJ">&nbsp;</span>Stream</p>
+<p class="J">Special output stream that instead of storing data performs their comparison to the data of another stream.</p>
+<p class="V">&nbsp;</p>
+<p class="A"><span class="AK">Derived from</span> <a href="src$Core$Stream$en-us.html#::BufferStream::class BufferStream">BufferStream</a></p>
+<p class="F">&nbsp;</p>
+<p class="A">&nbsp;</p>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr><td width="100%"><table width="100%" class="Q"><colgroup><col width="100%"></colgroup>
+<tr><td class="R"><p class="S">Constructor Detail</p>
+</td>
+</tr>
+</table></td>
+</tr></table>
+<p class="F">&nbsp;</p>
+<p id="CompareStream::CompareStream()" class="A"><span class="W">CompareStream</span>()</p>
+<p class="V">Constructs closed CompareStream.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="CompareStream::CompareStream(Stream&)" class="X"><span class="W">CompareStream</span>(<a href="Stream"><u>Stream</u></a><span class="Y">&amp;</span>&nbsp;<span class="Z">aStream</span>)</p>
+<p class="V">Constructors CompareStream opened for comparison with specified stream.</p>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="AA">aStream</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">Stream to compare with.</p></td></tr></table>
+<p class="F">&nbsp;</p>
+<p class="A">&nbsp;</p>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr><td width="100%"><table width="100%" class="Q"><colgroup><col width="100%"></colgroup>
+<tr><td class="R"><p class="S">Public Member List</p>
+</td>
+</tr>
+</table></td>
+</tr></table>
+<p class="F">&nbsp;</p>
+<p id="CompareStream::Open(Stream&)" class="X"><span class="Y">void</span>&nbsp;<span class="W">Open</span>(<a href="Stream"><u>Stream</u></a><span class="Y">&amp;</span>&nbsp;<span class="Z">aStream</span>)</p>
+<p class="V">Opens CompareStream for comparison with the specified stream.</p>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="AA">aStream</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">Stream to compare with.</p></td></tr></table>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="CompareStream::IsEqual()" class="X"><span class="Y">bool</span>&nbsp;<span class="W">IsEqual</span>()</p>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A">Return value</p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">true if all bytes written so far match those in comparison stream.</p></td></tr></table>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="CompareStream::operator bool()" class="X"><span class="W">operator&nbsp;bool</span>()</p>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A">Return value</p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">IsEqual().</p></td></tr></table>
+<p class="F">&nbsp;</p>
+<p class="A">&nbsp;</p>
+</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>
+<TABLE BORDER="0" WIDTH="100%"><TR><TD></TD>
+</TR>
+</TABLE>
+<TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" BGCOLOR="#FFFFFF" WIDTH="100%" style="border-style: solid; border-width: 1px; border-color: #6E89AE;padding: 10px;;"><TR><TD><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%"><TR><TD><p class="A"><span class="B"> </span><a href="www$uppweb$contribweb$en-us.html">Do you want to contribute?</a></p>
+</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>
+<script type="text/javascript">var a={'src$Core$Stream$en-us.html':'English'};var p=window.location.pathname.split("/");p=p[p.length-1];var s='<select id="lang" onchange="window.location=document.getElementById(\'lang\').value;">';for(l in a){if(p==l){d=" selected=1"}else{d=""}s+='<option value="'+l+'"'+d+'>'+a[l]+'</option>'}s+='</select>';var d=document.createElement('div');d.innerHTML=s;var c=document.getElementById('langs');c.replaceChild(d,c.firstChild);document.getElementById('langbox').style.display='block';</script></BODY>

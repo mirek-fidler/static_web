@@ -1,0 +1,505 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en-us">
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
+<META NAME="Generator" CONTENT="U++ HTML Package">
+<TITLE>Google Summer of Code 2011 Ideas :: U++</TITLE>
+<STYLE TYPE="text/css"><!--
+.A{margin:0px 0px 0px 0px;text-indent:0px;text-align:left;color:#000000;font-family:sans-serif;font-size:10pt;font-weight:normal;font-style:normal;}
+.B{font-size:12pt;}
+.C{margin:0px 0px 0px 0px;text-indent:0px;text-align:justify;color:#000000;font-family:serif;font-size:24pt;font-weight:bold;font-style:normal;}
+.D{margin:0px 0px 0px 0px;text-indent:0px;text-align:left;color:#000000;font-family:sans-serif;font-size:12pt;font-weight:normal;font-style:normal;}
+.E{border-collapse:collapse;table-layout:auto;border: 0px solid #000000;}
+.F{padding: 5px 5px 5px 5px;border-left: 0px solid #000000;border-top: 0px solid #000000;border-right: 0px solid #000000;border-bottom: 1px solid #000000;background-color:#FFFFFF;vertical-align:top;}
+.G{margin:0px 0px 0px 0px;text-indent:0px;text-align:justify;color:#000000;font-family:sans-serif;font-size:14pt;font-weight:bold;font-style:normal;}
+.H{margin:0px 0px 0px 0px;text-indent:0px;text-align:justify;color:#000000;font-family:sans-serif;font-size:12pt;font-weight:bold;font-style:normal;}
+.I{margin:0px 0px 0px 0px;text-indent:0px;text-align:justify;color:#000000;font-family:sans-serif;font-size:12pt;font-weight:normal;font-style:normal;}
+.J{margin:0px 0px 0px 0px;text-indent:0px;text-align:justify;color:#000000;font-family:sans-serif;font-size:10pt;font-weight:bold;font-style:normal;}
+.K{margin:0px 0px 0px 0px;text-indent:0px;text-align:justify;color:#000000;font-family:sans-serif;font-size:10pt;font-weight:normal;font-style:normal;}
+.L{display:list-item;list-style-type:disc;margin:0px 0px 0px 20px;text-indent:0px;text-align:justify;color:#000000;font-family:sans-serif;font-size:10pt;font-weight:normal;font-style:normal;}
+.M{margin:0px 0px 0px 0px;text-indent:0px;text-align:justify;color:#000000;font-family:sans-serif;font-size:11pt;font-weight:normal;font-style:normal;}
+.N{margin:0px 0px 0px 0px;text-indent:0px;text-align:left;color:#000000;font-family:sans-serif;font-size:10pt;font-weight:bold;font-style:normal;}
+.O{display:list-item;list-style-type:disc;margin:0px 0px 0px 20px;text-indent:0px;text-align:left;color:#000000;font-family:sans-serif;font-size:10pt;font-weight:normal;font-style:normal;}
+.P{margin:0px 0px 0px 0px;text-indent:0px;text-align:right;color:#000000;font-family:sans-serif;font-size:9pt;font-weight:normal;font-style:normal;}
+a.l1         { text-decoration:none; font-size: 8pt; font-family: sans-serif; font-weight: normal; }
+a.l1:link    { color:#000000; }
+a.l1:visited { color:#000080; }
+a.l1:hover   { color:#9933CC; }
+a.l1:active  { color:#000000; }
+a.l2         { text-decoration:none; font-size: 12pt; font-family: sans-serif; font-variant: small-caps; }
+a.l2:link    { color:#0066FF; }
+a.l2:visited { color:#FF6600; }
+a.l2:hover   { color:#BC0624; }
+a.l2:active  { color:#BC0024; }
+
+-->
+</STYLE>
+<META NAME="keywords" CONTENT="framework, toolkit, widget, c++, visual, studio, dev-cpp, builder, ide, class, component,wxwidgets, qt, rapid, application, development, rad, mfc, linux, macos, gui, sdl, directx, desktop"><META name="robots" content="index,follow">
+<LINK rel="alternate" type="application/rss+xml" title="SVN changes" href="svnchanges.xml">
+<LINK rel="shortcut icon" type="image/png" href="favicon.png">
+</HEAD><BODY BGCOLOR="#D2D9D2" ALINK="#800000" LINK="#000000" VLINK="#000080"><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%"><TR><TD COLSPAN="3"><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%" BGCOLOR="#FFFFFF" style="border: 1px solid #6E89AE;padding-left: 10px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;"><TR><TD><A HREF="index.html"><IMG SRC="0i.png" ALT="" BORDER="0"></A>
+</TD>
+<TD ALIGN="RIGHT" VALIGN="BOTTOM" STYLE="padding-bottom: 5px; background-image: url('1i.png')"><span style="font-size: 14pt; font-family: sans-serif;"><script type="text/javascript"><!--
+google_ad_client = "pub-1082147624384270";
+google_ad_width = 468;
+google_ad_height = 60;
+google_ad_format = "468x60_as";
+google_ad_type = "text_image";
+google_ad_channel = "";
+google_color_border = "336699";
+google_color_bg = "FFFFFF";
+google_color_link = "0000FF";
+google_color_text = "000000";
+google_color_url = "008000";
+//--></script>
+<script type="text/javascript"
+  src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+&nbsp;&nbsp;</span>
+</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>
+<TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%"><TR><TD COLSPAN="3" BGCOLOR="#D2D9D2" HEIGHT="6"></TD>
+</TR>
+<TR><TD VALIGN="TOP" ALIGN="CENTER"><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="160"><TR><TD ALIGN="CENTER"><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%" BGCOLOR="#FFFFFF" style="border-style: solid; border-width: 1px; border-color: #6E89AE;padding: 0px"><TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px;"><A HREF="www$uppweb$overview$en-us.html" CLASS="l1">Overview</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$examples$en-us.html" CLASS="l1">Examples</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$ss$en-us.html" CLASS="l1">Screenshots</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$comparison$en-us.html" CLASS="l1">Comparisons</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$apps$en-us.html" CLASS="l1">Applications</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$download$en-us.html" CLASS="l1">Download</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$documentation$en-us.html" CLASS="l1">Documentation</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$Tutorials$en-us.html" CLASS="l1">Tutorials</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="app$ide$UppHub$en-us.html" CLASS="l1">UppHub</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$Roadmap$en-us.html" CLASS="l1">Status & Roadmap</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$FAQ$en-us.html" CLASS="l1">FAQ</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="app$ide$About$en-us.html" CLASS="l1">Authors & License</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="https://www.ultimatepp.org/forums" CLASS="l1">Forums</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$Funding$en-us.html" CLASS="l1">Funding U++</A>
+</TD>
+</TR>
+</TABLE>
+<TABLE BORDER="0" WIDTH="100%"><TR><TD></TD>
+</TR>
+</TABLE>
+<TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%" BGCOLOR="#FFFFFF" style="border-style: solid; border-width: 1px; border-color: #6E89AE;padding: 0px"><TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('3i.png'); border: 0px solid black;padding-left:12px; padding-right:0px; padding-top:1px; padding-bottom:1px;color:#FFFFFF;"><B><span style="font-size: 8pt; font-family: sans-serif;">Search on this site</span>
+</B>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:6px; padding-right:0px; padding-top:4px; padding-bottom:4px;border-top: 1px solid #6E89AE;"><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%"><TR><TD><IMG SRC="4i.png" ALT="" BORDER="0"></TD>
+<TD><FORM ACTION="https://www.google.com/search" METHOD="GET" STYLE="margin:0px;padding:0px;"><INPUT TYPE="HIDDEN" NAME="ie" VALUE="UTF-8"><INPUT TYPE="HIDDEN" NAME="oe" VALUE="UTF-8"><INPUT TYPE="TEXT" NAME="q" SIZE="15" MAXLENGTH="256" placeholder="Site search"><INPUT TYPE="HIDDEN" NAME="sitesearch" VALUE="ultimatepp.org"></FORM>
+</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>
+<TABLE BORDER="0" WIDTH="100%"><TR><TD></TD>
+</TR>
+</TABLE>
+<br><div id="fb-root"></div>
+<script type="text/javascript">(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) {return;}
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+<div class="fb-like" data-href="https://www.facebook.com/pages/Upp-Framework/262346610476027?sk=wall" data-send="false" data-layout="button_count" data-width="160" data-show-faces="false" data-font="arial"></div>
+<br><br><script type="text/javascript"><!--
+google_ad_client = "pub-1082147624384270";
+google_ad_width = 160;
+google_ad_height = 600;
+google_ad_format = "160x600_as";
+google_ad_type = "text_image";
+google_ad_channel = "";
+google_color_border = "336699";
+google_color_bg = "FFFFFF";
+google_color_link = "0000FF";
+google_color_text = "000000";
+google_color_url = "008000";
+//--></script>
+<script type="text/javascript"
+  src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script><br><br><script type="text/javascript"><!--
+google_ad_client = "pub-1082147624384270";
+google_ad_width = 160;
+google_ad_height = 90;
+google_ad_format = "160x90_0ads_al_s";
+google_ad_channel = "";
+google_color_border = "336699";
+google_color_bg = "FFFFFF";
+google_color_link = "0000FF";
+google_color_text = "000000";
+google_color_url = "008000";
+//--></script>
+<script type="text/javascript"
+  src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+<br><br><br><br><br><br><A HREF="https://sourceforge.net/projects/upp/"><IMG SRC="https://sourceforge.net/sflogo.php?group_id=93970&amp;type=2" ALT="SourceForge.net Logo" BORDER="0" WIDTH="125" HEIGHT="37"></A>
+<br><br><A HREF="https://flathub.org/en/apps/org.ultimatepp.TheIDE"><IMG SRC="5i.png" ALT="SourceForge.net Logo" BORDER="0" WIDTH="125" HEIGHT="37"></A>
+<br><br><div style="background-color:#ffffff;width:125;height:35"><A HREF="https://github.com/ultimatepp"><IMG SRC="6i.png" ALT="GitHub Logo" BORDER="0" WIDTH="125" HEIGHT="35"></A>
+</div><br><div style="background-color:#ffffff;width:125;height:35"><div style="height:5"></div><A HREF="https://discord.gg/8XzqQzXZzb"><IMG SRC="https://assets-global.website-files.com/6257adef93867e50d84d30e2/636e0b5061df29d55a92d945_full_logo_blurple_RGB.svg" ALT="Discord Logo" BORDER="0" WIDTH="125" HEIGHT="25"></A>
+</div><br></TD>
+</TR>
+</TABLE>
+</TD>
+<TD VALIGN="TOP" BGCOLOR="#D2D9D2"><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="6"><TR><TD></TD>
+</TR>
+</TABLE>
+</TD>
+<TD VALIGN="TOP" WIDTH="100%" BGCOLOR="#D2D9D2"><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" BGCOLOR="#FFFFFF" WIDTH="100%" style="border-style: solid; border-width: 1px; border-color: #6E89AE;padding: 10px;;"><TR><TD><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%"><TR><TD><p class="C"><a href="gsoc$uppweb$gsoc2011$en-us.html">GSoC 2011</a>. Ideas</p>
+<p class="D">&nbsp;</p>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr><td width="100%"><table width="100%" class="E"><colgroup><col width="100%"></colgroup>
+<tr><td class="F"><p class="G">Introduction</p>
+</td>
+</tr>
+</table></td>
+</tr></table>
+<p class="A">&nbsp;</p>
+<p class="A">Google Summer of Code 2011 has been announced and this year Ultimate++ project really wants to participate as a mentoring organization. </p>
+<p class="A">&nbsp;</p>
+<p class="A">If you like C++ and you want to use a radical focus to more effective programming we would be happy if you come with us.</p>
+<p class="A">&nbsp;</p>
+<p class="A">Here we will describe you our proposals. We hope you will like them! However you can ask for additional information and we would also like to hear your ideas.</p>
+<p class="A">&nbsp;</p>
+<p class="A">You can introduce yourself in our <a href="http://www.ultimatepp.org/forums/">Forum</a>, discuss with the community these ideas and your proposals adding your personal touches. You can also contact the <a href="gsoc$uppweb$mentor2011$en-us.html">mentors</a> whose skills can match with your project ideas. This way you can do your own proposals with more possibilities to be approved.</p>
+<p class="A">&nbsp;</p>
+<p class="A">This list is a work-in-progress. You can follow discussions in <a href="http://www.ultimatepp.org/forums/">Forum</a>.</p>
+<p class="A">&nbsp;</p>
+<p class="D">&nbsp;</p>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr><td width="100%"><table width="100%" class="E"><colgroup><col width="100%"></colgroup>
+<tr><td class="F"><p class="G">Project Ideas</p>
+</td>
+</tr>
+</table></td>
+</tr></table>
+<p class="H">&nbsp;</p>
+<p class="H">Web Browser Control</p>
+<p class="I">&nbsp;</p>
+<p class="J">Proposed by</p>
+<p class="K"><a href="http://www.ultimatepp.org/forum/index.php?t=usrinfo&id=647&">Jan Dolinár</a></p>
+<p class="I">&nbsp;</p>
+<p class="J">Difficulty</p>
+<p class="K">High</p>
+<p class="K">&nbsp;</p>
+<p class="J">Experience required</p>
+<p class="K">U++, webkit (or any other engine), gcc compiling infrastructure.</p>
+<p class="K">&nbsp;</p>
+<p class="J">Description</p>
+<p class="K">This tasks main goal is to create a GUI widget allowing to integrate a web browser engine into U++ applications. Webkit engine is a good candidate for this task as it is fast and reliable, written in C++ and actively developed by large community, but other engines might be used as well.</p>
+<p class="K">&nbsp;</p>
+<p class="J">Mentors</p>
+<p class="K"><a href="http://www.ultimatepp.org/forum/index.php?t=usrinfo&id=647&">Jan Dolinár</a></p>
+<p class="K">&nbsp;</p>
+<p class="J">Roadmap</p>
+<p class="L">Explore possibility to use libwebkit</p>
+<p class="L">Decide how to integrate Webkit in a U++ project (most straightforward possibilities are direct rendering in DHCtrl or rendering into buffer first)</p>
+<p class="L">Write a widget binding U++ events to the rendering engine</p>
+<p class="K">&nbsp;</p>
+<p class="K">&nbsp;</p>
+<p class="H">U++ as a library</p>
+<p class="I">&nbsp;</p>
+<p class="J">Proposed by</p>
+<p class="K"><a href="http://www.ultimatepp.org/forum/index.php?t=usrinfo&id=3&">Mirek Fidler</a> and others.</p>
+<p class="J">&nbsp;</p>
+<p class="J">Difficulty</p>
+<p class="K">High</p>
+<p class="K">&nbsp;</p>
+<p class="J">Experience required</p>
+<p class="K">U++, MSC, gcc/mingw compiling infrastructure.</p>
+<p class="K">&nbsp;</p>
+<p class="J">Description</p>
+<p class="K">U++ is actually more than a C++ library. However it cannot be integrated easily in projects not developed in the U++ ide TheIde.</p>
+<p class="K">The goal would be to develop U++ as a library using TheIde as a resource editor only.</p>
+<p class="K">This would imply to create tools and processes that can be integrated with infrastructure server so that U++ can be provided as pure library (or set of libraries).</p>
+<p class="K">Create a special mode of TheIDE so that it can be used as resource editor only.</p>
+<p class="K">&nbsp;</p>
+<p class="J">Mentors</p>
+<p class="K">TBD</p>
+<p class="K">&nbsp;</p>
+<p class="J">We propose you this roadmap</p>
+<p class="L">Study U++ TheIde compiling strategy</p>
+<p class="L">Defining and developing the changes in U++ to make projects using make or Visual Studio</p>
+<p class="L">Changing TheIde to work with external projects as a resource editor</p>
+<p class="K">&nbsp;</p>
+<p class="K">&nbsp;</p>
+<p class="H">Selecting theme engine at runtime</p>
+<p class="I">&nbsp;</p>
+<p class="J">Proposed by</p>
+<p class="K"><a href="http://www.ultimatepp.org/forum/index.php?t=usrinfo&id=906&">Andrei Natanael Cosma (Student)</a></p>
+<p class="K">&nbsp;</p>
+<p class="J">Difficulty</p>
+<p class="K">Low to medium</p>
+<p class="K">&nbsp;</p>
+<p class="J">Experience required</p>
+<p class="K">C++</p>
+<p class="K">May help knowing to work with TheIDE</p>
+<p class="K">&nbsp;</p>
+<p class="J">Description</p>
+<p class="K">You'll have to take U++ code which provide theme for Gnome (gtk+), make it buildable as a *.so file so it may be linked at runtime but also keep the current functionality of being linked statically at compile time (embed in application). Create a portable interface so further theme engines (i.e. for KDE) may be added later.</p>
+<p class="K">&nbsp;</p>
+<p class="J">Mentors</p>
+<p class="K">TBD</p>
+<p class="K">&nbsp;</p>
+<p class="J">Roadmap</p>
+<p class="L">Get to know U++ basic &nbsp;theming internals</p>
+<p class="L">Learn about U++ runtime dynamic linking</p>
+<p class="L">Refactor the code</p>
+<p class="L">Create new API (glue)</p>
+<p class="K">&nbsp;</p>
+<p class="K">&nbsp;</p>
+<p class="H">Simple GUI frontend for Git</p>
+<p class="I">&nbsp;</p>
+<p class="J">Proposed by</p>
+<p class="K"><a href="http://www.ultimatepp.org/forum/index.php?t=usrinfo&id=647&">Jan Dolinár</a></p>
+<p class="K">&nbsp;</p>
+<p class="J">Difficulty</p>
+<p class="K">Low</p>
+<p class="K">&nbsp;</p>
+<p class="J">Experience required</p>
+<p class="K">U++, Git.</p>
+<p class="K">&nbsp;</p>
+<p class="J">Description</p>
+<p class="K">Create a package wrapping standard git command line into U++ GUI. The package should allow standalone usage as well as integration into other applications.</p>
+<p class="K">&nbsp;</p>
+<p class="J">Mentors</p>
+<p class="K"><a href="http://www.ultimatepp.org/forum/index.php?t=usrinfo&id=647&">Jan Dolinár</a>, <a href="http://www.ultimatepp.org/forum/index.php?t=usrinfo&id=595&">Ion Lupascu (backup)</a></p>
+<p class="K">&nbsp;</p>
+<p class="J">Roadmap</p>
+<p class="L">Get to know usvn, as it provides the very same functionality for SVN version control system</p>
+<p class="L">Create a GUI widget providing the basic git functionality (create repository, pull, push, display changes, ...)</p>
+<p class="L">Integrate the widget into TheIDE (to allow using it directly with U++ git mirror)</p>
+<p class="L">If there is any time left, the functionality can be extended to support more advanced features of distributed versioning systems</p>
+<p class="K">&nbsp;</p>
+<p class="K">&nbsp;</p>
+<p class="H">U++ port to KDE</p>
+<p class="J">&nbsp;</p>
+<p class="J">Proposed by</p>
+<p class="K"><a href="http://www.ultimatepp.org/forum/index.php?t=usrinfo&id=906&">Andrei Natanael Cosma (Student)</a></p>
+<p class="I">&nbsp;</p>
+<p class="J">Difficulty</p>
+<p class="K">High.</p>
+<p class="K">&nbsp;</p>
+<p class="J">Experience required</p>
+<p class="K">U++, Qt.</p>
+<p class="K">&nbsp;</p>
+<p class="J">Description</p>
+<p class="K">The goal is to provide a library which wraps Qt theming API and draw U++ widgets using it.</p>
+<p class="K">Right now U++ is using gtk+ theming API which make applications look ugly under KDE and gtk+ libs have to be available in order for application to run.</p>
+<p class="K">This library will make U++ non-dependent on a theming API but rather selecting proper theming engine at runtime so application look will be changed based on running context - KDE(Qt based) or Gnome(gtk+ based). If Qt or gtk+ do not exist and user have only X11 server U++ will use its own theming API for drawing widgets.</p>
+<p class="K">&nbsp;</p>
+<p class="J">Roadmap</p>
+<p class="L">Learning to work in GNU/Linux U++</p>
+<p class="L">Analyzing Gtk+ theming in U++</p>
+<p class="L">Applying the right patches to use Qt properly in KDE environments</p>
+<p class="K">&nbsp;</p>
+<p class="J">Mentors</p>
+<p class="K">TBD</p>
+<p class="K">&nbsp;</p>
+<p class="K">&nbsp;</p>
+<p class="H">Distributed build server</p>
+<p class="J">&nbsp;</p>
+<p class="J">Proposed by</p>
+<p class="K"><a href="http://www.ultimatepp.org/forum/index.php?t=usrinfo&id=836&">Razvan Oprea</a></p>
+<p class="I">&nbsp;</p>
+<p class="J">Difficulty</p>
+<p class="K">High.</p>
+<p class="K">&nbsp;</p>
+<p class="J">Experience required</p>
+<p class="K">U++,Servers programming, TheIDE build methodology.</p>
+<p class="K">&nbsp;</p>
+<p class="J">Description</p>
+<p class="K">A standalone server that can build source files and return the result to the client. The system would allow N clients to be connected to N servers. The client should be integrated in TheIDE and Visual Studio 2008/2010, with a nice interface displaying some overall statistics regarding the status of the servers.</p>
+<p class="K">The hard part is to keep the workload balanced and have the system work with a minimum human interference.</p>
+<p class="K">In this project the server can take advantage of the current TheIDE infrastructure creating the possibility for Visual Studio to build with GCC.</p>
+<p class="K">The main purpose of the app is to use the computing power of idle workstations in order to speed up the compiling speed for a project. Usually most of the time, the CPU of a machine is not used 100% therefore when other people need to compile a big project the extra power can speed up this process significantly.</p>
+<p class="K">Also another advantage of having such a system is the ability to compile and run on other remote platforms making the development for multiple operating systems much easier. The programmer can use the development environment of his choice and compile for any OS that has a build server running. This will increases productivity many times over just because the developer will use TheIDE he is used with (constantly switching between Window and Mac is really a pain).</p>
+<p class="K">Having a server with the ability to compile code remotely allows users to create a really powerful build machine keeping the costs of other computers down just because the user has to only run a simple editor. Also, if we take for example the package system of TheIDE, the server can dynamically choose already built sources increasing the build speed even further.</p>
+<p class="K">The main purpose of the Distributed Build System is to allow programmers to build projects on multiple machines, but this can be extended even further. For example the server can keep track of the source repository, automated nightly builds, or last stable binary files.</p>
+<p class="M">&nbsp;</p>
+<p class="J">Roadmap</p>
+<p class="L">TBD</p>
+<p class="K">&nbsp;</p>
+<p class="J">Mentors</p>
+<p class="K">TBD</p>
+<p class="K">&nbsp;</p>
+<p class="K">&nbsp;</p>
+<p class="H">Google V8 JavaScript in U++</p>
+<p class="K">&nbsp;</p>
+<p class="N">Proposed by</p>
+<p class="A"><a href="http://www.ultimatepp.org/forum/index.php?t=usrinfo&id=595&">Ion Lupascu</a></p>
+<p class="A">&nbsp;</p>
+<p class="N">Difficulty</p>
+<p class="A">Medium</p>
+<p class="A">&nbsp;</p>
+<p class="N">Experience required</p>
+<p class="A">UPP, V8 JavaScript, JavaScript</p>
+<p class="A">&nbsp;</p>
+<p class="N">Description</p>
+<p class="A">V8 implements ECMAScript as specified in ECMA-262, 3rd edition, and runs on Windows XP and Vista, Mac OS X 10.5 (Leopard), and Linux systems that use IA-32 or ARM processors. In U++ V8 will be a good choise to create possibility for extensions.</p>
+<p class="A">&nbsp;</p>
+<p class="N">Roadmap</p>
+<p class="A">TBD</p>
+<p class="A">&nbsp;</p>
+<p class="N">Mentors</p>
+<p class="K"><a href="http://www.ultimatepp.org/forum/index.php?t=usrinfo&id=595&">Ion Lupascu</a></p>
+<p class="K">&nbsp;</p>
+<p class="K">&nbsp;</p>
+<p class="H">T++ preview inside TheIDE</p>
+<p class="J">&nbsp;</p>
+<p class="N">Proposed by</p>
+<p class="A"><a href="http://www.ultimatepp.org/forum/index.php?t=usrinfo&id=21&">Peter Helcmanovsky</a></p>
+<p class="A">&nbsp;</p>
+<p class="N">Difficulty</p>
+<p class="A">Easy to Medium</p>
+<p class="A">&nbsp;</p>
+<p class="N">Experience required</p>
+<p class="A">C++</p>
+<p class="A">&nbsp;</p>
+<p class="N">Description</p>
+<p class="A">Add into TheIDE a way to view edited T++ file without whitespace marks/etc, ie. &quot;preview&quot; mode (Eventually add different preview modes like Qtf/Pdf/Web).</p>
+<p class="A">&nbsp;</p>
+<p class="N">Roadmap</p>
+<p class="O">Find and learn about how T++ files are edited and processed for view (there are some examples including Qtf Designer in TheIDE, UWord and uppweb generator).</p>
+<p class="O">Check if Qtf Designer can be connected to T++ file editing and what benefits would bring such solution.</p>
+<p class="O">Add preview mode to TheIDE.</p>
+<p class="L">Eventually add different modes of preview.</p>
+<p class="I">&nbsp;</p>
+<p class="N">Mentors</p>
+<p class="K">TBD</p>
+<p class="K">&nbsp;</p>
+<p class="K">&nbsp;</p>
+<p class="H">Advanced T++ help system</p>
+<p class="J">&nbsp;</p>
+<p class="N">Proposed by</p>
+<p class="A"><a href="http://www.ultimatepp.org/forum/index.php?t=usrinfo&id=6&">Graeme Prentice</a></p>
+<p class="A">&nbsp;</p>
+<p class="N">Difficulty</p>
+<p class="A">Medium to High.</p>
+<p class="A">&nbsp;</p>
+<p class="N">Experience required</p>
+<p class="A">C++</p>
+<p class="A">&nbsp;</p>
+<p class="N">Description</p>
+<p class="A">To create a standalone help package possibly based on <a href="http://www.ultimatepp.org/forum/index.php?t=usrinfo&id=472&">mdelfede</a>'s help viewer. Features:</p>
+<p class="A">&nbsp;</p>
+<p class="L">Structured table of contents in parallel with existing &quot;package reference&quot; help. Anyone can add things or add their own pages locally.</p>
+<p class="L">Existing topic++ pages can be linked to and links within those pages work whether they're viewed from the &quot;new&quot; help or existing.</p>
+<p class="L">Provide history, favorites, bookmarks and retrace.</p>
+<p class="L">Press F1 in source code and the help window shows help for word under cursor i.e. add a mechanism that supports this.</p>
+<p class="L">Click on a blue square and you see the topic page in non-edit mode i.e. go straight to Mr Ped &quot;preview mode&quot;.</p>
+<p class="L">Improve the help search so it takes you to the exact line.</p>
+<p class="L">Add &quot;tag word&quot; mechanism so that tag words can be assigned to a topic++ page and searched for.</p>
+<p class="K">&nbsp;</p>
+<p class="K">For extra credit:</p>
+<p class="L">Generate pdf with a clickable table of contents and index.</p>
+<p class="L">Convert from topic++ format to Google Docs format and vice versa. Google Docs allows simultaneous online changes by multiple users so possibly people could write and maintain an individual help page as a Google doc and import as a topic page when convenient. With a proper help infrastructure, people might become more interested in updating the help and the easier it is, the more likely people are to contribute.</p>
+<p class="L">Improve/automate the mechanism for users to submit changes/improvements to the help. Related to the last point, automating the process so that people are more likely to contribute.</p>
+<p class="A">&nbsp;</p>
+<p class="N">Roadmap</p>
+<p class="O">Find and learn about how T++ files are edited and processed for view (there are some examples including Qtf Designer in TheIDE, UWord and uppweb generator).</p>
+<p class="O">Study <a href="http://www.ultimatepp.org/forum/index.php?t=usrinfo&id=472&">mdelfede</a>'s help viewer.</p>
+<p class="O">TBD</p>
+<p class="I">&nbsp;</p>
+<p class="N">Mentors</p>
+<p class="K">TBD</p>
+<p class="K">&nbsp;</p>
+<p class="K">&nbsp;</p>
+<p class="H">Inter-Process Communication (IPC)</p>
+<p class="K">&nbsp;</p>
+<p class="N">Proposed by</p>
+<p class="A"><a href="http://www.ultimatepp.org/forum/index.php?t=usrinfo&id=595&">Ion Lupascu</a></p>
+<p class="A">&nbsp;</p>
+<p class="N">Difficulty</p>
+<p class="A">Medium</p>
+<p class="A">&nbsp;</p>
+<p class="N">Experience required</p>
+<p class="A">U++, socket, named pipes (POSIX, WINDOWS).</p>
+<p class="A">&nbsp;</p>
+<p class="N">Description</p>
+<p class="A">Using IPC can create a stable plugin manager with crash prevent (ex: Google Chrome), running parallel scripts of V8 JavaScript, etc.</p>
+<p class="A">A good experience result is chromium project (Google Chrome).</p>
+<p class="A">&nbsp;</p>
+<p class="N">Roadmap</p>
+<p class="A">TBD</p>
+<p class="A">&nbsp;</p>
+<p class="N">Mentors</p>
+<p class="K"><a href="http://www.ultimatepp.org/forum/index.php?t=usrinfo&id=595&">Ion Lupascu</a></p>
+<p class="K">&nbsp;</p>
+<p class="K">&nbsp;</p>
+<p class="H">Your project HERE</p>
+<p class="K">&nbsp;</p>
+<p class="K">Remember you as student can propose your own projects. We advice you to read our <a href="http://www.ultimatepp.org/forum/">Forum</a> and contact the <a href="gsoc$uppweb$mentor2011$en-us.html">mentors</a> that can match with your project.</p>
+<p class="H">&nbsp;</p>
+<p class="D">&nbsp;</p>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr><td width="100%"><table width="100%" class="E"><colgroup><col width="100%"></colgroup>
+<tr><td class="F"><p class="G">Project requirements</p>
+</td>
+</tr>
+</table></td>
+</tr></table>
+<p class="I">&nbsp;</p>
+<p class="K">All U++ community projects have to comply with certain basic requirements. These are included in Bazaar pages.</p>
+<p class="A">&nbsp;</p>
+<p class="A">Package submission and maintenance is described <a href="www$uppweb$bazaar_submission$en-us.html">here</a>.</p>
+<p class="A">&nbsp;</p>
+<p class="A">If you need to use community packages you would have to do <a href="www$uppweb$bazaar_user$en-us.html">this</a>.</p>
+<p class="A">&nbsp;</p>
+<p class="K">And if you find any bug or you would like to get any additional feature or improvement, please go <a href="www$uppweb$bazaar_support$en-us.html">here</a>.</p>
+<p class="K">&nbsp;</p>
+<p class="K">As the main U++ platforms are Windows and GNU/Linux it would be important that all projects would support both operating systems leaving open the possibility to, in a future, be implemented in OSX.</p>
+<p class="K">&nbsp;</p>
+<p class="K">Ultimate++ project is proud of its BSD license so we would really prefer that all external libraries to be linked with U++ code would be BSD licensed or similar.</p>
+<p class="D">&nbsp;</p>
+<p class="P"><a href="gsoc$uppweb$gsoc2011$en-us.html">Return to GSoC 2011 Home page</a></p>
+<p class="D">&nbsp;</p>
+</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>
+<TABLE BORDER="0" WIDTH="100%"><TR><TD></TD>
+</TR>
+</TABLE>
+<TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" BGCOLOR="#FFFFFF" WIDTH="100%" style="border-style: solid; border-width: 1px; border-color: #6E89AE;padding: 10px;;"><TR><TD><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%"><TR><TD><p class="A"><span class="B"> </span><a href="www$uppweb$contribweb$en-us.html">Do you want to contribute?</a></p>
+</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>
+<script type="text/javascript">var a={'gsoc$uppweb$ideas2011$en-us.html':'English'};var p=window.location.pathname.split("/");p=p[p.length-1];var s='<select id="lang" onchange="window.location=document.getElementById(\'lang\').value;">';for(l in a){if(p==l){d=" selected=1"}else{d=""}s+='<option value="'+l+'"'+d+'>'+a[l]+'</option>'}s+='</select>';var d=document.createElement('div');d.innerHTML=s;var c=document.getElementById('langs');c.replaceChild(d,c.firstChild);document.getElementById('langbox').style.display='block';</script></BODY>

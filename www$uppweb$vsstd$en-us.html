@@ -1,0 +1,596 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en-us">
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
+<META NAME="Generator" CONTENT="U++ HTML Package">
+<META NAME="Description" CONTENT="U++ can be easily accused of reinventing the wheel.">
+<TITLE>U++ Code vs standard C++ library :: U++</TITLE>
+<STYLE TYPE="text/css"><!--
+.A{margin:0px 0px 0px 0px;text-indent:0px;text-align:left;color:#000000;font-family:sans-serif;font-size:10pt;font-weight:normal;font-style:normal;}
+.B{font-size:12pt;}
+.C{margin:0px 0px 0px 0px;text-indent:0px;text-align:left;color:#000000;font-family:serif;font-size:24pt;font-weight:bold;font-style:normal;}
+.D{margin:8px 0px 8px 0px;text-indent:0px;text-align:left;color:#000000;font-family:sans-serif;font-size:10pt;font-weight:normal;font-style:normal;line-height:150%}
+.E{margin:0px 0px 0px 0px;text-indent:0px;text-align:left;color:#000000;font-family:sans-serif;font-size:10pt;font-weight:bold;font-style:italic;}
+.F{font-weight:bold;font-style:italic;}
+.G{color:#8000ff;font-weight:bold;font-style:italic;}
+.H{margin:0px 0px 0px 0px;text-indent:0px;text-align:left;color:#000000;font-family:sans-serif;font-size:12pt;font-weight:bold;font-style:normal;}
+.I{border-collapse:collapse;table-layout:auto;border: 2px solid #000000;}
+.J{padding: 3px 5px 3px 5px;border-left: 1px solid #000000;border-top: 1px solid #000000;border-right: 1px solid #000000;border-bottom: 1px solid #000000;background-color:#D8D8D8;vertical-align:middle;}
+.K{margin:0px 0px 0px 0px;text-indent:0px;text-align:left;color:#000000;font-family:sans-serif;font-size:9pt;font-weight:bold;font-style:normal;}
+.L{margin:0px 0px 0px 0px;text-indent:0px;text-align:center;color:#000000;font-family:sans-serif;font-size:9pt;font-weight:normal;font-style:normal;}
+.M{margin:0px 0px 0px 0px;text-indent:0px;text-align:left;color:#000000;font-family:sans-serif;font-size:9pt;font-weight:bold;font-style:italic;}
+.N{margin:0px 0px 0px 0px;text-indent:0px;text-align:left;color:#8000ff;font-family:sans-serif;font-size:9pt;font-weight:bold;font-style:italic;}
+.O{padding: 3px 5px 3px 5px;border-left: 1px solid #000000;border-top: 1px solid #000000;border-right: 1px solid #000000;border-bottom: 1px solid #000000;background-color:#FFFFFF;vertical-align:middle;}
+.P{margin:0px 0px 0px 0px;text-indent:0px;text-align:left;color:#000000;font-family:sans-serif;font-size:9pt;font-weight:normal;font-style:normal;}
+.Q{margin:0px 0px 0px 0px;text-indent:0px;text-align:center;color:#000000;font-family:sans-serif;font-size:9pt;font-weight:bold;font-style:normal;}
+.R{margin:0px 0px 0px 0px;text-indent:0px;text-align:center;color:#8000ff;font-family:sans-serif;font-size:9pt;font-weight:bold;font-style:normal;}
+.S{margin:0px 0px 0px 0px;text-indent:0px;text-align:left;color:#000000;font-family:sans-serif;font-size:10pt;font-weight:bold;font-style:normal;}
+.T{padding: 3px 5px 3px 5px;border-left: 1px solid #000000;border-top: 1px solid #000000;border-right: 1px solid #000000;border-bottom: 1px solid #000000;background-color:#FFFFFF;vertical-align:top;}
+.U{font-style:italic;}
+.V{padding: 3px 5px 3px 5px;border-left: 1px solid #000000;border-top: 1px solid #000000;border-right: 1px solid #000000;border-bottom: 1px solid #000000;background-color:#FEFED0;vertical-align:middle;}
+.W{margin:0px 0px 0px 0px;text-indent:0px;text-align:left;color:#000080;font-family:monospace;font-size:10pt;font-weight:bold;font-style:normal;}
+.X{margin:0px 0px 0px 0px;text-indent:0px;text-align:left;color:#000000;font-family:sans-serif;font-size:12pt;font-weight:normal;font-style:normal;}
+a.l1         { text-decoration:none; font-size: 8pt; font-family: sans-serif; font-weight: normal; }
+a.l1:link    { color:#000000; }
+a.l1:visited { color:#000080; }
+a.l1:hover   { color:#9933CC; }
+a.l1:active  { color:#000000; }
+a.l2         { text-decoration:none; font-size: 12pt; font-family: sans-serif; font-variant: small-caps; }
+a.l2:link    { color:#0066FF; }
+a.l2:visited { color:#FF6600; }
+a.l2:hover   { color:#BC0624; }
+a.l2:active  { color:#BC0024; }
+
+-->
+</STYLE>
+<META NAME="keywords" CONTENT="framework, toolkit, widget, c++, visual, studio, dev-cpp, builder, ide, class, component,wxwidgets, qt, rapid, application, development, rad, mfc, linux, macos, gui, sdl, directx, desktop"><META name="robots" content="index,follow">
+<LINK rel="alternate" type="application/rss+xml" title="SVN changes" href="svnchanges.xml">
+<LINK rel="shortcut icon" type="image/png" href="favicon.png">
+</HEAD><BODY BGCOLOR="#D2D9D2" ALINK="#800000" LINK="#000000" VLINK="#000080"><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%"><TR><TD COLSPAN="3"><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%" BGCOLOR="#FFFFFF" style="border: 1px solid #6E89AE;padding-left: 10px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;"><TR><TD><A HREF="index.html"><IMG SRC="0i.png" ALT="" BORDER="0"></A>
+</TD>
+<TD ALIGN="RIGHT" VALIGN="BOTTOM" STYLE="padding-bottom: 5px; background-image: url('1i.png')"><span style="font-size: 14pt; font-family: sans-serif;"><script type="text/javascript"><!--
+google_ad_client = "pub-1082147624384270";
+google_ad_width = 468;
+google_ad_height = 60;
+google_ad_format = "468x60_as";
+google_ad_type = "text_image";
+google_ad_channel = "";
+google_color_border = "336699";
+google_color_bg = "FFFFFF";
+google_color_link = "0000FF";
+google_color_text = "000000";
+google_color_url = "008000";
+//--></script>
+<script type="text/javascript"
+  src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+&nbsp;&nbsp;</span>
+</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>
+<TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%"><TR><TD COLSPAN="3" BGCOLOR="#D2D9D2" HEIGHT="6"></TD>
+</TR>
+<TR><TD VALIGN="TOP" ALIGN="CENTER"><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="160"><TR><TD ALIGN="CENTER"><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%" BGCOLOR="#FFFFFF" style="border-style: solid; border-width: 1px; border-color: #6E89AE;padding: 0px"><TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px;"><A HREF="www$uppweb$overview$en-us.html" CLASS="l1">Overview</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$examples$en-us.html" CLASS="l1">Examples</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$ss$en-us.html" CLASS="l1">Screenshots</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$comparison$en-us.html" CLASS="l1">Comparisons</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$apps$en-us.html" CLASS="l1">Applications</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$download$en-us.html" CLASS="l1">Download</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$documentation$en-us.html" CLASS="l1">Documentation</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$Tutorials$en-us.html" CLASS="l1">Tutorials</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="app$ide$UppHub$en-us.html" CLASS="l1">UppHub</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$Roadmap$en-us.html" CLASS="l1">Status & Roadmap</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$FAQ$en-us.html" CLASS="l1">FAQ</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="app$ide$About$en-us.html" CLASS="l1">Authors & License</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="https://www.ultimatepp.org/forums" CLASS="l1">Forums</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$Funding$en-us.html" CLASS="l1">Funding U++</A>
+</TD>
+</TR>
+</TABLE>
+<TABLE BORDER="0" WIDTH="100%"><TR><TD></TD>
+</TR>
+</TABLE>
+<TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%" BGCOLOR="#FFFFFF" style="border-style: solid; border-width: 1px; border-color: #6E89AE;padding: 0px"><TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('3i.png'); border: 0px solid black;padding-left:12px; padding-right:0px; padding-top:1px; padding-bottom:1px;color:#FFFFFF;"><B><span style="font-size: 8pt; font-family: sans-serif;">Search on this site</span>
+</B>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:6px; padding-right:0px; padding-top:4px; padding-bottom:4px;border-top: 1px solid #6E89AE;"><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%"><TR><TD><IMG SRC="4i.png" ALT="" BORDER="0"></TD>
+<TD><FORM ACTION="https://www.google.com/search" METHOD="GET" STYLE="margin:0px;padding:0px;"><INPUT TYPE="HIDDEN" NAME="ie" VALUE="UTF-8"><INPUT TYPE="HIDDEN" NAME="oe" VALUE="UTF-8"><INPUT TYPE="TEXT" NAME="q" SIZE="15" MAXLENGTH="256" placeholder="Site search"><INPUT TYPE="HIDDEN" NAME="sitesearch" VALUE="ultimatepp.org"></FORM>
+</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>
+<TABLE BORDER="0" WIDTH="100%"><TR><TD></TD>
+</TR>
+</TABLE>
+<br><div id="fb-root"></div>
+<script type="text/javascript">(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) {return;}
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+<div class="fb-like" data-href="https://www.facebook.com/pages/Upp-Framework/262346610476027?sk=wall" data-send="false" data-layout="button_count" data-width="160" data-show-faces="false" data-font="arial"></div>
+<br><br><script type="text/javascript"><!--
+google_ad_client = "pub-1082147624384270";
+google_ad_width = 160;
+google_ad_height = 600;
+google_ad_format = "160x600_as";
+google_ad_type = "text_image";
+google_ad_channel = "";
+google_color_border = "336699";
+google_color_bg = "FFFFFF";
+google_color_link = "0000FF";
+google_color_text = "000000";
+google_color_url = "008000";
+//--></script>
+<script type="text/javascript"
+  src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script><br><br><script type="text/javascript"><!--
+google_ad_client = "pub-1082147624384270";
+google_ad_width = 160;
+google_ad_height = 90;
+google_ad_format = "160x90_0ads_al_s";
+google_ad_channel = "";
+google_color_border = "336699";
+google_color_bg = "FFFFFF";
+google_color_link = "0000FF";
+google_color_text = "000000";
+google_color_url = "008000";
+//--></script>
+<script type="text/javascript"
+  src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+<br><br><br><br><br><br><A HREF="https://sourceforge.net/projects/upp/"><IMG SRC="https://sourceforge.net/sflogo.php?group_id=93970&amp;type=2" ALT="SourceForge.net Logo" BORDER="0" WIDTH="125" HEIGHT="37"></A>
+<br><br><A HREF="https://flathub.org/en/apps/org.ultimatepp.TheIDE"><IMG SRC="5i.png" ALT="SourceForge.net Logo" BORDER="0" WIDTH="125" HEIGHT="37"></A>
+<br><br><div style="background-color:#ffffff;width:125;height:35"><A HREF="https://github.com/ultimatepp"><IMG SRC="6i.png" ALT="GitHub Logo" BORDER="0" WIDTH="125" HEIGHT="35"></A>
+</div><br><div style="background-color:#ffffff;width:125;height:35"><div style="height:5"></div><A HREF="https://discord.gg/8XzqQzXZzb"><IMG SRC="https://assets-global.website-files.com/6257adef93867e50d84d30e2/636e0b5061df29d55a92d945_full_logo_blurple_RGB.svg" ALT="Discord Logo" BORDER="0" WIDTH="125" HEIGHT="25"></A>
+</div><br></TD>
+</TR>
+</TABLE>
+</TD>
+<TD VALIGN="TOP" BGCOLOR="#D2D9D2"><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="6"><TR><TD></TD>
+</TR>
+</TABLE>
+</TD>
+<TD VALIGN="TOP" WIDTH="100%" BGCOLOR="#D2D9D2"><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" BGCOLOR="#FFFFFF" WIDTH="100%" style="border-style: solid; border-width: 1px; border-color: #6E89AE;padding: 10px;;"><TR><TD><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%"><TR><TD><p class="C">U++ Core vs standard C++ library</p>
+<p class="D">U++ can be easily accused of reinventing the wheel. While the main reason of not using standard C++ library is not quite performance related, the interface definition of U++ containers allows very effective implementation. Matched with U++ heap allocator which overloads global new and delete operators, U++ is able to boost the speed of applications a bit.</p>
+<p class="D">In the benchmark example, we are comparing &quot;out-of-box&quot; performance of standard library implementations coming with widely used compilers with performance of U++ Core with the same compilers in simple example. The purpose of code is to scan through file, find all identifiers (by C lexical definition) and print them sorted by the name, with list of lines where they occur.</p>
+<p class="A">&nbsp;</p>
+<p class="A">Implementation use std::map, std::tr1::unordered_map (or equivalent stdext::hash_map with microsoft compiler) with std::string and standard library streams and U++ container VectorMap with UPP::String and U++ streams, tested with both U++ and standard library heap allocator.</p>
+<p class="E">&nbsp;</p>
+<p class="A"><span class="F">ratio U++/std</span> column shows how many times is U++ Core VectorMap container based solution faster then the standard solution with the library that comes with the compiler (best of map/hash_map times is considered).</p>
+<p class="A">&nbsp;</p>
+<p class="A"><span class="G">ratio U++/STL</span> column shows how many times is U++ Core based solution faster then the STL solution when using U++ allocator, because STL containers also benefit from it (best of map/hash_map times is considered).</p>
+<p class="A">&nbsp;</p>
+<p class="A">Perhaps if the reinvented wheel spins about 4 times faster, reinventing is not that bad idea...</p>
+<p class="A">&nbsp;</p>
+<p class="A">&nbsp;</p>
+<p class="H">Results</p>
+<p class="A">&nbsp;</p>
+<p class="A">Test with 3.93 KB .cpp file:</p>
+<p class="A">&nbsp;</p>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr><td width="100%"><table width="100%" class="I"><colgroup><col width="12%"><col width="12%"><col width="16%"><col width="9%"><col width="15%"><col width="11%"><col width="10%"><col width="11%"></colgroup>
+<tr><td class="J"><p class="K">allocator</p>
+</td>
+<td class="J" colspan=2><p class="L">standard</p>
+</td>
+<td class="J" colspan=3><p class="L">U++</p>
+</td>
+<td class="J" rowspan=2><p class="M">ratio</p>
+<p class="M">U++/std</p>
+</td>
+<td class="J" rowspan=2><p class="N">ratio</p>
+<p class="N">U++/STL</p>
+</td>
+</tr>
+<tr><td class="J"><p class="K">code</p>
+</td>
+<td class="J"><p class="L">map</p>
+</td>
+<td class="J"><p class="L">unordered_map</p>
+</td>
+<td class="J"><p class="L">map</p>
+</td>
+<td class="J"><p class="L">unordered_map</p>
+</td>
+<td class="J"><p class="L">U++</p>
+</td>
+</tr>
+<tr><td class="O"><p class="P">GCC32</p>
+</td>
+<td class="O"><p class="L">5.3 s</p>
+</td>
+<td class="O"><p class="Q"><u>4.9 s</u></p>
+</td>
+<td class="O"><p class="L">4.4 s</p>
+</td>
+<td class="O"><p class="R"><u>3.9 s</u></p>
+</td>
+<td class="O"><p class="Q"><u>1.1 s</u></p>
+</td>
+<td class="O"><p class="Q"><u>4.5</u></p>
+</td>
+<td class="O"><p class="R"><u>3.5</u></p>
+</td>
+</tr>
+<tr><td class="O"><p class="P">GCC64</p>
+</td>
+<td class="O"><p class="L">4.2 s</p>
+</td>
+<td class="O"><p class="Q"><u>3.7 s</u></p>
+</td>
+<td class="O"><p class="L">3.2 s</p>
+</td>
+<td class="O"><p class="R"><u>3.0 s</u></p>
+</td>
+<td class="O"><p class="Q"><u>0.8 s</u></p>
+</td>
+<td class="O"><p class="Q"><u>4.6</u></p>
+</td>
+<td class="O"><p class="R"><u>3.8</u></p>
+</td>
+</tr>
+</table></td>
+</tr></table>
+<p class="A">&nbsp;</p>
+<p class="A">&nbsp;</p>
+<p class="A">Test with 58 KB .cpp file:</p>
+<p class="A">&nbsp;</p>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr><td width="100%"><table width="100%" class="I"><colgroup><col width="12%"><col width="12%"><col width="16%"><col width="8%"><col width="16%"><col width="10%"><col width="10%"><col width="11%"></colgroup>
+<tr><td class="J"><p class="K">allocator</p>
+</td>
+<td class="J" colspan=2><p class="L">standard</p>
+</td>
+<td class="J" colspan=3><p class="L">U++</p>
+</td>
+<td class="J" rowspan=2><p class="M">ratio</p>
+<p class="M">U++/std</p>
+</td>
+<td class="J" rowspan=2><p class="N">ratio</p>
+<p class="N">U++/STL</p>
+</td>
+</tr>
+<tr><td class="J"><p class="K">code</p>
+</td>
+<td class="J"><p class="L">map</p>
+</td>
+<td class="J"><p class="L">unordered_map</p>
+</td>
+<td class="J"><p class="L">map</p>
+</td>
+<td class="J"><p class="L">unordered_map</p>
+</td>
+<td class="J"><p class="L">U++</p>
+</td>
+</tr>
+<tr><td class="O"><p class="P">GCC32</p>
+</td>
+<td class="O"><p class="L">70 s</p>
+</td>
+<td class="O"><p class="Q"><u>56 s</u></p>
+</td>
+<td class="O"><p class="L">58 s</p>
+</td>
+<td class="O"><p class="R"><u>45 s</u></p>
+</td>
+<td class="O"><p class="Q"><u>11 s</u></p>
+</td>
+<td class="O"><p class="Q"><u>5.1</u></p>
+</td>
+<td class="O"><p class="R"><u>4.1</u></p>
+</td>
+</tr>
+<tr><td class="O"><p class="P">GCC64</p>
+</td>
+<td class="O"><p class="L">55 s</p>
+</td>
+<td class="O"><p class="Q"><u>43 s</u></p>
+</td>
+<td class="O"><p class="L">45 s</p>
+</td>
+<td class="O"><p class="R"><u>34 s</u></p>
+</td>
+<td class="O"><p class="Q"><u>8.8 s</u></p>
+</td>
+<td class="O"><p class="Q"><u>4.9</u></p>
+</td>
+<td class="O"><p class="R"><u>3.9</u></p>
+</td>
+</tr>
+</table></td>
+</tr></table>
+<p class="A">&nbsp;</p>
+<p class="A">&nbsp;</p>
+<p class="S"><u>Platforms</u></p>
+<p class="S">&nbsp;</p>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr><td width="100%"><table width="100%" class="I"><colgroup><col width="9%"><col width="90%"></colgroup>
+<tr><td class="T"><p class="P">GCC64</p>
+</td>
+<td class="O"><p class="P">Ubuntu 7.10 AMD64</p>
+<p class="P">(GCC) 4.1.3 20070929 (prerelease) (Ubuntu 4.1.2-16ubuntu2)</p>
+<p class="P"><span class="U">compiler options:</span> -O3</p>
+</td>
+</tr>
+<tr><td class="T"><p class="P">GCC32</p>
+</td>
+<td class="O"><p class="P">Ubuntu 7.10 i386</p>
+<p class="P">(GCC) 4.1.3 20070929 (prerelease) (Ubuntu 4.1.2-16ubuntu2)</p>
+<p class="P"><span class="U">compiler options:</span> -O3</p>
+</td>
+</tr>
+</table></td>
+</tr></table>
+<p class="A">&nbsp;</p>
+<p class="A"><span class="F">Hardware:</span> Core 2 Duo, 2.7 Ghz, 2GB RAM</p>
+<p class="A">&nbsp;</p>
+<p class="A">&nbsp;</p>
+<p class="S"><u>Benchmark code</u></p>
+<p class="E">&nbsp;</p>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr><td width="100%"><table width="100%" class="I"><colgroup><col width="100%"></colgroup>
+<tr><td class="V"><p class="W">#define &nbsp;NDEBUG</p>
+<p class="W">#define &nbsp;_SECURE_SCL 0</p>
+<p class="W">&nbsp;</p>
+<p class="W">#include &lt;Core/Core.h&gt;</p>
+<p class="W">&nbsp;</p>
+<p class="W">#include &lt;stdio.h&gt;</p>
+<p class="W">#include &lt;iostream&gt;</p>
+<p class="W">#include &lt;fstream&gt;</p>
+<p class="W">#include &lt;time.h&gt;</p>
+<p class="W">#include &lt;vector&gt;</p>
+<p class="W">#include &lt;algorithm&gt;</p>
+<p class="W">#include &lt;map&gt;</p>
+<p class="W">#include &lt;deque&gt;</p>
+<p class="W">#include &lt;string&gt;</p>
+<p class="W">&nbsp;</p>
+<p class="W">#define TEST_HASHMAP</p>
+<p class="W">&nbsp;</p>
+<p class="W">#ifdef TEST_HASHMAP</p>
+<p class="W">&nbsp;</p>
+<p class="W">#ifdef COMPILER_GCC</p>
+<p class="W">#include &lt;tr1/unordered_map&gt;</p>
+<p class="W">#else</p>
+<p class="W">#include &lt;hash_map&gt;</p>
+<p class="W">#endif</p>
+<p class="W">&nbsp;</p>
+<p class="W">#endif</p>
+<p class="W">&nbsp;</p>
+<p class="W">using namespace std;</p>
+<p class="W">using namespace Upp;</p>
+<p class="W">&nbsp;</p>
+<p class="W">#define NO_OUTPUT // for benchmark purposes, output is omitted</p>
+<p class="W">&nbsp;</p>
+<p class="W">void BenchNTL(const char *file) {</p>
+<p class="W">&nbsp;&nbsp;&nbsp;&nbsp;FileIn in(file);</p>
+<p class="W">&nbsp;&nbsp;&nbsp;&nbsp;if (!in) {</p>
+<p class="W">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;std::cout &lt;&lt; &quot;Cannot open input file.\n&quot;;</p>
+<p class="W">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return;</p>
+<p class="W">&nbsp;&nbsp;&nbsp;&nbsp;}</p>
+<p class="W">&nbsp;</p>
+<p class="W">&nbsp;&nbsp;&nbsp;&nbsp;VectorMap&lt;String, Vector&lt;int&gt; &gt; map;</p>
+<p class="W">&nbsp;&nbsp;&nbsp;&nbsp;int line = 1;</p>
+<p class="W">&nbsp;</p>
+<p class="W">&nbsp;&nbsp;&nbsp;&nbsp;for(;;) {</p>
+<p class="W">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;int c = in.Get();</p>
+<p class="W">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if(c &lt; 0) break;</p>
+<p class="W">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if(isalpha(c) || c == '_') {</p>
+<p class="W">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;String id;</p>
+<p class="W">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;id.Cat(c);</p>
+<p class="W">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;c = in.Get();</p>
+<p class="W">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;while(c &gt;= 0 &amp;&amp; (isalnum(c) || c == '_')) {</p>
+<p class="W">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;id.Cat(c);</p>
+<p class="W">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;c = in.Get();</p>
+<p class="W">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</p>
+<p class="W">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;map.GetAdd(id).Add(line);</p>
+<p class="W">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</p>
+<p class="W">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;else</p>
+<p class="W">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if(isdigit(c))</p>
+<p class="W">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;do c = in.Get();</p>
+<p class="W">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;while(c &gt;= 0 &amp;&amp; (isalnum(c) || c == '.'));</p>
+<p class="W">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if(c == '\n')</p>
+<p class="W">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;++line;</p>
+<p class="W">&nbsp;&nbsp;&nbsp;&nbsp;}</p>
+<p class="W">&nbsp;</p>
+<p class="W">&nbsp;&nbsp;&nbsp;&nbsp;Vector&lt;int&gt; order = GetSortOrder(map.GetKeys());</p>
+<p class="W">#ifndef NO_OUTPUT</p>
+<p class="W">&nbsp;&nbsp;&nbsp;&nbsp;for(int i = 0; i &lt; order.GetCount(); i++) {</p>
+<p class="W">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;std::cout &lt;&lt; ~map.GetKey(order[i]) &lt;&lt; &quot;: &quot;;</p>
+<p class="W">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;const Vector&lt;int&gt;&amp; l = map[order[i]];</p>
+<p class="W">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;for(int i = 0; i &lt; l.GetCount(); i++) {</p>
+<p class="W">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if(i) std::cout &lt;&lt; &quot;, &quot;;</p>
+<p class="W">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;std::cout &lt;&lt; l[i];</p>
+<p class="W">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</p>
+<p class="W">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;std::cout &lt;&lt; '\n';</p>
+<p class="W">&nbsp;&nbsp;&nbsp;&nbsp;}</p>
+<p class="W">#endif</p>
+<p class="W">}</p>
+<p class="W">&nbsp;</p>
+<p class="W">template &lt;class Container&gt;</p>
+<p class="W">void BenchSTL(Container&amp; imap, const char *file) {</p>
+<p class="W">&nbsp;&nbsp;&nbsp;&nbsp;std::ifstream in(file);</p>
+<p class="W">&nbsp;&nbsp;&nbsp;&nbsp;if (!in) {</p>
+<p class="W">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;std::cout &lt;&lt; &quot;Cannot open input file.\n&quot;;</p>
+<p class="W">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return;</p>
+<p class="W">&nbsp;&nbsp;&nbsp;&nbsp;}</p>
+<p class="W">&nbsp;</p>
+<p class="W">&nbsp;&nbsp;&nbsp;&nbsp;int line = 1;</p>
+<p class="W">&nbsp;</p>
+<p class="W">&nbsp;&nbsp;&nbsp;&nbsp;for(;;) {</p>
+<p class="W">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;int c = in.get();</p>
+<p class="W">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if(c == EOF) break;</p>
+<p class="W">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if(isalpha(c) || c == '_') {</p>
+<p class="W">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;string id;</p>
+<p class="W">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;id += c;</p>
+<p class="W">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;c = in.get();</p>
+<p class="W">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;while(c != EOF &amp;&amp; (isalnum(c) || c == '_')) {</p>
+<p class="W">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;id += c;</p>
+<p class="W">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;c = in.get();</p>
+<p class="W">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</p>
+<p class="W">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;imap[id].push_back(line);</p>
+<p class="W">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</p>
+<p class="W">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;else</p>
+<p class="W">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if(isdigit(c))</p>
+<p class="W">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;do c = in.get();</p>
+<p class="W">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;while(c != EOF &amp;&amp; (isalnum(c) || c == '.'));</p>
+<p class="W">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if(c == '\n')</p>
+<p class="W">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;++line;</p>
+<p class="W">&nbsp;&nbsp;&nbsp;&nbsp;}</p>
+<p class="W">}</p>
+<p class="W">&nbsp;</p>
+<p class="W">void BenchMap(const char *file)</p>
+<p class="W">{</p>
+<p class="W">&nbsp;&nbsp;&nbsp;&nbsp;map&lt; string, vector&lt;int&gt; &gt; imap;</p>
+<p class="W">&nbsp;&nbsp;&nbsp;&nbsp;BenchSTL(imap, file);</p>
+<p class="W">#ifndef NO_OUTPUT</p>
+<p class="W">&nbsp;&nbsp;&nbsp;&nbsp;map&lt; std::string, vector&lt;int&gt; &gt;::const_iterator e = imap.end();</p>
+<p class="W">&nbsp;&nbsp;&nbsp;&nbsp;for(map&lt; std::string, vector&lt;int&gt; &gt;::const_iterator i = imap.begin(); i != e; i++) {</p>
+<p class="W">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;std::cout &lt;&lt; i-&gt;first &lt;&lt; &quot;: &quot;;</p>
+<p class="W">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;vector&lt;int&gt;::const_iterator e = i-&gt;second.end();</p>
+<p class="W">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;vector&lt;int&gt;::const_iterator b = i-&gt;second.begin();</p>
+<p class="W">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;for(vector&lt;int&gt;::const_iterator j = b; j != e; j++) {</p>
+<p class="W">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if(j != b) std::cout &lt;&lt; &quot;, &quot;;</p>
+<p class="W">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;std::cout &lt;&lt; *j;</p>
+<p class="W">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</p>
+<p class="W">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;std::cout &lt;&lt; '\n';</p>
+<p class="W">&nbsp;&nbsp;&nbsp;&nbsp;}</p>
+<p class="W">#endif</p>
+<p class="W">}</p>
+<p class="W">&nbsp;</p>
+<p class="W">#ifdef TEST_HASHMAP</p>
+<p class="W">&nbsp;</p>
+<p class="W">#ifdef COMPILER_GCC</p>
+<p class="W">typedef std::tr1::unordered_map&lt; string, vector&lt;int&gt; &gt; HashMap;</p>
+<p class="W">#else</p>
+<p class="W">typedef stdext::hash_map&lt; string, vector&lt;int&gt; &gt; HashMap;</p>
+<p class="W">#endif</p>
+<p class="W">&nbsp;</p>
+<p class="W">inline bool h_less(const HashMap::value_type *a, const HashMap::value_type *b)</p>
+<p class="W">{</p>
+<p class="W">&nbsp;&nbsp;&nbsp;&nbsp;return a-&gt;first &lt; b-&gt;first;</p>
+<p class="W">}</p>
+<p class="W">&nbsp;</p>
+<p class="W">void BenchHashMap(const char *file)</p>
+<p class="W">{</p>
+<p class="W">&nbsp;&nbsp;&nbsp;&nbsp;HashMap imap;</p>
+<p class="W">&nbsp;&nbsp;&nbsp;&nbsp;BenchSTL(imap, file);</p>
+<p class="W">&nbsp;&nbsp;&nbsp;&nbsp;vector&lt; const HashMap::value_type * &gt; order;</p>
+<p class="W">&nbsp;&nbsp;&nbsp;&nbsp;for(HashMap::const_iterator i = imap.begin(); i != imap.end(); i++)</p>
+<p class="W">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;order.push_back(&amp;*i);</p>
+<p class="W">&nbsp;&nbsp;&nbsp;&nbsp;sort(order.begin(), order.end(), h_less);</p>
+<p class="W">&nbsp;</p>
+<p class="W">#ifndef NO_OUTPUT</p>
+<p class="W">&nbsp;&nbsp;&nbsp;&nbsp;vector&lt; const HashMap::value_type * &gt;::const_iterator e = order.end();</p>
+<p class="W">&nbsp;&nbsp;&nbsp;&nbsp;for(vector&lt; const HashMap::value_type * &gt;::const_iterator i = order.begin(); i != e; i++) {</p>
+<p class="W">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;std::cout &lt;&lt; (*i)-&gt;first &lt;&lt; &quot;: &quot;;</p>
+<p class="W">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;vector&lt;int&gt;::const_iterator e = (*i)-&gt;second.end();</p>
+<p class="W">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;vector&lt;int&gt;::const_iterator b = (*i)-&gt;second.begin();</p>
+<p class="W">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;for(vector&lt;int&gt;::const_iterator j = b; j != e; j++) {</p>
+<p class="W">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if(j != b) std::cout &lt;&lt; &quot;, &quot;;</p>
+<p class="W">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;std::cout &lt;&lt; *j;</p>
+<p class="W">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</p>
+<p class="W">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;std::cout &lt;&lt; '\n';</p>
+<p class="W">&nbsp;&nbsp;&nbsp;&nbsp;}</p>
+<p class="W">#endif</p>
+<p class="W">}</p>
+<p class="W">&nbsp;</p>
+<p class="W">#endif</p>
+<p class="W">&nbsp;</p>
+<p class="W">#define N 10000</p>
+<p class="W">&nbsp;</p>
+<p class="W">CONSOLE_APP_MAIN</p>
+<p class="W">{</p>
+<p class="W">&nbsp;&nbsp;&nbsp;&nbsp;String fn;</p>
+<p class="W">&nbsp;&nbsp;&nbsp;&nbsp;int argc = CommandLine().GetCount();</p>
+<p class="W">&nbsp;&nbsp;&nbsp;&nbsp;const Vector&lt;String&gt;&amp; argv = CommandLine();</p>
+<p class="W">&nbsp;&nbsp;&nbsp;&nbsp;if(argc &lt; 1)</p>
+<p class="W">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;fn = GetDataFile(&quot;main.cpp&quot;);</p>
+<p class="W">&nbsp;&nbsp;&nbsp;&nbsp;else</p>
+<p class="W">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;fn = argv[0];</p>
+<p class="W">&nbsp;</p>
+<p class="W">&nbsp;&nbsp;&nbsp;&nbsp;BenchNTL(fn); // first run to cache the file</p>
+<p class="W">&nbsp;</p>
+<p class="W">#ifdef TEST_HASHMAP</p>
+<p class="W">&nbsp;&nbsp;&nbsp;&nbsp;{</p>
+<p class="W">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;BenchHashMap(fn);</p>
+<p class="W">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;TimeStop tm;</p>
+<p class="W">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;for(int n = 0; n &lt; N; n++)</p>
+<p class="W">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;BenchHashMap(fn);</p>
+<p class="W">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;cout &lt;&lt; &quot;STL hash_map time: &quot; &lt;&lt; tm.Elapsed() &lt;&lt; &quot; ms \n&quot;;</p>
+<p class="W">&nbsp;&nbsp;&nbsp;&nbsp;}</p>
+<p class="W">#endif</p>
+<p class="W">&nbsp;</p>
+<p class="W">&nbsp;&nbsp;&nbsp;&nbsp;{</p>
+<p class="W">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;BenchMap(fn);</p>
+<p class="W">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;TimeStop tm;</p>
+<p class="W">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;for(int n = 0; n &lt; N; n++)</p>
+<p class="W">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;BenchMap(fn);</p>
+<p class="W">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;cout &lt;&lt; &quot;STL map time: &quot; &lt;&lt; tm.Elapsed() &lt;&lt; &quot; ms \n&quot;;</p>
+<p class="W">&nbsp;&nbsp;&nbsp;&nbsp;}</p>
+<p class="W">&nbsp;</p>
+<p class="W">&nbsp;&nbsp;&nbsp;&nbsp;{</p>
+<p class="W">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;BenchNTL(fn);</p>
+<p class="W">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;TimeStop tm;</p>
+<p class="W">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;for(int n = 0; n &lt; N; n++)</p>
+<p class="W">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;BenchNTL(fn);</p>
+<p class="W">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;cout &lt;&lt; &quot;NTL time: &quot; &lt;&lt; tm.Elapsed() &lt;&lt; &quot; ms\n&quot;;</p>
+<p class="W">&nbsp;&nbsp;&nbsp;&nbsp;}</p>
+<p class="W">}</p>
+<p class="X">&nbsp;</p>
+</td>
+</tr>
+</table></td>
+</tr></table>
+<p class="X">&nbsp;</p>
+</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>
+<TABLE BORDER="0" WIDTH="100%"><TR><TD></TD>
+</TR>
+</TABLE>
+<TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" BGCOLOR="#FFFFFF" WIDTH="100%" style="border-style: solid; border-width: 1px; border-color: #6E89AE;padding: 10px;;"><TR><TD><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%"><TR><TD><p class="A"><span class="B"> </span><a href="www$uppweb$contribweb$en-us.html">Do you want to contribute?</a></p>
+</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>
+<script type="text/javascript">var a={'www$uppweb$vsstd$en-us.html':'English'};var p=window.location.pathname.split("/");p=p[p.length-1];var s='<select id="lang" onchange="window.location=document.getElementById(\'lang\').value;">';for(l in a){if(p==l){d=" selected=1"}else{d=""}s+='<option value="'+l+'"'+d+'>'+a[l]+'</option>'}s+='</select>';var d=document.createElement('div');d.innerHTML=s;var c=document.getElementById('langs');c.replaceChild(d,c.firstChild);document.getElementById('langbox').style.display='block';</script></BODY>

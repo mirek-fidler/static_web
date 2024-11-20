@@ -1,0 +1,462 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en-us">
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
+<META NAME="Generator" CONTENT="U++ HTML Package">
+<TITLE>DropList :: U++</TITLE>
+<STYLE TYPE="text/css"><!--
+.A{margin:0px 0px 0px 0px;text-indent:0px;text-align:left;color:#000000;font-family:sans-serif;font-size:10pt;font-weight:normal;font-style:normal;}
+.B{font-size:12pt;}
+.C{border-collapse:collapse;table-layout:auto;border: 2px solid #000000;}
+.D{padding: 3px 5px 3px 5px;border-left: 1px solid #000000;border-top: 1px solid #000000;border-right: 1px solid #000000;border-bottom: 1px solid #000000;background-color:#800000;vertical-align:middle;}
+.E{margin:0px 0px 0px 0px;text-indent:0px;text-align:left;color:#e5e5e5;font-family:sans-serif;font-size:16pt;font-weight:bold;font-style:normal;}
+.F{margin:0px 0px 0px 0px;text-indent:0px;text-align:left;color:#000000;font-family:sans-serif;font-size:6pt;font-weight:normal;font-style:normal;}
+.G{margin:0px 0px 5px 0px;text-indent:0px;text-align:left;color:#800000;font-family:sans-serif;font-size:12pt;font-weight:bold;font-style:normal;}
+.H{color:#0000ff;font-weight:normal;}
+.I{color:#000000;font-weight:normal;}
+.J{color:#000000;}
+.K{margin:0px 0px 0px 57px;text-indent:0px;text-align:left;color:#000000;font-family:sans-serif;font-size:10pt;font-weight:normal;font-style:normal;}
+.L{margin:8px 0px 0px 0px;text-indent:0px;text-align:left;color:#000000;font-family:sans-serif;font-size:10pt;font-weight:normal;font-style:normal;}
+.M{border-collapse:collapse;table-layout:auto;border: 2px solid #808080;}
+.N{padding: 3px 5px 3px 5px;border-left: 1px solid #808080;border-top: 1px solid #808080;border-right: 1px solid #808080;border-bottom: 1px solid #808080;background-color:#C0C0C0;vertical-align:middle;}
+.O{margin:0px 0px 0px 0px;text-indent:0px;text-align:left;color:#000000;font-family:sans-serif;font-size:10pt;font-weight:bold;font-style:normal;}
+.P{margin:0px 0px 5px 0px;text-indent:0px;text-align:left;color:#000000;font-family:sans-serif;font-size:10pt;font-weight:bold;font-style:normal;}
+.Q{font-weight:normal;}
+.R{font-weight:bold;}
+.S{margin:0px 0px 5px 0px;text-indent:0px;text-align:left;color:#000000;font-family:sans-serif;font-size:10pt;font-weight:normal;font-style:normal;}
+.T{color:#0000ff;}
+.U{color:#800000;font-weight:bold;}
+.V{margin:0px 0px 5px 0px;text-indent:0px;text-align:left;color:#0000ff;font-family:sans-serif;font-size:10pt;font-weight:normal;font-style:normal;}
+.W{color:#000000;font-weight:bold;}
+.X{color:#404040;}
+.Y{color:#800000;}
+a.l1         { text-decoration:none; font-size: 8pt; font-family: sans-serif; font-weight: normal; }
+a.l1:link    { color:#000000; }
+a.l1:visited { color:#000080; }
+a.l1:hover   { color:#9933CC; }
+a.l1:active  { color:#000000; }
+a.l2         { text-decoration:none; font-size: 12pt; font-family: sans-serif; font-variant: small-caps; }
+a.l2:link    { color:#0066FF; }
+a.l2:visited { color:#FF6600; }
+a.l2:hover   { color:#BC0624; }
+a.l2:active  { color:#BC0024; }
+
+-->
+</STYLE>
+<META NAME="keywords" CONTENT="framework, toolkit, widget, c++, visual, studio, dev-cpp, builder, ide, class, component,wxwidgets, qt, rapid, application, development, rad, mfc, linux, macos, gui, sdl, directx, desktop"><META name="robots" content="index,follow">
+<LINK rel="alternate" type="application/rss+xml" title="SVN changes" href="svnchanges.xml">
+<LINK rel="shortcut icon" type="image/png" href="favicon.png">
+</HEAD><BODY BGCOLOR="#D2D9D2" ALINK="#800000" LINK="#000000" VLINK="#000080"><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%"><TR><TD COLSPAN="3"><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%" BGCOLOR="#FFFFFF" style="border: 1px solid #6E89AE;padding-left: 10px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;"><TR><TD><A HREF="index.html"><IMG SRC="0i.png" ALT="" BORDER="0"></A>
+</TD>
+<TD ALIGN="RIGHT" VALIGN="BOTTOM" STYLE="padding-bottom: 5px; background-image: url('1i.png')"><span style="font-size: 14pt; font-family: sans-serif;"><script type="text/javascript"><!--
+google_ad_client = "pub-1082147624384270";
+google_ad_width = 468;
+google_ad_height = 60;
+google_ad_format = "468x60_as";
+google_ad_type = "text_image";
+google_ad_channel = "";
+google_color_border = "336699";
+google_color_bg = "FFFFFF";
+google_color_link = "0000FF";
+google_color_text = "000000";
+google_color_url = "008000";
+//--></script>
+<script type="text/javascript"
+  src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+&nbsp;&nbsp;</span>
+</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>
+<TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%"><TR><TD COLSPAN="3" BGCOLOR="#D2D9D2" HEIGHT="6"></TD>
+</TR>
+<TR><TD VALIGN="TOP" ALIGN="CENTER"><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="160"><TR><TD ALIGN="CENTER"><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%" BGCOLOR="#FFFFFF" style="border-style: solid; border-width: 1px; border-color: #6E89AE;padding: 0px"><TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px;"><A HREF="www$uppweb$overview$en-us.html" CLASS="l1">Overview</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$examples$en-us.html" CLASS="l1">Examples</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$ss$en-us.html" CLASS="l1">Screenshots</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$comparison$en-us.html" CLASS="l1">Comparisons</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$apps$en-us.html" CLASS="l1">Applications</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$download$en-us.html" CLASS="l1">Download</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$documentation$en-us.html" CLASS="l1">Documentation</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$Tutorials$en-us.html" CLASS="l1">Tutorials</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="app$ide$UppHub$en-us.html" CLASS="l1">UppHub</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$Roadmap$en-us.html" CLASS="l1">Status & Roadmap</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$FAQ$en-us.html" CLASS="l1">FAQ</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="app$ide$About$en-us.html" CLASS="l1">Authors & License</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="https://www.ultimatepp.org/forums" CLASS="l1">Forums</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$Funding$en-us.html" CLASS="l1">Funding U++</A>
+</TD>
+</TR>
+</TABLE>
+<TABLE BORDER="0" WIDTH="100%"><TR><TD></TD>
+</TR>
+</TABLE>
+<TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%" BGCOLOR="#FFFFFF" style="border-style: solid; border-width: 1px; border-color: #6E89AE;padding: 0px"><TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('3i.png'); border: 0px solid black;padding-left:12px; padding-right:0px; padding-top:1px; padding-bottom:1px;color:#FFFFFF;"><B><span style="font-size: 8pt; font-family: sans-serif;">Search on this site</span>
+</B>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:6px; padding-right:0px; padding-top:4px; padding-bottom:4px;border-top: 1px solid #6E89AE;"><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%"><TR><TD><IMG SRC="4i.png" ALT="" BORDER="0"></TD>
+<TD><FORM ACTION="https://www.google.com/search" METHOD="GET" STYLE="margin:0px;padding:0px;"><INPUT TYPE="HIDDEN" NAME="ie" VALUE="UTF-8"><INPUT TYPE="HIDDEN" NAME="oe" VALUE="UTF-8"><INPUT TYPE="TEXT" NAME="q" SIZE="15" MAXLENGTH="256" placeholder="Site search"><INPUT TYPE="HIDDEN" NAME="sitesearch" VALUE="ultimatepp.org"></FORM>
+</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>
+<TABLE BORDER="0" WIDTH="100%"><TR><TD></TD>
+</TR>
+</TABLE>
+<br><div id="fb-root"></div>
+<script type="text/javascript">(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) {return;}
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+<div class="fb-like" data-href="https://www.facebook.com/pages/Upp-Framework/262346610476027?sk=wall" data-send="false" data-layout="button_count" data-width="160" data-show-faces="false" data-font="arial"></div>
+<br><br><script type="text/javascript"><!--
+google_ad_client = "pub-1082147624384270";
+google_ad_width = 160;
+google_ad_height = 600;
+google_ad_format = "160x600_as";
+google_ad_type = "text_image";
+google_ad_channel = "";
+google_color_border = "336699";
+google_color_bg = "FFFFFF";
+google_color_link = "0000FF";
+google_color_text = "000000";
+google_color_url = "008000";
+//--></script>
+<script type="text/javascript"
+  src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script><br><br><script type="text/javascript"><!--
+google_ad_client = "pub-1082147624384270";
+google_ad_width = 160;
+google_ad_height = 90;
+google_ad_format = "160x90_0ads_al_s";
+google_ad_channel = "";
+google_color_border = "336699";
+google_color_bg = "FFFFFF";
+google_color_link = "0000FF";
+google_color_text = "000000";
+google_color_url = "008000";
+//--></script>
+<script type="text/javascript"
+  src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+<br><br><br><br><br><br><A HREF="https://sourceforge.net/projects/upp/"><IMG SRC="https://sourceforge.net/sflogo.php?group_id=93970&amp;type=2" ALT="SourceForge.net Logo" BORDER="0" WIDTH="125" HEIGHT="37"></A>
+<br><br><A HREF="https://flathub.org/en/apps/org.ultimatepp.TheIDE"><IMG SRC="5i.png" ALT="SourceForge.net Logo" BORDER="0" WIDTH="125" HEIGHT="37"></A>
+<br><br><div style="background-color:#ffffff;width:125;height:35"><A HREF="https://github.com/ultimatepp"><IMG SRC="6i.png" ALT="GitHub Logo" BORDER="0" WIDTH="125" HEIGHT="35"></A>
+</div><br><div style="background-color:#ffffff;width:125;height:35"><div style="height:5"></div><A HREF="https://discord.gg/8XzqQzXZzb"><IMG SRC="https://assets-global.website-files.com/6257adef93867e50d84d30e2/636e0b5061df29d55a92d945_full_logo_blurple_RGB.svg" ALT="Discord Logo" BORDER="0" WIDTH="125" HEIGHT="25"></A>
+</div><br></TD>
+</TR>
+</TABLE>
+</TD>
+<TD VALIGN="TOP" BGCOLOR="#D2D9D2"><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="6"><TR><TD></TD>
+</TR>
+</TABLE>
+</TD>
+<TD VALIGN="TOP" WIDTH="100%" BGCOLOR="#D2D9D2"><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" BGCOLOR="#FFFFFF" WIDTH="100%" style="border-style: solid; border-width: 1px; border-color: #6E89AE;padding: 10px;;"><TR><TD><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%"><TR><TD><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr><td width="100%"><table width="100%" class="C"><colgroup><col width="100%"></colgroup>
+<tr><td class="D"><p class="E">DropList</p>
+</td>
+</tr>
+</table></td>
+</tr></table>
+<p class="F">&nbsp;</p>
+<p id="DropList::class" class="G"><span class="H">class</span><span class="I">&nbsp;</span><span class="J">DropList</span><span class="I">&nbsp;:&nbsp;</span><span class="H">public</span><span class="I">&nbsp;</span>MultiButton<span class="I">, </span><span class="H">public</span><span class="I">&nbsp;</span>Convert</p>
+<p class="A">&nbsp;</p>
+<p class="K"><a href="src$CtrlLib$DropList$en-us.html_0.png"><img src="src$CtrlLib$DropList$en-us.html_0.png" border="0" alt="" style="width: 54px; height: 23px"></a></p>
+<p class="A">&nbsp;</p>
+<p class="L">This widget provides the selection of values from the drop-down &nbsp;list. List is organized in key-value pairs; when item is selected, the key of items becomes the new DropList value (as used by SetData/GetData interface). The value of DropList does not necessarily have to be in the list as key, you can e.g. assign a value to DropList with empty list and fill the list later.</p>
+<p class="L">Both key and value are of generic Value type. You can associate specific Display and Convert with the list and that way use DropList to represent any type of value (colors, line width, fonts etc..).</p>
+<p class="L">DropList also implements the single-direction Convert interface, where Format is defined as key-&gt;value translation. When DisplayAll() mode is on, Format returns key values for keys missing in the key / value table; when DisplayAll() mode is off, such values are considered invalid and Format returns Value().</p>
+<p class="L">Note: DropBox is implementation helper class used to share some code between DropList and similar classes. DropBox is derived from Ctrl.</p>
+<p class="F">&nbsp;</p>
+<p class="A">&nbsp;</p>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr><td width="100%"><table width="100%" class="M"><colgroup><col width="100%"></colgroup>
+<tr><td class="N"><p class="O">DropList Public Members</p>
+</td>
+</tr>
+</table></td>
+</tr></table>
+<p class="F">&nbsp;</p>
+<p id="DropList::Style::typedef" class="P"><span class="H">typedef</span><span class="Q">&nbsp;</span><a href="MultiButton::Style"><span class="Q"><u>MultiButton::Style</u></span></a><span class="Q">&nbsp;</span>Style</p>
+<p class="K">The chameleon style of DropList is in fact the Style of MultiButton base class.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="DropList::WhenDrop" class="P"><a href="Callback"><span class="Q"><u>Callback</u></span></a><span class="Q">&nbsp;</span>WhenDrop</p>
+<p class="K">This callback is called <span class="R">before</span> the list is displayed. Client code can (re)create the list in the callback.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Upp::DropList::Add(const Upp::Value&,const Upp::Value&,bool)" class="S"><a href="Upp::DropList"><u>DropList</u></a><span class="T">&amp;</span>&nbsp;<span class="R">Add</span>(<span class="T">const</span>&nbsp;<a href="Upp::Value"><u>Value</u></a><span class="T">&amp;</span>&nbsp;<span class="U">key</span>, <span class="T">const</span>&nbsp;<a href="Upp::Value"><u>Value</u></a><span class="T">&amp;</span>&nbsp;<span class="U">value</span>, <span class="T">bool</span>&nbsp;<span class="U">enable</span> = <span class="T">true</span>)</p>
+<p class="K">Adds a new item to the list, <span class="U">key</span> determines the value of item, <span class="U">value</span> is displayed in the value area and in the list. If <span class="U">enable</span> is false, DropList can be assigned this <span class="U">key</span>and displays corresponding <span class="U">value</span>, but does not include it in drop list popup.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Upp::DropList::Add(std::initializer_list<std::pair<Upp::Value,Upp::Value>>)" class="S"><a href="Upp::DropList"><u>DropList</u></a><span class="T">&amp;</span>&nbsp;<span class="R">Add</span>(<a href="std::initializer_list"><u>std::initializer_list</u></a>&lt;<a href="std::pair"><u>std::pair</u></a>&lt;<a href="Upp::Value"><u>Value</u></a>, <a href="Upp::Value"><u>Value</u></a>&gt;&gt;&nbsp;<span class="U">init</span>)</p>
+<p class="K">Adds <span class="U">init</span> to the list.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="DropList::Add(const Value&)" class="S"><a href="DropList"><u>DropList</u></a><span class="T">&amp;</span>&nbsp;<span class="R">Add</span>(<span class="T">const</span>&nbsp;<a href="Value"><u>Value</u></a><span class="T">&amp;</span>&nbsp;<span class="U">value</span>)</p>
+<p class="K">Same as Add(value, value).</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="DropList::Remove(int)" class="S"><span class="T">void</span>&nbsp;<span class="R">Remove</span>(<span class="T">int</span>&nbsp;<span class="U">i</span>)</p>
+<p class="K">Removes drop list item <span class="U">i</span>.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="DropList::ClearList()" class="S"><span class="T">void</span>&nbsp;<span class="R">ClearList</span>()</p>
+<p class="K">Clears the list.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="DropList::Clear()" class="S"><span class="T">void</span>&nbsp;<span class="R">Clear</span>()</p>
+<p class="K">Clears the list and sets DropList to Null.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="DropList::AddSeparator()" class="S"><a href="DropList"><u>DropList</u></a><span class="T">&amp;</span>&nbsp;<span class="R">AddSeparator</span>()</p>
+<p class="K">Adds horizontal ruler separator item. This item cannot be selected.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="DropList::Drop()" class="S"><span class="T">void</span>&nbsp;<span class="R">Drop</span>()</p>
+<p class="K">Forces the list to &quot;drop&quot;.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="DropList::SetIndex(int)" class="S"><span class="T">void</span>&nbsp;<span class="R">SetIndex</span>(<span class="T">int</span>&nbsp;<span class="U">i</span>)</p>
+<p class="K">Sets the value of list item <span class="U">i</span> to be the current value.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="DropList::GetIndex()const" class="V">int<span class="J">&nbsp;</span><span class="W">GetIndex</span><span class="J">()&nbsp;</span>const</p>
+<p class="K">Returns the index of current value of DropList in the list. Note that the current value is not required to be in the list, in that case -1 is returned.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="DropList::GoBegin()" class="S"><span class="T">void</span>&nbsp;<span class="R">GoBegin</span>()</p>
+<p class="K">If there are any items, selects the first one.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="DropList::GoEnd()" class="S"><span class="T">void</span>&nbsp;<span class="R">GoEnd</span>()</p>
+<p class="K">If there are any items, selects the last one.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="DropList::HasKey(const Value&)const" class="V">bool<span class="J">&nbsp;</span><span class="W">HasKey</span><span class="J">(</span>const<span class="J">&nbsp;</span><a href="Value"><span class="J"><u>Value</u></span></a>&amp;<span class="J">&nbsp;</span><span class="U">k</span><span class="J">)&nbsp;</span>const</p>
+<p class="K">Tests whether key <span class="U">k</span> is in the list. The search is fast (<a href="src$Core$Indext$en-us.html#::Index::Index()">Index</a> based).</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="DropList::FindKey(const Value&)const" class="V">int<span class="J">&nbsp;</span><span class="W">FindKey</span><span class="J">(</span>const<span class="J">&nbsp;</span><a href="Value"><span class="J"><u>Value</u></span></a>&amp;<span class="J">&nbsp;</span><span class="U">k</span><span class="J">)&nbsp;</span>const</p>
+<p class="K">Returns the index of key <span class="U">k</span> in the list; returns -1 if not found. The search is fast (<a href="src$Core$Indext$en-us.html#::Index::Index()">Index</a> based).</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="DropList::Find(const Value&)const" class="V">int<span class="J">&nbsp;</span><span class="W">Find</span><span class="J">(</span>const<span class="J">&nbsp;</span><a href="Value"><span class="J"><u>Value</u></span></a>&amp;<span class="J">&nbsp;</span><span class="U">k</span><span class="J">)&nbsp;</span>const</p>
+<p class="K">Same as FindKey(k).</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="DropList::FindValue(const Value&)const" class="V">int<span class="J">&nbsp;</span><span class="W">FindValue</span><span class="J">(</span>const<span class="J">&nbsp;</span><a href="Value"><span class="J"><u>Value</u></span></a>&amp;<span class="J">&nbsp;</span><span class="U">v</span><span class="J">)&nbsp;</span>const</p>
+<p class="K">Finds the index of item with value <span class="U">v</span>. If there is none, returns -1.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="DropList::GetCount()const" class="V">int<span class="J">&nbsp;</span><span class="W">GetCount</span><span class="J">()&nbsp;</span>const</p>
+<p class="K">Returns the count of items in the list.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="DropList::Trim(int)" class="S"><span class="T">void</span>&nbsp;<span class="R">Trim</span>(<span class="T">int</span>&nbsp;<span class="U">n</span>)</p>
+<p class="K">Trims the count of items in the list to <span class="U">n</span>.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="DropList::GetKey(int)const" class="V">const<span class="J">&nbsp;</span><a href="Value"><span class="J"><u>Value</u></span></a>&amp;<span class="J">&nbsp;</span><span class="W">GetKey</span><span class="J">(</span>int<span class="J">&nbsp;</span><span class="U">i</span><span class="J">)&nbsp;</span>const</p>
+<p class="K">Returns the key at index <span class="U">i</span>.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="DropList::GetValue(int)const" class="V"><a href="Value"><span class="J"><u>Value</u></span></a><span class="J">&nbsp;</span><span class="W">GetValue</span><span class="J">(</span>int<span class="J">&nbsp;</span><span class="U">i</span><span class="J">)&nbsp;</span>const</p>
+<p class="K">Returns the value at index <span class="U">i</span>.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="DropList::GetValue()const" class="V"><a href="Value"><span class="J"><u>Value</u></span></a><span class="J">&nbsp;</span><span class="W">GetValue</span><span class="J">()&nbsp;</span>const</p>
+<p class="K">Returns the first value from the list that has the key equal to the current value of DropList. (Note that the GetData/SetData interface of DropList uses the key).</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="DropList::SetValue(int,const Value&)" class="S"><span class="T">void</span>&nbsp;<span class="R">SetValue</span>(<span class="T">int</span>&nbsp;<span class="U">i</span>, <span class="T">const</span>&nbsp;<a href="Value"><u>Value</u></a><span class="T">&amp;</span>&nbsp;<span class="U">v</span>)</p>
+<p class="K">Replaces the value at index <span class="U">i</span>.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="DropList::SetValue(const Value&)" class="S"><span class="T">void</span>&nbsp;<span class="R">SetValue</span>(<span class="T">const</span>&nbsp;<a href="Value"><u>Value</u></a><span class="T">&amp;</span>&nbsp;<span class="U">v</span>)</p>
+<p class="K">Sets the first value in the list that has the key equal to the current value of DropList.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="DropList::operator[](int)const" class="V"><a href="Value"><span class="J"><u>Value</u></span></a><span class="J">&nbsp;</span><span class="W">operator[]</span><span class="J">(</span>int<span class="J">&nbsp;</span><span class="U">i</span><span class="J">)&nbsp;</span>const</p>
+<p class="K">Same as GetValue(i).</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="DropList::Adjust()" class="S"><span class="T">void</span>&nbsp;<span class="R">Adjust</span>()</p>
+<p class="K">Checks whether the current DropList value is present as key in the list. If it is not and list is not empty, first list item is selected.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="DropList::Adjust(const Value&)" class="S"><span class="T">void</span>&nbsp;<span class="R">Adjust</span>(<span class="T">const</span>&nbsp;<a href="Value"><u>Value</u></a><span class="T">&amp;</span>&nbsp;<span class="U">k</span>)</p>
+<p class="K">Checks whether the current DropList value is present as key in the list. If it is not and list is not empty, DropList is assigned <span class="U">k</span>.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="DropList::SetDropLines(int)" class="S"><a href="DropList"><u>DropList</u></a><span class="T">&amp;</span>&nbsp;<span class="R">SetDropLines</span>(<span class="T">int</span>&nbsp;<span class="U">d</span>)</p>
+<p class="K">Sets the number of lines in dropped list.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="DropList::SetValueConvert(const Convert&)" class="S"><a href="DropList"><u>DropList</u></a><span class="T">&amp;</span>&nbsp;<span class="R">SetValueConvert</span>(<span class="T">const</span>&nbsp;<a href="Convert"><u>Convert</u></a><span class="T">&amp;</span>&nbsp;<span class="U">cv</span>)</p>
+<p class="K">Sets the converting object for the value in view area.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="DropList::SetConvert(const Convert&)" class="S"><a href="DropList"><u>DropList</u></a><span class="T">&amp;</span>&nbsp;<span class="R">SetConvert</span>(<span class="T">const</span>&nbsp;<a href="Convert"><u>Convert</u></a><span class="T">&amp;</span>&nbsp;<span class="U">cv</span>)</p>
+<p class="K">Sets the converting object for list values - list values are converted first before being displayed in either view area of DropList or in list. Returns *this.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="DropList::SetDisplay(int,const Display&)" class="S"><a href="DropList"><u>DropList</u></a><span class="T">&amp;</span>&nbsp;<span class="R">SetDisplay</span>(<span class="T">int</span>&nbsp;<span class="U">i</span>, <span class="T">const</span>&nbsp;<a href="Display"><u>Display</u></a><span class="T">&amp;</span>&nbsp;<span class="U">d</span>)</p>
+<p class="K">Sets the display for item <span class="U">i</span> in the list. Returns *this.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="DropList::SetDisplay(const Display&)" class="S"><a href="DropList"><u>DropList</u></a><span class="T">&amp;</span>&nbsp;<span class="R">SetDisplay</span>(<span class="T">const</span>&nbsp;<a href="Display"><u>Display</u></a><span class="T">&amp;</span>&nbsp;<span class="U">d</span>)</p>
+<p class="K">Sets the common display <span class="U">d</span> for items in the list and view area. Returns *this. If specific displays for list items (SetDisplay<span class="X">(</span><span class="T">int</span><span class="X">&nbsp;</span><span class="Y">i</span><span class="X">, </span><span class="T">const</span><span class="X">&nbsp;</span><span class="X">Display</span><span class="X">&amp;&nbsp;</span><span class="Y">d</span><span class="X">)</span>) or view area (ValueDisplay<span class="X">(</span><span class="T">const</span><span class="X">&nbsp;</span><span class="X">Display</span><span class="X">&amp;&nbsp;</span><span class="Y">d</span><span class="X">)</span>) are defined, they take the precedence.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="DropList::SetLineCy(int)" class="S"><a href="DropList"><u>DropList</u></a><span class="T">&amp;</span>&nbsp;<span class="R">SetLineCy</span>(<span class="T">int</span>&nbsp;<span class="U">lcy</span>)</p>
+<p class="K">Sets the line height of the list item in pixels. Returns *this.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="DropList::SetDisplay(const Display&,int)" class="S"><a href="DropList"><u>DropList</u></a><span class="T">&amp;</span>&nbsp;<span class="R">SetDisplay</span>(<span class="T">const</span>&nbsp;<a href="Display"><u>Display</u></a><span class="T">&amp;</span>&nbsp;<span class="U">d</span>, <span class="T">int</span>&nbsp;<span class="U">lcy</span>)</p>
+<p class="K">Same as SetDisplay(d), SetLineCy(lcy). Returns *this.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="DropList::ValueDisplay(const Display&)" class="S"><a href="DropList"><u>DropList</u></a><span class="T">&amp;</span>&nbsp;<span class="R">ValueDisplay</span>(<span class="T">const</span>&nbsp;<a href="Display"><u>Display</u></a><span class="T">&amp;</span>&nbsp;<span class="U">d</span>)</p>
+<p class="K">Sets the display object to be used in view area of DropList. Returns *this.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="DropList::DisplayAll(bool)" class="S"><a href="DropList"><u>DropList</u></a><span class="T">&amp;</span>&nbsp;<span class="R">DisplayAll</span>(<span class="T">bool</span>&nbsp;<span class="U">b</span>&nbsp;=&nbsp;<span class="T">true</span>)</p>
+<p class="K">In this mode, if the current value of DropList is not present as the key in the list, the value itself is used to be displayed in the view area. Default is off. Returns *this. When DisplayAll() mode is on, Convert::Format returns key value when a given key is missing in the key / value table; when DisplayAll() mode is off, Convert::Format returns Value() for unknown key values.</p>
+<p class="A">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="DropList::DropFocus(bool)" class="S"><a href="DropList"><u>DropList</u></a><span class="T">&amp;</span>&nbsp;<span class="R">DropFocus</span>(<span class="T">bool</span>&nbsp;<span class="U">b</span>&nbsp;=&nbsp;<span class="T">true</span>)</p>
+<p class="K">In this mode, dropping down the list and closing it (either by selecting the item or canceling the selection) brings the keyboard focus to the widget. Default is on. Returns *this.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="DropList::NoDropFocus()" class="S"><a href="DropList"><u>DropList</u></a><span class="T">&amp;</span>&nbsp;<span class="R">NoDropFocus</span>()</p>
+<p class="K">Same as DropFocus(false).</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="DropList::AlwaysDrop(bool)" class="S"><a href="DropList"><u>DropList</u></a><span class="T">&amp;</span>&nbsp;<span class="R">AlwaysDrop</span>(<span class="T">bool</span>&nbsp;<span class="U">e</span>&nbsp;=&nbsp;<span class="T">true</span>)</p>
+<p class="K">If this mode is active, drop button is enabled even when the list is empty, allowing the client code to deffer the list creation until the WhenDrop callback.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="DropList::SetStyle(const DropList::Style&)" class="S"><a href="DropList"><u>DropList</u></a><span class="T">&amp;</span>&nbsp;<span class="R">SetStyle</span>(<span class="T">const</span>&nbsp;<a href="DropList::Style"><u>Style</u></a><span class="T">&amp;</span>&nbsp;<span class="U">s</span>)</p>
+<p class="K">Sets the chameleon style of DropList.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="DropList::NotNull(bool)" class="S"><a href="DropList"><u>DropList</u></a><span class="T">&amp;</span>&nbsp;<span class="R">NotNull</span>(<span class="T">bool</span>&nbsp;<span class="U">b</span>&nbsp;=&nbsp;<span class="T">true</span>)</p>
+<p class="K">Specifies that Null value is illegal for DropList. If active, Null value is not <a href="Ctrl::Accept">accepted</a>.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="DropList::DropWidth(int)" class="S"><a href="DropList"><u>DropList</u></a><span class="T">&amp;</span>&nbsp;<span class="R">DropWidth</span>(<span class="T">int</span>&nbsp;<span class="U">w</span>)</p>
+<p class="K">Override the with of dropped PopUpTable drop-down list (which by default is the same as the width of DropList).</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="DropList::DropWidthZ(int)" class="S"><a href="DropList"><u>DropList</u></a><span class="T">&amp;</span>&nbsp;<span class="R">DropWidthZ</span>(<span class="T">int</span>&nbsp;<span class="U">w</span>)</p>
+<p class="K">Same as DropWidth(HorzLayoutZoom(<span class="U">w</span>)) - this adjusts the width according to current standard GUI font zooming.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="DropList::Wheel(bool)" class="S"><a href="DropList"><u>DropList</u></a><span class="T">&amp;</span>&nbsp;<span class="R">Wheel</span>(<span class="T">bool</span>&nbsp;<span class="U">b</span>&nbsp;=&nbsp;<span class="T">true</span>)</p>
+<p class="K">If active, the value of DropList can be changed by the mouse wheel. Default is active.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="DropList::NoWheel()" class="S"><a href="DropList"><u>DropList</u></a><span class="T">&amp;</span>&nbsp;<span class="R">NoWheel</span>()</p>
+<p class="K">Same as Wheel(false).</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="DropList::SetScrollBarStyle(const ScrollBar::Style&)" class="S"><a href="DropList"><u>DropList</u></a><span class="T">&amp;</span>&nbsp;<span class="R">SetScrollBarStyle</span>(<span class="T">const</span>&nbsp;<a href="ScrollBar::Style"><u>ScrollBar::Style</u></a><span class="T">&amp;</span>&nbsp;<span class="U">s</span>)</p>
+<p class="K">Sets the chameleon style of Scrollbar of PopUpTable drop-down list.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="DropList::operator=(const Value&)" class="S"><span class="T">const</span>&nbsp;<a href="Value"><u>Value</u></a><span class="T">&amp;</span>&nbsp;<span class="R">operator=</span>(<span class="T">const</span>&nbsp;<a href="Value"><u>Value</u></a><span class="T">&amp;</span>&nbsp;<span class="U">v</span>)</p>
+<p id="DropList::operator Value()const" class="V">operator<span class="J">&nbsp;Value()&nbsp;</span>const</p>
+<p class="K">These methods are deprecated in favor of operator~ and operator&lt;&lt;=.</p>
+<p class="F">&nbsp;</p>
+<p class="A">&nbsp;</p>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr><td width="100%"><table width="100%" class="M"><colgroup><col width="100%"></colgroup>
+<tr><td class="N"><p class="O">DropList Related Global Functions</p>
+</td>
+</tr>
+</table></td>
+</tr></table>
+<p class="L">These are simple utility function for filling DropList's list and MapConvert.</p>
+<p class="F">&nbsp;</p>
+<p class="F">&nbsp;</p>
+<p id="Append(DropList&,const VectorMap<Value,Value>&)" class="S"><span class="T">void</span>&nbsp;<span class="R">Append</span>(<a href="DropList"><u>DropList</u></a><span class="T">&amp;</span>&nbsp;<span class="U">list</span>, <span class="T">const</span>&nbsp;<a href="VectorMap"><u>VectorMap</u></a>&lt;<a href="Value"><u>Value</u></a>, <a href="Value"><u>Value</u></a>&gt;&amp;&nbsp;<span class="U">values</span>)</p>
+<p id="Append(DropList&,const VectorMap<int,String>&)" class="S"><span class="T">void</span>&nbsp;<span class="R">Append</span>(<a href="DropList"><u>DropList</u></a><span class="T">&amp;</span>&nbsp;<span class="U">list</span>, <span class="T">const</span>&nbsp;<a href="VectorMap"><u>VectorMap</u></a>&lt;<span class="T">int</span>, <a href="String"><u>String</u></a>&gt;&amp;&nbsp;<span class="U">values</span>)</p>
+<p class="K">Fills the DropList from VectorMap.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Append(MapConvert&,const VectorMap<Value,Value>&)" class="S"><span class="T">void</span>&nbsp;<span class="R">Append</span>(<a href="MapConvert"><u>MapConvert</u></a><span class="T">&amp;</span>&nbsp;<span class="U">convert</span>, <span class="T">const</span>&nbsp;<a href="VectorMap"><u>VectorMap</u></a>&lt;<a href="Value"><u>Value</u></a>, <a href="Value"><u>Value</u></a>&gt;&amp;&nbsp;<span class="U">values</span>)</p>
+<p id="Append(MapConvert&,const VectorMap<int,String>&)" class="S"><span class="T">void</span>&nbsp;<span class="R">Append</span>(<a href="MapConvert"><u>MapConvert</u></a><span class="T">&amp;</span>&nbsp;<span class="U">convert</span>, <span class="T">const</span>&nbsp;<a href="VectorMap"><u>VectorMap</u></a>&lt;<span class="T">int</span>, <a href="String"><u>String</u></a>&gt;&amp;&nbsp;<span class="U">values</span>)</p>
+<p class="K">Fills the MapConvert from VectorMap.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Append(DropList&,const MapConvert&)" class="S"><span class="T">void</span>&nbsp;<span class="R">Append</span>(<a href="DropList"><u>DropList</u></a><span class="T">&amp;</span>&nbsp;<span class="U">list</span>, <span class="T">const</span>&nbsp;<a href="MapConvert"><u>MapConvert</u></a><span class="T">&amp;</span>&nbsp;<span class="U">convert</span>)</p>
+<p class="K">Fills the DropList from MapConvert.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="operator*=(DropList&,const VectorMap<Value,Value>&)" class="S"><span class="T">void</span>&nbsp;<span class="R">operator*=</span>(<a href="DropList"><u>DropList</u></a><span class="T">&amp;</span>&nbsp;<span class="U">list</span>, <span class="T">const</span>&nbsp;<a href="VectorMap"><u>VectorMap</u></a>&lt;<a href="Value"><u>Value</u></a>, <a href="Value"><u>Value</u></a>&gt;&amp;&nbsp;<span class="U">values</span>)</p>
+<p id="operator*=(DropList&,const VectorMap<int,String>&)" class="S"><span class="T">void</span>&nbsp;<span class="R">operator*=</span>(<a href="DropList"><u>DropList</u></a><span class="T">&amp;</span>&nbsp;<span class="U">list</span>, <span class="T">const</span>&nbsp;<a href="VectorMap"><u>VectorMap</u></a>&lt;<span class="T">int</span>, <a href="String"><u>String</u></a>&gt;&amp;&nbsp;<span class="U">values</span>)</p>
+<p class="K">Clears and fills the DropList from VectorMap.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="operator*=(MapConvert&,const VectorMap<Value,Value>&)" class="S"><span class="T">void</span>&nbsp;<span class="R">operator*=</span>(<a href="MapConvert"><u>MapConvert</u></a><span class="T">&amp;</span>&nbsp;<span class="U">convert</span>, <span class="T">const</span>&nbsp;<a href="VectorMap"><u>VectorMap</u></a>&lt;<a href="Value"><u>Value</u></a>, <a href="Value"><u>Value</u></a>&gt;&amp;&nbsp;<span class="U">values</span>)</p>
+<p id="operator*=(MapConvert&,const VectorMap<int,String>&)" class="S"><span class="T">void</span>&nbsp;<span class="R">operator*=</span>(<a href="MapConvert"><u>MapConvert</u></a><span class="T">&amp;</span>&nbsp;<span class="U">convert</span>, <span class="T">const</span>&nbsp;<a href="VectorMap"><u>VectorMap</u></a>&lt;<span class="T">int</span>, <a href="String"><u>String</u></a>&gt;&amp;&nbsp;<span class="U">values</span>)</p>
+<p class="K">Clears and fills the MapConvert from VectorMap.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="operator*=(DropList&,const MapConvert&)" class="S"><span class="T">void</span>&nbsp;<span class="R">operator*=</span>(<a href="DropList"><u>DropList</u></a><span class="T">&amp;</span>&nbsp;<span class="U">list</span>, <span class="T">const</span>&nbsp;<a href="MapConvert"><u>MapConvert</u></a><span class="T">&amp;</span>&nbsp;<span class="U">convert</span>)</p>
+<p class="K">Clears and fills the DropList from MapConvert.</p>
+<p class="F">&nbsp;</p>
+<p class="A">&nbsp;</p>
+</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>
+<TABLE BORDER="0" WIDTH="100%"><TR><TD></TD>
+</TR>
+</TABLE>
+<TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" BGCOLOR="#FFFFFF" WIDTH="100%" style="border-style: solid; border-width: 1px; border-color: #6E89AE;padding: 10px;;"><TR><TD><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%"><TR><TD><p class="A"><span class="B"> </span><a href="www$uppweb$contribweb$en-us.html">Do you want to contribute?</a></p>
+</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>
+<script type="text/javascript">var a={'src$CtrlLib$DropList$en-us.html':'English'};var p=window.location.pathname.split("/");p=p[p.length-1];var s='<select id="lang" onchange="window.location=document.getElementById(\'lang\').value;">';for(l in a){if(p==l){d=" selected=1"}else{d=""}s+='<option value="'+l+'"'+d+'>'+a[l]+'</option>'}s+='</select>';var d=document.createElement('div');d.innerHTML=s;var c=document.getElementById('langs');c.replaceChild(d,c.firstChild);document.getElementById('langbox').style.display='block';</script></BODY>

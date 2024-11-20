@@ -1,0 +1,234 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en-us">
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
+<META NAME="Generator" CONTENT="U++ HTML Package">
+<TITLE>Draw :: U++</TITLE>
+<STYLE TYPE="text/css"><!--
+.A{margin:0px 0px 0px 0px;text-indent:0px;text-align:left;color:#000000;font-family:sans-serif;font-size:10pt;font-weight:normal;font-style:normal;}
+.B{font-size:12pt;}
+.C{margin:0px 0px 16px 0px;text-indent:0px;text-align:left;color:#000000;font-family:serif;font-size:24pt;font-weight:bold;font-style:normal;}
+.D{display:list-item;list-style-type:square;margin:0px 0px 0px 20px;text-indent:0px;text-align:left;color:#000000;font-family:sans-serif;font-size:10pt;font-weight:normal;font-style:normal;}
+.E{margin:0px 0px 0px 64px;text-indent:0px;text-align:left;color:#000080;font-family:monospace;font-size:8pt;font-weight:normal;font-style:normal;}
+a.l1         { text-decoration:none; font-size: 8pt; font-family: sans-serif; font-weight: normal; }
+a.l1:link    { color:#000000; }
+a.l1:visited { color:#000080; }
+a.l1:hover   { color:#9933CC; }
+a.l1:active  { color:#000000; }
+a.l2         { text-decoration:none; font-size: 12pt; font-family: sans-serif; font-variant: small-caps; }
+a.l2:link    { color:#0066FF; }
+a.l2:visited { color:#FF6600; }
+a.l2:hover   { color:#BC0624; }
+a.l2:active  { color:#BC0024; }
+
+-->
+</STYLE>
+<META NAME="keywords" CONTENT="framework, toolkit, widget, c++, visual, studio, dev-cpp, builder, ide, class, component,wxwidgets, qt, rapid, application, development, rad, mfc, linux, macos, gui, sdl, directx, desktop"><META name="robots" content="index,follow">
+<LINK rel="alternate" type="application/rss+xml" title="SVN changes" href="svnchanges.xml">
+<LINK rel="shortcut icon" type="image/png" href="favicon.png">
+</HEAD><BODY BGCOLOR="#D2D9D2" ALINK="#800000" LINK="#000000" VLINK="#000080"><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%"><TR><TD COLSPAN="3"><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%" BGCOLOR="#FFFFFF" style="border: 1px solid #6E89AE;padding-left: 10px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;"><TR><TD><A HREF="index.html"><IMG SRC="0i.png" ALT="" BORDER="0"></A>
+</TD>
+<TD ALIGN="RIGHT" VALIGN="BOTTOM" STYLE="padding-bottom: 5px; background-image: url('1i.png')"><span style="font-size: 14pt; font-family: sans-serif;"><script type="text/javascript"><!--
+google_ad_client = "pub-1082147624384270";
+google_ad_width = 468;
+google_ad_height = 60;
+google_ad_format = "468x60_as";
+google_ad_type = "text_image";
+google_ad_channel = "";
+google_color_border = "336699";
+google_color_bg = "FFFFFF";
+google_color_link = "0000FF";
+google_color_text = "000000";
+google_color_url = "008000";
+//--></script>
+<script type="text/javascript"
+  src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+&nbsp;&nbsp;</span>
+</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>
+<TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%"><TR><TD COLSPAN="3" BGCOLOR="#D2D9D2" HEIGHT="6"></TD>
+</TR>
+<TR><TD VALIGN="TOP" ALIGN="CENTER"><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="160"><TR><TD ALIGN="CENTER"><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%" BGCOLOR="#FFFFFF" style="border-style: solid; border-width: 1px; border-color: #6E89AE;padding: 0px"><TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px;"><A HREF="www$uppweb$overview$en-us.html" CLASS="l1">Overview</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$examples$en-us.html" CLASS="l1">Examples</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$ss$en-us.html" CLASS="l1">Screenshots</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$comparison$en-us.html" CLASS="l1">Comparisons</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$apps$en-us.html" CLASS="l1">Applications</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$download$en-us.html" CLASS="l1">Download</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$documentation$en-us.html" CLASS="l1">Documentation</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$Tutorials$en-us.html" CLASS="l1">Tutorials</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="app$ide$UppHub$en-us.html" CLASS="l1">UppHub</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$Roadmap$en-us.html" CLASS="l1">Status & Roadmap</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$FAQ$en-us.html" CLASS="l1">FAQ</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="app$ide$About$en-us.html" CLASS="l1">Authors & License</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="https://www.ultimatepp.org/forums" CLASS="l1">Forums</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$Funding$en-us.html" CLASS="l1">Funding U++</A>
+</TD>
+</TR>
+</TABLE>
+<TABLE BORDER="0" WIDTH="100%"><TR><TD></TD>
+</TR>
+</TABLE>
+<TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%" BGCOLOR="#FFFFFF" style="border-style: solid; border-width: 1px; border-color: #6E89AE;padding: 0px"><TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('3i.png'); border: 0px solid black;padding-left:12px; padding-right:0px; padding-top:1px; padding-bottom:1px;color:#FFFFFF;"><B><span style="font-size: 8pt; font-family: sans-serif;">Search on this site</span>
+</B>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:6px; padding-right:0px; padding-top:4px; padding-bottom:4px;border-top: 1px solid #6E89AE;"><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%"><TR><TD><IMG SRC="4i.png" ALT="" BORDER="0"></TD>
+<TD><FORM ACTION="https://www.google.com/search" METHOD="GET" STYLE="margin:0px;padding:0px;"><INPUT TYPE="HIDDEN" NAME="ie" VALUE="UTF-8"><INPUT TYPE="HIDDEN" NAME="oe" VALUE="UTF-8"><INPUT TYPE="TEXT" NAME="q" SIZE="15" MAXLENGTH="256" placeholder="Site search"><INPUT TYPE="HIDDEN" NAME="sitesearch" VALUE="ultimatepp.org"></FORM>
+</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>
+<TABLE BORDER="0" WIDTH="100%"><TR><TD></TD>
+</TR>
+</TABLE>
+<br><div id="fb-root"></div>
+<script type="text/javascript">(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) {return;}
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+<div class="fb-like" data-href="https://www.facebook.com/pages/Upp-Framework/262346610476027?sk=wall" data-send="false" data-layout="button_count" data-width="160" data-show-faces="false" data-font="arial"></div>
+<br><br><script type="text/javascript"><!--
+google_ad_client = "pub-1082147624384270";
+google_ad_width = 160;
+google_ad_height = 600;
+google_ad_format = "160x600_as";
+google_ad_type = "text_image";
+google_ad_channel = "";
+google_color_border = "336699";
+google_color_bg = "FFFFFF";
+google_color_link = "0000FF";
+google_color_text = "000000";
+google_color_url = "008000";
+//--></script>
+<script type="text/javascript"
+  src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script><br><br><script type="text/javascript"><!--
+google_ad_client = "pub-1082147624384270";
+google_ad_width = 160;
+google_ad_height = 90;
+google_ad_format = "160x90_0ads_al_s";
+google_ad_channel = "";
+google_color_border = "336699";
+google_color_bg = "FFFFFF";
+google_color_link = "0000FF";
+google_color_text = "000000";
+google_color_url = "008000";
+//--></script>
+<script type="text/javascript"
+  src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+<br><br><br><br><br><br><A HREF="https://sourceforge.net/projects/upp/"><IMG SRC="https://sourceforge.net/sflogo.php?group_id=93970&amp;type=2" ALT="SourceForge.net Logo" BORDER="0" WIDTH="125" HEIGHT="37"></A>
+<br><br><A HREF="https://flathub.org/en/apps/org.ultimatepp.TheIDE"><IMG SRC="5i.png" ALT="SourceForge.net Logo" BORDER="0" WIDTH="125" HEIGHT="37"></A>
+<br><br><div style="background-color:#ffffff;width:125;height:35"><A HREF="https://github.com/ultimatepp"><IMG SRC="6i.png" ALT="GitHub Logo" BORDER="0" WIDTH="125" HEIGHT="35"></A>
+</div><br><div style="background-color:#ffffff;width:125;height:35"><div style="height:5"></div><A HREF="https://discord.gg/8XzqQzXZzb"><IMG SRC="https://assets-global.website-files.com/6257adef93867e50d84d30e2/636e0b5061df29d55a92d945_full_logo_blurple_RGB.svg" ALT="Discord Logo" BORDER="0" WIDTH="125" HEIGHT="25"></A>
+</div><br></TD>
+</TR>
+</TABLE>
+</TD>
+<TD VALIGN="TOP" BGCOLOR="#D2D9D2"><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="6"><TR><TD></TD>
+</TR>
+</TABLE>
+</TD>
+<TD VALIGN="TOP" WIDTH="100%" BGCOLOR="#D2D9D2"><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" BGCOLOR="#FFFFFF" WIDTH="100%" style="border-style: solid; border-width: 1px; border-color: #6E89AE;padding: 10px;;"><TR><TD><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%"><TR><TD><p class="C">Draw</p>
+<p class="A">This article tries to describe view of the Draw object's role in the painting process.</p>
+<p class="A">&nbsp;</p>
+<p class="A">Please remember: Draw is not the raster image itself, much the less encoded in a particular image format. I believe you would do best to think about Draw as a channel or a toolbox interfacing the painting routine (a part of the program which wants to paint something; for the time being let's ignore the distinction between drawing vectors and rasters) to the actual &quot;canvas&quot; being painted onto. The main role of Draw is exactly to turn your logical drawing commands (e.g. &quot;draw a line&quot;, &quot;draw a bit of text&quot;, &quot;draw a raster image&quot; etc.) into something the output &quot;device&quot; can understand.</p>
+<p class="A">&nbsp;</p>
+<p class="A">Now, this is the general story. In reality there are basically two families of Draw-related objects sharing many common traits. These are:</p>
+<p class="A">&nbsp;</p>
+<p class="D">raster-oriented Draw objects: these normally include the Draw object in the Ctrl::Paint override, the ViewDraw, the BackDraw, the ImageDraw &amp; ImageMaskDraw and sometimes PrintDraw.</p>
+<p class="A">&nbsp;</p>
+<p class="D">vector-oriented Draw objects: DrawingDraw, WinMetaFileDraw and sometimes PrintDraw, and also (normally) PageDraw, PdfDraw and Report.</p>
+<p class="A">&nbsp;</p>
+<p class="A">Although some might prefer to explain the characteristics of the above objects in abstract terms (with multiple references to &quot;you don't need to know this and that&quot; :-) ), I choose to be honest with you as to how they really work, because I believe that'll move you the farthest along the way.</p>
+<p class="A">&nbsp;</p>
+<p class="A">Actually the Draw is something like a semi-intelligent painter with a plentiful palette of logical drawing objects; some of these are by nature vector-oriented, like lines, rectangles, polygons etc., some are naturally rasterized, typically Images, some are a bit of both, especially text objects.</p>
+<p class="A">&nbsp;</p>
+<p class="A">Now, when the Draw receives a command to draw something (in U++ terminology, a drawing operation, see the host of xxxOp methods in the declaration of Draw), the painter for the desired output device has to decide what to do with it. Typically, when the object is of the same type as the output medium (both are vector or raster), not much work has to be done. When the source (the drawing operation) is vector-oriented and the output device is raster-based, the vector object has to be rasterized.</p>
+<p class="A">&nbsp;</p>
+<p class="A">Typical raster-based Draw objects are related to painting into windows and images; the Draw passed to Ctrl::Paint by the U++ windowing mechanism is such a case, as well as ViewDraw, BackDraw or ImageDraw and ImageMaskDraw. All these drawing objects use the MS Windows or X Windows mechanism called GDI to channel the drawing objects to the built-in rasterizer which (perhaps using some graphic card accelerator in certain cases) ends up by modifying the desired pixels on the target device (the Ctrl area or the Image).</p>
+<p class="A">&nbsp;</p>
+<p class="A">By calling the other Draw classes &quot;vector-based&quot; I don't mean they cannot cope with raster data. I am perhaps a little abusing the standard notion of the word to emphasize the fact that the latter group can manipulate vector objects directly, without rasterizing them first. So, for instance, DrawingDraw and WinMetaFileDraw are used to generate a serialized representation of the executed sequence of drawing operations, which can be later &quot;played back&quot; thus reproducing the original drawing.</p>
+<p class="A">&nbsp;</p>
+<p class="A">Notice that in the above cases there is no actual &quot;canvas&quot; to be painted onto. Both DrawingDraw and WinMetaFileDraw merely maintain a data stream which is used to record the individual drawing operations (coming into Draw via the xxxOp member functions) without actually caring about what is being drawn very much. This is also the reason why you cannot read rasterized data from such types of Draw: if you call DrawToImage, for instance, for a DrawingDraw, it is sure to fail. But then, even if you call DrawToImage for a ViewDraw, you cannot always count on getting the correct image, because in situations when a portion of the window is obscured by another application, you'll get a snapshot of this other application and not your window.</p>
+<p class="A">&nbsp;</p>
+<p class="A">The main advantage of DrawingDraw compared with ImageDraw (if we choose to see these two classes as two different means for creating a drawing which can be stored afterwards, perhaps to a file or a program cache) is that it can later (upon play-back) reproduce the original vector operations (like lines or polygons) exactly even when size of &quot;painting&quot; is rescaled, without blocky artifacts inevitable in rasters.</p>
+<p class="A">&nbsp;</p>
+<p class="A">To sum the above into a few practical guidelines, please try to remember the following:</p>
+<p class="A">&nbsp;</p>
+<p class="D">To create a recording of an image, use DrawingDraw or ImageDraw (see the above distinction between these two). E.g.</p>
+<p class="A">&nbsp;</p>
+<p class="E">DrawingDraw ddraw(100, 100);</p>
+<p class="E">myobject.Paint(ddraw);</p>
+<p class="E">Drawing dwg = ddraw.GetResult(); // dwg is the output recording</p>
+<p class="E">&nbsp;</p>
+<p class="E">Image img(100, 100);</p>
+<p class="E">ImageDraw idraw(img);</p>
+<p class="E">myobject.Paint(idraw);</p>
+<p class="E">idraw.Close();</p>
+<p class="E">// now the Image has been modified by the myobject's drawing</p>
+<p class="E">operations and can be e.g. saved to disk</p>
+<p class="A">&nbsp;</p>
+<p class="D">When using DrawToImage, you should take care of the above limitations. In particular, it is not always wise to use DrawToImage on a Draw which is not entirely under your control. To make the long story short, you're all right with ImageDraw and perhaps with BackDraw, but scarcely with anything else, becauses in most cases you cannot be sure what you'll get (e.g. with ViewDraw or PrintDraw). In certain cases you can be sure you'll get nothing at all (e.g. with DrawingDraw).</p>
+<p class="A">&nbsp;</p>
+<p class="D">As concerns the difference between an Image and an AlphaArray, logically there's none (both represent masked raster images). Physically there is a lot of difference (you can view this difference as more or less optimization-related), because the AlphaArray is a physical matrix of pixels maintained directly by the application, whereas an Image is (at least sometimes) a logical bitmap object maintained by the Windows system (this is especially important in X Windows, because the AlphaArray is stored on the client, whereas Images are stored in the X Server). Another difference is that you can create an AlphaArray in any pixel format you want, but the supported pixel formats of Images are (or can be) limited by the properties of your windowing system.</p>
+<p class="A">&nbsp;</p>
+<p class="D">As concerns image storage in the various standard formats (like jpg, png or gif), again these formats belong neither to the Draw object, nor to the Image object. It's best to see the ImageEncoder's as mere data processors which receive a raster input (an AlphaArray or an Image) and produce an encoded linearized image as their output (this is obviously the encoding phase corresponding to the Save-routines; with the Load-routines, the situation is vice versa). Therefore, as soon as you have an Image (or an AlphaArray), you can Save it in any format you like. Similarly, you can take an image file in one of the standard formats and read it into an AlphaArray or an Image.</p>
+<p class="A">&nbsp;</p>
+</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>
+<TABLE BORDER="0" WIDTH="100%"><TR><TD></TD>
+</TR>
+</TABLE>
+<TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" BGCOLOR="#FFFFFF" WIDTH="100%" style="border-style: solid; border-width: 1px; border-color: #6E89AE;padding: 10px;;"><TR><TD><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%"><TR><TD><p class="A"><span class="B"> </span><a href="www$uppweb$contribweb$en-us.html">Do you want to contribute?</a></p>
+</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>
+<script type="text/javascript">var a={};var p=window.location.pathname.split("/");p=p[p.length-1];var s='<select id="lang" onchange="window.location=document.getElementById(\'lang\').value;">';for(l in a){if(p==l){d=" selected=1"}else{d=""}s+='<option value="'+l+'"'+d+'>'+a[l]+'</option>'}s+='</select>';var d=document.createElement('div');d.innerHTML=s;var c=document.getElementById('langs');c.replaceChild(d,c.firstChild);document.getElementById('langbox').style.display='block';</script></BODY>

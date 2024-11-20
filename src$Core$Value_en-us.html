@@ -1,0 +1,579 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en-us">
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
+<META NAME="Generator" CONTENT="U++ HTML Package">
+<TITLE>Value :: U++</TITLE>
+<STYLE TYPE="text/css"><!--
+.A{margin:0px 0px 0px 0px;text-indent:0px;text-align:left;color:#000000;font-family:sans-serif;font-size:10pt;font-weight:normal;font-style:normal;}
+.B{font-size:12pt;}
+.C{border-collapse:collapse;table-layout:auto;border: 2px solid #000000;}
+.D{padding: 3px 5px 3px 5px;border-left: 1px solid #000000;border-top: 1px solid #000000;border-right: 1px solid #000000;border-bottom: 1px solid #000000;background-color:#712A00;vertical-align:middle;}
+.E{margin:0px 0px 0px 0px;text-indent:0px;text-align:left;color:#e0e0e0;font-family:sans-serif;font-size:16pt;font-weight:bold;font-style:normal;}
+.F{margin:0px 0px 5px 0px;text-indent:0px;text-align:left;color:#0000ff;font-family:sans-serif;font-size:12pt;font-weight:normal;font-style:normal;}
+.G{margin:0px 0px 5px 0px;text-indent:0px;text-align:left;color:#000000;font-family:sans-serif;font-size:12pt;font-weight:normal;font-style:normal;}
+.H{color:#0000ff;}
+.I{font-weight:bold;}
+.J{color:#800000;font-weight:bold;}
+.K{margin:0px 0px 0px 57px;text-indent:0px;text-align:left;color:#000000;font-family:sans-serif;font-size:10pt;font-weight:normal;font-style:normal;}
+.L{margin:0px 0px 0px 0px;text-indent:0px;text-align:left;color:#000000;font-family:sans-serif;font-size:6pt;font-weight:normal;font-style:normal;}
+.M{margin:0px 0px 5px 0px;text-indent:0px;text-align:left;color:#0000ff;font-family:sans-serif;font-size:10pt;font-weight:normal;font-style:normal;}
+.N{border-collapse:collapse;table-layout:auto;border: 2px solid #808080;}
+.O{padding: 3px 5px 3px 5px;border-left: 1px solid #808080;border-top: 1px solid #808080;border-right: 1px solid #808080;border-bottom: 1px solid #808080;background-color:#C0C0C0;vertical-align:middle;}
+.P{margin:0px 0px 0px 0px;text-indent:0px;text-align:left;color:#000000;font-family:sans-serif;font-size:10pt;font-weight:bold;font-style:normal;}
+.Q{margin:0px 0px 5px 0px;text-indent:0px;text-align:left;color:#000000;font-family:sans-serif;font-size:10pt;font-weight:normal;font-style:normal;}
+.R{color:#008000;font-weight:bold;}
+.S{color:#000000;}
+.T{color:#000000;font-weight:bold;}
+.U{margin:0px 0px 5px 0px;text-indent:0px;text-align:left;color:#800000;font-family:sans-serif;font-size:10pt;font-weight:bold;font-style:normal;}
+.V{color:#0000ff;font-weight:normal;}
+.W{color:#000000;font-weight:normal;}
+.X{display:list-item;list-style-type:disc;margin:0px 0px 0px 77px;text-indent:0px;text-align:left;color:#000000;font-family:sans-serif;font-size:10pt;font-weight:normal;font-style:normal;}
+.Y{color:#008080;}
+a.l1         { text-decoration:none; font-size: 8pt; font-family: sans-serif; font-weight: normal; }
+a.l1:link    { color:#000000; }
+a.l1:visited { color:#000080; }
+a.l1:hover   { color:#9933CC; }
+a.l1:active  { color:#000000; }
+a.l2         { text-decoration:none; font-size: 12pt; font-family: sans-serif; font-variant: small-caps; }
+a.l2:link    { color:#0066FF; }
+a.l2:visited { color:#FF6600; }
+a.l2:hover   { color:#BC0624; }
+a.l2:active  { color:#BC0024; }
+
+-->
+</STYLE>
+<META NAME="keywords" CONTENT="framework, toolkit, widget, c++, visual, studio, dev-cpp, builder, ide, class, component,wxwidgets, qt, rapid, application, development, rad, mfc, linux, macos, gui, sdl, directx, desktop"><META name="robots" content="index,follow">
+<LINK rel="alternate" type="application/rss+xml" title="SVN changes" href="svnchanges.xml">
+<LINK rel="shortcut icon" type="image/png" href="favicon.png">
+</HEAD><BODY BGCOLOR="#D2D9D2" ALINK="#800000" LINK="#000000" VLINK="#000080"><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%"><TR><TD COLSPAN="3"><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%" BGCOLOR="#FFFFFF" style="border: 1px solid #6E89AE;padding-left: 10px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;"><TR><TD><A HREF="index.html"><IMG SRC="0i.png" ALT="" BORDER="0"></A>
+</TD>
+<TD ALIGN="RIGHT" VALIGN="BOTTOM" STYLE="padding-bottom: 5px; background-image: url('1i.png')"><span style="font-size: 14pt; font-family: sans-serif;"><script type="text/javascript"><!--
+google_ad_client = "pub-1082147624384270";
+google_ad_width = 468;
+google_ad_height = 60;
+google_ad_format = "468x60_as";
+google_ad_type = "text_image";
+google_ad_channel = "";
+google_color_border = "336699";
+google_color_bg = "FFFFFF";
+google_color_link = "0000FF";
+google_color_text = "000000";
+google_color_url = "008000";
+//--></script>
+<script type="text/javascript"
+  src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+&nbsp;&nbsp;</span>
+</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>
+<TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%"><TR><TD COLSPAN="3" BGCOLOR="#D2D9D2" HEIGHT="6"></TD>
+</TR>
+<TR><TD VALIGN="TOP" ALIGN="CENTER"><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="160"><TR><TD ALIGN="CENTER"><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%" BGCOLOR="#FFFFFF" style="border-style: solid; border-width: 1px; border-color: #6E89AE;padding: 0px"><TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px;"><A HREF="www$uppweb$overview$en-us.html" CLASS="l1">Overview</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$examples$en-us.html" CLASS="l1">Examples</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$ss$en-us.html" CLASS="l1">Screenshots</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$comparison$en-us.html" CLASS="l1">Comparisons</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$apps$en-us.html" CLASS="l1">Applications</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$download$en-us.html" CLASS="l1">Download</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$documentation$en-us.html" CLASS="l1">Documentation</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$Tutorials$en-us.html" CLASS="l1">Tutorials</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="app$ide$UppHub$en-us.html" CLASS="l1">UppHub</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$Roadmap$en-us.html" CLASS="l1">Status & Roadmap</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$FAQ$en-us.html" CLASS="l1">FAQ</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="app$ide$About$en-us.html" CLASS="l1">Authors & License</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="https://www.ultimatepp.org/forums" CLASS="l1">Forums</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$Funding$en-us.html" CLASS="l1">Funding U++</A>
+</TD>
+</TR>
+</TABLE>
+<TABLE BORDER="0" WIDTH="100%"><TR><TD></TD>
+</TR>
+</TABLE>
+<TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%" BGCOLOR="#FFFFFF" style="border-style: solid; border-width: 1px; border-color: #6E89AE;padding: 0px"><TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('3i.png'); border: 0px solid black;padding-left:12px; padding-right:0px; padding-top:1px; padding-bottom:1px;color:#FFFFFF;"><B><span style="font-size: 8pt; font-family: sans-serif;">Search on this site</span>
+</B>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:6px; padding-right:0px; padding-top:4px; padding-bottom:4px;border-top: 1px solid #6E89AE;"><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%"><TR><TD><IMG SRC="4i.png" ALT="" BORDER="0"></TD>
+<TD><FORM ACTION="https://www.google.com/search" METHOD="GET" STYLE="margin:0px;padding:0px;"><INPUT TYPE="HIDDEN" NAME="ie" VALUE="UTF-8"><INPUT TYPE="HIDDEN" NAME="oe" VALUE="UTF-8"><INPUT TYPE="TEXT" NAME="q" SIZE="15" MAXLENGTH="256" placeholder="Site search"><INPUT TYPE="HIDDEN" NAME="sitesearch" VALUE="ultimatepp.org"></FORM>
+</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>
+<TABLE BORDER="0" WIDTH="100%"><TR><TD></TD>
+</TR>
+</TABLE>
+<br><div id="fb-root"></div>
+<script type="text/javascript">(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) {return;}
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+<div class="fb-like" data-href="https://www.facebook.com/pages/Upp-Framework/262346610476027?sk=wall" data-send="false" data-layout="button_count" data-width="160" data-show-faces="false" data-font="arial"></div>
+<br><br><script type="text/javascript"><!--
+google_ad_client = "pub-1082147624384270";
+google_ad_width = 160;
+google_ad_height = 600;
+google_ad_format = "160x600_as";
+google_ad_type = "text_image";
+google_ad_channel = "";
+google_color_border = "336699";
+google_color_bg = "FFFFFF";
+google_color_link = "0000FF";
+google_color_text = "000000";
+google_color_url = "008000";
+//--></script>
+<script type="text/javascript"
+  src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script><br><br><script type="text/javascript"><!--
+google_ad_client = "pub-1082147624384270";
+google_ad_width = 160;
+google_ad_height = 90;
+google_ad_format = "160x90_0ads_al_s";
+google_ad_channel = "";
+google_color_border = "336699";
+google_color_bg = "FFFFFF";
+google_color_link = "0000FF";
+google_color_text = "000000";
+google_color_url = "008000";
+//--></script>
+<script type="text/javascript"
+  src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+<br><br><br><br><br><br><A HREF="https://sourceforge.net/projects/upp/"><IMG SRC="https://sourceforge.net/sflogo.php?group_id=93970&amp;type=2" ALT="SourceForge.net Logo" BORDER="0" WIDTH="125" HEIGHT="37"></A>
+<br><br><A HREF="https://flathub.org/en/apps/org.ultimatepp.TheIDE"><IMG SRC="5i.png" ALT="SourceForge.net Logo" BORDER="0" WIDTH="125" HEIGHT="37"></A>
+<br><br><div style="background-color:#ffffff;width:125;height:35"><A HREF="https://github.com/ultimatepp"><IMG SRC="6i.png" ALT="GitHub Logo" BORDER="0" WIDTH="125" HEIGHT="35"></A>
+</div><br><div style="background-color:#ffffff;width:125;height:35"><div style="height:5"></div><A HREF="https://discord.gg/8XzqQzXZzb"><IMG SRC="https://assets-global.website-files.com/6257adef93867e50d84d30e2/636e0b5061df29d55a92d945_full_logo_blurple_RGB.svg" ALT="Discord Logo" BORDER="0" WIDTH="125" HEIGHT="25"></A>
+</div><br></TD>
+</TR>
+</TABLE>
+</TD>
+<TD VALIGN="TOP" BGCOLOR="#D2D9D2"><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="6"><TR><TD></TD>
+</TR>
+</TABLE>
+</TD>
+<TD VALIGN="TOP" WIDTH="100%" BGCOLOR="#D2D9D2"><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" BGCOLOR="#FFFFFF" WIDTH="100%" style="border-style: solid; border-width: 1px; border-color: #6E89AE;padding: 10px;;"><TR><TD><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%"><TR><TD><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr><td width="100%"><table width="100%" class="C"><colgroup><col width="100%"></colgroup>
+<tr><td class="D"><p class="E">Value</p>
+</td>
+</tr>
+</table></td>
+</tr></table>
+<p class="F">&nbsp;</p>
+<p id="Value::class" class="G"><span class="H">class</span>&nbsp;<span class="I">Value</span>&nbsp;:&nbsp;<span class="H">private</span>&nbsp;<span class="J">Moveable</span>&lt;<span class="I">Value</span>&gt;&nbsp;</p>
+<p class="K">Value is a concrete value type (with normal deep copy semantics) that is designed to store other concrete types in unified way, but in fact can store almost any other data type.</p>
+<p class="K">&nbsp;</p>
+<p class="K">There are two basic levels of Value compatibility. Data can be stored to Value as &quot;raw&quot; - that means that only working operations for such Value are test that Value contains value of such type and extracting a constant reference to the stored Value.</p>
+<p class="K">&nbsp;</p>
+<p class="K">&quot;Rich&quot; Value types provide more unified functionality: Comparison, hashing, serialization, jsonization, xmlization, Null testing, conversion to text etc. Rich type also provide some level of conversion compatibility: e.g. Value containing integer can be extracted to double. Note that Value containing Null can be (usually) extracted to any compatible type (e.g. Null Date can be assigned to integer).</p>
+<p class="K">&nbsp;</p>
+<p class="K">For optimization purposes, there are two subgroups of &quot;Rich&quot; types - normal ones, and &quot;SVO&quot; (as in &quot;Small Value Optimization&quot;). SVO types have some restrictions: they have to be PODs and they have to fit to 8 bytes; such types are stored more efficiently (they are stored directly in Value body, whereas other values are stored indirectly using reference counted pointer).</p>
+<p class="K">&nbsp;</p>
+<p class="K">Basic Value class provides support for some fundamental types and &quot;standard Value&quot; types: bool, int, int64, double, String, WString, Date and Time. There are also special types Void (for empty Value) and ErrorValue (represents error). Important feature is that ErrorValue is considered to be Void and Void is considered to be Null (but not vice verse).</p>
+<p class="K">&nbsp;</p>
+<p class="K">To make some concrete type Value compatible, the standard way is to derive it from helper class ValueType, which assigns value type number constant and defines &quot;empty&quot; methods for rich value features. It is also required to Register (or SvoRegister) the Value so that it can be successfully deserialized from stream or decoded from JSON or XML.</p>
+<p class="L">&nbsp;</p>
+<p class="M">&nbsp;</p>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr><td width="100%"><table width="100%" class="N"><colgroup><col width="100%"></colgroup>
+<tr><td class="O"><p class="P">Public Method List</p>
+</td>
+</tr>
+</table></td>
+</tr></table>
+<p class="L">&nbsp;</p>
+<p id="Value::Register(const char*)" class="Q"><span class="H">static</span> <span class="H">template</span>&nbsp;&lt;<span class="H">class</span>&nbsp;<span class="R">T</span>&gt;&nbsp;<span class="H">void</span>&nbsp;<span class="I">Register</span>(<span class="H">const</span>&nbsp;<span class="H">char</span>&nbsp;*<span class="J">name</span>&nbsp;=&nbsp;NULL)</p>
+<p class="K">Registers the type <span class="R">T</span> as Rich Value type. <span class="J">name</span> is the name to be used with JSON or XML.</p>
+<p class="L">&nbsp;</p>
+<hr><p class="L">&nbsp;</p>
+<p id="Value::SvoRegister(const char*)" class="Q"><span class="H">static</span> <span class="H">template</span>&nbsp;&lt;<span class="H">class</span>&nbsp;<span class="R">T</span>&gt;&nbsp;<span class="H">void</span>&nbsp;<span class="I">SvoRegister</span>(<span class="H">const</span>&nbsp;<span class="H">char</span>&nbsp;*<span class="J">name</span>&nbsp;=&nbsp;NULL)</p>
+<p class="K">Registers the type <span class="R">T</span> as SVO Rich Value type. <span class="J">name</span> is the name to be used with JSON or XML.</p>
+<p class="L">&nbsp;</p>
+<hr><p class="L">&nbsp;</p>
+<p id="Value::GetType()const" class="M"><a href="dword"><span class="S"><u>dword</u></span></a><span class="S">&nbsp;</span><span class="T">GetType</span><span class="S">()&nbsp;</span>const</p>
+<p class="K">Returns the type number (assigned by derivation from ValueType).</p>
+<p class="L">&nbsp;</p>
+<hr><p class="L">&nbsp;</p>
+<p id="Value::IsError()const" class="M">bool<span class="S">&nbsp;</span><span class="T">IsError</span><span class="S">()&nbsp;</span>const</p>
+<p class="K">Returns true if Value contains ErrorValue.</p>
+<p class="L">&nbsp;</p>
+<hr><p class="L">&nbsp;</p>
+<p id="Value::IsVoid()const" class="M">bool<span class="S">&nbsp;</span><span class="T">IsVoid</span><span class="S">()&nbsp;</span>const</p>
+<p class="K">Returns true if Value is void (default constructed Value is void). IsError implies IsVoid.</p>
+<p class="L">&nbsp;</p>
+<hr><p class="L">&nbsp;</p>
+<p id="Value::IsNull()const" class="M">bool<span class="S">&nbsp;</span><span class="T">IsNull</span><span class="S">()&nbsp;</span>const</p>
+<p class="K">Returns true if Value is Null. IsVoid implies IsNull.</p>
+<p class="L">&nbsp;</p>
+<hr><p class="L">&nbsp;</p>
+<p id="Value::Is()const" class="M">template<span class="S">&nbsp;&lt;</span>class<span class="S">&nbsp;</span><span class="R">T</span><span class="S">&gt;&nbsp;</span>bool<span class="S">&nbsp;</span><span class="T">Is</span><span class="S">()&nbsp;</span>const</p>
+<p class="K">Returns true if Value contains exactly type <span class="R">T</span>.</p>
+<p class="L">&nbsp;</p>
+<hr><p class="L">&nbsp;</p>
+<p id="Value::To()const" class="M">template<span class="S">&nbsp;&lt;</span>class<span class="S">&nbsp;</span><span class="R">T</span><span class="S">&gt;&nbsp;</span>const<span class="S">&nbsp;</span><span class="R">T</span>&amp;<span class="S">&nbsp;</span><span class="T">To</span><span class="S">()&nbsp;</span>const</p>
+<p class="K">Returns constant reference to data contained in Value if Is&lt;T&gt; is true, otherwise throws ValueTypeError exception. Undefined if Value contains ValueArray or ValueMap (technical and performance reasons).</p>
+<p class="L">&nbsp;</p>
+<hr><p class="L">&nbsp;</p>
+<p id="Value::Get()const" class="M">template<span class="S">&nbsp;&lt;</span>class<span class="S">&nbsp;</span><span class="R">T</span><span class="S">&gt;&nbsp;</span>const<span class="S">&nbsp;</span><span class="R">T</span>&amp;<span class="S">&nbsp;</span><span class="T">Get</span><span class="S">()&nbsp;</span>const</p>
+<p class="K">Returns constant reference to data contained in Value. Unlike To, it also works if Value contains Null of any type, in that case it returns a reference to Null of type T. If Value does not contain T, throws ValueTypeError. Undefined if Value contains ValueArray or ValueMap (technical and performance reasons).</p>
+<p class="L">&nbsp;</p>
+<hr><p class="L">&nbsp;</p>
+<p id="Value::operator String()const" class="M"><span class="T">operator&nbsp;String</span><span class="S">()&nbsp;</span>const</p>
+<p id="Value::operator WString()const" class="M"><span class="T">operator&nbsp;WString</span><span class="S">()&nbsp;</span>const</p>
+<p id="Value::operator Date()const" class="M"><span class="T">operator&nbsp;Date</span><span class="S">()&nbsp;</span>const</p>
+<p id="Value::operator Time()const" class="M"><span class="T">operator&nbsp;Time</span><span class="S">()&nbsp;</span>const</p>
+<p id="Value::operator double()const" class="M"><span class="T">operator&nbsp;double</span><span class="S">()&nbsp;</span>const</p>
+<p id="Value::operator int()const" class="M"><span class="T">operator&nbsp;int</span><span class="S">()&nbsp;</span>const</p>
+<p id="Value::operator int64()const" class="M"><span class="T">operator&nbsp;int64</span><span class="S">()&nbsp;</span>const</p>
+<p id="Value::operator bool()const" class="M"><span class="T">operator&nbsp;bool</span><span class="S">()&nbsp;</span>const</p>
+<p id="Upp::Value::ToStd()const" class="M"><a href="std::string"><span class="S"><u>std::string</u></span></a><span class="S">&nbsp;</span><span class="T">ToStd</span><span class="S">()&nbsp;</span>const</p>
+<p id="Upp::Value::ToWStd()const" class="M"><a href="std::wstring"><span class="S"><u>std::wstring</u></span></a><span class="S">&nbsp;</span><span class="T">ToWStd</span><span class="S">()&nbsp;</span>const</p>
+<p id="Value::Value(const String&)" class="Q"><span class="I">Value</span>(<span class="H">const</span>&nbsp;<a href="String"><u>String</u></a><span class="H">&amp;</span>&nbsp;<span class="J">s</span>)</p>
+<p id="Value::Value(const WString&)" class="Q"><span class="I">Value</span>(<span class="H">const</span>&nbsp;<a href="WString"><u>WString</u></a><span class="H">&amp;</span>&nbsp;<span class="J">s</span>)</p>
+<p id="Value::Value(const char*)" class="Q"><span class="I">Value</span>(<span class="H">const</span>&nbsp;<span class="H">char</span>&nbsp;*<span class="J">s</span>)</p>
+<p id="Value::Value(int)" class="Q"><span class="I">Value</span>(<span class="H">int</span>&nbsp;<span class="J">i</span>)</p>
+<p id="Value::Value(int64)" class="Q"><span class="I">Value</span>(<a href="int64"><u>int64</u></a>&nbsp;<span class="J">i</span>)</p>
+<p id="Value::Value(double)" class="Q"><span class="I">Value</span>(<span class="H">double</span>&nbsp;<span class="J">d</span>)</p>
+<p id="Value::Value(bool)" class="Q"><span class="I">Value</span>(<span class="H">bool</span>&nbsp;<span class="J">b</span>)</p>
+<p id="Value::Value(Date)" class="Q"><span class="I">Value</span>(<a href="Date"><u>Date</u></a>&nbsp;<span class="J">d</span>)</p>
+<p id="Value::Value(Time)" class="Q"><span class="I">Value</span>(<a href="Time"><u>Time</u></a>&nbsp;<span class="J">t</span>)</p>
+<p id="Upp::Value::Value(const std::string&)" class="Q"><span class="I">Value</span>(<span class="H">const</span>&nbsp;<a href="std::string"><u>std::string</u></a><span class="H">&amp;</span>&nbsp;<span class="J">s</span>)</p>
+<p id="Upp::Value::Value(const std::wstring&)" class="Q"><span class="I">Value</span>(<span class="H">const</span>&nbsp;<a href="std::wstring"><u>std::wstring</u></a><span class="H">&amp;</span>&nbsp;<span class="J">s</span>)</p>
+<p class="K">Support of direct T-&gt;Value and Value-&gt;T conversions of standard Value types. If conversion is not possible, throws ValueTypeError.</p>
+<p class="L">&nbsp;</p>
+<hr><p class="L">&nbsp;</p>
+<p id="Value::Value(const Nuller&)" class="Q"><span class="I">Value</span>(<span class="H">const</span>&nbsp;<a href="Nuller"><u>Nuller</u></a><span class="H">&amp;</span>)</p>
+<p class="K">Support for assignment from Null (e.g. Value v = Null). Creates Value containing (int)Null.</p>
+<p class="L">&nbsp;</p>
+<hr><p class="L">&nbsp;</p>
+<p id="Value::operator==(const Value&)const" class="M">bool<span class="S">&nbsp;</span><span class="T">operator==</span><span class="S">(</span>const<span class="S">&nbsp;</span><a href="Value"><span class="S"><u>Value</u></span></a>&amp;<span class="S">&nbsp;</span><span class="J">v</span><span class="S">)&nbsp;</span>const</p>
+<p id="Value::operator!=(const Value&)const" class="M">bool<span class="S">&nbsp;</span><span class="T">operator!=</span><span class="S">(</span>const<span class="S">&nbsp;</span><a href="Value"><span class="S"><u>Value</u></span></a>&amp;<span class="S">&nbsp;</span><span class="J">v</span><span class="S">)&nbsp;</span>const</p>
+<p class="K">Equality comparison for supporting rich types. Note that by defining IsPolyEqual function for the type, it is possible to compare Value containing different concrete types, e.g. double with int (U++ types, viable IsPolyEqual functions are already defined).</p>
+<p class="L">&nbsp;</p>
+<hr><p class="L">&nbsp;</p>
+<p id="Value::IsSame(const Value&)const" class="M">bool<span class="S">&nbsp;</span><span class="T">IsSame</span><span class="S">(</span>const<span class="S">&nbsp;</span><a href="Value"><span class="S"><u>Value</u></span></a>&amp;<span class="S">&nbsp;</span><span class="J">v</span><span class="S">)&nbsp;</span>const</p>
+<p class="K">ValueMap is ordered and is compared as such, which means that even if values of keys are the same, if order is different, ValueMaps or Values containing them are not considered equal (as with operator==). This method provides and alternative comparison of Values which treats contained ValueMaps as unordered. It goes recursively through any contained ValueMaps and ValueArrays too, for other Value types than ValueMap it uses the normal operator==.</p>
+<p class="L">&nbsp;</p>
+<hr><p class="L">&nbsp;</p>
+<p id="Value::Compare(const Value&)const" class="M">int<span class="S">&nbsp;</span><span class="T">Compare</span><span class="S">(</span>const<span class="S">&nbsp;</span><a href="Value"><span class="S"><u>Value</u></span></a>&amp;<span class="S">&nbsp;</span><span class="J">v</span><span class="S">)&nbsp;</span>const</p>
+<p class="K">Compares value with another value <span class="J">v</span>. Types of values must be comparable (e.g. it is possible to compare texts with texts, numbers with numbers etc...). If types are not comparable, returns 0. If values are equal, returns 0, -1 if Value is lesser than <span class="J">v</span>, 1 if Value if it is greater.</p>
+<p class="L">&nbsp;</p>
+<hr><p class="L">&nbsp;</p>
+<p id="Value::operator<=(const Value&)const" class="M">bool<span class="S">&nbsp;</span><span class="T">operator&lt;=</span><span class="S">(</span>const<span class="S">&nbsp;</span><a href="Value"><span class="S"><u>Value</u></span></a>&amp;<span class="S">&nbsp;</span><span class="J">x</span><span class="S">)&nbsp;</span>const</p>
+<p class="K">Same as Compare(<span class="J">x</span>) &lt;= 0.</p>
+<p class="L">&nbsp;</p>
+<hr><p class="L">&nbsp;</p>
+<p id="Value::operator>=(const Value&)const" class="M">bool<span class="S">&nbsp;</span><span class="T">operator&gt;=</span><span class="S">(</span>const<span class="S">&nbsp;</span><a href="Value"><span class="S"><u>Value</u></span></a>&amp;<span class="S">&nbsp;</span><span class="J">x</span><span class="S">)&nbsp;</span>const</p>
+<p class="K">Same as Compare(<span class="J">x</span>) &gt;= 0.</p>
+<p class="L">&nbsp;</p>
+<hr><p class="L">&nbsp;</p>
+<p id="Value::operator<(const Value&)const" class="M">bool<span class="S">&nbsp;</span><span class="T">operator&lt;</span><span class="S">(</span>const<span class="S">&nbsp;</span><a href="Value"><span class="S"><u>Value</u></span></a>&amp;<span class="S">&nbsp;</span><span class="J">x</span><span class="S">)&nbsp;</span>const</p>
+<p class="K">Same as Compare(<span class="J">x</span>) &lt; 0.</p>
+<p class="L">&nbsp;</p>
+<hr><p class="L">&nbsp;</p>
+<p id="Value::operator>(const Value&)const" class="M">bool<span class="S">&nbsp;</span><span class="T">operator&gt;</span><span class="S">(</span>const<span class="S">&nbsp;</span><a href="Value"><span class="S"><u>Value</u></span></a>&amp;<span class="S">&nbsp;</span><span class="J">x</span><span class="S">)&nbsp;</span>const</p>
+<p class="K">Same as Compare(<span class="J">x</span>) &gt; 0.</p>
+<p class="L">&nbsp;</p>
+<hr><p class="L">&nbsp;</p>
+<p id="Value::ToString()const" class="M"><a href="String"><span class="S"><u>String</u></span></a><span class="S">&nbsp;</span><span class="T">ToString</span><span class="S">()&nbsp;</span>const</p>
+<p class="K">Conversion to text for supporting rich types.</p>
+<p class="L">&nbsp;</p>
+<hr><p class="L">&nbsp;</p>
+<p id="Value::operator~()const" class="M"><a href="String"><span class="S"><u>String</u></span></a><span class="S">&nbsp;</span>operator<span class="S">&nbsp;~()&nbsp;</span>const</p>
+<p class="K">Same as ToString().</p>
+<p class="L">&nbsp;</p>
+<hr><p class="L">&nbsp;</p>
+<p id="Value::GetTypeName()const" class="M"><a href="String"><span class="S"><u>String</u></span></a><span class="S">&nbsp;</span><span class="T">GetTypeName</span><span class="S">()&nbsp;</span>const</p>
+<p class="K">Returns the text with typename for debugging purposes.</p>
+<p class="L">&nbsp;</p>
+<hr><p class="L">&nbsp;</p>
+<p id="Value::Serialize(Stream&)" class="Q"><span class="H">void</span>&nbsp;<span class="I">Serialize</span>(<a href="Stream"><u>Stream</u></a><span class="H">&amp;</span>&nbsp;<span class="J">s</span>)</p>
+<p class="K">Serialization for supporting rich types.</p>
+<p class="L">&nbsp;</p>
+<hr><p class="L">&nbsp;</p>
+<p id="Value::Xmlize(XmlIO&)" class="Q"><span class="H">void</span>&nbsp;<span class="I">Xmlize</span>(<a href="XmlIO"><u>XmlIO</u></a><span class="H">&amp;</span>&nbsp;<span class="J">xio</span>)</p>
+<p class="K">Conversion to/from XML for supporting rich types.</p>
+<p class="L">&nbsp;</p>
+<hr><p class="L">&nbsp;</p>
+<p id="Value::Jsonize(JsonIO&)" class="Q"><span class="H">void</span>&nbsp;<span class="I">Jsonize</span>(<a href="JsonIO"><u>JsonIO</u></a><span class="H">&amp;</span>&nbsp;<span class="J">jio</span>)</p>
+<p class="K">Conversion for/from JSON for supporting rich types.</p>
+<p class="L">&nbsp;</p>
+<hr><p class="L">&nbsp;</p>
+<p id="Value::GetHashValue()const" class="M">unsigned<span class="S">&nbsp;</span><span class="T">GetHashValue</span><span class="S">()&nbsp;</span>const</p>
+<p class="K">Hashing for supporting rich types.</p>
+<p class="L">&nbsp;</p>
+<hr><p class="L">&nbsp;</p>
+<p id="Value::GetCount()const" class="M">int<span class="S">&nbsp;</span><span class="T">GetCount</span><span class="S">()&nbsp;</span>const</p>
+<p class="K">If Value contains ValueArray or ValueMap, returns a number of elements in it, otherwise 0.</p>
+<p class="L">&nbsp;</p>
+<hr><p class="L">&nbsp;</p>
+<p id="Value::operator[](int)const" class="M">const<span class="S">&nbsp;</span><a href="Value"><span class="S"><u>Value</u></span></a>&amp;<span class="S">&nbsp;</span><span class="T">operator[]</span><span class="S">(</span>int<span class="S">&nbsp;</span><span class="J">i</span><span class="S">)&nbsp;</span>const</p>
+<p class="K">If Value contains ValueArray or ValueMap, returns an element at position i. If no such element exists or there is no ValueArray/ValueMap, behaviour is runtime error.</p>
+<p class="L">&nbsp;</p>
+<hr><p class="L">&nbsp;</p>
+<p id="Value::operator[](const String&)const" class="M">const<span class="S">&nbsp;</span><a href="Value"><span class="S"><u>Value</u></span></a>&amp;<span class="S">&nbsp;</span><span class="T">operator[]</span><span class="S">(</span>const<span class="S">&nbsp;</span><a href="String"><span class="S"><u>String</u></span></a>&amp;<span class="S">&nbsp;</span><span class="J">key</span><span class="S">)&nbsp;</span>const</p>
+<p id="Value::operator[](const char*)const" class="M">const<span class="S">&nbsp;</span><a href="Value"><span class="S"><u>Value</u></span></a>&amp;<span class="S">&nbsp;</span><span class="T">operator[]</span><span class="S">(</span>const<span class="S">&nbsp;</span>char<span class="S">&nbsp;*</span><span class="J">key</span><span class="S">)&nbsp;</span>const</p>
+<p id="Value::operator[](const Id&)const" class="M">const<span class="S">&nbsp;</span><a href="Value"><span class="S"><u>Value</u></span></a>&amp;<span class="S">&nbsp;</span><span class="T">operator[]</span><span class="S">(</span>const<span class="S">&nbsp;</span><a href="Id"><span class="S"><u>Id</u></span></a>&amp;<span class="S">&nbsp;</span><span class="J">key</span><span class="S">)&nbsp;</span>const</p>
+<p class="K">If Value contains ValueMap and there is element with String <span class="J">key</span>, returns its value. If not, returns void Value.</p>
+<p class="L">&nbsp;</p>
+<hr><p class="L">&nbsp;</p>
+<p id="Value::At(int)" class="Q"><a href="Value"><u>Value</u></a><span class="H">&amp;</span>&nbsp;<span class="I">At</span>(<span class="H">int</span>&nbsp;<span class="J">i</span>)</p>
+<p class="K">If Value is Null, sets it to ValueArray. If Value is ValueArray or was Null, returns a reference of element at <span class="J">i</span> , if there is none, adds as much Void Values to array as necessarry to have it. If Value is ValueMap, returns a reference to map value at <span class="J">i</span> , if there is none, behaviour is undefined (ASSERT in debug mode fails). <a href="srcdoc$Core$ValueReference$en-us.html">The reference returned is invalidated by any further use of originating Value</a>. If Value is neither ValueArray, Null or ValueMap, behaviour is undefined (ASSERT in debug mode fails).</p>
+<p class="L">&nbsp;</p>
+<hr><p class="L">&nbsp;</p>
+<p id="Value::operator()(int)" class="Q"><a href="Value"><u>Value</u></a><span class="H">&amp;</span>&nbsp;<span class="I">operator()</span>(<span class="H">int</span>&nbsp;<span class="J">i</span>)</p>
+<p class="K">Same as At(<span class="J">i</span>).</p>
+<p class="L">&nbsp;</p>
+<hr><p class="L">&nbsp;</p>
+<p id="Value::Add(const Value&)" class="Q"><span class="H">void</span>&nbsp;<span class="I">Add</span>(<span class="H">const</span>&nbsp;<a href="Value"><u>Value</u></a><span class="H">&amp;</span>&nbsp;<span class="J">src</span>)</p>
+<p class="K">If Value is Null, sets it to ValueArray. If Value is ValueArray or was Null, appends <span class="J">src</span> at the end of ArrayValue. If Value is neither ValueArray or Null, behaviour is undefined (ASSERT in debug mode fails).</p>
+<p class="L">&nbsp;</p>
+<hr><p class="L">&nbsp;</p>
+<p id="Value::operator<<(const T&)" class="Q"><span class="H">template</span>&nbsp;&lt;<span class="H">typename</span>&nbsp;<span class="R">T</span>&gt;&nbsp;<a href="Value"><u>Value</u></a><span class="H">&amp;</span>&nbsp;<span class="I">operator&lt;&lt;</span>(<span class="H">const</span>&nbsp;<span class="R">T</span><span class="H">&amp;</span>&nbsp;<span class="J">src</span>)</p>
+<p class="K">Same as Add(<span class="J">src</span>).</p>
+<p class="L">&nbsp;</p>
+<hr><p class="L">&nbsp;</p>
+<p id="Value::GetAdd(const Value&)" class="Q"><a href="Value"><u>Value</u></a><span class="H">&amp;</span>&nbsp;<span class="I">GetAdd</span>(<span class="H">const</span>&nbsp;<a href="Value"><u>Value</u></a><span class="H">&amp;</span>&nbsp;<span class="J">key</span>)</p>
+<p class="K">If Value is Null, sets it to ValueMap. If Value is ValueArray, sets it to standard conversion of ValueMap to ValueArray (indicies become keys). If Value is ValueMap or was Null, returns a reference of element at key <span class="J">key</span>, if there is none, it is created as Void Value. <a href="srcdoc$Core$ValueReference$en-us.html">The reference returned is invalidated by any further use of originating Value</a>. If Value is neither ValueArray, Null or ValueMap, behaviour is undefined (ASSERT in debug mode fails).</p>
+<p class="L">&nbsp;</p>
+<hr><p class="L">&nbsp;</p>
+<p id="Value::operator()(const String&)" class="Q"><a href="Value"><u>Value</u></a><span class="H">&amp;</span>&nbsp;<span class="I">operator()</span>(<span class="H">const</span>&nbsp;<a href="String"><u>String</u></a><span class="H">&amp;</span>&nbsp;<span class="J">key</span>)</p>
+<p class="K">Same as GetAdd(<span class="J">key</span>).</p>
+<p class="L">&nbsp;</p>
+<hr><p class="L">&nbsp;</p>
+<p id="Value::operator()(const char*)" class="Q"><a href="Value"><u>Value</u></a><span class="H">&amp;</span>&nbsp;<span class="I">operator()</span>(<span class="H">const</span>&nbsp;<span class="H">char</span>&nbsp;*<span class="J">key</span>)</p>
+<p class="K">Save as GetAdd(<span class="J">key</span>).</p>
+<p class="L">&nbsp;</p>
+<hr><p class="L">&nbsp;</p>
+<p id="Value::operator()(const Id&)" class="Q"><a href="Value"><u>Value</u></a><span class="H">&amp;</span>&nbsp;<span class="I">operator()</span>(<span class="H">const</span>&nbsp;<a href="Id"><u>Id</u></a><span class="H">&amp;</span>&nbsp;<span class="J">key</span>)</p>
+<p class="K">Save as GetAdd(<span class="J">key</span>).</p>
+<p class="L">&nbsp;</p>
+<hr><p class="L">&nbsp;</p>
+<p id="Value::operator=(const Value&)" class="Q"><a href="Value"><u>Value</u></a><span class="H">&amp;</span>&nbsp;<span class="I">operator=</span>(<span class="H">const</span>&nbsp;<a href="Value"><u>Value</u></a><span class="H">&amp;</span>&nbsp;<span class="J">v</span>)</p>
+<p class="K">Assignment.</p>
+<p class="L">&nbsp;</p>
+<hr><p class="L">&nbsp;</p>
+<p id="Value::Value(const Value&)" class="Q"><span class="I">Value</span>(<span class="H">const</span>&nbsp;<span class="I">Value</span><span class="H">&amp;</span>&nbsp;<span class="J">v</span>)</p>
+<p class="K">Copy constructor.</p>
+<p class="L">&nbsp;</p>
+<hr><p class="L">&nbsp;</p>
+<p id="Value::Value()" class="Q"><span class="I">Value</span>()</p>
+<p class="K">Default constructor, creates void Value.</p>
+<p class="L">&nbsp;</p>
+<hr><p class="L">&nbsp;</p>
+<p id="Value::~Value()" class="Q"><span class="H">~</span><span class="I">Value</span>()</p>
+<p class="K">Destructor.</p>
+<p class="L">&nbsp;</p>
+<p class="A">&nbsp;</p>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr><td width="100%"><table width="100%" class="C"><colgroup><col width="100%"></colgroup>
+<tr><td class="D"><p class="E">ValueType</p>
+</td>
+</tr>
+</table></td>
+</tr></table>
+<p class="A">&nbsp;</p>
+<p id="noref" class="Q"><span class="H">template</span>&nbsp;&lt;<span class="H">class</span>&nbsp;<span class="R">T</span>, dword&nbsp;<span class="R">type</span>, <span class="H">class</span>&nbsp;<span class="J">B</span>&nbsp;=&nbsp;EmptyClass&gt;</p>
+<p id="ValueType::class" class="U"><span class="V">class</span><span class="W">&nbsp;</span><span class="S">ValueType</span><span class="W">&nbsp;:&nbsp;</span><span class="V">public</span><span class="W">&nbsp;</span>B</p>
+<p class="K">ValueType is a helper class intended for creation of client code custom Value rich compatible concrete types. Such types should derive from this class, which serves to</p>
+<p class="K">&nbsp;</p>
+<p class="X">assign Value type number to the concrete class (parameter <span class="R">type</span>)</p>
+<p class="X">predefines some rich specific methods as 'empty' for the class. Derived type thus can only implement methods it needs (e.g. that required for client code).</p>
+<p class="X">adds conversion operator to implement Ref (generic reference) compatibility</p>
+<p class="K">&nbsp;</p>
+<p class="K">The list of 'empty' methods of ValueType thus also serves as list of methods that Value compatible concrete type might define to gain support of certain operations with Value: </p>
+<p class="L">&nbsp;</p>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr><td width="100%"><table width="100%" class="N"><colgroup><col width="100%"></colgroup>
+<tr><td class="O"><p class="P">Public Method List</p>
+</td>
+</tr>
+</table></td>
+</tr></table>
+<p class="L">&nbsp;</p>
+<p id="ValueType::IsNullInstance()const" class="M">bool<span class="S">&nbsp;</span><span class="T">IsNullInstance</span><span class="S">()&nbsp;</span>const</p>
+<p class="K">True if concrete type contains Null value. ValueType returns false.</p>
+<p class="L">&nbsp;</p>
+<hr><p class="L">&nbsp;</p>
+<p id="ValueType::Serialize(Stream&)" class="Q"><span class="H">void</span>&nbsp;<span class="I">Serialize</span>(<a href="Stream"><u>Stream</u></a><span class="H">&amp;</span>&nbsp;<span class="J">s</span>)</p>
+<p class="K">Serialization support. ValueType invokes runtime error.</p>
+<p class="L">&nbsp;</p>
+<hr><p class="L">&nbsp;</p>
+<p id="ValueType::Xmlize(XmlIO&)" class="Q"><span class="H">void</span>&nbsp;<span class="I">Xmlize</span>(<a href="XmlIO"><u>XmlIO</u></a><span class="H">&amp;</span>&nbsp;<span class="J">xio</span>)</p>
+<p class="K">XML support. ValueType invokes runtime error.</p>
+<p class="L">&nbsp;</p>
+<hr><p class="L">&nbsp;</p>
+<p id="ValueType::Jsonize(JsonIO&)" class="Q"><span class="H">void</span>&nbsp;<span class="I">Jsonize</span>(<a href="JsonIO"><u>JsonIO</u></a><span class="H">&amp;</span>&nbsp;<span class="J">jio</span>)</p>
+<p class="K">JSON support. ValueType invokes runtime error.</p>
+<p class="L">&nbsp;</p>
+<hr><p class="L">&nbsp;</p>
+<p id="ValueType::GetHashValue()const" class="M">unsigned<span class="S">&nbsp;</span><span class="T">GetHashValue</span><span class="S">()&nbsp;</span>const</p>
+<p class="K">Hash value of contained data. ValueType return 0.</p>
+<p class="L">&nbsp;</p>
+<hr><p class="L">&nbsp;</p>
+<p id="ValueType::operator==(const T&)const" class="M">bool<span class="S">&nbsp;</span><span class="T">operator==</span><span class="S">(</span>const<span class="S">&nbsp;</span><span class="R">T</span>&amp;<span class="S">)&nbsp;</span>const</p>
+<p class="K">Equality of data. ValueType invokes runtime error.</p>
+<p class="L">&nbsp;</p>
+<hr><p class="L">&nbsp;</p>
+<p id="ValueType::ToString()const" class="M"><a href="String"><span class="S"><u>String</u></span></a><span class="S">&nbsp;</span><span class="T">ToString</span><span class="S">()&nbsp;</span>const</p>
+<p class="K">Conversion to text. ValueType returns empty String.</p>
+<p class="L">&nbsp;</p>
+<hr><p class="L">&nbsp;</p>
+<p id="ValueType::Compare(const T&)const" class="M">int<span class="S">&nbsp;</span><span class="T">Compare</span><span class="S">(</span>const<span class="S">&nbsp;</span><span class="R">T</span>&amp;<span class="S">)&nbsp;</span>const</p>
+<p class="K">Comparison with another value of the same type. Returns should return -1, 0, 1.</p>
+<p class="L">&nbsp;</p>
+<hr><p class="L">&nbsp;</p>
+<p id="ValueType::PolyCompare(const Value&)const" class="M">int<span class="S">&nbsp;</span><span class="T">PolyCompare</span><span class="S">(</span>const<span class="S">&nbsp;</span><a href="Value"><span class="S"><u>Value</u></span></a>&amp;<span class="S">)&nbsp;</span>const</p>
+<p class="K">Polymorphic comparison with different type.</p>
+<p class="L">&nbsp;</p>
+<hr><p class="L">&nbsp;</p>
+<p id="ValueType::operator Ref()" class="Q"><span class="I">operator&nbsp;Ref</span>()</p>
+<p class="K">Returns a Ref (generic reference) to the instance of T.</p>
+<p class="A">&nbsp;</p>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr><td width="100%"><table width="100%" class="C"><colgroup><col width="100%"></colgroup>
+<tr><td class="D"><p class="E">Value support functions</p>
+</td>
+</tr>
+</table></td>
+</tr></table>
+<p class="A">&nbsp;</p>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr><td width="100%"><table width="100%" class="N"><colgroup><col width="100%"></colgroup>
+<tr><td class="O"><p class="P">Value creation</p>
+</td>
+</tr>
+</table></td>
+</tr></table>
+<p class="L">&nbsp;</p>
+<p id="FitsSvoValue()" class="Q"><span class="H">template</span>&nbsp;&lt;<span class="H">class</span>&nbsp;<span class="R">T</span>&gt;&nbsp;<span class="H">bool</span>&nbsp;<span class="I">FitsSvoValue</span>()</p>
+<p class="K">Returns true if sizeof(T) fits into SVO Value optimization.</p>
+<p class="L">&nbsp;</p>
+<hr><p class="L">&nbsp;</p>
+<p id="SvoToValue(const T&)" class="Q"><span class="H">template</span>&nbsp;&lt;<span class="H">class</span>&nbsp;<span class="R">T</span>&gt;&nbsp;<a href="Value"><u>Value</u></a>&nbsp;<span class="I">SvoToValue</span>(<span class="H">const</span>&nbsp;<span class="R">T</span><span class="H">&amp;</span>&nbsp;<span class="J">x</span>)</p>
+<p class="K">Creates SVO Value from <span class="J">x</span>. T has to have defined all that is required for Value compatibility (derivation from ValueType takes care of this). Unlike RawToValue, SvoToValue should only be used in client's type operator Value() - to avoid casting issues between Rich and Svo kinds.</p>
+<p class="L">&nbsp;</p>
+<hr><p class="L">&nbsp;</p>
+<p id="RichToValue(const T&)" class="Q"><span class="H">template</span>&nbsp;&lt;<span class="H">class</span>&nbsp;<span class="R">T</span>&gt;&nbsp;<a href="Value"><u>Value</u></a>&nbsp;<span class="I">RichToValue</span>(<span class="H">const</span>&nbsp;<span class="R">T</span><span class="H">&amp;</span>&nbsp;<span class="J">data</span>)</p>
+<p class="K">Creates Rich Value from <span class="J">data</span>. T has to have defined all that is required for Value compatibility (derivation from ValueType takes care of this). Unlike RawToValue, RichToValue should only be used in client's type operator Value() - to avoid casting issues between Rich and Svo kinds.</p>
+<p class="L">&nbsp;</p>
+<hr><p class="L">&nbsp;</p>
+<p id="RawToValue(const T&)" class="Q"><span class="H">template</span>&nbsp;&lt;<span class="H">class</span>&nbsp;<span class="R">T</span>&gt;&nbsp;<a href="Value"><u>Value</u></a>&nbsp;<span class="I">RawToValue</span>(<span class="H">const</span>&nbsp;<span class="R">T</span><span class="H">&amp;</span>&nbsp;<span class="J">data</span>)</p>
+<p class="K">Creates Raw Value from <span class="J">data</span>. T has to have deep copy constructor.</p>
+<p class="L">&nbsp;</p>
+<hr><p class="L">&nbsp;</p>
+<p id="RawPickToValue(pick_ T&)" class="Q"><span class="H">template</span>&nbsp;&lt;<span class="H">class</span>&nbsp;<span class="R">T</span>&gt;&nbsp;<a href="Value"><u>Value</u></a>&nbsp;<span class="I">RawPickToValue</span>(<span class="Y">pick_</span>&nbsp;<span class="R">T</span><span class="H">&amp;</span>&nbsp;<span class="J">data</span>)</p>
+<p class="K">Creates Raw Value by picking <span class="J">data</span> (data is destroyed in the process). T has to have pick copy semantics.</p>
+<p class="L">&nbsp;</p>
+<hr><p class="L">&nbsp;</p>
+<p id="RawDeepToValue(const T&)" class="Q"><span class="H">template</span>&nbsp;&lt;<span class="H">class</span>&nbsp;<span class="R">T</span>&gt;&nbsp;<a href="Value"><u>Value</u></a>&nbsp;<span class="I">RawDeepToValue</span>(<span class="H">const</span>&nbsp;<span class="R">T</span><span class="H">&amp;</span>&nbsp;<span class="J">data</span>)</p>
+<p class="K">Creates Raw Value by using <span class="I">optional deep copy</span> constructor (T(const T&amp;, int)) <span class="J">data</span>.</p>
+<p class="L">&nbsp;</p>
+<hr><p class="L">&nbsp;</p>
+<p id="CreateRawValue(Value&)" class="Q"><span class="H">template</span>&nbsp;&lt;<span class="H">class</span>&nbsp;<span class="R">T</span>&gt;&nbsp;<span class="R">T</span><span class="H">&amp;</span>&nbsp;<span class="I">CreateRawValue</span>(<a href="Value"><u>Value</u></a><span class="H">&amp;</span>&nbsp;<span class="J">v</span>)</p>
+<p class="K">Creates Raw Value of type T in <span class="J">v</span>. T is created using default constructor and reference to created instance is returned. Client code should setup this instance before v is passed elsewhere.</p>
+<p class="L">&nbsp;</p>
+<hr><p class="L">&nbsp;</p>
+<p id="ErrorValue(const char*)" class="Q"><a href="Value"><u>Value</u></a>&nbsp;<span class="I">ErrorValue</span>(<span class="H">const</span>&nbsp;<span class="H">char</span>&nbsp;*<span class="J">s</span>)</p>
+<p id="ErrorValue(const String&)" class="Q"><a href="Value">Value</a>&nbsp;<span class="I">ErrorValue</span>(<span class="H">const</span>&nbsp;<a href="String">String</a><span class="H">&amp;</span>&nbsp;<span class="J">s</span>)</p>
+<p class="K">Returns Error Value with description <span class="J">s</span>.</p>
+<p class="L">&nbsp;</p>
+<hr><p class="L">&nbsp;</p>
+<p id="ErrorValue()" class="Q"><span class="H">const</span>&nbsp;<a href="Value"><u>Value</u></a><span class="H">&amp;</span>&nbsp;<span class="I">ErrorValue</span>()</p>
+<p class="K">Returns ErrorValue with empty description.</p>
+<p class="L">&nbsp;</p>
+<p class="M">&nbsp;</p>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr><td width="100%"><table width="100%" class="N"><colgroup><col width="100%"></colgroup>
+<tr><td class="O"><p class="P">Value type tests</p>
+</td>
+</tr>
+</table></td>
+</tr></table>
+<p class="L">&nbsp;</p>
+<p id="IsVoid(const Value&)" class="Q"><span class="H">bool</span>&nbsp;<span class="I">IsVoid</span>(<span class="H">const</span>&nbsp;<a href="Value"><u>Value</u></a><span class="H">&amp;</span>&nbsp;<span class="J">v</span>)</p>
+<p class="K">Same as <span class="J">v</span>.IsVoid().</p>
+<p class="L">&nbsp;</p>
+<hr><p class="L">&nbsp;</p>
+<p id="IsError(const Value&)" class="Q"><span class="H">bool</span>&nbsp;<span class="I">IsError</span>(<span class="H">const</span>&nbsp;<a href="Value"><u>Value</u></a><span class="H">&amp;</span>&nbsp;<span class="J">v</span>)</p>
+<p class="K">Same as <span class="J">v</span>.IsError().</p>
+<p class="L">&nbsp;</p>
+<hr><p class="L">&nbsp;</p>
+<p id="IsString(const Value&)" class="Q"><span class="H">bool</span>&nbsp;<span class="I">IsString</span>(<span class="H">const</span>&nbsp;<a href="Value"><u>Value</u></a><span class="H">&amp;</span>&nbsp;<span class="J">v</span>)</p>
+<p class="K">Returns true if <span class="J">v</span> contains String, WString or Null value.</p>
+<p class="L">&nbsp;</p>
+<hr><p class="L">&nbsp;</p>
+<p id="IsNumber(const Value&)" class="Q"><span class="H">bool</span>&nbsp;<span class="I">IsNumber</span>(<span class="H">const</span>&nbsp;<a href="Value"><u>Value</u></a><span class="H">&amp;</span>&nbsp;<span class="J">v</span>)</p>
+<p class="K">Returns true if <span class="J">v</span> contains bool, int, int64, double or Null value.</p>
+<p class="L">&nbsp;</p>
+<hr><p class="L">&nbsp;</p>
+<p id="IsDateTime(const Value&)" class="Q"><span class="H">bool</span>&nbsp;<span class="I">IsDateTime</span>(<span class="H">const</span>&nbsp;<a href="Value"><u>Value</u></a><span class="H">&amp;</span>&nbsp;<span class="J">v</span>)</p>
+<p class="K">Returns true if <span class="J">v</span> contains Date, Time or Null value.</p>
+<p class="L">&nbsp;</p>
+<hr><p class="L">&nbsp;</p>
+<p id="IsValueArray(const Value&)" class="Q"><span class="H">bool</span>&nbsp;<span class="I">IsValueArray</span>(<span class="H">const</span>&nbsp;<a href="Value"><u>Value</u></a><span class="H">&amp;</span>&nbsp;<span class="J">v</span>)</p>
+<p class="K">Returns true <span class="J">v</span> contains ValueArray or ValueMap.</p>
+<p class="L">&nbsp;</p>
+<hr><p class="L">&nbsp;</p>
+<p id="IsValueMap(const Value&)" class="Q"><span class="H">bool</span>&nbsp;<span class="I">IsValueMap</span>(<span class="H">const</span>&nbsp;<a href="Value"><u>Value</u></a><span class="H">&amp;</span>&nbsp;<span class="J">v</span>)</p>
+<p class="K">Returns true <span class="J">v</span> contains ValueArray or ValueMap.</p>
+<p class="L">&nbsp;</p>
+<hr><p class="L">&nbsp;</p>
+<p id="GetErrorText(const Value&)" class="Q"><a href="String"><u>String</u></a>&nbsp;<span class="I">GetErrorText</span>(<span class="H">const</span>&nbsp;<a href="Value"><u>Value</u></a><span class="H">&amp;</span>&nbsp;<span class="J">v</span>)</p>
+<p class="K">If <span class="J">v</span> is Error Value, returns error description, otherwise empty String.</p>
+<p class="L">&nbsp;</p>
+<hr><p class="L">&nbsp;</p>
+<p id="IsNull(const Value&)" class="Q"><span class="H">bool</span>&nbsp;<span class="I">IsNull</span>(<span class="H">const</span>&nbsp;<a href="Value"><u>Value</u></a><span class="H">&amp;</span>&nbsp;<span class="J">v</span>)</p>
+<p class="K">Same as <span class="J">v</span>.IsNull().</p>
+<p class="L">&nbsp;</p>
+<hr><p class="L">&nbsp;</p>
+<p id="Nvl(const Value&,const Value&)" class="Q"><span class="H">const</span>&nbsp;<a href="Value"><u>Value</u></a><span class="H">&amp;</span>&nbsp;<span class="I">Nvl</span>(<span class="H">const</span>&nbsp;<a href="Value"><u>Value</u></a><span class="H">&amp;</span>&nbsp;<span class="J">a</span>, <span class="H">const</span>&nbsp;<a href="Value"><u>Value</u></a><span class="H">&amp;</span>&nbsp;<span class="J">b</span>)</p>
+<p class="K">If <span class="J">a</span>.IsNull(), returns <span class="J">b</span>, otherwise (a not null) returns a.</p>
+<p class="L">&nbsp;</p>
+</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>
+<TABLE BORDER="0" WIDTH="100%"><TR><TD></TD>
+</TR>
+</TABLE>
+<TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" BGCOLOR="#FFFFFF" WIDTH="100%" style="border-style: solid; border-width: 1px; border-color: #6E89AE;padding: 10px;;"><TR><TD><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%"><TR><TD><p class="A"><span class="B"> </span><a href="www$uppweb$contribweb$en-us.html">Do you want to contribute?</a></p>
+</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>
+<script type="text/javascript">var a={};var p=window.location.pathname.split("/");p=p[p.length-1];var s='<select id="lang" onchange="window.location=document.getElementById(\'lang\').value;">';for(l in a){if(p==l){d=" selected=1"}else{d=""}s+='<option value="'+l+'"'+d+'>'+a[l]+'</option>'}s+='</select>';var d=document.createElement('div');d.innerHTML=s;var c=document.getElementById('langs');c.replaceChild(d,c.firstChild);document.getElementById('langbox').style.display='block';</script></BODY>

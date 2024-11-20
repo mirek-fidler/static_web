@@ -1,0 +1,775 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en-us">
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
+<META NAME="Generator" CONTENT="U++ HTML Package">
+<TITLE>CtrlLib widgets :: U++</TITLE>
+<STYLE TYPE="text/css"><!--
+.A{margin:0px 0px 0px 0px;text-indent:0px;text-align:left;color:#000000;font-family:sans-serif;font-size:10pt;font-weight:normal;font-style:normal;}
+.B{font-size:12pt;}
+.C{margin:0px 0px 16px 0px;text-indent:0px;text-align:left;color:#000000;font-family:serif;font-size:24pt;font-weight:bold;font-style:normal;}
+.D{border-collapse:collapse;table-layout:auto;border: 2px solid #000000;}
+.E{padding: 3px 5px 3px 5px;border-left: 1px solid #000000;border-top: 1px solid #000000;border-right: 1px solid #000000;border-bottom: 1px solid #000000;background-color:#CCCCCC;vertical-align:top;}
+.F{padding: 3px 5px 3px 5px;border-left: 1px solid #000000;border-top: 1px solid #000000;border-right: 1px solid #000000;border-bottom: 1px solid #000000;background-color:#CCCCCC;vertical-align:middle;}
+.G{margin:0px 0px 0px 0px;text-indent:0px;text-align:center;color:#000000;font-family:sans-serif;font-size:10pt;font-weight:normal;font-style:normal;}
+.H{padding: 3px 5px 3px 5px;border-left: 1px solid #000000;border-top: 1px solid #000000;border-right: 1px solid #000000;border-bottom: 1px solid #000000;background-color:#FFFFFF;vertical-align:top;}
+.I{padding: 3px 5px 3px 5px;border-left: 1px solid #000000;border-top: 1px solid #000000;border-right: 1px solid #000000;border-bottom: 1px solid #000000;background-color:#FFFFFF;vertical-align:middle;}
+.J{margin:0px 0px 0px 0px;text-indent:0px;text-align:left;color:#000000;font-family:sans-serif;font-size:12pt;font-weight:normal;font-style:normal;}
+a.l1         { text-decoration:none; font-size: 8pt; font-family: sans-serif; font-weight: normal; }
+a.l1:link    { color:#000000; }
+a.l1:visited { color:#000080; }
+a.l1:hover   { color:#9933CC; }
+a.l1:active  { color:#000000; }
+a.l2         { text-decoration:none; font-size: 12pt; font-family: sans-serif; font-variant: small-caps; }
+a.l2:link    { color:#0066FF; }
+a.l2:visited { color:#FF6600; }
+a.l2:hover   { color:#BC0624; }
+a.l2:active  { color:#BC0024; }
+
+-->
+</STYLE>
+<META NAME="keywords" CONTENT="framework, toolkit, widget, c++, visual, studio, dev-cpp, builder, ide, class, component,wxwidgets, qt, rapid, application, development, rad, mfc, linux, macos, gui, sdl, directx, desktop"><META name="robots" content="index,follow">
+<LINK rel="alternate" type="application/rss+xml" title="SVN changes" href="svnchanges.xml">
+<LINK rel="shortcut icon" type="image/png" href="favicon.png">
+</HEAD><BODY BGCOLOR="#D2D9D2" ALINK="#800000" LINK="#000000" VLINK="#000080"><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%"><TR><TD COLSPAN="3"><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%" BGCOLOR="#FFFFFF" style="border: 1px solid #6E89AE;padding-left: 10px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;"><TR><TD><A HREF="index.html"><IMG SRC="0i.png" ALT="" BORDER="0"></A>
+</TD>
+<TD ALIGN="RIGHT" VALIGN="BOTTOM" STYLE="padding-bottom: 5px; background-image: url('1i.png')"><span style="font-size: 14pt; font-family: sans-serif;"><script type="text/javascript"><!--
+google_ad_client = "pub-1082147624384270";
+google_ad_width = 468;
+google_ad_height = 60;
+google_ad_format = "468x60_as";
+google_ad_type = "text_image";
+google_ad_channel = "";
+google_color_border = "336699";
+google_color_bg = "FFFFFF";
+google_color_link = "0000FF";
+google_color_text = "000000";
+google_color_url = "008000";
+//--></script>
+<script type="text/javascript"
+  src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+&nbsp;&nbsp;</span>
+</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>
+<TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%"><TR><TD COLSPAN="3" BGCOLOR="#D2D9D2" HEIGHT="6"></TD>
+</TR>
+<TR><TD VALIGN="TOP" ALIGN="CENTER"><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="160"><TR><TD ALIGN="CENTER"><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%" BGCOLOR="#FFFFFF" style="border-style: solid; border-width: 1px; border-color: #6E89AE;padding: 0px"><TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px;"><A HREF="www$uppweb$overview$en-us.html" CLASS="l1">Overview</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$examples$en-us.html" CLASS="l1">Examples</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$ss$en-us.html" CLASS="l1">Screenshots</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$comparison$en-us.html" CLASS="l1">Comparisons</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$apps$en-us.html" CLASS="l1">Applications</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$download$en-us.html" CLASS="l1">Download</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$documentation$en-us.html" CLASS="l1">Documentation</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$Tutorials$en-us.html" CLASS="l1">Tutorials</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="app$ide$UppHub$en-us.html" CLASS="l1">UppHub</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$Roadmap$en-us.html" CLASS="l1">Status & Roadmap</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$FAQ$en-us.html" CLASS="l1">FAQ</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="app$ide$About$en-us.html" CLASS="l1">Authors & License</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="https://www.ultimatepp.org/forums" CLASS="l1">Forums</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$Funding$en-us.html" CLASS="l1">Funding U++</A>
+</TD>
+</TR>
+</TABLE>
+<TABLE BORDER="0" WIDTH="100%"><TR><TD></TD>
+</TR>
+</TABLE>
+<TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%" BGCOLOR="#FFFFFF" style="border-style: solid; border-width: 1px; border-color: #6E89AE;padding: 0px"><TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('3i.png'); border: 0px solid black;padding-left:12px; padding-right:0px; padding-top:1px; padding-bottom:1px;color:#FFFFFF;"><B><span style="font-size: 8pt; font-family: sans-serif;">Search on this site</span>
+</B>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:6px; padding-right:0px; padding-top:4px; padding-bottom:4px;border-top: 1px solid #6E89AE;"><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%"><TR><TD><IMG SRC="4i.png" ALT="" BORDER="0"></TD>
+<TD><FORM ACTION="https://www.google.com/search" METHOD="GET" STYLE="margin:0px;padding:0px;"><INPUT TYPE="HIDDEN" NAME="ie" VALUE="UTF-8"><INPUT TYPE="HIDDEN" NAME="oe" VALUE="UTF-8"><INPUT TYPE="TEXT" NAME="q" SIZE="15" MAXLENGTH="256" placeholder="Site search"><INPUT TYPE="HIDDEN" NAME="sitesearch" VALUE="ultimatepp.org"></FORM>
+</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>
+<TABLE BORDER="0" WIDTH="100%"><TR><TD></TD>
+</TR>
+</TABLE>
+<br><div id="fb-root"></div>
+<script type="text/javascript">(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) {return;}
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+<div class="fb-like" data-href="https://www.facebook.com/pages/Upp-Framework/262346610476027?sk=wall" data-send="false" data-layout="button_count" data-width="160" data-show-faces="false" data-font="arial"></div>
+<br><br><script type="text/javascript"><!--
+google_ad_client = "pub-1082147624384270";
+google_ad_width = 160;
+google_ad_height = 600;
+google_ad_format = "160x600_as";
+google_ad_type = "text_image";
+google_ad_channel = "";
+google_color_border = "336699";
+google_color_bg = "FFFFFF";
+google_color_link = "0000FF";
+google_color_text = "000000";
+google_color_url = "008000";
+//--></script>
+<script type="text/javascript"
+  src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script><br><br><script type="text/javascript"><!--
+google_ad_client = "pub-1082147624384270";
+google_ad_width = 160;
+google_ad_height = 90;
+google_ad_format = "160x90_0ads_al_s";
+google_ad_channel = "";
+google_color_border = "336699";
+google_color_bg = "FFFFFF";
+google_color_link = "0000FF";
+google_color_text = "000000";
+google_color_url = "008000";
+//--></script>
+<script type="text/javascript"
+  src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+<br><br><br><br><br><br><A HREF="https://sourceforge.net/projects/upp/"><IMG SRC="https://sourceforge.net/sflogo.php?group_id=93970&amp;type=2" ALT="SourceForge.net Logo" BORDER="0" WIDTH="125" HEIGHT="37"></A>
+<br><br><A HREF="https://flathub.org/en/apps/org.ultimatepp.TheIDE"><IMG SRC="5i.png" ALT="SourceForge.net Logo" BORDER="0" WIDTH="125" HEIGHT="37"></A>
+<br><br><div style="background-color:#ffffff;width:125;height:35"><A HREF="https://github.com/ultimatepp"><IMG SRC="6i.png" ALT="GitHub Logo" BORDER="0" WIDTH="125" HEIGHT="35"></A>
+</div><br><div style="background-color:#ffffff;width:125;height:35"><div style="height:5"></div><A HREF="https://discord.gg/8XzqQzXZzb"><IMG SRC="https://assets-global.website-files.com/6257adef93867e50d84d30e2/636e0b5061df29d55a92d945_full_logo_blurple_RGB.svg" ALT="Discord Logo" BORDER="0" WIDTH="125" HEIGHT="25"></A>
+</div><br></TD>
+</TR>
+</TABLE>
+</TD>
+<TD VALIGN="TOP" BGCOLOR="#D2D9D2"><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="6"><TR><TD></TD>
+</TR>
+</TABLE>
+</TD>
+<TD VALIGN="TOP" WIDTH="100%" BGCOLOR="#D2D9D2"><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" BGCOLOR="#FFFFFF" WIDTH="100%" style="border-style: solid; border-width: 1px; border-color: #6E89AE;padding: 10px;;"><TR><TD><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%"><TR><TD><p class="C">Alphabetical list of CtrlLib widgets</p>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr><td width="100%"><table width="100%" class="D"><colgroup><col width="24%"><col width="32%"><col width="43%"></colgroup>
+<tr><td class="E"><p class="A">Widget class</p>
+</td>
+<td class="F"><p class="G">Visual appearance</p>
+</td>
+<td class="E"><p class="A">Short description</p>
+</td>
+</tr>
+<tr><td class="H"><p class="A"><a href="src$CtrlLib$ArrayCtrl$en-us.html">ArrayCtrl</a></p>
+</td>
+<td class="I"><p class="G"><a href="src$CtrlLib$index$en-us.html_0.png"><img src="src$CtrlLib$index$en-us.html_0.png" border="0" alt="" style="width: 295px; height: 117px"></a></p>
+</td>
+<td class="H"><p class="A">Complex tabular widget.</p>
+</td>
+</tr>
+<tr><td class="H"><p class="A"><a href="src$CtrlLib$Bar$en-us.html">Bar</a></p>
+</td>
+<td class="I"><p class="G">&nbsp;</p>
+</td>
+<td class="H"><p class="A">Common base class for MenuBar and ToolBar.</p>
+</td>
+</tr>
+<tr><td class="H"><p class="A"><a href="src$CtrlLib$Button$en-us.html">Button</a></p>
+</td>
+<td class="I"><p class="G"><a href="src$CtrlLib$index$en-us.html_1.png"><img src="src$CtrlLib$index$en-us.html_1.png" border="0" alt="" style="width: 73px; height: 28px"></a></p>
+</td>
+<td class="H"><p class="A">Basic button.</p>
+</td>
+</tr>
+<tr><td class="H"><p class="A"><a href="src$CtrlLib$ButtonOption$en-us.html">ButtonOption</a></p>
+</td>
+<td class="I"><p class="G"><a href="src$CtrlLib$index$en-us.html_2.png"><img src="src$CtrlLib$index$en-us.html_2.png" border="0" alt="" style="width: 36px; height: 20px"></a></p>
+</td>
+<td class="H"><p class="A">Simple 2-state Ctrl - similar to Option, but with visual appearance of Button.</p>
+</td>
+</tr>
+<tr><td class="H"><p class="A"><a href="src$CtrlLib$ColorPopUp$en-us.html#ColorButton::class">ColorButton</a></p>
+</td>
+<td class="I"><p class="G"><a href="src$CtrlLib$index$en-us.html_3.png"><img src="src$CtrlLib$index$en-us.html_3.png" border="0" alt="" style="width: 24px; height: 22px"></a></p>
+</td>
+<td class="H"><p class="A">Color value and selection using ColorPopUp, supports displaying color using Image.</p>
+</td>
+</tr>
+<tr><td class="H"><p class="A">ColorCtrl</p>
+</td>
+<td class="I"><p class="G"><a href="src$CtrlLib$index$en-us.html_4.png"><img src="src$CtrlLib$index$en-us.html_4.png" border="0" alt="" style="width: 48px; height: 24px"></a></p>
+</td>
+<td class="H"><p class="A">Color value and selection using modal dialog.</p>
+</td>
+</tr>
+<tr><td class="H"><p class="A"><a href="src$CtrlLib$ColorPopUp$en-us.html#ColorPopUp::class">ColorPopUp</a></p>
+</td>
+<td class="I"><p class="G"><a href="src$CtrlLib$index$en-us.html_5.png"><img src="src$CtrlLib$index$en-us.html_5.png" border="0" alt="" style="width: 123px; height: 157px"></a></p>
+</td>
+<td class="H"><p class="A">Pop-up color selection dialog.</p>
+</td>
+</tr>
+<tr><td class="H"><p class="A"><a href="src$CtrlLib$ColorPopUp$en-us.html#ColorPusher::class">ColorPusher</a></p>
+</td>
+<td class="I"><p class="G"><a href="src$CtrlLib$index$en-us.html_6.png"><img src="src$CtrlLib$index$en-us.html_6.png" border="0" alt="" style="width: 48px; height: 24px"></a></p>
+</td>
+<td class="H"><p class="A">Color value and selection using ColorPopUp.</p>
+</td>
+</tr>
+<tr><td class="H"><p class="A">ColorRampCtrl</p>
+</td>
+<td class="I"><p class="G"><a href="src$CtrlLib$index$en-us.html_7.png"><img src="src$CtrlLib$index$en-us.html_7.png" border="0" alt="" style="width: 131px; height: 111px"></a></p>
+</td>
+<td class="H"><p class="A">Color selection tool.</p>
+</td>
+</tr>
+<tr><td class="H"><p class="A">ColorSelector</p>
+</td>
+<td class="I"><p class="G">&nbsp;</p>
+</td>
+<td class="H"><p class="A">&nbsp;</p>
+</td>
+</tr>
+<tr><td class="H"><p class="A">ColorWheelCtrl</p>
+</td>
+<td class="I"><p class="G"><a href="src$CtrlLib$index$en-us.html_8.png"><img src="src$CtrlLib$index$en-us.html_8.png" border="0" alt="" style="width: 129px; height: 109px"></a></p>
+</td>
+<td class="H"><p class="A">Color selection tool.</p>
+</td>
+</tr>
+<tr><td class="H"><p class="A"><a href="src$CtrlLib$ColumnList$en-us.html">ColumnList</a></p>
+</td>
+<td class="I"><p class="G"><a href="src$CtrlLib$index$en-us.html_9.png"><img src="src$CtrlLib$index$en-us.html_9.png" border="0" alt="" style="width: 257px; height: 113px"></a></p>
+</td>
+<td class="H"><p class="A">Generic multicolumn list.</p>
+</td>
+</tr>
+<tr><td class="H"><p class="A"><a href="src$CtrlLib$DataPusher$en-us.html">DataPusher</a></p>
+</td>
+<td class="I"><p class="G"><a href="src$CtrlLib$index$en-us.html"><img src="src$CtrlLib$index$en-us.html_10.png" border="0" alt="" style="width: 215px; height: 15px"></a></p>
+</td>
+<td class="H"><p class="A">Displays value and can react on clicks.</p>
+</td>
+</tr>
+<tr><td class="H"><p class="A"><a href="src$CtrlLib$DocEdit$en-us.html">DocEdit</a></p>
+</td>
+<td class="I"><p class="G"><a href="src$CtrlLib$index$en-us.html_11.png"><img src="src$CtrlLib$index$en-us.html_11.png" border="0" alt="" style="width: 140px; height: 76px"></a></p>
+</td>
+<td class="H"><p class="A">Raw text editor, proportional font, '\n' is the end of paragraph.</p>
+</td>
+</tr>
+<tr><td class="H"><p class="A"><a href="src$CtrlLib$DropList$en-us.html">DropList</a></p>
+</td>
+<td class="I"><p class="G"><a href="src$CtrlLib$index$en-us.html_12.png"><img src="src$CtrlLib$index$en-us.html_12.png" border="0" alt="" style="width: 54px; height: 23px"></a></p>
+</td>
+<td class="H"><p class="A">Allows selection of the value from the drop-down list.</p>
+</td>
+</tr>
+<tr><td class="H"><p class="A">EditDate</p>
+</td>
+<td class="I"><p class="G"><a href="src$CtrlLib$index$en-us.html_13.png"><img src="src$CtrlLib$index$en-us.html_13.png" border="0" alt="" style="width: 106px; height: 25px"></a></p>
+</td>
+<td class="H"><p class="A">Date value editor.</p>
+</td>
+</tr>
+<tr><td class="H"><p class="A">EditDateNotNull</p>
+</td>
+<td class="I"><p class="G"><a href="src$CtrlLib$index$en-us.html_14.png"><img src="src$CtrlLib$index$en-us.html_14.png" border="0" alt="" style="width: 106px; height: 25px"></a></p>
+</td>
+<td class="H"><p class="A">Date value editor. Nulls not allowed.</p>
+</td>
+</tr>
+<tr><td class="H"><p class="A">EditDouble</p>
+</td>
+<td class="I"><p class="G"><a href="src$CtrlLib$index$en-us.html_15.png"><img src="src$CtrlLib$index$en-us.html_15.png" border="0" alt="" style="width: 101px; height: 24px"></a></p>
+</td>
+<td class="H"><p class="A">Floating point value editor.</p>
+</td>
+</tr>
+<tr><td class="H"><p class="A">EditDoubleNotNull</p>
+</td>
+<td class="I"><p class="G"><a href="src$CtrlLib$index$en-us.html_16.png"><img src="src$CtrlLib$index$en-us.html_16.png" border="0" alt="" style="width: 101px; height: 24px"></a></p>
+</td>
+<td class="H"><p class="A">Floating point value editor. Nulls not allowed.</p>
+</td>
+</tr>
+<tr><td class="H"><p class="A">EditDoubleNotNullSpin</p>
+</td>
+<td class="I"><p class="G"><a href="src$CtrlLib$index$en-us.html_17.png"><img src="src$CtrlLib$index$en-us.html_17.png" border="0" alt="" style="width: 73px; height: 24px"></a></p>
+</td>
+<td class="H"><p class="A">Floating point value editor (with spin arrows). Nulls not allowed.</p>
+</td>
+</tr>
+<tr><td class="H"><p class="A">EditDoubleSpin</p>
+</td>
+<td class="I"><p class="G"><a href="src$CtrlLib$index$en-us.html_18.png"><img src="src$CtrlLib$index$en-us.html_18.png" border="0" alt="" style="width: 73px; height: 24px"></a></p>
+</td>
+<td class="H"><p class="A">Floating point value editor (with spin arrows).</p>
+</td>
+</tr>
+<tr><td class="H"><p class="A"><a href="src$CtrlLib$EditField$en-us.html">EditField</a></p>
+</td>
+<td class="I"><p class="G"><a href="src$CtrlLib$index$en-us.html_19.png"><img src="src$CtrlLib$index$en-us.html_19.png" border="0" alt="" style="width: 101px; height: 24px"></a></p>
+</td>
+<td class="H"><p class="A">Generic text-field value editor.</p>
+</td>
+</tr>
+<tr><td class="H"><p class="A">EditInt</p>
+</td>
+<td class="I"><p class="G"><a href="src$CtrlLib$index$en-us.html_20.png"><img src="src$CtrlLib$index$en-us.html_20.png" border="0" alt="" style="width: 100px; height: 23px"></a></p>
+</td>
+<td class="H"><p class="A">Integer value editor.</p>
+</td>
+</tr>
+<tr><td class="H"><p class="A">EditIntNotNull</p>
+</td>
+<td class="I"><p class="G"><a href="src$CtrlLib$index$en-us.html_21.png"><img src="src$CtrlLib$index$en-us.html_21.png" border="0" alt="" style="width: 100px; height: 23px"></a></p>
+</td>
+<td class="H"><p class="A">Integer value editor. Nulls not allowed.</p>
+</td>
+</tr>
+<tr><td class="H"><p class="A">EditIntSpin</p>
+</td>
+<td class="I"><p class="G"><a href="src$CtrlLib$index$en-us.html_22.png"><img src="src$CtrlLib$index$en-us.html_22.png" border="0" alt="" style="width: 73px; height: 24px"></a></p>
+</td>
+<td class="H"><p class="A">Integer value editor (with spin arrows).</p>
+</td>
+</tr>
+<tr><td class="H"><p class="A">EditString</p>
+</td>
+<td class="I"><p class="G"><a href="src$CtrlLib$index$en-us.html_23.png"><img src="src$CtrlLib$index$en-us.html_23.png" border="0" alt="" style="width: 101px; height: 24px"></a></p>
+</td>
+<td class="H"><p class="A">Text value editor.</p>
+</td>
+</tr>
+<tr><td class="H"><p class="A">EditStringNotNull</p>
+</td>
+<td class="I"><p class="G"><a href="src$CtrlLib$index$en-us.html_24.png"><img src="src$CtrlLib$index$en-us.html_24.png" border="0" alt="" style="width: 101px; height: 24px"></a></p>
+</td>
+<td class="H"><p class="A">Text value editor. Nulls not allowed.</p>
+</td>
+</tr>
+<tr><td class="H"><p class="A">EditTime</p>
+</td>
+<td class="I"><p class="G"><a href="src$CtrlLib$index$en-us.html_25.png"><img src="src$CtrlLib$index$en-us.html_25.png" border="0" alt="" style="width: 106px; height: 25px"></a></p>
+</td>
+<td class="H"><p class="A">Time value editor.</p>
+</td>
+</tr>
+<tr><td class="H"><p class="A">EditTimeNotNull</p>
+</td>
+<td class="I"><p class="G"><a href="src$CtrlLib$index$en-us.html_26.png"><img src="src$CtrlLib$index$en-us.html_26.png" border="0" alt="" style="width: 106px; height: 25px"></a></p>
+</td>
+<td class="H"><p class="A">Time value editor, Nulls not allowed.</p>
+</td>
+</tr>
+<tr><td class="H"><p class="A"><a href="src$CtrlLib$FileList$en-us.html">FileList</a></p>
+</td>
+<td class="I"><p class="G"><a href="src$CtrlLib$index$en-us.html_27.png"><img src="src$CtrlLib$index$en-us.html_27.png" border="0" alt="" style="width: 211px; height: 123px"></a></p>
+</td>
+<td class="H"><p class="A">Multi-column list for displaying file-names (derived from ColumnList).</p>
+</td>
+</tr>
+<tr><td class="H"><p class="A"><a href="src$CtrlLib$FileSel$en-us.html">FileSel</a></p>
+</td>
+<td class="I"><p class="G"><a href="src$CtrlLib$index$en-us.html_28.png"><img src="src$CtrlLib$index$en-us.html_28.png" border="0" alt="" style="width: 189px; height: 175px"></a></p>
+</td>
+<td class="H"><p class="A">File selector dialog.</p>
+</td>
+</tr>
+<tr><td class="H"><p class="A"><a href="src$CtrlLib$HeaderCtrl$en-us.html">HeaderCtrl</a></p>
+</td>
+<td class="I"><p class="G"><a href="src$CtrlLib$index$en-us.html_29.png"><img src="src$CtrlLib$index$en-us.html_29.png" border="0" alt="" style="width: 138px; height: 11px"></a></p>
+</td>
+<td class="H"><p class="A">&nbsp;</p>
+</td>
+</tr>
+<tr><td class="H"><p class="A">HelpWindow</p>
+</td>
+<td class="I"><p class="G"><a href="src$CtrlLib$index$en-us.html_30.png"><img src="src$CtrlLib$index$en-us.html_30.png" border="0" alt="" style="width: 196px; height: 118px"></a></p>
+</td>
+<td class="H"><p class="A">Window for displaying QTF content.</p>
+</td>
+</tr>
+<tr><td class="H"><p class="A">HScrollBar</p>
+</td>
+<td class="I"><p class="G"><a href="src$CtrlLib$index$en-us.html_31.png"><img src="src$CtrlLib$index$en-us.html_31.png" border="0" alt="" style="width: 136px; height: 17px"></a></p>
+</td>
+<td class="H"><p class="A">Horizontal scrollbar.</p>
+</td>
+</tr>
+<tr><td class="H"><p class="A">ImageCtrl</p>
+</td>
+<td class="I"><p class="G">&nbsp;</p>
+</td>
+<td class="H"><p class="A">Static widget displaying image.</p>
+</td>
+</tr>
+<tr><td class="H"><p class="A">InfoCtrl</p>
+</td>
+<td class="I"><p class="G"><a href="src$CtrlLib$index$en-us.html_32.png"><img src="src$CtrlLib$index$en-us.html_32.png" border="0" alt="" style="width: 123px; height: 25px"></a></p>
+</td>
+<td class="H"><p class="A">Informational field of StatusBar.</p>
+</td>
+</tr>
+<tr><td class="H"><p class="A">KeyCtrl</p>
+</td>
+<td class="I"><p class="G"><a href="src$CtrlLib$index$en-us.html_33.png"><img src="src$CtrlLib$index$en-us.html_33.png" border="0" alt="" style="width: 200px; height: 24px"></a></p>
+</td>
+<td class="H"><p class="A">Widget for defining accelerator keys.</p>
+</td>
+</tr>
+<tr><td class="H"><p class="A">Label</p>
+</td>
+<td class="I"><p class="G"><a href="src$CtrlLib$index$en-us.html_34.png"><img src="src$CtrlLib$index$en-us.html_34.png" border="0" alt="" style="width: 60px; height: 25px"></a></p>
+</td>
+<td class="H"><p class="A">Static text, capable of accelerator key processing.</p>
+</td>
+</tr>
+<tr><td class="H"><p class="A">LabelBox</p>
+</td>
+<td class="I"><p class="G"><a href="src$CtrlLib$index$en-us.html_35.png"><img src="src$CtrlLib$index$en-us.html_35.png" border="0" alt="" style="width: 280px; height: 63px"></a></p>
+</td>
+<td class="H"><p class="A">Static Ctrl for visually grouping other Ctrls.</p>
+</td>
+</tr>
+<tr><td class="H"><p class="A"><a href="src$CtrlLib$LineEdit$en-us.html">LineEdit</a></p>
+</td>
+<td class="I"><p class="G"><a href="src$CtrlLib$index$en-us.html_36.png"><img src="src$CtrlLib$index$en-us.html_36.png" border="0" alt="" style="width: 140px; height: 76px"></a></p>
+</td>
+<td class="H"><p class="A">Highly customizable raw text editor, LF is the end of line, fixed width font.</p>
+</td>
+</tr>
+<tr><td class="H"><p class="A">LNGCtrl</p>
+</td>
+<td class="I"><p class="G"><a href="src$CtrlLib$index$en-us.html_37.png"><img src="src$CtrlLib$index$en-us.html_37.png" border="0" alt="" style="width: 64px; height: 26px"></a></p>
+</td>
+<td class="H"><p class="A">Language selection Ctrl.</p>
+</td>
+</tr>
+<tr><td class="H"><p class="A"><a href="src$CtrlLib$MenuBar$en-us.html">MenuBar</a></p>
+</td>
+<td class="I"><p class="G"><a href="src$CtrlLib$index$en-us.html_38.png"><img src="src$CtrlLib$index$en-us.html_38.png" border="0" alt="" style="width: 133px; height: 103px"></a></p>
+</td>
+<td class="H"><p class="A">Menu.</p>
+</td>
+</tr>
+<tr><td class="H"><p class="A"><a href="src$CtrlLib$Option$en-us.html">Option</a></p>
+</td>
+<td class="I"><p class="G"><a href="src$CtrlLib$index$en-us.html_39.png"><img src="src$CtrlLib$index$en-us.html_39.png" border="0" alt="" style="width: 99px; height: 23px"></a></p>
+</td>
+<td class="H"><p class="A">On-off (or on-off-null) option.</p>
+</td>
+</tr>
+<tr><td class="H"><p class="A"><a href="src$CtrlLib$Option$en-us.html">OptionBox</a></p>
+</td>
+<td class="I"><p class="G"><a href="src$CtrlLib$index$en-us.html_40.png"><img src="src$CtrlLib$index$en-us.html_40.png" border="0" alt="" style="width: 247px; height: 76px"></a></p>
+</td>
+<td class="H"><p class="A">Variant of option used for visually grouping other widgets. Also can enable/disable grouped widgets (AutoBox modifier).</p>
+</td>
+</tr>
+<tr><td class="H"><p class="A"><a href="src$CtrlLib$OptionTree$en-us.html">OptionTree</a></p>
+</td>
+<td class="I"><p class="G"><a href="src$CtrlLib$index$en-us.html_41.png"><img src="src$CtrlLib$index$en-us.html_41.png" border="0" alt="" style="width: 112px; height: 160px"></a></p>
+</td>
+<td class="H"><p class="A">Tree of options.</p>
+</td>
+</tr>
+<tr><td class="H"><p class="A">ParentCtrl</p>
+</td>
+<td class="I"><p class="G">&nbsp;</p>
+</td>
+<td class="H"><p class="A">Parent for grouping widgets in TabCtrl and similar situations.</p>
+</td>
+</tr>
+<tr><td class="H"><p class="A">Picture</p>
+</td>
+<td class="I"><p class="G">&nbsp;</p>
+</td>
+<td class="H"><p class="A">Static widget displaying Drawing.</p>
+</td>
+</tr>
+<tr><td class="H"><p class="A">PopUpTable</p>
+</td>
+<td class="I"><p class="G"><a href="src$CtrlLib$index$en-us.html_42.png"><img src="src$CtrlLib$index$en-us.html_42.png" border="0" alt="" style="width: 138px; height: 71px"></a></p>
+</td>
+<td class="H"><p class="A">ArrayCtrl derived table suitable for displaying drop-down lists.</p>
+</td>
+</tr>
+<tr><td class="H"><p class="A"><a href="src$CtrlLib$Progress$en-us.html">Progress</a></p>
+</td>
+<td class="I"><p class="G"><a href="src$CtrlLib$index$en-us.html_43.png"><img src="src$CtrlLib$index$en-us.html_43.png" border="0" alt="" style="width: 231px; height: 72px"></a></p>
+</td>
+<td class="H"><p class="A">Dialog for displaying progress of lengthy operations.</p>
+</td>
+</tr>
+<tr><td class="H"><p class="A"><a href="src$CtrlLib$ProgressInd$en-us.html">ProgressIndicator</a></p>
+</td>
+<td class="I"><p class="G"><a href="src$CtrlLib$index$en-us.html_44.png"><img src="src$CtrlLib$index$en-us.html_44.png" border="0" alt="" style="width: 318px; height: 18px"></a></p>
+</td>
+<td class="H"><p class="A">Widget for displaying progress of lengthy operations.</p>
+</td>
+</tr>
+<tr><td class="H"><p class="A"><a href="src$CtrlLib$Pusher$en-us.html">Pusher</a></p>
+</td>
+<td class="I"><p class="G">&nbsp;</p>
+</td>
+<td class="H"><p class="A">Base class for &quot;push&quot; widgets like Button, Option etc.</p>
+</td>
+</tr>
+<tr><td class="H"><p class="A">RichTextCtrl</p>
+</td>
+<td class="I"><p class="G"><a href="src$CtrlLib$index$en-us.html_45.png"><img src="src$CtrlLib$index$en-us.html_45.png" border="0" alt="" style="width: 185px; height: 49px"></a></p>
+</td>
+<td class="H"><p class="A">RichTextView derived class altered to display GUI texts.</p>
+</td>
+</tr>
+<tr><td class="H"><p class="A">RichTextView</p>
+</td>
+<td class="I"><p class="G"><a href="src$CtrlLib$index$en-us.html_46.png"><img src="src$CtrlLib$index$en-us.html_46.png" border="0" alt="" style="width: 223px; height: 109px"></a></p>
+</td>
+<td class="H"><p class="A">Widget displaying RichText documents. Has ScrollBar and reacts to hyper-links.</p>
+</td>
+</tr>
+<tr><td class="H"><p class="A">ScrollBar</p>
+</td>
+<td class="I"><p class="G"><a href="src$CtrlLib$index$en-us.html_47.png"><img src="src$CtrlLib$index$en-us.html_47.png" border="0" alt="" style="width: 17px; height: 73px"></a></p>
+</td>
+<td class="H"><p class="A">Scroll-bar.</p>
+</td>
+</tr>
+<tr><td class="H"><p class="A">ScrollBars</p>
+</td>
+<td class="I"><p class="G">&nbsp;</p>
+</td>
+<td class="H"><p class="A">Horizontal and vertical scrollbar (Frame).</p>
+</td>
+</tr>
+<tr><td class="H"><p class="A">SeparatorCtrl</p>
+</td>
+<td class="I"><p class="G">&nbsp;</p>
+</td>
+<td class="H"><p class="A">Simple static widget used as separator line.</p>
+</td>
+</tr>
+<tr><td class="H"><p class="A">Slider</p>
+</td>
+<td class="I"><p class="G"><a href="src$CtrlLib$index$en-us.html_48.png"><img src="src$CtrlLib$index$en-us.html_48.png" border="0" alt="" style="width: 104px; height: 17px"></a></p>
+</td>
+<td class="H"><p class="A">Slider part of ScrollBar.</p>
+</td>
+</tr>
+<tr><td class="H"><p class="A"><a href="src$CtrlLib$Slider$en-us.html">SliderCtrl</a></p>
+</td>
+<td class="I"><p class="G"><a href="src$CtrlLib$index$en-us.html_49.png"><img src="src$CtrlLib$index$en-us.html_49.png" border="0" alt="" style="width: 166px; height: 24px"></a></p>
+</td>
+<td class="H"><p class="A">Setting of integer value using the &quot;thumb&quot;.</p>
+</td>
+</tr>
+<tr><td class="H"><p class="A"><a href="src$CtrlLib$SpinButtons$en-us.html">SpinButtons</a></p>
+</td>
+<td class="I"><p class="G"><a href="src$CtrlLib$index$en-us.html_50.png"><img src="src$CtrlLib$index$en-us.html_50.png" border="0" alt="" style="width: 22px; height: 25px"></a></p>
+</td>
+<td class="H"><p class="A">Couple of spinning arrows (Frame).</p>
+</td>
+</tr>
+<tr><td class="H"><p class="A"><a href="src$CtrlLib$Splitter$en-us.html">Splitter</a></p>
+</td>
+<td class="I"><p class="G"><a href="src$CtrlLib$index$en-us.html_51.png"><img src="src$CtrlLib$index$en-us.html_51.png" border="0" alt="" style="width: 182px; height: 88px"></a></p>
+</td>
+<td class="H"><p class="A">Widget to implement resizeable multipane windows.</p>
+</td>
+</tr>
+<tr><td class="H"><p class="A"><a href="src$CtrlLib$Static$en-us.html#StaticRect::class">StaticRect</a></p>
+</td>
+<td class="I"><p class="G">&nbsp;</p>
+</td>
+<td class="H"><p class="A">Single-color static rectangle.</p>
+</td>
+</tr>
+<tr><td class="H"><p class="A"><a href="src$CtrlLib$Static$en-us.html#StaticText::class">StaticText</a></p>
+</td>
+<td class="I"><p class="G">&nbsp;</p>
+</td>
+<td class="H"><p class="A">Static text, without accelerator key processing.</p>
+</td>
+</tr>
+<tr><td class="H"><p class="A"><a href="src$CtrlLib$StatusBar$en-us.html#StatusBar::class">StatusBar</a></p>
+</td>
+<td class="I"><p class="G"><a href="src$CtrlLib$index$en-us.html_52.png"><img src="src$CtrlLib$index$en-us.html_52.png" border="0" alt="" style="width: 123px; height: 25px"></a></p>
+</td>
+<td class="H"><p class="A">Displaying informations at the bottom of window.</p>
+</td>
+</tr>
+<tr><td class="H"><p class="A"><a href="src$CtrlLib$Switch$en-us.html">Switch</a></p>
+</td>
+<td class="I"><p class="G"><a href="src$CtrlLib$index$en-us.html_53.png"><img src="src$CtrlLib$index$en-us.html_53.png" border="0" alt="" style="width: 149px; height: 21px"></a></p>
+</td>
+<td class="H"><p class="A">Value selection.</p>
+</td>
+</tr>
+<tr><td class="H"><p class="A"><a href="src$CtrlLib$TabCtrl$en-us.html">TabCtrl</a></p>
+</td>
+<td class="I"><p class="G"><a href="src$CtrlLib$index$en-us.html_54.png"><img src="src$CtrlLib$index$en-us.html_54.png" border="0" alt="" style="width: 219px; height: 123px"></a></p>
+</td>
+<td class="H"><p class="A">Tabbed sub-dialog widget.</p>
+</td>
+</tr>
+<tr><td class="H"><p class="A"><a href="src$CtrlLib$TabDlg$en-us.html">TabDlg</a></p>
+</td>
+<td class="I"><p class="G"><a href="src$CtrlLib$index$en-us.html_55.png"><img src="src$CtrlLib$index$en-us.html_55.png" border="0" alt="" style="width: 189px; height: 127px"></a></p>
+</td>
+<td class="H"><p class="A">Simplified solution for multi-tab dialog.</p>
+</td>
+</tr>
+<tr><td class="H"><p class="A"><a href="src$CtrlLib$TextCtrl$en-us.html">TextCtrl</a></p>
+</td>
+<td class="I"><p class="G">&nbsp;</p>
+</td>
+<td class="H"><p class="A">Common base class for LineEdit and DocEdit.</p>
+</td>
+</tr>
+<tr><td class="H"><p class="A"><a href="src$CtrlLib$ToolBar$en-us.html">ToolBar</a></p>
+</td>
+<td class="I"><p class="G"><a href="src$CtrlLib$index$en-us.html_56.png"><img src="src$CtrlLib$index$en-us.html_56.png" border="0" alt="" style="width: 229px; height: 14px"></a></p>
+</td>
+<td class="H"><p class="A">Tool bar.</p>
+</td>
+</tr>
+<tr><td class="H"><p class="A">ToolButton</p>
+</td>
+<td class="I"><p class="G"><a href="src$CtrlLib$index$en-us.html_57.png"><img src="src$CtrlLib$index$en-us.html_57.png" border="0" alt="" style="width: 46px; height: 26px"></a></p>
+</td>
+<td class="H"><p class="A">Tool-bar button.</p>
+</td>
+</tr>
+<tr><td class="H"><p class="A"><a href="src$CtrlLib$TreeCtrl$en-us.html">TreeCtrl</a></p>
+</td>
+<td class="I"><p class="G"><a href="src$CtrlLib$index$en-us.html_58.png"><img src="src$CtrlLib$index$en-us.html_58.png" border="0" alt="" style="width: 194px; height: 185px"></a></p>
+</td>
+<td class="H"><p class="A">Tree widget.</p>
+</td>
+</tr>
+<tr><td class="H"><p class="A">VScrollBar</p>
+</td>
+<td class="I"><p class="G"><a href="src$CtrlLib$index$en-us.html_59.png"><img src="src$CtrlLib$index$en-us.html_59.png" border="0" alt="" style="width: 17px; height: 73px"></a></p>
+</td>
+<td class="H"><p class="A">Vertical scrollbar.</p>
+</td>
+</tr>
+<tr><td class="H"><p class="A">WheelRampCtrl</p>
+</td>
+<td class="I"><p class="G">&nbsp;</p>
+</td>
+<td class="H"><p class="A">Common base class for ColorWheelCtrl and ColorRampCtrl.</p>
+</td>
+</tr>
+<tr><td class="H"><p class="A"><a href="src$CtrlLib$WithDropChoice$en-us.html">WithDropChoice</a></p>
+</td>
+<td class="I"><p class="G"><a href="src$CtrlLib$index$en-us.html_60.png"><img src="src$CtrlLib$index$en-us.html_60.png" border="0" alt="" style="width: 216px; height: 53px"></a></p>
+</td>
+<td class="H"><p class="A">Template that adds value-selection DropList to any widgets.</p>
+</td>
+</tr>
+</table></td>
+</tr></table>
+<p class="J">&nbsp;</p>
+<p class="J">&nbsp;</p>
+<p class="J">RichEdit package widgets</p>
+<p class="A">&nbsp;</p>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr><td width="100%"><table width="100%" class="D"><colgroup><col width="24%"><col width="32%"><col width="43%"></colgroup>
+<tr><td class="H"><p class="A">RichRuler</p>
+</td>
+<td class="I"><p class="G"><a href="src$CtrlLib$index$en-us.html_61.png"><img src="src$CtrlLib$index$en-us.html_61.png" border="0" alt="" style="width: 240px; height: 23px"></a></p>
+</td>
+<td class="H"><p class="A">Ruler for word-processors.</p>
+</td>
+</tr>
+<tr><td class="H"><p class="A">UnitEdit</p>
+</td>
+<td class="I"><p class="G"><a href="src$CtrlLib$index$en-us.html_62.png"><img src="src$CtrlLib$index$en-us.html_62.png" border="0" alt="" style="width: 74px; height: 26px"></a></p>
+</td>
+<td class="H"><p class="A">Editor capable of converting and displaying typographical units.</p>
+</td>
+</tr>
+<tr><td class="H"><p class="A">RichEdit</p>
+</td>
+<td class="I"><p class="G">&nbsp;</p>
+</td>
+<td class="H"><p class="A">Raw word-processor widget.</p>
+</td>
+</tr>
+<tr><td class="H"><p class="A">RichEdit</p>
+</td>
+<td class="I"><p class="G"><a href="src$CtrlLib$index$en-us.html_63.png"><img src="src$CtrlLib$index$en-us.html_63.png" border="0" alt="" style="width: 248px; height: 143px"></a></p>
+</td>
+<td class="H"><p class="A">Word-processor with tool-bar.</p>
+</td>
+</tr>
+</table></td>
+</tr></table>
+<p class="J">&nbsp;</p>
+<p class="J">&nbsp;</p>
+<p class="J">SqlCtrl package widgets</p>
+<p class="J">&nbsp;</p>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr><td width="100%"><table width="100%" class="D"><colgroup><col width="24%"><col width="75%"></colgroup>
+<tr><td class="H"><p class="A">SqlOption</p>
+</td>
+<td class="I"><p class="A">Option derived widget, represents true as string &quot;1&quot; and false as &quot;0&quot; (better for storing in many DBMS).</p>
+</td>
+</tr>
+<tr><td class="H"><p class="A">SqlArray</p>
+</td>
+<td class="I"><p class="A">ArrayCtrl derived widget, capable of loading, displaying and editing a data of SQL DBMS. Several SqlArray widgets can be bound together with master-detail relations (ArrayCtrl can be used as the master as well.)</p>
+</td>
+</tr>
+<tr><td class="H"><p class="A">SqlDetail</p>
+</td>
+<td class="I"><p class="A">Groups several widgets as the detail for master-detail 1:1 relations (the master is ArrayCtrl or SqlArray).</p>
+</td>
+</tr>
+</table></td>
+</tr></table>
+<p class="J">&nbsp;</p>
+<p class="J">Note: Only the most frequently used widgets are now in the Layout Designer menu. Others can be inserted as &quot;User class&quot;.</p>
+<p class="A">&nbsp;</p>
+</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>
+<TABLE BORDER="0" WIDTH="100%"><TR><TD></TD>
+</TR>
+</TABLE>
+<TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" BGCOLOR="#FFFFFF" WIDTH="100%" style="border-style: solid; border-width: 1px; border-color: #6E89AE;padding: 10px;;"><TR><TD><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%"><TR><TD><p class="A"><span class="B"> </span><a href="www$uppweb$contribweb$en-us.html">Do you want to contribute?</a></p>
+</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>
+<script type="text/javascript">var a={'src$CtrlLib$index$en-us.html':'English'};var p=window.location.pathname.split("/");p=p[p.length-1];var s='<select id="lang" onchange="window.location=document.getElementById(\'lang\').value;">';for(l in a){if(p==l){d=" selected=1"}else{d=""}s+='<option value="'+l+'"'+d+'>'+a[l]+'</option>'}s+='</select>';var d=document.createElement('div');d.innerHTML=s;var c=document.getElementById('langs');c.replaceChild(d,c.firstChild);document.getElementById('langbox').style.display='block';</script></BODY>

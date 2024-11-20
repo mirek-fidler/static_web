@@ -1,0 +1,641 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en-us">
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
+<META NAME="Generator" CONTENT="U++ HTML Package">
+<META NAME="Description" CONTENT="All the information about packages is stored in a text file with the same name as the package and .upp extension.">
+<TITLE>U++ package file format :: U++</TITLE>
+<STYLE TYPE="text/css"><!--
+.A{margin:0px 0px 0px 0px;text-indent:0px;text-align:left;color:#000000;font-family:sans-serif;font-size:10pt;font-weight:normal;font-style:normal;}
+.B{font-size:12pt;}
+.C{margin:0px 0px 16px 0px;text-indent:0px;text-align:left;color:#000000;font-family:serif;font-size:24pt;font-weight:bold;font-style:normal;}
+.D{margin:16px 0px 0px 0px;text-indent:0px;text-align:left;color:#000000;font-family:sans-serif;font-size:16pt;font-weight:bold;font-style:normal;}
+.E{margin:8px 0px 8px 0px;text-indent:0px;text-align:left;color:#000000;font-family:sans-serif;font-size:10pt;font-weight:normal;font-style:normal;line-height:150%}
+.F{border-collapse:collapse;table-layout:auto;border: 2px solid #000000;}
+.G{padding: 3px 5px 3px 5px;border-left: 1px solid #000000;border-top: 1px solid #000000;border-right: 1px solid #000000;border-bottom: 1px solid #000000;background-color:#FFFFFF;vertical-align:middle;}
+.H{margin:0px 0px 0px 32px;text-indent:0px;text-align:left;color:#000080;font-family:monospace;font-size:10pt;font-weight:normal;font-style:normal;}
+.I{margin:8px 0px 8px 0px;text-indent:0px;text-align:left;color:#000080;font-family:monospace;font-size:10pt;font-weight:normal;font-style:normal;line-height:150%}
+.J{color:#000080;font-family:monospace;}
+.K{border-collapse:collapse;table-layout:auto;border: 0px solid #000000;}
+.L{padding: 3px 5px 3px 5px;border-left: 0px solid #000000;border-top: 0px solid #000000;border-right: 0px solid #000000;border-bottom: 0px solid #000000;background-color:#FFFFFF;vertical-align:middle;}
+.M{margin:3px 0px 3px 0px;text-indent:0px;text-align:left;color:#000080;font-family:monospace;font-size:10pt;font-weight:normal;font-style:normal;line-height:150%}
+.N{margin:3px 0px 3px 0px;text-indent:0px;text-align:left;color:#000000;font-family:sans-serif;font-size:10pt;font-weight:normal;font-style:normal;line-height:150%}
+.O{padding: 3px 5px 3px 5px;border-left: 1px solid #000000;border-top: 1px solid #000000;border-right: 1px solid #000000;border-bottom: 1px solid #000000;background-color:#FFFFFF;vertical-align:top;}
+a.l1         { text-decoration:none; font-size: 8pt; font-family: sans-serif; font-weight: normal; }
+a.l1:link    { color:#000000; }
+a.l1:visited { color:#000080; }
+a.l1:hover   { color:#9933CC; }
+a.l1:active  { color:#000000; }
+a.l2         { text-decoration:none; font-size: 12pt; font-family: sans-serif; font-variant: small-caps; }
+a.l2:link    { color:#0066FF; }
+a.l2:visited { color:#FF6600; }
+a.l2:hover   { color:#BC0624; }
+a.l2:active  { color:#BC0024; }
+
+-->
+</STYLE>
+<META NAME="keywords" CONTENT="framework, toolkit, widget, c++, visual, studio, dev-cpp, builder, ide, class, component,wxwidgets, qt, rapid, application, development, rad, mfc, linux, macos, gui, sdl, directx, desktop"><META name="robots" content="index,follow">
+<LINK rel="alternate" type="application/rss+xml" title="SVN changes" href="svnchanges.xml">
+<LINK rel="shortcut icon" type="image/png" href="favicon.png">
+</HEAD><BODY BGCOLOR="#D2D9D2" ALINK="#800000" LINK="#000000" VLINK="#000080"><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%"><TR><TD COLSPAN="3"><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%" BGCOLOR="#FFFFFF" style="border: 1px solid #6E89AE;padding-left: 10px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;"><TR><TD><A HREF="index.html"><IMG SRC="0i.png" ALT="" BORDER="0"></A>
+</TD>
+<TD ALIGN="RIGHT" VALIGN="BOTTOM" STYLE="padding-bottom: 5px; background-image: url('1i.png')"><span style="font-size: 14pt; font-family: sans-serif;"><script type="text/javascript"><!--
+google_ad_client = "pub-1082147624384270";
+google_ad_width = 468;
+google_ad_height = 60;
+google_ad_format = "468x60_as";
+google_ad_type = "text_image";
+google_ad_channel = "";
+google_color_border = "336699";
+google_color_bg = "FFFFFF";
+google_color_link = "0000FF";
+google_color_text = "000000";
+google_color_url = "008000";
+//--></script>
+<script type="text/javascript"
+  src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+&nbsp;&nbsp;</span>
+</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>
+<TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%"><TR><TD COLSPAN="3" BGCOLOR="#D2D9D2" HEIGHT="6"></TD>
+</TR>
+<TR><TD VALIGN="TOP" ALIGN="CENTER"><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="160"><TR><TD ALIGN="CENTER"><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%" BGCOLOR="#FFFFFF" style="border-style: solid; border-width: 1px; border-color: #6E89AE;padding: 0px"><TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px;"><A HREF="www$uppweb$overview$en-us.html" CLASS="l1">Overview</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$examples$en-us.html" CLASS="l1">Examples</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$ss$en-us.html" CLASS="l1">Screenshots</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$comparison$en-us.html" CLASS="l1">Comparisons</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$apps$en-us.html" CLASS="l1">Applications</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$download$en-us.html" CLASS="l1">Download</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$documentation$en-us.html" CLASS="l1">Documentation</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$Tutorials$en-us.html" CLASS="l1">Tutorials</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="app$ide$UppHub$en-us.html" CLASS="l1">UppHub</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$Roadmap$en-us.html" CLASS="l1">Status & Roadmap</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$FAQ$en-us.html" CLASS="l1">FAQ</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="app$ide$About$en-us.html" CLASS="l1">Authors & License</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="https://www.ultimatepp.org/forums" CLASS="l1">Forums</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$Funding$en-us.html" CLASS="l1">Funding U++</A>
+</TD>
+</TR>
+</TABLE>
+<TABLE BORDER="0" WIDTH="100%"><TR><TD></TD>
+</TR>
+</TABLE>
+<TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%" BGCOLOR="#FFFFFF" style="border-style: solid; border-width: 1px; border-color: #6E89AE;padding: 0px"><TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('3i.png'); border: 0px solid black;padding-left:12px; padding-right:0px; padding-top:1px; padding-bottom:1px;color:#FFFFFF;"><B><span style="font-size: 8pt; font-family: sans-serif;">Search on this site</span>
+</B>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:6px; padding-right:0px; padding-top:4px; padding-bottom:4px;border-top: 1px solid #6E89AE;"><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%"><TR><TD><IMG SRC="4i.png" ALT="" BORDER="0"></TD>
+<TD><FORM ACTION="https://www.google.com/search" METHOD="GET" STYLE="margin:0px;padding:0px;"><INPUT TYPE="HIDDEN" NAME="ie" VALUE="UTF-8"><INPUT TYPE="HIDDEN" NAME="oe" VALUE="UTF-8"><INPUT TYPE="TEXT" NAME="q" SIZE="15" MAXLENGTH="256" placeholder="Site search"><INPUT TYPE="HIDDEN" NAME="sitesearch" VALUE="ultimatepp.org"></FORM>
+</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>
+<TABLE BORDER="0" WIDTH="100%"><TR><TD></TD>
+</TR>
+</TABLE>
+<br><div id="fb-root"></div>
+<script type="text/javascript">(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) {return;}
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+<div class="fb-like" data-href="https://www.facebook.com/pages/Upp-Framework/262346610476027?sk=wall" data-send="false" data-layout="button_count" data-width="160" data-show-faces="false" data-font="arial"></div>
+<br><br><script type="text/javascript"><!--
+google_ad_client = "pub-1082147624384270";
+google_ad_width = 160;
+google_ad_height = 600;
+google_ad_format = "160x600_as";
+google_ad_type = "text_image";
+google_ad_channel = "";
+google_color_border = "336699";
+google_color_bg = "FFFFFF";
+google_color_link = "0000FF";
+google_color_text = "000000";
+google_color_url = "008000";
+//--></script>
+<script type="text/javascript"
+  src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script><br><br><script type="text/javascript"><!--
+google_ad_client = "pub-1082147624384270";
+google_ad_width = 160;
+google_ad_height = 90;
+google_ad_format = "160x90_0ads_al_s";
+google_ad_channel = "";
+google_color_border = "336699";
+google_color_bg = "FFFFFF";
+google_color_link = "0000FF";
+google_color_text = "000000";
+google_color_url = "008000";
+//--></script>
+<script type="text/javascript"
+  src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+<br><br><br><br><br><br><A HREF="https://sourceforge.net/projects/upp/"><IMG SRC="https://sourceforge.net/sflogo.php?group_id=93970&amp;type=2" ALT="SourceForge.net Logo" BORDER="0" WIDTH="125" HEIGHT="37"></A>
+<br><br><A HREF="https://flathub.org/en/apps/org.ultimatepp.TheIDE"><IMG SRC="5i.png" ALT="SourceForge.net Logo" BORDER="0" WIDTH="125" HEIGHT="37"></A>
+<br><br><div style="background-color:#ffffff;width:125;height:35"><A HREF="https://github.com/ultimatepp"><IMG SRC="6i.png" ALT="GitHub Logo" BORDER="0" WIDTH="125" HEIGHT="35"></A>
+</div><br><div style="background-color:#ffffff;width:125;height:35"><div style="height:5"></div><A HREF="https://discord.gg/8XzqQzXZzb"><IMG SRC="https://assets-global.website-files.com/6257adef93867e50d84d30e2/636e0b5061df29d55a92d945_full_logo_blurple_RGB.svg" ALT="Discord Logo" BORDER="0" WIDTH="125" HEIGHT="25"></A>
+</div><br></TD>
+</TR>
+</TABLE>
+</TD>
+<TD VALIGN="TOP" BGCOLOR="#D2D9D2"><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="6"><TR><TD></TD>
+</TR>
+</TABLE>
+</TD>
+<TD VALIGN="TOP" WIDTH="100%" BGCOLOR="#D2D9D2"><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" BGCOLOR="#FFFFFF" WIDTH="100%" style="border-style: solid; border-width: 1px; border-color: #6E89AE;padding: 10px;;"><TR><TD><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%"><TR><TD><p class="C">U++ package file format</p>
+<hr><p class="D">Table of contents</p>
+<p class="A">&nbsp;</p>
+<p class="A"><a href="app$ide$upp_en-us.html#1">1. Introduction</a></p>
+<p class="A"><a href="app$ide$upp_en-us.html#2">2. Accepted flags</a></p>
+<p class="A"><a href="app$ide$upp_en-us.html#3">3. Encoding</a></p>
+<p class="A"><a href="app$ide$upp_en-us.html#4">4. Custom build steps</a></p>
+<p class="A"><a href="app$ide$upp_en-us.html#5">5. Description</a></p>
+<p class="A"><a href="app$ide$upp_en-us.html#6">6. Files</a></p>
+<p class="A"><a href="app$ide$upp_en-us.html#7">7. Add/Remove flags</a></p>
+<p class="A"><a href="app$ide$upp_en-us.html#8">8. Additional includes</a></p>
+<p class="A"><a href="app$ide$upp_en-us.html#9">9. Libraries</a></p>
+<p class="A"><a href="app$ide$upp_en-us.html#10">10. Linking options</a></p>
+<p class="A"><a href="app$ide$upp_en-us.html#11">11. Size optimization</a></p>
+<p class="A"><a href="app$ide$upp_en-us.html#12">12. Speed optimization</a></p>
+<p class="A"><a href="app$ide$upp_en-us.html#13">13. Compiler options</a></p>
+<p class="A"><a href="app$ide$upp_en-us.html#14">14. Main configuration</a></p>
+<p class="A"><a href="app$ide$upp_en-us.html#15">15. No BLITZ</a></p>
+<p class="A"><a href="app$ide$upp_en-us.html#16">16. Target</a></p>
+<p class="A"><a href="app$ide$upp_en-us.html#17">17. Used packages</a></p>
+<p class="A">&nbsp;</p>
+<hr><p id="1" class="D">1. Introduction</p>
+<p class="E">All the information about packages is stored in a text file with the same name as the package and .upp extension. This file stores list of files that belong into the package and also all the settings that are set in Package organizer. This article aims to document the syntax of the .upp file.</p>
+<p class="E">Each section of .upp file begins with a keyword and ends with semicolon. The recognized section keywords are:</p>
+<p class="A">&nbsp;</p>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr><td width="100%"><table width="100%" class="F"><colgroup><col width="25%"><col width="25%"><col width="25%"><col width="25%"></colgroup>
+<tr><td class="G"><p class="H">acceptflags</p>
+<p class="H">charset</p>
+<p class="H">custom</p>
+<p class="H">description</p>
+</td>
+<td class="G"><p class="H">file</p>
+<p class="H">flags</p>
+<p class="H">include</p>
+<p class="H">library</p>
+</td>
+<td class="G"><p class="H">link</p>
+<p class="H">optimize_size</p>
+<p class="H">optimize_speed</p>
+<p class="H">options</p>
+</td>
+<td class="G"><p class="H">mainconfig</p>
+<p class="H">noblitz</p>
+<p class="H">target</p>
+<p class="H">uses</p>
+</td>
+</tr>
+</table></td>
+</tr></table>
+<p class="A">&nbsp;</p>
+<hr><p id="2" class="D">2. Accepted flags</p>
+<p class="E">Each package can specify a list of flags that it can use to provide special or optimized functionality. Such flags can be then passed with dot prefix and will be only applied to main package and all packages that list it among the accepted flags. This provides a way how to minimize the number of packages that need to be rebuilt when the flags are changed.</p>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr><td width="100%"><table width="100%" class="F"><colgroup><col width="19%"><col width="80%"></colgroup>
+<tr><td class="G"><p class="E">Syntax:</p>
+</td>
+<td class="G"><p class="I">acceptflags &lt;flag_name&gt; [,&lt;flagname&gt;]*;</p>
+</td>
+</tr>
+<tr><td class="G"><p class="E">Example:</p>
+</td>
+<td class="G"><p class="I">acceptflags NOGTK, GUI;</p>
+</td>
+</tr>
+</table></td>
+</tr></table>
+<p class="E">&nbsp;</p>
+<hr><p id="3" class="D">3. Encoding</p>
+<p class="E">The default encoding for all the files in the package can be specified using <span class="J">charset</span> keyword. </p>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr><td width="100%"><table width="100%" class="K"><colgroup><col width="19%"><col width="80%"></colgroup>
+<tr><td class="L"><p class="E">Syntax:</p>
+</td>
+<td class="L"><p class="I">charset &lt;charset_name&gt;;</p>
+</td>
+</tr>
+<tr><td class="L"><p class="E">Example:</p>
+</td>
+<td class="L"><p class="I">charset &quot;UTF-8&quot;;</p>
+</td>
+</tr>
+</table></td>
+</tr></table>
+<p class="E">&nbsp;</p>
+<hr><p id="4" class="D">4. Custom build steps</p>
+<p class="E">Each package can invoke so called &quot;custom build steps&quot; which are invoked either at compile time on all file with given extension or when linking, if the extension is one of the special values pre-link or post-link. The build step consists of command to execute and specification of output files, which might be further processed by TheIDE. This can be used for example to generate sources on the fly or to apply some post-processing on the final executables. The command and output may contain a number of variables enclosed in '$(...)' that are replaced upon evaluation:</p>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr><td><table border="0" width= 89px><tr><td></td></tr></table></td>
+<td width="100%"><table width="100%" class="F"><colgroup><col width="28%"><col width="71%"></colgroup>
+<tr><td class="G"><p class="M">FILE</p>
+</td>
+<td class="G"><p class="N">current file name</p>
+</td>
+</tr>
+<tr><td class="G"><p class="M">TITLE</p>
+</td>
+<td class="G"><p class="N">current file name without extension</p>
+</td>
+</tr>
+<tr><td class="G"><p class="M">PATH</p>
+</td>
+<td class="G"><p class="N">current file path</p>
+</td>
+</tr>
+<tr><td class="G"><p class="M">RELPATH</p>
+</td>
+<td class="G"><p class="N">relative path to current file</p>
+</td>
+</tr>
+<tr><td class="G"><p class="M">FILEDIR</p>
+</td>
+<td class="G"><p class="N">current file directory</p>
+</td>
+</tr>
+<tr><td class="G"><p class="M">DIR</p>
+</td>
+<td class="G"><p class="N">package directory</p>
+</td>
+</tr>
+<tr><td class="G"><p class="M">PACKAGE</p>
+</td>
+<td class="G"><p class="N">package name</p>
+</td>
+</tr>
+<tr><td class="G"><p class="M">OUTDIR</p>
+</td>
+<td class="G"><p class="N">package output directory</p>
+</td>
+</tr>
+<tr><td class="G"><p class="M">INCLUDE</p>
+</td>
+<td class="G"><p class="N">list of all include paths</p>
+</td>
+</tr>
+<tr><td class="G"><p class="M">EXEPATH</p>
+</td>
+<td class="G"><p class="N">executable path</p>
+</td>
+</tr>
+<tr><td class="G"><p class="M">EXEDIR</p>
+</td>
+<td class="G"><p class="N">executable directory</p>
+</td>
+</tr>
+<tr><td class="G"><p class="M">EXEFILE</p>
+</td>
+<td class="G"><p class="N">executable file name</p>
+</td>
+</tr>
+<tr><td class="G"><p class="M">EXETITLE</p>
+</td>
+<td class="G"><p class="N">executable file name without extension</p>
+</td>
+</tr>
+</table></td>
+<td><table border="0" width= 128px><tr><td></td></tr></table></td></tr></table>
+<p class="E">&nbsp;</p>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr><td width="100%"><table width="100%" class="F"><colgroup><col width="19%"><col width="80%"></colgroup>
+<tr><td class="G"><p class="E">Syntax:</p>
+</td>
+<td class="G"><p class="I">custom(&lt;when&gt;) &lt;extension&gt;, &lt;command&gt;, &lt;output&gt;;</p>
+</td>
+</tr>
+<tr><td class="G"><p class="E">Example:</p>
+</td>
+<td class="G"><p class="I">custom &quot;.rc&quot;, &quot;rc /fo$(OUTDIR)\\$(TITLE)_rc.obj $(PATH)&quot;, &quot;$(OUTDIR)\\$(TITLE)_rc.obj&quot;;</p>
+<p class="I">custom(POSIX PROTECT) &quot;post-link&quot;, &quot;ProtectEncrypt $(OUTPATH) AABBCCDDEEFF00112233445566778899&quot;, &quot;&quot;;</p>
+</td>
+</tr>
+</table></td>
+</tr></table>
+<p class="E">&nbsp;</p>
+<hr><p id="5" class="D">5. Description</p>
+<p class="E">Description of package as it appears in Package selection dialogs is set using the <span class="J">description</span> keyword. The description string can also include formatting portion, that determines the color and style of the package name in the package list in TheIDE.</p>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr><td width="100%"><table width="100%" class="F"><colgroup><col width="19%"><col width="80%"></colgroup>
+<tr><td class="G"><p class="E">Syntax:</p>
+</td>
+<td class="G"><p class="I">description &lt;description_string&gt;;</p>
+<p class="E">where</p>
+<p class="I">&lt;description_string&gt; = &lt;actual_description&gt; [\377 [B] [I] [&lt;R&gt;,&lt;G&gt;,&lt;B&gt;]]</p>
+<p class="E"><span class="J">B </span>makes the text bold</p>
+<p class="E"><span class="J">I </span>makes the text italic</p>
+<p class="E"><span class="J">&lt;R&gt;,&lt;G&gt;,&lt;B&gt; </span>are integers in range from 0 to 255 specifying the color</p>
+</td>
+</tr>
+<tr><td class="G"><p class="E">Example:</p>
+</td>
+<td class="G"><p class="I">description &quot;Non-GUI code. Streams, NTL containers, concrete types, Value, XML, C parsing etc...\377B128,0,0&quot;;</p>
+</td>
+</tr>
+</table></td>
+</tr></table>
+<p class="E">&nbsp;</p>
+<hr><p id="6" class="D">6. Files</p>
+<p class="E">Possibly the most important part of package is the list of files that belong to it. Each file in the list can have set several options which specify how it is handled and displayed.</p>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr><td width="100%"><table width="100%" class="F"><colgroup><col width="19%"><col width="80%"></colgroup>
+<tr><td class="G"><p class="E">Syntax:</p>
+</td>
+<td class="G"><p class="I">file &lt;file_name&gt; [&lt;file_options&gt;]* [,&lt;file_name&gt; [&lt;file_options&gt;]*]*;</p>
+<p class="E">where</p>
+<p class="I">&lt;file_options&gt; = options(&lt;when&gt;) &lt;option&gt; | depends(&lt;when&gt;) &lt;dependency&gt; | optimize_speed | optimize_size | readonly | separator | charset &lt;charset_name&gt; | tabsize &lt;num 1-20&gt; | font &lt;num 0-3&gt; | highlight &lt;highlighter_name&gt; </p>
+</td>
+</tr>
+<tr><td class="G"><p class="E">Example:</p>
+</td>
+<td class="G"><p class="I">file </p>
+<p class="I">&nbsp;&nbsp;&nbsp;&nbsp;FindInFiles.cpp optimize_speed,</p>
+<p class="I">&nbsp;&nbsp;&nbsp;&nbsp;idefile.cpp charset &quot;iso8859-1&quot;,</p>
+<p class="I">&nbsp;&nbsp;&nbsp;&nbsp;Resources readonly separator,</p>
+<p class="I">&nbsp;&nbsp;&nbsp;&nbsp;ide.rc depends() ide.ico;</p>
+</td>
+</tr>
+</table></td>
+</tr></table>
+<p class="A">&nbsp;</p>
+<p class="E">File options have following meaning:</p>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr><td width="100%"><table width="100%" class="F"><colgroup><col width="27%"><col width="72%"></colgroup>
+<tr><td class="O"><p class="I">options</p>
+</td>
+<td class="O"><p class="E">Additional compiler options to be used for file.</p>
+</td>
+</tr>
+<tr><td class="O"><p class="I">depends</p>
+</td>
+<td class="O"><p class="E">Additional dependency on other file in package. Note that header file dependencies are resolved by build system.</p>
+</td>
+</tr>
+<tr><td class="O"><p class="I">optimize_speed</p>
+</td>
+<td class="O"><p class="E">In optimal build mode, this file should be optimized for speed.</p>
+</td>
+</tr>
+<tr><td class="O"><p class="I">optimize_size</p>
+</td>
+<td class="O"><p class="E">In optimal build mode, this file should be optimized for size, even if whole package is optimized for speed. Note that size optimization is default.</p>
+</td>
+</tr>
+<tr><td class="O"><p class="I">readonly</p>
+</td>
+<td class="O"><p class="E">IDE setting: file should be opened in read-only mode in editor.</p>
+</td>
+</tr>
+<tr><td class="O"><p class="I">charset </p>
+</td>
+<td class="O"><p class="E">IDE setting: Information about character encoding of file.</p>
+</td>
+</tr>
+<tr><td class="O"><p class="I">tabsize </p>
+</td>
+<td class="O"><p class="E">IDE setting: Information about tab size.</p>
+</td>
+</tr>
+<tr><td class="O"><p class="I">font</p>
+</td>
+<td class="O"><p class="E">IDE setting: Information about font used.</p>
+</td>
+</tr>
+<tr><td class="O"><p class="I">highlight</p>
+</td>
+<td class="O"><p class="E">IDE setting: Information about syntax highlighting overried (normal default depends on file extension).</p>
+</td>
+</tr>
+</table></td>
+</tr></table>
+<p class="A">&nbsp;</p>
+<hr><p id="7" class="D">7. Add/Remove flags</p>
+<p class="E">It is possible to automatically add or remove flags, based on other flags. This is can be handy for example for platform dependent flag switching.</p>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr><td width="100%"><table width="100%" class="F"><colgroup><col width="19%"><col width="80%"></colgroup>
+<tr><td class="G"><p class="E">Syntax:</p>
+</td>
+<td class="G"><p class="I">flags(&lt;when&gt;) [!]&lt;flag_name&gt; [[!]&lt;flag_name&gt;]*;</p>
+</td>
+</tr>
+<tr><td class="G"><p class="E">Example:</p>
+</td>
+<td class="G"><p class="I">flags(POSIX) &quot;ALSA OSS&quot;;</p>
+</td>
+</tr>
+</table></td>
+</tr></table>
+<p class="A">&nbsp;</p>
+<hr><p id="8" class="D">8. Additional includes</p>
+<p class="E">If the package requires some special include paths, they can be added using <span class="J">include</span> keyword.</p>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr><td width="100%"><table width="100%" class="F"><colgroup><col width="19%"><col width="80%"></colgroup>
+<tr><td class="G"><p class="E">Syntax:</p>
+</td>
+<td class="G"><p class="I">include[(&lt;when&gt;)] &lt;path&gt; [, &lt;path&gt;]*;</p>
+</td>
+</tr>
+<tr><td class="G"><p class="E">Example:</p>
+</td>
+<td class="G"><p class="I">include ../lib;</p>
+<p class="I">include(POSIX) /opt/someapp/include;</p>
+</td>
+</tr>
+</table></td>
+</tr></table>
+<p class="A">&nbsp;</p>
+<hr><p id="9" class="D">9. Libraries</p>
+<p class="E">If the package requires to be linked with a shared or static library, those can be added using <span class="J">library</span> keyword.</p>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr><td width="100%"><table width="100%" class="F"><colgroup><col width="19%"><col width="80%"></colgroup>
+<tr><td class="G"><p class="E">Syntax:</p>
+</td>
+<td class="G"><p class="I">library[(&lt;when&gt;)] &lt;lib_name&gt; [, &lt;lib_name&gt;]*;</p>
+</td>
+</tr>
+<tr><td class="G"><p class="E">Example:</p>
+</td>
+<td class="G"><p class="I">library png;</p>
+<p class="I">include(POSIX) jpeg;</p>
+</td>
+</tr>
+</table></td>
+</tr></table>
+<p class="A">&nbsp;</p>
+<hr><p id="10" class="D">10. Linking options</p>
+<p class="E">Each package can specify special options to be passed to the linker command. Note that since each platform can have different linker, you should provide link option for each supported platform.</p>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr><td width="100%"><table width="100%" class="F"><colgroup><col width="19%"><col width="80%"></colgroup>
+<tr><td class="G"><p class="E">Syntax:</p>
+</td>
+<td class="G"><p class="I">link[(&lt;when&gt;)] &lt;lib_name&gt; [, &lt;lib_name&gt;]*;</p>
+</td>
+</tr>
+<tr><td class="G"><p class="E">Example:</p>
+</td>
+<td class="G"><p class="I">link(MSC DEBUG) /nodefaultlib:msvcrt.lib;</p>
+</td>
+</tr>
+</table></td>
+</tr></table>
+<p class="A">&nbsp;</p>
+<hr><p id="11" class="D">11. Size optimization</p>
+<p class="E">The <span class="J">optimize_size</span> keyword can be used to tell compiler that the entire package should be optimized for smaller size of resulting binary when compiled with &quot;Optimal&quot; settings. It takes no parameters.</p>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr><td width="100%"><table width="100%" class="F"><colgroup><col width="19%"><col width="80%"></colgroup>
+<tr><td class="G"><p class="E">Syntax:</p>
+</td>
+<td class="G"><p class="I">optimize_size;</p>
+</td>
+</tr>
+<tr><td class="G"><p class="E">Example:</p>
+</td>
+<td class="G"><p class="I">optimize_size;</p>
+</td>
+</tr>
+</table></td>
+</tr></table>
+<p class="A">&nbsp;</p>
+<hr><p id="12" class="D">12. Speed optimization</p>
+<p class="E">The <span class="J">optimize_speed</span> keyword can be used to tell compiler that the entire package should be optimized for faster execution when compiled with &quot;Optimal&quot; settings. . It takes no parameters.</p>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr><td width="100%"><table width="100%" class="F"><colgroup><col width="19%"><col width="80%"></colgroup>
+<tr><td class="G"><p class="E">Syntax:</p>
+</td>
+<td class="G"><p class="I">optimize_speed;</p>
+</td>
+</tr>
+<tr><td class="G"><p class="E">Example:</p>
+</td>
+<td class="G"><p class="I">optimize_speed;</p>
+</td>
+</tr>
+</table></td>
+</tr></table>
+<p class="A">&nbsp;</p>
+<hr><p id="13" class="D">13. Compiler options</p>
+<p class="E">Any special options necessary for the package compilation may be added with <span class="J">options</span> keyword. They will be passed to the compiler command only when compiling given package.</p>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr><td width="100%"><table width="100%" class="F"><colgroup><col width="19%"><col width="80%"></colgroup>
+<tr><td class="G"><p class="E">Syntax:</p>
+</td>
+<td class="G"><p class="I">options[(&lt;when&gt;)] &lt;lib_name&gt; [, &lt;lib_name&gt;]*;</p>
+</td>
+</tr>
+<tr><td class="G"><p class="E">Example:</p>
+</td>
+<td class="G"><p class="I">options(MSC) &quot;/D PSAPI_VERSION=1&quot;;</p>
+</td>
+</tr>
+</table></td>
+</tr></table>
+<p class="A">&nbsp;</p>
+<hr><p id="14" class="D">14. Main configuration</p>
+<p class="E">The set of flags that are available in the Main configuration droplist in TheIDE are stored using the <span class="J">mainconfig</span> keyword. The name part is optional - if the flags combination doesn't have a name it is represented as an empty string.</p>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr><td width="100%"><table width="100%" class="F"><colgroup><col width="19%"><col width="80%"></colgroup>
+<tr><td class="G"><p class="E">Syntax:</p>
+</td>
+<td class="G"><p class="I">mainconfig &lt;name&gt; = &lt;flags&gt; [,&lt;name&gt; = &lt;flags&gt;]*;</p>
+</td>
+</tr>
+<tr><td class="G"><p class="E">Example:</p>
+</td>
+<td class="G"><p class="I">mainconfig &quot;&quot; = &quot;GUI&quot;, &quot;Without gtk&quot; = &quot;.NOGTK GUI&quot;;</p>
+</td>
+</tr>
+</table></td>
+</tr></table>
+<p class="A">&nbsp;</p>
+<hr><p id="15" class="D">15. No BLITZ</p>
+<p class="E">The <span class="J">noblitz</span> keyword allows to prohibit BLITZ for entire package. It takes no parameters.</p>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr><td width="100%"><table width="100%" class="F"><colgroup><col width="19%"><col width="80%"></colgroup>
+<tr><td class="G"><p class="E">Syntax:</p>
+</td>
+<td class="G"><p class="I">noblitz;</p>
+</td>
+</tr>
+<tr><td class="G"><p class="E">Example:</p>
+</td>
+<td class="G"><p class="I">noblitz;</p>
+</td>
+</tr>
+</table></td>
+</tr></table>
+<p class="A">&nbsp;</p>
+<hr><p id="16" class="D">16. Target</p>
+<p class="E">The section <span class="J">target</span> can specify the name and/or path to the resulting executable. The value can optionally depend on the flags used.</p>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr><td width="100%"><table width="100%" class="F"><colgroup><col width="19%"><col width="80%"></colgroup>
+<tr><td class="G"><p class="E">Syntax:</p>
+</td>
+<td class="G"><p class="I">target[(&lt;when&gt;)] &lt;package_name&gt; [, &lt;package_name&gt;]*;</p>
+</td>
+</tr>
+<tr><td class="G"><p class="E">Example:</p>
+</td>
+<td class="G"><p class="I">target calc.ocx;</p>
+<p class="I">target(TEST) ld-test.exe;</p>
+</td>
+</tr>
+</table></td>
+</tr></table>
+<p class="A">&nbsp;</p>
+<hr><p id="17" class="D">17. Used packages</p>
+<p class="E">Each package specifies a list of packages which it depends on. The dependency specified in <span class="J">uses</span> section can be either conditional (based on flags) or unconditional.</p>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr><td width="100%"><table width="100%" class="F"><colgroup><col width="19%"><col width="80%"></colgroup>
+<tr><td class="G"><p class="E">Syntax:</p>
+</td>
+<td class="G"><p class="I">uses[(&lt;when&gt;)] &lt;package_name&gt; [, &lt;package_name&gt;]*;</p>
+</td>
+</tr>
+<tr><td class="G"><p class="E">Example:</p>
+</td>
+<td class="G"><p class="I">uses CtrlCore;</p>
+<p class="I">uses(POSIX | LINUX | FREEBSD) PdfDraw;</p>
+</td>
+</tr>
+</table></td>
+</tr></table>
+<p class="A">&nbsp;</p>
+</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>
+<TABLE BORDER="0" WIDTH="100%"><TR><TD></TD>
+</TR>
+</TABLE>
+<TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" BGCOLOR="#FFFFFF" WIDTH="100%" style="border-style: solid; border-width: 1px; border-color: #6E89AE;padding: 10px;;"><TR><TD><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%"><TR><TD><p class="A"><span class="B"> </span><a href="www$uppweb$contribweb$en-us.html">Do you want to contribute?</a></p>
+</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>
+<script type="text/javascript">var a={};var p=window.location.pathname.split("/");p=p[p.length-1];var s='<select id="lang" onchange="window.location=document.getElementById(\'lang\').value;">';for(l in a){if(p==l){d=" selected=1"}else{d=""}s+='<option value="'+l+'"'+d+'>'+a[l]+'</option>'}s+='</select>';var d=document.createElement('div');d.innerHTML=s;var c=document.getElementById('langs');c.replaceChild(d,c.firstChild);document.getElementById('langbox').style.display='block';</script></BODY>

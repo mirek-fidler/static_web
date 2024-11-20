@@ -1,0 +1,676 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en-us">
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
+<META NAME="Generator" CONTENT="U++ HTML Package">
+<TITLE>SFtp :: U++</TITLE>
+<STYLE TYPE="text/css"><!--
+.A{margin:0px 0px 0px 0px;text-indent:0px;text-align:left;color:#000000;font-family:sans-serif;font-size:10pt;font-weight:normal;font-style:normal;}
+.B{font-size:12pt;}
+.C{border-collapse:collapse;table-layout:auto;border: 2px solid #000000;}
+.D{padding: 3px 5px 3px 5px;border-left: 1px solid #000000;border-top: 1px solid #000000;border-right: 1px solid #000000;border-bottom: 1px solid #000000;background-color:#712A00;vertical-align:middle;}
+.E{margin:0px 0px 0px 0px;text-indent:0px;text-align:left;color:#e0e0e0;font-family:sans-serif;font-size:16pt;font-weight:bold;font-style:normal;}
+.F{margin:0px 0px 0px 0px;text-indent:0px;text-align:left;color:#000000;font-family:sans-serif;font-size:6pt;font-weight:normal;font-style:normal;}
+.G{margin:0px 0px 5px 0px;text-indent:0px;text-align:left;color:#800000;font-family:sans-serif;font-size:12pt;font-weight:bold;font-style:normal;}
+.H{color:#0000ff;font-weight:normal;}
+.I{color:#000000;font-weight:normal;}
+.J{color:#000000;}
+.K{margin:0px 0px 0px 57px;text-indent:0px;text-align:justify;color:#000000;font-family:sans-serif;font-size:10pt;font-weight:normal;font-style:normal;}
+.L{border-collapse:collapse;table-layout:auto;border: 2px solid #808080;}
+.M{padding: 3px 5px 3px 5px;border-left: 1px solid #808080;border-top: 1px solid #808080;border-right: 1px solid #808080;border-bottom: 1px solid #808080;background-color:#C0C0C0;vertical-align:middle;}
+.N{margin:0px 0px 0px 0px;text-indent:0px;text-align:left;color:#000000;font-family:sans-serif;font-size:10pt;font-weight:bold;font-style:normal;}
+.O{margin:0px 0px 5px 0px;text-indent:0px;text-align:left;color:#000000;font-family:sans-serif;font-size:10pt;font-weight:normal;font-style:normal;}
+.P{color:#0000ff;}
+.Q{font-weight:bold;}
+.R{color:#800000;font-weight:bold;}
+.S{margin:0px 0px 0px 57px;text-indent:0px;text-align:left;color:#000000;font-family:sans-serif;font-size:10pt;font-weight:normal;font-style:normal;}
+.T{margin:0px 0px 5px 0px;text-indent:0px;text-align:left;color:#0000ff;font-family:sans-serif;font-size:10pt;font-weight:normal;font-style:normal;}
+.U{color:#000000;font-weight:bold;}
+.V{color:#800000;font-family:monospace;font-weight:bold;}
+.W{font-family:monospace;}
+.X{color:#800000;font-family:monospace;}
+.Y{margin:0px 0px 5px 0px;text-indent:0px;text-align:left;color:#000000;font-family:sans-serif;font-size:10pt;font-weight:bold;font-style:normal;}
+.Z{font-weight:normal;}
+.AA{margin:0px 0px 5px 0px;text-indent:0px;text-align:left;color:#000000;font-family:sans-serif;font-size:12pt;font-weight:normal;font-style:normal;}
+a.l1         { text-decoration:none; font-size: 8pt; font-family: sans-serif; font-weight: normal; }
+a.l1:link    { color:#000000; }
+a.l1:visited { color:#000080; }
+a.l1:hover   { color:#9933CC; }
+a.l1:active  { color:#000000; }
+a.l2         { text-decoration:none; font-size: 12pt; font-family: sans-serif; font-variant: small-caps; }
+a.l2:link    { color:#0066FF; }
+a.l2:visited { color:#FF6600; }
+a.l2:hover   { color:#BC0624; }
+a.l2:active  { color:#BC0024; }
+
+-->
+</STYLE>
+<META NAME="keywords" CONTENT="framework, toolkit, widget, c++, visual, studio, dev-cpp, builder, ide, class, component,wxwidgets, qt, rapid, application, development, rad, mfc, linux, macos, gui, sdl, directx, desktop"><META name="robots" content="index,follow">
+<LINK rel="alternate" type="application/rss+xml" title="SVN changes" href="svnchanges.xml">
+<LINK rel="shortcut icon" type="image/png" href="favicon.png">
+</HEAD><BODY BGCOLOR="#D2D9D2" ALINK="#800000" LINK="#000000" VLINK="#000080"><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%"><TR><TD COLSPAN="3"><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%" BGCOLOR="#FFFFFF" style="border: 1px solid #6E89AE;padding-left: 10px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;"><TR><TD><A HREF="index.html"><IMG SRC="0i.png" ALT="" BORDER="0"></A>
+</TD>
+<TD ALIGN="RIGHT" VALIGN="BOTTOM" STYLE="padding-bottom: 5px; background-image: url('1i.png')"><span style="font-size: 14pt; font-family: sans-serif;"><script type="text/javascript"><!--
+google_ad_client = "pub-1082147624384270";
+google_ad_width = 468;
+google_ad_height = 60;
+google_ad_format = "468x60_as";
+google_ad_type = "text_image";
+google_ad_channel = "";
+google_color_border = "336699";
+google_color_bg = "FFFFFF";
+google_color_link = "0000FF";
+google_color_text = "000000";
+google_color_url = "008000";
+//--></script>
+<script type="text/javascript"
+  src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+&nbsp;&nbsp;</span>
+</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>
+<TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%"><TR><TD COLSPAN="3" BGCOLOR="#D2D9D2" HEIGHT="6"></TD>
+</TR>
+<TR><TD VALIGN="TOP" ALIGN="CENTER"><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="160"><TR><TD ALIGN="CENTER"><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%" BGCOLOR="#FFFFFF" style="border-style: solid; border-width: 1px; border-color: #6E89AE;padding: 0px"><TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px;"><A HREF="www$uppweb$overview$en-us.html" CLASS="l1">Overview</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$examples$en-us.html" CLASS="l1">Examples</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$ss$en-us.html" CLASS="l1">Screenshots</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$comparison$en-us.html" CLASS="l1">Comparisons</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$apps$en-us.html" CLASS="l1">Applications</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$download$en-us.html" CLASS="l1">Download</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$documentation$en-us.html" CLASS="l1">Documentation</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$Tutorials$en-us.html" CLASS="l1">Tutorials</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="app$ide$UppHub$en-us.html" CLASS="l1">UppHub</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$Roadmap$en-us.html" CLASS="l1">Status & Roadmap</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$FAQ$en-us.html" CLASS="l1">FAQ</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="app$ide$About$en-us.html" CLASS="l1">Authors & License</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="https://www.ultimatepp.org/forums" CLASS="l1">Forums</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$Funding$en-us.html" CLASS="l1">Funding U++</A>
+</TD>
+</TR>
+</TABLE>
+<TABLE BORDER="0" WIDTH="100%"><TR><TD></TD>
+</TR>
+</TABLE>
+<TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%" BGCOLOR="#FFFFFF" style="border-style: solid; border-width: 1px; border-color: #6E89AE;padding: 0px"><TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('3i.png'); border: 0px solid black;padding-left:12px; padding-right:0px; padding-top:1px; padding-bottom:1px;color:#FFFFFF;"><B><span style="font-size: 8pt; font-family: sans-serif;">Search on this site</span>
+</B>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:6px; padding-right:0px; padding-top:4px; padding-bottom:4px;border-top: 1px solid #6E89AE;"><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%"><TR><TD><IMG SRC="4i.png" ALT="" BORDER="0"></TD>
+<TD><FORM ACTION="https://www.google.com/search" METHOD="GET" STYLE="margin:0px;padding:0px;"><INPUT TYPE="HIDDEN" NAME="ie" VALUE="UTF-8"><INPUT TYPE="HIDDEN" NAME="oe" VALUE="UTF-8"><INPUT TYPE="TEXT" NAME="q" SIZE="15" MAXLENGTH="256" placeholder="Site search"><INPUT TYPE="HIDDEN" NAME="sitesearch" VALUE="ultimatepp.org"></FORM>
+</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>
+<TABLE BORDER="0" WIDTH="100%"><TR><TD></TD>
+</TR>
+</TABLE>
+<br><div id="fb-root"></div>
+<script type="text/javascript">(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) {return;}
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+<div class="fb-like" data-href="https://www.facebook.com/pages/Upp-Framework/262346610476027?sk=wall" data-send="false" data-layout="button_count" data-width="160" data-show-faces="false" data-font="arial"></div>
+<br><br><script type="text/javascript"><!--
+google_ad_client = "pub-1082147624384270";
+google_ad_width = 160;
+google_ad_height = 600;
+google_ad_format = "160x600_as";
+google_ad_type = "text_image";
+google_ad_channel = "";
+google_color_border = "336699";
+google_color_bg = "FFFFFF";
+google_color_link = "0000FF";
+google_color_text = "000000";
+google_color_url = "008000";
+//--></script>
+<script type="text/javascript"
+  src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script><br><br><script type="text/javascript"><!--
+google_ad_client = "pub-1082147624384270";
+google_ad_width = 160;
+google_ad_height = 90;
+google_ad_format = "160x90_0ads_al_s";
+google_ad_channel = "";
+google_color_border = "336699";
+google_color_bg = "FFFFFF";
+google_color_link = "0000FF";
+google_color_text = "000000";
+google_color_url = "008000";
+//--></script>
+<script type="text/javascript"
+  src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+<br><br><br><br><br><br><A HREF="https://sourceforge.net/projects/upp/"><IMG SRC="https://sourceforge.net/sflogo.php?group_id=93970&amp;type=2" ALT="SourceForge.net Logo" BORDER="0" WIDTH="125" HEIGHT="37"></A>
+<br><br><A HREF="https://flathub.org/en/apps/org.ultimatepp.TheIDE"><IMG SRC="5i.png" ALT="SourceForge.net Logo" BORDER="0" WIDTH="125" HEIGHT="37"></A>
+<br><br><div style="background-color:#ffffff;width:125;height:35"><A HREF="https://github.com/ultimatepp"><IMG SRC="6i.png" ALT="GitHub Logo" BORDER="0" WIDTH="125" HEIGHT="35"></A>
+</div><br><div style="background-color:#ffffff;width:125;height:35"><div style="height:5"></div><A HREF="https://discord.gg/8XzqQzXZzb"><IMG SRC="https://assets-global.website-files.com/6257adef93867e50d84d30e2/636e0b5061df29d55a92d945_full_logo_blurple_RGB.svg" ALT="Discord Logo" BORDER="0" WIDTH="125" HEIGHT="25"></A>
+</div><br></TD>
+</TR>
+</TABLE>
+</TD>
+<TD VALIGN="TOP" BGCOLOR="#D2D9D2"><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="6"><TR><TD></TD>
+</TR>
+</TABLE>
+</TD>
+<TD VALIGN="TOP" WIDTH="100%" BGCOLOR="#D2D9D2"><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" BGCOLOR="#FFFFFF" WIDTH="100%" style="border-style: solid; border-width: 1px; border-color: #6E89AE;padding: 10px;;"><TR><TD><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%"><TR><TD><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr><td width="100%"><table width="100%" class="C"><colgroup><col width="100%"></colgroup>
+<tr><td class="D"><p class="E">SFtp</p>
+</td>
+</tr>
+</table></td>
+</tr></table>
+<p class="F">&nbsp;</p>
+<p id="Upp::SFtp::class" class="G"><span class="H">class</span><span class="I">&nbsp;</span><span class="J">SFtp </span><span class="I">:&nbsp;</span><span class="H">public</span><span class="I">&nbsp;</span>Ssh</p>
+<p class="K">This class encapsulates an SSH2 SFTP subsystem. It allows for a range of operations on remote file system objects, such as file/directory creation, deletion, renaming, file transfers, directory listings etc. SFtp class is derived from <a href="src$Core$SSH$Upp_Ssh_Base_en-us.html#Upp::Ssh::class">Ssh</a> base class, and has pick semantics. See also <a href="src$Core$SSH$Upp_Ssh_SFtp_en-us.html#Upp::SFtp::DirEntry::class">SFtp::DirEntry</a>, <a href="src$Core$SSH$Upp_Ssh_SFtp_en-us.html#Upp::SFtpFileSystemInfo::class">SFtpFileSystemInfo</a>, and <a href="src$Core$SSH$Upp_Ssh_SFtpStream_en-us.html#Upp::SFtpStream::class">SFtpStream</a> &nbsp;classes.</p>
+<p class="K">&nbsp;</p>
+<p class="F">&nbsp;</p>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr><td width="100%"><table width="100%" class="L"><colgroup><col width="100%"></colgroup>
+<tr><td class="M"><p class="N">Public Method List</p>
+</td>
+</tr>
+</table></td>
+</tr></table>
+<p class="F">&nbsp;</p>
+<p id="Upp::SFtp::Timeout(int)" class="O"><a href="Upp::SFtp"><u>SFtp</u></a><span class="P">&amp;</span>&nbsp;<span class="Q">Timeout</span>(<span class="P">int</span>&nbsp;<span class="R">ms</span>)</p>
+<p class="S">Sets timeout value in miliseconds. Setting the timeout value to Null puts the SFtp object into blocking mode</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Upp::SFtp::ChunkSize(int)" class="O"><a href="Upp::SFtp"><u>SFtp</u></a><span class="P">&amp;</span>&nbsp;<span class="Q">ChunkSize</span>(<span class="P">int</span>&nbsp;<span class="R">sz</span>)</p>
+<p class="S">Sets the chunk size to <span class="R">sz</span> for data reads and writes. The default chunk size is 64K Returns *this for method chaining.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Upp::SFtp::GetHandle()const" class="T"><a href="LIBSSH2_SFTP_HANDLE"><span class="J"><u>LIBSSH2_SFTP_HANDLE</u></span></a>*<span class="J">&nbsp;</span><span class="U">GetHandle</span><span class="J">()&nbsp;</span>const</p>
+<p class="S">Returns a pointer to the libssh2 sftp session handle on success, NULL on failure.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Upp::SFtp::Open(const Upp::String&,Upp::dword,long)" class="O"><a href="Upp::SFtpHandle"><u>SFtpHandle</u></a>&nbsp;<span class="Q">Open</span>(<span class="P">const</span>&nbsp;<a href="Upp::String"><u>String</u></a><span class="P">&amp;</span>&nbsp;<span class="R">path</span>, <a href="Upp::dword"><u>dword</u></a>&nbsp;<span class="R">flags</span>, <span class="P">long</span>&nbsp;<span class="R">mode</span>)</p>
+<p class="S">Opens the remote file or directory at <span class="R">path</span> with access <span class="R">flags</span> and <span class="R">mode</span>. Returns a file handle on success, and NULL on failure. File handles obtained using this method must be released using the Close() method when finished.</p>
+<p class="S">&nbsp;</p>
+<p class="S">Filesystem access <span class="R">flags</span>:</p>
+<p class="S">&nbsp;</p>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="288" bgcolor="#F0F0F0">
+<p id="Ctrl::CENTER" class="A"><span class="V">READ</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p id="Ctrl::CENTER" class="A">Opens file in read mode.</p></td></tr></table>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="288" bgcolor="#F0F0F0">
+<p id="Ctrl::LEFT" class="A"><span class="V">WRITE</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p id="Ctrl::LEFT" class="A">Opens file in write mode.</p></td></tr></table>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="288" bgcolor="#F0F0F0">
+<p id="Ctrl::RIGHT" class="A"><span class="V">APPEND</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p id="Ctrl::RIGHT" class="A">Opens file in append mode.</p></td></tr></table>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="288" bgcolor="#F0F0F0">
+<p id="Ctrl::TOP" class="A"><span class="V">CREATE</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p id="Ctrl::TOP" class="A">Creates file if it doesn't exist.</p></td></tr></table>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="288" bgcolor="#F0F0F0">
+<p class="A"><span class="V">EXCLUSIVE</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">Causes &nbsp;the request to fail if the named file already exists. CREATE flag must also be specified if this flag is used.</p></td></tr></table>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="288" bgcolor="#F0F0F0">
+<p id="Ctrl::BOTTOM" class="A"><span class="V">TRUNCATE</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p id="Ctrl::BOTTOM" class="A">Opens file and truncates it to zero (0) bytes. Must be used with CREATE flag.</p></td></tr></table>
+<p class="F">&nbsp;</p>
+<p class="S">Filesystem access <span class="R">mode</span>s (permissions):</p>
+<p class="S">&nbsp;</p>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="288" bgcolor="#F0F0F0">
+<p class="A"><span class="V">IRUSR, IWUSR, IXUSR, IRWXU</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">User permissions.</p></td></tr></table>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="288" bgcolor="#F0F0F0">
+<p class="A"><span class="V">IRGRP, IWGRP, IXGRP, IRWXG</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">Group permissions</p></td></tr></table>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="288" bgcolor="#F0F0F0">
+<p class="A"><span class="V">IROTH, IWOTH, IXOTH, IRWXO</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">Permissions for others.</p></td></tr></table>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="288" bgcolor="#F0F0F0">
+<p class="A"><span class="V">IRALL</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">Read access for all.</p></td></tr></table>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="288" bgcolor="#F0F0F0">
+<p class="A"><span class="V">IWALL</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">Write access for all.</p></td></tr></table>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="288" bgcolor="#F0F0F0">
+<p class="A"><span class="V">IXALL</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">Executable by all.</p></td></tr></table>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="288" bgcolor="#F0F0F0">
+<p class="A"><span class="V">IRWXA</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">Unrestricted access for all.</p></td></tr></table>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Upp::SFtp::OpenRead(const Upp::String&)" class="O"><a href="Upp::SFtpHandle"><u>SFtpHandle</u></a>&nbsp;<span class="Q">OpenRead</span>(<span class="P">const</span>&nbsp;<a href="Upp::String"><u>String</u></a><span class="P">&amp;</span>&nbsp;<span class="R">path</span>)</p>
+<p class="S">Opens remote <span class="R">path</span> for reading. Returns a file handle on success, and NULL on failure. File handles obtained using this method must be released using the Close() method when finished.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Upp::SFtp::OpenWrite(const Upp::String&)" class="O"><a href="Upp::SFtpHandle"><u>SFtpHandle</u></a>&nbsp;<span class="Q">OpenWrite</span>(<span class="P">const</span>&nbsp;<a href="Upp::String"><u>String</u></a><span class="P">&amp;</span>&nbsp;<span class="R">path</span>)</p>
+<p class="S">Opens remote <span class="R">path</span> for writing. File will be created if it doesn't exist. Returns a file handle on success, and NULL on failure. File handles obtained using this method must be released using the Close() method when finished.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Upp::SFtp::Close(Upp::SFtpHandle)" class="O"><span class="P">void</span>&nbsp;<span class="Q">Close</span>(<a href="Upp::SFtpHandle"><u>SFtpHandle</u></a>&nbsp;<span class="R">handle</span>)</p>
+<p class="S">Closes the file <span class="R">handle</span>. File handles obtained with Open() or OpenDir() methods must be released using this method when finished.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Upp::SFtp::Rename(const Upp::String&,const Upp::String&)" class="O"><span class="P">bool</span>&nbsp;<span class="Q">Rename</span>(<span class="P">const</span>&nbsp;<a href="Upp::String"><u>String</u></a><span class="P">&amp;</span>&nbsp;<span class="R">oldpath</span>, <span class="P">const</span>&nbsp;<a href="Upp::String"><u>String</u></a><span class="P">&amp;</span>&nbsp;<span class="R">newpath</span>)</p>
+<p class="S">Renames a file or directory from <span class="R">oldpath</span> to <span class="R">newpath</span>. Returns true on success. </p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Upp::SFtp::Delete(const Upp::String&)" class="O"><span class="P">bool</span>&nbsp;<span class="Q">Delete</span>(<span class="P">const</span>&nbsp;<a href="Upp::String"><u>String</u></a><span class="P">&amp;</span>&nbsp;<span class="R">path</span>)</p>
+<p class="S">Deletes the file at <span class="R">path</span>. Returns true on success.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Upp::SFtp::Sync(Upp::SFtpHandle)" class="O"><span class="P">bool</span>&nbsp;<span class="Q">Sync</span>(<a href="Upp::SFtpHandle"><u>SFtpHandle</u></a>&nbsp;<span class="R">handle</span>)</p>
+<p class="S">Synchronizes the file pointed by <span class="R">handle</span> to the remote storage device. Returns true on success.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Upp::SFtp::Seek(Upp::SFtpHandle,Upp::int64)" class="O"><a href="Upp::SFtp"><u>SFtp</u></a><span class="P">&amp;</span>&nbsp;<span class="Q">Seek</span>(<a href="Upp::SFtpHandle"><u>SFtpHandle</u></a>&nbsp;<span class="R">handle</span>, <a href="Upp::int64"><u>int64</u></a>&nbsp;<span class="R">position</span>)</p>
+<p class="S">Seeks to <span class="R">position</span> in a remote file pointed by <span class="R">handle</span>. Returns *this for method chaining.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Upp::SFtp::GetPos(Upp::SFtpHandle)" class="O"><a href="Upp::int64"><u>int64</u></a>&nbsp;<span class="Q">GetPos</span>(<a href="Upp::SFtpHandle"><u>SFtpHandle</u></a>&nbsp;<span class="R">handle</span>)</p>
+<p class="S">Returns the current position (in bytes) from the beginning of a remote file pointed by <span class="R">handle</span>.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Upp::SFtp::OpenDir(const Upp::String&)" class="O"><a href="Upp::SFtpHandle"><u>SFtpHandle</u></a>&nbsp;<span class="Q">OpenDir</span>(<span class="P">const</span>&nbsp;<a href="Upp::String"><u>String</u></a><span class="P">&amp;</span>&nbsp;<span class="R">path</span>)</p>
+<p class="S">Opens the directory at <span class="R">path</span>. Returns a file handle on success, and NULL on failure. File handles obtained using this method must be released using Close() method when finished.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Upp::SFtp::MakeDir(const Upp::String&,long)" class="O"><span class="P">bool</span>&nbsp;<span class="Q">MakeDir</span>(<span class="P">const</span>&nbsp;<a href="Upp::String"><u>String</u></a><span class="P">&amp;</span>&nbsp;<span class="R">path</span>, <span class="P">long</span>&nbsp;<span class="R">mode</span>)</p>
+<p class="S">Creates a directory at <span class="R">path </span>with access <span class="R">mode</span>. Returns true on success.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Upp::SFtp::RemoveDir(const Upp::String&)" class="O"><span class="P">bool</span>&nbsp;<span class="Q">RemoveDir</span>(<span class="P">const</span>&nbsp;<a href="Upp::String"><u>String</u></a><span class="P">&amp;</span>&nbsp;<span class="R">path</span>)</p>
+<p class="S">Deletes a remote directory at <span class="R">path</span>. Return true on success.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Upp::SFtp::ListDir(Upp::SFtpHandle,Upp::SFtp::DirList&)" class="O"><span class="P">bool</span>&nbsp;<span class="Q">ListDir</span>(<a href="Upp::SFtpHandle"><u>SFtpHandle</u></a>&nbsp;<span class="R">handle</span>, <a href="Upp::SFtp::DirList"><u>DirList</u></a><span class="P">&amp;</span>&nbsp;<span class="R">list</span>)</p>
+<p class="S"><span class="R">list</span>s the content of remote directory pointed by the file <span class="R">handle</span>. Returns true on success. This method will return true even when the remote directory is empty. </p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Upp::SFtp::ListDir(const Upp::String&,Upp::SFtp::DirList&)" class="O"><span class="P">bool</span>&nbsp;<span class="Q">ListDir</span>(<span class="P">const</span>&nbsp;<a href="Upp::String"><u>String</u></a><span class="P">&amp;</span>&nbsp;<span class="R">path</span>, <a href="Upp::SFtp::DirList"><u>DirList</u></a><span class="P">&amp;</span>&nbsp;<span class="R">list</span>)</p>
+<p class="S">Overload. <span class="R">list</span>s the content of remote <span class="R">path</span>. Returns true on success. This method will return true even when the remote directory is empty.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Upp::SFtp::MakeLink(const Upp::String&,Upp::String&)" class="O"><span class="P">bool</span>&nbsp;<span class="Q">MakeLink</span>(<span class="P">const</span>&nbsp;<a href="Upp::String"><u>String</u></a><span class="P">&amp;</span>&nbsp;<span class="R">orig</span>, <a href="Upp::String"><u>String</u></a><span class="P">&amp;</span>&nbsp;<span class="R">target</span>)</p>
+<p class="S">Creates a symbolic link to the <span class="R">orig</span>inating file system object. Returns true on success.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Upp::SFtp::ReadLink(const Upp::String&,Upp::String&)" class="O"><span class="P">bool</span>&nbsp;<span class="Q">ReadLink</span>(<span class="P">const</span>&nbsp;<a href="Upp::String"><u>String</u></a><span class="P">&amp;</span>&nbsp;<span class="R">path</span>, <a href="Upp::String"><u>String</u></a><span class="P">&amp;</span>&nbsp;<span class="R">target</span>)</p>
+<p class="S">Resoves a symbolic link at <span class="R">path</span> to its next <span class="R">target</span>. Returns true on success.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Upp::SFtp::RealizePath(const Upp::String&,Upp::String&)" class="O"><span class="P">bool</span>&nbsp;<span class="Q">RealizePath</span>(<span class="P">const</span>&nbsp;<a href="Upp::String"><u>String</u></a><span class="P">&amp;</span>&nbsp;<span class="R">path</span>, <a href="Upp::String"><u>String</u></a><span class="P">&amp;</span>&nbsp;<span class="R">target</span>)</p>
+<p class="S">Resolves a complex, relative or symlinked <span class="R">path</span> to its effective <span class="R">target</span>. Returns true on success.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Upp::SFtp::GetDefaultDir()" class="O"><a href="Upp::String"><u>String</u></a>&nbsp;<span class="Q">GetDefaultDir</span>()</p>
+<p class="S">Returns the path of default directory &nbsp;(e.g. <span class="W">/home/</span><span class="X">username</span>) on success, and String::GetVoid() on failure.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Upp::SFtp::GetAttrs(Upp::SFtpHandle,Upp::SFtpAttrs&)" class="O"><span class="P">bool</span>&nbsp;<span class="Q">GetAttrs</span>(<a href="Upp::SFtpHandle"><u>SFtpHandle</u></a>&nbsp;<span class="R">handle</span>, <a href="Upp::SFtpAttrs"><u>SFtpAttrs</u></a><span class="P">&amp;</span>&nbsp;<span class="R">attrs</span>)</p>
+<p class="S">Gets the attributes of file system object pointed by <span class="R">handle </span>to <span class="R">attrs</span>. Returns true on success.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Upp::SFtp::GetAttrs(const Upp::String&,Upp::SFtpAttrs&)" class="O"><span class="P">bool</span>&nbsp;<span class="Q">GetAttrs</span>(<span class="P">const</span>&nbsp;<a href="Upp::String"><u>String</u></a><span class="P">&amp;</span>&nbsp;<span class="R">path</span>, <a href="Upp::SFtpAttrs"><u>SFtpAttrs</u></a><span class="P">&amp;</span>&nbsp;<span class="R">attrs</span>)</p>
+<p class="S">Gets the attributes of file system object at <span class="R">path </span>to <span class="R">attrs</span>. Returns true on success.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Upp::SFtp::SetAttrs(Upp::SFtpHandle,const Upp::SFtpAttrs&)" class="O"><span class="P">bool</span>&nbsp;<span class="Q">SetAttrs</span>(<a href="Upp::SFtpHandle"><u>SFtpHandle</u></a>&nbsp;<span class="R">handle</span>, <span class="P">const</span>&nbsp;<a href="Upp::SFtpAttrs"><u>SFtpAttrs</u></a><span class="P">&amp;</span>&nbsp;<span class="R">attrs</span>)</p>
+<p class="S">Sets the attributes of the file system object pointed by <span class="R">handle</span>.to <span class="R">attrs</span>. Returns true on success.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Upp::SFtp::SetAttrs(const Upp::String&,const Upp::SFtpAttrs&)" class="O"><span class="P">bool</span>&nbsp;<span class="Q">SetAttrs</span>(<span class="P">const</span>&nbsp;<a href="Upp::String"><u>String</u></a><span class="P">&amp;</span>&nbsp;<span class="R">path</span>, <span class="P">const</span>&nbsp;<a href="Upp::SFtpAttrs"><u>SFtpAttrs</u></a><span class="P">&amp;</span>&nbsp;<span class="R">attrs</span>)</p>
+<p class="S">Sets the attributes of the file system object at <span class="R">path</span> to <span class="R">attrs</span>. Returns true on success.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Upp::SFtp::GetInfo(const Upp::String&)" class="O"><a href="Upp::SFtp::DirEntry"><u>SFtp::DirEntry</u></a>&nbsp;<span class="Q">GetInfo</span>(<span class="P">const</span>&nbsp;<a href="Upp::String"><u>String</u></a><span class="P">&amp;</span>&nbsp;<span class="R">path</span>)</p>
+<p class="S">Returns a DirEntry object that contains information about <span class="R">path</span> on success, and Null on failure.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Upp::SFtp::SetInfo(const Upp::SFtp::DirEntry&)" class="O"><span class="P">bool</span>&nbsp;<span class="Q">SetInfo</span>(<span class="P">const</span>&nbsp;<a href="Upp::SFtp::DirEntry"><u>DirEntry</u></a><span class="P">&amp;</span>&nbsp;<span class="R">entry</span>)</p>
+<p class="S">Sets the attributes of file system object represented by <span class="R">entry</span>. Returns true on succes, and Null on failure.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Upp::SFtp::GetSize(const Upp::String&)" class="O"><a href="Upp::int64"><u>int64</u></a>&nbsp;<span class="Q">GetSize</span>(<span class="P">const</span>&nbsp;<a href="Upp::String"><u>String</u></a><span class="P">&amp;</span>&nbsp;<span class="R">path</span>)</p>
+<p class="S">Returns the size of <span class="R">path</span> on success, -1 on failure.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Upp::SFtp::SetSize(const Upp::String&,Upp::int64)" class="O"><span class="P">bool</span>&nbsp;<span class="Q">SetSize</span>(<span class="P">const</span>&nbsp;<a href="Upp::String"><u>String</u></a><span class="P">&amp;</span>&nbsp;<span class="R">path</span>, <a href="Upp::int64"><u>int64</u></a>&nbsp;<span class="R">size</span>)</p>
+<p class="S">Sets the <span class="R">size </span>of <span class="R">path</span>. Returns true on success.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Upp::SFtp::GetLastModifyTime(const Upp::String&)" class="O"><a href="Upp::Time"><u>Time</u></a>&nbsp;<span class="Q">GetLastModifyTime</span>(<span class="P">const</span>&nbsp;<a href="Upp::String"><u>String</u></a><span class="P">&amp;</span>&nbsp;<span class="R">path</span>)</p>
+<p class="S">Returns the last modification time<span class="R"> </span>of <span class="R">path</span> on success and Null on failure.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Upp::SFtp::SetLastModifyTime(const Upp::String&,const Upp::Time&)" class="O"><span class="P">bool</span>&nbsp;<span class="Q">SetLastModifyTime</span>(<span class="P">const</span>&nbsp;<a href="Upp::String"><u>String</u></a><span class="P">&amp;</span>&nbsp;<span class="R">path</span>, <span class="P">const</span>&nbsp;<a href="Upp::Time"><u>Time</u></a><span class="P">&amp;</span>&nbsp;<span class="R">time</span>)</p>
+<p class="S">Sets the last modification <span class="R">time </span>of <span class="R">path</span>. Returns true on success.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Upp::SFtp::GetLastAccessTime(const Upp::String&)" class="O"><a href="Upp::Time"><u>Time</u></a>&nbsp;<span class="Q">GetLastAccessTime</span>(<span class="P">const</span>&nbsp;<a href="Upp::String"><u>String</u></a><span class="P">&amp;</span>&nbsp;<span class="R">path</span>)</p>
+<p class="S">Returns the last access time of <span class="R">path</span> on success and Null on failure.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Upp::SFtp::SetLastAccessTime(const Upp::String&,const Upp::Time&)" class="O"><span class="P">bool</span>&nbsp;<span class="Q">SetLastAccessTime</span>(<span class="P">const</span>&nbsp;<a href="Upp::String"><u>String</u></a><span class="P">&amp;</span>&nbsp;<span class="R">path</span>, <span class="P">const</span>&nbsp;<a href="Upp::Time"><u>Time</u></a><span class="P">&amp;</span>&nbsp;<span class="R">time</span>)</p>
+<p class="S">Sets the last access time<span class="R"> </span>of <span class="R">path</span>. Returns true on success.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Upp::SFtp::FileExists(const Upp::String&)" class="O"><span class="P">bool</span>&nbsp;<span class="Q">FileExists</span>(<span class="P">const</span>&nbsp;<a href="Upp::String"><u>String</u></a><span class="P">&amp;</span>&nbsp;<span class="R">path</span>)</p>
+<p class="S">Returns true if <span class="R">path</span> represents a file.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Upp::SFtp::DirectoryExists(const Upp::String&)" class="O"><span class="P">bool</span>&nbsp;<span class="Q">DirectoryExists</span>(<span class="P">const</span>&nbsp;<a href="Upp::String"><u>String</u></a><span class="P">&amp;</span>&nbsp;<span class="R">path</span>)</p>
+<p class="S">Returns true if <span class="R">path</span> represents a directory.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Upp::SFtp::SymLinkExists(const Upp::String&)" class="O"><span class="P">bool</span>&nbsp;<span class="Q">SymLinkExists</span>(<span class="P">const</span>&nbsp;<a href="Upp::String"><u>String</u></a><span class="P">&amp;</span>&nbsp;<span class="R">path</span>)</p>
+<p class="S">Returns true if <span class="R">path</span> represents a symbolic link.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Upp::SFtp::SocketExists(const Upp::String&)" class="O"><span class="P">bool</span>&nbsp;<span class="Q">SocketExists</span>(<span class="P">const</span>&nbsp;<a href="Upp::String"><u>String</u></a><span class="P">&amp;</span>&nbsp;<span class="R">path</span>)</p>
+<p class="S">Returns true if <span class="R">path</span> represents a socket.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Upp::SFtp::PipeExists(const Upp::String&)" class="O"><span class="P">bool</span>&nbsp;<span class="Q">PipeExists</span>(<span class="P">const</span>&nbsp;<a href="Upp::String"><u>String</u></a><span class="P">&amp;</span>&nbsp;<span class="R">path</span>)</p>
+<p class="S">Returns true if <span class="R">path</span> represents a named pipe.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Upp::SFtp::BlockExists(const Upp::String&)" class="O"><span class="P">bool</span>&nbsp;<span class="Q">BlockExists</span>(<span class="P">const</span>&nbsp;<a href="Upp::String"><u>String</u></a><span class="P">&amp;</span>&nbsp;<span class="R">path</span>)</p>
+<p class="S">Returns true if <span class="R">path</span> represents a block special file.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Upp::SFtp::SpecialFileExists(const Upp::String&)" class="O"><span class="P">bool</span>&nbsp;<span class="Q">SpecialFileExists</span>(<span class="P">const</span>&nbsp;<a href="Upp::String"><u>String</u></a><span class="P">&amp;</span>&nbsp;<span class="R">path</span>)</p>
+<p class="S">Returns true if <span class="R">path</span> represents a character special file.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Upp::SFtp::GetDone()const" class="T">int<span class="J">&nbsp;</span><span class="U">GetDone</span><span class="J">()&nbsp;</span>const</p>
+<p class="S">Returns the number of bytes processed during a data transfer. Intended to be called from WhenWait routine.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Upp::SFtp::WhenProgress" class="Y"><a href="Upp::Gate"><span class="Z"><u>Gate</u></span></a><span class="Z">&lt;</span><a href="Upp::int64"><span class="Z"><u>int64</u></span></a><span class="Z">, </span><a href="Upp::int64"><span class="Z"><u>int64</u></span></a><span class="Z">&gt;&nbsp;</span>WhenProgress</p>
+<p class="S">If defined, this gate allows tracking of data transfers. The first parameter provides the amount of data that has already been transferred. The second parameter may provide the total amount of data to be transferred, but is allowed to be 0. Returning true will abort the current data transfer.</p>
+<p class="A">&nbsp;</p>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr><td width="100%"><table width="100%" class="L"><colgroup><col width="100%"></colgroup>
+<tr><td class="M"><p class="N">Transfer Methods</p>
+</td>
+</tr>
+</table></td>
+</tr></table>
+<p class="F"> </p>
+<p id="Upp::SFtp::Get(Upp::SFtpHandle,void*,int)" class="O"><span class="P">int</span>&nbsp;<span class="Q">Get</span>(<a href="Upp::SFtpHandle"><u>SFtpHandle</u></a>&nbsp;<span class="R">handle</span>, <span class="P">void</span>&nbsp;*<span class="R">ptr</span>, <span class="P">int</span>&nbsp;<span class="R">size</span>&nbsp;=&nbsp;INT_MAX)</p>
+<p class="S">Reads at most <span class="R">size</span> bytes data from the remote file object associated with <span class="R">handle</span> into the buffer pointed by <span class="R">ptr</span>, trying to do so at most for a specified timeout. Returns the number of bytes actually written.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Upp::SFtp::Put(Upp::SFtpHandle,const void*,int)" class="O"><span class="P">int</span>&nbsp;<span class="Q">Put</span>(<a href="Upp::SFtpHandle"><u>SFtpHandle</u></a>&nbsp;<span class="R">handle</span>, <span class="P">const</span>&nbsp;<span class="P">void</span>&nbsp;*<span class="R">ptr</span>, <span class="P">int</span>&nbsp;<span class="R">size</span>)</p>
+<p class="S">Writes at most <span class="R">size</span> bytes data from the buffer pointed by <span class="R">ptr</span> into the remote file object associated with <span class="R">handle</span>, trying to do so at most for a specified timeout. Returns the number of bytes actually written.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Upp::SFtp::SaveFile(const char*,const Upp::String&)" class="O"><span class="P">bool</span>&nbsp;<span class="Q">SaveFile</span>(<span class="P">const</span>&nbsp;<span class="P">char</span>&nbsp;*<span class="R">path</span>, <span class="P">const</span>&nbsp;<a href="Upp::String"><u>String</u></a><span class="P">&amp;</span>&nbsp;<span class="R">data</span>)</p>
+<p class="S">Saves the content of <span class="R">data </span>to remote <span class="R">path</span>. Returns true on success. <a href="src$Core$SSH$Upp_Ssh_SFtp_en-us.html#Upp::SFtp::WhenProgress">WhenProgress </a>gate can be used to track data transfer.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Upp::SFtp::LoadFile(const char*)" class="O"><a href="Upp::String"><u>String</u></a>&nbsp;<span class="Q">LoadFile</span>(<span class="P">const</span>&nbsp;<span class="P">char</span>&nbsp;*<span class="R">path</span>)</p>
+<p class="S">Returns the content of the remote <span class="R">path</span>. <a href="src$Core$SSH$Upp_Ssh_SFtp_en-us.html#Upp::SFtp::WhenProgress">WhenProgress </a>gate can be used to track data transfer.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Upp::SFtp::SaveFile(const char*,Upp::Stream&)" class="O"><span class="P">bool</span>&nbsp;<span class="Q">SaveFile</span>(<span class="P">const</span>&nbsp;<span class="P">char</span>&nbsp;*<span class="R">path</span>, <a href="Upp::Stream"><u>Stream</u></a><span class="P">&amp;</span>&nbsp;<span class="R">in</span>)</p>
+<p class="S">Saves the content of <span class="R">in</span> to remote <span class="R">path</span> . Returns true on success. <a href="src$Core$SSH$Upp_Ssh_SFtp_en-us.html#Upp::SFtp::WhenProgress">WhenProgress </a>gate can be used to track data transfer.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Upp::SFtp::LoadFile(Upp::Stream&,const char*)" class="O"><span class="P">bool</span>&nbsp;<span class="Q">LoadFile</span>(<a href="Upp::Stream"><u>Stream</u></a><span class="P">&amp;</span>&nbsp;<span class="R">out</span>, <span class="P">const</span>&nbsp;<span class="P">char</span>&nbsp;*<span class="R">path</span>)</p>
+<p class="S">Returns the content of remote <span class="R">path </span>into <span class="R">out</span>. Returns true on success. <a href="src$Core$SSH$Upp_Ssh_SFtp_en-us.html#Upp::SFtp::WhenProgress">WhenProgress </a>gate can be used to track data transfer.</p>
+<p class="F">&nbsp;</p>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr><td width="100%"><table width="100%" class="L"><colgroup><col width="100%"></colgroup>
+<tr><td class="M"><p class="N">Constructor detail</p>
+</td>
+</tr>
+</table></td>
+</tr></table>
+<p class="F">&nbsp;</p>
+<p id="Upp::SFtp::SFtp(Upp::SshSession&)" class="O"><span class="Q">SFtp</span>(<a href="Upp::SshSession"><u>SshSession</u></a><span class="P">&amp;</span>&nbsp;<span class="R">session</span>)</p>
+<p class="S">Constructor. Binds the SFtp instance to <span class="R">session</span>.</p>
+<p class="F">&nbsp;</p>
+<p class="A">&nbsp;</p>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr><td width="100%"><table width="100%" class="C"><colgroup><col width="100%"></colgroup>
+<tr><td class="D"><p class="E">SFtp::DirEntry</p>
+</td>
+</tr>
+</table></td>
+</tr></table>
+<p class="F">&nbsp;</p>
+<p id="Upp::SFtp::DirEntry::class" class="AA"><span class="P">class</span>&nbsp;<span class="Q">DirEntry</span>&nbsp;:&nbsp;<span class="P">public</span>&nbsp;<span class="R">Moveable</span>&lt;<span class="Q">DirEntry</span>&gt;&nbsp;</p>
+<p class="S">This nested helper class is intended to simplify the parsing of file system objects (files, directories, symbolic links, etc.) returned by the SFtp class. DirEntry class has pick semantics.</p>
+<p class="F">&nbsp;</p>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr><td width="100%"><table width="100%" class="L"><colgroup><col width="100%"></colgroup>
+<tr><td class="M"><p class="N">Public Method List</p>
+</td>
+</tr>
+</table></td>
+</tr></table>
+<p class="F">&nbsp;</p>
+<p id="Upp::SFtp::DirEntry::GetName()const" class="T"><a href="Upp::String"><span class="J"><u>String</u></span></a><span class="J">&nbsp;</span><span class="U">GetName</span><span class="J">()&nbsp;</span>const</p>
+<p class="S">Returns the name (path) of the file system object on success, and Null on failure..</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Upp::SFtp::DirEntry::GetUid()const" class="T"><a href="Upp::int64"><span class="J"><u>int64</u></span></a><span class="J">&nbsp;</span><span class="U">GetUid</span><span class="J">()&nbsp;</span>const</p>
+<p class="S">Returns the user id associated with the file system object on success, and -1 on failure.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Upp::SFtp::DirEntry::GetGid()const" class="T"><a href="Upp::int64"><span class="J"><u>int64</u></span></a><span class="J">&nbsp;</span><span class="U">GetGid</span><span class="J">()&nbsp;</span>const</p>
+<p class="S">Returns the group id associated with the file system object on success, and -1 on failure.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Upp::SFtp::DirEntry::GetSize()const" class="T"><a href="Upp::int64"><span class="J"><u>int64</u></span></a><span class="J">&nbsp;</span><span class="U">GetSize</span><span class="J">()&nbsp;</span>const</p>
+<p class="S">Returns the size of file system object in bytes on success, and -1 on falure.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Upp::SFtp::DirEntry::GetLastModified()const" class="T"><a href="Upp::Time"><span class="J"><u>Time</u></span></a><span class="J">&nbsp;</span><span class="U">GetLastModified</span><span class="J">()&nbsp;</span>const</p>
+<p class="S">Returns the last modification time of the file system object on success, and Null on failure.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Upp::SFtp::DirEntry::GetLastAccessed()const" class="T"><a href="Upp::Time"><span class="J"><u>Time</u></span></a><span class="J">&nbsp;</span><span class="U">GetLastAccessed</span><span class="J">()&nbsp;</span>const</p>
+<p class="S">Returns the last access time of the file system object on success, and Null on failure.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Upp::SFtp::DirEntry::GetAttrs()" class="O"><a href="Upp::SFtpAttrs"><u>SFtpAttrs</u></a><span class="P">&amp;</span>&nbsp;<span class="Q">GetAttrs</span>()</p>
+<p id="Upp::SFtp::DirEntry::GetAttrs()" class="O"><a href="Upp::SFtpAttrs"><u>SFtpAttrs</u></a><span class="P">&amp;</span>&nbsp;<span class="Q">operator*</span>()</p>
+<p class="S">Returns the libssh2 file attributes structure for the file system object.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Upp::SFtp::DirEntry::operator~()const" class="T">const<span class="J">&nbsp;</span><a href="Upp::SFtpAttrs"><span class="J"><u>SFtpAttrs</u></span></a>&amp;<span class="J">&nbsp;</span><span class="U">operator~</span><span class="J">()&nbsp;</span>const</p>
+<p class="S">Allows constant access &nbsp;to the file attributes structure.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Upp::SFtp::DirEntry::IsFile()const" class="T">bool<span class="J">&nbsp;</span><span class="U">IsFile</span><span class="J">()&nbsp;</span>const</p>
+<p class="S">Returns true if the file system object is a file.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Upp::SFtp::DirEntry::IsDirectory()const" class="T">bool<span class="J">&nbsp;</span><span class="U">IsDirectory</span><span class="J">()&nbsp;</span>const</p>
+<p class="S">Returns true if the file system object is a directory.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Upp::SFtp::DirEntry::IsSymLink()const" class="T">bool<span class="J">&nbsp;</span><span class="U">IsSymLink</span><span class="J">()&nbsp;</span>const</p>
+<p class="S">Returns true if the file system object is a symbolic link.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Upp::SFtp::DirEntry::IsSpecial()const" class="T">bool<span class="J">&nbsp;</span><span class="U">IsSpecial</span><span class="J">()&nbsp;</span>const</p>
+<p class="S">Returns true if the file system object is a character special file.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Upp::SFtp::DirEntry::IsBlock()const" class="T">bool<span class="J">&nbsp;</span><span class="U">IsBlock</span><span class="J">()&nbsp;</span>const</p>
+<p class="S">Returns true if the file system object is a block special file.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Upp::SFtp::DirEntry::IsPipe()const" class="T">bool<span class="J">&nbsp;</span><span class="U">IsPipe</span><span class="J">()&nbsp;</span>const</p>
+<p class="S">Returns true if the file system object is a named pipe.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Upp::SFtp::DirEntry::IsSocket()const" class="T">bool<span class="J">&nbsp;</span><span class="U">IsSocket</span><span class="J">()&nbsp;</span>const</p>
+<p class="S">Returns true if the file system object is a socket.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Upp::SFtp::DirEntry::IsReadable()const" class="T">bool<span class="J">&nbsp;</span><span class="U">IsReadable</span><span class="J">()&nbsp;</span>const</p>
+<p class="S">Returns true if the file system object is readable.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Upp::SFtp::DirEntry::IsWriteable()const" class="T">bool<span class="J">&nbsp;</span><span class="U">IsWriteable</span><span class="J">()&nbsp;</span>const</p>
+<p class="S">Returns true if the file system object is writable.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Upp::SFtp::DirEntry::IsReadOnly()const" class="T">bool<span class="J">&nbsp;</span><span class="U">IsReadOnly</span><span class="J">()&nbsp;</span>const</p>
+<p class="S">Returns true if the file system object has read-only access.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Upp::SFtp::DirEntry::IsExecutable()const" class="T">bool<span class="J">&nbsp;</span><span class="U">IsExecutable</span><span class="J">()&nbsp;</span>const</p>
+<p class="S">Returns true if the file system object is executable.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Upp::SFtp::DirEntry::ToString()const" class="T"><a href="Upp::String"><span class="J"><u>String</u></span></a><span class="J">&nbsp;</span><span class="U">ToString</span><span class="J">()&nbsp;</span>const</p>
+<p class="S">Returns the information of file system object as a formattad string. Output of this method is similar to Unix ls command's output.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Upp::SFtp::DirEntry::ToFileInfo()const" class="T"><a href="Upp::FileSystemInfo::FileInfo"><span class="J"><u>FileSystemInfo::FileInfo</u></span></a><span class="J">&nbsp;</span><span class="U">ToFileInfo</span><span class="J">()&nbsp;</span>const</p>
+<p class="S">Converts the DirEntry object to FileSystemInfo:FileInfo object. See<a href="src$Core$SSH$Upp_Ssh_SFtp_en-us.html#Upp::SFtpFileSystemInfo::class"> SFtpFileSystemInfo</a>.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Upp::SFtp::DirEntry::Serialize(Upp::Stream&)" class="O"><span class="P">void</span>&nbsp;<span class="Q">Serialize</span>(<a href="Upp::Stream"><u>Stream</u></a><span class="P">&amp;</span>&nbsp;<span class="R">s</span>)</p>
+<p class="S">Serializes the DirEntry object.</p>
+<p class="F">&nbsp;</p>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr><td width="100%"><table width="100%" class="L"><colgroup><col width="100%"></colgroup>
+<tr><td class="M"><p class="N">Constructor detail</p>
+</td>
+</tr>
+</table></td>
+</tr></table>
+<p class="F">&nbsp;</p>
+<p id="Upp::SFtp::DirEntry::DirEntry()" class="O"><span class="Q">DirEntry</span>()</p>
+<p class="S">Default constructor.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Upp::SFtp::DirEntry::DirEntry(const Upp::String&)" class="O"><span class="Q">DirEntry</span>(<span class="P">const</span>&nbsp;<a href="Upp::String"><u>String</u></a><span class="P">&amp;</span>&nbsp;<span class="R">path</span>)</p>
+<p class="S">Creates an empty directory entry representing <span class="R">path</span>.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Upp::SFtp::DirEntry::DirEntry(const Upp::String&,const Upp::SFtpAttrs&)" class="O"><span class="Q">DirEntry</span>(<span class="P">const</span>&nbsp;<a href="Upp::String"><u>String</u></a><span class="P">&amp;</span>&nbsp;<span class="R">path</span>, <span class="P">const</span>&nbsp;<a href="Upp::SFtpAttrs"><u>SFtpAttrs</u></a><span class="P">&amp;</span>&nbsp;<span class="R">attrs</span>)</p>
+<p class="S">Cretas a directory entry representing <span class="R">path</span> with <span class="R">attrs</span>.</p>
+<p class="F">&nbsp;</p>
+<p class="A">&nbsp;</p>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr><td width="100%"><table width="100%" class="C"><colgroup><col width="100%"></colgroup>
+<tr><td class="D"><p class="E">SFtp::DirList</p>
+</td>
+</tr>
+</table></td>
+</tr></table>
+<p class="F">&nbsp;</p>
+<p id="Upp::SFtp::DirList::typedef" class="Y"><span class="H">typedef</span><span class="Z">&nbsp;</span><a href="Upp::Vector"><span class="Z"><u>Vector</u></span></a><span class="Z">&lt;</span><a href="Upp::SFtp::DirEntry"><span class="Z"><u>DirEntry</u></span></a><span class="Z">&gt;&nbsp;</span>DirList</p>
+<p class="S">SFtp::DirList is a Vector containing SFtp::DirEntry elements.</p>
+<p class="F">&nbsp;</p>
+<p class="A">&nbsp;</p>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr><td width="100%"><table width="100%" class="C"><colgroup><col width="100%"></colgroup>
+<tr><td class="D"><p class="E">SFtpFileSystemInfo</p>
+</td>
+</tr>
+</table></td>
+</tr></table>
+<p class="F">&nbsp;</p>
+<p id="Upp::SFtpFileSystemInfo::class" class="G"><span class="H">class</span><span class="I">&nbsp;</span><span class="J">SFtpFileSystemInfo</span><span class="I">&nbsp;:&nbsp;</span><span class="H">public</span><span class="I">&nbsp;</span>FileSystemInfo</p>
+<p class="S">This helper class is a FileSystemInfo adapter for the SFtp objects. It allows SFtp objects to be used with FileSystemInfo class that provides uniform access to folder hierarchies in a file-system agnostic (&quot;transparent&quot;) way.</p>
+<p class="F">&nbsp;</p>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr><td width="100%"><table width="100%" class="L"><colgroup><col width="100%"></colgroup>
+<tr><td class="M"><p class="N">Public Method List</p>
+</td>
+</tr>
+</table></td>
+</tr></table>
+<p class="F">&nbsp;</p>
+<p id="Upp::SFtpFileSystemInfo::Mount(Upp::SFtp&)" class="O"><a href="Upp::SFtpFileSystemInfo"><u>SFtpFileSystemInfo</u></a><span class="P">&amp;</span>&nbsp;<span class="Q">Mount</span>(<a href="Upp::SFtp"><u>SFtp</u></a><span class="P">&amp;</span>&nbsp;<span class="R">sftp</span>)</p>
+<p class="S">Mounts a valid <span class="R">sftp</span> file system to be enumerated. Returns *this for method chaining.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Upp::SFtpFileSystemInfo::Find(Upp::String,int,bool)const override" class="O"><a href="Upp::Array"><u>Array</u></a>&lt;<a href="Upp::FileSystemInfo::FileInfo"><u>FileSystemInfo::FileInfo</u></a>&gt;&nbsp;<span class="Q">Find</span>(<a href="Upp::String"><u>String</u></a>&nbsp;<span class="R">mask</span>, <span class="P">int</span>&nbsp;<span class="R">max_count</span>&nbsp;=&nbsp;__INT_MAX__, <span class="P">bool</span>&nbsp;<span class="R">unmounted</span>&nbsp;=&nbsp;<span class="P">false</span>)&nbsp;<span class="P">const</span>&nbsp;override</p>
+<p class="S">Searches for the given <span class="R">mask</span> in the mounted sftp file system. Returns an array of FileInfo objects on success, and an empty array on failure. Mask can be a full or relative path, and may contain wildcards (*, ?). When the mask is null or empty, this method will return the content of the user's default directory. <span class="R">max_count</span> can be used to limit the number of returned FileInfos. The <span class="R">unmounted</span> flag is unused.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Upp::SFtpFileSystemInfo::CreateFolder(Upp::String,Upp::String&)const override" class="O"><span class="P">bool</span>&nbsp;<span class="Q">CreateFolder</span>(<a href="Upp::String"><u>String</u></a>&nbsp;<span class="R">path</span>, <a href="Upp::String"><u>String</u></a><span class="P">&amp;</span>&nbsp;<span class="R">error</span>)&nbsp;<span class="P">const</span>&nbsp;override</p>
+<p class="S">Attempts to create a new folder at <span class="R">path</span>. Returns true on success, and the <span class="R">error</span> &nbsp;buffer will be filled with specific error message on failure.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Upp::SFtpFileSystemInfo::GetStyle()const override" class="O"><span class="P">int</span>&nbsp;<span class="Q">GetStyle</span>()&nbsp;<span class="P">const</span>&nbsp;override</p>
+<p class="S">Returns the file system style. This method returns the <span class="W">FileSystemInfo::STYLE_POSIX</span> constant.</p>
+<p class="F">&nbsp;</p>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr><td width="100%"><table width="100%" class="L"><colgroup><col width="100%"></colgroup>
+<tr><td class="M"><p class="N">Constructor detail</p>
+</td>
+</tr>
+</table></td>
+</tr></table>
+<p class="F">&nbsp;</p>
+<p id="Upp::SFtpFileSystemInfo::SFtpFileSystemInfo()" class="O"><span class="Q">SFtpFileSystemInfo</span>()</p>
+<p class="S">Default constructor.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Upp::SFtpFileSystemInfo::SFtpFileSystemInfo(Upp::SFtp&)" class="O"><span class="Q">SFtpFileSystemInfo</span>(<a href="Upp::SFtp"><u>SFtp</u></a><span class="P">&amp;</span>&nbsp;<span class="R">sftp</span>)</p>
+<p class="S">Constructor. Mounts a valid <span class="R">sftp</span> file system to be enumerated.</p>
+<p class="F">&nbsp;</p>
+<p class="A">&nbsp;</p>
+</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>
+<TABLE BORDER="0" WIDTH="100%"><TR><TD></TD>
+</TR>
+</TABLE>
+<TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" BGCOLOR="#FFFFFF" WIDTH="100%" style="border-style: solid; border-width: 1px; border-color: #6E89AE;padding: 10px;;"><TR><TD><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%"><TR><TD><p class="A"><span class="B"> </span><a href="www$uppweb$contribweb$en-us.html">Do you want to contribute?</a></p>
+</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>
+<script type="text/javascript">var a={};var p=window.location.pathname.split("/");p=p[p.length-1];var s='<select id="lang" onchange="window.location=document.getElementById(\'lang\').value;">';for(l in a){if(p==l){d=" selected=1"}else{d=""}s+='<option value="'+l+'"'+d+'>'+a[l]+'</option>'}s+='</select>';var d=document.createElement('div');d.innerHTML=s;var c=document.getElementById('langs');c.replaceChild(d,c.firstChild);document.getElementById('langbox').style.display='block';</script></BODY>

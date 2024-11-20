@@ -1,0 +1,422 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en-us">
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
+<META NAME="Generator" CONTENT="U++ HTML Package">
+<META NAME="Description" CONTENT="U++ promises radical reduction of code complexity of typical desktop applications.">
+<TITLE>U++ Overview :: U++</TITLE>
+<STYLE TYPE="text/css"><!--
+.A{margin:0px 0px 0px 0px;text-indent:0px;text-align:left;color:#000000;font-family:sans-serif;font-size:10pt;font-weight:normal;font-style:normal;}
+.B{font-size:12pt;}
+.C{margin:0px 0px 16px 0px;text-indent:0px;text-align:left;color:#000000;font-family:serif;font-size:24pt;font-weight:bold;font-style:normal;}
+.D{margin:0px 0px 0px 0px;text-indent:0px;text-align:right;color:#000000;font-family:serif;font-size:8pt;font-weight:bold;font-style:normal;}
+.E{margin:16px 0px 0px 0px;text-indent:0px;text-align:left;color:#000000;font-family:sans-serif;font-size:16pt;font-weight:bold;font-style:normal;}
+.F{margin:0px 0px 0px 0px;text-indent:0px;text-align:left;color:#000000;font-family:sans-serif;font-size:12pt;font-weight:normal;font-style:normal;}
+.G{margin:8px 0px 8px 0px;text-indent:0px;text-align:left;color:#000000;font-family:sans-serif;font-size:10pt;font-weight:normal;font-style:normal;line-height:150%}
+.H{margin:0px 0px 0px 0px;text-indent:0px;text-align:center;color:#000000;font-family:sans-serif;font-size:12pt;font-weight:normal;font-style:normal;}
+.I{margin:0px 0px 0px 0px;text-indent:25px;text-align:left;color:#1c2a96;font-family:monospace;font-size:10pt;font-weight:bold;font-style:normal;}
+.J{margin:0px 0px 0px 25px;text-indent:0px;text-align:left;color:#000080;font-family:monospace;font-size:10pt;font-weight:bold;font-style:normal;}
+.K{margin:0px 0px 0px 25px;text-indent:0px;text-align:left;color:#000080;font-family:monospace;font-size:12pt;font-weight:bold;font-style:normal;}
+.L{margin:0px 0px 0px 0px;text-indent:25px;text-align:left;color:#1c2a96;font-family:monospace;font-size:12pt;font-weight:bold;font-style:normal;}
+.M{font-weight:bold;font-style:italic;}
+.N{font-style:italic;}
+.O{color:#1c2a96;font-family:monospace;font-weight:bold;}
+.P{display:list-item;list-style-type:disc;margin:8px 0px 8px 45px;text-indent:0px;text-align:left;color:#000000;font-family:sans-serif;font-size:10pt;font-weight:normal;font-style:normal;line-height:150%}
+.Q{font-weight:bold;}
+.R{margin:10px 0px 0px 0px;text-indent:0px;text-align:center;color:#000000;font-family:sans-serif;font-size:8pt;font-weight:bold;font-style:normal;}
+.S{display:list-item;list-style-type:disc;margin:8px 0px 8px 52px;text-indent:0px;text-align:left;color:#000000;font-family:sans-serif;font-size:10pt;font-weight:normal;font-style:normal;line-height:150%}
+.T{margin:10px 0px 0px 0px;text-indent:0px;text-align:center;color:#000000;font-family:sans-serif;font-size:10pt;font-weight:normal;font-style:normal;}
+a.l1         { text-decoration:none; font-size: 8pt; font-family: sans-serif; font-weight: normal; }
+a.l1:link    { color:#000000; }
+a.l1:visited { color:#000080; }
+a.l1:hover   { color:#9933CC; }
+a.l1:active  { color:#000000; }
+a.l2         { text-decoration:none; font-size: 12pt; font-family: sans-serif; font-variant: small-caps; }
+a.l2:link    { color:#0066FF; }
+a.l2:visited { color:#FF6600; }
+a.l2:hover   { color:#BC0624; }
+a.l2:active  { color:#BC0024; }
+
+-->
+</STYLE>
+<META NAME="keywords" CONTENT="framework, toolkit, widget, c++, visual, studio, dev-cpp, builder, ide, class, component,wxwidgets, qt, rapid, application, development, rad, mfc, linux, macos, gui, sdl, directx, desktop"><META name="robots" content="index,follow">
+<LINK rel="alternate" type="application/rss+xml" title="SVN changes" href="svnchanges.xml">
+<LINK rel="shortcut icon" type="image/png" href="favicon.png">
+</HEAD><BODY BGCOLOR="#D2D9D2" ALINK="#800000" LINK="#000000" VLINK="#000080"><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%"><TR><TD COLSPAN="3"><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%" BGCOLOR="#FFFFFF" style="border: 1px solid #6E89AE;padding-left: 10px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;"><TR><TD><A HREF="index.html"><IMG SRC="0i.png" ALT="" BORDER="0"></A>
+</TD>
+<TD ALIGN="RIGHT" VALIGN="BOTTOM" STYLE="padding-bottom: 5px; background-image: url('1i.png')"><span style="font-size: 14pt; font-family: sans-serif;"><script type="text/javascript"><!--
+google_ad_client = "pub-1082147624384270";
+google_ad_width = 468;
+google_ad_height = 60;
+google_ad_format = "468x60_as";
+google_ad_type = "text_image";
+google_ad_channel = "";
+google_color_border = "336699";
+google_color_bg = "FFFFFF";
+google_color_link = "0000FF";
+google_color_text = "000000";
+google_color_url = "008000";
+//--></script>
+<script type="text/javascript"
+  src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+&nbsp;&nbsp;</span>
+</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>
+<TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%"><TR><TD COLSPAN="3" BGCOLOR="#D2D9D2" HEIGHT="6"></TD>
+</TR>
+<TR><TD VALIGN="TOP" ALIGN="CENTER"><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="160"><TR><TD ALIGN="CENTER"><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%" BGCOLOR="#FFFFFF" style="border-style: solid; border-width: 1px; border-color: #6E89AE;padding: 0px"><TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px;"><A HREF="www$uppweb$overview$en-us.html" CLASS="l1">Overview</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$examples$en-us.html" CLASS="l1">Examples</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$ss$en-us.html" CLASS="l1">Screenshots</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$comparison$en-us.html" CLASS="l1">Comparisons</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$apps$en-us.html" CLASS="l1">Applications</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$download$en-us.html" CLASS="l1">Download</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$documentation$en-us.html" CLASS="l1">Documentation</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$Tutorials$en-us.html" CLASS="l1">Tutorials</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="app$ide$UppHub$en-us.html" CLASS="l1">UppHub</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$Roadmap$en-us.html" CLASS="l1">Status & Roadmap</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$FAQ$en-us.html" CLASS="l1">FAQ</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="app$ide$About$en-us.html" CLASS="l1">Authors & License</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="https://www.ultimatepp.org/forums" CLASS="l1">Forums</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$Funding$en-us.html" CLASS="l1">Funding U++</A>
+</TD>
+</TR>
+</TABLE>
+<TABLE BORDER="0" WIDTH="100%"><TR><TD></TD>
+</TR>
+</TABLE>
+<TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%" BGCOLOR="#FFFFFF" style="border-style: solid; border-width: 1px; border-color: #6E89AE;padding: 0px"><TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('3i.png'); border: 0px solid black;padding-left:12px; padding-right:0px; padding-top:1px; padding-bottom:1px;color:#FFFFFF;"><B><span style="font-size: 8pt; font-family: sans-serif;">Search on this site</span>
+</B>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:6px; padding-right:0px; padding-top:4px; padding-bottom:4px;border-top: 1px solid #6E89AE;"><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%"><TR><TD><IMG SRC="4i.png" ALT="" BORDER="0"></TD>
+<TD><FORM ACTION="https://www.google.com/search" METHOD="GET" STYLE="margin:0px;padding:0px;"><INPUT TYPE="HIDDEN" NAME="ie" VALUE="UTF-8"><INPUT TYPE="HIDDEN" NAME="oe" VALUE="UTF-8"><INPUT TYPE="TEXT" NAME="q" SIZE="15" MAXLENGTH="256" placeholder="Site search"><INPUT TYPE="HIDDEN" NAME="sitesearch" VALUE="ultimatepp.org"></FORM>
+</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>
+<TABLE BORDER="0" WIDTH="100%"><TR><TD></TD>
+</TR>
+</TABLE>
+<br><div id="fb-root"></div>
+<script type="text/javascript">(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) {return;}
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+<div class="fb-like" data-href="https://www.facebook.com/pages/Upp-Framework/262346610476027?sk=wall" data-send="false" data-layout="button_count" data-width="160" data-show-faces="false" data-font="arial"></div>
+<br><br><script type="text/javascript"><!--
+google_ad_client = "pub-1082147624384270";
+google_ad_width = 160;
+google_ad_height = 600;
+google_ad_format = "160x600_as";
+google_ad_type = "text_image";
+google_ad_channel = "";
+google_color_border = "336699";
+google_color_bg = "FFFFFF";
+google_color_link = "0000FF";
+google_color_text = "000000";
+google_color_url = "008000";
+//--></script>
+<script type="text/javascript"
+  src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script><br><br><script type="text/javascript"><!--
+google_ad_client = "pub-1082147624384270";
+google_ad_width = 160;
+google_ad_height = 90;
+google_ad_format = "160x90_0ads_al_s";
+google_ad_channel = "";
+google_color_border = "336699";
+google_color_bg = "FFFFFF";
+google_color_link = "0000FF";
+google_color_text = "000000";
+google_color_url = "008000";
+//--></script>
+<script type="text/javascript"
+  src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+<br><br><br><br><br><br><A HREF="https://sourceforge.net/projects/upp/"><IMG SRC="https://sourceforge.net/sflogo.php?group_id=93970&amp;type=2" ALT="SourceForge.net Logo" BORDER="0" WIDTH="125" HEIGHT="37"></A>
+<br><br><A HREF="https://flathub.org/en/apps/org.ultimatepp.TheIDE"><IMG SRC="5i.png" ALT="SourceForge.net Logo" BORDER="0" WIDTH="125" HEIGHT="37"></A>
+<br><br><div style="background-color:#ffffff;width:125;height:35"><A HREF="https://github.com/ultimatepp"><IMG SRC="6i.png" ALT="GitHub Logo" BORDER="0" WIDTH="125" HEIGHT="35"></A>
+</div><br><div style="background-color:#ffffff;width:125;height:35"><div style="height:5"></div><A HREF="https://discord.gg/8XzqQzXZzb"><IMG SRC="https://assets-global.website-files.com/6257adef93867e50d84d30e2/636e0b5061df29d55a92d945_full_logo_blurple_RGB.svg" ALT="Discord Logo" BORDER="0" WIDTH="125" HEIGHT="25"></A>
+</div><br></TD>
+</TR>
+</TABLE>
+</TD>
+<TD VALIGN="TOP" BGCOLOR="#D2D9D2"><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="6"><TR><TD></TD>
+</TR>
+</TABLE>
+</TD>
+<TD VALIGN="TOP" WIDTH="100%" BGCOLOR="#D2D9D2"><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" BGCOLOR="#FFFFFF" WIDTH="100%" style="border-style: solid; border-width: 1px; border-color: #6E89AE;padding: 10px;;"><TR><TD><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%"><TR><TD><p class="C">U++ Overview</p>
+<p class="D">&nbsp;</p>
+<hr><p class="E">Table of contents</p>
+<p class="F">&nbsp;</p>
+<p class="A"><a href="www$uppweb$overview_en-us.html#1">1. Whetting your appetite</a></p>
+<p class="A"><a href="www$uppweb$overview_en-us.html#2">2. Everything belongs somewhere</a></p>
+<p class="A"><a href="www$uppweb$overview_en-us.html#3">3. U++ containers</a></p>
+<p class="A"><a href="www$uppweb$overview_en-us.html#4">4. Who owns widgets?</a></p>
+<p class="A"><a href="www$uppweb$overview_en-us.html#5">5. Dialog templates are C++ templates</a></p>
+<p class="A"><a href="www$uppweb$overview_en-us.html#6">6. Value and Null</a></p>
+<p class="A"><a href="www$uppweb$overview_en-us.html#7">7. Display and Convert</a></p>
+<p class="A"><a href="www$uppweb$overview_en-us.html#8">8. Function</a></p>
+<p class="A"><a href="www$uppweb$overview_en-us.html#9">9. U++ set of widgets</a></p>
+<p class="A"><a href="www$uppweb$overview_en-us.html#10">10. SQL programming</a></p>
+<p class="A"><a href="www$uppweb$overview_en-us.html#11">11. Summary</a></p>
+<p class="F">&nbsp;</p>
+<hr><p id="1" class="E">1. Whetting your appetite</p>
+<p class="G">U++ promises radical reduction of code complexity of typical desktop applications. Let us start with a&nbsp;simple example - an application that displays the number of days between two dates. The number of days is refreshed as user types or edits dates into the input fields:</p>
+<p class="F">&nbsp;</p>
+<p class="H"><a href="www$uppweb$overview$en-us.html_0.png"><img src="www$uppweb$overview$en-us.html_0.png" border="0" alt="" style="width: 344px; height: 100px"></a></p>
+<p class="F">&nbsp;</p>
+<p class="G">The application window layout is created using U++ visual designer:</p>
+<p class="F">&nbsp;</p>
+<p class="H"><a href="www$uppweb$overview$en-us.html_1.png"><img src="www$uppweb$overview$en-us.html_1.png" border="0" alt="" style="width: 715px; height: 354px"></a></p>
+<p class="F">&nbsp;</p>
+<p class="G">The actual code for the application is as complex as this:</p>
+<p class="F">&nbsp;</p>
+<p class="I">#include &lt;CtrlLib/CtrlLib.h&gt;</p>
+<p class="I">&nbsp;</p>
+<p class="I">#define LAYOUTFILE &lt;Days/Days.lay&gt;</p>
+<p class="I">#include &lt;CtrlCore/lay.h&gt;</p>
+<p class="I">&nbsp;</p>
+<p class="I">class Days : public WithDaysLayout&lt;TopWindow&gt; {</p>
+<p class="I">public:</p>
+<p class="I">&nbsp;</p>
+<p class="I">&nbsp;&nbsp;&nbsp;&nbsp;typedef Days CLASSNAME;</p>
+<p class="I">&nbsp;&nbsp;&nbsp;&nbsp;Days();</p>
+<p class="I">};</p>
+<p class="J">&nbsp;</p>
+<p class="J">Days::Days()</p>
+<p class="J">{</p>
+<p class="J">&nbsp;&nbsp;&nbsp;&nbsp;CtrlLayout(*this, &quot;Days&quot;);</p>
+<p class="J">&nbsp;&nbsp;&nbsp;&nbsp;date1 ^= date2 ^= [=] {</p>
+<p class="J">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;result = IsNull(date1) || IsNull(date2) ? &quot;&quot; :</p>
+<p class="J">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Format(&quot;There is %d day(s) between %` and %`&quot;, abs(Date(~date1) - Date(~date2)), ~date1, ~date2);</p>
+<p class="J">&nbsp;&nbsp;&nbsp;&nbsp;};</p>
+<p class="J">}</p>
+<p class="J">&nbsp;</p>
+<p class="J">GUI_APP_MAIN</p>
+<p class="J">{</p>
+<p class="J">&nbsp;&nbsp;&nbsp;&nbsp;Days().Run();</p>
+<p class="J">}</p>
+<p class="K">&nbsp;</p>
+<p class="I">&nbsp;</p>
+<p class="L">&nbsp;</p>
+<hr><p id="2" class="E">2. Everything belongs somewhere</p>
+<p class="G">In U++, most objects are bound to some logical scope. As a result, you will not see many <span class="M">new </span>operators in code using U++ and almost no <span class="M">delete </span>operators outside the implementation of containers.</p>
+<p class="G">That of course does not mean you are not allowed to use pointers, but it is good practice to use pointers just to point to things, never to manage heap resources. This also avoids all confusion regarding ownership of the underlying object, time of its deletion etc. If you need to manage data sets of variable size or polymorphic type, you should prefer using one of U++ containers.</p>
+<p class="G">Speaking about it, there are no shared smart pointers (like std::shared_ptr) in U++ used to manage heap resources at interface level. They are not needed and considered bad practice.</p>
+<p class="G">In C++, this approach proves to be equally good or better than garbage collected languages like Java or C#. While those languages are able to provide automatic management of heap resources, U++ approach provides very deterministic automatic management of <span class="N">all</span> resources.</p>
+<p class="G">&nbsp;</p>
+<hr><p id="3" class="E">3. U++ containers</p>
+<p class="G">One aspect of U++ is bringing a lot of criticism: <span class="N">U++ is not using much of standard C++ library</span>. There are, however, serious reasons for this. STL, with its devastating requirement that each element stored in container has to have copy-constructor, makes standard containers somewhat hard to use in GUI development.</p>
+<p class="G">There is no such general requirement for U++ containers. Instead, U++ containers come in two flavors.</p>
+<p class="G">Vector flavor has Moveable requirement that allows very fast implementation for certain types (e.g., element insertion at arbitrary position of U++ Vector&lt;String&gt; is much faster than the same operation with typical implementation of std::vector&lt;std::string&gt;).</p>
+<p class="G">Array flavor has no requirements for element types at all, at the price of somewhat lower performance.</p>
+<p class="G">As a result, in U++ you are for example allowed to create container of .GUI widgets that edits integer numbers ( <span class="O">Array&lt;EditInt&gt; integer_editors</span>) and even sort it using standard U++ <span class="O">Sort</span> algorithm. Doing something like this would require using pointers as elements in STL (<span class="O">std::vector&lt;EditInt *&gt;</span>) or alternatively some sort of smart pointers (probably std::unique_ptr), but both increase code complexity and break the U++ rule according to which <span class="N">everything belongs somewhere</span>.</p>
+<p class="G">&nbsp;</p>
+<hr><p id="4" class="E">4. Who owns widgets?</p>
+<p class="G">One of the things we discovered over our countless experiments with C++ GUI is the fact that the GUI toolkit should not own widget objects. GUI objects should be always owned by the client, belonging to some scope of client code (<span class="N">everything belongs somewhere</span>). GUI toolkit just references them, it neither creates them nor destroys them. Each widget object can play its GUI role in some context (like being visible in some window), but at the same time it is always a stand-alone entity with its set of attributes that can be modified or queried regardless of its current GUI status.</p>
+<p class="G">This has many serious implications. The most important is that U++ does not require widget objects to be allocated on the heap. That in turn allows us to arrange GUI dialog structure in a very effective way, instead of</p>
+<p class="I">&nbsp;</p>
+<p class="I">struct MyDialog {</p>
+<p class="I">&nbsp;&nbsp;&nbsp;&nbsp;Option *option;</p>
+<p class="I">&nbsp;&nbsp;&nbsp;&nbsp;EditField *edit;</p>
+<p class="I">&nbsp;&nbsp;&nbsp;&nbsp;Button *ok;</p>
+<p class="I">};</p>
+<p class="I">&nbsp;</p>
+<p class="G">we are using:</p>
+<p class="I">&nbsp;</p>
+<p class="I">struct MyDialog {</p>
+<p class="I">&nbsp;&nbsp;&nbsp;&nbsp;Option option;</p>
+<p class="I">&nbsp;&nbsp;&nbsp;&nbsp;EditField edit;</p>
+<p class="I">&nbsp;&nbsp;&nbsp;&nbsp;Button ok;</p>
+<p class="I">};</p>
+<p class="I">&nbsp;</p>
+<p class="G">Even more important, lifetime of these widgets does not depend on the life cycle of MyDialog GUI - MyDialog can be closed or not yet open, but attributes of widgets are accessible all the time.</p>
+<p class="G">&nbsp;</p>
+<hr><p id="5" class="E">5. Dialog templates are C++ templates</p>
+<p class="G">Now that we have laid down the foundations, it is time to introduce the coolest aspect of U++ GUI programming - layout templates:</p>
+<p class="G">If you visually design a layout (usually, but not limited to, the layout of a dialog box) using TheIDE's <span class="N">Layout designer</span>, this layout is in in your code reflected as a C++ template that derives from a widget-based class and declares all widgets as its member variables, and a matching function (<span class="O">InitLayout</span>) that sets up the widget positions and their pre-designed attribute defaults.</p>
+<p class="G">For example, such a template would look like this:</p>
+<p class="I">&nbsp;</p>
+<p class="I">template &lt;class T&gt;</p>
+<p class="I">struct WithMyDialogLayout : public T {</p>
+<p class="I">&nbsp;&nbsp;&nbsp;&nbsp;Option option;</p>
+<p class="I">&nbsp;&nbsp;&nbsp;&nbsp;EditField edit;</p>
+<p class="I">&nbsp;&nbsp;&nbsp;&nbsp;Button ok;</p>
+<p class="I">};</p>
+<p class="I">&nbsp;</p>
+<p class="I">template &lt;class T&gt;</p>
+<p class="I">void InitLayout(WithMyDialogLayout&lt;T&gt; *layout, ...);</p>
+<p class="I">// implementation details omitted</p>
+<p class="I">&nbsp;</p>
+<p class="G">The reason why it is provided as a template rather than a simple class or struct is that in this way you can use any widget type as its base class, not just the one that represents dialog windows (TopWindow).</p>
+<p class="G">This approach provides radical reduction of complexity - many annoying things that seem to be necessary to identify widgets in client code (like widget IDs or names) are simply gone for good. All you have to deal with in U++ are your instance variables.</p>
+<p class="G">&nbsp;</p>
+<hr><p id="6" class="E">6. Value and Null</p>
+<p class="G">One aspect that makes development in U++ very orthogonal is the existence of Value - the dynamically typed value type. Any of U++ basic types (int, double, String, Color, Rect, Font, Image etc...) can be stored into and retrieved from a Value. Value itself can be queried for the type of value it contains. It is also very easy to make any custom types Value-compatible.</p>
+<p class="G">Somewhat related to Value is the general concept of &quot;empty value&quot;. The U++ special constant Null represents an empty value. Most concrete types support Null. Null is also defined for fundamental types - int, double and int64 - as a value that is lower than any other value for specific type (for example, Null is equal to INT_MIN for int). To test whether a variable of a certain type is Null, you can use the generic IsNull function.</p>
+<p class="G">Value (and Null) have a remarkable effect on GUI flexibility. Many widgets logically have their &quot;natural&quot; values, (for integer edit field it is the typed in number, for option widget it is either true or false according to its state) and U++ provides uniform access to these values via Value and GetData / SetData virtual methods. For example, clearing a dialog can be usually done by assigning Null to all of its widgets.</p>
+<p class="G">&nbsp;</p>
+<hr><p id="7" class="E">7. Display and Convert</p>
+<p class="G">Display and Convert based classes further enhance U++ flexibility using Value.</p>
+<p class="G">Convert classes act as bidirectional Value to Value converters. Usually, but not limited to, this conversion is between the value of a logical type and its textual representation (conversion of the textual representation to the logical type can be sometimes omitted). Examples are ConvertInt or ConvertDate.</p>
+<p class="G">Many U++ widgets are able to use these Convert classes as properties. An example is the EditField class, a generic input field. By assigning specific Convert based class to EditField, you can &quot;teach&quot; it to edit numbers, dates or anything that has textual representation.</p>
+<p class="G">Somewhat similar to Convert classes are Display based classes. These are classes that describe <span class="N">how Values should be displayed</span>. Once again, many U++ widgets are using Display classes as their properties. For example, to &quot;teach&quot; the DropList widget (DropList is close to something called &quot;combo box&quot; on other platforms) to display colors, all you need to do is to set its Display attribute to DisplayColor (remember, Color is Value compatible and DropList's list consists of Values). Meanwhile, you can use the same DisplayColor as the property of many other widget classes.</p>
+<p class="G">&nbsp;</p>
+<hr><p id="8" class="E">8. Function</p>
+<p class="G">While virtual methods provide a great way to organize the <span class="N">input</span> interface of GUI widgets (like mouse or keyboard input), each GUI toolkit has to provide effective means for <span class="N">output</span> interfaces as well (if you do not know what output interface is: when a button widget is pressed, the output interface is responsible for delivering this information to the client code).</p>
+<p class="G">Our solution to these needs is using std::function equivalent Upp::Function. All output actions then can be defined as C++ lambdas. The reason for not using std::function is that in GUI, a lot of output events remain unassigned and std::functions throws when invoked empty - Upp::Function simply does nothing.</p>
+<p class="G">&nbsp;</p>
+<hr><p id="9" class="E">9. U++ set of widgets</p>
+<p class="G">While the standard set of U++ widgets is less important to us than the general principles, partly due to the fact that creating new widget classes is often a trivial task in U++, any description of toolkit would be incomplete without it.</p>
+<p class="G">So here follows an incomplete but representative list:</p>
+<p class="P"><span class="Q">Label</span>, <span class="Q">Button</span> and <span class="Q">Option</span> are basic well known widgets.</p>
+<p class="P"><span class="Q">Switch</span> is something usually called &quot;a group of radio-buttons&quot;, anyway in the U++ this is a single widget (this way, reading the Value of a switch is much more consistent).</p>
+<p class="P"><span class="Q">EditField</span>, <span class="Q">EditInt</span>, <span class="Q">EditDouble</span>, <span class="Q">EditIntSpin</span>, <span class="Q">EditDate</span>, <span class="Q">EditString</span> are basic input fields. Note that U++ provides distinct types of input fields for specific value types.</p>
+<p class="P"><span class="Q">LineEdit</span> and <span class="Q">DocEdit</span> are two kinds of plain text editors. <span class="Q">LineEdit</span> works with lines while <span class="Q">DocEdit</span> works with paragraphs.</p>
+<p class="P"><span class="Q">ScrollBar</span> and <span class="Q">ScrollBars</span>. While their names are self-explaining (ScrollBars is just pair a consisting of a vertical and horizontal ScrollBar), it is worth noting that the U++ ScrollBar also provides all calculations for position of view area.</p>
+<p class="P"><span class="Q">Slider </span>is an &quot;analog&quot; input widget whose value is determined by position of &quot;thumb&quot;.</p>
+<p class="P"><span class="Q">HeaderCtrl </span>represents headers of various tables, namely ArrayCtrl</p>
+<p class="P"><span class="Q">ArrayCtrl </span>is perhaps the most complex and complicated widget in U++. It is basically a table widget used to operate on Value matrices. It can combine Values to be displayed (using Display class) as columns (yes, several Values in row can be combined into single a column using Convert if needed) and edit them using slave Ctrls (those can be inside the table displayed on user &quot;edit&quot; action, inside the table always visible or outside the table in the dialog box displaying Values of currently selected line).</p>
+<p class="G">&nbsp;</p>
+<p class="H"><a href="www$uppweb$overview$en-us.html_2.png"><img src="www$uppweb$overview$en-us.html_2.png" border="0" alt="" style="width: 300px; height: 279px"></a></p>
+<p class="R">Option, EditString, DropList, Switch and ArrayCtrl in action.</p>
+<p class="G">&nbsp;</p>
+<p class="S"><span class="Q">SqlArray </span>is derived from ArrayCtrl and adds abilities to act as SQL table editor, including master-detail capabilities.</p>
+<p class="S"><span class="Q">Splitter </span>is used to implement split view widgets with an adjustable bar.</p>
+<p class="S"><span class="Q">ProgressIndicator </span>can be used to indicate progress of lengthy operations.</p>
+<p class="S"><span class="Q">TabCtrl </span>is used for dialogs with tabs.</p>
+<p class="S"><span class="Q">TreeCtrl </span>is used to display arbitrary tree hierarchies.</p>
+<p class="S"><span class="Q">ColorSelector</span>, <span class="Q">ColorPusher </span>and <span class="Q">ColorButton </span>are widgets for graphical user color selection.</p>
+<p class="G">&nbsp;</p>
+<p class="T"><a href="www$uppweb$overview$en-us.html_3.png"><img src="www$uppweb$overview$en-us.html_3.png" border="0" alt="" style="width: 302px; height: 373px"></a></p>
+<p class="R">ColorButton</p>
+<p class="G">&nbsp;</p>
+<p class="P"><span class="Q">MenuBar </span>and <span class="Q">ToolBar </span>handling is a little unorthodox in U++, as the menu actions, represented as Callbacks, are passed to the methods constructing the corresponding Bar. This has some serious advantages - state and presence of individual buttons or menu bar items can be easily adjusted according to the current application state. It is also often possible to have a single method for construction of both ToolBar and MenuBar.</p>
+<p class="P"><span class="Q">ColumnList </span>displays values in user-adjustable number of columns.</p>
+<p class="P"><span class="Q">FileList </span>is variant of ColumnList for displaying lists of files.</p>
+<p class="P">Finally, U++ has tools to deal with advanced text formatting:</p>
+<p class="P"><span class="Q">RichText </span>is a class that provides storage of complex text documents, including font and paragraph formatting and even nested tables support.</p>
+<p class="P"><span class="Q">RichTextView </span>is a widget for viewing RichText texts.</p>
+<p class="P"><span class="Q">RichEdit </span>is a full-featured RichText word-processor (including spell-checker) in standard widget package, readily available to any U++ application.</p>
+<p class="G">&nbsp;</p>
+<p class="H"><a href="www$uppweb$overview$en-us.html_4.png"><img src="www$uppweb$overview$en-us.html_4.png" border="0" alt="" style="width: 483px; height: 521px"></a></p>
+<p class="R">RichEdit</p>
+<p class="G">&nbsp;</p>
+<p class="G">You can find complete alphabetical list of basic U++ widgets <a href="src$CtrlLib$index$en-us.html">here</a>.</p>
+<p class="G">&nbsp;</p>
+<hr><p id="10" class="E">10. SQL programming</p>
+<p class="G">One of the motivations behind U++ always used to be the development of enterprise class client-server SQL applications. Using general U++ philosophy we believe to have achieved some extraordinary results, basically making U++/SQL development easier that using SQL dedicated development tools.</p>
+<p class="G">Of course, SQL is an area where the Value abstraction hugely pays off. Fetching database values and putting them to GUI widgets never was as trivial as it is in U++.</p>
+<p class="G">An important tool related to SQL is idea of &quot;SQL expressions&quot;. SQL expression is entity that represents SQL command. U++ provides means to build SQL expression using C++ overloading mechanism. For example, U++ SQL expression might look like:</p>
+<p class="I">&nbsp;</p>
+<p class="I">Select(NAME, SURNAME).From(PERSON).Where(PERSONID == personid);</p>
+<p class="I">&nbsp;</p>
+<p class="G">where NAME, SURNAME, PERSON and PERSON are special values of SqlId type, while <span class="N">personid</span> is an ordinary C++ variable. The important thing here is that SQL expressions can be built from smaller subexpressions - that is particulary important when building Where conditions.</p>
+<p class="I">&nbsp;</p>
+<p class="I">SqlBool where;</p>
+<p class="I">if(!IsNull(findname))</p>
+<p class="I">&nbsp;&nbsp;&nbsp;&nbsp;where = NAME == findname;</p>
+<p class="I">if(!IsNull(findsurname))</p>
+<p class="I">&nbsp;&nbsp;&nbsp;&nbsp;where = where &amp;&amp; SURNAME == findsurname;</p>
+<p class="I">SqlExp exp = Select(PERSONID).From(PERSON).Where(where);</p>
+<p class="I">&nbsp;</p>
+<p class="G">When SQL expression is ready for execution, it can be executed on an Sql cursor object using the * operator. After this, you can Fetch the results.</p>
+<p class="I">&nbsp;</p>
+<p class="I">Sql sql;</p>
+<p class="I">sql * exp;</p>
+<p class="I">while(sql.Fetch()) {</p>
+<p class="I">&nbsp;&nbsp;&nbsp;&nbsp;Sql sqlu;</p>
+<p class="I">&nbsp;&nbsp;&nbsp;&nbsp;sqlu * Update(PERSON)(SALARY, SALARY + 100).Where(PERSONID == sql[0])</p>
+<p class="I">}</p>
+<p class="I">&nbsp;</p>
+<p class="G">Another effective tool is the concept of database schema description files. These are files used to describe a database model using specialized C-macro constructions:</p>
+<p class="I">&nbsp;</p>
+<p class="I">TABLE_(PERSON)</p>
+<p class="I">&nbsp;&nbsp;&nbsp;&nbsp;INT_ &nbsp;&nbsp;&nbsp;&nbsp;(PERSONID) PRIMARY_KEY</p>
+<p class="I">&nbsp;&nbsp;&nbsp;&nbsp;STRING_ &nbsp;(NAME, 200)</p>
+<p class="I">&nbsp;&nbsp;&nbsp;&nbsp;STRING_ &nbsp;(SURNAME, 200)</p>
+<p class="I">&nbsp;&nbsp;&nbsp;&nbsp;DOUBLE_ &nbsp;(SALARY)</p>
+<p class="I">END_TABLE</p>
+<p class="I">&nbsp;</p>
+<p class="G">These description files are then used to synchronize the database model on the SQL server, to generate SqlId constants used in SQL expressions, and, last but not least, to generate C++ structures (named after the tables with S_ prefix) that can be used to form SQL expressions and to fetch query results:</p>
+<p class="I">&nbsp;</p>
+<p class="I">S_PERSON person;</p>
+<p class="I">SQL * Select(person).From(PERSON);</p>
+<p class="I">while(SQL.Fetch(person))</p>
+<p class="I">&nbsp;&nbsp;&nbsp;&nbsp;person_table.Add(person.PERSONID, person.NAME, person.SURNAME);</p>
+<p class="I">&nbsp;</p>
+<p class="G">Thanks to the Value concept described above, most widgets couple seamlessly with SQL code out of box. One of the tools that exploit these capabilities is the SqlCtrls class that orchestrates the data interchange between dialog widgets and database records:</p>
+<p class="I">&nbsp;</p>
+<p class="I">void EditPerson(int persionid) {</p>
+<p class="I">&nbsp;&nbsp;&nbsp;&nbsp;WithPersonLayout&lt;TopWindow&gt; dlg;</p>
+<p class="I">&nbsp;&nbsp;&nbsp;&nbsp;SqlCtrls ctrls;</p>
+<p class="I">&nbsp;&nbsp;&nbsp;&nbsp;ctrls(PERSON, dlg.person)(NAME, dlg.name)(SURNAME, dlg.surname);</p>
+<p class="I">&nbsp;&nbsp;&nbsp;&nbsp;SQL * Select(ctrls).From(PERSON).Where(PERSONID == personid);</p>
+<p class="I">&nbsp;&nbsp;&nbsp;&nbsp;ctrls.Fetch(SQL);</p>
+<p class="I">&nbsp;&nbsp;&nbsp;&nbsp;if(dlg.Run() == IDOK)</p>
+<p class="I">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SQL * ctrls.Update(PERSON).Where(PERSONID == personid);</p>
+<p class="I">}</p>
+<p class="G">&nbsp;</p>
+<hr><p id="11" class="E">11. Summary</p>
+<p class="G">In this overview we have tried to summarize the most exciting features of U++. There are of course many more important features including certain interesting implementation techniques like zero overhead memory allocator, perfect image rescaling etc.</p>
+<p class="G">Since the very beginning we have kept using U++ ourselves to develop applications for our customers. Even so, in recent years we never hesitated to compromise our entire code-base each time we felt that some major or minor aspect of library interface or implementation needed to be improved. This enabled us to slowly develop the library and perfect it into its current state.</p>
+<p class="G">Now, after some more than 2 decades of development, U++ is a mature platform that brings vast reductions of development costs. Most interfaces seem to be finished and optimal. There is of course still some work ahead, mostly in documentation an IDE department.</p>
+<p class="G">If you find our U++ way of programming interesting, nothing stays in your way to <a href="www$uppweb$download$en-us.html">downloading</a> it. But be careful there: you should be prepared to throw away some old habits and usual ways of thinking about how &quot;things are always done&quot;, or they might ruin your opportunity to receive a lot in the reward, together with a healthy disrespect to certain honorable, well-established development tools.</p>
+</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>
+<TABLE BORDER="0" WIDTH="100%"><TR><TD></TD>
+</TR>
+</TABLE>
+<TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" BGCOLOR="#FFFFFF" WIDTH="100%" style="border-style: solid; border-width: 1px; border-color: #6E89AE;padding: 10px;;"><TR><TD><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%"><TR><TD><p class="A"><span class="B"> </span><a href="www$uppweb$contribweb$en-us.html">Do you want to contribute?</a></p>
+</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>
+<script type="text/javascript">var a={'www$uppweb$overview$en-us.html':'English'};var p=window.location.pathname.split("/");p=p[p.length-1];var s='<select id="lang" onchange="window.location=document.getElementById(\'lang\').value;">';for(l in a){if(p==l){d=" selected=1"}else{d=""}s+='<option value="'+l+'"'+d+'>'+a[l]+'</option>'}s+='</select>';var d=document.createElement('div');d.innerHTML=s;var c=document.getElementById('langs');c.replaceChild(d,c.firstChild);document.getElementById('langbox').style.display='block';</script></BODY>

@@ -1,0 +1,658 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en-us">
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
+<META NAME="Generator" CONTENT="U++ HTML Package">
+<TITLE>CParser :: U++</TITLE>
+<STYLE TYPE="text/css"><!--
+.A{margin:0px 0px 0px 0px;text-indent:0px;text-align:left;color:#000000;font-family:sans-serif;font-size:10pt;font-weight:normal;font-style:normal;}
+.B{font-size:12pt;}
+.C{border-collapse:collapse;table-layout:auto;border: 2px solid #000000;}
+.D{padding: 3px 5px 3px 5px;border-left: 1px solid #000000;border-top: 1px solid #000000;border-right: 1px solid #000000;border-bottom: 1px solid #000000;background-color:#712A00;vertical-align:middle;}
+.E{margin:0px 0px 0px 0px;text-indent:0px;text-align:left;color:#e0e0e0;font-family:sans-serif;font-size:16pt;font-weight:bold;font-style:normal;}
+.F{margin:0px 0px 0px 0px;text-indent:0px;text-align:left;color:#000000;font-family:sans-serif;font-size:6pt;font-weight:normal;font-style:normal;}
+.G{margin:0px 0px 5px 0px;text-indent:0px;text-align:left;color:#000000;font-family:sans-serif;font-size:10pt;font-weight:bold;font-style:normal;}
+.H{color:#0000ff;font-weight:normal;}
+.I{font-weight:normal;}
+.J{margin:8px 0px 0px 0px;text-indent:0px;text-align:left;color:#000000;font-family:sans-serif;font-size:10pt;font-weight:normal;font-style:normal;}
+.K{border-collapse:collapse;table-layout:auto;border: 2px solid #808080;}
+.L{padding: 3px 5px 3px 5px;border-left: 1px solid #808080;border-top: 1px solid #808080;border-right: 1px solid #808080;border-bottom: 1px solid #808080;background-color:#C0C0C0;vertical-align:middle;}
+.M{margin:0px 0px 0px 0px;text-indent:0px;text-align:left;color:#000000;font-family:sans-serif;font-size:10pt;font-weight:bold;font-style:normal;}
+.N{margin:0px 0px 5px 0px;text-indent:0px;text-align:left;color:#000000;font-family:sans-serif;font-size:10pt;font-weight:normal;font-style:normal;}
+.O{font-weight:bold;}
+.P{color:#0000ff;}
+.Q{color:#800000;font-weight:bold;}
+.R{margin:0px 0px 0px 57px;text-indent:0px;text-align:left;color:#000000;font-family:sans-serif;font-size:10pt;font-weight:normal;font-style:normal;}
+.S{color:#800000;}
+.T{color:#800000;font-family:monospace;font-weight:bold;}
+.U{font-weight:bold;font-style:italic;}
+.V{font-family:monospace;}
+.W{margin:0px 0px 5px 0px;text-indent:0px;text-align:left;color:#0000ff;font-family:sans-serif;font-size:10pt;font-weight:normal;font-style:normal;}
+.X{color:#000000;}
+.Y{color:#000000;font-weight:bold;}
+.Z{font-style:italic;}
+.AA{margin:0px 0px 5px 0px;text-indent:0px;text-align:left;color:#800000;font-family:sans-serif;font-size:12pt;font-weight:bold;font-style:normal;}
+.AB{color:#000000;font-weight:normal;}
+.AC{margin:0px 0px 0px 0px;text-indent:0px;text-align:left;color:#000000;font-family:sans-serif;font-size:10pt;font-weight:normal;font-style:italic;}
+.AD{margin:0px 0px 5px 0px;text-indent:0px;text-align:left;color:#000000;font-family:sans-serif;font-size:12pt;font-weight:bold;font-style:normal;}
+a.l1         { text-decoration:none; font-size: 8pt; font-family: sans-serif; font-weight: normal; }
+a.l1:link    { color:#000000; }
+a.l1:visited { color:#000080; }
+a.l1:hover   { color:#9933CC; }
+a.l1:active  { color:#000000; }
+a.l2         { text-decoration:none; font-size: 12pt; font-family: sans-serif; font-variant: small-caps; }
+a.l2:link    { color:#0066FF; }
+a.l2:visited { color:#FF6600; }
+a.l2:hover   { color:#BC0624; }
+a.l2:active  { color:#BC0024; }
+
+-->
+</STYLE>
+<META NAME="keywords" CONTENT="framework, toolkit, widget, c++, visual, studio, dev-cpp, builder, ide, class, component,wxwidgets, qt, rapid, application, development, rad, mfc, linux, macos, gui, sdl, directx, desktop"><META name="robots" content="index,follow">
+<LINK rel="alternate" type="application/rss+xml" title="SVN changes" href="svnchanges.xml">
+<LINK rel="shortcut icon" type="image/png" href="favicon.png">
+</HEAD><BODY BGCOLOR="#D2D9D2" ALINK="#800000" LINK="#000000" VLINK="#000080"><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%"><TR><TD COLSPAN="3"><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%" BGCOLOR="#FFFFFF" style="border: 1px solid #6E89AE;padding-left: 10px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;"><TR><TD><A HREF="index.html"><IMG SRC="0i.png" ALT="" BORDER="0"></A>
+</TD>
+<TD ALIGN="RIGHT" VALIGN="BOTTOM" STYLE="padding-bottom: 5px; background-image: url('1i.png')"><span style="font-size: 14pt; font-family: sans-serif;"><script type="text/javascript"><!--
+google_ad_client = "pub-1082147624384270";
+google_ad_width = 468;
+google_ad_height = 60;
+google_ad_format = "468x60_as";
+google_ad_type = "text_image";
+google_ad_channel = "";
+google_color_border = "336699";
+google_color_bg = "FFFFFF";
+google_color_link = "0000FF";
+google_color_text = "000000";
+google_color_url = "008000";
+//--></script>
+<script type="text/javascript"
+  src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+&nbsp;&nbsp;</span>
+</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>
+<TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%"><TR><TD COLSPAN="3" BGCOLOR="#D2D9D2" HEIGHT="6"></TD>
+</TR>
+<TR><TD VALIGN="TOP" ALIGN="CENTER"><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="160"><TR><TD ALIGN="CENTER"><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%" BGCOLOR="#FFFFFF" style="border-style: solid; border-width: 1px; border-color: #6E89AE;padding: 0px"><TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px;"><A HREF="www$uppweb$overview$en-us.html" CLASS="l1">Overview</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$examples$en-us.html" CLASS="l1">Examples</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$ss$en-us.html" CLASS="l1">Screenshots</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$comparison$en-us.html" CLASS="l1">Comparisons</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$apps$en-us.html" CLASS="l1">Applications</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$download$en-us.html" CLASS="l1">Download</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$documentation$en-us.html" CLASS="l1">Documentation</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$Tutorials$en-us.html" CLASS="l1">Tutorials</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="app$ide$UppHub$en-us.html" CLASS="l1">UppHub</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$Roadmap$en-us.html" CLASS="l1">Status & Roadmap</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$FAQ$en-us.html" CLASS="l1">FAQ</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="app$ide$About$en-us.html" CLASS="l1">Authors & License</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="https://www.ultimatepp.org/forums" CLASS="l1">Forums</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$Funding$en-us.html" CLASS="l1">Funding U++</A>
+</TD>
+</TR>
+</TABLE>
+<TABLE BORDER="0" WIDTH="100%"><TR><TD></TD>
+</TR>
+</TABLE>
+<TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%" BGCOLOR="#FFFFFF" style="border-style: solid; border-width: 1px; border-color: #6E89AE;padding: 0px"><TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('3i.png'); border: 0px solid black;padding-left:12px; padding-right:0px; padding-top:1px; padding-bottom:1px;color:#FFFFFF;"><B><span style="font-size: 8pt; font-family: sans-serif;">Search on this site</span>
+</B>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:6px; padding-right:0px; padding-top:4px; padding-bottom:4px;border-top: 1px solid #6E89AE;"><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%"><TR><TD><IMG SRC="4i.png" ALT="" BORDER="0"></TD>
+<TD><FORM ACTION="https://www.google.com/search" METHOD="GET" STYLE="margin:0px;padding:0px;"><INPUT TYPE="HIDDEN" NAME="ie" VALUE="UTF-8"><INPUT TYPE="HIDDEN" NAME="oe" VALUE="UTF-8"><INPUT TYPE="TEXT" NAME="q" SIZE="15" MAXLENGTH="256" placeholder="Site search"><INPUT TYPE="HIDDEN" NAME="sitesearch" VALUE="ultimatepp.org"></FORM>
+</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>
+<TABLE BORDER="0" WIDTH="100%"><TR><TD></TD>
+</TR>
+</TABLE>
+<br><div id="fb-root"></div>
+<script type="text/javascript">(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) {return;}
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+<div class="fb-like" data-href="https://www.facebook.com/pages/Upp-Framework/262346610476027?sk=wall" data-send="false" data-layout="button_count" data-width="160" data-show-faces="false" data-font="arial"></div>
+<br><br><script type="text/javascript"><!--
+google_ad_client = "pub-1082147624384270";
+google_ad_width = 160;
+google_ad_height = 600;
+google_ad_format = "160x600_as";
+google_ad_type = "text_image";
+google_ad_channel = "";
+google_color_border = "336699";
+google_color_bg = "FFFFFF";
+google_color_link = "0000FF";
+google_color_text = "000000";
+google_color_url = "008000";
+//--></script>
+<script type="text/javascript"
+  src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script><br><br><script type="text/javascript"><!--
+google_ad_client = "pub-1082147624384270";
+google_ad_width = 160;
+google_ad_height = 90;
+google_ad_format = "160x90_0ads_al_s";
+google_ad_channel = "";
+google_color_border = "336699";
+google_color_bg = "FFFFFF";
+google_color_link = "0000FF";
+google_color_text = "000000";
+google_color_url = "008000";
+//--></script>
+<script type="text/javascript"
+  src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+<br><br><br><br><br><br><A HREF="https://sourceforge.net/projects/upp/"><IMG SRC="https://sourceforge.net/sflogo.php?group_id=93970&amp;type=2" ALT="SourceForge.net Logo" BORDER="0" WIDTH="125" HEIGHT="37"></A>
+<br><br><A HREF="https://flathub.org/en/apps/org.ultimatepp.TheIDE"><IMG SRC="5i.png" ALT="SourceForge.net Logo" BORDER="0" WIDTH="125" HEIGHT="37"></A>
+<br><br><div style="background-color:#ffffff;width:125;height:35"><A HREF="https://github.com/ultimatepp"><IMG SRC="6i.png" ALT="GitHub Logo" BORDER="0" WIDTH="125" HEIGHT="35"></A>
+</div><br><div style="background-color:#ffffff;width:125;height:35"><div style="height:5"></div><A HREF="https://discord.gg/8XzqQzXZzb"><IMG SRC="https://assets-global.website-files.com/6257adef93867e50d84d30e2/636e0b5061df29d55a92d945_full_logo_blurple_RGB.svg" ALT="Discord Logo" BORDER="0" WIDTH="125" HEIGHT="25"></A>
+</div><br></TD>
+</TR>
+</TABLE>
+</TD>
+<TD VALIGN="TOP" BGCOLOR="#D2D9D2"><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="6"><TR><TD></TD>
+</TR>
+</TABLE>
+</TD>
+<TD VALIGN="TOP" WIDTH="100%" BGCOLOR="#D2D9D2"><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" BGCOLOR="#FFFFFF" WIDTH="100%" style="border-style: solid; border-width: 1px; border-color: #6E89AE;padding: 10px;;"><TR><TD><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%"><TR><TD><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr><td width="100%"><table width="100%" class="C"><colgroup><col width="100%"></colgroup>
+<tr><td class="D"><p class="E">CParser</p>
+</td>
+</tr>
+</table></td>
+</tr></table>
+<p class="F">&nbsp;</p>
+<p id="CParser::class" class="G"><span class="H">class</span><span class="I">&nbsp;</span>CParser</p>
+<p class="J">CParser is simple yet very useful lexical analyzer suitable for building descent parsers of languages with C-like syntax.</p>
+<p class="J">CParser works on '\0' terminated text in memory (not Stream), so to parse the file you have to load it into the memory first. Text has to exist during the time it is processed by CParser (no copy is made).</p>
+<p class="J">Many CParser methods can throw CParser::Error exception to indicate the failure to parse required symbol. When using CParser to build concrete parser, it is common to use this exception (preferably via ThrowError method) to indicate errors as well.</p>
+<p class="J">Routines handling with identifiers allow ascii letters, digits and characters '_' and '$'. '$' is not exactly in C standard, but is allowed by JavaSript, JSON, Java and most C/C++ compiler as extension.</p>
+<p class="J">CParser objects cannot be transfered (copied).</p>
+<p class="J">&nbsp;</p>
+<p class="F">&nbsp;</p>
+<p class="A">&nbsp;</p>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr><td width="100%"><table width="100%" class="K"><colgroup><col width="100%"></colgroup>
+<tr><td class="L"><p class="M">Constructor Detail</p>
+</td>
+</tr>
+</table></td>
+</tr></table>
+<p class="F">&nbsp;</p>
+<p id="CParser::CParser(const char*)" class="N"><span class="O">CParser</span>(<span class="P">const</span>&nbsp;<span class="P">char</span>&nbsp;*<span class="Q">ptr</span>)</p>
+<p class="R">Constructs the <span class="O">CParser </span>which can parse input buffer <span class="Q">ptr</span>.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="CParser::CParser(const char*,const char*,int)" class="N"><span class="O">CParser</span>(<span class="P">const</span>&nbsp;<span class="P">char</span>&nbsp;*<span class="Q">ptr</span>, <span class="P">const</span>&nbsp;<span class="P">char</span>&nbsp;*<span class="Q">fn</span>, <span class="P">int</span>&nbsp;<span class="Q">line</span>&nbsp;=&nbsp;<span class="S">1</span>)</p>
+<p class="R">Constructs the <span class="O">CParser</span>, with additional information for the text. The additional info can be used when reporting error:</p>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="T">ptr</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">Pointer to the input text.</p></td></tr></table>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="T">fn</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">The name of file (in fact, can be anything, value is just stored).</p></td></tr></table>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="T">line</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">First line number.</p></td></tr></table>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="CParser::CParser()" class="N"><span class="O">CParser</span>()</p>
+<p class="R">Constructs the <span class="O">CParser</span>. Input text has to be assigned using the <span class="O">SetPos </span>method.</p>
+<p class="F">&nbsp;</p>
+<p class="A">&nbsp;</p>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr><td width="100%"><table width="100%" class="K"><colgroup><col width="100%"></colgroup>
+<tr><td class="L"><p class="M">Public Member List</p>
+</td>
+</tr>
+</table></td>
+</tr></table>
+<p class="F">&nbsp;</p>
+<p id="CParser::ThrowError(const char*)" class="N"><span class="P">void</span>&nbsp;<span class="O">ThrowError</span>(<span class="P">const</span>&nbsp;<span class="P">char</span>&nbsp;*<span class="Q">s</span>)</p>
+<p class="R">Throws <a href="src$Core$CParser$en-us.html#CParser::Error::struct">CParser::Error</a> with the error message <span class="Q">s</span>.</p>
+<p class="F">&nbsp;</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="CParser::SkipSpaces(bool)" class="N"><a href="CParser"><u>CParser</u></a><span class="P">&amp;</span>&nbsp;<span class="O">SkipSpaces</span>(<span class="P">bool</span>&nbsp;<span class="Q">b</span>&nbsp;=&nbsp;<span class="P">true</span>)</p>
+<p class="R">Sets the mode of skipping spaces. If <span class="Q">b</span> is true, sets <span class="O">CParser </span>to the mode where white-spaces are automatically skipped. First skip is performed when position in input text is assigned via constructor or <a href="src$Core$CParser$en-us.html#CParser::SetPos(const CParser::Pos&)">SetPos</a>, then the skip is performed after any symbol. If <span class="Q">b</span> is false, sets <span class="O">CParser </span>to the mode where white-spaces are not automatically skipped, but have to be skipped by <a href="src$Core$CParser$en-us.html#CParser::Spaces()">Spaces</a><span class="O"> </span>method. Default is true.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="CParser::NoSkipSpaces()" class="N"><a href="CParser"><u>CParser</u></a><span class="P">&amp;</span>&nbsp;<span class="O">NoSkipSpaces</span>()</p>
+<p class="R">Same as SkipSpaces(false).</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="CParser::UnicodeEscape(bool)" class="N"><a href="CParser"><u>CParser</u></a><span class="P">&amp;</span>&nbsp;<span class="O">UnicodeEscape</span>(<span class="P">bool</span>&nbsp;<span class="Q">b</span>&nbsp;=&nbsp;<span class="P">true</span>)</p>
+<p class="R">Activates/deactivates whether CParser should recognize \u and \U unicode escape sequences in String. This option is active by default.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="CParser::SkipComments(bool)" class="N"><a href="CParser"><u>CParser</u></a><span class="P">&amp;</span>&nbsp;<span class="O">SkipComments</span>(<span class="P">bool</span>&nbsp;<span class="Q">b</span>&nbsp;=&nbsp;<span class="P">true</span>)</p>
+<p class="R">Sets the behaviour of comments. If active, comments are treated as whitespaces (basically, they are ignored). This is <span class="U">default</span>. Note that SkipComments has to be called before any parsing happens.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="CParser::NoSkipComments()" class="N"><a href="CParser"><u>CParser</u></a><span class="P">&amp;</span>&nbsp;<span class="O">NoSkipComments</span>()</p>
+<p class="R">Same as SkipComments(false).</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Upp::CParser::NestComments(bool)" class="N"><a href="Upp::CParser"><u>CParser</u></a><span class="P">&amp;</span>&nbsp;<span class="O">NestComments</span>(<span class="P">bool</span>&nbsp;<span class="Q">b</span>&nbsp;=&nbsp;<span class="P">true</span>)</p>
+<p class="R">If active, CParser recognizes nested comments (e.g &quot;<span class="V">/* level1 /* level2 */ */</span>&quot;).</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Upp::CParser::NoNestComments()" class="N"><a href="Upp::CParser"><u>CParser</u></a><span class="P">&amp;</span>&nbsp;<span class="O">NoNestComments</span>()</p>
+<p class="R">Same as NestComments(false).</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="CParser::Spaces()" class="N"><span class="P">bool</span>&nbsp;<span class="O">Spaces</span>()</p>
+<p class="R">Skips white-spaces. Returns <span class="O">true</span> if there were white-space to skip, <span class="O">false</span> otherwise. Stores the position before advancing as &quot;space pointer&quot; to be retrieved by GetSpacePtr.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="CParser::PeekChar()const" class="W">char<span class="X">&nbsp;</span><span class="Y">PeekChar</span><span class="X">()&nbsp;</span>const</p>
+<p class="R">Returns the current single character.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="CParser::GetChar()" class="N"><span class="P">char</span>&nbsp;<span class="O">GetChar</span>()</p>
+<p class="R">Advances the position in the input text by one character and returns the character at the position before advancing.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="CParser::IsChar(char)const" class="W">bool<span class="X">&nbsp;</span><span class="Y">IsChar</span><span class="X">(</span>char<span class="X">&nbsp;</span><span class="Q">c</span><span class="X">)&nbsp;</span>const</p>
+<p class="R">Tests whether there is a specific character <span class="Q">c </span>at the current position.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="CParser::IsChar2(char,char)const" class="W">bool<span class="X">&nbsp;</span><span class="Y">IsChar2</span><span class="X">(</span>char<span class="X">&nbsp;</span><span class="Q">c1</span><span class="X">, </span>char<span class="X">&nbsp;</span><span class="Q">c2</span><span class="X">)&nbsp;</span>const</p>
+<p class="R">Tests whether there is a specific character pair (<span class="Q">c1</span>, <span class="Q">c2</span>) at the current position.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="CParser::IsChar3(char,char,char)const" class="W">bool<span class="X">&nbsp;</span><span class="Y">IsChar3</span><span class="X">(</span>char<span class="X">&nbsp;</span><span class="Q">c1</span><span class="X">, </span>char<span class="X">&nbsp;</span><span class="Q">c2</span><span class="X">, </span>char<span class="X">&nbsp;</span><span class="Q">c3</span><span class="X">)&nbsp;</span>const</p>
+<p class="R">Test for a specific character triplet (<span class="Q">c1</span>, <span class="Q">c2</span>, <span class="Q">c3</span>) at the current position.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="CParser::Char(char)" class="N"><span class="P">bool</span>&nbsp;<span class="O">Char</span>(<span class="P">char</span>&nbsp;<span class="Q">c</span>)</p>
+<p class="R">Tests for a single character <span class="Q">c</span> at the current position. If there is match, position is advanced and <span class="O">true</span> is returned. If no match is found position remains unmodified and <span class="O">false</span> is returned.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="CParser::Char2(char,char)" class="N"><span class="P">bool</span>&nbsp;<span class="O">Char2</span>(<span class="P">char</span>&nbsp;<span class="Q">c1</span>, <span class="P">char</span>&nbsp;<span class="Q">c2</span>)</p>
+<p class="R">Tests for a character pair (<span class="Q">c1</span>, <span class="Q">c2</span>) at the current position. If there is match, position is advanced by two characters and <span class="O">true</span> is returned. If no match is found position remains unmodified and <span class="O">false</span> is returned.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="CParser::Char3(char,char,char)" class="N"><span class="P">bool</span>&nbsp;<span class="O">Char3</span>(<span class="P">char</span>&nbsp;<span class="Q">c1</span>, <span class="P">char</span>&nbsp;<span class="Q">c2</span>, <span class="P">char</span>&nbsp;<span class="Q">c3</span>)</p>
+<p class="R">Tests for a character triplet (<span class="Q">c1</span>, <span class="Q">c2</span>, <span class="Q">c3</span>) at the current position. If there is match, position is advanced by three characters and <span class="O">true</span> is returned. If no match is found position remains unmodified and <span class="O">false</span> is returned.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="CParser::PassChar(char)" class="N"><span class="P">void</span>&nbsp;<span class="O">PassChar</span>(<span class="P">char</span>&nbsp;<span class="Q">c</span>)</p>
+<p class="R">Calls <a href="src$Core$CParser$en-us.html#CParser::Char(char)">Char</a>(c). If it returns false, throws error.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="CParser::PassChar2(char,char)" class="N"><span class="P">void</span>&nbsp;<span class="O">PassChar2</span>(<span class="P">char</span>&nbsp;<span class="Q">c1</span>, <span class="P">char</span>&nbsp;<span class="Q">c2</span>)</p>
+<p class="R">Calls <a href="src$Core$CParser$en-us.html#CParser::Char2(char,char)">Char2</a>(c1, c2). If it returns <span class="O">false</span>, throws <a href="src$Core$CParser$en-us.html#CParser::Error::struct">CParser::Error</a>.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="CParser::PassChar3(char,char,char)" class="N"><span class="P">void</span>&nbsp;<span class="O">PassChar3</span>(<span class="P">char</span>&nbsp;<span class="Q">c1</span>, <span class="P">char</span>&nbsp;<span class="Q">c2</span>, <span class="P">char</span>&nbsp;<span class="Q">c3</span>)</p>
+<p class="R">Calls <a href="src$Core$CParser$en-us.html#CParser::Char3(char,char,char)">Char3</a>(c1, c2, c3). If it returns <span class="O">false</span>, throws <a href="src$Core$CParser$en-us.html#CParser::Error::struct">CParser::Error</a>.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="CParser::Id(const char*)" class="N"><span class="P">bool</span>&nbsp;<span class="O">Id</span>(<span class="P">const</span>&nbsp;<span class="P">char</span>&nbsp;*<span class="Q">s</span>)</p>
+<p class="R">Tests for given C-like identifier <span class="Q">s</span>. If there is match, advances position by <span class="O">strlen</span>(s) characters. Returns <span class="O">true</span> on match and <span class="O">false</span> otherwise.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="CParser::PassId(const char*)" class="N"><span class="P">void</span>&nbsp;<span class="O">PassId</span>(<span class="P">const</span>&nbsp;<span class="P">char</span>&nbsp;*<span class="Q">s</span>)&nbsp;<span class="P">throw</span>(Error)</p>
+<p class="R">Invokes the <a href="src$Core$CParser$en-us.html#CParser::Id(const char*)">Id</a> method with <span class="Q">s</span> as parameter. If it returns <span class="O">false</span>, throws <a href="src$Core$CParser$en-us.html#CParser::Error::struct">CParser::Error</a>.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="CParser::IsId()const" class="W">bool<span class="X">&nbsp;</span><span class="Y">IsId</span><span class="X">()&nbsp;</span>const</p>
+<p class="R">Tests whether there is any C-like identifier at the current position.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="CParser::IsId(const char*)const" class="W">bool<span class="X">&nbsp;</span><span class="Y">IsId</span><span class="X">(</span>const<span class="X">&nbsp;</span>char<span class="X">&nbsp;*</span><span class="Q">s</span><span class="X">)&nbsp;</span>const</p>
+<p class="R">Tests whether there is C-like identifier <span class="Q">s</span> at current position. Note that matched text actually does not need to follow C identifier rules, e.g. IsId(&quot;family-name&quot;) will work - the only thing that is tested that <span class="Z">after</span> the matched text, there is no continuation with character allowed inside C identifier. (E.g. CParser(&quot;family-names&quot;).IsId(&quot;family-name&quot;) is false while CParser(&quot;family-name;&quot;).IsId(&quot;family-name&quot;) is true).</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="CParser::ReadId()" class="N"><a href="String"><u>String</u></a>&nbsp;<span class="O">ReadId</span>()</p>
+<p class="R">Reads C-like identifier from the current position. If there is none, a <a href="src$Core$CParser$en-us.html#CParser::Error::struct">CParser::Error</a> is thrown.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Upp::CParser::ReadIdh()" class="N">String <span class="O">ReadIdh</span>()</p>
+<p class="R">Special variant of ReadId that allows hypens inside identifier.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="CParser::ReadIdt()" class="N"><a href="String"><u>String</u></a>&nbsp;<span class="O">ReadIdt</span>()</p>
+<p class="R">Special variant of <a href="src$Core$CParser$en-us.html#CParser::ReadId()throw(CParser::Error)">ReadId</a> that considers different non-alphanumeric characters to be the part of identifier as long as they form C++ normal or template based type.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="CParser::IsInt()const" class="W">bool<span class="X">&nbsp;</span><span class="Y">IsInt</span><span class="X">()&nbsp;</span>const</p>
+<p class="R">Test for integer at current position - there either must be digit, or '+' or '-' sign followed by any number of spaces and digit.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="CParser::Sgn()" class="N"><span class="P">int</span>&nbsp;<span class="O">Sgn</span>()</p>
+<p class="R">If there are characters '-' or '+' at current posisition, skips them. If '-' was skipped, returns -1, otherwise 1.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="CParser::ReadInt()" class="N"><span class="P">int</span>&nbsp;<span class="O">ReadInt</span>()</p>
+<p class="R">Reads the integer from the current position. If <span class="O">IsInt </span>is false, throws an <a href="src$Core$CParser$en-us.html#CParser::Error::struct">CParser::Error.</a></p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="CParser::ReadInt(int,int)" class="N"><span class="P">int</span>&nbsp;<span class="O">ReadInt</span>(<span class="P">int</span>&nbsp;<span class="Q">min</span>, <span class="P">int</span>&nbsp;<span class="Q">max</span>)</p>
+<p class="R">Performs ReadInt and then checks the result to be in <span class="Q">min</span> &lt;= result &lt;= <span class="Q">max</span>. If not, throws a <a href="src$Core$CParser$en-us.html#CParser::Error::struct">CParser::Error</a>, otherwise returns it.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="CParser::ReadInt64()" class="N"><a href="int64"><u>int64</u></a>&nbsp;<span class="O">ReadInt64</span>()</p>
+<p class="R">Reads the 64-bit integer from the current position. If <span class="O">IsInt </span>is false, throws an <a href="src$Core$CParser$en-us.html#CParser::Error::struct">CParser::Error.</a></p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="CParser::ReadInt64(int64,int64)" class="N"><a href="int64"><u>int64</u></a>&nbsp;<span class="O">ReadInt64</span>(<a href="int64"><u>int64</u></a>&nbsp;<span class="Q">min</span>, <a href="int64"><u>int64</u></a>&nbsp;<span class="Q">max</span>)</p>
+<p class="R">Performs ReadInt64 and then checks the result to be in <span class="Q">min</span> &lt;= result &lt;= <span class="Q">max</span>. If not, throws a <a href="src$Core$CParser$en-us.html#CParser::Error::struct">CParser::Error</a>, otherwise returns it.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="CParser::IsNumber()const" class="W">bool<span class="X">&nbsp;</span><span class="Y">IsNumber</span><span class="X">()&nbsp;</span>const</p>
+<p class="R">Tests for sign-less number at current position - there must be digit at current position.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="CParser::IsNumber(int)const" class="W">bool<span class="X">&nbsp;</span><span class="Y">IsNumber</span><span class="X">(</span>int<span class="X">&nbsp;</span><span class="Q">base</span><span class="X">)&nbsp;</span>const</p>
+<p class="R">Tests for sign-less number with given base - there must be digit or letter 'A' - 'Z' or 'a' - 'z', where range is limit by actual <span class="Q">base </span>(e.g. for base 12 letters 'a' 'A' 'b' 'B' are allowed).</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="CParser::ReadNumber(int)" class="N"><a href="uint32"><u>uint32</u></a>&nbsp;<span class="O">ReadNumber</span>(<span class="P">int</span>&nbsp;<span class="Q">base</span>&nbsp;=&nbsp;<span class="S">10</span>)</p>
+<p class="R">Reads a number with the given numeric <span class="T">base</span>. If <span class="O">IsNumber</span>(<span class="Q">base</span>) is false, throws an <a href="src$Core$CParser$en-us.html#CParser::Error::struct">CParser::Error.</a></p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="CParser::ReadNumber64(int)" class="N"><a href="uint64"><u>uint64</u></a>&nbsp;<span class="O">ReadNumber64</span>(<span class="P">int</span>&nbsp;<span class="Q">base</span>&nbsp;=&nbsp;<span class="S">10</span>)</p>
+<p class="R">Reads 64-bit unsigned number with given numeric <span class="Q">base</span>.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="CParser::IsDouble()const" class="W">bool<span class="X">&nbsp;</span><span class="Y">IsDouble</span><span class="X">()&nbsp;</span>const</p>
+<p class="R">Test for floating point number at current position - there either must be digit, or '+' or '-' sign followed by any number of spaces and digit.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="CParser::IsDouble2()const" class="W">bool<span class="X">&nbsp;</span><span class="Y">IsDouble2</span><span class="X">()&nbsp;</span>const</p>
+<p class="R">Similar to IsDouble, but also allows double number to start with decimal point, like '.21'.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="CParser::ReadDouble()" class="N"><span class="P">double</span>&nbsp;<span class="O">ReadDouble</span>()</p>
+<p class="R">Reads a floating point number with C based lexical rules. As an exception to C lexical rules, ReadDouble also recognizes form starting with decimal point, like &quot;.21&quot;.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Upp::CParser::ReadDoubleNoE()" class="N"><span class="P">double</span> <span class="O">ReadDoubleNoE</span>()</p>
+<p class="R">Special variant of ReadDouble that ignores exponential part of number. E.g. CParser(&quot;1.2em&quot;).ReadDoubleNoE() returns 1.2 (and does not throw error for invalid double).</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="CParser::IsString()const" class="W">bool<span class="X">&nbsp;</span><span class="Y">IsString</span><span class="X">()&nbsp;</span>const</p>
+<p class="R">Tests for C-like string literal at the current position. Same as <span class="O">IsChar</span>('\&quot;');</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="CParser::ReadOneString(bool)" class="N"><a href="String"><u>String</u></a>&nbsp;<span class="O">ReadOneString</span>(<span class="P">bool</span>&nbsp;<span class="Q">chkend</span>&nbsp;=&nbsp;<span class="P">true</span>)</p>
+<p class="R">Reads C-like string literal from current position (follow C lexical rules, including escape codes). Literals on different lines are not concatenated (unlike C). When <span class="T">chkend</span> is <span class="O">false</span>, <span class="O">ReadOneString </span>is more permissive as it allows unterminated string literals - string is then also delimited by end of line or text.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="CParser::ReadString(bool)" class="N"><a href="String"><u>String</u></a>&nbsp;<span class="O">ReadString</span>(<span class="P">bool</span>&nbsp;<span class="Q">chkend</span>&nbsp;=&nbsp;<span class="P">true</span>)</p>
+<p class="R">Reads C-like string literal from current position (follow C lexical rules, including escape codes). Literals on different lines are concatenated (as in C). When <span class="T">chkend</span> is <span class="O">false</span>, <span class="O">ReadOneString </span>is more permissive as it allows unterminated string literals - string is then also delimited by end of line or text.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="CParser::ReadOneString(int,bool)" class="N"><a href="String"><u>String</u></a>&nbsp;<span class="O">ReadOneString</span>(<span class="P">int</span>&nbsp;<span class="Q">delim</span>, <span class="P">bool</span>&nbsp;<span class="Q">chkend</span>&nbsp;=&nbsp;<span class="P">true</span>)</p>
+<p class="R">Reads C-like string literal from current position (follow C lexical rules, including escape codes) with different delimiter <span class="T">delim</span> than '\&quot;'. Literals on different lines are not concatenated (unlike C). When <span class="T">chkend</span> is false, <span class="O">ReadOneString </span>is more permissive as it allows unterminated string literals - string is then also delimited by end of line or text.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="CParser::ReadString(int,bool)" class="N"><a href="String"><u>String</u></a>&nbsp;<span class="O">ReadString</span>(<span class="P">int</span>&nbsp;<span class="Q">delim</span>, <span class="P">bool</span>&nbsp;<span class="Q">chkend</span>&nbsp;=&nbsp;<span class="P">true</span>)</p>
+<p class="R">Reads C-like string literal from current position (follow C lexical rules, including escape codes). with different delimiter <span class="T">delim</span> than '\&quot;'. Literals on different lines are concatenated (as in C). When <span class="T">chkend</span> is false, <span class="O">ReadOneString </span>is more permissive as it allows unterminated string literals - string is then also delimited by end of line or text.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Upp::CParser::Skip()" class="N"><span class="P">void</span>&nbsp;<span class="O">Skip</span>()</p>
+<p class="R">Skips a single symbol. Decimal numbers, identifiers and string literals are skipped as whole symbols, otherwise input position is advanced by 1 character.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="CParser::SkipTerm()" class="N"><span class="P">void</span>&nbsp;<span class="O">SkipTerm</span>()</p>
+<p class="R">Same as Skip, legacy name.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="CParser::GetPtr()const" class="W">const<span class="X">&nbsp;</span>char<span class="X">&nbsp;*</span><span class="Y">GetPtr</span><span class="X">()&nbsp;</span>const</p>
+<p class="R">Returns a pointer to the current position.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="CParser::GetSpacePtr()const" class="W">const<span class="X">&nbsp;</span>char<span class="X">&nbsp;*</span><span class="Y">GetSpacePtr</span><span class="X">()&nbsp;</span>const</p>
+<p class="R">Returns a pointer to the position of last whitespace before current position, or current position if there was none whitespace. This pointer is set at the start of Space call, Space is called after each token processed (unless SkipWhitespaces is false).</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="CParser::GetPos()const" class="W"><a href="CParser::Pos"><span class="X"><u>Pos</u></span></a><span class="X">&nbsp;</span><span class="Y">GetPos</span><span class="X">()&nbsp;</span>const</p>
+<p class="R">Gets the current position. It contains the pointer as well as the line number and the filename.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="CParser::SetPos(const CParser::Pos&)" class="N"><span class="P">void</span>&nbsp;<span class="O">SetPos</span>(<span class="P">const</span>&nbsp;<a href="src$Core$CParser$en-us.html#CParser::Pos::struct"><u>CParser::Pos</u></a><span class="P">&amp;</span>&nbsp;<span class="Q">p</span>)</p>
+<p class="R">Sets the current position to <span class="Q">p</span>. <span class="Q">p </span>can be from a different <span class="O">CParser</span>.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="CParser::IsEof()const" class="W">bool<span class="X">&nbsp;</span><span class="Y">IsEof</span><span class="X">()&nbsp;</span>const</p>
+<p class="R">Test for the end of input text.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="CParser::operator bool()const" class="W"><span class="Y">operator&nbsp;bool</span><span class="X">()&nbsp;</span>const</p>
+<p class="R">Returns <span class="O">true </span>if end of file has not been reached, <span class="O">false </span>otherwise.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="CParser::GetLine()const" class="W">int<span class="X">&nbsp;</span><span class="Y">GetLine</span><span class="X">()&nbsp;</span>const</p>
+<p class="R">Returns the current line number.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="CParser::GetColumn(int)const" class="W">int<span class="X">&nbsp;</span><span class="Y">GetColumn</span><span class="X">(</span>int<span class="X">&nbsp;</span><span class="Q">tabsize</span><span class="X">&nbsp;=&nbsp;</span><span class="S">4</span><span class="X">)&nbsp;</span>const</p>
+<p class="R">Returns the current column, with given <span class="Q">tabsize</span>.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="CParser::GetFileName()const" class="W"><a href="String"><span class="X"><u>String</u></span></a><span class="X">&nbsp;</span><span class="Y">GetFileName</span><span class="X">()&nbsp;</span>const</p>
+<p class="R">Returns the actual filename.</p>
+<p class="F">&nbsp;</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="CParser::LineInfoComment(const String&,int,int)" class="N"><span class="P">static</span> <a href="String"><u>String</u></a>&nbsp;<span class="O">LineInfoComment</span>(<span class="P">const</span>&nbsp;<a href="String"><u>String</u></a><span class="P">&amp;</span>&nbsp;<span class="Q">filename</span>, <span class="P">int</span>&nbsp;<span class="Q">line</span>&nbsp;=&nbsp;<span class="S">1</span>, <span class="P">int</span>&nbsp;<span class="Q">column</span>&nbsp;=&nbsp;<span class="S">1</span>)</p>
+<p class="R">This function creates a special comment that when parsed by CParser, switches filename and line number. This is supposed to help in situations when parsed text is actually a result of e.g. include operations of some original files, to improve error reporting. Such comment is lexically treated as comment. Comment is created using LINEINFO_ESC characters begin/end delimiter (current value is '\2').</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="CParser::GetLineInfoComment(int)const" class="W"><a href="String"><span class="X"><u>String</u></span></a><span class="X">&nbsp;</span><span class="Y">GetLineInfoComment</span><span class="X">(</span>int<span class="X">&nbsp;</span><span class="Q">tabsize</span><span class="X">&nbsp;=&nbsp;</span><span class="S">4</span><span class="X">)&nbsp;</span>const</p>
+<p class="R">Calls LineInfoComment(GetFileName(), GetLine(), GetColumn(<span class="Q">tabsize</span>)) - creates a comment to identify current file position in further processing.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="CParser::Set(const char*,const char*,int)" class="N"><span class="P">void</span>&nbsp;<span class="O">Set</span>(<span class="P">const</span>&nbsp;<span class="P">char</span>&nbsp;*<span class="Q">ptr</span>, <span class="P">const</span>&nbsp;<span class="P">char</span>&nbsp;*<span class="Q">fn</span>, <span class="P">int</span>&nbsp;<span class="Q">line</span>&nbsp;=&nbsp;<span class="S">1</span>)</p>
+<p class="R">Sets the new input string (with filename and line).</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="CParser::Set(const char*)" class="N"><span class="P">void</span>&nbsp;<span class="O">Set</span>(<span class="P">const</span>&nbsp;<span class="P">char</span>&nbsp;*<span class="Q">ptr</span>)</p>
+<p class="R">Sets the new input string.</p>
+<p class="F">&nbsp;</p>
+<p class="A">&nbsp;</p>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr><td width="100%"><table width="100%" class="C"><colgroup><col width="100%"></colgroup>
+<tr><td class="D"><p class="E">CParser::Error</p>
+</td>
+</tr>
+</table></td>
+</tr></table>
+<p class="F">&nbsp;</p>
+<p id="CParser::Error::struct" class="AA"><span class="H">struct</span><span class="AB">&nbsp;</span><span class="X">Error</span><span class="AB">&nbsp;:&nbsp;</span><span class="H">public</span><span class="AB">&nbsp;</span>Exc</p>
+<p class="A">&nbsp;</p>
+<p class="A">Type used as <a href="src$Core$CParser$en-us.html#CParser::class">CParser</a> exception. Contains single <a href="src$Core$String$en-us.html#String::class">String</a> with error description.</p>
+<p class="AC">&nbsp;</p>
+<p class="A"><span class="Z">Derived from</span> <a href="src$Core$Exc$en-us.html#Exc::class">Exc</a></p>
+<p class="F">&nbsp;</p>
+<p class="A">&nbsp;</p>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr><td width="100%"><table width="100%" class="K"><colgroup><col width="100%"></colgroup>
+<tr><td class="L"><p class="M">Constructor Detail</p>
+</td>
+</tr>
+</table></td>
+</tr></table>
+<p class="F">&nbsp;</p>
+<p id="Exc::Exc()" class="N"><span class="O">Exc</span>()</p>
+<p class="R">Default constructor. Error message is empty.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Exc::Exc(const String&)" class="N"><span class="O">Exc</span>(<span class="P">const</span>&nbsp;<a href="String"><u>String</u></a><span class="P">&amp;</span>&nbsp;<span class="Q">desc</span>)</p>
+<p class="R">Construct an <span class="O">Error</span> with <span class="Q">desc</span> as an error message.</p>
+<p class="F">&nbsp;</p>
+<p class="A">&nbsp;</p>
+<p class="A">&nbsp;</p>
+<p class="A">&nbsp;</p>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr><td width="100%"><table width="100%" class="C"><colgroup><col width="100%"></colgroup>
+<tr><td class="D"><p class="E">CParser::Pos</p>
+</td>
+</tr>
+</table></td>
+</tr></table>
+<p class="F">&nbsp;</p>
+<p id="CParser::Pos::struct" class="AD"><span class="H">struct</span><span class="I">&nbsp;</span>Pos</p>
+<p class="F">&nbsp;</p>
+<p id="::CParser::Pos::struct" class="N">Position in parsed text.</p>
+<p class="F">&nbsp;</p>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr><td width="100%"><table width="100%" class="K"><colgroup><col width="100%"></colgroup>
+<tr><td class="L"><p class="M">Constructor Detail</p>
+</td>
+</tr>
+</table></td>
+</tr></table>
+<p class="F">&nbsp;</p>
+<p id="CParser::Pos::Pos(const char*,int,String)" class="N"><span class="O">Pos</span>(<span class="P">const</span>&nbsp;<span class="P">char</span>&nbsp;*<span class="Q">ptr</span>&nbsp;=&nbsp;NULL, <span class="P">int</span>&nbsp;<span class="Q">line</span>&nbsp;=&nbsp;<span class="S">1</span>, <a href="String"><u>String</u></a>&nbsp;<span class="Q">fn</span>&nbsp;=&nbsp;Null)</p>
+<p class="R">Constrcuts a <span class="O">Pos </span>based on pointer in input buffer, line number and anme of the file.</p>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="Q">ptr</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">Pointer to the position in the input text </p></td></tr></table>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="Q">line</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">Line number.</p></td></tr></table>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="Q">fn</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">Filename.</p></td></tr></table>
+<p class="F">&nbsp;</p>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr><td width="100%"><table width="100%" class="K"><colgroup><col width="100%"></colgroup>
+<tr><td class="L"><p class="M">Public Member List</p>
+</td>
+</tr>
+</table></td>
+</tr></table>
+<p class="F">&nbsp;</p>
+<p id="CParser::Pos::ptr" class="G"><span class="H">const</span><span class="I">&nbsp;</span><span class="H">char</span><span class="I">&nbsp;*</span>ptr</p>
+<p class="R">Pointer to the position in the input text </p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="CParser::Pos::wspc" class="G"><span class="H">const</span><span class="I">&nbsp;</span><span class="H">char</span><span class="I">&nbsp;*</span>wspc</p>
+<p class="R">Pointer to the position of last whitespace before current position, or current position if there was none whitespace.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="CParser::Pos::lineptr" class="G"><span class="H">const</span><span class="I">&nbsp;</span><span class="H">char</span><span class="I">&nbsp;*</span>lineptr</p>
+<p class="R">Pointer to the beginning of the last line.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="CParser::Pos::line" class="G"><span class="H">int</span><span class="I">&nbsp;</span>line</p>
+<p class="R">Line number.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="CParser::Pos::fn" class="G"><a href="src$Core$String$en-us.html#String::class"><span class="I"><u>String</u></span></a><span class="I">&nbsp;</span>fn</p>
+<p class="R">Filename.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="CParser::Pos::GetColumn(int)const" class="W">int<span class="X">&nbsp;</span><span class="Y">GetColumn</span><span class="X">(</span>int<span class="X">&nbsp;</span><span class="Q">tabsize</span><span class="X">&nbsp;=&nbsp;</span><span class="S">4</span><span class="X">)&nbsp;</span>const</p>
+<p class="R">Returns the column, for given <span class="Q">tabsize</span>.</p>
+<p class="A">&nbsp;</p>
+<p class="A">&nbsp;</p>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr><td width="100%"><table width="100%" class="C"><colgroup><col width="100%"></colgroup>
+<tr><td class="D"><p class="E">C-like string literal formatting</p>
+</td>
+</tr>
+</table></td>
+</tr></table>
+<p class="F">&nbsp;</p>
+<p class="A"><span class="O">AsCString</span> routines produce C-like literals (compatible with <a href="src$Core$CParser$en-us.html#CParser::class">CParser</a>) from character data:</p>
+<p class="A">&nbsp;</p>
+<p id="AsCString(const char*,const char*,int,const char*,dword)" class="N"><a href="String"><u>String</u></a>&nbsp;<span class="O">AsCString</span>(<span class="P">const</span>&nbsp;<span class="P">char</span>&nbsp;*<span class="Q">s</span>, <span class="P">const</span>&nbsp;<span class="P">char</span>&nbsp;*<span class="Q">end</span>, <span class="P">int</span>&nbsp;<span class="Q">linemax</span>&nbsp;=&nbsp;INT_MAX, <span class="P">const</span>&nbsp;<span class="P">char</span>&nbsp;*<span class="Q">linepfx</span>&nbsp;=&nbsp;NULL, <a href="dword"><u>dword</u></a>&nbsp;<span class="Q">flags</span>&nbsp;=&nbsp;<span class="S">0</span>)</p>
+<p class="R">Creates C-like literal.</p>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="Q">s</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">Pointer to characters.</p></td></tr></table>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="Q">end</span> </p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">End of characters array ('\0' characters are allowed inside data).</p></td></tr></table>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="Q">linemax</span> </p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">Maximal length of line. If this is exceeded, ending &quot;\&quot;\n&quot; and <span class="S">linepfx</span> is inserted and literal continues on the new line.</p></td></tr></table>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="Q">linepfx</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">Pointer to zero-terminated text to be inserted at the beginning of the line when the line length is exceeded.</p></td></tr></table>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="Q">flags</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">a combination of flags:</p></td></tr></table>
+<p class="A">&nbsp;&nbsp;&nbsp;&nbsp;ASCSTRING_SMART&nbsp;&nbsp;&nbsp;&nbsp;breaks string into lines when too long</p>
+<p class="A">&nbsp;&nbsp;&nbsp;&nbsp;ASCSTRING_OCTALHI&nbsp;&nbsp;&nbsp;&nbsp;escapes characters &gt;128</p>
+<p class="A">&nbsp;&nbsp;&nbsp;&nbsp;ASCSTRING_JSON&nbsp;&nbsp;&nbsp;&nbsp;uses JSON notation for escapes </p>
+<p class="A">&nbsp;&nbsp;&nbsp;&nbsp;(\u0001 instead of \001)</p>
+<p class="A">&nbsp;</p>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="U">Return value</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">C-like literal.</p></td></tr></table>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="AsCString(const char*,int,const char*,dword)" class="N"><a href="String"><u>String</u></a>&nbsp;<span class="O">AsCString</span>(<span class="P">const</span>&nbsp;<span class="P">char</span>&nbsp;*<span class="Q">s</span>, <span class="P">int</span>&nbsp;<span class="Q">linemax</span>&nbsp;=&nbsp;INT_MAX, <span class="P">const</span>&nbsp;<span class="P">char</span>&nbsp;*<span class="Q">linepfx</span>&nbsp;=&nbsp;NULL, <a href="dword"><u>dword</u></a>&nbsp;<span class="Q">flags</span>&nbsp;=&nbsp;<span class="S">0</span>)</p>
+<p class="R">Creates C-like literal from zero terminated character data. Same as <a href="src$Core$CParser$en-us.html#AsCString(const char*,const char*,int,const char*,dword)">AsCString</a>(<span class="Q">s</span>,&nbsp;<span class="Q">s</span>&nbsp;+&nbsp;<span class="O">strlen</span>(<span class="Q">s</span>),&nbsp;<span class="Q">linemax</span>,&nbsp;<span class="Q">linepfx</span>,&nbsp;<span class="Q">flags</span>).</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="AsCString(const String&,int,const char*,dword)" class="N"><a href="String"><u>String</u></a>&nbsp;<span class="O">AsCString</span>(<span class="P">const</span>&nbsp;<a href="String"><u>String</u></a><span class="P">&amp;</span>&nbsp;<span class="Q">s</span>, <span class="P">int</span>&nbsp;<span class="Q">linemax</span>&nbsp;=&nbsp;INT_MAX, <span class="P">const</span>&nbsp;<span class="P">char</span>&nbsp;*<span class="Q">linepfx</span>&nbsp;=&nbsp;NULL, <a href="dword"><u>dword</u></a>&nbsp;<span class="Q">flags</span>&nbsp;=&nbsp;<span class="S">0</span>)</p>
+<p class="R">Creates C-like literal from <a href="src$Core$String$en-us.html#String::class">String</a>. String can contain zero characters. Same as <a href="src$Core$CParser$en-us.html#AsCString(const char*,const char*,int,const char*,dword)">AsCString</a>(<span class="Q">s</span>.<a href="src$Core$String$en-us.html#String0::Begin()const">Begin</a>(),&nbsp;<span class="Q">s</span>.<a href="src$Core$String$en-us.html#String0::End()const">End</a>(),&nbsp;<span class="Q">linemax</span>,&nbsp;<span class="Q">linepfx</span>,&nbsp;<span class="Q">flags</span>).</p>
+<p class="F">&nbsp;</p>
+<p class="A">&nbsp;</p>
+</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>
+<TABLE BORDER="0" WIDTH="100%"><TR><TD></TD>
+</TR>
+</TABLE>
+<TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" BGCOLOR="#FFFFFF" WIDTH="100%" style="border-style: solid; border-width: 1px; border-color: #6E89AE;padding: 10px;;"><TR><TD><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%"><TR><TD><p class="A"><span class="B"> </span><a href="www$uppweb$contribweb$en-us.html">Do you want to contribute?</a></p>
+</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>
+<script type="text/javascript">var a={'src$Core$CParser$en-us.html':'English'};var p=window.location.pathname.split("/");p=p[p.length-1];var s='<select id="lang" onchange="window.location=document.getElementById(\'lang\').value;">';for(l in a){if(p==l){d=" selected=1"}else{d=""}s+='<option value="'+l+'"'+d+'>'+a[l]+'</option>'}s+='</select>';var d=document.createElement('div');d.innerHTML=s;var c=document.getElementById('langs');c.replaceChild(d,c.firstChild);document.getElementById('langbox').style.display='block';</script></BODY>

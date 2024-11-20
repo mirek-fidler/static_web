@@ -1,0 +1,670 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en-us">
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
+<META NAME="Generator" CONTENT="U++ HTML Package">
+<TITLE>Examples / WinFb :: U++</TITLE>
+<STYLE TYPE="text/css"><!--
+.A{margin:0px 0px 0px 0px;text-indent:0px;text-align:left;color:#000000;font-family:sans-serif;font-size:10pt;font-weight:normal;font-style:normal;}
+.B{font-size:12pt;}
+.C{margin:0px 0px 0px 0px;text-indent:0px;text-align:left;color:#000000;font-family:serif;font-size:24pt;font-weight:bold;font-style:normal;}
+.D{margin:0px 0px 0px 0px;text-indent:0px;text-align:left;color:#000000;font-family:sans-serif;font-size:12pt;font-weight:normal;font-style:normal;}
+.E{margin:0px 0px 0px 0px;text-indent:0px;text-align:left;color:#000000;font-family:sans-serif;font-size:16pt;font-weight:bold;font-style:normal;}
+.F{margin:0px 0px 0px 0px;text-indent:0px;text-align:left;color:#000000;font-family:monospace;font-size:9pt;font-weight:normal;font-style:normal;}
+.G{color:#0000ff;}
+.H{margin:0px 0px 0px 0px;text-indent:0px;text-align:left;color:#0000ff;font-family:monospace;font-size:9pt;font-weight:normal;font-style:normal;}
+.I{color:#000000;}
+a.l1         { text-decoration:none; font-size: 8pt; font-family: sans-serif; font-weight: normal; }
+a.l1:link    { color:#000000; }
+a.l1:visited { color:#000080; }
+a.l1:hover   { color:#9933CC; }
+a.l1:active  { color:#000000; }
+a.l2         { text-decoration:none; font-size: 12pt; font-family: sans-serif; font-variant: small-caps; }
+a.l2:link    { color:#0066FF; }
+a.l2:visited { color:#FF6600; }
+a.l2:hover   { color:#BC0624; }
+a.l2:active  { color:#BC0024; }
+
+-->
+</STYLE>
+<META NAME="keywords" CONTENT="framework, toolkit, widget, c++, visual, studio, dev-cpp, builder, ide, class, component,wxwidgets, qt, rapid, application, development, rad, mfc, linux, macos, gui, sdl, directx, desktop"><META name="robots" content="index,follow">
+<LINK rel="alternate" type="application/rss+xml" title="SVN changes" href="svnchanges.xml">
+<LINK rel="shortcut icon" type="image/png" href="favicon.png">
+</HEAD><BODY BGCOLOR="#D2D9D2" ALINK="#800000" LINK="#000000" VLINK="#000080"><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%"><TR><TD COLSPAN="3"><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%" BGCOLOR="#FFFFFF" style="border: 1px solid #6E89AE;padding-left: 10px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;"><TR><TD><A HREF="index.html"><IMG SRC="0i.png" ALT="" BORDER="0"></A>
+</TD>
+<TD ALIGN="RIGHT" VALIGN="BOTTOM" STYLE="padding-bottom: 5px; background-image: url('1i.png')"><span style="font-size: 14pt; font-family: sans-serif;"><script type="text/javascript"><!--
+google_ad_client = "pub-1082147624384270";
+google_ad_width = 468;
+google_ad_height = 60;
+google_ad_format = "468x60_as";
+google_ad_type = "text_image";
+google_ad_channel = "";
+google_color_border = "336699";
+google_color_bg = "FFFFFF";
+google_color_link = "0000FF";
+google_color_text = "000000";
+google_color_url = "008000";
+//--></script>
+<script type="text/javascript"
+  src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+&nbsp;&nbsp;</span>
+</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>
+<TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%"><TR><TD COLSPAN="3" BGCOLOR="#D2D9D2" HEIGHT="6"></TD>
+</TR>
+<TR><TD VALIGN="TOP" ALIGN="CENTER"><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="160"><TR><TD ALIGN="CENTER"><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%" BGCOLOR="#FFFFFF" style="border-style: solid; border-width: 1px; border-color: #6E89AE;padding: 0px"><TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px;"><A HREF="www$uppweb$overview$en-us.html" CLASS="l1">Overview</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$examples$en-us.html" CLASS="l1">Examples</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$ss$en-us.html" CLASS="l1">Screenshots</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$comparison$en-us.html" CLASS="l1">Comparisons</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$apps$en-us.html" CLASS="l1">Applications</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$download$en-us.html" CLASS="l1">Download</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$documentation$en-us.html" CLASS="l1">Documentation</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$Tutorials$en-us.html" CLASS="l1">Tutorials</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="app$ide$UppHub$en-us.html" CLASS="l1">UppHub</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$Roadmap$en-us.html" CLASS="l1">Status & Roadmap</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$FAQ$en-us.html" CLASS="l1">FAQ</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="app$ide$About$en-us.html" CLASS="l1">Authors & License</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="https://www.ultimatepp.org/forums" CLASS="l1">Forums</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$Funding$en-us.html" CLASS="l1">Funding U++</A>
+</TD>
+</TR>
+</TABLE>
+<TABLE BORDER="0" WIDTH="100%"><TR><TD></TD>
+</TR>
+</TABLE>
+<TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%" BGCOLOR="#FFFFFF" style="border-style: solid; border-width: 1px; border-color: #6E89AE;padding: 0px"><TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('3i.png'); border: 0px solid black;padding-left:12px; padding-right:0px; padding-top:1px; padding-bottom:1px;color:#FFFFFF;"><B><span style="font-size: 8pt; font-family: sans-serif;">Search on this site</span>
+</B>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:6px; padding-right:0px; padding-top:4px; padding-bottom:4px;border-top: 1px solid #6E89AE;"><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%"><TR><TD><IMG SRC="4i.png" ALT="" BORDER="0"></TD>
+<TD><FORM ACTION="https://www.google.com/search" METHOD="GET" STYLE="margin:0px;padding:0px;"><INPUT TYPE="HIDDEN" NAME="ie" VALUE="UTF-8"><INPUT TYPE="HIDDEN" NAME="oe" VALUE="UTF-8"><INPUT TYPE="TEXT" NAME="q" SIZE="15" MAXLENGTH="256" placeholder="Site search"><INPUT TYPE="HIDDEN" NAME="sitesearch" VALUE="ultimatepp.org"></FORM>
+</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>
+<TABLE BORDER="0" WIDTH="100%"><TR><TD></TD>
+</TR>
+</TABLE>
+<br><div id="fb-root"></div>
+<script type="text/javascript">(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) {return;}
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+<div class="fb-like" data-href="https://www.facebook.com/pages/Upp-Framework/262346610476027?sk=wall" data-send="false" data-layout="button_count" data-width="160" data-show-faces="false" data-font="arial"></div>
+<br><br><script type="text/javascript"><!--
+google_ad_client = "pub-1082147624384270";
+google_ad_width = 160;
+google_ad_height = 600;
+google_ad_format = "160x600_as";
+google_ad_type = "text_image";
+google_ad_channel = "";
+google_color_border = "336699";
+google_color_bg = "FFFFFF";
+google_color_link = "0000FF";
+google_color_text = "000000";
+google_color_url = "008000";
+//--></script>
+<script type="text/javascript"
+  src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script><br><br><script type="text/javascript"><!--
+google_ad_client = "pub-1082147624384270";
+google_ad_width = 160;
+google_ad_height = 90;
+google_ad_format = "160x90_0ads_al_s";
+google_ad_channel = "";
+google_color_border = "336699";
+google_color_bg = "FFFFFF";
+google_color_link = "0000FF";
+google_color_text = "000000";
+google_color_url = "008000";
+//--></script>
+<script type="text/javascript"
+  src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+<br><br><br><br><br><br><A HREF="https://sourceforge.net/projects/upp/"><IMG SRC="https://sourceforge.net/sflogo.php?group_id=93970&amp;type=2" ALT="SourceForge.net Logo" BORDER="0" WIDTH="125" HEIGHT="37"></A>
+<br><br><A HREF="https://flathub.org/en/apps/org.ultimatepp.TheIDE"><IMG SRC="5i.png" ALT="SourceForge.net Logo" BORDER="0" WIDTH="125" HEIGHT="37"></A>
+<br><br><div style="background-color:#ffffff;width:125;height:35"><A HREF="https://github.com/ultimatepp"><IMG SRC="6i.png" ALT="GitHub Logo" BORDER="0" WIDTH="125" HEIGHT="35"></A>
+</div><br><div style="background-color:#ffffff;width:125;height:35"><div style="height:5"></div><A HREF="https://discord.gg/8XzqQzXZzb"><IMG SRC="https://assets-global.website-files.com/6257adef93867e50d84d30e2/636e0b5061df29d55a92d945_full_logo_blurple_RGB.svg" ALT="Discord Logo" BORDER="0" WIDTH="125" HEIGHT="25"></A>
+</div><br></TD>
+</TR>
+</TABLE>
+</TD>
+<TD VALIGN="TOP" BGCOLOR="#D2D9D2"><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="6"><TR><TD></TD>
+</TR>
+</TABLE>
+</TD>
+<TD VALIGN="TOP" WIDTH="100%" BGCOLOR="#D2D9D2"><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" BGCOLOR="#FFFFFF" WIDTH="100%" style="border-style: solid; border-width: 1px; border-color: #6E89AE;padding: 10px;;"><TR><TD><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%"><TR><TD><p class="C">WinFb</p>
+<p class="D">&nbsp;</p>
+<p class="D">&nbsp;</p>
+<p class="A">&nbsp;</p>
+<p class="A">&nbsp;</p>
+<p class="E">Keys.h</p>
+<p class="A">&nbsp;</p>
+<p class="F"><span class="G">#ifndef</span> _WinFb_Keys_h_</p>
+<p class="F"><span class="G">#define</span> _WinFb_Keys_h_</p>
+<p class="F">K_BACK &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">=</span> VK_BACK <span class="G">+</span> K_DELTA,</p>
+<p class="F">K_BACKSPACE &nbsp;<span class="G">=</span> VK_BACK <span class="G">+</span> K_DELTA,</p>
+<p class="F">&nbsp;</p>
+<p class="F">K_TAB &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">=</span> 9,</p>
+<p class="F">&nbsp;</p>
+<p class="F">K_SPACE &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">=</span> 32,</p>
+<p class="F">&nbsp;</p>
+<p class="F">K_RETURN &nbsp;&nbsp;&nbsp;&nbsp;<span class="G">=</span> 13,</p>
+<p class="F">K_ENTER &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">=</span> K_RETURN,</p>
+<p class="F">&nbsp;</p>
+<p class="F">K_SHIFT_KEY &nbsp;<span class="G">=</span> VK_SHIFT <span class="G">+</span> K_DELTA,</p>
+<p class="F">K_CTRL_KEY &nbsp;&nbsp;<span class="G">=</span> VK_CONTROL <span class="G">+</span> K_DELTA,</p>
+<p class="F">K_ALT_KEY &nbsp;&nbsp;&nbsp;<span class="G">=</span> VK_MENU <span class="G">+</span> K_DELTA,</p>
+<p class="F">K_CAPSLOCK &nbsp;&nbsp;<span class="G">=</span> VK_CAPITAL <span class="G">+</span> K_DELTA,</p>
+<p class="F">K_ESCAPE &nbsp;&nbsp;&nbsp;&nbsp;<span class="G">=</span> VK_ESCAPE <span class="G">+</span> K_DELTA,</p>
+<p class="F">K_PRIOR &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">=</span> VK_PRIOR <span class="G">+</span> K_DELTA,</p>
+<p class="F">K_PAGEUP &nbsp;&nbsp;&nbsp;&nbsp;<span class="G">=</span> VK_PRIOR <span class="G">+</span> K_DELTA,</p>
+<p class="F">K_NEXT &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">=</span> VK_NEXT <span class="G">+</span> K_DELTA,</p>
+<p class="F">K_PAGEDOWN &nbsp;&nbsp;<span class="G">=</span> VK_NEXT <span class="G">+</span> K_DELTA,</p>
+<p class="F">K_END &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">=</span> VK_END <span class="G">+</span> K_DELTA,</p>
+<p class="F">K_HOME &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">=</span> VK_HOME <span class="G">+</span> K_DELTA,</p>
+<p class="F">K_LEFT &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">=</span> VK_LEFT <span class="G">+</span> K_DELTA,</p>
+<p class="F">K_UP &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">=</span> VK_UP <span class="G">+</span> K_DELTA,</p>
+<p class="F">K_RIGHT &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">=</span> VK_RIGHT <span class="G">+</span> K_DELTA,</p>
+<p class="F">K_DOWN &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">=</span> VK_DOWN <span class="G">+</span> K_DELTA,</p>
+<p class="F">K_INSERT &nbsp;&nbsp;&nbsp;&nbsp;<span class="G">=</span> VK_INSERT <span class="G">+</span> K_DELTA,</p>
+<p class="F">K_DELETE &nbsp;&nbsp;&nbsp;&nbsp;<span class="G">=</span> VK_DELETE <span class="G">+</span> K_DELTA,</p>
+<p class="F">&nbsp;</p>
+<p class="F">K_NUMPAD0 &nbsp;&nbsp;&nbsp;<span class="G">=</span> VK_NUMPAD0 <span class="G">+</span> K_DELTA,</p>
+<p class="F">K_NUMPAD1 &nbsp;&nbsp;&nbsp;<span class="G">=</span> VK_NUMPAD1 <span class="G">+</span> K_DELTA,</p>
+<p class="F">K_NUMPAD2 &nbsp;&nbsp;&nbsp;<span class="G">=</span> VK_NUMPAD2 <span class="G">+</span> K_DELTA,</p>
+<p class="F">K_NUMPAD3 &nbsp;&nbsp;&nbsp;<span class="G">=</span> VK_NUMPAD3 <span class="G">+</span> K_DELTA,</p>
+<p class="F">K_NUMPAD4 &nbsp;&nbsp;&nbsp;<span class="G">=</span> VK_NUMPAD4 <span class="G">+</span> K_DELTA,</p>
+<p class="F">K_NUMPAD5 &nbsp;&nbsp;&nbsp;<span class="G">=</span> VK_NUMPAD5 <span class="G">+</span> K_DELTA,</p>
+<p class="F">K_NUMPAD6 &nbsp;&nbsp;&nbsp;<span class="G">=</span> VK_NUMPAD6 <span class="G">+</span> K_DELTA,</p>
+<p class="F">K_NUMPAD7 &nbsp;&nbsp;&nbsp;<span class="G">=</span> VK_NUMPAD7 <span class="G">+</span> K_DELTA,</p>
+<p class="F">K_NUMPAD8 &nbsp;&nbsp;&nbsp;<span class="G">=</span> VK_NUMPAD8 <span class="G">+</span> K_DELTA,</p>
+<p class="F">K_NUMPAD9 &nbsp;&nbsp;&nbsp;<span class="G">=</span> VK_NUMPAD9 <span class="G">+</span> K_DELTA,</p>
+<p class="F">K_MULTIPLY &nbsp;&nbsp;<span class="G">=</span> VK_MULTIPLY <span class="G">+</span> K_DELTA,</p>
+<p class="F">K_ADD &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">=</span> VK_ADD <span class="G">+</span> K_DELTA,</p>
+<p class="F">K_SEPARATOR &nbsp;<span class="G">=</span> VK_SEPARATOR <span class="G">+</span> K_DELTA,</p>
+<p class="F">K_SUBTRACT &nbsp;&nbsp;<span class="G">=</span> VK_SUBTRACT <span class="G">+</span> K_DELTA,</p>
+<p class="F">K_DECIMAL &nbsp;&nbsp;&nbsp;<span class="G">=</span> VK_DECIMAL <span class="G">+</span> K_DELTA,</p>
+<p class="F">K_DIVIDE &nbsp;&nbsp;&nbsp;&nbsp;<span class="G">=</span> VK_DIVIDE <span class="G">+</span> K_DELTA,</p>
+<p class="F">K_SCROLL &nbsp;&nbsp;&nbsp;&nbsp;<span class="G">=</span> VK_SCROLL <span class="G">+</span> K_DELTA,</p>
+<p class="F">&nbsp;</p>
+<p class="F">K_F1 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">=</span> VK_F1 <span class="G">+</span> K_DELTA,</p>
+<p class="F">K_F2 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">=</span> VK_F2 <span class="G">+</span> K_DELTA,</p>
+<p class="F">K_F3 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">=</span> VK_F3 <span class="G">+</span> K_DELTA,</p>
+<p class="F">K_F4 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">=</span> VK_F4 <span class="G">+</span> K_DELTA,</p>
+<p class="F">K_F5 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">=</span> VK_F5 <span class="G">+</span> K_DELTA,</p>
+<p class="F">K_F6 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">=</span> VK_F6 <span class="G">+</span> K_DELTA,</p>
+<p class="F">K_F7 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">=</span> VK_F7 <span class="G">+</span> K_DELTA,</p>
+<p class="F">K_F8 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">=</span> VK_F8 <span class="G">+</span> K_DELTA,</p>
+<p class="F">K_F9 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">=</span> VK_F9 <span class="G">+</span> K_DELTA,</p>
+<p class="F">K_F10 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">=</span> VK_F10 <span class="G">+</span> K_DELTA,</p>
+<p class="F">K_F11 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">=</span> VK_F11 <span class="G">+</span> K_DELTA,</p>
+<p class="F">K_F12 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">=</span> VK_F12 <span class="G">+</span> K_DELTA,</p>
+<p class="F">&nbsp;</p>
+<p class="F">K_A &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">=</span> 'A' <span class="G">+</span> K_DELTA,</p>
+<p class="F">K_B &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">=</span> 'B' <span class="G">+</span> K_DELTA,</p>
+<p class="F">K_C &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">=</span> 'C' <span class="G">+</span> K_DELTA,</p>
+<p class="F">K_D &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">=</span> 'D' <span class="G">+</span> K_DELTA,</p>
+<p class="F">K_E &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">=</span> 'E' <span class="G">+</span> K_DELTA,</p>
+<p class="F">K_F &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">=</span> 'F' <span class="G">+</span> K_DELTA,</p>
+<p class="F">K_G &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">=</span> 'G' <span class="G">+</span> K_DELTA,</p>
+<p class="F">K_H &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">=</span> 'H' <span class="G">+</span> K_DELTA,</p>
+<p class="F">K_I &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">=</span> 'I' <span class="G">+</span> K_DELTA,</p>
+<p class="F">K_J &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">=</span> 'J' <span class="G">+</span> K_DELTA,</p>
+<p class="F">K_K &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">=</span> 'K' <span class="G">+</span> K_DELTA,</p>
+<p class="F">K_L &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">=</span> 'L' <span class="G">+</span> K_DELTA,</p>
+<p class="F">K_M &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">=</span> 'M' <span class="G">+</span> K_DELTA,</p>
+<p class="F">K_N &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">=</span> 'N' <span class="G">+</span> K_DELTA,</p>
+<p class="F">K_O &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">=</span> 'O' <span class="G">+</span> K_DELTA,</p>
+<p class="F">K_P &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">=</span> 'P' <span class="G">+</span> K_DELTA,</p>
+<p class="F">K_Q &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">=</span> 'Q' <span class="G">+</span> K_DELTA,</p>
+<p class="F">K_R &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">=</span> 'R' <span class="G">+</span> K_DELTA,</p>
+<p class="F">K_S &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">=</span> 'S' <span class="G">+</span> K_DELTA,</p>
+<p class="F">K_T &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">=</span> 'T' <span class="G">+</span> K_DELTA,</p>
+<p class="F">K_U &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">=</span> 'U' <span class="G">+</span> K_DELTA,</p>
+<p class="F">K_V &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">=</span> 'V' <span class="G">+</span> K_DELTA,</p>
+<p class="F">K_W &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">=</span> 'W' <span class="G">+</span> K_DELTA,</p>
+<p class="F">K_X &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">=</span> 'X' <span class="G">+</span> K_DELTA,</p>
+<p class="F">K_Y &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">=</span> 'Y' <span class="G">+</span> K_DELTA,</p>
+<p class="F">K_Z &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">=</span> 'Z' <span class="G">+</span> K_DELTA,</p>
+<p class="F">K_0 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">=</span> '0' <span class="G">+</span> K_DELTA,</p>
+<p class="F">K_1 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">=</span> '1' <span class="G">+</span> K_DELTA,</p>
+<p class="F">K_2 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">=</span> '2' <span class="G">+</span> K_DELTA,</p>
+<p class="F">K_3 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">=</span> '3' <span class="G">+</span> K_DELTA,</p>
+<p class="F">K_4 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">=</span> '4' <span class="G">+</span> K_DELTA,</p>
+<p class="F">K_5 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">=</span> '5' <span class="G">+</span> K_DELTA,</p>
+<p class="F">K_6 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">=</span> '6' <span class="G">+</span> K_DELTA,</p>
+<p class="F">K_7 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">=</span> '7' <span class="G">+</span> K_DELTA,</p>
+<p class="F">K_8 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">=</span> '8' <span class="G">+</span> K_DELTA,</p>
+<p class="F">K_9 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">=</span> '9' <span class="G">+</span> K_DELTA,</p>
+<p class="F">&nbsp;</p>
+<p class="F">K_CTRL_LBRACKET &nbsp;<span class="G">=</span> K_CTRL<span class="G">|</span>219<span class="G">|</span>K_DELTA,</p>
+<p class="F">K_CTRL_RBRACKET &nbsp;<span class="G">=</span> K_CTRL<span class="G">|</span>221<span class="G">|</span>K_DELTA,</p>
+<p class="F">K_CTRL_MINUS &nbsp;&nbsp;&nbsp;&nbsp;<span class="G">=</span> K_CTRL<span class="G">|</span>0xbd<span class="G">|</span>K_DELTA,</p>
+<p class="F">K_CTRL_GRAVE &nbsp;&nbsp;&nbsp;&nbsp;<span class="G">=</span> K_CTRL<span class="G">|</span>0xc0<span class="G">|</span>K_DELTA,</p>
+<p class="F">K_CTRL_SLASH &nbsp;&nbsp;&nbsp;&nbsp;<span class="G">=</span> K_CTRL<span class="G">|</span>0xbf<span class="G">|</span>K_DELTA,</p>
+<p class="F">K_CTRL_BACKSLASH <span class="G">=</span> K_CTRL<span class="G">|</span>0xdc<span class="G">|</span>K_DELTA,</p>
+<p class="F">K_CTRL_COMMA &nbsp;&nbsp;&nbsp;&nbsp;<span class="G">=</span> K_CTRL<span class="G">|</span>0xbc<span class="G">|</span>K_DELTA,</p>
+<p class="F">K_CTRL_PERIOD &nbsp;&nbsp;&nbsp;<span class="G">=</span> K_CTRL<span class="G">|</span>0xbe<span class="G">|</span>K_DELTA,</p>
+<p class="F">K_CTRL_SEMICOLON <span class="G">=</span> K_CTRL<span class="G">|</span>0xbe<span class="G">|</span>K_DELTA,</p>
+<p class="F">K_CTRL_EQUAL &nbsp;&nbsp;&nbsp;&nbsp;<span class="G">=</span> K_CTRL<span class="G">|</span>0xbb<span class="G">|</span>K_DELTA,</p>
+<p class="F">K_CTRL_APOSTROPHE<span class="G">=</span> K_CTRL<span class="G">|</span>0xde<span class="G">|</span>K_DELTA,</p>
+<p class="F">&nbsp;</p>
+<p class="F">K_BREAK &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">=</span> VK_CANCEL <span class="G">+</span> K_DELTA,</p>
+<p class="F">&nbsp;</p>
+<p class="H">#endif</p>
+<p class="F">&nbsp;</p>
+<p class="F">&nbsp;</p>
+<p class="F">&nbsp;</p>
+<p class="E">WinFb.h</p>
+<p class="F">&nbsp;</p>
+<p class="F"><span class="G">#ifndef</span> _WinFb_WinFb_h</p>
+<p class="F"><span class="G">#define</span> _WinFb_WinFb_h</p>
+<p class="F">&nbsp;</p>
+<p class="H">#include<span class="I"> </span>&lt;<span class="I">CtrlCore</span>/<span class="I">CtrlCore</span>.<span class="I">h</span>&gt;</p>
+<p class="F">&nbsp;</p>
+<p class="F">NAMESPACE_UPP</p>
+<p class="F">&nbsp;</p>
+<p class="F">LRESULT CALLBACK fbWindowProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam);</p>
+<p class="F"><span class="G">void</span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;fbUpdate(HDC hdc, <span class="G">const</span> Rect<span class="G">&amp;</span> r);</p>
+<p class="F">&nbsp;</p>
+<p class="F">END_UPP_NAMESPACE</p>
+<p class="F">&nbsp;</p>
+<p class="H">#endif</p>
+<p class="F">&nbsp;</p>
+<p class="F">&nbsp;</p>
+<p class="F">&nbsp;</p>
+<p class="E">Local.h</p>
+<p class="F">&nbsp;</p>
+<p class="F">Vector<span class="G">&lt;</span>WString<span class="G">&gt;&amp;</span> coreCmdLine__();</p>
+<p class="F">Vector<span class="G">&lt;</span>WString<span class="G">&gt;</span> SplitCmdLine__(<span class="G">const</span> <span class="G">char</span> <span class="G">*</span>cmd);</p>
+<p class="F">&nbsp;</p>
+<p class="F"><span class="G">void</span> FBInit(HINSTANCE hInstance);</p>
+<p class="F">&nbsp;</p>
+<p class="F"><span class="G">#define</span> GUI_APP_MAIN \</p>
+<p class="F"><span class="G">void</span> GuiMainFn_();\</p>
+<p class="F">\</p>
+<p class="F"><span class="G">int</span> APIENTRY WinMain(HINSTANCE hInstance, HINSTANCE, LPSTR lpCmdLine, <span class="G">int</span> nCmdShow) \</p>
+<p class="F">{ \</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;UPP<span class="G">::</span>coreCmdLine__() <span class="G">=</span> UPP<span class="G">::</span>SplitCmdLine__(UPP<span class="G">::</span>FromSystemCharset(lpCmdLine)); \</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;UPP<span class="G">::</span>AppInitEnvironment__(); \</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;UPP<span class="G">::</span>FBInit(hInstance); \</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;AppExecute__(GuiMainFn_); \</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;Ctrl<span class="G">::</span>ExitFB(); \</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">return</span> UPP<span class="G">::</span>GetExitCode(); \</p>
+<p class="F">} \</p>
+<p class="F">\</p>
+<p class="F"><span class="G">void</span> GuiMainFn_()</p>
+<p class="F">&nbsp;</p>
+<p class="F">&nbsp;</p>
+<p class="F">&nbsp;</p>
+<p class="E">Proc.cpp</p>
+<p class="F">&nbsp;</p>
+<p class="F"><span class="G">#include</span> &quot;WinFb<span class="G">.</span>h&quot;</p>
+<p class="F">&nbsp;</p>
+<p class="F"><span class="G">#ifdef</span> flagWINFB</p>
+<p class="F">&nbsp;</p>
+<p class="F">NAMESPACE_UPP</p>
+<p class="F">&nbsp;</p>
+<p class="F"><span class="G">#define</span> LLOG(x) <span class="G">//</span>DLOG(x)</p>
+<p class="F">&nbsp;</p>
+<p class="F"><span class="G">bool</span> GetShift() &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{ <span class="G">return</span> <span class="G">!!</span>(GetKeyState(VK_SHIFT) <span class="G">&amp;</span> 0x8000); }</p>
+<p class="F"><span class="G">bool</span> GetCtrl() &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{ <span class="G">return</span> <span class="G">!!</span>(GetKeyState(VK_CONTROL) <span class="G">&amp;</span> 0x8000); }</p>
+<p class="F"><span class="G">bool</span> GetAlt() &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{ <span class="G">return</span> <span class="G">!!</span>(GetKeyState(VK_MENU) <span class="G">&amp;</span> 0x8000); }</p>
+<p class="F"><span class="G">bool</span> GetCapsLock() &nbsp;&nbsp;&nbsp;{ <span class="G">return</span> <span class="G">!!</span>(GetKeyState(VK_CAPITAL) <span class="G">&amp;</span> 1); }</p>
+<p class="F"><span class="G">bool</span> GetMouseLeft() &nbsp;&nbsp;{ <span class="G">return</span> <span class="G">!!</span>(GetKeyState(VK_LBUTTON) <span class="G">&amp;</span> 0x8000); }</p>
+<p class="F"><span class="G">bool</span> GetMouseRight() &nbsp;{ <span class="G">return</span> <span class="G">!!</span>(GetKeyState(VK_RBUTTON) <span class="G">&amp;</span> 0x8000); }</p>
+<p class="F"><span class="G">bool</span> GetMouseMiddle() { <span class="G">return</span> <span class="G">!!</span>(GetKeyState(VK_MBUTTON) <span class="G">&amp;</span> 0x8000); }</p>
+<p class="F">&nbsp;</p>
+<p class="F">dword fbKEYtoK(dword chr) {</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">if</span>(chr <span class="G">==</span> VK_TAB)</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;chr <span class="G">=</span> K_TAB;</p>
+<p class="H"><span class="I">&nbsp;&nbsp;&nbsp;&nbsp;</span>else</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">if</span>(chr <span class="G">==</span> VK_SPACE)</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;chr <span class="G">=</span> K_SPACE;</p>
+<p class="H"><span class="I">&nbsp;&nbsp;&nbsp;&nbsp;</span>else</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">if</span>(chr <span class="G">==</span> VK_RETURN)</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;chr <span class="G">=</span> K_RETURN;</p>
+<p class="H"><span class="I">&nbsp;&nbsp;&nbsp;&nbsp;</span>else</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;chr <span class="G">=</span> chr <span class="G">+</span> K_DELTA;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">if</span>(chr <span class="G">==</span> K_ALT_KEY <span class="G">||</span> chr <span class="G">==</span> K_CTRL_KEY <span class="G">||</span> chr <span class="G">==</span> K_SHIFT_KEY)</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">return</span> chr;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">if</span>(GetCtrl()) chr <span class="G">|=</span> K_CTRL;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">if</span>(GetAlt()) chr <span class="G">|=</span> K_ALT;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">if</span>(GetShift()) chr <span class="G">|=</span> K_SHIFT;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">return</span> chr;</p>
+<p class="F">}</p>
+<p class="F">&nbsp;</p>
+<p class="F"><span class="G">#ifdef</span> _DEBUG</p>
+<p class="F">&nbsp;</p>
+<p class="F"><span class="G">#define</span> x_MSG(x) &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{ x, <span class="G">#</span>x },</p>
+<p class="F">&nbsp;</p>
+<p class="F">Tuple2<span class="G">&lt;int</span>, <span class="G">const</span> <span class="G">char</span> <span class="G">*&gt;</span> sWinMsg<span class="G">[]</span> <span class="G">=</span> {</p>
+<p class="H">#include<span class="I"> </span>&lt;<span class="I">CtrlCore</span>/<span class="I">Win32Msg</span>.<span class="I">i</span>&gt;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;{0, NULL}</p>
+<p class="F">};</p>
+<p class="F">&nbsp;</p>
+<p class="H">#endif</p>
+<p class="F">&nbsp;</p>
+<p class="F">LRESULT CALLBACK fbWindowProc(HWND hwnd, UINT message, WPARAM wParam, LPARAM lParam)</p>
+<p class="F">{</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;GuiLock __;</p>
+<p class="F"><span class="G">#ifdef</span> _DEBUG</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;Tuple2<span class="G">&lt;int</span>, <span class="G">const</span> <span class="G">char</span> <span class="G">*&gt;</span> <span class="G">*</span>x <span class="G">=</span> FindTuple(sWinMsg, __countof(sWinMsg), message);</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">if</span>(x)</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;LLOG(x<span class="G">-&gt;</span>b <span class="G">&lt;&lt;</span> &quot;, wParam<span class="G">:</span> &quot; <span class="G">&lt;&lt;</span> wParam <span class="G">&lt;&lt;</span> &quot;, lParam<span class="G">:</span> &quot; <span class="G">&lt;&lt;</span> lParam);</p>
+<p class="H">#endif</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">//</span>&nbsp;&nbsp;&nbsp;&nbsp;LLOG(&quot;Ctrl<span class="G">::</span>WindowProc(&quot; <span class="G">&lt;&lt;</span> message <span class="G">&lt;&lt;</span> &quot;) in &quot; <span class="G">&lt;&lt;</span> <span class="G">::</span>Name(<span class="G">this</span>) <span class="G">&lt;&lt;</span> &quot;, focus &quot; <span class="G">&lt;&lt;</span> (<span class="G">void</span> <span class="G">*</span>)<span class="G">::</span>GetFocus());</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">switch</span>(message) {</p>
+<p class="H"><span class="I">&nbsp;&nbsp;&nbsp;&nbsp;</span>case<span class="I"> WM_PAINT</span>:</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ASSERT(hwnd);</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">if</span>(hwnd) {</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;PAINTSTRUCT ps;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;HDC dc <span class="G">=</span> BeginPaint(hwnd, <span class="G">&amp;</span>ps);</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;fbUpdate(dc, ps<span class="G">.</span>rcPaint);</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">#if</span> 0</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Rect r <span class="G">=</span> ps<span class="G">.</span>rcPaint;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">::</span>PatBlt(dc, r<span class="G">.</span>left, r<span class="G">.</span>top, r<span class="G">.</span>GetWidth(), r<span class="G">.</span>GetHeight(), DSTINVERT);</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Sleep(40);</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">::</span>PatBlt(dc, r<span class="G">.</span>left, r<span class="G">.</span>top, r<span class="G">.</span>GetWidth(), r<span class="G">.</span>GetHeight(), DSTINVERT);</p>
+<p class="H"><span class="I">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>#endif</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;EndPaint(hwnd, <span class="G">&amp;</span>ps);</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">return</span> 0L;</p>
+<p class="H"><span class="I">&nbsp;&nbsp;&nbsp;&nbsp;</span>case<span class="I"> WM_LBUTTONDOWN</span>:</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Ctrl<span class="G">::</span>DoMouseFB(Ctrl<span class="G">::</span>LEFTDOWN, Point((dword)lParam));</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">return</span> 0L;</p>
+<p class="H"><span class="I">&nbsp;&nbsp;&nbsp;&nbsp;</span>case<span class="I"> WM_LBUTTONUP</span>:</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Ctrl<span class="G">::</span>DoMouseFB(Ctrl<span class="G">::</span>LEFTUP, Point((dword)lParam));</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">return</span> 0L;</p>
+<p class="H"><span class="I">&nbsp;&nbsp;&nbsp;&nbsp;</span>case<span class="I"> WM_LBUTTONDBLCLK</span>:</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Ctrl<span class="G">::</span>DoMouseFB(Ctrl<span class="G">::</span>LEFTDOUBLE, Point((dword)lParam));</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">return</span> 0L;</p>
+<p class="H"><span class="I">&nbsp;&nbsp;&nbsp;&nbsp;</span>case<span class="I"> WM_RBUTTONDOWN</span>:</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Ctrl<span class="G">::</span>DoMouseFB(Ctrl<span class="G">::</span>RIGHTDOWN, Point((dword)lParam));</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">return</span> 0L;</p>
+<p class="H"><span class="I">&nbsp;&nbsp;&nbsp;&nbsp;</span>case<span class="I"> WM_RBUTTONUP</span>:</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Ctrl<span class="G">::</span>DoMouseFB(Ctrl<span class="G">::</span>RIGHTUP, Point((dword)lParam));</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">return</span> 0L;</p>
+<p class="H"><span class="I">&nbsp;&nbsp;&nbsp;&nbsp;</span>case<span class="I"> WM_RBUTTONDBLCLK</span>:</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Ctrl<span class="G">::</span>DoMouseFB(Ctrl<span class="G">::</span>RIGHTDOUBLE, Point((dword)lParam));</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">return</span> 0L;</p>
+<p class="H"><span class="I">&nbsp;&nbsp;&nbsp;&nbsp;</span>case<span class="I"> WM_MBUTTONDOWN</span>:</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Ctrl<span class="G">::</span>DoMouseFB(Ctrl<span class="G">::</span>MIDDLEDOWN, Point((dword)lParam));</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">return</span> 0L;</p>
+<p class="H"><span class="I">&nbsp;&nbsp;&nbsp;&nbsp;</span>case<span class="I"> WM_MBUTTONUP</span>:</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Ctrl<span class="G">::</span>DoMouseFB(Ctrl<span class="G">::</span>MIDDLEUP, Point((dword)lParam));</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">return</span> 0L;</p>
+<p class="H"><span class="I">&nbsp;&nbsp;&nbsp;&nbsp;</span>case<span class="I"> WM_MBUTTONDBLCLK</span>:</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Ctrl<span class="G">::</span>DoMouseFB(Ctrl<span class="G">::</span>MIDDLEDOUBLE, Point((dword)lParam));</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">return</span> 0L;</p>
+<p class="H"><span class="I">&nbsp;&nbsp;&nbsp;&nbsp;</span>case<span class="I"> WM_MOUSEMOVE</span>:</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Ctrl<span class="G">::</span>DoMouseFB(Ctrl<span class="G">::</span>MOUSEMOVE, Point((dword)lParam));</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">return</span> 0L;</p>
+<p class="H"><span class="I">&nbsp;&nbsp;&nbsp;&nbsp;</span>case<span class="I"> 0x20a</span>:<span class="I"> </span>//<span class="I"> WM_MOUSEWHEEL</span>:</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Point p(0, 0);</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">::</span>ClientToScreen(hwnd, p);</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Ctrl<span class="G">::</span>DoMouseFB(Ctrl<span class="G">::</span>MOUSEWHEEL, Point((dword)lParam) <span class="G">-</span> p, (<span class="G">short</span>)HIWORD(wParam));</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">return</span> 0L;</p>
+<p class="H"><span class="I">&nbsp;&nbsp;&nbsp;&nbsp;</span>case<span class="I"> WM_SETCURSOR</span>:</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">if</span>(LOWORD((dword)lParam) <span class="G">==</span> HTCLIENT) {</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SetCursor(NULL);</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">return</span> TRUE;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">break</span>;</p>
+<p class="H">//<span class="I">&nbsp;&nbsp;&nbsp;&nbsp;</span>case<span class="I"> WM_MENUCHAR</span>:</p>
+<p class="F"><span class="G">//</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">return</span> MAKELONG(0, MNC_SELECT);</p>
+<p class="H"><span class="I">&nbsp;&nbsp;&nbsp;&nbsp;</span>case<span class="I"> WM_KEYDOWN</span>:</p>
+<p class="H"><span class="I">&nbsp;&nbsp;&nbsp;&nbsp;</span>case<span class="I"> WM_SYSKEYDOWN</span>:</p>
+<p class="H"><span class="I">&nbsp;&nbsp;&nbsp;&nbsp;</span>case<span class="I"> WM_CHAR</span>:</p>
+<p class="F"><span class="G">//</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ignorekeyup <span class="G">=</span> <span class="G">false</span>;</p>
+<p class="H"><span class="I">&nbsp;&nbsp;&nbsp;&nbsp;</span>case<span class="I"> WM_KEYUP</span>:</p>
+<p class="H"><span class="I">&nbsp;&nbsp;&nbsp;&nbsp;</span>case<span class="I"> WM_SYSKEYUP</span>:</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;String msgdump;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">switch</span>(message)</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">case</span> WM_KEYDOWN<span class="G">:</span> &nbsp;&nbsp;&nbsp;msgdump <span class="G">&lt;&lt;</span> &quot;WM_KEYDOWN&quot;; <span class="G">break</span>;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">case</span> WM_KEYUP<span class="G">:</span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;msgdump <span class="G">&lt;&lt;</span> &quot;WM_KEYUP&quot;; <span class="G">break</span>;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">case</span> WM_SYSKEYDOWN<span class="G">:</span> msgdump <span class="G">&lt;&lt;</span> &quot;WM_SYSKEYDOWN&quot;; <span class="G">break</span>;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">case</span> WM_SYSKEYUP<span class="G">:</span> &nbsp;&nbsp;msgdump <span class="G">&lt;&lt;</span> &quot;WM_SYSKEYUP&quot;; <span class="G">break</span>;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">case</span> WM_CHAR<span class="G">:</span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;msgdump <span class="G">&lt;&lt;</span> &quot;WM_CHAR&quot;; <span class="G">break</span>;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;msgdump <span class="G">&lt;&lt;</span> &quot; wParam <span class="G">=</span> 0x&quot; <span class="G">&lt;&lt;</span> FormatIntHex(wParam, 8)</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">&lt;&lt;</span> &quot;, lParam <span class="G">=</span> 0x&quot; <span class="G">&lt;&lt;</span> FormatIntHex(lParam, 8);</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;LLOG(msgdump);</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;dword keycode <span class="G">=</span> 0;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">if</span>(message <span class="G">==</span> WM_KEYDOWN) {</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;keycode <span class="G">=</span> fbKEYtoK((dword)wParam);</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">if</span>(keycode <span class="G">==</span> K_SPACE)</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;keycode <span class="G">=</span> 0;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</p>
+<p class="H"><span class="I">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>else</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">if</span>(message <span class="G">==</span> WM_KEYUP)</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;keycode <span class="G">=</span> fbKEYtoK((dword)wParam) <span class="G">|</span> K_KEYUP;</p>
+<p class="H"><span class="I">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>else</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">if</span>(message <span class="G">==</span> WM_SYSKEYDOWN <span class="G">/*&amp;&amp;</span> ((lParam <span class="G">&amp;</span> 0x20000000) <span class="G">||</span> wParam <span class="G">==</span> VK_F10)<span class="G">*/</span>)</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;keycode <span class="G">=</span> fbKEYtoK((dword)wParam);</p>
+<p class="H"><span class="I">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>else</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">if</span>(message <span class="G">==</span> WM_SYSKEYUP <span class="G">/*&amp;&amp;</span> ((lParam <span class="G">&amp;</span> 0x20000000) <span class="G">||</span> wParam <span class="G">==</span> VK_F10)<span class="G">*/</span>)</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;keycode <span class="G">=</span> fbKEYtoK((dword)wParam) <span class="G">|</span> K_KEYUP;</p>
+<p class="H"><span class="I">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>else</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">if</span>(message <span class="G">==</span> WM_CHAR <span class="G">&amp;&amp;</span> wParam <span class="G">!=</span> 127 <span class="G">&amp;&amp;</span> wParam <span class="G">&gt;</span> 32 <span class="G">||</span> wParam <span class="G">==</span> 32 <span class="G">&amp;&amp;</span> fbKEYtoK(VK_SPACE) <span class="G">==</span> K_SPACE)</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;keycode <span class="G">=</span> (dword)wParam;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">bool</span> b <span class="G">=</span> <span class="G">false</span>;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">if</span>(keycode)</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;b <span class="G">=</span> Ctrl<span class="G">::</span>DoKeyFB(keycode, LOWORD(lParam));</p>
+<p class="F"><span class="G">//</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;LLOG(&quot;key processed <span class="G">=</span> &quot; <span class="G">&lt;&lt;</span> b);</p>
+<p class="F"><span class="G">//</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">if</span>(b <span class="G">||</span> (message <span class="G">==</span> WM_SYSKEYDOWN <span class="G">||</span> message <span class="G">==</span> WM_SYSKEYUP)</p>
+<p class="F"><span class="G">//</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">&amp;&amp;</span> wParam <span class="G">!=</span> VK_F4 <span class="G">&amp;&amp;</span> <span class="G">!</span>PassWindowsKey((dword)wParam)) <span class="G">//</span> 17<span class="G">.</span>11<span class="G">.</span>2003 Mirek <span class="G">-&gt;</span> invoke system menu</p>
+<p class="F"><span class="G">//</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">return</span> 0L;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">break</span>;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">break</span>;</p>
+<p class="H">//<span class="I">&nbsp;&nbsp;&nbsp;&nbsp;</span>case<span class="I"> WM_GETDLGCODE</span>:</p>
+<p class="F"><span class="G">//</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">return</span> wantfocus <span class="G">?</span> 0 <span class="G">:</span> DLGC_STATIC;</p>
+<p class="H"><span class="I">&nbsp;&nbsp;&nbsp;&nbsp;</span>case<span class="I"> WM_ERASEBKGND</span>:</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">return</span> 1L;</p>
+<p class="H"><span class="I">&nbsp;&nbsp;&nbsp;&nbsp;</span>case<span class="I"> WM_SIZE</span>:</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Ctrl<span class="G">::</span>SetFramebufferSize(Size(LOWORD(lParam), HIWORD(lParam)));</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">return</span> 0L;</p>
+<p class="H"><span class="I">&nbsp;&nbsp;&nbsp;&nbsp;</span>case<span class="I"> WM_HELP</span>:</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">return</span> TRUE;</p>
+<p class="H"><span class="I">&nbsp;&nbsp;&nbsp;&nbsp;</span>case<span class="I"> WM_CLOSE</span>:</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Ctrl<span class="G">::</span>EndSession();</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">return</span> 0L;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;}</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">return</span> DefWindowProc(hwnd, message, wParam, lParam);</p>
+<p class="F">}</p>
+<p class="F">&nbsp;</p>
+<p class="F">END_UPP_NAMESPACE</p>
+<p class="F">&nbsp;</p>
+<p class="H">#endif</p>
+<p class="F">&nbsp;</p>
+<p class="F">&nbsp;</p>
+<p class="F">&nbsp;</p>
+<p class="E">Win.cpp</p>
+<p class="F">&nbsp;</p>
+<p class="F"><span class="G">#include</span> &quot;WinFb<span class="G">.</span>h&quot;</p>
+<p class="F">&nbsp;</p>
+<p class="F"><span class="G">#ifdef</span> flagWINFB</p>
+<p class="F">&nbsp;</p>
+<p class="F">NAMESPACE_UPP</p>
+<p class="F">&nbsp;</p>
+<p class="F"><span class="G">#define</span> LLOG(x) <span class="G">//</span>DLOG(x)</p>
+<p class="F">&nbsp;</p>
+<p class="F">HWND fbHWND;</p>
+<p class="F">&nbsp;</p>
+<p class="F"><span class="G">bool</span> FBIsWaitingEvent()</p>
+<p class="F">{</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;MSG msg;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">return</span> PeekMessage(<span class="G">&amp;</span>msg, NULL, 0, 0, PM_NOREMOVE);</p>
+<p class="F">}</p>
+<p class="F">&nbsp;</p>
+<p class="F"><span class="G">bool</span> FBProcessEvent(<span class="G">bool</span> <span class="G">*</span>quit)</p>
+<p class="F">{</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;MSG msg;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">if</span>(PeekMessageW(<span class="G">&amp;</span>msg, NULL, 0, 0, PM_REMOVE)) {</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">if</span>(msg<span class="G">.</span>message <span class="G">==</span> WM_QUIT <span class="G">&amp;&amp;</span> quit)</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">*</span>quit <span class="G">=</span> <span class="G">true</span>;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;TranslateMessage(<span class="G">&amp;</span>msg);</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;DispatchMessageW(<span class="G">&amp;</span>msg);</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">return</span> <span class="G">true</span>;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;}</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">return</span> <span class="G">false</span>;</p>
+<p class="F">}</p>
+<p class="F">&nbsp;</p>
+<p class="F"><span class="G">void</span> FBQuitSession()</p>
+<p class="F">{</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">::</span>PostQuitMessage(0);</p>
+<p class="F">}</p>
+<p class="F">&nbsp;</p>
+<p class="F"><span class="G">void</span> FBSleep(<span class="G">int</span> ms)</p>
+<p class="F">{</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;TimeStop tm;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;MsgWaitForMultipleObjects(0, NULL, FALSE, ms, QS_ALLINPUT);</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;LLOG(&quot;@ FBSleep &quot; <span class="G">&lt;&lt;</span> tm<span class="G">.</span>Elapsed());</p>
+<p class="F">}</p>
+<p class="F">&nbsp;</p>
+<p class="F"><span class="G">void</span> FBInit(HINSTANCE hInstance)</p>
+<p class="F">{</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;GuiLock __;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;Ctrl<span class="G">::</span>InitFB();</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;WNDCLASSW &nbsp;wc;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;Zero(wc);</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;wc<span class="G">.</span>style &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">=</span> CS_DBLCLKS<span class="G">|</span>CS_HREDRAW<span class="G">|</span>CS_VREDRAW;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;wc<span class="G">.</span>lpfnWndProc &nbsp;&nbsp;<span class="G">=</span> (WNDPROC)fbWindowProc;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;wc<span class="G">.</span>hInstance &nbsp;&nbsp;&nbsp;&nbsp;<span class="G">=</span> hInstance;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;wc<span class="G">.</span>hCursor &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">=</span> LoadCursor(NULL, IDC_ARROW);</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;wc<span class="G">.</span>hbrBackground <span class="G">=</span> (HBRUSH)NULL;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;wc<span class="G">.</span>lpszClassName <span class="G">=</span> L&quot;UPP<span class="G">-</span>FB<span class="G">-</span>CLASS&quot;;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;RegisterClassW(<span class="G">&amp;</span>wc);</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;fbHWND <span class="G">=</span> CreateWindowW(L&quot;UPP<span class="G">-</span>FB<span class="G">-</span>CLASS&quot;, L&quot;&quot;,</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;WS_OVERLAPPED<span class="G">|</span>WS_VISIBLE<span class="G">|</span>WS_THICKFRAME<span class="G">|</span>WS_MINIMIZEBOX<span class="G">|</span>WS_MAXIMIZEBOX<span class="G">|</span>WS_SYSMENU,</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CW_USEDEFAULT, CW_USEDEFAULT, CW_USEDEFAULT, CW_USEDEFAULT,</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;NULL, NULL, hInstance, NULL);</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;SetTimer(fbHWND, 1, 10, NULL);</p>
+<p class="F">&nbsp;</p>
+<p class="F"><span class="G">//</span>&nbsp;&nbsp;&nbsp;&nbsp;Csizeinit();</p>
+<p class="F">}</p>
+<p class="F">&nbsp;</p>
+<p class="F"><span class="G">void</span> fbUpdate(HDC hdc, <span class="G">const</span> Rect<span class="G">&amp;</span> r_)</p>
+<p class="F">{</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">const</span> ImageBuffer<span class="G">&amp;</span> framebuffer <span class="G">=</span> Ctrl<span class="G">::</span>GetFrameBuffer();</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;Size sz <span class="G">=</span> framebuffer<span class="G">.</span>GetSize();</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;Rect r <span class="G">=</span> sz;</p>
+<p class="F"><span class="G">//</span>&nbsp;&nbsp;&nbsp;&nbsp;Rect r <span class="G">=</span> r_;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;LLOG(&quot;fbUpdate &quot; <span class="G">&lt;&lt;</span> r);</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;Buffer<span class="G">&lt;</span>byte<span class="G">&gt;</span> data;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;data<span class="G">.</span>Alloc(<span class="G">sizeof</span>(BITMAPINFOHEADER) <span class="G">+</span> <span class="G">sizeof</span>(RGBQUAD)<span class="G">*</span>256);</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;BITMAPINFOHEADER <span class="G">*</span>hi <span class="G">=</span> (BITMAPINFOHEADER <span class="G">*</span>) <span class="G">~</span>data;;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;memset(hi, 0, <span class="G">sizeof</span>(BITMAPINFOHEADER));</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;hi<span class="G">-&gt;</span>biSize <span class="G">=</span> <span class="G">sizeof</span>(BITMAPINFOHEADER);</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;hi<span class="G">-&gt;</span>biPlanes <span class="G">=</span> 1;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;hi<span class="G">-&gt;</span>biBitCount <span class="G">=</span> 32;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;hi<span class="G">-&gt;</span>biCompression <span class="G">=</span> BI_RGB;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;hi<span class="G">-&gt;</span>biSizeImage <span class="G">=</span> 0;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;hi<span class="G">-&gt;</span>biClrUsed <span class="G">=</span> 0;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;hi<span class="G">-&gt;</span>biClrImportant <span class="G">=</span> 0;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;hi<span class="G">-&gt;</span>biWidth <span class="G">=</span> sz<span class="G">.</span>cx;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;hi<span class="G">-&gt;</span>biHeight <span class="G">=</span> <span class="G">-</span>sz<span class="G">.</span>cy;</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">::</span>SetDIBitsToDevice(hdc, r<span class="G">.</span>left, r<span class="G">.</span>top, r<span class="G">.</span>GetWidth(), r<span class="G">.</span>GetHeight(),</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;r<span class="G">.</span>left, <span class="G">-</span>r<span class="G">.</span>top <span class="G">-</span> r<span class="G">.</span>GetHeight() <span class="G">+</span> sz<span class="G">.</span>cy, 0, sz<span class="G">.</span>cy,</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">~</span>framebuffer, (BITMAPINFO <span class="G">*</span>)<span class="G">~</span>data, DIB_RGB_COLORS);</p>
+<p class="F">}</p>
+<p class="F">&nbsp;</p>
+<p class="F"><span class="G">void</span> FBInitUpdate()</p>
+<p class="F">{</p>
+<p class="F">&nbsp;</p>
+<p class="F">}</p>
+<p class="F">&nbsp;</p>
+<p class="F"><span class="G">void</span> FBUpdate(<span class="G">const</span> Rect<span class="G">&amp;</span> r)</p>
+<p class="F">{</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;LLOG(&quot;FBUpdate &quot; <span class="G">&lt;&lt;</span> r);</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">if</span>(fbHWND) {</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;HDC hdc <span class="G">=</span> GetDC(fbHWND);</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;fbUpdate(hdc, r);</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">#if</span> 0</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">::</span>PatBlt(hdc, r<span class="G">.</span>left, r<span class="G">.</span>top, r<span class="G">.</span>GetWidth(), r<span class="G">.</span>GetHeight(), DSTINVERT);</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Sleep(40);</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">::</span>PatBlt(hdc, r<span class="G">.</span>left, r<span class="G">.</span>top, r<span class="G">.</span>GetWidth(), r<span class="G">.</span>GetHeight(), DSTINVERT);</p>
+<p class="H"><span class="I">&nbsp;&nbsp;&nbsp;&nbsp;</span>#endif</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ReleaseDC(fbHWND, hdc);</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;}</p>
+<p class="F"><span class="G">//</span>&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">::</span>InvalidateRect(fbHWND, NULL, <span class="G">false</span>);</p>
+<p class="F">}</p>
+<p class="F">&nbsp;</p>
+<p class="F"><span class="G">void</span> FBFlush()</p>
+<p class="F">{</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;<span class="G">::</span>UpdateWindow(fbHWND);</p>
+<p class="F">&nbsp;&nbsp;&nbsp;&nbsp;GdiFlush();</p>
+<p class="F">}</p>
+<p class="F">&nbsp;</p>
+<p class="F">END_UPP_NAMESPACE</p>
+<p class="F">&nbsp;</p>
+<p class="H">#endif</p>
+<p class="F">&nbsp;</p>
+<p class="F">&nbsp;</p>
+<p class="F">&nbsp;</p>
+<p class="F">&nbsp;</p>
+</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>
+<TABLE BORDER="0" WIDTH="100%"><TR><TD></TD>
+</TR>
+</TABLE>
+<TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" BGCOLOR="#FFFFFF" WIDTH="100%" style="border-style: solid; border-width: 1px; border-color: #6E89AE;padding: 10px;;"><TR><TD><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%"><TR><TD><p class="A"><span class="B"> </span><a href="www$uppweb$contribweb$en-us.html">Do you want to contribute?</a></p>
+</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>
+<script type="text/javascript">var a={'reference$WinFb$en-us.html':'English'};var p=window.location.pathname.split("/");p=p[p.length-1];var s='<select id="lang" onchange="window.location=document.getElementById(\'lang\').value;">';for(l in a){if(p==l){d=" selected=1"}else{d=""}s+='<option value="'+l+'"'+d+'>'+a[l]+'</option>'}s+='</select>';var d=document.createElement('div');d.innerHTML=s;var c=document.getElementById('langs');c.replaceChild(d,c.firstChild);document.getElementById('langbox').style.display='block';</script></BODY>

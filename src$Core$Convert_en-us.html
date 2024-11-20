@@ -1,0 +1,1133 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en-us">
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
+<META NAME="Generator" CONTENT="U++ HTML Package">
+<TITLE>Convert :: U++</TITLE>
+<STYLE TYPE="text/css"><!--
+.A{margin:0px 0px 0px 0px;text-indent:0px;text-align:left;color:#000000;font-family:sans-serif;font-size:10pt;font-weight:normal;font-style:normal;}
+.B{font-size:12pt;}
+.C{border-collapse:collapse;table-layout:auto;border: 2px solid #000000;}
+.D{padding: 3px 5px 3px 5px;border-left: 1px solid #000000;border-top: 1px solid #000000;border-right: 1px solid #000000;border-bottom: 1px solid #000000;background-color:#712A00;vertical-align:middle;}
+.E{margin:0px 0px 0px 0px;text-indent:0px;text-align:left;color:#e0e0e0;font-family:sans-serif;font-size:16pt;font-weight:bold;font-style:normal;}
+.F{margin:0px 0px 0px 0px;text-indent:0px;text-align:left;color:#000000;font-family:sans-serif;font-size:6pt;font-weight:normal;font-style:normal;}
+.G{margin:0px 0px 5px 0px;text-indent:0px;text-align:left;color:#000000;font-family:sans-serif;font-size:12pt;font-weight:bold;font-style:normal;}
+.H{color:#0000ff;font-weight:normal;}
+.I{font-weight:normal;}
+.J{margin:8px 0px 0px 0px;text-indent:0px;text-align:left;color:#000000;font-family:sans-serif;font-size:10pt;font-weight:normal;font-style:normal;}
+.K{border-collapse:collapse;table-layout:auto;border: 2px solid #808080;}
+.L{padding: 3px 5px 3px 5px;border-left: 1px solid #808080;border-top: 1px solid #808080;border-right: 1px solid #808080;border-bottom: 1px solid #808080;background-color:#C0C0C0;vertical-align:middle;}
+.M{margin:0px 0px 0px 0px;text-indent:0px;text-align:left;color:#000000;font-family:sans-serif;font-size:10pt;font-weight:bold;font-style:normal;}
+.N{margin:0px 0px 5px 0px;text-indent:0px;text-align:left;color:#0000ff;font-family:sans-serif;font-size:10pt;font-weight:normal;font-style:normal;}
+.O{color:#000000;}
+.P{color:#000000;font-weight:bold;}
+.Q{color:#800000;font-weight:bold;}
+.R{margin:0px 0px 0px 57px;text-indent:0px;text-align:left;color:#000000;font-family:sans-serif;font-size:10pt;font-weight:normal;font-style:normal;}
+.S{color:#800000;font-family:monospace;font-weight:bold;}
+.T{font-weight:bold;font-style:italic;}
+.U{color:#800000;}
+.V{margin:0px 0px 0px 0px;text-indent:0px;text-align:left;color:#000000;font-family:sans-serif;font-size:12pt;font-weight:normal;font-style:normal;}
+.W{margin:0px 0px 5px 0px;text-indent:0px;text-align:left;color:#800000;font-family:sans-serif;font-size:12pt;font-weight:bold;font-style:normal;}
+.X{color:#000000;font-weight:normal;}
+.Y{margin:0px 0px 5px 0px;text-indent:0px;text-align:left;color:#000000;font-family:sans-serif;font-size:10pt;font-weight:normal;font-style:normal;}
+.Z{font-weight:bold;}
+.AA{color:#0000ff;}
+.AB{font-style:italic;}
+.AC{color:#008000;}
+.AD{margin:0px 0px 0px 57px;text-indent:0px;text-align:left;color:#000000;font-family:monospace;font-size:8pt;font-weight:normal;font-style:normal;}
+.AE{color:#008000;font-weight:bold;}
+.AF{margin:8px 0px 5px 0px;text-indent:0px;text-align:left;color:#000000;font-family:sans-serif;font-size:10pt;font-weight:normal;font-style:normal;}
+a.l1         { text-decoration:none; font-size: 8pt; font-family: sans-serif; font-weight: normal; }
+a.l1:link    { color:#000000; }
+a.l1:visited { color:#000080; }
+a.l1:hover   { color:#9933CC; }
+a.l1:active  { color:#000000; }
+a.l2         { text-decoration:none; font-size: 12pt; font-family: sans-serif; font-variant: small-caps; }
+a.l2:link    { color:#0066FF; }
+a.l2:visited { color:#FF6600; }
+a.l2:hover   { color:#BC0624; }
+a.l2:active  { color:#BC0024; }
+
+-->
+</STYLE>
+<META NAME="keywords" CONTENT="framework, toolkit, widget, c++, visual, studio, dev-cpp, builder, ide, class, component,wxwidgets, qt, rapid, application, development, rad, mfc, linux, macos, gui, sdl, directx, desktop"><META name="robots" content="index,follow">
+<LINK rel="alternate" type="application/rss+xml" title="SVN changes" href="svnchanges.xml">
+<LINK rel="shortcut icon" type="image/png" href="favicon.png">
+</HEAD><BODY BGCOLOR="#D2D9D2" ALINK="#800000" LINK="#000000" VLINK="#000080"><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%"><TR><TD COLSPAN="3"><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%" BGCOLOR="#FFFFFF" style="border: 1px solid #6E89AE;padding-left: 10px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;"><TR><TD><A HREF="index.html"><IMG SRC="0i.png" ALT="" BORDER="0"></A>
+</TD>
+<TD ALIGN="RIGHT" VALIGN="BOTTOM" STYLE="padding-bottom: 5px; background-image: url('1i.png')"><span style="font-size: 14pt; font-family: sans-serif;"><script type="text/javascript"><!--
+google_ad_client = "pub-1082147624384270";
+google_ad_width = 468;
+google_ad_height = 60;
+google_ad_format = "468x60_as";
+google_ad_type = "text_image";
+google_ad_channel = "";
+google_color_border = "336699";
+google_color_bg = "FFFFFF";
+google_color_link = "0000FF";
+google_color_text = "000000";
+google_color_url = "008000";
+//--></script>
+<script type="text/javascript"
+  src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+&nbsp;&nbsp;</span>
+</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>
+<TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%"><TR><TD COLSPAN="3" BGCOLOR="#D2D9D2" HEIGHT="6"></TD>
+</TR>
+<TR><TD VALIGN="TOP" ALIGN="CENTER"><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="160"><TR><TD ALIGN="CENTER"><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%" BGCOLOR="#FFFFFF" style="border-style: solid; border-width: 1px; border-color: #6E89AE;padding: 0px"><TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px;"><A HREF="www$uppweb$overview$en-us.html" CLASS="l1">Overview</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$examples$en-us.html" CLASS="l1">Examples</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$ss$en-us.html" CLASS="l1">Screenshots</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$comparison$en-us.html" CLASS="l1">Comparisons</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$apps$en-us.html" CLASS="l1">Applications</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$download$en-us.html" CLASS="l1">Download</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$documentation$en-us.html" CLASS="l1">Documentation</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$Tutorials$en-us.html" CLASS="l1">Tutorials</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="app$ide$UppHub$en-us.html" CLASS="l1">UppHub</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$Roadmap$en-us.html" CLASS="l1">Status & Roadmap</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$FAQ$en-us.html" CLASS="l1">FAQ</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="app$ide$About$en-us.html" CLASS="l1">Authors & License</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="https://www.ultimatepp.org/forums" CLASS="l1">Forums</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$Funding$en-us.html" CLASS="l1">Funding U++</A>
+</TD>
+</TR>
+</TABLE>
+<TABLE BORDER="0" WIDTH="100%"><TR><TD></TD>
+</TR>
+</TABLE>
+<TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%" BGCOLOR="#FFFFFF" style="border-style: solid; border-width: 1px; border-color: #6E89AE;padding: 0px"><TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('3i.png'); border: 0px solid black;padding-left:12px; padding-right:0px; padding-top:1px; padding-bottom:1px;color:#FFFFFF;"><B><span style="font-size: 8pt; font-family: sans-serif;">Search on this site</span>
+</B>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:6px; padding-right:0px; padding-top:4px; padding-bottom:4px;border-top: 1px solid #6E89AE;"><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%"><TR><TD><IMG SRC="4i.png" ALT="" BORDER="0"></TD>
+<TD><FORM ACTION="https://www.google.com/search" METHOD="GET" STYLE="margin:0px;padding:0px;"><INPUT TYPE="HIDDEN" NAME="ie" VALUE="UTF-8"><INPUT TYPE="HIDDEN" NAME="oe" VALUE="UTF-8"><INPUT TYPE="TEXT" NAME="q" SIZE="15" MAXLENGTH="256" placeholder="Site search"><INPUT TYPE="HIDDEN" NAME="sitesearch" VALUE="ultimatepp.org"></FORM>
+</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>
+<TABLE BORDER="0" WIDTH="100%"><TR><TD></TD>
+</TR>
+</TABLE>
+<br><div id="fb-root"></div>
+<script type="text/javascript">(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) {return;}
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+<div class="fb-like" data-href="https://www.facebook.com/pages/Upp-Framework/262346610476027?sk=wall" data-send="false" data-layout="button_count" data-width="160" data-show-faces="false" data-font="arial"></div>
+<br><br><script type="text/javascript"><!--
+google_ad_client = "pub-1082147624384270";
+google_ad_width = 160;
+google_ad_height = 600;
+google_ad_format = "160x600_as";
+google_ad_type = "text_image";
+google_ad_channel = "";
+google_color_border = "336699";
+google_color_bg = "FFFFFF";
+google_color_link = "0000FF";
+google_color_text = "000000";
+google_color_url = "008000";
+//--></script>
+<script type="text/javascript"
+  src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script><br><br><script type="text/javascript"><!--
+google_ad_client = "pub-1082147624384270";
+google_ad_width = 160;
+google_ad_height = 90;
+google_ad_format = "160x90_0ads_al_s";
+google_ad_channel = "";
+google_color_border = "336699";
+google_color_bg = "FFFFFF";
+google_color_link = "0000FF";
+google_color_text = "000000";
+google_color_url = "008000";
+//--></script>
+<script type="text/javascript"
+  src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+<br><br><br><br><br><br><A HREF="https://sourceforge.net/projects/upp/"><IMG SRC="https://sourceforge.net/sflogo.php?group_id=93970&amp;type=2" ALT="SourceForge.net Logo" BORDER="0" WIDTH="125" HEIGHT="37"></A>
+<br><br><A HREF="https://flathub.org/en/apps/org.ultimatepp.TheIDE"><IMG SRC="5i.png" ALT="SourceForge.net Logo" BORDER="0" WIDTH="125" HEIGHT="37"></A>
+<br><br><div style="background-color:#ffffff;width:125;height:35"><A HREF="https://github.com/ultimatepp"><IMG SRC="6i.png" ALT="GitHub Logo" BORDER="0" WIDTH="125" HEIGHT="35"></A>
+</div><br><div style="background-color:#ffffff;width:125;height:35"><div style="height:5"></div><A HREF="https://discord.gg/8XzqQzXZzb"><IMG SRC="https://assets-global.website-files.com/6257adef93867e50d84d30e2/636e0b5061df29d55a92d945_full_logo_blurple_RGB.svg" ALT="Discord Logo" BORDER="0" WIDTH="125" HEIGHT="25"></A>
+</div><br></TD>
+</TR>
+</TABLE>
+</TD>
+<TD VALIGN="TOP" BGCOLOR="#D2D9D2"><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="6"><TR><TD></TD>
+</TR>
+</TABLE>
+</TD>
+<TD VALIGN="TOP" WIDTH="100%" BGCOLOR="#D2D9D2"><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" BGCOLOR="#FFFFFF" WIDTH="100%" style="border-style: solid; border-width: 1px; border-color: #6E89AE;padding: 10px;;"><TR><TD><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%"><TR><TD><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr><td width="100%"><table width="100%" class="C"><colgroup><col width="100%"></colgroup>
+<tr><td class="D"><p class="E">Convert</p>
+</td>
+</tr>
+</table></td>
+</tr></table>
+<p class="F">&nbsp;</p>
+<p id="Convert::class" class="G"><span class="H">class</span><span class="I">&nbsp;</span>Convert</p>
+<p class="J">Convert-derived classes serve as bidirectional Value-Value converters. One direction is represented by Format method and usually converts the Value to the textual representation. Reverse direction is represented by the Scan method.</p>
+<p class="J">If the conversion is not possible (e.g. due to invalid textual representation), convert methods should return &quot;ErrorValue&quot; to indicate the problem.</p>
+<p class="F">&nbsp;</p>
+<p class="A">&nbsp;</p>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr><td width="100%"><table width="100%" class="K"><colgroup><col width="100%"></colgroup>
+<tr><td class="L"><p class="M">Public Member List</p>
+</td>
+</tr>
+</table></td>
+</tr></table>
+<p class="F">&nbsp;</p>
+<p id="Convert::Format(const Value&)const" class="N">virtual<span class="O"> </span><a href="Value"><span class="O"><u>Value</u></span></a><span class="O">&nbsp;</span><span class="P">Format</span><span class="O">(</span>const<span class="O">&nbsp;</span><a href="Value"><span class="O"><u>Value</u></span></a>&amp;<span class="O">&nbsp;</span><span class="Q">q</span><span class="O">)&nbsp;</span>const</p>
+<p class="R">Converts the Value. Default implementation uses Value::ToString to convert the Value.</p>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="S">q</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">Value.</p></td></tr></table>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="T">Return value</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">Converted Value.</p></td></tr></table>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Convert::Scan(const Value&)const" class="N">virtual<span class="O"> </span><a href="Value"><span class="O"><u>Value</u></span></a><span class="O">&nbsp;</span><span class="P">Scan</span><span class="O">(</span>const<span class="O">&nbsp;</span><a href="Value"><span class="O"><u>Value</u></span></a>&amp;<span class="O">&nbsp;</span><span class="Q">text</span><span class="O">)&nbsp;</span>const</p>
+<p class="R">Converts the Value in reverse direction. Default implementation returns <span class="U">text</span> (no conversion is performed).</p>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="S">text</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">Value.</p></td></tr></table>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="T">Return value</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">Converted Value.</p></td></tr></table>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Convert::Filter(int)const" class="N">virtual<span class="O"> </span>int<span class="O">&nbsp;</span><span class="P">Filter</span><span class="O">(</span>int<span class="O">&nbsp;</span><span class="Q">chr</span><span class="O">)&nbsp;</span>const</p>
+<p class="R">Adjusts characters allowed in textual representation of Value.</p>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="S">chr</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">Character to adjust.</p></td></tr></table>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="T">Return value</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">Adjusted character. Zero indicates that character is rejected. Filter is allowed to alter the input character (e.g. by upper-casing it, changing ',' to '.' etc..). Default implementation returns unaltered <span class="U">chr</span>.</p></td></tr></table>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Convert::operator()(const Value&)const" class="N"><a href="Value"><span class="O"><u>Value</u></span></a><span class="O">&nbsp;</span><span class="P">operator()</span><span class="O">(</span>const<span class="O">&nbsp;</span><a href="Value"><span class="O"><u>Value</u></span></a>&amp;<span class="O">&nbsp;</span><span class="Q">q</span><span class="O">)&nbsp;</span>const</p>
+<p class="R">Invokes the Format method. Helper functor-like syntax.</p>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="S">q</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">Value.</p></td></tr></table>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="T">Return value</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">Converted Value.</p></td></tr></table>
+<p class="F">&nbsp;</p>
+<p class="V">&nbsp;</p>
+<p class="A">&nbsp;</p>
+<p class="A">&nbsp;</p>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr><td width="100%"><table width="100%" class="C"><colgroup><col width="100%"></colgroup>
+<tr><td class="D"><p class="E">ConvertDate</p>
+</td>
+</tr>
+</table></td>
+</tr></table>
+<p class="F">&nbsp;</p>
+<p id="ConvertDate::class" class="W"><span class="H">class</span><span class="X">&nbsp;</span><span class="O">ConvertDate</span><span class="X">&nbsp;:&nbsp;</span><span class="H">public</span><span class="X">&nbsp;</span>Convert</p>
+<p class="J">Date Converter. Textual date format depends on actual regional settings.</p>
+<p class="J">&nbsp;</p>
+<p class="A">Derived from <a href="src$Core$Convert$en-us.html#Convert::class">Convert</a></p>
+<p class="F">&nbsp;</p>
+<p class="A">&nbsp;</p>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr><td width="100%"><table width="100%" class="K"><colgroup><col width="100%"></colgroup>
+<tr><td class="L"><p class="M">Constructor Detail</p>
+</td>
+</tr>
+</table></td>
+</tr></table>
+<p class="F">&nbsp;</p>
+<p id="ConvertDate::ConvertDate(Date,Date,bool)" class="Y"><span class="Z">ConvertDate</span>(<a href="Date"><u>Date</u></a>&nbsp;<span class="Q">minval</span>&nbsp;=&nbsp;Date::Low(), <a href="Date"><u>Date</u></a>&nbsp;<span class="Q">maxval</span>&nbsp;=&nbsp;Date::High(), <span class="AA">bool</span>&nbsp;<span class="Q">notnull</span>&nbsp;=&nbsp;<span class="AA">false</span>)</p>
+<p class="R">Constructor.</p>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="S">minval</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">Minimum Date allowed.</p></td></tr></table>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="S">maxval</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">Maximum Date allowed.</p></td></tr></table>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="S">notnull</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">Disallow Nulls.</p></td></tr></table>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="ConvertDate::~ConvertDate()" class="Y"><span class="AA">~</span><span class="Z">ConvertDate</span>()</p>
+<p class="R">Default destructor.</p>
+<p class="F">&nbsp;</p>
+<p class="A">&nbsp;</p>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr><td width="100%"><table width="100%" class="K"><colgroup><col width="100%"></colgroup>
+<tr><td class="L"><p class="M">Public Member List</p>
+</td>
+</tr>
+</table></td>
+</tr></table>
+<p class="F">&nbsp;</p>
+<p id="ConvertDate::MinMax(Date,Date)" class="Y"><a href="ConvertDate"><u>ConvertDate</u></a><span class="AA">&amp;</span>&nbsp;<span class="Z">MinMax</span>(<a href="Date"><u>Date</u></a>&nbsp;<span class="Q">_min</span>, <a href="Date"><u>Date</u></a>&nbsp;<span class="Q">_max</span>)</p>
+<p class="R">Sets the range of Dates allowed.</p>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="S">_min</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">Minimal Date.</p></td></tr></table>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="S">_max</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">Maximal Date.</p></td></tr></table>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="T">Return value</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">*this.</p></td></tr></table>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="ConvertDate::Min(Date)" class="Y"><a href="ConvertDate"><u>ConvertDate</u></a><span class="AA">&amp;</span>&nbsp;<span class="Z">Min</span>(<a href="Date"><u>Date</u></a>&nbsp;<span class="Q">_min</span>)</p>
+<p class="R">Sets minimal allowed Date.</p>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="S">_min</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">Minimal Date.</p></td></tr></table>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="T">Return value</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">*this.</p></td></tr></table>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="ConvertDate::Max(Date)" class="Y"><a href="ConvertDate"><u>ConvertDate</u></a><span class="AA">&amp;</span>&nbsp;<span class="Z">Max</span>(<a href="Date"><u>Date</u></a>&nbsp;<span class="Q">_max</span>)</p>
+<p class="R">Sets maximal allowed Date.</p>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="S">_max</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">Maximal Date.</p></td></tr></table>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="T">Return value</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">*this.</p></td></tr></table>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="ConvertDate::NotNull(bool)" class="Y"><a href="ConvertDate"><u>ConvertDate</u></a><span class="AA">&amp;</span>&nbsp;<span class="Z">NotNull</span>(<span class="AA">bool</span>&nbsp;<span class="Q">b</span>&nbsp;=&nbsp;<span class="AA">true</span>)</p>
+<p class="R">Allows/disallows Null dates. (Null dates are represented by the empty text).</p>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="S">b</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">true to disallow Null dates.</p></td></tr></table>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="T">Return value</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">*this.</p></td></tr></table>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="ConvertDate::NoNotNull()" class="Y"><a href="ConvertDate"><u>ConvertDate</u></a><span class="AA">&amp;</span>&nbsp;<span class="Z">NoNotNull</span>()</p>
+<p class="R">Same as <a href="src$Core$Convert$en-us.html#ConvertDate::NotNull(bool)">NotNull</a>(false).</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Upp::ConvertDate::Default(Upp::Date)" class="Y"><a href="Upp::ConvertDate"><u>ConvertDate</u></a><span class="AA">&amp;</span>&nbsp;<span class="Z">Default</span>(<a href="Upp::Date"><u>Date</u></a>&nbsp;<span class="Q">d</span>)</p>
+<p class="R">When the text is empty, Scan returns this value.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="ConvertDate::GetMin()const" class="N"><a href="Date"><span class="O"><u>Date</u></span></a><span class="O">&nbsp;</span><span class="P">GetMin</span><span class="O">()&nbsp;</span>const</p>
+<p class="R">Returns minimal allowed date. This is maximum of value set by Min and default minimum (GetDefaultMin).</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="ConvertDate::GetMax()const" class="N"><a href="Date"><span class="O"><u>Date</u></span></a><span class="O">&nbsp;</span><span class="P">GetMax</span><span class="O">()&nbsp;</span>const</p>
+<p class="R">Returns upper limit of allowed dates. This is minimum of value set by Max and default maximum (GetDefaultMax).</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Upp::ConvertDate::GetDefaultMin()" class="Y"><span class="AA">static</span> <a href="Upp::Date"><u>Date</u></a>&nbsp;<span class="Z">GetDefaultMin</span>()</p>
+<p class="R">Returns default minimum.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Upp::ConvertDate::GetDefaultMax()" class="Y"><span class="AA">static</span> <a href="Upp::Date"><u>Date</u></a>&nbsp;<span class="Z">GetDefaultMax</span>()</p>
+<p class="R">Returns default maximum.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Upp::ConvertDate::SetDefaultMinMax(Upp::Date,Upp::Date)" class="Y"><span class="AA">void</span>&nbsp;<span class="Z">SetDefaultMinMax</span>(<a href="Upp::Date"><u>Date</u></a>&nbsp;<span class="Q">min</span>, <a href="Upp::Date"><u>Date</u></a>&nbsp;<span class="Q">max</span>)</p>
+<p class="R">Sets values for default minimum and maximum. Default values are Date::Low() and Date::Hight().</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="ConvertDate::IsNotNull()const" class="N">bool<span class="O">&nbsp;</span><span class="P">IsNotNull</span><span class="O">()&nbsp;</span>const</p>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="T">Return value</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">true is Nulls are disallowed.</p></td></tr></table>
+<p class="F">&nbsp;</p>
+<p class="A">&nbsp;</p>
+<p class="A">&nbsp;</p>
+<p class="A">&nbsp;</p>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr><td width="100%"><table width="100%" class="C"><colgroup><col width="100%"></colgroup>
+<tr><td class="D"><p class="E">ConvertTime</p>
+</td>
+</tr>
+</table></td>
+</tr></table>
+<p class="F">&nbsp;</p>
+<p id="ConvertTime::class" class="W"><span class="H">class</span><span class="X">&nbsp;</span><span class="O">ConvertTime</span><span class="X">&nbsp;:&nbsp;</span><span class="H">public</span><span class="X">&nbsp;</span>Convert</p>
+<p class="J">Time converter.</p>
+<p class="A">&nbsp;</p>
+<p class="A"><span class="AB">Derived from</span> <a href="src$Core$Convert$en-us.html#Convert::class">Convert</a></p>
+<p class="F">&nbsp;</p>
+<p class="A">&nbsp;</p>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr><td width="100%"><table width="100%" class="K"><colgroup><col width="100%"></colgroup>
+<tr><td class="L"><p class="M">Constructor Detail</p>
+</td>
+</tr>
+</table></td>
+</tr></table>
+<p class="F">&nbsp;</p>
+<p id="ConvertTime::ConvertTime(Time,Time,bool)" class="Y"><span class="Z">ConvertTime</span>(<a href="Time"><u>Time</u></a>&nbsp;<span class="Q">minval</span>&nbsp;=&nbsp;ToTime(Date::Low()), <a href="Time"><u>Time</u></a>&nbsp;<span class="Q">maxval</span>&nbsp;=&nbsp;ToTime(Date::High()), <span class="AA">bool</span>&nbsp;<span class="Q">notnull</span>&nbsp;=&nbsp;<span class="AA">false</span>)</p>
+<p class="R">Constructor.</p>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="S">minval</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">Lower limit. Default means there is no limit.</p></td></tr></table>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="S">maxval</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">Upper limit. Default means there is no limit.</p></td></tr></table>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="S">notnull</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">true disallows Nulls.</p></td></tr></table>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="ConvertTime::~ConvertTime()" class="Y"><span class="AA">~</span><span class="Z">ConvertTime</span>()</p>
+<p class="R">Default destructor.</p>
+<p class="F">&nbsp;</p>
+<p class="A">&nbsp;</p>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr><td width="100%"><table width="100%" class="K"><colgroup><col width="100%"></colgroup>
+<tr><td class="L"><p class="M">Public Member List</p>
+</td>
+</tr>
+</table></td>
+</tr></table>
+<p class="F">&nbsp;</p>
+<p id="ConvertTime::MinMax(Time,Time)" class="Y"><a href="ConvertTime"><u>ConvertTime</u></a><span class="AA">&amp;</span>&nbsp;<span class="Z">MinMax</span>(<a href="Time"><u>Time</u></a>&nbsp;<span class="Q">_min</span>, <a href="Time"><u>Time</u></a>&nbsp;<span class="Q">_max</span>)</p>
+<p class="R">Time limeits.</p>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="S">_min</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">Lower limit.</p></td></tr></table>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="S">_max</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">Upper limit.</p></td></tr></table>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="T">Return value</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">*this.</p></td></tr></table>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Upp::ConvertTime::Min(Upp::Time)" class="Y"><a href="Upp::ConvertTime"><u>ConvertTime</u></a><span class="AA">&amp;</span>&nbsp;<span class="Z">Min</span>(<a href="Upp::Time"><u>Time</u></a>&nbsp;<span class="Q">_min</span>)</p>
+<p class="R">Sets lower limit.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Upp::ConvertTime::Max(Upp::Time)" class="Y"><a href="Upp::ConvertTime"><u>ConvertTime</u></a><span class="AA">&amp;</span>&nbsp;<span class="Z">Max</span>(<a href="Upp::Time"><u>Time</u></a>&nbsp;<span class="Q">_max</span>)</p>
+<p class="R">Sets upper limit.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="ConvertTime::NotNull(bool)" class="Y"><a href="ConvertTime"><u>ConvertTime</u></a><span class="AA">&amp;</span>&nbsp;<span class="Z">NotNull</span>(<span class="AA">bool</span>&nbsp;<span class="Q">b</span>&nbsp;=&nbsp;<span class="AA">true</span>)</p>
+<p class="R">Disallows empty Strings.</p>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="S">b</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">true to disallow.</p></td></tr></table>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="T">Return value</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">*this.</p></td></tr></table>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="ConvertTime::NoNotNull()" class="Y"><a href="ConvertTime"><u>ConvertTime</u></a><span class="AA">&amp;</span>&nbsp;<span class="Z">NoNotNull</span>()</p>
+<p class="R">Same as <a href="src$Core$Convert$en-us.html#ConvertTime::NotNull(bool)">NotNull</a>(false).</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Upp::ConvertTime::Seconds(bool)" class="Y"><a href="Upp::ConvertTime"><u>ConvertTime</u></a><span class="AA">&amp;</span>&nbsp;<span class="Z">Seconds</span>(<span class="AA">bool</span>&nbsp;<span class="Q">b</span>&nbsp;=&nbsp;<span class="AA">true</span>)</p>
+<p class="R">If true (which is default), Format returns time with seconds.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Upp::ConvertTime::NoSeconds()" class="Y"><a href="Upp::ConvertTime"><u>ConvertTime</u></a><span class="AA">&amp;</span>&nbsp;<span class="Z">NoSeconds</span>()</p>
+<p class="R">Same as Seconds(fale)</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Upp::ConvertTime::IsSeconds()const" class="N">bool<span class="O">&nbsp;</span><span class="P">IsSeconds</span><span class="O">()&nbsp;</span>const</p>
+<p class="R">Returns the value set by Seconds.,</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="ConvertTime::TimeAlways(bool)" class="Y"><a href="ConvertTime"><u>ConvertTime</u></a><span class="AA">&amp;</span>&nbsp;<span class="Z">TimeAlways</span>(<span class="AA">bool</span>&nbsp;<span class="Q">b</span>&nbsp;=&nbsp;<span class="AA">true</span>)</p>
+<p class="R">If active, Format always shows time, even if the Value is Date or is at midnight. Default is false.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Upp::ConvertTime::IsTimeAlways()const" class="N">bool<span class="O">&nbsp;</span><span class="P">IsTimeAlways</span><span class="O">()&nbsp;</span>const</p>
+<p class="R">Returns the value set by TimeAlways.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="ConvertTime::DayEnd(bool)" class="Y"><a href="ConvertTime"><u>ConvertTime</u></a><span class="AA">&amp;</span>&nbsp;<span class="Z">DayEnd</span>(<span class="AA">bool</span>&nbsp;<span class="Q">b</span>&nbsp;=&nbsp;<span class="AA">true</span>)</p>
+<p class="R">If active, when Scan encounters date without time, it sets the time to 23:59:59. Default is false.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Upp::ConvertTime::IsDayEnd()const" class="N">bool<span class="O">&nbsp;</span><span class="P">IsDayEnd</span><span class="O">()&nbsp;</span>const</p>
+<p class="R">Returns the value set by DayEnd.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Upp::ConvertTime::Default(Upp::Time)" class="Y"><a href="Upp::ConvertTime"><u>ConvertTime</u></a><span class="AA">&amp;</span>&nbsp;<span class="Z">Default</span>(<a href="Upp::Time"><u>Time</u></a>&nbsp;<span class="Q">d</span>)</p>
+<p class="R">Sets default time returned by Scan when input is empty.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="ConvertTime::GetMin()const" class="N"><a href="Time"><span class="O"><u>Time</u></span></a><span class="O">&nbsp;</span><span class="P">GetMin</span><span class="O">()&nbsp;</span>const</p>
+<p class="R">Returns minimal allowed time. This is maximum of value set by Min and default minimum (GetDefaultMin).</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="ConvertTime::GetMax()const" class="N"><a href="Time"><span class="O"><u>Time</u></span></a><span class="O">&nbsp;</span><span class="P">GetMax</span><span class="O">()&nbsp;</span>const</p>
+<p class="R">Returns upper limit of allowed times. This is minimum of value set by Max and default maximum (GetDefaultMax).</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Upp::ConvertTime::GetDefaultMin()" class="Y"><span class="AA">static</span> <a href="Upp::Time"><u>Time</u></a>&nbsp;<span class="Z">GetDefaultMin</span>()</p>
+<p class="R">Returns Date::GetDefaultMin converted to Time.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Upp::ConvertTime::GetDefaultMax()" class="Y"><span class="AA">static</span> <a href="Upp::Time"><u>Time</u></a>&nbsp;<span class="Z">GetDefaultMax</span>()</p>
+<p class="R">Returns Date::GetDefaultMax converted to Time.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="ConvertTime::IsNotNull()const" class="N">bool<span class="O">&nbsp;</span><span class="P">IsNotNull</span><span class="O">()&nbsp;</span>const</p>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="T">Return value</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">true means Nulls are disallowed.</p></td></tr></table>
+<p class="F">&nbsp;</p>
+<p class="A">&nbsp;</p>
+<p class="A">&nbsp;</p>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr><td width="100%"><table width="100%" class="C"><colgroup><col width="100%"></colgroup>
+<tr><td class="D"><p class="E">ConvertDouble</p>
+</td>
+</tr>
+</table></td>
+</tr></table>
+<p class="F">&nbsp;</p>
+<p id="ConvertDouble::class" class="W"><span class="H">class</span><span class="X">&nbsp;</span><span class="O">ConvertDouble</span><span class="X">&nbsp;:&nbsp;</span><span class="H">public</span><span class="X">&nbsp;</span>Convert</p>
+<p class="J">Floating point number converter.</p>
+<p class="A">&nbsp;</p>
+<p class="A"><span class="AB">Derived from</span> <a href="src$Core$Convert$en-us.html#Convert::class">Convert</a></p>
+<p class="F">&nbsp;</p>
+<p class="A">&nbsp;</p>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr><td width="100%"><table width="100%" class="K"><colgroup><col width="100%"></colgroup>
+<tr><td class="L"><p class="M">Constructor Detail</p>
+</td>
+</tr>
+</table></td>
+</tr></table>
+<p class="F">&nbsp;</p>
+<p id="ConvertDouble::ConvertDouble(double,double,bool)" class="Y"><span class="Z">ConvertDouble</span>(<span class="AA">double</span>&nbsp;<span class="Q">minval</span>&nbsp;=&nbsp;-std::numeric_limits&lt;double&gt;::max(), <span class="AA">double</span>&nbsp;<span class="Q">maxval</span>&nbsp;=&nbsp;std::numeric_limits&lt;double&gt;::max(), <span class="AA">bool</span>&nbsp;<span class="Q">notnull</span>&nbsp;=&nbsp;<span class="AA">false</span>)</p>
+<p class="R">Constructor.</p>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="S">minval</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">Lower limit - default value means there is no limit.</p></td></tr></table>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="S">maxval</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">Upper limit - default value means there is no limit.</p></td></tr></table>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="S">notnull</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">If true, Nulls are not allowed.</p></td></tr></table>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="ConvertDouble::~ConvertDouble()" class="Y"><span class="AA">~</span><span class="Z">ConvertDouble</span>()</p>
+<p class="R">Default destructor.</p>
+<p class="F">&nbsp;</p>
+<p class="A">&nbsp;</p>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr><td width="100%"><table width="100%" class="K"><colgroup><col width="100%"></colgroup>
+<tr><td class="L"><p class="M">Public Member List</p>
+</td>
+</tr>
+</table></td>
+</tr></table>
+<p class="F">&nbsp;</p>
+<p id="ConvertDouble::Pattern(const char*)" class="Y"><a href="ConvertDouble"><u>ConvertDouble</u></a><span class="AA">&amp;</span>&nbsp;<span class="Z">Pattern</span>(<span class="AA">const</span>&nbsp;<span class="AA">char</span>&nbsp;*<span class="Q">p</span>)</p>
+<p class="R">Formatting tag used for conversion to textual representation (includes standard printf formatting tags, see Format function for description). Default tag is <span class="AC">%.10g</span>. After setting a new pattern, ConvertDouble formats simple example number (Format(1.1)) and if it detects character ',' in resulting string, Filter method forces ',' to be used instead of '.' for decimal point.</p>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="S">p</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">Pattern.</p></td></tr></table>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="T">Return value</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">*this.</p></td></tr></table>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="ConvertDouble::MinMax(double,double)" class="Y"><a href="ConvertDouble"><u>ConvertDouble</u></a><span class="AA">&amp;</span>&nbsp;<span class="Z">MinMax</span>(<span class="AA">double</span>&nbsp;<span class="Q">_min</span>, <span class="AA">double</span>&nbsp;<span class="Q">_max</span>)</p>
+<p class="R">Sets minimal and maximal allowed numbers.</p>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="S">_min</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">Lower limit.</p></td></tr></table>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="S">_max</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">Upper limit.</p></td></tr></table>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="T">Return value</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">*this.</p></td></tr></table>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="ConvertDouble::Min(double)" class="Y"><a href="ConvertDouble"><u>ConvertDouble</u></a><span class="AA">&amp;</span>&nbsp;<span class="Z">Min</span>(<span class="AA">double</span>&nbsp;<span class="Q">_min</span>)</p>
+<p class="R">Sets minimal allowed number.</p>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="S">_min</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">Lower limit.</p></td></tr></table>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="T">Return value</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">*this.</p></td></tr></table>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="ConvertDouble::Max(double)" class="Y"><a href="ConvertDouble"><u>ConvertDouble</u></a><span class="AA">&amp;</span>&nbsp;<span class="Z">Max</span>(<span class="AA">double</span>&nbsp;<span class="Q">_max</span>)</p>
+<p class="R">Sets maximal allowed number.</p>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="S">_max</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">Upper limit.</p></td></tr></table>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="T">Return value</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">*this.</p></td></tr></table>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="ConvertDouble::NotNull(bool)" class="Y"><a href="ConvertDouble"><u>ConvertDouble</u></a><span class="AA">&amp;</span>&nbsp;<span class="Z">NotNull</span>(<span class="AA">bool</span>&nbsp;<span class="Q">b</span>&nbsp;=&nbsp;<span class="AA">true</span>)</p>
+<p class="R">Allows/disallows Nulls. (Nulls are represented by the empty text).</p>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="S">b</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">true to disallow.</p></td></tr></table>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="T">Return value</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">*this.</p></td></tr></table>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="ConvertDouble::NoNotNull()" class="Y"><a href="ConvertDouble"><u>ConvertDouble</u></a><span class="AA">&amp;</span>&nbsp;<span class="Z">NoNotNull</span>()</p>
+<p class="R">Equivalent to <a href="src$Core$Convert$en-us.html#ConvertDouble::NotNull(bool)">NotNull</a>(false).</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="ConvertDouble::GetMin()const" class="N">double<span class="O">&nbsp;</span><span class="P">GetMin</span><span class="O">()&nbsp;</span>const</p>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="T">Return value</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">Lower limit.</p></td></tr></table>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="ConvertDouble::GetMax()const" class="N">double<span class="O">&nbsp;</span><span class="P">GetMax</span><span class="O">()&nbsp;</span>const</p>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="T">Return value</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">Upper limit.</p></td></tr></table>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="ConvertDouble::IsNotNull()const" class="N">bool<span class="O">&nbsp;</span><span class="P">IsNotNull</span><span class="O">()&nbsp;</span>const</p>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="T">Return value</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">true is Nulls are disallowed.</p></td></tr></table>
+<p class="F">&nbsp;</p>
+<p class="A">&nbsp;</p>
+<p class="A">&nbsp;</p>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr><td width="100%"><table width="100%" class="C"><colgroup><col width="100%"></colgroup>
+<tr><td class="D"><p class="E">ConvertFloat</p>
+</td>
+</tr>
+</table></td>
+</tr></table>
+<p class="F">&nbsp;</p>
+<p class="F">&nbsp;</p>
+<p id="Upp::ConvertFloat::struct" class="W"><span class="H">struct</span><span class="X">&nbsp;</span><span class="O">ConvertFloat</span><span class="X">&nbsp;:&nbsp;</span><span class="H">public</span><span class="X">&nbsp;</span>ConvertDouble</p>
+<p class="R">This helper class changes precision of double-&gt;text conversion to 7 digits to reflect the precision of float type.</p>
+<p class="A">&nbsp;</p>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr><td width="100%"><table width="100%" class="K"><colgroup><col width="100%"></colgroup>
+<tr><td class="L"><p class="M">Public Member List</p>
+</td>
+</tr>
+</table></td>
+</tr></table>
+<p class="A">&nbsp;</p>
+<p id="Upp::ConvertFloat::GetDefaultMin()" class="Y"><span class="AA">static</span> <span class="AA">double</span>&nbsp;<span class="Z">GetDefaultMin</span>()</p>
+<p class="R">Returns the minimal number representable by float.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Upp::ConvertFloat::GetDefaultMax()" class="Y"><span class="AA">static</span> <span class="AA">double</span>&nbsp;<span class="Z">GetDefaultMax</span>()</p>
+<p class="R">Returns the maximal number representable by float.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Upp::ConvertFloat::ConvertFloat(double,double,bool)" class="Y"><span class="Z">ConvertFloat</span>(<span class="AA">double</span>&nbsp;<span class="Q">minval</span>&nbsp;=&nbsp;GetDefaultMin(), <span class="AA">double</span>&nbsp;<span class="Q">maxval</span>&nbsp;=&nbsp;GetDefaultMax(), <span class="AA">bool</span>&nbsp;<span class="Q">notnull</span>&nbsp;=&nbsp;<span class="AA">false</span>)</p>
+<p class="R"> <span class="Q">minval</span> <span class="Q">maxval</span> <span class="Q">notnull</span> .</p>
+<p class="A">&nbsp;</p>
+<p class="A">&nbsp;</p>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr><td width="100%"><table width="100%" class="C"><colgroup><col width="100%"></colgroup>
+<tr><td class="D"><p class="E">ConvertInt</p>
+</td>
+</tr>
+</table></td>
+</tr></table>
+<p class="F">&nbsp;</p>
+<p id="ConvertInt::class" class="W"><span class="H">class</span><span class="X">&nbsp;</span><span class="O">ConvertInt</span><span class="X">&nbsp;:&nbsp;</span><span class="H">public</span><span class="X">&nbsp;</span>Convert</p>
+<p class="J">Integer converter.</p>
+<p class="A">&nbsp;</p>
+<p class="A"><span class="AB">Derived from</span> <a href="src$Core$Convert$en-us.html#Convert::class">Convert</a></p>
+<p class="F">&nbsp;</p>
+<p class="A">&nbsp;</p>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr><td width="100%"><table width="100%" class="K"><colgroup><col width="100%"></colgroup>
+<tr><td class="L"><p class="M">Constructor Detail</p>
+</td>
+</tr>
+</table></td>
+</tr></table>
+<p class="F">&nbsp;</p>
+<p id="ConvertInt::ConvertInt(int,int,bool)" class="Y"><span class="Z">ConvertInt</span>(<span class="AA">int</span>&nbsp;<span class="Q">minval</span>&nbsp;=&nbsp;-INT_MAX, <span class="AA">int</span>&nbsp;<span class="Q">maxval</span>&nbsp;=&nbsp;INT_MAX, <span class="AA">bool</span>&nbsp;<span class="Q">notnull</span>&nbsp;=&nbsp;<span class="AA">false</span>)</p>
+<p class="R">Constructor.</p>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="S">minval</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">Lower limit. Default value results in no limit.</p></td></tr></table>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="S">maxval</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">Upper limit. Default value results in no limit.</p></td></tr></table>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="S">notnull</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">If true, Nulls are not allowed.</p></td></tr></table>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="ConvertInt::~ConvertInt()" class="Y"><span class="AA">~</span><span class="Z">ConvertInt</span>()</p>
+<p class="R">Default destructor.</p>
+<p class="F">&nbsp;</p>
+<p class="A">&nbsp;</p>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr><td width="100%"><table width="100%" class="K"><colgroup><col width="100%"></colgroup>
+<tr><td class="L"><p class="M">Public Member List</p>
+</td>
+</tr>
+</table></td>
+</tr></table>
+<p class="F">&nbsp;</p>
+<p id="ConvertInt::MinMax(int,int)" class="Y"><a href="ConvertInt"><u>ConvertInt</u></a><span class="AA">&amp;</span>&nbsp;<span class="Z">MinMax</span>(<span class="AA">int</span>&nbsp;<span class="Q">_min</span>, <span class="AA">int</span>&nbsp;<span class="Q">_max</span>)</p>
+<p class="R">Sets minimal and maximal allowed numbers.</p>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="S">_min</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">Lower limit.</p></td></tr></table>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="S">_max</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">Upper limit.</p></td></tr></table>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="T">Return value</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">*this.</p></td></tr></table>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="ConvertInt::Min(int)" class="Y"><a href="ConvertInt"><u>ConvertInt</u></a><span class="AA">&amp;</span>&nbsp;<span class="Z">Min</span>(<span class="AA">int</span>&nbsp;<span class="Q">_min</span>)</p>
+<p class="R">Sets minimal allowed number.</p>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="S">_min</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">Lower limit.</p></td></tr></table>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="T">Return value</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">*this.</p></td></tr></table>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="ConvertInt::Max(int)" class="Y"><a href="ConvertInt"><u>ConvertInt</u></a><span class="AA">&amp;</span>&nbsp;<span class="Z">Max</span>(<span class="AA">int</span>&nbsp;<span class="Q">_max</span>)</p>
+<p class="R">Sets maximal allowed number.</p>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="S">_max</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">Upper limit.</p></td></tr></table>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="T">Return value</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">*this.</p></td></tr></table>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="ConvertInt::NotNull(bool)" class="Y"><a href="ConvertInt"><u>ConvertInt</u></a><span class="AA">&amp;</span>&nbsp;<span class="Z">NotNull</span>(<span class="AA">bool</span>&nbsp;<span class="Q">b</span>&nbsp;=&nbsp;<span class="AA">true</span>)</p>
+<p class="R">Allows/disallows Nulls. (Nulls are represented by the empty text).</p>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="S">b</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">true to disallow.</p></td></tr></table>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="T">Return value</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">*this.</p></td></tr></table>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="ConvertInt::NoNotNull()" class="Y"><a href="ConvertInt"><u>ConvertInt</u></a><span class="AA">&amp;</span>&nbsp;<span class="Z">NoNotNull</span>()</p>
+<p class="R">Equivalent to <a href="src$Core$Convert$en-us.html#ConvertInt::NotNull(bool)">NotNull</a>(false).</p>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="T">Return value</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">*this.</p></td></tr></table>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="ConvertInt::GetMin()const" class="N">int<span class="O">&nbsp;</span><span class="P">GetMin</span><span class="O">()&nbsp;</span>const</p>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="T">Return value</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">Lower limit.</p></td></tr></table>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="ConvertInt::GetMax()const" class="N">int<span class="O">&nbsp;</span><span class="P">GetMax</span><span class="O">()&nbsp;</span>const</p>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="T">Return value</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">Upper limit.</p></td></tr></table>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="ConvertInt::IsNotNull()const" class="N">bool<span class="O">&nbsp;</span><span class="P">IsNotNull</span><span class="O">()&nbsp;</span>const</p>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="T">Return value</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">true if null are not allowed.</p></td></tr></table>
+<p class="F">&nbsp;</p>
+<p class="A">&nbsp;</p>
+<p class="A">&nbsp;</p>
+<p class="A">&nbsp;</p>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr><td width="100%"><table width="100%" class="C"><colgroup><col width="100%"></colgroup>
+<tr><td class="D"><p class="E">ConvertString</p>
+</td>
+</tr>
+</table></td>
+</tr></table>
+<p class="F">&nbsp;</p>
+<p id="ConvertString::class" class="W"><span class="H">class</span><span class="X">&nbsp;</span><span class="O">ConvertString</span><span class="X">&nbsp;:&nbsp;</span><span class="H">public</span><span class="X">&nbsp;</span>Convert</p>
+<p class="J">String &quot;converter&quot;. Of course, String already is textual representation of itself, the real purpose of this class is to introduce constraints of String value.</p>
+<p class="A">&nbsp;</p>
+<p class="A"><span class="AB">Derived from</span> <a href="src$Core$Convert$en-us.html#Convert::class">Convert</a></p>
+<p class="F">&nbsp;</p>
+<p class="A">&nbsp;</p>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr><td width="100%"><table width="100%" class="K"><colgroup><col width="100%"></colgroup>
+<tr><td class="L"><p class="M">Constructor Detail</p>
+</td>
+</tr>
+</table></td>
+</tr></table>
+<p class="F">&nbsp;</p>
+<p id="ConvertString::ConvertString(int,bool)" class="Y"><span class="Z">ConvertString</span>(<span class="AA">int</span>&nbsp;<span class="Q">maxlen</span>&nbsp;=&nbsp;INT_MAX, <span class="AA">bool</span>&nbsp;<span class="Q">notnull</span>&nbsp;=&nbsp;<span class="AA">false</span>)</p>
+<p class="R">Constructor.</p>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="S">maxlen</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">Maximum length - default is unlimited.</p></td></tr></table>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="S">notnull</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">If true, empty strings are not allowed.</p></td></tr></table>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="ConvertString::~ConvertString()" class="Y"><span class="AA">~</span><span class="Z">ConvertString</span>()</p>
+<p class="R">Default destructor.</p>
+<p class="F">&nbsp;</p>
+<p class="A">&nbsp;</p>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr><td width="100%"><table width="100%" class="K"><colgroup><col width="100%"></colgroup>
+<tr><td class="L"><p class="M">Public Member List</p>
+</td>
+</tr>
+</table></td>
+</tr></table>
+<p class="F">&nbsp;</p>
+<p id="ConvertString::MaxLen(int)" class="Y"><a href="ConvertString"><u>ConvertString</u></a><span class="AA">&amp;</span>&nbsp;<span class="Z">MaxLen</span>(<span class="AA">int</span>&nbsp;<span class="Q">_maxlen</span>)</p>
+<p class="R">Sets maximum length of String allowed.</p>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="S">_maxlen</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">Length.</p></td></tr></table>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="T">Return value</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">*this.</p></td></tr></table>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="ConvertString::GetMaxLength()const" class="N">int<span class="O">&nbsp;</span><span class="P">GetMaxLength</span><span class="O">()&nbsp;</span>const</p>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="T">Return value</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">Maximum length of String allowed.</p></td></tr></table>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="ConvertString::NotNull(bool)" class="Y"><a href="ConvertString"><u>ConvertString</u></a><span class="AA">&amp;</span>&nbsp;<span class="Z">NotNull</span>(<span class="AA">bool</span>&nbsp;<span class="Q">b</span>&nbsp;=&nbsp;<span class="AA">true</span>)</p>
+<p class="R">Disallows empty Strings.</p>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="S">b</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">true to disallow.</p></td></tr></table>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="T">Return value</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">*this.</p></td></tr></table>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="ConvertString::NoNotNull()" class="Y"><a href="ConvertString"><u>ConvertString</u></a><span class="AA">&amp;</span>&nbsp;<span class="Z">NoNotNull</span>()</p>
+<p class="R">Same as <a href="src$Core$Convert$en-us.html#ConvertString::NotNull(bool)">NotNull</a>(false).</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="ConvertString::IsNotNull()const" class="N">bool<span class="O">&nbsp;</span><span class="P">IsNotNull</span><span class="O">()&nbsp;</span>const</p>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="T">Return value</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">true mean empty Strings are not allowed.</p></td></tr></table>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Upp::ConvertString::TrimLeft(bool)" class="Y"><a href="Upp::ConvertString"><u>ConvertString</u></a><span class="AA">&amp;</span>&nbsp;<span class="Z">TrimLeft</span>(<span class="AA">bool</span>&nbsp;<span class="Q">b</span>&nbsp;=&nbsp;<span class="AA">true</span>)</p>
+<p id="Upp::ConvertString::TrimRight(bool)" class="Y"><a href="Upp::ConvertString"><u>ConvertString</u></a><span class="AA">&amp;</span>&nbsp;<span class="Z">TrimRight</span>(<span class="AA">bool</span>&nbsp;<span class="Q">b</span>&nbsp;=&nbsp;<span class="AA">true</span>)</p>
+<p id="Upp::ConvertString::TrimBoth(bool)" class="Y"><a href="Upp::ConvertString"><u>ConvertString</u></a><span class="AA">&amp;</span>&nbsp;<span class="Z">TrimBoth</span>(<span class="AA">bool</span>&nbsp;<span class="Q">b</span>&nbsp;=&nbsp;<span class="AA">true</span>)</p>
+<p class="R">Whitechars on the left/right/both side(s) are removed before checking count of characters or nullness.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Upp::ConvertString::IsTrimLeft()const" class="N">bool<span class="O">&nbsp;</span><span class="P">IsTrimLeft</span><span class="O">()&nbsp;</span>const</p>
+<p id="Upp::ConvertString::IsTrimRight()const" class="N">bool<span class="O">&nbsp;</span><span class="P">IsTrimRight</span><span class="O">()&nbsp;</span>const</p>
+<p class="R">Checks whether TrimLeft or TrimRight (or both) is active.</p>
+<p class="A">&nbsp;</p>
+<p class="A">&nbsp;</p>
+<p class="A">&nbsp;</p>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr><td width="100%"><table width="100%" class="C"><colgroup><col width="100%"></colgroup>
+<tr><td class="D"><p class="E">FormatConvert</p>
+</td>
+</tr>
+</table></td>
+</tr></table>
+<p class="F">&nbsp;</p>
+<p id="FormatConvert::class" class="W"><span class="H">class</span><span class="X">&nbsp;</span><span class="O">FormatConvert</span><span class="X">&nbsp;:&nbsp;</span><span class="H">public</span><span class="X">&nbsp;</span>Convert</p>
+<p class="J">This unidirectional Convert class (only Format direction implemented) converts single Value or ValueArray using Format function and specified formatter pattern.</p>
+<p class="J">&nbsp;</p>
+<p class="A"><span class="AB">Derived from</span> <a href="src$Core$Convert$en-us.html#Convert::class">Convert</a></p>
+<p class="F">&nbsp;</p>
+<p class="A">&nbsp;</p>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr><td width="100%"><table width="100%" class="K"><colgroup><col width="100%"></colgroup>
+<tr><td class="L"><p class="M">Public Member List</p>
+</td>
+</tr>
+</table></td>
+</tr></table>
+<p class="F">&nbsp;</p>
+<p id="FormatConvert::SetFormat(const char*)" class="Y"><span class="AA">void</span>&nbsp;<span class="Z">SetFormat</span>(<span class="AA">const</span>&nbsp;<span class="AA">char</span>&nbsp;*<span class="Q">fmt</span>)</p>
+<p class="R">Sets formatting pattern.</p>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="S">fmt</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">The pattern.</p></td></tr></table>
+<p class="F">&nbsp;</p>
+<p class="V">&nbsp;</p>
+<p class="V">&nbsp;</p>
+<p class="A">&nbsp;</p>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr><td width="100%"><table width="100%" class="C"><colgroup><col width="100%"></colgroup>
+<tr><td class="D"><p class="E">JoinConvert</p>
+</td>
+</tr>
+</table></td>
+</tr></table>
+<p class="F">&nbsp;</p>
+<p id="JoinConvert::class" class="W"><span class="H">class</span><span class="X">&nbsp;</span><span class="O">JoinConvert</span><span class="X">&nbsp;:&nbsp;</span><span class="H">public</span><span class="X">&nbsp;</span>Convert</p>
+<p class="J">This unidirectional Convert class (only Format direction is implemented) converts ValueArray using a set of other Convert instances. Resulting textual representation is created by joining a set of defined elements - some of them static texts, others referring to elements of input ValueArray, converted using specified Convert.</p>
+<p class="A">&nbsp;</p>
+<p class="A"><span class="AB">Derived from</span> <a href="src$Core$Convert$en-us.html#Convert::class">Convert</a></p>
+<p class="F">&nbsp;</p>
+<p class="A">&nbsp;</p>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr><td width="100%"><table width="100%" class="K"><colgroup><col width="100%"></colgroup>
+<tr><td class="L"><p class="M">Public Member List</p>
+</td>
+</tr>
+</table></td>
+</tr></table>
+<p class="F">&nbsp;</p>
+<p id="JoinConvert::Add(const char*)" class="Y"><a href="JoinConvert"><u>JoinConvert</u></a><span class="AA">&amp;</span>&nbsp;<span class="Z">Add</span>(<span class="AA">const</span>&nbsp;<span class="AA">char</span>&nbsp;*<span class="Q">text</span>)</p>
+<p class="R">Adds static text to the list of elements.</p>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="S">text</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">Text.</p></td></tr></table>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="T">Return value</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">*this.</p></td></tr></table>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="JoinConvert::Add(int,const Convert&)" class="Y"><a href="JoinConvert"><u>JoinConvert</u></a><span class="AA">&amp;</span>&nbsp;<span class="Z">Add</span>(<span class="AA">int</span>&nbsp;<span class="Q">pos</span>, <span class="AA">const</span>&nbsp;<a href="Convert"><u>Convert</u></a><span class="AA">&amp;</span>&nbsp;<span class="Q">cv</span>)</p>
+<p class="R">Add element referring to input value, to be converted using specified Convert.</p>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="S">pos</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">Index of input ValueArray element.</p></td></tr></table>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="S">cv</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">Convert.</p></td></tr></table>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="T">Return value</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">*this.</p></td></tr></table>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="JoinConvert::Add(int)" class="Y"><a href="JoinConvert"><u>JoinConvert</u></a><span class="AA">&amp;</span>&nbsp;<span class="Z">Add</span>(<span class="AA">int</span>&nbsp;<span class="Q">pos</span>)</p>
+<p class="R">Add element referring to input value, to be converted using default Convert.</p>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="S">pos</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">Index of input ValueArray element.</p></td></tr></table>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="T">Return value</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">*this.</p></td></tr></table>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="JoinConvert::Add(const Convert&)" class="Y"><a href="JoinConvert"><u>JoinConvert</u></a><span class="AA">&amp;</span>&nbsp;<span class="Z">Add</span>(<span class="AA">const</span>&nbsp;<a href="Convert"><u>Convert</u></a><span class="AA">&amp;</span>&nbsp;<span class="Q">cv</span>)</p>
+<p class="R">Add element referring to input value, to be converted using specified Convert. Index of input element is the index of previous input element plus 1.</p>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="S">cv</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">Convert.</p></td></tr></table>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="T">Return value</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">*this.</p></td></tr></table>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="JoinConvert::Add()" class="Y"><a href="JoinConvert"><u>JoinConvert</u></a><span class="AA">&amp;</span>&nbsp;<span class="Z">Add</span>()</p>
+<p class="R">Add element referring to input value, to be converted using default Convert. Index of input element is the index of previous input element plus 1.</p>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="T">Return value</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">*this.</p></td></tr></table>
+<p class="F">&nbsp;</p>
+<p class="A">&nbsp;</p>
+<p class="V">&nbsp;</p>
+<p class="A">&nbsp;</p>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr><td width="100%"><table width="100%" class="C"><colgroup><col width="100%"></colgroup>
+<tr><td class="D"><p class="E">Standard Converts</p>
+</td>
+</tr>
+</table></td>
+</tr></table>
+<p class="F">&nbsp;</p>
+<p class="J">Standard converts are simple global functions returning a constant reference to the single global variable representing the particular Convert class. Following table lists names of these functions and respective constructors of Convert classes used to create global variable:</p>
+<p class="F">&nbsp;</p>
+<p class="A">&nbsp;</p>
+<p id="StdConvert()" class="Y"><span class="AA">const</span>&nbsp;<a href="Convert"><u>Convert</u></a><span class="AA">&amp;</span>&nbsp;<span class="Z">StdConvert</span>()</p>
+<p class="AD"><a href="src$Core$Convert$en-us.html#Convert::class">Convert</a></p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="StdConvertInt()" class="Y"><span class="AA">const</span>&nbsp;<a href="ConvertInt"><u>ConvertInt</u></a><span class="AA">&amp;</span>&nbsp;<span class="Z">StdConvertInt</span>()</p>
+<p class="AD"><a href="src$Core$Convert$en-us.html#ConvertInt::class">ConvertInt</a></p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="StdConvertIntNotNull()" class="Y"><span class="AA">const</span>&nbsp;<a href="ConvertInt"><u>ConvertInt</u></a><span class="AA">&amp;</span>&nbsp;<span class="Z">StdConvertIntNotNull</span>()</p>
+<p class="AD"><a href="src$Core$Convert$en-us.html#ConvertInt::class">ConvertInt</a>(-INT_MAX, INT_MAX, true)</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="StdConvertDouble()" class="Y"><span class="AA">const</span>&nbsp;<a href="ConvertDouble"><u>ConvertDouble</u></a><span class="AA">&amp;</span>&nbsp;<span class="Z">StdConvertDouble</span>()</p>
+<p class="AD"><a href="src$Core$Convert$en-us.html#ConvertDouble::class">ConvertDouble</a></p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="StdConvertDoubleNotNull()" class="Y"><span class="AA">const</span>&nbsp;<a href="ConvertDouble"><u>ConvertDouble</u></a><span class="AA">&amp;</span>&nbsp;<span class="Z">StdConvertDoubleNotNull</span>()</p>
+<p class="AD"><a href="src$Core$Convert$en-us.html#ConvertDouble::class">ConvertDouble</a>(-DOUBLE_NULL_LIM, DOUBLE_NULL_LIM, true)</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="StdConvertDate()" class="Y"><span class="AA">const</span>&nbsp;<a href="ConvertDate"><u>ConvertDate</u></a><span class="AA">&amp;</span>&nbsp;<span class="Z">StdConvertDate</span>()</p>
+<p class="AD"><a href="src$Core$Convert$en-us.html#ConvertDate::class">ConvertDate</a></p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="StdConvertDateNotNull()" class="Y"><span class="AA">const</span>&nbsp;<a href="ConvertDate"><u>ConvertDate</u></a><span class="AA">&amp;</span>&nbsp;<span class="Z">StdConvertDateNotNull</span>()</p>
+<p class="AD"><a href="src$Core$Convert$en-us.html#ConvertDate::class">ConvertDate</a>(Date(0, 0, 0), Date(3000, 12, 31), true)</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="StdConvertTime()" class="Y"><span class="AA">const</span>&nbsp;<a href="ConvertTime"><u>ConvertTime</u></a><span class="AA">&amp;</span>&nbsp;<span class="Z">StdConvertTime</span>()</p>
+<p class="AD"><a href="src$Core$Convert$en-us.html#ConvertTime::class">ConvertTime</a></p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="StdConvertTimeNotNull()" class="Y"><span class="AA">const</span>&nbsp;<a href="ConvertTime"><u>ConvertTime</u></a><span class="AA">&amp;</span>&nbsp;<span class="Z">StdConvertTimeNotNull</span>()</p>
+<p class="AD"><a href="src$Core$Convert$en-us.html#ConvertTime::class">ConvertTime</a>(Null, Null, true)</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="StdConvertString()" class="Y"><span class="AA">const</span>&nbsp;<a href="ConvertString"><u>ConvertString</u></a><span class="AA">&amp;</span>&nbsp;<span class="Z">StdConvertString</span>()</p>
+<p class="AD"><a href="src$Core$Convert$en-us.html#ConvertString::class">ConvertString</a></p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="StdConvertStringNotNull()" class="Y"><span class="AA">const</span>&nbsp;<a href="ConvertString"><u>ConvertString</u></a><span class="AA">&amp;</span>&nbsp;<span class="Z">StdConvertStringNotNull</span>()</p>
+<p class="AD"><a href="src$Core$Convert$en-us.html#ConvertString::class">ConvertString</a>(INT_MAX, true)</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Upp::LambdaConvert(F,S,R)" class="Y"><span class="AA">template</span>&nbsp;&lt;<span class="AA">typename</span>&nbsp;<span class="AE">F</span>, <span class="AA">typename</span>&nbsp;<span class="AE">S</span>, <span class="AA">class</span>&nbsp;<span class="AE">R</span>&gt;</p>
+<p id="Upp::LambdaConvert(F,S,R)" class="Y"><span class="AA">const</span>&nbsp;<span class="AA">auto&amp;</span>&nbsp;<span class="Z">LambdaConvert</span>(<span class="AE">F</span>&nbsp;<span class="Q">format</span>, <span class="AE">S</span>&nbsp;<span class="Q">scan</span>, <span class="AE">R</span>&nbsp;<span class="Q">filter</span>)</p>
+<p id="Upp::LambdaConvert(F,S)" class="AF"><span class="AA">template</span>&nbsp;&lt;<span class="AA">typename</span>&nbsp;<span class="AE">F</span>, <span class="AA">typename</span>&nbsp;<span class="AE">S</span>&gt;</p>
+<p id="Upp::LambdaConvert(F,S)" class="Y"><span class="AA">const</span>&nbsp;<span class="AA">auto&amp;</span>&nbsp;<span class="Z">LambdaConvert</span>(<span class="AE">F</span>&nbsp;<span class="Q">format</span>, <span class="AE">S</span>&nbsp;<span class="Q">scan</span>)</p>
+<p id="Upp::LambdaConvert(F)" class="AF"><span class="AA">template</span>&nbsp;&lt;<span class="AA">typename</span>&nbsp;<span class="AE">F</span>&gt;</p>
+<p id="Upp::LambdaConvert(F)" class="Y"><span class="AA">const</span>&nbsp;<span class="AA">auto&amp;</span>&nbsp;<span class="Z">LambdaConvert</span>(<span class="AE">F</span>&nbsp;<span class="Q">format</span>)</p>
+<p class="R">Returns a reference to a static Convert instance that has Format/Scan/Filter defined as lambda expressions.</p>
+<p class="A">&nbsp;</p>
+<p class="F">&nbsp;</p>
+<p class="A">&nbsp;</p>
+</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>
+<TABLE BORDER="0" WIDTH="100%"><TR><TD></TD>
+</TR>
+</TABLE>
+<TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" BGCOLOR="#FFFFFF" WIDTH="100%" style="border-style: solid; border-width: 1px; border-color: #6E89AE;padding: 10px;;"><TR><TD><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%"><TR><TD><p class="A"><span class="B"> </span><a href="www$uppweb$contribweb$en-us.html">Do you want to contribute?</a></p>
+</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>
+<script type="text/javascript">var a={};var p=window.location.pathname.split("/");p=p[p.length-1];var s='<select id="lang" onchange="window.location=document.getElementById(\'lang\').value;">';for(l in a){if(p==l){d=" selected=1"}else{d=""}s+='<option value="'+l+'"'+d+'>'+a[l]+'</option>'}s+='</select>';var d=document.createElement('div');d.innerHTML=s;var c=document.getElementById('langs');c.replaceChild(d,c.firstChild);document.getElementById('langbox').style.display='block';</script></BODY>

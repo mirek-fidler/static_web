@@ -1,0 +1,764 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en-us">
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
+<META NAME="Generator" CONTENT="U++ HTML Package">
+<TITLE>TreeCtrl :: U++</TITLE>
+<STYLE TYPE="text/css"><!--
+.A{margin:0px 0px 0px 0px;text-indent:0px;text-align:left;color:#000000;font-family:sans-serif;font-size:10pt;font-weight:normal;font-style:normal;}
+.B{font-size:12pt;}
+.C{border-collapse:collapse;table-layout:auto;border: 2px solid #000000;}
+.D{padding: 3px 5px 3px 5px;border-left: 1px solid #000000;border-top: 1px solid #000000;border-right: 1px solid #000000;border-bottom: 1px solid #000000;background-color:#800000;vertical-align:middle;}
+.E{margin:0px 0px 0px 0px;text-indent:0px;text-align:left;color:#e5e5e5;font-family:sans-serif;font-size:16pt;font-weight:bold;font-style:normal;}
+.F{margin:0px 0px 0px 0px;text-indent:0px;text-align:left;color:#000000;font-family:sans-serif;font-size:6pt;font-weight:normal;font-style:normal;}
+.G{margin:0px 0px 5px 0px;text-indent:0px;text-align:left;color:#800000;font-family:sans-serif;font-size:12pt;font-weight:bold;font-style:normal;}
+.H{color:#0000ff;font-weight:normal;}
+.I{color:#000000;font-weight:normal;}
+.J{color:#000000;}
+.K{margin:0px 0px 0px 57px;text-indent:0px;text-align:left;color:#000000;font-family:sans-serif;font-size:10pt;font-weight:normal;font-style:normal;}
+.L{margin:8px 0px 0px 0px;text-indent:0px;text-align:left;color:#000000;font-family:sans-serif;font-size:10pt;font-weight:normal;font-style:normal;}
+.M{border-collapse:collapse;table-layout:auto;border: 2px solid #808080;}
+.N{padding: 3px 5px 3px 5px;border-left: 1px solid #808080;border-top: 1px solid #808080;border-right: 1px solid #808080;border-bottom: 1px solid #808080;background-color:#C0C0C0;vertical-align:middle;}
+.O{margin:0px 0px 0px 0px;text-indent:0px;text-align:left;color:#000000;font-family:sans-serif;font-size:10pt;font-weight:bold;font-style:normal;}
+.P{margin:0px 0px 5px 0px;text-indent:0px;text-align:left;color:#000000;font-family:sans-serif;font-size:10pt;font-weight:bold;font-style:normal;}
+.Q{font-weight:normal;}
+.R{margin:0px 0px 5px 0px;text-indent:0px;text-align:left;color:#000000;font-family:sans-serif;font-size:10pt;font-weight:normal;font-style:normal;}
+.S{color:#0000ff;}
+.T{font-weight:bold;}
+.U{color:#800000;font-weight:bold;}
+.V{color:#800000;}
+.W{margin:0px 0px 5px 0px;text-indent:0px;text-align:left;color:#0000ff;font-family:sans-serif;font-size:10pt;font-weight:normal;font-style:normal;}
+.X{color:#000000;font-weight:bold;}
+.Y{font-style:italic;}
+.Z{margin:0px 0px 0px 57px;text-indent:0px;text-align:left;color:#000000;font-family:sans-serif;font-size:10pt;font-weight:normal;font-style:italic;}
+.AA{font-style:normal;}
+.AB{color:#800000;font-weight:bold;font-style:normal;}
+.AC{margin:0px 0px 5px 0px;text-indent:0px;text-align:left;color:#000000;font-family:sans-serif;font-size:12pt;font-weight:bold;font-style:normal;}
+a.l1         { text-decoration:none; font-size: 8pt; font-family: sans-serif; font-weight: normal; }
+a.l1:link    { color:#000000; }
+a.l1:visited { color:#000080; }
+a.l1:hover   { color:#9933CC; }
+a.l1:active  { color:#000000; }
+a.l2         { text-decoration:none; font-size: 12pt; font-family: sans-serif; font-variant: small-caps; }
+a.l2:link    { color:#0066FF; }
+a.l2:visited { color:#FF6600; }
+a.l2:hover   { color:#BC0624; }
+a.l2:active  { color:#BC0024; }
+
+-->
+</STYLE>
+<META NAME="keywords" CONTENT="framework, toolkit, widget, c++, visual, studio, dev-cpp, builder, ide, class, component,wxwidgets, qt, rapid, application, development, rad, mfc, linux, macos, gui, sdl, directx, desktop"><META name="robots" content="index,follow">
+<LINK rel="alternate" type="application/rss+xml" title="SVN changes" href="svnchanges.xml">
+<LINK rel="shortcut icon" type="image/png" href="favicon.png">
+</HEAD><BODY BGCOLOR="#D2D9D2" ALINK="#800000" LINK="#000000" VLINK="#000080"><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%"><TR><TD COLSPAN="3"><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%" BGCOLOR="#FFFFFF" style="border: 1px solid #6E89AE;padding-left: 10px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;"><TR><TD><A HREF="index.html"><IMG SRC="0i.png" ALT="" BORDER="0"></A>
+</TD>
+<TD ALIGN="RIGHT" VALIGN="BOTTOM" STYLE="padding-bottom: 5px; background-image: url('1i.png')"><span style="font-size: 14pt; font-family: sans-serif;"><script type="text/javascript"><!--
+google_ad_client = "pub-1082147624384270";
+google_ad_width = 468;
+google_ad_height = 60;
+google_ad_format = "468x60_as";
+google_ad_type = "text_image";
+google_ad_channel = "";
+google_color_border = "336699";
+google_color_bg = "FFFFFF";
+google_color_link = "0000FF";
+google_color_text = "000000";
+google_color_url = "008000";
+//--></script>
+<script type="text/javascript"
+  src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+&nbsp;&nbsp;</span>
+</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>
+<TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%"><TR><TD COLSPAN="3" BGCOLOR="#D2D9D2" HEIGHT="6"></TD>
+</TR>
+<TR><TD VALIGN="TOP" ALIGN="CENTER"><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="160"><TR><TD ALIGN="CENTER"><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%" BGCOLOR="#FFFFFF" style="border-style: solid; border-width: 1px; border-color: #6E89AE;padding: 0px"><TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px;"><A HREF="www$uppweb$overview$en-us.html" CLASS="l1">Overview</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$examples$en-us.html" CLASS="l1">Examples</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$ss$en-us.html" CLASS="l1">Screenshots</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$comparison$en-us.html" CLASS="l1">Comparisons</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$apps$en-us.html" CLASS="l1">Applications</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$download$en-us.html" CLASS="l1">Download</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$documentation$en-us.html" CLASS="l1">Documentation</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$Tutorials$en-us.html" CLASS="l1">Tutorials</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="app$ide$UppHub$en-us.html" CLASS="l1">UppHub</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$Roadmap$en-us.html" CLASS="l1">Status & Roadmap</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$FAQ$en-us.html" CLASS="l1">FAQ</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="app$ide$About$en-us.html" CLASS="l1">Authors & License</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="https://www.ultimatepp.org/forums" CLASS="l1">Forums</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$Funding$en-us.html" CLASS="l1">Funding U++</A>
+</TD>
+</TR>
+</TABLE>
+<TABLE BORDER="0" WIDTH="100%"><TR><TD></TD>
+</TR>
+</TABLE>
+<TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%" BGCOLOR="#FFFFFF" style="border-style: solid; border-width: 1px; border-color: #6E89AE;padding: 0px"><TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('3i.png'); border: 0px solid black;padding-left:12px; padding-right:0px; padding-top:1px; padding-bottom:1px;color:#FFFFFF;"><B><span style="font-size: 8pt; font-family: sans-serif;">Search on this site</span>
+</B>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:6px; padding-right:0px; padding-top:4px; padding-bottom:4px;border-top: 1px solid #6E89AE;"><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%"><TR><TD><IMG SRC="4i.png" ALT="" BORDER="0"></TD>
+<TD><FORM ACTION="https://www.google.com/search" METHOD="GET" STYLE="margin:0px;padding:0px;"><INPUT TYPE="HIDDEN" NAME="ie" VALUE="UTF-8"><INPUT TYPE="HIDDEN" NAME="oe" VALUE="UTF-8"><INPUT TYPE="TEXT" NAME="q" SIZE="15" MAXLENGTH="256" placeholder="Site search"><INPUT TYPE="HIDDEN" NAME="sitesearch" VALUE="ultimatepp.org"></FORM>
+</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>
+<TABLE BORDER="0" WIDTH="100%"><TR><TD></TD>
+</TR>
+</TABLE>
+<br><div id="fb-root"></div>
+<script type="text/javascript">(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) {return;}
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+<div class="fb-like" data-href="https://www.facebook.com/pages/Upp-Framework/262346610476027?sk=wall" data-send="false" data-layout="button_count" data-width="160" data-show-faces="false" data-font="arial"></div>
+<br><br><script type="text/javascript"><!--
+google_ad_client = "pub-1082147624384270";
+google_ad_width = 160;
+google_ad_height = 600;
+google_ad_format = "160x600_as";
+google_ad_type = "text_image";
+google_ad_channel = "";
+google_color_border = "336699";
+google_color_bg = "FFFFFF";
+google_color_link = "0000FF";
+google_color_text = "000000";
+google_color_url = "008000";
+//--></script>
+<script type="text/javascript"
+  src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script><br><br><script type="text/javascript"><!--
+google_ad_client = "pub-1082147624384270";
+google_ad_width = 160;
+google_ad_height = 90;
+google_ad_format = "160x90_0ads_al_s";
+google_ad_channel = "";
+google_color_border = "336699";
+google_color_bg = "FFFFFF";
+google_color_link = "0000FF";
+google_color_text = "000000";
+google_color_url = "008000";
+//--></script>
+<script type="text/javascript"
+  src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+<br><br><br><br><br><br><A HREF="https://sourceforge.net/projects/upp/"><IMG SRC="https://sourceforge.net/sflogo.php?group_id=93970&amp;type=2" ALT="SourceForge.net Logo" BORDER="0" WIDTH="125" HEIGHT="37"></A>
+<br><br><A HREF="https://flathub.org/en/apps/org.ultimatepp.TheIDE"><IMG SRC="5i.png" ALT="SourceForge.net Logo" BORDER="0" WIDTH="125" HEIGHT="37"></A>
+<br><br><div style="background-color:#ffffff;width:125;height:35"><A HREF="https://github.com/ultimatepp"><IMG SRC="6i.png" ALT="GitHub Logo" BORDER="0" WIDTH="125" HEIGHT="35"></A>
+</div><br><div style="background-color:#ffffff;width:125;height:35"><div style="height:5"></div><A HREF="https://discord.gg/8XzqQzXZzb"><IMG SRC="https://assets-global.website-files.com/6257adef93867e50d84d30e2/636e0b5061df29d55a92d945_full_logo_blurple_RGB.svg" ALT="Discord Logo" BORDER="0" WIDTH="125" HEIGHT="25"></A>
+</div><br></TD>
+</TR>
+</TABLE>
+</TD>
+<TD VALIGN="TOP" BGCOLOR="#D2D9D2"><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="6"><TR><TD></TD>
+</TR>
+</TABLE>
+</TD>
+<TD VALIGN="TOP" WIDTH="100%" BGCOLOR="#D2D9D2"><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" BGCOLOR="#FFFFFF" WIDTH="100%" style="border-style: solid; border-width: 1px; border-color: #6E89AE;padding: 10px;;"><TR><TD><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%"><TR><TD><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr><td width="100%"><table width="100%" class="C"><colgroup><col width="100%"></colgroup>
+<tr><td class="D"><p class="E">TreeCtrl</p>
+</td>
+</tr>
+</table></td>
+</tr></table>
+<p class="F">&nbsp;</p>
+<p id="TreeCtrl::class" class="G"><span class="H">class</span><span class="I">&nbsp;</span><span class="J">TreeCtrl</span><span class="I">&nbsp;:&nbsp;</span><span class="H">public</span><span class="I">&nbsp;</span>Ctrl</p>
+<p class="K">&nbsp;</p>
+<p class="K"><a href="src$CtrlLib$TreeCtrl$en-us.html_0.png"><img src="src$CtrlLib$TreeCtrl$en-us.html_0.png" border="0" alt="" style="width: 194px; height: 185px"></a></p>
+<p class="A">&nbsp;</p>
+<p class="L">TreeCtrl hierarchy management is based on integer id numbers. Each node in tree (item) has associated integer id unique for the tree. Child nodes of item are organized as an array. TreeCtrl provides operation to insert child nodes at specified array position and to query child and parent nodes. Root item has fixed id 0.</p>
+<p class="F">&nbsp;</p>
+<p class="A">&nbsp;</p>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr><td width="100%"><table width="100%" class="M"><colgroup><col width="100%"></colgroup>
+<tr><td class="N"><p class="O">Public Member List</p>
+</td>
+</tr>
+</table></td>
+</tr></table>
+<p class="F">&nbsp;</p>
+<p id="TreeCtrl::WhenOpen" class="P"><a href="Callback1"><span class="Q"><u>Callback1</u></span></a><span class="H">&lt;int&gt;</span><span class="Q">&nbsp;</span>WhenOpen</p>
+<p class="K">Tree item was opened, parameter is the item id. &nbsp;</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="TreeCtrl::WhenClose" class="P"><a href="Callback1"><span class="Q"><u>Callback1</u></span></a><span class="H">&lt;int&gt;</span><span class="Q">&nbsp;</span>WhenClose</p>
+<p class="K">Tree item was closed, parameter is the item id. &nbsp;</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="TreeCtrl::WhenLeftClick" class="P"><a href="Callback"><span class="Q"><u>Callback</u></span></a><span class="Q">&nbsp;</span>WhenLeftClick</p>
+<p class="K">Tree item was clicked. Cursor identifies clicked item. You can get the click position within the item using GetItemClickPos method.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="TreeCtrl::WhenLeftDouble" class="P"><a href="Callback"><span class="Q"><u>Callback</u></span></a><span class="Q">&nbsp;</span>WhenLeftDouble</p>
+<p class="K">Tree item was double-clicked. Cursor identifies clicked item. You can get the click position within the item using GetItemClickPos method.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="TreeCtrl::WhenBar" class="P"><a href="Callback1"><span class="Q"><u>Callback1</u></span></a><span class="H">&lt;</span><span class="Q">Bar</span><span class="H">&amp;&gt;</span><span class="Q">&nbsp;</span>WhenBar</p>
+<p class="K">Use to supply context menu.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="TreeCtrl::WhenSel" class="P"><a href="Callback"><span class="Q"><u>Callback</u></span></a><span class="Q">&nbsp;</span>WhenSel</p>
+<p class="K">Cursor or selection has changed (including KillCursor).</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="TreeCtrl::WhenDrag" class="P"><a href="Callback"><span class="Q"><u>Callback</u></span></a><span class="Q">&nbsp;</span>WhenDrag</p>
+<p class="K">Triggered when user attempts dragging an item.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="TreeCtrl::WhenDropItem" class="P"><a href="Callback2"><span class="Q"><u>Callback2</u></span></a><span class="H">&lt;int</span><span class="Q">, </span><a href="PasteClip"><span class="Q"><u>PasteClip</u></span></a><span class="H">&amp;&gt;</span><span class="Q">&nbsp;</span>WhenDropItem</p>
+<p class="K">This callback manages drag&amp;drop into TreeCtrl items. The first parameter is an id of item. See <a href="PasteClip">PasteClip</a> for more details.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="TreeCtrl::WhenDropInsert" class="P"><a href="Callback3"><span class="Q"><u>Callback3</u></span></a><span class="H">&lt;int</span><span class="Q">, </span><span class="H">int</span><span class="Q">, </span><a href="PasteClip"><span class="Q"><u>PasteClip</u></span></a><span class="H">&amp;&gt;</span><span class="Q">&nbsp;</span>WhenDropInsert</p>
+<p class="K">This callback manages drag&amp;drop into insert positions between TreeCtrl items. The first parameter is an id of parent item, the second parameter is insert index within parent's child list. See <a href="PasteClip">PasteClip</a> for more details.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="TreeCtrl::WhenDrop" class="P"><a href="Callback1"><span class="Q"><u>Callback1</u></span></a><span class="H">&lt;</span><span class="Q">PasteClip</span><span class="H">&amp;&gt;</span><span class="Q">&nbsp;</span>WhenDrop</p>
+<p class="K">This callback manages drag&amp;drop when WhenDropItem and WhenDropInsert do not apply - drop into empty area. See <a href="PasteClip">PasteClip</a> for more details.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Upp::TreeCtrl::WhenStartEdit" class="P"><a href="Upp::Event"><span class="Q"><u>Event</u></span></a><span class="Q">&lt;</span><span class="H">int</span><span class="Q">&gt;&nbsp;</span>WhenStartEdit</p>
+<p class="K">Called before TreeCtrl starts editing the node. The first parameter is the cursor of edited element.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Upp::TreeCtrl::WhenEdited" class="P"><a href="Upp::Event"><span class="Q"><u>Event</u></span></a><span class="Q">&lt;</span><span class="H">int</span><span class="Q">,</span><span class="H"> const</span><span class="Q">&nbsp;Value</span><span class="H">&amp;</span><span class="Q">&gt;&nbsp;</span>WhenEdited</p>
+<p class="K">When defined TreeCtrl will start editing the node value when clicked on already select one (after a while) in a way similar to e.g. FileSel file renaming. When the value is accepted, WhenEdit is called with a new value. Value is not changed in TreeCtrl, if that is desired, it is a responsibility of code that is assigned to the WhenEdited. Default editor is EditString and can be changed with Editor modifier method. The first parameter is the cursor of edited element.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="TreeCtrl::WhenCursor" class="P"><a href="Callback"><span class="Q"><u>Callback</u></span></a><span class="Q">&nbsp;</span>WhenCursor</p>
+<p class="K">Cursor has changed (including KillCursor). Deprecated.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="TreeCtrl::WhenSelection" class="P"><a href="Callback"><span class="Q"><u>Callback</u></span></a><span class="Q">&nbsp;</span>WhenSelection</p>
+<p class="K">Selection has changed. Deprecated.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="TreeCtrl::SetRoot(const TreeCtrl::Node&)" class="R"><span class="S">void</span>&nbsp;<span class="T">SetRoot</span>(<span class="S">const</span>&nbsp;<a href="TreeCtrl::Node"><u>TreeCtrl::Node</u></a><span class="S">&amp;</span>&nbsp;<span class="U">n</span>)</p>
+<p class="K">Sets the content of root item to <span class="U">n</span>. Full deep copy of <span class="U">n</span> is performed.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="TreeCtrl::SetRoot(const Image&,Value)" class="R"><span class="S">void</span>&nbsp;<span class="T">SetRoot</span>(<span class="S">const</span>&nbsp;<a href="Image"><u>Image</u></a><span class="S">&amp;</span>&nbsp;<span class="U">img</span>, <a href="Value"><u>Value</u></a>&nbsp;<span class="U">v</span>)</p>
+<p class="K">Sets image, key and value of root item. <span class="U">v</span> is used both for key and value.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="TreeCtrl::SetRoot(const Image&,Value,Value)" class="R"><span class="S">void</span>&nbsp;<span class="T">SetRoot</span>(<span class="S">const</span>&nbsp;<a href="Image"><u>Image</u></a><span class="S">&amp;</span>&nbsp;<span class="U">img</span>, <a href="Value"><u>Value</u></a>&nbsp;<span class="U">key</span>, <a href="Value"><u>Value</u></a>&nbsp;<span class="U">text</span>)</p>
+<p class="K">Sets the image, key and value of root item.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="TreeCtrl::SetRoot(const Image&,Ctrl&,int,int)" class="R"><span class="S">void</span>&nbsp;<span class="T">SetRoot</span>(<span class="S">const</span>&nbsp;<a href="Image"><u>Image</u></a><span class="S">&amp;</span>&nbsp;<span class="U">img</span>, <a href="Ctrl"><u>Ctrl</u></a><span class="S">&amp;</span>&nbsp;<span class="U">ctrl</span>, <span class="S">int</span>&nbsp;<span class="U">cx</span>&nbsp;=&nbsp;<span class="V">0</span>, <span class="S">int</span>&nbsp;<span class="U">cy</span>&nbsp;=&nbsp;<span class="V">0</span>)</p>
+<p class="K">Sets widget to be at root item. Only reference to <span class="U">ctrl</span> is stored -&gt; widget object lifetime must exceed TreeCtrl's lifetime. Dimensions of widget should be <span class="U">cx</span>, <span class="U">cy</span>. If either <span class="U">cx</span> or <span class="U">cy</span> are zero, GetMinSize dimension is used.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="TreeCtrl::Insert(int,int,const TreeCtrl::Node&)" class="R"><span class="S">int</span>&nbsp;<span class="T">Insert</span>(<span class="S">int</span>&nbsp;<span class="U">parentid</span>, <span class="S">int</span>&nbsp;<span class="U">i</span>, <span class="S">const</span>&nbsp;<a href="TreeCtrl::Node"><u>TreeCtrl::Node</u></a><span class="S">&amp;</span>&nbsp;<span class="U">n</span>)</p>
+<p id="TreeCtrl::Insert(int,int)" class="R"><span class="S">int</span>&nbsp;<span class="T">Insert</span>(<span class="S">int</span>&nbsp;<span class="U">parentid</span>, <span class="S">int</span>&nbsp;<span class="U">i</span>)</p>
+<p id="TreeCtrl::Insert(int,int,const Image&,Value,bool)" class="R"><span class="S">int</span>&nbsp;<span class="T">Insert</span>(<span class="S">int</span>&nbsp;<span class="U">parentid</span>, <span class="S">int</span>&nbsp;<span class="U">i</span>, <span class="S">const</span>&nbsp;<a href="Image"><u>Image</u></a><span class="S">&amp;</span>&nbsp;<span class="U">img</span>, <a href="Value"><u>Value</u></a>&nbsp;<span class="U">value</span>, <span class="S">bool</span>&nbsp;<span class="U">withopen</span>&nbsp;=&nbsp;<span class="S">false</span>)</p>
+<p id="TreeCtrl::Insert(int,int,const Image&,Value,Value,bool)" class="R"><span class="S">int</span>&nbsp;<span class="T">Insert</span>(<span class="S">int</span>&nbsp;<span class="U">parentid</span>, <span class="S">int</span>&nbsp;<span class="U">i</span>, <span class="S">const</span>&nbsp;<a href="Image"><u>Image</u></a><span class="S">&amp;</span>&nbsp;<span class="U">img</span>, <a href="Value"><u>Value</u></a>&nbsp;<span class="U">key</span>, <a href="Value"><u>Value</u></a>&nbsp;<span class="U">value</span>, <span class="S">bool</span>&nbsp;<span class="U">withopen</span>&nbsp;=&nbsp;<span class="S">false</span>)</p>
+<p id="TreeCtrl::Insert(int,int,const Image&,Ctrl&,int,int,bool)" class="R"><span class="S">int</span>&nbsp;<span class="T">Insert</span>(<span class="S">int</span>&nbsp;<span class="U">parentid</span>, <span class="S">int</span>&nbsp;<span class="U">i</span>, <span class="S">const</span>&nbsp;<a href="Image"><u>Image</u></a><span class="S">&amp;</span>&nbsp;<span class="U">img</span>, <a href="Ctrl"><u>Ctrl</u></a><span class="S">&amp;</span>&nbsp;<span class="U">c</span>, <span class="S">int</span>&nbsp;<span class="U">cx</span>&nbsp;=&nbsp;<span class="V">0</span>, <span class="S">int</span>&nbsp;<span class="U">cy</span>&nbsp;=&nbsp;<span class="V">0</span>, <span class="S">bool</span>&nbsp;<span class="U">wo</span>&nbsp;=&nbsp;<span class="S">false</span>)</p>
+<p id="TreeCtrl::Insert(int,int,const Image&,Value,const String&,bool)" class="R"><span class="S">int</span>&nbsp;<span class="T">Insert</span>(<span class="S">int</span>&nbsp;<span class="U">parentid</span>, <span class="S">int</span>&nbsp;<span class="U">i</span>, <span class="S">const</span>&nbsp;<a href="Image"><u>Image</u></a><span class="S">&amp;</span>&nbsp;<span class="U">img</span>, <a href="Value"><u>Value</u></a>&nbsp;<span class="U">key</span>, <span class="S">const</span>&nbsp;<a href="String"><u>String</u></a><span class="S">&amp;</span>&nbsp;<span class="U">value</span>, <span class="S">bool</span>&nbsp;<span class="U">withopen</span>&nbsp;=&nbsp;<span class="S">false</span>)</p>
+<p id="TreeCtrl::Insert(int,int,const Image&,Value,const char*,bool)" class="R"><span class="S">int</span>&nbsp;<span class="T">Insert</span>(<span class="S">int</span>&nbsp;<span class="U">parentid</span>, <span class="S">int</span>&nbsp;<span class="U">i</span>, <span class="S">const</span>&nbsp;<a href="Image"><u>Image</u></a><span class="S">&amp;</span>&nbsp;<span class="U">img</span>, <a href="Value"><u>Value</u></a>&nbsp;<span class="U">key</span>, <span class="S">const</span>&nbsp;<span class="S">char</span>&nbsp;*<span class="U">value</span>, <span class="S">bool</span>&nbsp;<span class="U">withopen</span>&nbsp;=&nbsp;<span class="S">false</span>)</p>
+<p class="K">Inserts child item to parent specified by id. Distinct variants set various attributes to TreeCtrl::Node of insterted item. Returns id of new item. Note: Last two overloads are &nbsp;to avoid overloading ambiguity.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="TreeCtrl::Add(int,const TreeCtrl::Node&)" class="R"><span class="S">int</span>&nbsp;<span class="T">Add</span>(<span class="S">int</span>&nbsp;<span class="U">parentid</span>, <span class="S">const</span>&nbsp;<a href="TreeCtrl::Node"><u>TreeCtrl::Node</u></a><span class="S">&amp;</span>&nbsp;<span class="U">n</span>)</p>
+<p id="TreeCtrl::Add(int)" class="R"><span class="S">int</span>&nbsp;<span class="T">Add</span>(<span class="S">int</span>&nbsp;<span class="U">parentid</span>)</p>
+<p id="TreeCtrl::Add(int,const Image&,Value,bool)" class="R"><span class="S">int</span>&nbsp;<span class="T">Add</span>(<span class="S">int</span>&nbsp;<span class="U">parentid</span>, <span class="S">const</span>&nbsp;<a href="Image"><u>Image</u></a><span class="S">&amp;</span>&nbsp;<span class="U">img</span>, <a href="Value"><u>Value</u></a>&nbsp;<span class="U">value</span>, <span class="S">bool</span>&nbsp;<span class="U">withopen</span>&nbsp;=&nbsp;<span class="S">false</span>)</p>
+<p id="TreeCtrl::Add(int,const Image&,Value,Value,bool)" class="R"><span class="S">int</span>&nbsp;<span class="T">Add</span>(<span class="S">int</span>&nbsp;<span class="U">parentid</span>, <span class="S">const</span>&nbsp;<a href="Image"><u>Image</u></a><span class="S">&amp;</span>&nbsp;<span class="U">img</span>, <a href="Value"><u>Value</u></a>&nbsp;<span class="U">key</span>, <a href="Value"><u>Value</u></a>&nbsp;<span class="U">value</span>, <span class="S">bool</span>&nbsp;<span class="U">withopen</span>&nbsp;=&nbsp;<span class="S">false</span>)</p>
+<p id="TreeCtrl::Add(int,const Image&,Ctrl&,int,int,bool)" class="R"><span class="S">int</span>&nbsp;<span class="T">Add</span>(<span class="S">int</span>&nbsp;<span class="U">parentid</span>, <span class="S">const</span>&nbsp;<a href="Image"><u>Image</u></a><span class="S">&amp;</span>&nbsp;<span class="U">img</span>, <a href="Ctrl"><u>Ctrl</u></a><span class="S">&amp;</span>&nbsp;<span class="U">ctrl</span>, <span class="S">int</span>&nbsp;<span class="U">cx</span>&nbsp;=&nbsp;<span class="V">0</span>, <span class="S">int</span>&nbsp;<span class="U">cy</span>&nbsp;=&nbsp;<span class="V">0</span>, <span class="S">bool</span>&nbsp;<span class="U">withopen</span>&nbsp;=&nbsp;<span class="S">false</span>)</p>
+<p id="TreeCtrl::Add(int,const Image&,Value,const String&,bool)" class="R"><span class="S">int</span>&nbsp;<span class="T">Add</span>(<span class="S">int</span>&nbsp;<span class="U">parentid</span>, <span class="S">const</span>&nbsp;<a href="Image"><u>Image</u></a><span class="S">&amp;</span>&nbsp;<span class="U">img</span>, <a href="Value"><u>Value</u></a>&nbsp;<span class="U">key</span>, <span class="S">const</span>&nbsp;<a href="String"><u>String</u></a><span class="S">&amp;</span>&nbsp;<span class="U">value</span>, <span class="S">bool</span>&nbsp;<span class="U">withopen</span>&nbsp;=&nbsp;<span class="S">false</span>)</p>
+<p id="TreeCtrl::Add(int,const Image&,Value,const char*,bool)" class="R"><span class="S">int</span>&nbsp;<span class="T">Add</span>(<span class="S">int</span>&nbsp;<span class="U">parentid</span>, <span class="S">const</span>&nbsp;<a href="Image"><u>Image</u></a><span class="S">&amp;</span>&nbsp;<span class="U">img</span>, <a href="Value"><u>Value</u></a>&nbsp;<span class="U">key</span>, <span class="S">const</span>&nbsp;<span class="S">char</span>&nbsp;*<span class="U">value</span>, <span class="S">bool</span>&nbsp;<span class="U">withopen</span>&nbsp;=&nbsp;<span class="S">false</span>)</p>
+<p class="K">Inserts child item at the end of list of parent's child items. Parent is specified by id. Distinct variants set various attributes to TreeCtrl::Node of insterted item. Returns id of new item. Note: Last two overloads are &nbsp;to avoid overloading ambiguity.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="TreeCtrl::Remove(int)" class="R"><span class="S">void</span>&nbsp;<span class="T">Remove</span>(<span class="S">int</span>&nbsp;<span class="U">id</span>)</p>
+<p class="K">Removes item with <span class="U">id</span> from the tree.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="TreeCtrl::RemoveChildren(int)" class="R"><span class="S">void</span>&nbsp;<span class="T">RemoveChildren</span>(<span class="S">int</span>&nbsp;<span class="U">id</span>)</p>
+<p class="K">Removes all child items from parent item with <span class="U">id</span>.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="TreeCtrl::Swap(int,int)" class="R"><span class="S">void</span>&nbsp;<span class="T">Swap</span>(<span class="S">int</span>&nbsp;<span class="U">id1</span>, <span class="S">int</span>&nbsp;<span class="U">id2</span>)</p>
+<p class="K">Swaps two tree items.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="TreeCtrl::SwapChildren(int,int,int)" class="R"><span class="S">void</span>&nbsp;<span class="T">SwapChildren</span>(<span class="S">int</span>&nbsp;<span class="U">parentid</span>, <span class="S">int</span>&nbsp;<span class="U">i1</span>, <span class="S">int</span>&nbsp;<span class="U">i2</span>)</p>
+<p class="K">Swaps <span class="U">parentid</span> children with indices <span class="U">i1</span> and <span class="U">i2</span>.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="TreeCtrl::GetChildCount(int)const" class="W">int<span class="J">&nbsp;</span><span class="X">GetChildCount</span><span class="J">(</span>int<span class="J">&nbsp;</span><span class="U">id</span><span class="J">)&nbsp;</span>const</p>
+<p class="K">Returns the number of child items of parent item with <span class="U">id</span>.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="TreeCtrl::GetChild(int,int)const" class="W">int<span class="J">&nbsp;</span><span class="X">GetChild</span><span class="J">(</span>int<span class="J">&nbsp;</span><span class="U">id</span><span class="J">, </span>int<span class="J">&nbsp;</span><span class="U">i</span><span class="J">)&nbsp;</span>const</p>
+<p class="K">Returns the identifier of child at index &nbsp;<span class="U">i</span> of parent item with <span class="U">id</span>.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="TreeCtrl::GetChildIndex(int,int)const" class="W">int<span class="J">&nbsp;</span><span class="X">GetChildIndex</span><span class="J">(</span>int<span class="J">&nbsp;</span><span class="U">parentid</span><span class="J">, </span>int<span class="J">&nbsp;</span><span class="U">childid</span><span class="J">)&nbsp;</span>const</p>
+<p class="K">Returns an index of child item of <span class="U">parentid</span> with id <span class="U">childid</span>.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="TreeCtrl::GetParent(int)const" class="W">int<span class="J">&nbsp;</span><span class="X">GetParent</span><span class="J">(</span>int<span class="J">&nbsp;</span><span class="U">id</span><span class="J">)&nbsp;</span>const</p>
+<p class="K">Returns the parent identifier of child with <span class="U">id</span>.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="TreeCtrl::Get(int)const" class="W"><a href="Value"><span class="J"><u>Value</u></span></a><span class="J">&nbsp;</span><span class="X">Get</span><span class="J">(</span>int<span class="J">&nbsp;</span><span class="U">id</span><span class="J">)&nbsp;</span>const</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="TreeCtrl::GetValue(int)const" class="W"><a href="Value"><span class="J"><u>Value</u></span></a><span class="J">&nbsp;</span><span class="X">GetValue</span><span class="J">(</span>int<span class="J">&nbsp;</span><span class="U">id</span><span class="J">)&nbsp;</span>const</p>
+<p class="K">Returns the value of item with <span class="U">id</span>.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="TreeCtrl::operator[](int)const" class="W"><a href="Value"><span class="J"><u>Value</u></span></a><span class="J">&nbsp;</span><span class="X">operator[]</span><span class="J">(</span>int<span class="J">&nbsp;</span><span class="U">id</span><span class="J">)&nbsp;</span>const</p>
+<p class="K">Returns the key of item with <span class="U">id</span>.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="TreeCtrl::Set(int,Value)" class="R"><span class="S">void</span>&nbsp;<span class="T">Set</span>(<span class="S">int</span>&nbsp;<span class="U">id</span>, <a href="Value"><u>Value</u></a>&nbsp;<span class="U">v</span>)</p>
+<p class="K">Sets the value <span class="Y">and</span> key of item with <span class="U">id</span>.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="TreeCtrl::Set(int,Value,Value)" class="R"><span class="S">void</span>&nbsp;<span class="T">Set</span>(<span class="S">int</span>&nbsp;<span class="U">id</span>, <a href="Value"><u>Value</u></a>&nbsp;<span class="U">key</span>, <a href="Value"><u>Value</u></a>&nbsp;<span class="U">value</span>)</p>
+<p class="K">Sets the value and key of item with <span class="U">id</span>.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="TreeCtrl::SetValue(const Value&)" class="R"><span class="S">void</span>&nbsp;<span class="T">SetValue</span>(<span class="S">const</span>&nbsp;<a href="Value"><u>Value</u></a><span class="S">&amp;</span>&nbsp;<span class="U">v</span>)</p>
+<p class="K">Sets the value of item with cursor, key is unchanged.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="TreeCtrl::SetDisplay(int,const Display&)" class="R"><span class="S">void</span>&nbsp;<span class="T">SetDisplay</span>(<span class="S">int</span>&nbsp;<span class="U">id</span>, <span class="S">const</span>&nbsp;<a href="Display"><u>Display</u></a><span class="S">&amp;</span>&nbsp;<span class="U">display</span>)</p>
+<p class="K">Sets the display of <span class="U">id</span> item.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="TreeCtrl::RefreshItem(int)" class="R"><span class="S">void</span>&nbsp;<span class="T">RefreshItem</span>(<span class="S">int</span>&nbsp;<span class="U">id</span>)</p>
+<p class="K">Forces the repainting of item (e.g. when its appearance changes in a way that cannot be detected by TreeCtrl widget).</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="TreeCtrl::GetLineCount()" class="R"><span class="S">int</span>&nbsp;<span class="T">GetLineCount</span>()</p>
+<p class="K">Gets the current number of lines - visible items - in TreeCtrl.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="TreeCtrl::GetItemAtLine(int)" class="R"><span class="S">int</span>&nbsp;<span class="T">GetItemAtLine</span>(<span class="S">int</span>&nbsp;<span class="U">i</span>)</p>
+<p class="K">Gets the id of item at line i.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="TreeCtrl::GetLineAtItem(int)" class="R"><span class="S">int</span>&nbsp;<span class="T">GetLineAtItem</span>(<span class="S">int</span>&nbsp;<span class="U">id</span>)</p>
+<p class="K">Gets the line of item with <span class="U">id</span>. If item is not visible, returns negative value.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="TreeCtrl::GetNode(int)const" class="W"><a href="TreeCtrl::Node"><span class="J"><u>Node</u></span></a><span class="J">&nbsp;</span><span class="X">GetNode</span><span class="J">(</span>int<span class="J">&nbsp;</span><span class="U">id</span><span class="J">)&nbsp;</span>const</p>
+<p class="K">Returns attributes of item with <span class="U">id</span>.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="TreeCtrl::SetNode(int,const TreeCtrl::Node&)" class="R"><span class="S">void</span>&nbsp;<span class="T">SetNode</span>(<span class="S">int</span>&nbsp;<span class="U">id</span>, <span class="S">const</span>&nbsp;<a href="TreeCtrl::Node"><u>TreeCtrl::Node</u></a><span class="S">&amp;</span>&nbsp;<span class="U">n</span>)</p>
+<p class="K">Sets attributes.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Upp::TreeCtrl::IsValid(int)const" class="W">bool<span class="J">&nbsp;</span><span class="X">IsValid</span><span class="J">(</span>int<span class="J">&nbsp;</span><span class="U">id</span><span class="J">)&nbsp;</span>const</p>
+<p class="K">Returns true if <span class="U">id</span> represents a valid node id.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="TreeCtrl::IsOpen(int)const" class="W">bool<span class="J">&nbsp;</span><span class="X">IsOpen</span><span class="J">(</span>int<span class="J">&nbsp;</span><span class="U">id</span><span class="J">)&nbsp;</span>const</p>
+<p class="K">Tests whether item is opened.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="TreeCtrl::Open(int,bool)" class="R"><span class="S">void</span>&nbsp;<span class="T">Open</span>(<span class="S">int</span>&nbsp;<span class="U">id</span>, <span class="S">bool</span>&nbsp;<span class="U">open</span>&nbsp;=&nbsp;<span class="S">true</span>)</p>
+<p class="K">Opens or closes (if <span class="U">open</span> is false) item with id - makes all child items visible.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="TreeCtrl::Close(int)" class="R"><span class="S">void</span>&nbsp;<span class="T">Close</span>(<span class="S">int</span>&nbsp;<span class="U">id</span>)</p>
+<p class="K">Same as Open(id, false).</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Upp::TreeCtrl::GetOpenIds()const" class="W"><a href="Upp::Vector"><span class="J"><u>Vector</u></span></a><span class="J">&lt;</span>int<span class="J">&gt;&nbsp;</span><span class="X">GetOpenIds</span><span class="J">()&nbsp;</span>const</p>
+<p class="K">Returns all open node ids.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Upp::TreeCtrl::OpenIds(const Upp::Vector<int>&)" class="R"><span class="S">void</span>&nbsp;<span class="T">OpenIds</span>(<span class="S">const</span>&nbsp;<a href="Upp::Vector"><u>Vector</u></a>&lt;<span class="S">int</span>&gt;&amp;&nbsp;<span class="U">ids</span>)</p>
+<p class="K">Opens all valid <span class="U">ids</span>.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="TreeCtrl::OpenDeep(int,bool)" class="R"><span class="S">void</span>&nbsp;<span class="T">OpenDeep</span>(<span class="S">int</span>&nbsp;<span class="U">id</span>, <span class="S">bool</span>&nbsp;<span class="U">open</span>&nbsp;=&nbsp;<span class="S">true</span>)</p>
+<p class="K">Opens/closes item with <span class="U">id</span> and all of its child items.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="TreeCtrl::CloseDeep(int)" class="R"><span class="S">void</span>&nbsp;<span class="T">CloseDeep</span>(<span class="S">int</span>&nbsp;<span class="U">id</span>)</p>
+<p class="K">Same as OpenDeep(<span class="U">id</span>, false).</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="TreeCtrl::MakeVisible(int)" class="R"><span class="S">void</span>&nbsp;<span class="T">MakeVisible</span>(<span class="S">int</span>&nbsp;<span class="U">id</span>)</p>
+<p class="K">Opens all parent items of item with <span class="U">id</span> to make it visible.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="TreeCtrl::SetCursorLine(int)" class="R"><span class="S">void</span>&nbsp;<span class="T">SetCursorLine</span>(<span class="S">int</span>&nbsp;<span class="U">i</span>)</p>
+<p class="K">Sets cursor in the tree to be at visible item line <span class="U">i</span>.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="TreeCtrl::GetCursorLine()const" class="W">int<span class="J">&nbsp;</span><span class="X">GetCursorLine</span><span class="J">()&nbsp;</span>const</p>
+<p class="K">Returns visible item line.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="TreeCtrl::KillCursor()" class="R"><span class="S">void</span>&nbsp;<span class="T">KillCursor</span>()</p>
+<p class="K">Removes cursor from tree.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="TreeCtrl::SetCursor(int)" class="R"><span class="S">void</span>&nbsp;<span class="T">SetCursor</span>(<span class="S">int</span>&nbsp;<span class="U">id</span>)</p>
+<p class="K">Sets cursor to item with <span class="U">id</span>. If item is not visible, MakeVisible(id) is called first.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="TreeCtrl::GetCursor()const" class="W">int<span class="J">&nbsp;</span><span class="X">GetCursor</span><span class="J">()&nbsp;</span>const</p>
+<p class="K">Returns id of item that currently has cursor or negative value if there is none.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="TreeCtrl::IsCursor()const" class="W">bool<span class="J">&nbsp;</span><span class="X">IsCursor</span><span class="J">()&nbsp;</span>const</p>
+<p class="K">Returns true if there is cursor in the tree.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="TreeCtrl::GetItemClickPos()const" class="W"><a href="Point"><span class="J"><u>Point</u></span></a><span class="J">&nbsp;</span><span class="X">GetItemClickPos</span><span class="J">()&nbsp;</span>const</p>
+<p class="K">Returns current mouse position within item Display rectangle when clicked.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="TreeCtrl::GetScroll()const" class="W"><a href="Point"><span class="J"><u>Point</u></span></a><span class="J">&nbsp;</span><span class="X">GetScroll</span><span class="J">()&nbsp;</span>const</p>
+<p class="K">Returns the scroll position of tree.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="TreeCtrl::ScrollTo(Point)" class="R"><span class="S">void</span>&nbsp;<span class="T">ScrollTo</span>(<a href="Point"><u>Point</u></a>&nbsp;<span class="U">sc</span>)</p>
+<p class="K">Scrolls tree back to value previously returned by GetScroll.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="TreeCtrl::Get()const" class="W"><a href="Value"><span class="J"><u>Value</u></span></a><span class="J">&nbsp;</span><span class="X">Get</span><span class="J">()&nbsp;</span>const</p>
+<p class="K">Returns key of item with cursor or Null if there is none.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="TreeCtrl::GetValue()const" class="W"><a href="Value"><span class="J"><u>Value</u></span></a><span class="J">&nbsp;</span><span class="X">GetValue</span><span class="J">()&nbsp;</span>const</p>
+<p class="K">Returns value of item with cursor or Null if there is none.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="TreeCtrl::Find(Value)" class="R"><span class="S">int</span>&nbsp;<span class="T">Find</span>(<a href="Value"><u>Value</u></a>&nbsp;<span class="U">key</span>)</p>
+<p class="K">Returns id of item with <span class="U">key</span> or negative value if not found.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="TreeCtrl::FindSetCursor(Value)" class="R"><span class="S">bool</span>&nbsp;<span class="T">FindSetCursor</span>(<a href="Value"><u>Value</u></a>&nbsp;<span class="U">key</span>)</p>
+<p class="K">Places cursor to first item with <span class="U">key</span>, returns true if found.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="TreeCtrl::Sort(int,const ValueOrder&,bool)" class="R"><span class="S">void</span>&nbsp;<span class="T">Sort</span>(<span class="S">int</span>&nbsp;<span class="U">id</span>, <span class="S">const</span>&nbsp;<a href="ValueOrder"><u>ValueOrder</u></a><span class="S">&amp;</span>&nbsp;<span class="U">order</span>, <span class="S">bool</span>&nbsp;<span class="U">byvalue</span>&nbsp;=&nbsp;<span class="S">false</span>)</p>
+<p class="K">Sorts child items of item with <span class="U">id</span> using <span class="U">order</span> sorting predicate. If <span class="U">byvalue</span> is false, items are sorted by keys, if true, by values.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="TreeCtrl::SortDeep(int,const ValueOrder&,bool)" class="R"><span class="S">void</span>&nbsp;<span class="T">SortDeep</span>(<span class="S">int</span>&nbsp;<span class="U">id</span>, <span class="S">const</span>&nbsp;<a href="ValueOrder"><u>ValueOrder</u></a><span class="S">&amp;</span>&nbsp;<span class="U">order</span>, <span class="S">bool</span>&nbsp;<span class="U">byvalue</span>&nbsp;=&nbsp;<span class="S">false</span>)</p>
+<p class="K">Sorts child items of item with <span class="U">id</span> using <span class="U">order</span> sorting predicate. If <span class="U">byvalue</span> is false, items are sorted by keys, if true, by values. After sorting, it recursively calls SortDeep for all child items.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="TreeCtrl::Sort(int,int(*)(const Value&v1,const Value&v2),bool)" class="R"><span class="S">void</span>&nbsp;<span class="T">Sort</span>(<span class="S">int</span>&nbsp;<span class="U">id</span>, <span class="S">int</span>&nbsp;(*<span class="U">compare</span>)(<span class="S">const</span>&nbsp;Value<span class="S">&amp;</span>&nbsp;v1, <span class="S">const</span>&nbsp;Value<span class="S">&amp;</span>&nbsp;v2)&nbsp;=&nbsp;StdValueCompare, <span class="S">bool</span>&nbsp;<span class="U">byvalue</span>&nbsp;=&nbsp;<span class="S">false</span>)</p>
+<p class="K">Sort with simplified predicate <span class="U">compare</span>.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="TreeCtrl::SortDeep(int,int(*)(const Value&v1,const Value&v2),bool)" class="R"><span class="S">void</span>&nbsp;<span class="T">SortDeep</span>(<span class="S">int</span>&nbsp;<span class="U">id</span>, <span class="S">int</span>&nbsp;(*<span class="U">compare</span>)(<span class="S">const</span>&nbsp;Value<span class="S">&amp;</span>&nbsp;v1, <span class="S">const</span>&nbsp;Value<span class="S">&amp;</span>&nbsp;v2)&nbsp;=&nbsp;StdValueCompare, <span class="S">bool</span>&nbsp;<span class="U">byvalue</span>&nbsp;=&nbsp;<span class="S">false</span>)</p>
+<p class="K">SortDeep with simplified predicate <span class="U">compare</span>.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="TreeCtrl::SortByValue(int,const ValueOrder&)" class="R"><span class="S">void</span>&nbsp;<span class="T">SortByValue</span>(<span class="S">int</span>&nbsp;<span class="U">id</span>, <span class="S">const</span>&nbsp;<a href="ValueOrder"><u>ValueOrder</u></a><span class="S">&amp;</span>&nbsp;<span class="U">order</span>)</p>
+<p id="TreeCtrl::SortDeepByValue(int,const ValueOrder&)" class="R"><span class="S">void</span>&nbsp;<span class="T">SortDeepByValue</span>(<span class="S">int</span>&nbsp;<span class="U">id</span>, <span class="S">const</span>&nbsp;<a href="ValueOrder"><u>ValueOrder</u></a><span class="S">&amp;</span>&nbsp;<span class="U">order</span>)</p>
+<p id="TreeCtrl::SortByValue(int,int(*)(const Value&v1,const Value&v2))" class="R"><span class="S">void</span>&nbsp;<span class="T">SortByValue</span>(<span class="S">int</span>&nbsp;<span class="U">id</span>, <span class="S">int</span>&nbsp;(*<span class="U">compare</span>)(<span class="S">const</span>&nbsp;Value<span class="S">&amp;</span>&nbsp;v1, <span class="S">const</span>&nbsp;Value<span class="S">&amp;</span>&nbsp;v2)&nbsp;=&nbsp;StdValueCompare)</p>
+<p id="TreeCtrl::SortDeepByValue(int,int(*)(const Value&v1,const Value&v2))" class="R"><span class="S">void</span>&nbsp;<span class="T">SortDeepByValue</span>(<span class="S">int</span>&nbsp;<span class="U">id</span>, <span class="S">int</span>&nbsp;(*<span class="U">compare</span>)(<span class="S">const</span>&nbsp;Value<span class="S">&amp;</span>&nbsp;v1, <span class="S">const</span>&nbsp;Value<span class="S">&amp;</span>&nbsp;v2)&nbsp;=&nbsp;StdValueCompare)</p>
+<p class="K">Convenience variants call their basic counterparts with byvalue equal to true.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="TreeCtrl::Sort(int,const ValuePairOrder&)" class="R"><span class="S">void</span>&nbsp;<span class="T">Sort</span>(<span class="S">int</span>&nbsp;<span class="U">id</span>, <span class="S">const</span>&nbsp;<a href="ValuePairOrder"><u>ValuePairOrder</u></a><span class="S">&amp;</span>&nbsp;<span class="U">order</span>)</p>
+<p id="TreeCtrl::Sort(int,int(*)(const Value&k1,const Value&v1,const Value&k2,const Value&v2))" class="R"><span class="S">void</span>&nbsp;<span class="T">Sort</span>(<span class="S">int</span>&nbsp;<span class="U">id</span>, <span class="S">int</span>&nbsp;(*<span class="U">compare</span>)(<span class="S">const</span>&nbsp;Value<span class="S">&amp;</span>&nbsp;k1, <span class="S">const</span>&nbsp;Value<span class="S">&amp;</span>&nbsp;v1, <span class="S">const</span>&nbsp;Value<span class="S">&amp;</span>&nbsp;k2, <span class="S">const</span>&nbsp;Value<span class="S">&amp;</span>&nbsp;v2))</p>
+<p class="K">Sorts the children list of parent <span class="U">id</span>. Note that if <span class="U">id</span> is 0, the whole tree is sorted. The grandchildren are left intact.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="TreeCtrl::SortDeep(int,const ValuePairOrder&)" class="R"><span class="S">void</span>&nbsp;<span class="T">SortDeep</span>(<span class="S">int</span>&nbsp;<span class="U">id</span>, <span class="S">const</span>&nbsp;<a href="ValuePairOrder"><u>ValuePairOrder</u></a><span class="S">&amp;</span>&nbsp;<span class="U">order</span>)</p>
+<p id="TreeCtrl::SortDeep(int,int(*)(const Value&k1,const Value&v1,const Value&k2,const Value&v2))" class="R"><span class="S">void</span>&nbsp;<span class="T">SortDeep</span>(<span class="S">int</span>&nbsp;<span class="U">id</span>, <span class="S">int</span>&nbsp;(*<span class="U">compare</span>)(<span class="S">const</span>&nbsp;Value<span class="S">&amp;</span>&nbsp;k1, <span class="S">const</span>&nbsp;Value<span class="S">&amp;</span>&nbsp;v1, <span class="S">const</span>&nbsp;Value<span class="S">&amp;</span>&nbsp;k2, <span class="S">const</span>&nbsp;Value<span class="S">&amp;</span>&nbsp;v2))</p>
+<p class="K">Sorts the subtree of parent <span class="U">id</span>. Note that if <span class="U">id</span> is 0, the whole tree is sorted. The grandchildren are sorted as well.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="TreeCtrl::Clear()" class="R"><span class="S">void</span>&nbsp;<span class="T">Clear</span>()</p>
+<p class="K">Removes all items from the tree.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="TreeCtrl::ClearSelection()" class="R"><span class="S">void</span>&nbsp;<span class="T">ClearSelection</span>()</p>
+<p class="K">Clears any selection.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="TreeCtrl::SelectOne(int,bool)" class="R"><span class="S">void</span>&nbsp;<span class="T">SelectOne</span>(<span class="S">int</span>&nbsp;<span class="U">id</span>, <span class="S">bool</span>&nbsp;<span class="U">sel</span>)</p>
+<p class="K">Selects/unselects single item with id.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="TreeCtrl::IsSelected(int)const" class="W">bool<span class="J">&nbsp;</span><span class="X">IsSelected</span><span class="J">(</span>int<span class="J">&nbsp;</span><span class="U">id</span><span class="J">)&nbsp;</span>const</p>
+<p class="K">Returns true if item with <span class="U">id</span> is selected.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="TreeCtrl::IsSel(int)const" class="W">bool<span class="J">&nbsp;</span><span class="X">IsSel</span><span class="J">(</span>int<span class="J">&nbsp;</span><span class="U">id</span><span class="J">)&nbsp;</span>const</p>
+<p class="Z"><span class="AA">Returns true if item with </span><span class="AB">id</span><span class="AA"> is selected </span><span class="T">or has cursor</span>.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="TreeCtrl::GetSelectCount()const" class="W">int<span class="J">&nbsp;</span><span class="X">GetSelectCount</span><span class="J">()&nbsp;</span>const</p>
+<p class="K">The number of selected items.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="TreeCtrl::IsSelDeep(int)const" class="W">bool<span class="J">&nbsp;</span><span class="X">IsSelDeep</span><span class="J">(</span>int<span class="J">&nbsp;</span><span class="U">id</span><span class="J">)&nbsp;</span>const</p>
+<p class="K">True, if IsSel is true for the item or if IsSelDeep is true for its parent (if any item in parenthood chain is selected).</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="TreeCtrl::GetSel()const" class="W"><a href="Vector"><span class="J"><u>Vector</u></span></a>&lt;int&gt;<span class="J">&nbsp;</span><span class="X">GetSel</span><span class="J">()&nbsp;</span>const</p>
+<p class="K">Returns ids of all items with IsSel is true (note that it includes cursor item if there is no selection).</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="TreeCtrl::Remove(const Vector<int>&)" class="R"><span class="S">void</span>&nbsp;<span class="T">Remove</span>(<span class="S">const</span>&nbsp;<a href="Vector"><u>Vector</u></a><span class="S">&lt;int&gt;&amp;</span>&nbsp;<span class="U">id</span>)</p>
+<p class="K">Removes a set of items, <span class="U">id </span>is a list of item ids to remove.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="TreeCtrl::RemoveSelection()" class="R"><span class="S">void</span>&nbsp;<span class="T">RemoveSelection</span>()</p>
+<p class="K">Same as Remove(GetSel()) - removes all selected items.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Upp::TreeCtrl::OkEdit()" class="R"><span class="S">void</span>&nbsp;<span class="T">OkEdit</span>()</p>
+<p class="K">If in-place editor is active (see WhenEdited, WhenStartEdit and Editor), accepts the new value and ends the mode.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Upp::TreeCtrl::EndEdit()" class="R"><span class="S">void</span>&nbsp;<span class="T">EndEdit</span>()</p>
+<p class="K">If in-place editor is active (see WhenEdited, WhenStartEdit and Editor), ends the mode without accepting the value.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="TreeCtrl::Dump()" class="R"><span class="S">void</span>&nbsp;<span class="T">Dump</span>()</p>
+<p class="K">Diagnostic dump of tree content to standard log. Exists in debug mode only.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="TreeCtrl::NoCursor(bool)" class="R"><a href="TreeCtrl"><u>TreeCtrl</u></a><span class="S">&amp;</span>&nbsp;<span class="T">NoCursor</span>(<span class="S">bool</span>&nbsp;<span class="U">b</span>&nbsp;=&nbsp;<span class="S">true</span>)</p>
+<p class="K">Tree does not allow cursor.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="TreeCtrl::NoRoot(bool)" class="R"><a href="TreeCtrl"><u>TreeCtrl</u></a><span class="S">&amp;</span>&nbsp;<span class="T">NoRoot</span>(<span class="S">bool</span>&nbsp;<span class="U">b</span>&nbsp;=&nbsp;<span class="S">true</span>)</p>
+<p class="K">Root item is not shown.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="TreeCtrl::LevelCx(int)" class="R"><a href="TreeCtrl"><u>TreeCtrl</u></a><span class="S">&amp;</span>&nbsp;<span class="T">LevelCx</span>(<span class="S">int</span>&nbsp;<span class="U">cx</span>)</p>
+<p class="K">Indentation per single hierarchy level. Default value is 16 pixels.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="TreeCtrl::MultiSelect(bool)" class="R"><a href="TreeCtrl"><u>TreeCtrl</u></a><span class="S">&amp;</span>&nbsp;<span class="T">MultiSelect</span>(<span class="S">bool</span>&nbsp;<span class="U">b</span>&nbsp;=&nbsp;<span class="S">true</span>)</p>
+<p class="K">Allows selection of items.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="TreeCtrl::NoBackground(bool)" class="R"><a href="TreeCtrl"><u>TreeCtrl</u></a><span class="S">&amp;</span>&nbsp;<span class="T">NoBackground</span>(<span class="S">bool</span>&nbsp;<span class="U">b</span>&nbsp;=&nbsp;<span class="S">true</span>)</p>
+<p class="K">White background of tree is not painted.</p>
+<p class="A">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="TreeCtrl::PopUpEx(bool)" class="R"><a href="TreeCtrl"><u>TreeCtrl</u></a><span class="S">&amp;</span>&nbsp;<span class="T">PopUpEx</span>(<span class="S">bool</span>&nbsp;<span class="U">b</span>&nbsp;=&nbsp;<span class="S">true</span>)</p>
+<p class="K">In case that the display size of node value is greater than currently available area, attempts to show the complete value when cursor hovers over the node.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="TreeCtrl::NoPopUpEx()" class="R"><a href="TreeCtrl"><u>TreeCtrl</u></a><span class="S">&amp;</span>&nbsp;<span class="T">NoPopUpEx</span>()</p>
+<p class="K">Same as PopUpEx(false).</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="TreeCtrl::MouseMoveCursor(bool)" class="R"><a href="TreeCtrl"><u>TreeCtrl</u></a><span class="S">&amp;</span>&nbsp;<span class="T">MouseMoveCursor</span>(<span class="S">bool</span>&nbsp;<span class="U">m</span>&nbsp;=&nbsp;<span class="S">true</span>)</p>
+<p class="K">Mouse cursor moves tree cursor without clicking, just by moving the mouse over the tree.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="TreeCtrl::Accel(bool)" class="R"><a href="TreeCtrl"><u>TreeCtrl</u></a><span class="S">&amp;</span>&nbsp;<span class="T">Accel</span>(<span class="S">bool</span>&nbsp;<span class="U">a</span>&nbsp;=&nbsp;<span class="S">true</span>)</p>
+<p class="K">Activates simple keyboard accelerator. Node values are converted using StdFormat to text and then the first letter is used to find the appropriate item.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="TreeCtrl::SetDisplay(const Display&)" class="R"><a href="TreeCtrl"><u>TreeCtrl</u></a><span class="S">&amp;</span>&nbsp;<span class="T">SetDisplay</span>(<span class="S">const</span>&nbsp;<a href="Display"><u>Display</u></a><span class="S">&amp;</span>&nbsp;<span class="U">d</span>)</p>
+<p class="K">Sets the universal Display used for all node values. This can be overridden for particular node by assigning node specific Display.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="TreeCtrl::HighlightCtrl(bool)" class="R"><a href="TreeCtrl"><u>TreeCtrl</u></a><span class="S">&amp;</span>&nbsp;<span class="T">HighlightCtrl</span>(<span class="S">bool</span>&nbsp;<span class="U">a</span>&nbsp;=&nbsp;<span class="S">true</span>)</p>
+<p class="K">Paints the background area of embedded widgets with the same color as that used to paint regular values - respects selection, cursor position etc.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Upp::TreeCtrl::RenderMultiRoot(bool)" class="R"><a href="Upp::TreeCtrl"><u>TreeCtrl</u></a><span class="S">&amp;</span>&nbsp;<span class="T">RenderMultiRoot</span>(<span class="S">bool</span>&nbsp;<span class="U">a</span>&nbsp;=&nbsp;<span class="S">true</span>)</p>
+<p class="K">When active, no lines are drawn connecting zero level nodes (so it looks like there are multiple roots).</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Upp::TreeCtrl::EmptyNodeIcon(const Upp::Image&)" class="R"><a href="Upp::TreeCtrl"><u>TreeCtrl</u></a><span class="S">&amp;</span>&nbsp;<span class="T">EmptyNodeIcon</span>(<span class="S">const</span>&nbsp;<a href="Upp::Image"><u>Image</u></a><span class="S">&amp;</span>&nbsp;<span class="U">a</span>)</p>
+<p class="K">When RenderMultiRoot is active and there the node is zero level and has not elements, <span class="U">a</span> is drawn on the left side to indicate it is empty.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Upp::TreeCtrl::Editor(Upp::Ctrl&)" class="R"><a href="Upp::TreeCtrl"><u>TreeCtrl</u></a><span class="S">&amp;</span>&nbsp;<span class="T">Editor</span>(<a href="Upp::Ctrl"><u>Ctrl</u></a><span class="S">&amp;</span>&nbsp;<span class="U">e</span>)</p>
+<p class="K">Assigns alternative editor for WhenEdited functionality.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="TreeCtrl::SetScrollBarStyle(const ScrollBar::Style&)" class="R"><a href="TreeCtrl"><u>TreeCtrl</u></a><span class="S">&amp;</span>&nbsp;<span class="T">SetScrollBarStyle</span>(<span class="S">const</span>&nbsp;<a href="ScrollBar::Style"><u>ScrollBar::Style</u></a><span class="S">&amp;</span>&nbsp;<span class="U">s</span>)</p>
+<p class="K">Assigns a chameleon visual style of scrollbar of TreeCtrl.</p>
+<p class="F">&nbsp;</p>
+<p class="A">&nbsp;</p>
+<p class="A">&nbsp;</p>
+<p class="A">&nbsp;</p>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr><td width="100%"><table width="100%" class="C"><colgroup><col width="100%"></colgroup>
+<tr><td class="D"><p class="E">TreeCtrl::Node</p>
+</td>
+</tr>
+</table></td>
+</tr></table>
+<p class="F">&nbsp;</p>
+<p id="TreeCtrl::Node::class" class="AC"><span class="H">class</span><span class="Q">&nbsp;</span>Node</p>
+<p class="L">This class represents the content and appearance of single TreeCtrl node-item.</p>
+<p class="F">&nbsp;</p>
+<p class="A">&nbsp;</p>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr><td width="100%"><table width="100%" class="M"><colgroup><col width="100%"></colgroup>
+<tr><td class="N"><p class="O">Constructor Detail</p>
+</td>
+</tr>
+</table></td>
+</tr></table>
+<p class="F">&nbsp;</p>
+<p id="TreeCtrl::Node::Node()" class="R"><span class="T">Node</span>()</p>
+<p class="K">Default constructor.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="TreeCtrl::Node::Node(const Image&,const Value&)" class="R"><span class="T">Node</span>(<span class="S">const</span>&nbsp;<a href="Image"><u>Image</u></a><span class="S">&amp;</span>&nbsp;<span class="U">img</span>, <span class="S">const</span>&nbsp;<a href="Value"><u>Value</u></a><span class="S">&amp;</span>&nbsp;<span class="U">v</span>)</p>
+<p class="K">Assigns icon, key and value.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="TreeCtrl::Node::Node(const Image&,const Value&,const Value&)" class="R"><span class="T">Node</span>(<span class="S">const</span>&nbsp;<a href="Image"><u>Image</u></a><span class="S">&amp;</span>&nbsp;<span class="U">img</span>, <span class="S">const</span>&nbsp;<a href="Value"><u>Value</u></a><span class="S">&amp;</span>&nbsp;<span class="U">v</span>, <span class="S">const</span>&nbsp;<a href="Value"><u>Value</u></a><span class="S">&amp;</span>&nbsp;<span class="U">t</span>)</p>
+<p class="K">Assigns icon, key and value.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="TreeCtrl::Node::Node(const Value&)" class="R"><span class="T">Node</span>(<span class="S">const</span>&nbsp;<a href="Value"><u>Value</u></a><span class="S">&amp;</span>&nbsp;<span class="U">v</span>)</p>
+<p class="K">Assigns key and value.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="TreeCtrl::Node::Node(const Value&,const Value&)" class="R"><span class="T">Node</span>(<span class="S">const</span>&nbsp;<a href="Value"><u>Value</u></a><span class="S">&amp;</span>&nbsp;<span class="U">v</span>, <span class="S">const</span>&nbsp;<a href="Value"><u>Value</u></a><span class="S">&amp;</span>&nbsp;<span class="U">t</span>)</p>
+<p class="K">Assigns key and value.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="TreeCtrl::Node::Node(Ctrl&)" class="R"><span class="T">Node</span>(<a href="Ctrl"><u>Ctrl</u></a><span class="S">&amp;</span>&nbsp;<span class="U">ctrl</span>)</p>
+<p class="K">Assigns widget.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="TreeCtrl::Node::Node(const Image&,Ctrl&,int,int)" class="R"><span class="T">Node</span>(<span class="S">const</span>&nbsp;<a href="Image"><u>Image</u></a><span class="S">&amp;</span>&nbsp;<span class="U">img</span>, <a href="Ctrl"><u>Ctrl</u></a><span class="S">&amp;</span>&nbsp;<span class="U">ctrl</span>, <span class="S">int</span>&nbsp;<span class="U">cx</span>&nbsp;=&nbsp;<span class="V">0</span>, <span class="S">int</span>&nbsp;<span class="U">cy</span>&nbsp;=&nbsp;<span class="V">0</span>)</p>
+<p class="K">Assigns icon, widget and its dimensions.</p>
+<p class="F">&nbsp;</p>
+<p class="A">&nbsp;</p>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr><td width="100%"><table width="100%" class="M"><colgroup><col width="100%"></colgroup>
+<tr><td class="N"><p class="O">Public Member List</p>
+</td>
+</tr>
+</table></td>
+</tr></table>
+<p class="F">&nbsp;</p>
+<p id="TreeCtrl::Node::image" class="P"><a href="Image"><span class="Q"><u>Image</u></span></a><span class="Q">&nbsp;</span>image</p>
+<p class="K">Node icon.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="TreeCtrl::Node::margin" class="P"><span class="H">int</span><span class="Q">&nbsp;</span>margin</p>
+<p class="K">Space between icon and value of the item, or item's widget. Defaults to 2.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="TreeCtrl::Node::key" class="P"><a href="Value"><span class="Q"><u>Value</u></span></a><span class="Q">&nbsp;</span>key</p>
+<p class="K">Item key. This is not displayed.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="TreeCtrl::Node::value" class="P"><a href="Value"><span class="Q"><u>Value</u></span></a><span class="Q">&nbsp;</span>value</p>
+<p class="K">Item value.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="TreeCtrl::Node::display" class="P"><span class="H">const</span><span class="Q">&nbsp;</span><a href="Display"><span class="Q"><u>Display</u></span></a><span class="Q">&nbsp;*</span>display</p>
+<p class="K">Display used to render value. Defaults to NULL, which means StdDisplay is to be used.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="TreeCtrl::Node::size" class="P"><a href="Size"><span class="Q"><u>Size</u></span></a><span class="Q">&nbsp;</span>size</p>
+<p class="K">Size of value area. Defaults to Null - in that case, value area size is determined by display-&gt;GetStdSize(value) or ctrl-&gt;GetMinSize() if widget for item is used.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="TreeCtrl::Node::ctrl" class="P"><a href="Ptr"><span class="Q"><u>Ptr</u></span></a><span class="H">&lt;</span><a href="Ctrl"><span class="Q"><u>Ctrl</u></span></a><span class="H">&gt;</span><span class="Q">&nbsp;</span>ctrl</p>
+<p class="K">Widget associated with item.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="TreeCtrl::Node::canopen" class="P"><span class="H">bool</span><span class="Q">&nbsp;</span>canopen</p>
+<p class="K">Item can be opened.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="TreeCtrl::Node::canselect" class="P"><span class="H">bool</span><span class="Q">&nbsp;</span>canselect</p>
+<p class="K">Item can be selected.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="TreeCtrl::Node::SetImage(const Image&)" class="R"><a href="TreeCtrl::Node"><u>Node</u></a><span class="S">&amp;</span>&nbsp;<span class="T">SetImage</span>(<span class="S">const</span>&nbsp;<a href="Image"><u>Image</u></a><span class="S">&amp;</span>&nbsp;<span class="U">img</span>)</p>
+<p class="K">Sets image.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="TreeCtrl::Node::Set(const Value&)" class="R"><a href="TreeCtrl::Node"><u>Node</u></a><span class="S">&amp;</span>&nbsp;<span class="T">Set</span>(<span class="S">const</span>&nbsp;<a href="Value"><u>Value</u></a><span class="S">&amp;</span>&nbsp;<span class="U">v</span>)</p>
+<p class="K">Sets both key and value to <span class="U">v</span>.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="TreeCtrl::Node::Set(const Value&,const Value&)" class="R"><a href="TreeCtrl::Node"><u>Node</u></a><span class="S">&amp;</span>&nbsp;<span class="T">Set</span>(<span class="S">const</span>&nbsp;<a href="Value"><u>Value</u></a><span class="S">&amp;</span>&nbsp;<span class="U">v</span>, <span class="S">const</span>&nbsp;<a href="Value"><u>Value</u></a><span class="S">&amp;</span>&nbsp;<span class="U">t</span>)</p>
+<p class="K">Sets key and value.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="TreeCtrl::Node::SetDisplay(const Display&)" class="R"><a href="TreeCtrl::Node"><u>Node</u></a><span class="S">&amp;</span>&nbsp;<span class="T">SetDisplay</span>(<span class="S">const</span>&nbsp;<a href="Display"><u>Display</u></a><span class="S">&amp;</span>&nbsp;<span class="U">d</span>)</p>
+<p class="K">Sets display.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="TreeCtrl::Node::SetSize(Size)" class="R"><a href="TreeCtrl::Node"><u>Node</u></a><span class="S">&amp;</span>&nbsp;<span class="T">SetSize</span>(<a href="Size"><u>Size</u></a>&nbsp;<span class="U">sz</span>)</p>
+<p class="K">Sets size.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="TreeCtrl::Node::SetCtrl(Ctrl&)" class="R"><a href="TreeCtrl::Node"><u>Node</u></a><span class="S">&amp;</span>&nbsp;<span class="T">SetCtrl</span>(<a href="Ctrl"><u>Ctrl</u></a><span class="S">&amp;</span>&nbsp;<span class="U">_ctrl</span>)</p>
+<p class="K">Sets widget.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="TreeCtrl::Node::CanOpen(bool)" class="R"><a href="TreeCtrl::Node"><u>Node</u></a><span class="S">&amp;</span>&nbsp;<span class="T">CanOpen</span>(<span class="S">bool</span>&nbsp;<span class="U">b</span>&nbsp;=&nbsp;<span class="S">true</span>)</p>
+<p class="K">Sets canopen flag.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="TreeCtrl::Node::CanSelect(bool)" class="R"><a href="TreeCtrl::Node"><u>Node</u></a><span class="S">&amp;</span>&nbsp;<span class="T">CanSelect</span>(<span class="S">bool</span>&nbsp;<span class="U">b</span>)</p>
+<p class="K">Sets canselect flag.</p>
+<p class="F">&nbsp;</p>
+<p class="A">&nbsp;</p>
+</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>
+<TABLE BORDER="0" WIDTH="100%"><TR><TD></TD>
+</TR>
+</TABLE>
+<TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" BGCOLOR="#FFFFFF" WIDTH="100%" style="border-style: solid; border-width: 1px; border-color: #6E89AE;padding: 10px;;"><TR><TD><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%"><TR><TD><p class="A"><span class="B"> </span><a href="www$uppweb$contribweb$en-us.html">Do you want to contribute?</a></p>
+</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>
+<script type="text/javascript">var a={'src$CtrlLib$TreeCtrl$en-us.html':'English'};var p=window.location.pathname.split("/");p=p[p.length-1];var s='<select id="lang" onchange="window.location=document.getElementById(\'lang\').value;">';for(l in a){if(p==l){d=" selected=1"}else{d=""}s+='<option value="'+l+'"'+d+'>'+a[l]+'</option>'}s+='</select>';var d=document.createElement('div');d.innerHTML=s;var c=document.getElementById('langs');c.replaceChild(d,c.firstChild);document.getElementById('langbox').style.display='block';</script></BODY>

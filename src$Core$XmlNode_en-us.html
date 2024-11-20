@@ -1,0 +1,481 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en-us">
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
+<META NAME="Generator" CONTENT="U++ HTML Package">
+<TITLE>XmlNode :: U++</TITLE>
+<STYLE TYPE="text/css"><!--
+.A{margin:0px 0px 0px 0px;text-indent:0px;text-align:left;color:#000000;font-family:sans-serif;font-size:10pt;font-weight:normal;font-style:normal;}
+.B{font-size:12pt;}
+.C{border-collapse:collapse;table-layout:auto;border: 2px solid #000000;}
+.D{padding: 3px 5px 3px 5px;border-left: 1px solid #000000;border-top: 1px solid #000000;border-right: 1px solid #000000;border-bottom: 1px solid #000000;background-color:#712A00;vertical-align:middle;}
+.E{margin:0px 0px 0px 0px;text-indent:0px;text-align:left;color:#e0e0e0;font-family:sans-serif;font-size:16pt;font-weight:bold;font-style:normal;}
+.F{margin:0px 0px 0px 0px;text-indent:0px;text-align:left;color:#000000;font-family:sans-serif;font-size:6pt;font-weight:normal;font-style:normal;}
+.G{margin:0px 0px 5px 0px;text-indent:0px;text-align:left;color:#000000;font-family:sans-serif;font-size:12pt;font-weight:bold;font-style:normal;}
+.H{color:#0000ff;font-weight:normal;}
+.I{font-weight:normal;}
+.J{margin:8px 0px 0px 0px;text-indent:0px;text-align:left;color:#000000;font-family:sans-serif;font-size:10pt;font-weight:normal;font-style:normal;}
+.K{font-weight:bold;font-style:italic;}
+.L{border-collapse:collapse;table-layout:auto;border: 2px solid #808080;}
+.M{padding: 3px 5px 3px 5px;border-left: 1px solid #808080;border-top: 1px solid #808080;border-right: 1px solid #808080;border-bottom: 1px solid #808080;background-color:#C0C0C0;vertical-align:middle;}
+.N{margin:0px 0px 0px 0px;text-indent:0px;text-align:left;color:#000000;font-family:sans-serif;font-size:10pt;font-weight:bold;font-style:normal;}
+.O{margin:0px 0px 5px 0px;text-indent:0px;text-align:left;color:#000000;font-family:sans-serif;font-size:10pt;font-weight:normal;font-style:normal;}
+.P{color:#0000ff;}
+.Q{font-weight:bold;}
+.R{margin:0px 0px 0px 57px;text-indent:0px;text-align:left;color:#000000;font-family:sans-serif;font-size:10pt;font-weight:normal;font-style:normal;}
+.S{margin:0px 0px 5px 0px;text-indent:0px;text-align:left;color:#0000ff;font-family:sans-serif;font-size:10pt;font-weight:normal;font-style:normal;}
+.T{color:#000000;}
+.U{color:#000000;font-weight:bold;}
+.V{color:#800000;font-weight:bold;}
+.W{color:#008080;}
+.X{padding: 3px 5px 3px 5px;border-left: 1px solid #000000;border-top: 1px solid #000000;border-right: 1px solid #000000;border-bottom: 1px solid #000000;background-color:#FFFFFF;vertical-align:top;}
+.Y{margin:0px 0px 0px 6px;text-indent:0px;text-align:left;color:#000000;font-family:sans-serif;font-size:10pt;font-weight:normal;font-style:normal;}
+.Z{padding: 3px 5px 3px 5px;border-left: 1px solid #000000;border-top: 1px solid #000000;border-right: 1px solid #000000;border-bottom: 1px solid #000000;background-color:#FFFFFF;vertical-align:middle;}
+.AA{margin:0px 0px 0px 12px;text-indent:0px;text-align:left;color:#000000;font-family:sans-serif;font-size:10pt;font-weight:normal;font-style:normal;}
+a.l1         { text-decoration:none; font-size: 8pt; font-family: sans-serif; font-weight: normal; }
+a.l1:link    { color:#000000; }
+a.l1:visited { color:#000080; }
+a.l1:hover   { color:#9933CC; }
+a.l1:active  { color:#000000; }
+a.l2         { text-decoration:none; font-size: 12pt; font-family: sans-serif; font-variant: small-caps; }
+a.l2:link    { color:#0066FF; }
+a.l2:visited { color:#FF6600; }
+a.l2:hover   { color:#BC0624; }
+a.l2:active  { color:#BC0024; }
+
+-->
+</STYLE>
+<META NAME="keywords" CONTENT="framework, toolkit, widget, c++, visual, studio, dev-cpp, builder, ide, class, component,wxwidgets, qt, rapid, application, development, rad, mfc, linux, macos, gui, sdl, directx, desktop"><META name="robots" content="index,follow">
+<LINK rel="alternate" type="application/rss+xml" title="SVN changes" href="svnchanges.xml">
+<LINK rel="shortcut icon" type="image/png" href="favicon.png">
+</HEAD><BODY BGCOLOR="#D2D9D2" ALINK="#800000" LINK="#000000" VLINK="#000080"><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%"><TR><TD COLSPAN="3"><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%" BGCOLOR="#FFFFFF" style="border: 1px solid #6E89AE;padding-left: 10px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;"><TR><TD><A HREF="index.html"><IMG SRC="0i.png" ALT="" BORDER="0"></A>
+</TD>
+<TD ALIGN="RIGHT" VALIGN="BOTTOM" STYLE="padding-bottom: 5px; background-image: url('1i.png')"><span style="font-size: 14pt; font-family: sans-serif;"><script type="text/javascript"><!--
+google_ad_client = "pub-1082147624384270";
+google_ad_width = 468;
+google_ad_height = 60;
+google_ad_format = "468x60_as";
+google_ad_type = "text_image";
+google_ad_channel = "";
+google_color_border = "336699";
+google_color_bg = "FFFFFF";
+google_color_link = "0000FF";
+google_color_text = "000000";
+google_color_url = "008000";
+//--></script>
+<script type="text/javascript"
+  src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+&nbsp;&nbsp;</span>
+</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>
+<TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%"><TR><TD COLSPAN="3" BGCOLOR="#D2D9D2" HEIGHT="6"></TD>
+</TR>
+<TR><TD VALIGN="TOP" ALIGN="CENTER"><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="160"><TR><TD ALIGN="CENTER"><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%" BGCOLOR="#FFFFFF" style="border-style: solid; border-width: 1px; border-color: #6E89AE;padding: 0px"><TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px;"><A HREF="www$uppweb$overview$en-us.html" CLASS="l1">Overview</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$examples$en-us.html" CLASS="l1">Examples</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$ss$en-us.html" CLASS="l1">Screenshots</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$comparison$en-us.html" CLASS="l1">Comparisons</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$apps$en-us.html" CLASS="l1">Applications</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$download$en-us.html" CLASS="l1">Download</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$documentation$en-us.html" CLASS="l1">Documentation</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$Tutorials$en-us.html" CLASS="l1">Tutorials</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="app$ide$UppHub$en-us.html" CLASS="l1">UppHub</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$Roadmap$en-us.html" CLASS="l1">Status & Roadmap</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$FAQ$en-us.html" CLASS="l1">FAQ</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="app$ide$About$en-us.html" CLASS="l1">Authors & License</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="https://www.ultimatepp.org/forums" CLASS="l1">Forums</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$Funding$en-us.html" CLASS="l1">Funding U++</A>
+</TD>
+</TR>
+</TABLE>
+<TABLE BORDER="0" WIDTH="100%"><TR><TD></TD>
+</TR>
+</TABLE>
+<TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%" BGCOLOR="#FFFFFF" style="border-style: solid; border-width: 1px; border-color: #6E89AE;padding: 0px"><TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('3i.png'); border: 0px solid black;padding-left:12px; padding-right:0px; padding-top:1px; padding-bottom:1px;color:#FFFFFF;"><B><span style="font-size: 8pt; font-family: sans-serif;">Search on this site</span>
+</B>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:6px; padding-right:0px; padding-top:4px; padding-bottom:4px;border-top: 1px solid #6E89AE;"><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%"><TR><TD><IMG SRC="4i.png" ALT="" BORDER="0"></TD>
+<TD><FORM ACTION="https://www.google.com/search" METHOD="GET" STYLE="margin:0px;padding:0px;"><INPUT TYPE="HIDDEN" NAME="ie" VALUE="UTF-8"><INPUT TYPE="HIDDEN" NAME="oe" VALUE="UTF-8"><INPUT TYPE="TEXT" NAME="q" SIZE="15" MAXLENGTH="256" placeholder="Site search"><INPUT TYPE="HIDDEN" NAME="sitesearch" VALUE="ultimatepp.org"></FORM>
+</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>
+<TABLE BORDER="0" WIDTH="100%"><TR><TD></TD>
+</TR>
+</TABLE>
+<br><div id="fb-root"></div>
+<script type="text/javascript">(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) {return;}
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+<div class="fb-like" data-href="https://www.facebook.com/pages/Upp-Framework/262346610476027?sk=wall" data-send="false" data-layout="button_count" data-width="160" data-show-faces="false" data-font="arial"></div>
+<br><br><script type="text/javascript"><!--
+google_ad_client = "pub-1082147624384270";
+google_ad_width = 160;
+google_ad_height = 600;
+google_ad_format = "160x600_as";
+google_ad_type = "text_image";
+google_ad_channel = "";
+google_color_border = "336699";
+google_color_bg = "FFFFFF";
+google_color_link = "0000FF";
+google_color_text = "000000";
+google_color_url = "008000";
+//--></script>
+<script type="text/javascript"
+  src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script><br><br><script type="text/javascript"><!--
+google_ad_client = "pub-1082147624384270";
+google_ad_width = 160;
+google_ad_height = 90;
+google_ad_format = "160x90_0ads_al_s";
+google_ad_channel = "";
+google_color_border = "336699";
+google_color_bg = "FFFFFF";
+google_color_link = "0000FF";
+google_color_text = "000000";
+google_color_url = "008000";
+//--></script>
+<script type="text/javascript"
+  src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+<br><br><br><br><br><br><A HREF="https://sourceforge.net/projects/upp/"><IMG SRC="https://sourceforge.net/sflogo.php?group_id=93970&amp;type=2" ALT="SourceForge.net Logo" BORDER="0" WIDTH="125" HEIGHT="37"></A>
+<br><br><A HREF="https://flathub.org/en/apps/org.ultimatepp.TheIDE"><IMG SRC="5i.png" ALT="SourceForge.net Logo" BORDER="0" WIDTH="125" HEIGHT="37"></A>
+<br><br><div style="background-color:#ffffff;width:125;height:35"><A HREF="https://github.com/ultimatepp"><IMG SRC="6i.png" ALT="GitHub Logo" BORDER="0" WIDTH="125" HEIGHT="35"></A>
+</div><br><div style="background-color:#ffffff;width:125;height:35"><div style="height:5"></div><A HREF="https://discord.gg/8XzqQzXZzb"><IMG SRC="https://assets-global.website-files.com/6257adef93867e50d84d30e2/636e0b5061df29d55a92d945_full_logo_blurple_RGB.svg" ALT="Discord Logo" BORDER="0" WIDTH="125" HEIGHT="25"></A>
+</div><br></TD>
+</TR>
+</TABLE>
+</TD>
+<TD VALIGN="TOP" BGCOLOR="#D2D9D2"><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="6"><TR><TD></TD>
+</TR>
+</TABLE>
+</TD>
+<TD VALIGN="TOP" WIDTH="100%" BGCOLOR="#D2D9D2"><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" BGCOLOR="#FFFFFF" WIDTH="100%" style="border-style: solid; border-width: 1px; border-color: #6E89AE;padding: 10px;;"><TR><TD><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%"><TR><TD><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr><td width="100%"><table width="100%" class="C"><colgroup><col width="100%"></colgroup>
+<tr><td class="D"><p class="E">XmlNode - Hierarchical representation of XML</p>
+</td>
+</tr>
+</table></td>
+</tr></table>
+<p class="F">&nbsp;</p>
+<p id="XmlNode::class" class="G"><span class="H">class</span><span class="I">&nbsp;</span>XmlNode</p>
+<p class="J">This class represent the whole XML document as recursive hierarchic structure - each XmlNode can contain any number of child XmlNodes. XmlNode is mutable and U++ provides function to parse XML and store it to XmlNode and also to take XmlNode and create corresponding XML document.</p>
+<p class="J">XmlNode is <a href="srcdoc$Core$Moveable$en-us.html"><span class="K">moveable</span></a><span class="K"> </span>type with <a href="srcdoc$Core$pick_$en-us.html"><span class="K">pick and optional deep copy</span></a> transfer semantics</p>
+<p class="F">&nbsp;</p>
+<p class="A">&nbsp;</p>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr><td width="100%"><table width="100%" class="L"><colgroup><col width="100%"></colgroup>
+<tr><td class="M"><p class="N">Public Member List</p>
+</td>
+</tr>
+</table></td>
+</tr></table>
+<p class="F">&nbsp;</p>
+<p id="XmlNode::Void()" class="O"><span class="P">static</span> <span class="P">const</span>&nbsp;<a href="XmlNode"><u>XmlNode</u></a><span class="P">&amp;</span>&nbsp;<span class="Q">Void</span>()</p>
+<p class="R">Returns a constant reference to XmlNode representing &quot;nothing&quot;. This reference is used as return value in cases where there are missing requested elements.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="XmlNode::IsVoid()const" class="S">bool<span class="T">&nbsp;</span><span class="U">IsVoid</span><span class="T">()&nbsp;</span>const</p>
+<p class="R">Returns true if XmlNode is Void.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="XmlNode::GetType()const" class="S">int<span class="T">&nbsp;</span><span class="U">GetType</span><span class="T">()&nbsp;</span>const</p>
+<p class="R">Returns the type of node. Possible types are: XML_PI, XML_DECL, XML_COMMENT, XML_DOC, XML_TEXT, XML_TAG.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="XmlNode::GetText()const" class="S"><a href="String"><span class="T"><u>String</u></span></a><span class="T">&nbsp;</span><span class="U">GetText</span><span class="T">()&nbsp;</span>const</p>
+<p id="XmlNode::GetTag()const" class="S"><a href="String"><span class="T"><u>String</u></span></a><span class="T">&nbsp;</span><span class="U">GetTag</span><span class="T">()&nbsp;</span>const</p>
+<p class="R">Returns the text associated with node. If the node is XML_TAG, the text is tag-id. If the node is XML_TEXT, the text is ... the text. In other cases, like XML_PI, the text is the copy of element content.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="XmlNode::IsTag()const" class="S">bool<span class="T">&nbsp;</span><span class="U">IsTag</span><span class="T">()&nbsp;</span>const</p>
+<p class="R">Returns true if node is XML_TAG.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="XmlNode::IsTag(const char*)const" class="S">bool<span class="T">&nbsp;</span><span class="U">IsTag</span><span class="T">(</span>const<span class="T">&nbsp;</span>char<span class="T">&nbsp;*</span><span class="V">tag</span><span class="T">)&nbsp;</span>const</p>
+<p class="R">Returns true if node is XML_TAG and is equal to <span class="V">tag</span>.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="XmlNode::IsText()const" class="S">bool<span class="T">&nbsp;</span><span class="U">IsText</span><span class="T">()&nbsp;</span>const</p>
+<p class="R">Returns true if node is</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="XmlNode::Clear()" class="O"><span class="P">void</span>&nbsp;<span class="Q">Clear</span>()</p>
+<p class="R">Clears all content.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="XmlNode::CreateTag(const char*)" class="O"><span class="P">void</span>&nbsp;<span class="Q">CreateTag</span>(<span class="P">const</span>&nbsp;<span class="P">char</span>&nbsp;*<span class="V">tag</span>)</p>
+<p class="R">Sets this XmlNode to represent XML tag with id <span class="V">tag</span>.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="XmlNode::CreateText(const String&)" class="O"><span class="P">void</span>&nbsp;<span class="Q">CreateText</span>(<span class="P">const</span>&nbsp;<a href="String"><u>String</u></a><span class="P">&amp;</span>&nbsp;<span class="V">txt</span>)</p>
+<p class="R">Sets this XmlNode to represent text with content <span class="V">txt</span>.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="XmlNode::CreatePI(const String&)" class="O"><span class="P">void</span>&nbsp;<span class="Q">CreatePI</span>(<span class="P">const</span>&nbsp;<a href="String"><u>String</u></a><span class="P">&amp;</span>&nbsp;<span class="V">pi</span>)</p>
+<p class="R">Sets this XmlNode to represent processing info <span class="V">pi</span>.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="XmlNode::CreateDecl(const String&)" class="O"><span class="P">void</span>&nbsp;<span class="Q">CreateDecl</span>(<span class="P">const</span>&nbsp;<a href="String"><u>String</u></a><span class="P">&amp;</span>&nbsp;<span class="V">decl</span>)</p>
+<p class="R">Sets this XmlNode to represent XML declaration <span class="V">decl</span>.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="XmlNode::CreateComment(const String&)" class="O"><span class="P">void</span>&nbsp;<span class="Q">CreateComment</span>(<span class="P">const</span>&nbsp;<a href="String"><u>String</u></a><span class="P">&amp;</span>&nbsp;<span class="V">comment</span>)</p>
+<p class="R">Sets this XmlNode to represent XML <span class="V">comment</span>.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="XmlNode::CreateDocument()" class="O"><span class="P">void</span>&nbsp;<span class="Q">CreateDocument</span>()</p>
+<p class="R">Set this XmlNode to be the top-level document node.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="XmlNode::IsEmpty()const" class="S">bool<span class="T">&nbsp;</span><span class="U">IsEmpty</span><span class="T">()&nbsp;</span>const</p>
+<p class="R">Returns true if this XmlNode represents XML_DOC and contains no content.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="XmlNode::operator bool()const" class="S"><span class="U">operator&nbsp;bool</span><span class="T">()&nbsp;</span>const</p>
+<p class="R">Same as !IsEmpty().</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="XmlNode::GetCount()const" class="S">int<span class="T">&nbsp;</span><span class="U">GetCount</span><span class="T">()&nbsp;</span>const</p>
+<p class="R">Returns a number of contained XmlNode sub-nodes.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="XmlNode::At(int)" class="O"><a href="XmlNode"><u>XmlNode</u></a><span class="P">&amp;</span>&nbsp;<span class="Q">At</span>(<span class="P">int</span>&nbsp;<span class="V">i</span>)</p>
+<p class="R">Returns sub-node at index <span class="V">i</span>. If there is no such node (number of sub-nodes is less than i + 1), number of nodes is extended to i + 1 with empty nodes.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="XmlNode::Node(int)const" class="S">const<span class="T">&nbsp;</span><a href="XmlNode"><span class="T"><u>XmlNode</u></span></a>&amp;<span class="T">&nbsp;</span><span class="U">Node</span><span class="T">(</span>int<span class="T">&nbsp;</span><span class="V">i</span><span class="T">)&nbsp;</span>const</p>
+<p class="R">Returns node at index <span class="V">i</span>. If there is none, behavior is undefined. This function is possibly slightly faster than either At or operator[].</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="XmlNode::operator[](int)const" class="S">const<span class="T">&nbsp;</span><a href="XmlNode"><span class="T"><u>XmlNode</u></span></a>&amp;<span class="T">&nbsp;</span><span class="U">operator[]</span><span class="T">(</span>int<span class="T">&nbsp;</span><span class="V">i</span><span class="T">)&nbsp;</span>const</p>
+<p class="R">Returns &nbsp;<span class="V">i</span>.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="XmlNode::operator[](const char*)const" class="S">const<span class="T">&nbsp;</span><a href="XmlNode"><span class="T"><u>XmlNode</u></span></a>&amp;<span class="T">&nbsp;</span><span class="U">operator[]</span><span class="T">(</span>const<span class="T">&nbsp;</span>char<span class="T">&nbsp;*</span><span class="V">tag</span><span class="T">)&nbsp;</span>const</p>
+<p class="R">Finds a XML_TAG sub-node with id <span class="V">tag</span> and returns it. If no such node is found, returns Void().</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="XmlNode::Add()" class="O"><a href="XmlNode"><u>XmlNode</u></a><span class="P">&amp;</span>&nbsp;<span class="Q">Add</span>()</p>
+<p class="R">Adds a new sub-node.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="XmlNode::Remove(int)" class="O"><span class="P">void</span>&nbsp;<span class="Q">Remove</span>(<span class="P">int</span>&nbsp;<span class="V">i</span>)</p>
+<p class="R">Removes subnode at <span class="V">i</span>.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="XmlNode::AddText(const String&)" class="O"><span class="P">void</span>&nbsp;<span class="Q">AddText</span>(<span class="P">const</span>&nbsp;<a href="String"><u>String</u></a><span class="P">&amp;</span>&nbsp;<span class="V">txt</span>)</p>
+<p class="R">Adds a new text sub-node (XML_TEXT) and assigns it a text <span class="V">txt</span>.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="XmlNode::FindTag(const char*)const" class="S">int<span class="T">&nbsp;</span><span class="U">FindTag</span><span class="T">(</span>const<span class="T">&nbsp;</span>char<span class="T">&nbsp;*</span><span class="V">tag</span><span class="T">)&nbsp;</span>const</p>
+<p class="R">Finds a XML_TAG sub-node with id <span class="V">tag</span> and returns its index. If no such sub-node exists, returns negative number.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="XmlNode::Add(const char*)" class="O"><a href="XmlNode"><u>XmlNode</u></a><span class="P">&amp;</span>&nbsp;<span class="Q">Add</span>(<span class="P">const</span>&nbsp;<span class="P">char</span>&nbsp;*<span class="V">tag</span>)</p>
+<p class="R">Adds a new XML_TAG node with id <span class="V">tag</span> and returns a reference to it.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="XmlNode::GetAdd(const char*)" class="O"><a href="XmlNode"><u>XmlNode</u></a><span class="P">&amp;</span>&nbsp;<span class="Q">GetAdd</span>(<span class="P">const</span>&nbsp;<span class="P">char</span>&nbsp;*<span class="V">tag</span>)</p>
+<p id="XmlNode::operator()(const char*)" class="O"><a href="XmlNode"><u>XmlNode</u></a><span class="P">&amp;</span>&nbsp;<span class="Q">operator()</span>(<span class="P">const</span>&nbsp;<span class="P">char</span>&nbsp;*<span class="V">tag</span>)</p>
+<p class="R">Returns a reference to XML_TAG subnode with id <span class="V">tag</span>. If no such node exists, adds it.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="XmlNode::Remove(const char*)" class="O"><span class="P">void</span>&nbsp;<span class="Q">Remove</span>(<span class="P">const</span>&nbsp;<span class="P">char</span>&nbsp;*<span class="V">tag</span>)</p>
+<p class="R">Removes XML_TAG sub-node with <span class="V">tag </span>id. If there is no such sub-node, nothing happens.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="XmlNode::GatherText()const" class="S"><a href="String"><span class="T"><u>String</u></span></a><span class="T">&nbsp;</span><span class="U">GatherText</span><span class="T">()&nbsp;</span>const</p>
+<p id="XmlNode::operator~()const" class="S"><a href="String"><span class="T"><u>String</u></span></a><span class="T">&nbsp;</span><span class="U">operator~</span><span class="T">()&nbsp;</span>const</p>
+<p class="R">Concatenates all XML_TEXT sub-nodes in order of increasing indicies.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Upp::XmlNode::HasTags()const" class="S">bool<span class="T">&nbsp;</span><span class="U">HasTags</span><span class="T">()&nbsp;</span>const</p>
+<p class="R">Returns true if the node has subtags.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="XmlNode::GetAttrCount()const" class="S">int<span class="T">&nbsp;</span><span class="U">GetAttrCount</span><span class="T">()&nbsp;</span>const</p>
+<p class="R">Returns the number of attributes of current node (it has to be XML_TAG to have any attributes - nonzero returned).</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="XmlNode::AttrId(int)const" class="S"><a href="String"><span class="T"><u>String</u></span></a><span class="T">&nbsp;</span><span class="U">AttrId</span><span class="T">(</span>int<span class="T">&nbsp;</span><span class="V">i</span><span class="T">)&nbsp;</span>const</p>
+<p class="R">Returns id of attribute <span class="V">i</span>.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="XmlNode::Attr(int)const" class="S"><a href="String"><span class="T"><u>String</u></span></a><span class="T">&nbsp;</span><span class="U">Attr</span><span class="T">(</span>int<span class="T">&nbsp;</span><span class="V">i</span><span class="T">)&nbsp;</span>const</p>
+<p class="R">Returns the value of attribute <span class="V">i</span>.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="XmlNode::Attr(const char*)const" class="S"><a href="String"><span class="T"><u>String</u></span></a><span class="T">&nbsp;</span><span class="U">Attr</span><span class="T">(</span>const<span class="T">&nbsp;</span>char<span class="T">&nbsp;*</span><span class="V">id</span><span class="T">)&nbsp;</span>const</p>
+<p class="R">Returns the value of attribute <span class="V">id</span>. If no such attribute exists, returns empty String.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="XmlNode::SetAttr(const char*,const String&)" class="O"><a href="XmlNode"><u>XmlNode</u></a><span class="P">&amp;</span>&nbsp;<span class="Q">SetAttr</span>(<span class="P">const</span>&nbsp;<span class="P">char</span>&nbsp;*<span class="V">id</span>, <span class="P">const</span>&nbsp;<a href="String"><u>String</u></a><span class="P">&amp;</span>&nbsp;<span class="V">val</span>)</p>
+<p class="R">Sets the attribute <span class="V">id</span> to have value <span class="V">val</span>. Attribute does not have exist yet.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="XmlNode::AttrInt(const char*,int)const" class="S">int<span class="T">&nbsp;</span><span class="U">AttrInt</span><span class="T">(</span>const<span class="T">&nbsp;</span>char<span class="T">&nbsp;*</span><span class="V">id</span><span class="T">, </span>int<span class="T">&nbsp;</span><span class="V">def</span><span class="T">&nbsp;=&nbsp;Null)&nbsp;</span>const</p>
+<p class="R">Returns the value of attribute <span class="V">id</span> converted to integer. If no such attribute exists, returns <span class="V">def</span>.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="XmlNode::SetAttr(const char*,int)" class="O"><a href="XmlNode"><u>XmlNode</u></a><span class="P">&amp;</span>&nbsp;<span class="Q">SetAttr</span>(<span class="P">const</span>&nbsp;<span class="P">char</span>&nbsp;*<span class="V">id</span>, <span class="P">int</span>&nbsp;<span class="V">val</span>)</p>
+<p class="R">Sets the attribute <span class="V">id</span> to have integer value <span class="V">val</span>.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Upp::XmlNode::SetAttrs(Upp::VectorMap<Upp::String,Upp::String>&&)" class="O"><span class="P">void</span>&nbsp;<span class="Q">SetAttrs</span>(<a href="Upp::VectorMap"><u>VectorMap</u></a>&lt;<a href="Upp::String"><u>String</u></a>, <a href="Upp::String"><u>String</u></a>&gt;&amp;&amp;&nbsp;<span class="V">a</span>)</p>
+<p class="R">Replaces all attributes with picked <span class="V">a</span>.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="XmlNode::SetAttrsPick(pick_ VectorMap<String,String>&)" class="O"><span class="P">void</span>&nbsp;<span class="Q">SetAttrsPick</span>(<span class="W">pick_</span>&nbsp;<a href="VectorMap"><u>VectorMap</u></a>&lt;<a href="String"><u>String</u></a>, <a href="String"><u>String</u></a>&gt;&amp;&nbsp;<span class="V">a</span>)</p>
+<p class="R">Replaces all attributes to <span class="V">a</span> using pick operation (<span class="V">a</span> is destroyed in operation).</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="XmlNode::Shrink()" class="O"><span class="P">void</span>&nbsp;<span class="Q">Shrink</span>()</p>
+<p class="R">Attempts to minimize memory footprint.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="XmlNode::IsPicked()const" class="S">bool<span class="T">&nbsp;</span><span class="U">IsPicked</span><span class="T">()&nbsp;</span>const</p>
+<p class="R">Returns true if picked</p>
+<p class="A">&nbsp;</p>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr><td width="100%"><table width="100%" class="L"><colgroup><col width="100%"></colgroup>
+<tr><td class="M"><p class="N">Constructor detail</p>
+</td>
+</tr>
+</table></td>
+</tr></table>
+<p class="F">&nbsp;</p>
+<p class="A"><span class="Q">XmlNode</span>()</p>
+<p class="R">Construct an empty XmlNode.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="XmlNode::XmlNode(const XmlNode&,int)" class="O"><span class="Q">XmlNode</span>(<span class="P">const</span>&nbsp;<span class="Q">XmlNode</span><span class="P">&amp;</span>&nbsp;<span class="V">n</span>, <span class="P">int</span>)</p>
+<p class="R">Deep copy constructor.</p>
+<p class="F">&nbsp;</p>
+<p class="A">&nbsp;</p>
+<p class="A">&nbsp;</p>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr><td width="100%"><table width="100%" class="C"><colgroup><col width="100%"></colgroup>
+<tr><td class="D"><p class="E">XmlNode - parse and output functions</p>
+</td>
+</tr>
+</table></td>
+</tr></table>
+<p class="F">&nbsp;</p>
+<p class="F">&nbsp;</p>
+<p id="ParseXML(XmlParser&,dword)" class="O"><a href="XmlNode"><u>XmlNode</u></a>&nbsp;<span class="Q">ParseXML</span>(<a href="XmlParser"><u>XmlParser</u></a><span class="P">&amp;</span>&nbsp;<span class="V">p</span>, <a href="dword"><u>dword</u></a>&nbsp;<span class="V">style</span>&nbsp;=&nbsp;XML_IGNORE_DECLS<span class="P">|</span>XML_IGNORE_PIS<span class="P">|</span>XML_IGNORE_COMMENTS)</p>
+<p id="ParseXML(const char*,dword)" class="O"><a href="XmlNode"><u>XmlNode</u></a>&nbsp;<span class="Q">ParseXML</span>(<span class="P">const</span>&nbsp;<span class="P">char</span>&nbsp;*<span class="V">s</span>, <a href="dword"><u>dword</u></a>&nbsp;<span class="V">style</span>&nbsp;=&nbsp;XML_IGNORE_DECLS<span class="P">|</span>XML_IGNORE_PIS<span class="P">|</span>XML_IGNORE_COMMENTS)</p>
+<p id="ParseXML(XmlParser&,ParseXmlFilter&,dword)" class="O"><a href="XmlNode"><u>XmlNode</u></a>&nbsp;<span class="Q">ParseXML</span>(<a href="XmlParser"><u>XmlParser</u></a><span class="P">&amp;</span>&nbsp;<span class="V">p</span>, <a href="ParseXmlFilter"><u>ParseXmlFilter</u></a><span class="P">&amp;</span>&nbsp;<span class="V">filter</span>, <a href="dword"><u>dword</u></a>&nbsp;<span class="V">style</span>&nbsp;=&nbsp;XML_IGNORE_DECLS<span class="P">|</span>XML_IGNORE_PIS<span class="P">|</span>XML_IGNORE_COMMENTS)</p>
+<p id="ParseXML(const char*,ParseXmlFilter&,dword)" class="O"><a href="XmlNode"><u>XmlNode</u></a>&nbsp;<span class="Q">ParseXML</span>(<span class="P">const</span>&nbsp;<span class="P">char</span>&nbsp;*<span class="V">s</span>, <a href="ParseXmlFilter"><u>ParseXmlFilter</u></a><span class="P">&amp;</span>&nbsp;<span class="V">filter</span>, <a href="dword"><u>dword</u></a>&nbsp;<span class="V">style</span>&nbsp;=&nbsp;XML_IGNORE_DECLS<span class="P">|</span>XML_IGNORE_PIS<span class="P">|</span>XML_IGNORE_COMMENTS)</p>
+<p id="ParseXML(Stream&,dword)" class="O"><a href="XmlNode"><u>XmlNode</u></a>&nbsp;<span class="Q">ParseXML</span>(<a href="Stream"><u>Stream</u></a><span class="P">&amp;</span>&nbsp;<span class="V">in</span>, <a href="dword"><u>dword</u></a>&nbsp;<span class="V">style</span>&nbsp;=&nbsp;XML_IGNORE_DECLS<span class="P">|</span>XML_IGNORE_PIS<span class="P">|</span>XML_IGNORE_COMMENTS)</p>
+<p id="ParseXMLFile(const char*,dword)" class="O"><a href="XmlNode"><u>XmlNode</u></a>&nbsp;<span class="Q">ParseXMLFile</span>(<span class="P">const</span>&nbsp;<span class="P">char</span>&nbsp;*<span class="V">path</span>, <a href="dword"><u>dword</u></a>&nbsp;<span class="V">style</span>&nbsp;=&nbsp;XML_IGNORE_DECLS<span class="P">|</span>XML_IGNORE_PIS<span class="P">|</span>XML_IGNORE_COMMENTS)</p>
+<p id="ParseXML(Stream&,ParseXmlFilter&,dword)" class="O"><a href="XmlNode"><u>XmlNode</u></a>&nbsp;<span class="Q">ParseXML</span>(<a href="Stream"><u>Stream</u></a><span class="P">&amp;</span>&nbsp;<span class="V">in</span>, <a href="ParseXmlFilter"><u>ParseXmlFilter</u></a><span class="P">&amp;</span>&nbsp;<span class="V">filter</span>, <a href="dword"><u>dword</u></a>&nbsp;<span class="V">style</span>&nbsp;=&nbsp;XML_IGNORE_DECLS<span class="P">|</span>XML_IGNORE_PIS<span class="P">|</span>XML_IGNORE_COMMENTS)</p>
+<p id="ParseXMLFile(const char*,ParseXmlFilter&,dword)" class="O"><a href="XmlNode"><u>XmlNode</u></a>&nbsp;<span class="Q">ParseXMLFile</span>(<span class="P">const</span>&nbsp;<span class="P">char</span>&nbsp;*<span class="V">path</span>, <a href="ParseXmlFilter"><u>ParseXmlFilter</u></a><span class="P">&amp;</span>&nbsp;<span class="V">filter</span>, <a href="dword"><u>dword</u></a>&nbsp;<span class="V">style</span>&nbsp;=&nbsp;XML_IGNORE_DECLS<span class="P">|</span>XML_IGNORE_PIS<span class="P">|</span>XML_IGNORE_COMMENTS)</p>
+<p class="A">&nbsp;</p>
+<p class="R">Creates XmlNode parsing XML document supplied either as XmlParser, string, input stream or file path. <span class="V">style</span> can be a combination of</p>
+<p class="R">&nbsp;</p>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr><td><table border="0" width= 57px><tr><td></td></tr></table></td>
+<td width="100%"><table width="100%" class="C"><colgroup><col width="35%"><col width="64%"></colgroup>
+<tr><td class="X"><p class="Y">XML_IGNORE_DECLS</p>
+</td>
+<td class="Z"><p class="AA">Declaration elements are ignored.</p>
+</td>
+</tr>
+<tr><td class="X"><p class="Y">XML_IGNORE_PIS</p>
+</td>
+<td class="Z"><p class="AA">Processing info elements are ignored.</p>
+</td>
+</tr>
+<tr><td class="X"><p class="Y">XML_IGNORE_COMMENTS</p>
+</td>
+<td class="Z"><p class="AA">Comments are ignored.</p>
+</td>
+</tr>
+</table></td>
+</tr></table>
+<p class="F">&nbsp;</p>
+<p class="R">Variants with <span class="V">filter</span> allow to speficy a <a href="src$Core$ParseXmlFilter$en-us.html#ParseXmlFilter::struct">filter class</a> to exclude some parts of XML, usually to preserve memory. Can throw XmlError.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="AsXML(Stream&,const XmlNode&,dword)" class="O"><span class="P">void</span>&nbsp;<span class="Q">AsXML</span>(<a href="Stream"><u>Stream</u></a><span class="P">&amp;</span>&nbsp;<span class="V">out</span>, <span class="P">const</span>&nbsp;<a href="XmlNode"><u>XmlNode</u></a><span class="P">&amp;</span>&nbsp;<span class="V">n</span>, <a href="dword"><u>dword</u></a>&nbsp;<span class="V">style</span>&nbsp;=&nbsp;XML_HEADER<span class="P">|</span>XML_DOCTYPE<span class="P">|</span>XML_PRETTY)</p>
+<p id="AsXML(const XmlNode&,dword)" class="O"><a href="String"><u>String</u></a>&nbsp;<span class="Q">AsXML</span>(<span class="P">const</span>&nbsp;<a href="XmlNode"><u>XmlNode</u></a><span class="P">&amp;</span>&nbsp;<span class="V">n</span>, <a href="dword"><u>dword</u></a>&nbsp;<span class="V">style</span>&nbsp;=&nbsp;XML_HEADER<span class="P">|</span>XML_DOCTYPE<span class="P">|</span>XML_PRETTY)</p>
+<p id="AsXMLFile(const char*,const XmlNode&,dword)" class="O"><span class="P">bool</span>&nbsp;<span class="Q">AsXMLFile</span>(<span class="P">const</span>&nbsp;<span class="P">char</span>&nbsp;*<span class="V">path</span>, <span class="P">const</span>&nbsp;<a href="XmlNode"><u>XmlNode</u></a><span class="P">&amp;</span>&nbsp;<span class="V">n</span>, <a href="dword"><u>dword</u></a>&nbsp;<span class="V">style</span>&nbsp;=&nbsp;XML_HEADER<span class="P">|</span>XML_DOCTYPE<span class="P">|</span>XML_PRETTY)</p>
+<p class="A">&nbsp;</p>
+<p class="R">Creates a XML document from XmlNode <span class="V">n</span>. <span class="V">style</span> can be a combination of</p>
+<p class="R">&nbsp;</p>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr><td><table border="0" width= 57px><tr><td></td></tr></table></td>
+<td width="100%"><table width="100%" class="C"><colgroup><col width="35%"><col width="64%"></colgroup>
+<tr><td class="X"><p class="Y">XML_HEADER</p>
+</td>
+<td class="Z"><p class="AA">Adds standard XML header at the beginning of the document.</p>
+</td>
+</tr>
+<tr><td class="X"><p class="Y">XML_DOCTYPE</p>
+</td>
+<td class="Z"><p class="AA">Adds DOCTYPE declaration at the beginning of the document with type taken as id of first XML_TAG sub-node (which represents the root element).</p>
+</td>
+</tr>
+<tr><td class="X"><p class="Y">XML_PRETTY</p>
+</td>
+<td class="Z"><p class="AA">XML document is formatted as multiline document with nice indentation. If not active, everything is in sigle line with no identantion.</p>
+</td>
+</tr>
+</table></td>
+</tr></table>
+<p class="R">&nbsp;</p>
+<p class="R">Output is stored to Stream, returned as String or (with AsXMLFile) stored to file. AsXMLFile returns true if output file was successfully created.</p>
+<p class="R">&nbsp;</p>
+</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>
+<TABLE BORDER="0" WIDTH="100%"><TR><TD></TD>
+</TR>
+</TABLE>
+<TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" BGCOLOR="#FFFFFF" WIDTH="100%" style="border-style: solid; border-width: 1px; border-color: #6E89AE;padding: 10px;;"><TR><TD><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%"><TR><TD><p class="A"><span class="B"> </span><a href="www$uppweb$contribweb$en-us.html">Do you want to contribute?</a></p>
+</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>
+<script type="text/javascript">var a={};var p=window.location.pathname.split("/");p=p[p.length-1];var s='<select id="lang" onchange="window.location=document.getElementById(\'lang\').value;">';for(l in a){if(p==l){d=" selected=1"}else{d=""}s+='<option value="'+l+'"'+d+'>'+a[l]+'</option>'}s+='</select>';var d=document.createElement('div');d.innerHTML=s;var c=document.getElementById('langs');c.replaceChild(d,c.firstChild);document.getElementById('langbox').style.display='block';</script></BODY>

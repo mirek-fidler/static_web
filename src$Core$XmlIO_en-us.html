@@ -1,0 +1,400 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en-us">
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
+<META NAME="Generator" CONTENT="U++ HTML Package">
+<TITLE>XmlIO :: U++</TITLE>
+<STYLE TYPE="text/css"><!--
+.A{margin:0px 0px 0px 0px;text-indent:0px;text-align:left;color:#000000;font-family:sans-serif;font-size:10pt;font-weight:normal;font-style:normal;}
+.B{font-size:12pt;}
+.C{border-collapse:collapse;table-layout:auto;border: 2px solid #000000;}
+.D{padding: 3px 5px 3px 5px;border-left: 1px solid #000000;border-top: 1px solid #000000;border-right: 1px solid #000000;border-bottom: 1px solid #000000;background-color:#712A00;vertical-align:middle;}
+.E{margin:0px 0px 0px 0px;text-indent:0px;text-align:left;color:#e0e0e0;font-family:sans-serif;font-size:16pt;font-weight:bold;font-style:normal;}
+.F{margin:0px 0px 0px 0px;text-indent:0px;text-align:left;color:#000000;font-family:sans-serif;font-size:6pt;font-weight:normal;font-style:normal;}
+.G{margin:0px 0px 5px 0px;text-indent:0px;text-align:left;color:#000000;font-family:sans-serif;font-size:12pt;font-weight:bold;font-style:normal;}
+.H{color:#0000ff;font-weight:normal;}
+.I{font-weight:normal;}
+.J{margin:0px 0px 0px 57px;text-indent:0px;text-align:left;color:#000000;font-family:sans-serif;font-size:10pt;font-weight:normal;font-style:normal;}
+.K{border-collapse:collapse;table-layout:auto;border: 2px solid #808080;}
+.L{padding: 3px 5px 3px 5px;border-left: 1px solid #808080;border-top: 1px solid #808080;border-right: 1px solid #808080;border-bottom: 1px solid #808080;background-color:#C0C0C0;vertical-align:middle;}
+.M{margin:0px 0px 0px 0px;text-indent:0px;text-align:left;color:#000000;font-family:sans-serif;font-size:10pt;font-weight:bold;font-style:normal;}
+.N{margin:0px 0px 5px 0px;text-indent:0px;text-align:left;color:#0000ff;font-family:sans-serif;font-size:10pt;font-weight:normal;font-style:normal;}
+.O{color:#000000;}
+.P{color:#000000;font-weight:bold;}
+.Q{margin:0px 0px 5px 0px;text-indent:0px;text-align:left;color:#000000;font-family:sans-serif;font-size:10pt;font-weight:normal;font-style:normal;}
+.R{color:#0000ff;}
+.S{font-weight:bold;}
+.T{color:#800000;font-weight:bold;}
+.U{color:#008000;font-weight:bold;}
+a.l1         { text-decoration:none; font-size: 8pt; font-family: sans-serif; font-weight: normal; }
+a.l1:link    { color:#000000; }
+a.l1:visited { color:#000080; }
+a.l1:hover   { color:#9933CC; }
+a.l1:active  { color:#000000; }
+a.l2         { text-decoration:none; font-size: 12pt; font-family: sans-serif; font-variant: small-caps; }
+a.l2:link    { color:#0066FF; }
+a.l2:visited { color:#FF6600; }
+a.l2:hover   { color:#BC0624; }
+a.l2:active  { color:#BC0024; }
+
+-->
+</STYLE>
+<META NAME="keywords" CONTENT="framework, toolkit, widget, c++, visual, studio, dev-cpp, builder, ide, class, component,wxwidgets, qt, rapid, application, development, rad, mfc, linux, macos, gui, sdl, directx, desktop"><META name="robots" content="index,follow">
+<LINK rel="alternate" type="application/rss+xml" title="SVN changes" href="svnchanges.xml">
+<LINK rel="shortcut icon" type="image/png" href="favicon.png">
+</HEAD><BODY BGCOLOR="#D2D9D2" ALINK="#800000" LINK="#000000" VLINK="#000080"><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%"><TR><TD COLSPAN="3"><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%" BGCOLOR="#FFFFFF" style="border: 1px solid #6E89AE;padding-left: 10px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;"><TR><TD><A HREF="index.html"><IMG SRC="0i.png" ALT="" BORDER="0"></A>
+</TD>
+<TD ALIGN="RIGHT" VALIGN="BOTTOM" STYLE="padding-bottom: 5px; background-image: url('1i.png')"><span style="font-size: 14pt; font-family: sans-serif;"><script type="text/javascript"><!--
+google_ad_client = "pub-1082147624384270";
+google_ad_width = 468;
+google_ad_height = 60;
+google_ad_format = "468x60_as";
+google_ad_type = "text_image";
+google_ad_channel = "";
+google_color_border = "336699";
+google_color_bg = "FFFFFF";
+google_color_link = "0000FF";
+google_color_text = "000000";
+google_color_url = "008000";
+//--></script>
+<script type="text/javascript"
+  src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+&nbsp;&nbsp;</span>
+</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>
+<TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%"><TR><TD COLSPAN="3" BGCOLOR="#D2D9D2" HEIGHT="6"></TD>
+</TR>
+<TR><TD VALIGN="TOP" ALIGN="CENTER"><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="160"><TR><TD ALIGN="CENTER"><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%" BGCOLOR="#FFFFFF" style="border-style: solid; border-width: 1px; border-color: #6E89AE;padding: 0px"><TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px;"><A HREF="www$uppweb$overview$en-us.html" CLASS="l1">Overview</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$examples$en-us.html" CLASS="l1">Examples</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$ss$en-us.html" CLASS="l1">Screenshots</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$comparison$en-us.html" CLASS="l1">Comparisons</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$apps$en-us.html" CLASS="l1">Applications</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$download$en-us.html" CLASS="l1">Download</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$documentation$en-us.html" CLASS="l1">Documentation</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$Tutorials$en-us.html" CLASS="l1">Tutorials</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="app$ide$UppHub$en-us.html" CLASS="l1">UppHub</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$Roadmap$en-us.html" CLASS="l1">Status & Roadmap</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$FAQ$en-us.html" CLASS="l1">FAQ</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="app$ide$About$en-us.html" CLASS="l1">Authors & License</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="https://www.ultimatepp.org/forums" CLASS="l1">Forums</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$Funding$en-us.html" CLASS="l1">Funding U++</A>
+</TD>
+</TR>
+</TABLE>
+<TABLE BORDER="0" WIDTH="100%"><TR><TD></TD>
+</TR>
+</TABLE>
+<TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%" BGCOLOR="#FFFFFF" style="border-style: solid; border-width: 1px; border-color: #6E89AE;padding: 0px"><TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('3i.png'); border: 0px solid black;padding-left:12px; padding-right:0px; padding-top:1px; padding-bottom:1px;color:#FFFFFF;"><B><span style="font-size: 8pt; font-family: sans-serif;">Search on this site</span>
+</B>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:6px; padding-right:0px; padding-top:4px; padding-bottom:4px;border-top: 1px solid #6E89AE;"><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%"><TR><TD><IMG SRC="4i.png" ALT="" BORDER="0"></TD>
+<TD><FORM ACTION="https://www.google.com/search" METHOD="GET" STYLE="margin:0px;padding:0px;"><INPUT TYPE="HIDDEN" NAME="ie" VALUE="UTF-8"><INPUT TYPE="HIDDEN" NAME="oe" VALUE="UTF-8"><INPUT TYPE="TEXT" NAME="q" SIZE="15" MAXLENGTH="256" placeholder="Site search"><INPUT TYPE="HIDDEN" NAME="sitesearch" VALUE="ultimatepp.org"></FORM>
+</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>
+<TABLE BORDER="0" WIDTH="100%"><TR><TD></TD>
+</TR>
+</TABLE>
+<br><div id="fb-root"></div>
+<script type="text/javascript">(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) {return;}
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+<div class="fb-like" data-href="https://www.facebook.com/pages/Upp-Framework/262346610476027?sk=wall" data-send="false" data-layout="button_count" data-width="160" data-show-faces="false" data-font="arial"></div>
+<br><br><script type="text/javascript"><!--
+google_ad_client = "pub-1082147624384270";
+google_ad_width = 160;
+google_ad_height = 600;
+google_ad_format = "160x600_as";
+google_ad_type = "text_image";
+google_ad_channel = "";
+google_color_border = "336699";
+google_color_bg = "FFFFFF";
+google_color_link = "0000FF";
+google_color_text = "000000";
+google_color_url = "008000";
+//--></script>
+<script type="text/javascript"
+  src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script><br><br><script type="text/javascript"><!--
+google_ad_client = "pub-1082147624384270";
+google_ad_width = 160;
+google_ad_height = 90;
+google_ad_format = "160x90_0ads_al_s";
+google_ad_channel = "";
+google_color_border = "336699";
+google_color_bg = "FFFFFF";
+google_color_link = "0000FF";
+google_color_text = "000000";
+google_color_url = "008000";
+//--></script>
+<script type="text/javascript"
+  src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+<br><br><br><br><br><br><A HREF="https://sourceforge.net/projects/upp/"><IMG SRC="https://sourceforge.net/sflogo.php?group_id=93970&amp;type=2" ALT="SourceForge.net Logo" BORDER="0" WIDTH="125" HEIGHT="37"></A>
+<br><br><A HREF="https://flathub.org/en/apps/org.ultimatepp.TheIDE"><IMG SRC="5i.png" ALT="SourceForge.net Logo" BORDER="0" WIDTH="125" HEIGHT="37"></A>
+<br><br><div style="background-color:#ffffff;width:125;height:35"><A HREF="https://github.com/ultimatepp"><IMG SRC="6i.png" ALT="GitHub Logo" BORDER="0" WIDTH="125" HEIGHT="35"></A>
+</div><br><div style="background-color:#ffffff;width:125;height:35"><div style="height:5"></div><A HREF="https://discord.gg/8XzqQzXZzb"><IMG SRC="https://assets-global.website-files.com/6257adef93867e50d84d30e2/636e0b5061df29d55a92d945_full_logo_blurple_RGB.svg" ALT="Discord Logo" BORDER="0" WIDTH="125" HEIGHT="25"></A>
+</div><br></TD>
+</TR>
+</TABLE>
+</TD>
+<TD VALIGN="TOP" BGCOLOR="#D2D9D2"><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="6"><TR><TD></TD>
+</TR>
+</TABLE>
+</TD>
+<TD VALIGN="TOP" WIDTH="100%" BGCOLOR="#D2D9D2"><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" BGCOLOR="#FFFFFF" WIDTH="100%" style="border-style: solid; border-width: 1px; border-color: #6E89AE;padding: 10px;;"><TR><TD><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%"><TR><TD><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr><td width="100%"><table width="100%" class="C"><colgroup><col width="100%"></colgroup>
+<tr><td class="D"><p class="E">XmlIO and Xmlize framework</p>
+</td>
+</tr>
+</table></td>
+</tr></table>
+<p class="F">&nbsp;</p>
+<p id="XmlIO::class" class="G"><span class="H">class</span><span class="I">&nbsp;</span>XmlIO</p>
+<p class="J">XmlIO represents a single XmlNode in Jsonize framework. It is used as parameter for Xmlize and XmlAttrLoad/XmlAttrStore global functions. These functions have default templated definitions that in turn call similary named methods of object. However, when implementation using method is not possible (e.g. for supported primitive types), global templated specializations can be used.</p>
+<p class="J">&nbsp;</p>
+<p class="F">&nbsp;</p>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr><td width="100%"><table width="100%" class="K"><colgroup><col width="100%"></colgroup>
+<tr><td class="L"><p class="M">Public Method List</p>
+</td>
+</tr>
+</table></td>
+</tr></table>
+<p class="F">&nbsp;</p>
+<p id="XmlIO::IsLoading()const" class="N">bool<span class="O">&nbsp;</span><span class="P">IsLoading</span><span class="O">()&nbsp;</span>const</p>
+<p class="J">True if actual operation is retrieving data from XML to C++ variables.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="XmlIO::IsStoring()const" class="N">bool<span class="O">&nbsp;</span><span class="P">IsStoring</span><span class="O">()&nbsp;</span>const</p>
+<p class="J">True if actual operation is storing data from C++ variables to XML.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="XmlIO::Node()" class="Q"><a href="XmlNode"><u>XmlNode</u></a><span class="R">&amp;</span>&nbsp;<span class="S">Node</span>()</p>
+<p id="XmlIO::Node()const" class="N">const<span class="O">&nbsp;</span><a href="XmlNode"><span class="O"><u>XmlNode</u></span></a>&amp;<span class="O">&nbsp;</span><span class="P">Node</span><span class="O">()&nbsp;</span>const</p>
+<p id="XmlIO::operator->()" class="Q"><a href="XmlNode"><u>XmlNode</u></a>&nbsp;*<span class="S">operator-&gt;</span>()</p>
+<p class="J">Returns current XmlNode represented by this XmlIO.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="XmlIO::GetAttr(const char*)" class="Q"><a href="String"><u>String</u></a>&nbsp;<span class="S">GetAttr</span>(<span class="R">const</span>&nbsp;<span class="R">char</span>&nbsp;*<span class="T">id</span>)</p>
+<p class="J">Same as Node().GetAttr(<span class="T">id</span>) - returns the value of attribute of current XmlNode (used when retrieving data from XML).</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="XmlIO::SetAttr(const char*,const String&)" class="Q"><span class="R">void</span>&nbsp;<span class="S">SetAttr</span>(<span class="R">const</span>&nbsp;<span class="R">char</span>&nbsp;*<span class="T">id</span>, <span class="R">const</span>&nbsp;<a href="String"><u>String</u></a><span class="R">&amp;</span>&nbsp;<span class="T">val</span>)</p>
+<p class="J">Same as Node().SetAttr(<span class="T">id</span>, <span class="T">val</span>) - sets the value of attribute of current XmlNode (used when storing data to XML).</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="XmlIO::operator()(const char*,T&)" class="Q"><span class="R">template</span>&nbsp;&lt;<span class="R">class</span>&nbsp;<span class="U">T</span>&gt;&nbsp;<a href="XmlIO"><u>XmlIO</u></a>&nbsp;<span class="S">operator()</span>(<span class="R">const</span>&nbsp;<span class="R">char</span>&nbsp;*<span class="T">tag</span>, <span class="U">T</span><span class="R">&amp;</span>&nbsp;<span class="T">var</span>)</p>
+<p id="Upp::XmlIO::operator()(const char*,T&,const D&)" class="Q"><span class="R">template</span>&nbsp;&lt;<span class="R">class</span>&nbsp;<span class="U">T</span>, <span class="R">class</span>&nbsp;<span class="U">D</span>&gt;&nbsp;<a href="Upp::XmlIO"><u>XmlIO</u></a>&nbsp;<span class="S">operator()</span>(<span class="R">const</span>&nbsp;<span class="R">char</span>&nbsp;*<span class="T">tag</span>, <span class="U">T</span><span class="R">&amp;</span>&nbsp;<span class="T">var</span>, <span class="R">const</span>&nbsp;<span class="U">D</span><span class="R">&amp;</span>&nbsp;<span class="T">def</span>)</p>
+<p class="J">Creates subtag of current XmlNode <span class="T">tag</span>, forms a new XmlIO for it and calls global <span class="S">Xmlize </span>function with this new XmlIO and <span class="T">var</span> as parameters. Common global <span class="S">Xmlize </span>is a template function that calls <span class="S">Xmlize </span>method for <span class="T">var</span> with new XmlIO as parameter - that way the <span class="S">Xmlize </span>can be defined either as global template function specializastion for <span class="U">T</span> or as method of <span class="U">T</span> (usually easier, but not always possible). <span class="T">def</span> parameter can be used to provide default value when there is no corresponding tag on loading. Variant without <span class="T">def</span> leaves <span class="T">var</span> unchanged in this case.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Upp::XmlIO::List(const char*,const char*,T&,const D&)" class="Q"><span class="R">template</span>&nbsp;&lt;<span class="R">class</span>&nbsp;<span class="U">T</span>, <span class="R">class</span>&nbsp;<span class="U">D</span>&gt;&nbsp;<a href="Upp::XmlIO"><u>XmlIO</u></a>&nbsp;<span class="S">List</span>(<span class="R">const</span>&nbsp;<span class="R">char</span>&nbsp;*<span class="T">tag</span>, <span class="R">const</span>&nbsp;<span class="R">char</span>&nbsp;*<span class="T">itemtag</span>, <span class="U">T</span><span class="R">&amp;</span>&nbsp;<span class="T">var</span>, <span class="R">const</span>&nbsp;<span class="U">D</span><span class="R">&amp;</span>&nbsp;<span class="T">def</span>)</p>
+<p id="Upp::XmlIO::List(const char*,const char*,T&)" class="Q"><span class="R">template</span>&nbsp;&lt;<span class="R">class</span>&nbsp;<span class="U">T</span>&gt;&nbsp;<a href="Upp::XmlIO"><u>XmlIO</u></a>&nbsp;<span class="S">List</span>(<span class="R">const</span>&nbsp;<span class="R">char</span>&nbsp;*<span class="T">tag</span>, <span class="R">const</span>&nbsp;<span class="R">char</span>&nbsp;*<span class="T">itemtag</span>, <span class="U">T</span><span class="R">&amp;</span>&nbsp;<span class="T">var</span>)</p>
+<p class="J">Creates subtag of current XmlNode <span class="T">tag</span>, forms a new XmlIO for it and calls global <span class="S">Xmlize </span>function with this new XmlIO, <span class="T">itemtag</span> and <span class="T">var</span> as parameters. Common global <span class="S">Xmlize </span>is a template function that calls <span class="S">Xmlize </span>method for <span class="T">var</span> with new XmlIO as parameter (but not <span class="T">itemtag</span>) - that way the <span class="S">Xmlize </span>can be defined either as global template function specialization for <span class="U">T</span> or as method of <span class="U">T</span> (usually easier, but not always possible). <span class="T">itemtag</span> is additional parameter that can be used as name of embeded tags when collections of items are Xmlized. <span class="T">def</span> parameter can be used to provide default value when there is no corresponding tag on loading. Variant without <span class="T">def</span> leaves <span class="T">var</span> unchanged in this case.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Upp::XmlIO::Var(const char*,T&,X)" class="Q"><span class="R">template</span>&nbsp;&lt;<span class="R">class</span>&nbsp;<span class="U">T</span>, <span class="R">class</span>&nbsp;<span class="U">X</span>&gt;&nbsp;<a href="Upp::XmlIO"><u>XmlIO</u></a>&nbsp;<span class="S">Var</span>(<span class="R">const</span>&nbsp;<span class="R">char</span>&nbsp;*<span class="T">tag</span>, <span class="U">T</span><span class="R">&amp;</span>&nbsp;<span class="T">var</span>, <span class="U">X</span>&nbsp;<span class="T">var_xmlize</span>)</p>
+<p class="J">Creates subtag of current XmlNode <span class="T">tag</span>, forms a new XmlIO for it and calls global <span class="T">item_xmlize</span><span class="S"> </span>callable with this new XmlIO and <span class="T">var</span> as parameters. This allows for in-place definition of XML structure used to represent <span class="T">var</span>.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Upp::XmlIO::Array(const char*,T&,X,const char*)" class="Q"><span class="R">template</span>&nbsp;&lt;<span class="R">class</span>&nbsp;<span class="U">T</span>, <span class="R">class</span>&nbsp;<span class="U">X</span>&gt;&nbsp;<a href="Upp::XmlIO"><u>XmlIO</u></a>&nbsp;<span class="S">Array</span>(<span class="R">const</span>&nbsp;<span class="R">char</span>&nbsp;*<span class="T">tag</span>, <span class="U">T</span><span class="R">&amp;</span>&nbsp;<span class="T">var</span>, <span class="U">X</span>&nbsp;<span class="T">item_xmlize</span>, <span class="R">const</span>&nbsp;<span class="R">char</span>&nbsp;*<span class="T">itemtag</span> =<span class="T"> &quot;item&quot;</span>)</p>
+<p class="J">Xmlizes array container (must have GetCount, Add and operator[] methods), using <span class="T">item_xmlize</span> to define the structure of elements. <span class="T">itemtag</span> provides the tags of individual elements.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="XmlIO::Attr(const char*,T&)" class="Q"><span class="R">template</span>&nbsp;&lt;<span class="R">class</span>&nbsp;<span class="U">T</span>&gt;&nbsp;<a href="XmlIO"><u>XmlIO</u></a>&nbsp;<span class="S">Attr</span>(<span class="R">const</span>&nbsp;<span class="R">char</span>&nbsp;*<span class="T">id</span>, <span class="U">T</span><span class="R">&amp;</span>&nbsp;<span class="T">var</span>)</p>
+<p id="XmlIO::Attr(const char*,T&,T)" class="Q"><span class="R">template</span>&nbsp;&lt;<span class="R">class</span>&nbsp;<span class="U">T</span>, <span class="R">class</span>&nbsp;<span class="U">D</span>&gt;&nbsp;<a href="Upp::XmlIO"><u>XmlIO</u></a>&nbsp;<span class="S">Attr</span>(<span class="R">const</span>&nbsp;<span class="R">char</span>&nbsp;*<span class="T">id</span>, <span class="U">T</span><span class="R">&amp;</span>&nbsp;<span class="T">var</span>, <span class="R">const</span>&nbsp;<span class="U">D</span><span class="R">&amp;</span>&nbsp;<span class="T">def</span>)</p>
+<p class="J">When retrieving data, calls global function <span class="R">void </span><span class="S">XmlAttrLoad</span>(<span class="U">T</span><span class="R">&amp;</span>&nbsp;<span class="T">var</span>, const String&amp; <span class="S">text</span>) with <span class="S">text</span> set to the value of attribute <span class="T">id</span> of current XmlNode. Common global Xmlize is a template function that calls <span class="R">void </span><span class="S">XmlAttrLoad</span>(const String&amp; <span class="S">text</span>) method for <span class="T">var</span>. When storing data, sets the attribute <span class="T">id</span> of current XmlNode to the result of global function call String <span class="S">XmlAttrStore</span>(<span class="R">const </span><span class="U">T</span>&amp; var). Common global Xmlize is a template function that calls <span class="R">void </span><span class="S">XmlAttrLoad</span>(const String&amp; <span class="S">text</span>) method for <span class="T">var</span>. <span class="T">def</span> parameter can be used to provide default value when retrieving data from XML fails. Returns *this.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="XmlIO::At(int)" class="Q"><a href="XmlIO"><u>XmlIO</u></a>&nbsp;<span class="S">At</span>(<span class="R">int</span>&nbsp;<span class="T">i</span>)</p>
+<p class="J">Creates a new subnode with index <span class="T">i</span> of current XmlNode and returns a new XmlIO for it. Node type and properties are to be set through created XmlIO.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="XmlIO::Add()" class="Q"><a href="XmlIO"><u>XmlIO</u></a>&nbsp;<span class="S">Add</span>()</p>
+<p class="J">Adds a new subnode to current XmlNode and returns a new XmlIO for it. Node type and properties are to be set through created XmlIO.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="XmlIO::Add(const char*)" class="Q"><a href="XmlIO"><u>XmlIO</u></a>&nbsp;<span class="S">Add</span>(<span class="R">const</span>&nbsp;<span class="R">char</span>&nbsp;*<span class="T">id</span>)</p>
+<p class="J">Adds a new subtag <span class="T">id</span> to current XmlNode and returns XmlIO for it. Node properties are to be set through created XmlIO.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="XmlIO::GetAdd(const char*)" class="Q"><a href="XmlIO"><u>XmlIO</u></a>&nbsp;<span class="S">GetAdd</span>(<span class="R">const</span>&nbsp;<span class="R">char</span>&nbsp;*<span class="T">id</span>)</p>
+<p class="J">If there already exists subtag <span class="T">id</span> in current XmlNode, returns XmlIO for it, if not, it is created and XmlIO for this new tag is returned. Node properties are to be set through returned XmlIO.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="XmlIO::SetUserData(const Value&)" class="Q"><span class="R">void</span>&nbsp;<span class="S">SetUserData</span>(<span class="R">const</span>&nbsp;<a href="Value"><u>Value</u></a><span class="R">&amp;</span>&nbsp;<span class="T">v</span>)</p>
+<p class="J">Associates some client code value with current XmlIO. This value is propagated to any new XmlIO created by current XmlIO..</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="XmlIO::GetUserData()const" class="N"><a href="Value"><span class="O"><u>Value</u></span></a><span class="O">&nbsp;</span><span class="P">GetUserData</span><span class="O">()&nbsp;</span>const</p>
+<p class="J">Returns value set by SetUserData.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="XmlIO::XmlIO(XmlNode&,bool,const Value&)" class="Q"><span class="S">XmlIO</span>(<a href="XmlNode"><u>XmlNode</u></a><span class="R">&amp;</span>&nbsp;<span class="T">xml</span>, <span class="R">bool</span>&nbsp;<span class="T">loading</span>, <span class="R">const</span>&nbsp;<a href="Value"><u>Value</u></a><span class="R">&amp;</span>&nbsp;<span class="T">userdata</span>)</p>
+<p id="XmlIO::XmlIO(XmlNode&,bool)" class="Q"><span class="S">XmlIO</span>(<a href="XmlNode"><u>XmlNode</u></a><span class="R">&amp;</span>&nbsp;<span class="T">xml</span>, <span class="R">bool</span>&nbsp;<span class="T">loading</span>)</p>
+<p class="J">Creates XmlIO for given XmlNode and sets the direction mode based on <span class="T">loading</span>. If <span class="T">userdata</span> are present, calls SetUserData(<span class="T">userdata</span>).</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="XmlIO::XmlIO(XmlIO,const char*)" class="Q"><span class="S">XmlIO</span>(<span class="S">XmlIO</span>&nbsp;<span class="T">xml</span>, <span class="R">const</span>&nbsp;<span class="R">char</span>&nbsp;*<span class="T">id</span>)</p>
+<p class="J">If there already exists subtag <span class="T">id</span> in current XmlNode, constructs XmlIO for it, if not, tag is created and XmlIO for this new tag is constructed.</p>
+<p class="F">&nbsp;</p>
+<p class="A">&nbsp;</p>
+<p class="A">&nbsp;</p>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr><td width="100%"><table width="100%" class="C"><colgroup><col width="100%"></colgroup>
+<tr><td class="D"><p class="E">Xmlize Store/Load functions</p>
+</td>
+</tr>
+</table></td>
+</tr></table>
+<p class="F">&nbsp;</p>
+<p id="StoreAsXML(const T&,const char*)" class="Q"><span class="R">template</span>&nbsp;&lt;<span class="R">class</span>&nbsp;<span class="U">T</span>&gt;&nbsp;<a href="String"><u>String</u></a>&nbsp;<span class="S">StoreAsXML</span>(<span class="R">const</span>&nbsp;<span class="U">T</span><span class="R">&amp;</span>&nbsp;<span class="T">data</span>, <span class="R">const</span>&nbsp;<span class="R">char</span>&nbsp;*<span class="T">name</span>&nbsp;=&nbsp;NULL)</p>
+<p class="J">Stores <span class="T">data</span> into XML string. The top-level tag is defined by <span class="T">name</span>, if NULL, it is set to &quot;app&quot;.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="LoadFromXML(T&,const String&)" class="Q"><span class="R">template</span>&nbsp;&lt;<span class="R">class</span>&nbsp;<span class="U">T</span>&gt;&nbsp;<span class="R">bool</span>&nbsp;<span class="S">LoadFromXML</span>(<span class="U">T</span><span class="R">&amp;</span>&nbsp;<span class="T">data</span>, <span class="R">const</span>&nbsp;<a href="String"><u>String</u></a><span class="R">&amp;</span>&nbsp;<span class="T">xml</span>)</p>
+<p class="J">Loads <span class="T">data</span> from XML string <span class="T">xml</span>. In case of error or empty <span class="T">xml</span> returns false.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="TryLoadFromXML(T&,const String&)" class="Q"><span class="R">template</span>&nbsp;&lt;<span class="R">class</span>&nbsp;<span class="U">T</span>&gt;&nbsp;<span class="R">bool</span>&nbsp;<span class="S">TryLoadFromXML</span>(<span class="U">T</span><span class="R">&amp;</span>&nbsp;<span class="T">data</span>, <span class="R">const</span>&nbsp;<a href="String"><u>String</u></a><span class="R">&amp;</span>&nbsp;<span class="T">xml</span>)</p>
+<p class="J">Loads <span class="T">data</span> from XML string <span class="T">xml</span>. If <span class="T">xml</span> is empty returns false. In case of error, throws XmlError.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="StoreAsXMLFile(T&,const char*,const char*)" class="Q"><span class="R">template</span>&nbsp;&lt;<span class="R">class</span>&nbsp;<span class="U">T</span>&gt;&nbsp;<span class="R">bool</span>&nbsp;<span class="S">StoreAsXMLFile</span>(<span class="U">T</span><span class="R">&amp;</span>&nbsp;<span class="T">data</span>, <span class="R">const</span>&nbsp;<span class="R">char</span>&nbsp;*<span class="T">name</span>&nbsp;=&nbsp;NULL, <span class="R">const</span>&nbsp;<span class="R">char</span>&nbsp;*<span class="T">file</span>&nbsp;=&nbsp;NULL)</p>
+<p class="J">Stores <span class="T">data</span> to XML file, using <span class="T">name</span> (&quot;app&quot; if NULL) as top-level tag and <span class="T">file</span> as the path of file. If <span class="T">file</span> is NULL, ConfigFile(GetExeTitle() + &quot;.xml&quot;) is used as the file path.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="LoadFromXMLFile(T&,const char*)" class="Q"><span class="R">template</span>&nbsp;&lt;<span class="R">class</span>&nbsp;<span class="U">T</span>&gt;&nbsp;<span class="R">bool</span>&nbsp;<span class="S">LoadFromXMLFile</span>(<span class="U">T</span><span class="R">&amp;</span>&nbsp;<span class="T">data</span>, <span class="R">const</span>&nbsp;<span class="R">char</span>&nbsp;*<span class="T">file</span>&nbsp;=&nbsp;NULL)</p>
+<p class="J">Loads <span class="T">data</span> from XML file, using <span class="T">file</span> as the path of file. If <span class="T">file</span> is NULL, ConfigFile(GetExeTitle() + &quot;.xml&quot;) is used as the file path. In case of error or empty <span class="T">xml</span> returns false.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="TryLoadFromXMLFile(T&,const char*)" class="Q"><span class="R">template</span>&nbsp;&lt;<span class="R">class</span>&nbsp;<span class="U">T</span>&gt;&nbsp;<span class="R">bool</span>&nbsp;<span class="S">TryLoadFromXMLFile</span>(<span class="U">T</span><span class="R">&amp;</span>&nbsp;<span class="T">data</span>, <span class="R">const</span>&nbsp;<span class="R">char</span>&nbsp;*<span class="T">file</span>&nbsp;=&nbsp;NULL)</p>
+<p class="J">Loads <span class="T">data</span> from XML file, using <span class="T">file</span> as the path of file. If <span class="T">file</span> is NULL, ConfigFile(GetExeTitle() + &quot;.xml&quot;) is used as the file path. If <span class="T">xml</span> is empty returns false. In case of error, throws XmlError.</p>
+<p class="F">&nbsp;</p>
+<p class="A">&nbsp;</p>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr><td width="100%"><table width="100%" class="C"><colgroup><col width="100%"></colgroup>
+<tr><td class="D"><p class="E">Standard Xmlize template specializations</p>
+</td>
+</tr>
+</table></td>
+</tr></table>
+<p class="F">&nbsp;</p>
+<p id="XmlAttrLoad(String&,const String&)" class="Q"><span class="R">template</span>&nbsp;&lt;&gt;&nbsp;<span class="R">void</span>&nbsp;<span class="S">XmlAttrLoad</span>(<a href="String"><u>String</u></a><span class="R">&amp;</span>&nbsp;<span class="T">var</span>, <span class="R">const</span>&nbsp;<a href="String"><u>String</u></a><span class="R">&amp;</span>&nbsp;<span class="T">text</span>)</p>
+<p id="XmlAttrStore(const String&)" class="Q"><span class="R">template</span>&nbsp;&lt;&gt;&nbsp;<a href="String"><u>String</u></a>&nbsp;<span class="S">XmlAttrStore</span>(<span class="R">const</span>&nbsp;<a href="String"><u>String</u></a><span class="R">&amp;</span>&nbsp;<span class="T">var</span>)</p>
+<p id="XmlAttrLoad(WString&,const String&)" class="Q"><span class="R">template</span>&nbsp;&lt;&gt;&nbsp;<span class="R">void</span>&nbsp;<span class="S">XmlAttrLoad</span>(<a href="WString"><u>WString</u></a><span class="R">&amp;</span>&nbsp;<span class="T">var</span>, <span class="R">const</span>&nbsp;<a href="String"><u>String</u></a><span class="R">&amp;</span>&nbsp;<span class="T">text</span>)</p>
+<p id="XmlAttrStore(const WString&)" class="Q"><span class="R">template</span>&nbsp;&lt;&gt;&nbsp;<a href="String"><u>String</u></a>&nbsp;<span class="S">XmlAttrStore</span>(<span class="R">const</span>&nbsp;<a href="WString"><u>WString</u></a><span class="R">&amp;</span>&nbsp;<span class="T">var</span>)</p>
+<p id="XmlAttrLoad(int&,const String&)" class="Q"><span class="R">template</span>&nbsp;&lt;&gt;&nbsp;<span class="R">void</span>&nbsp;<span class="S">XmlAttrLoad</span>(<span class="R">int&amp;</span>&nbsp;<span class="T">var</span>, <span class="R">const</span>&nbsp;<a href="String"><u>String</u></a><span class="R">&amp;</span>&nbsp;<span class="T">text</span>)</p>
+<p id="XmlAttrStore(const int&)" class="Q"><span class="R">template</span>&nbsp;&lt;&gt;&nbsp;<a href="String"><u>String</u></a>&nbsp;<span class="S">XmlAttrStore</span>(<span class="R">const</span>&nbsp;<span class="R">int&amp;</span>&nbsp;<span class="T">var</span>)</p>
+<p id="XmlAttrLoad(dword&,const String&)" class="Q"><span class="R">template</span>&nbsp;&lt;&gt;&nbsp;<span class="R">void</span>&nbsp;<span class="S">XmlAttrLoad</span>(<a href="dword"><u>dword</u></a><span class="R">&amp;</span>&nbsp;<span class="T">var</span>, <span class="R">const</span>&nbsp;<a href="String"><u>String</u></a><span class="R">&amp;</span>&nbsp;<span class="T">text</span>)</p>
+<p id="XmlAttrStore(const dword&)" class="Q"><span class="R">template</span>&nbsp;&lt;&gt;&nbsp;<a href="String"><u>String</u></a>&nbsp;<span class="S">XmlAttrStore</span>(<span class="R">const</span>&nbsp;<a href="dword"><u>dword</u></a><span class="R">&amp;</span>&nbsp;<span class="T">var</span>)</p>
+<p id="XmlAttrLoad(double&,const String&)" class="Q"><span class="R">template</span>&nbsp;&lt;&gt;&nbsp;<span class="R">void</span>&nbsp;<span class="S">XmlAttrLoad</span>(<span class="R">double&amp;</span>&nbsp;<span class="T">var</span>, <span class="R">const</span>&nbsp;<a href="String"><u>String</u></a><span class="R">&amp;</span>&nbsp;<span class="T">text</span>)</p>
+<p id="XmlAttrStore(const double&)" class="Q"><span class="R">template</span>&nbsp;&lt;&gt;&nbsp;<a href="String"><u>String</u></a>&nbsp;<span class="S">XmlAttrStore</span>(<span class="R">const</span>&nbsp;<span class="R">double&amp;</span>&nbsp;<span class="T">var</span>)</p>
+<p id="XmlAttrLoad(bool&,const String&)" class="Q"><span class="R">template</span>&nbsp;&lt;&gt;&nbsp;<span class="R">void</span>&nbsp;<span class="S">XmlAttrLoad</span>(<span class="R">bool&amp;</span>&nbsp;<span class="T">var</span>, <span class="R">const</span>&nbsp;<a href="String"><u>String</u></a><span class="R">&amp;</span>&nbsp;<span class="T">text</span>)</p>
+<p id="XmlAttrStore(const bool&)" class="Q"><span class="R">template</span>&nbsp;&lt;&gt;&nbsp;<a href="String"><u>String</u></a>&nbsp;<span class="S">XmlAttrStore</span>(<span class="R">const</span>&nbsp;<span class="R">bool&amp;</span>&nbsp;<span class="T">var</span>)</p>
+<p id="XmlAttrStore(const bool&)" class="Q"><span class="R">template</span>&nbsp;&lt;&gt;&nbsp;<span class="R">void</span>&nbsp;<span class="S">XmlAttrLoad</span>(<a href="int16"><u>int16</u></a><span class="R">&amp;</span>&nbsp;<span class="T">var</span>, <span class="R">const</span>&nbsp;<a href="String"><u>String</u></a><span class="R">&amp;</span>&nbsp;<span class="T">text</span>)</p>
+<p id="XmlAttrStore(const int16&)" class="Q"><span class="R">template</span>&nbsp;&lt;&gt;&nbsp;<a href="String"><u>String</u></a>&nbsp;<span class="S">XmlAttrStore</span>(<span class="R">const</span>&nbsp;<a href="int16"><u>int16</u></a><span class="R">&amp;</span>&nbsp;<span class="T">var</span>)</p>
+<p id="XmlAttrLoad(int64&,const String&)" class="Q"><span class="R">template</span>&nbsp;&lt;&gt;&nbsp;<span class="R">void</span>&nbsp;<span class="S">XmlAttrLoad</span>(<a href="int64"><u>int64</u></a><span class="R">&amp;</span>&nbsp;<span class="T">var</span>, <span class="R">const</span>&nbsp;<a href="String"><u>String</u></a><span class="R">&amp;</span>&nbsp;<span class="T">text</span>)</p>
+<p id="XmlAttrStore(const int64&)" class="Q"><span class="R">template</span>&nbsp;&lt;&gt;&nbsp;<a href="String"><u>String</u></a>&nbsp;<span class="S">XmlAttrStore</span>(<span class="R">const</span>&nbsp;<a href="int64"><u>int64</u></a><span class="R">&amp;</span>&nbsp;<span class="T">var</span>)</p>
+<p id="XmlAttrLoad(byte&,const String&)" class="Q"><span class="R">template</span>&nbsp;&lt;&gt;&nbsp;<span class="R">void</span>&nbsp;<span class="S">XmlAttrLoad</span>(<a href="byte"><u>byte</u></a><span class="R">&amp;</span>&nbsp;<span class="T">var</span>, <span class="R">const</span>&nbsp;<a href="String"><u>String</u></a><span class="R">&amp;</span>&nbsp;<span class="T">text</span>)</p>
+<p id="XmlAttrStore(const byte&)" class="Q"><span class="R">template</span>&nbsp;&lt;&gt;&nbsp;<a href="String"><u>String</u></a>&nbsp;<span class="S">XmlAttrStore</span>(<span class="R">const</span>&nbsp;<a href="byte"><u>byte</u></a><span class="R">&amp;</span>&nbsp;<span class="T">var</span>)</p>
+<p id="XmlAttrLoad(Date&,const String&)" class="Q"><span class="R">template</span>&nbsp;&lt;&gt;&nbsp;<span class="R">void</span>&nbsp;<span class="S">XmlAttrLoad</span>(<a href="Date"><u>Date</u></a><span class="R">&amp;</span>&nbsp;<span class="T">var</span>, <span class="R">const</span>&nbsp;<a href="String"><u>String</u></a><span class="R">&amp;</span>&nbsp;<span class="T">text</span>)</p>
+<p id="XmlAttrStore(const Date&)" class="Q"><span class="R">template</span>&nbsp;&lt;&gt;&nbsp;<a href="String"><u>String</u></a>&nbsp;<span class="S">XmlAttrStore</span>(<span class="R">const</span>&nbsp;<a href="Date"><u>Date</u></a><span class="R">&amp;</span>&nbsp;<span class="T">var</span>)</p>
+<p id="XmlAttrLoad(Time&,const String&)" class="Q"><span class="R">template</span>&nbsp;&lt;&gt;&nbsp;<span class="R">void</span>&nbsp;<span class="S">XmlAttrLoad</span>(<a href="Time"><u>Time</u></a><span class="R">&amp;</span>&nbsp;<span class="T">var</span>, <span class="R">const</span>&nbsp;<a href="String"><u>String</u></a><span class="R">&amp;</span>&nbsp;<span class="T">text</span>)</p>
+<p id="XmlAttrStore(const Time&)" class="Q"><span class="R">template</span>&nbsp;&lt;&gt;&nbsp;<a href="String"><u>String</u></a>&nbsp;<span class="S">XmlAttrStore</span>(<span class="R">const</span>&nbsp;<a href="Time"><u>Time</u></a><span class="R">&amp;</span>&nbsp;<span class="T">var</span>)</p>
+<p class="J">Provides template specialization to support <span class="T">var</span> data types as XML attributes.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Xmlize(XmlIO&,String&)" class="Q"><span class="R">template</span>&nbsp;&lt;&gt;&nbsp;<span class="R">void</span>&nbsp;<span class="S">Xmlize</span>(<a href="XmlIO"><u>XmlIO</u></a><span class="R">&amp;</span>&nbsp;<span class="T">xml</span>, <a href="String"><u>String</u></a><span class="R">&amp;</span>&nbsp;<span class="T">var</span>)</p>
+<p id="Xmlize(XmlIO&,WString&)" class="Q"><span class="R">template</span>&nbsp;&lt;&gt;&nbsp;<span class="R">void</span>&nbsp;<span class="S">Xmlize</span>(<a href="XmlIO"><u>XmlIO</u></a><span class="R">&amp;</span>&nbsp;<span class="T">xml</span>, <a href="WString"><u>WString</u></a><span class="R">&amp;</span>&nbsp;<span class="T">var</span>)</p>
+<p id="Xmlize(XmlIO&,int&)" class="Q"><span class="R">template</span>&nbsp;&lt;&gt;&nbsp;<span class="R">void</span>&nbsp;<span class="S">Xmlize</span>(<a href="XmlIO"><u>XmlIO</u></a><span class="R">&amp;</span>&nbsp;<span class="T">xml</span>, <span class="R">int&amp;</span>&nbsp;<span class="T">var</span>)</p>
+<p id="Xmlize(XmlIO&,dword&)" class="Q"><span class="R">template</span>&nbsp;&lt;&gt;&nbsp;<span class="R">void</span>&nbsp;<span class="S">Xmlize</span>(<a href="XmlIO"><u>XmlIO</u></a><span class="R">&amp;</span>&nbsp;<span class="T">xml</span>, <a href="dword"><u>dword</u></a><span class="R">&amp;</span>&nbsp;<span class="T">var</span>)</p>
+<p id="Xmlize(XmlIO&,double&)" class="Q"><span class="R">template</span>&nbsp;&lt;&gt;&nbsp;<span class="R">void</span>&nbsp;<span class="S">Xmlize</span>(<a href="XmlIO"><u>XmlIO</u></a><span class="R">&amp;</span>&nbsp;<span class="T">xml</span>, <span class="R">double&amp;</span>&nbsp;<span class="T">var</span>)</p>
+<p id="Xmlize(XmlIO&,bool&)" class="Q"><span class="R">template</span>&nbsp;&lt;&gt;&nbsp;<span class="R">void</span>&nbsp;<span class="S">Xmlize</span>(<a href="XmlIO"><u>XmlIO</u></a><span class="R">&amp;</span>&nbsp;<span class="T">xml</span>, <span class="R">bool&amp;</span>&nbsp;<span class="T">var</span>)</p>
+<p id="Xmlize(XmlIO&,Date&)" class="Q"><span class="R">template</span>&nbsp;&lt;&gt;&nbsp;<span class="R">void</span>&nbsp;<span class="S">Xmlize</span>(<a href="XmlIO"><u>XmlIO</u></a><span class="R">&amp;</span>&nbsp;<span class="T">xml</span>, <a href="Date"><u>Date</u></a><span class="R">&amp;</span>&nbsp;<span class="T">var</span>)</p>
+<p id="Xmlize(XmlIO&,Time&)" class="Q"><span class="R">template</span>&nbsp;&lt;&gt;&nbsp;<span class="R">void</span>&nbsp;<span class="S">Xmlize</span>(<a href="XmlIO"><u>XmlIO</u></a><span class="R">&amp;</span>&nbsp;<span class="T">xml</span>, <a href="Time"><u>Time</u></a><span class="R">&amp;</span>&nbsp;<span class="T">var</span>)</p>
+<p id="Xmlize(XmlIO&,int16&)" class="Q"><span class="R">template</span>&nbsp;&lt;&gt;&nbsp;<span class="R">void</span>&nbsp;<span class="S">Xmlize</span>(<a href="XmlIO"><u>XmlIO</u></a><span class="R">&amp;</span>&nbsp;<span class="T">xml</span>, <a href="int16"><u>int16</u></a><span class="R">&amp;</span>&nbsp;<span class="T">var</span>)</p>
+<p id="Xmlize(XmlIO&,int64&)" class="Q"><span class="R">template</span>&nbsp;&lt;&gt;&nbsp;<span class="R">void</span>&nbsp;<span class="S">Xmlize</span>(<a href="XmlIO"><u>XmlIO</u></a><span class="R">&amp;</span>&nbsp;<span class="T">xml</span>, <a href="int64"><u>int64</u></a><span class="R">&amp;</span>&nbsp;<span class="T">var</span>)</p>
+<p id="Xmlize(XmlIO&,byte&)" class="Q"><span class="R">template</span>&nbsp;&lt;&gt;&nbsp;<span class="R">void</span>&nbsp;<span class="S">Xmlize</span>(<a href="XmlIO"><u>XmlIO</u></a><span class="R">&amp;</span>&nbsp;<span class="T">xml</span>, <a href="byte"><u>byte</u></a><span class="R">&amp;</span>&nbsp;<span class="T">var</span>)</p>
+<p class="J">Provides template specialization to support Xmlization of <span class="T">var</span> data types.</p>
+<p class="F">&nbsp;</p>
+<p class="A">&nbsp;</p>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr><td width="100%"><table width="100%" class="C"><colgroup><col width="100%"></colgroup>
+<tr><td class="D"><p class="E">Special Xmlize variants</p>
+</td>
+</tr>
+</table></td>
+</tr></table>
+<p class="F">&nbsp;</p>
+<p id="XmlizeLangAttr(XmlIO&,int&,const char*)" class="Q"><span class="R">void</span>&nbsp;<span class="S">XmlizeLangAttr</span>(<a href="XmlIO"><u>XmlIO</u></a><span class="R">&amp;</span>&nbsp;<span class="T">xml</span>, <span class="R">int&amp;</span>&nbsp;<span class="T">lang</span>, <span class="R">const</span>&nbsp;<span class="R">char</span>&nbsp;*<span class="T">id</span>&nbsp;=&nbsp;&quot;<span class="T">lang</span>&quot;)</p>
+<p class="J">Xmlizes <span class="T">lang</span> language identifier number (which encodes i18n strings like &quot;CS-CZ&quot;, see Lang.h) as <span class="T">id</span> attribute, using more readable format (&quot;CS-CZ&quot;) than plain integer number.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="XmlizeLang(XmlIO&,const char*,int&,const char*)" class="Q"><span class="R">void</span>&nbsp;<span class="S">XmlizeLang</span>(<a href="XmlIO"><u>XmlIO</u></a><span class="R">&amp;</span>&nbsp;<span class="T">xml</span>, <span class="R">const</span>&nbsp;<span class="R">char</span>&nbsp;*<span class="T">tag</span>, <span class="R">int&amp;</span>&nbsp;<span class="T">lang</span>, <span class="R">const</span>&nbsp;<span class="R">char</span>&nbsp;*<span class="T">id</span>&nbsp;=&nbsp;&quot;<span class="T">id</span>&quot;)</p>
+<p class="J">Xmlizes <span class="T">lang</span> language identifier number (which encodes i18n strings like &quot;CS-CZ&quot;, see Lang.h) as XML <span class="T">tag</span>, using more readable format (&quot;CS-CZ&quot;) than plain integer number.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="XmlizeBySerialize(XmlIO&,T&)" class="Q"><span class="R">template</span>&nbsp;&lt;<span class="R">class</span>&nbsp;<span class="U">T</span>&gt;&nbsp;<span class="R">void</span>&nbsp;<span class="S">XmlizeBySerialize</span>(<a href="XmlIO"><u>XmlIO</u></a><span class="R">&amp;</span>&nbsp;<span class="T">xio</span>, <span class="U">T</span><span class="R">&amp;</span>&nbsp;<span class="T">x</span>)</p>
+<p class="J">This function encodes/retrieves XML by binary serializing the object and Jsonizing the hexadecimal data string.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="XmlizeByJsonize(XmlIO&,T&)" class="Q"><span class="R">template</span>&nbsp;&lt;<span class="R">class</span>&nbsp;<span class="U">T</span>&gt;&nbsp;<span class="R">void</span>&nbsp;<span class="S">XmlizeByJsonize</span>(<a href="XmlIO"><u>XmlIO</u></a><span class="R">&amp;</span>&nbsp;<span class="T">xio</span>, <span class="U">T</span><span class="R">&amp;</span>&nbsp;<span class="T">x</span>)</p>
+<p class="J">This function encodes/retrieves XML by JSON conversion and then interpreting JSON object fields &nbsp;as XML tags.</p>
+<p class="F">&nbsp;</p>
+</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>
+<TABLE BORDER="0" WIDTH="100%"><TR><TD></TD>
+</TR>
+</TABLE>
+<TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" BGCOLOR="#FFFFFF" WIDTH="100%" style="border-style: solid; border-width: 1px; border-color: #6E89AE;padding: 10px;;"><TR><TD><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%"><TR><TD><p class="A"><span class="B"> </span><a href="www$uppweb$contribweb$en-us.html">Do you want to contribute?</a></p>
+</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>
+<script type="text/javascript">var a={};var p=window.location.pathname.split("/");p=p[p.length-1];var s='<select id="lang" onchange="window.location=document.getElementById(\'lang\').value;">';for(l in a){if(p==l){d=" selected=1"}else{d=""}s+='<option value="'+l+'"'+d+'>'+a[l]+'</option>'}s+='</select>';var d=document.createElement('div');d.innerHTML=s;var c=document.getElementById('langs');c.replaceChild(d,c.firstChild);document.getElementById('langbox').style.display='block';</script></BODY>

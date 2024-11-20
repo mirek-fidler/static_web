@@ -1,0 +1,873 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en-us">
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
+<META NAME="Generator" CONTENT="U++ HTML Package">
+<TITLE>Channels: Scp, Exec, Tunnel, Shell :: U++</TITLE>
+<STYLE TYPE="text/css"><!--
+.A{margin:0px 0px 0px 0px;text-indent:0px;text-align:left;color:#000000;font-family:sans-serif;font-size:10pt;font-weight:normal;font-style:normal;}
+.B{font-size:12pt;}
+.C{border-collapse:collapse;table-layout:auto;border: 2px solid #000000;}
+.D{padding: 3px 5px 3px 5px;border-left: 1px solid #000000;border-top: 1px solid #000000;border-right: 1px solid #000000;border-bottom: 1px solid #000000;background-color:#712A00;vertical-align:middle;}
+.E{margin:0px 0px 0px 0px;text-indent:0px;text-align:left;color:#e0e0e0;font-family:sans-serif;font-size:16pt;font-weight:bold;font-style:normal;}
+.F{margin:0px 0px 0px 0px;text-indent:0px;text-align:left;color:#000000;font-family:sans-serif;font-size:6pt;font-weight:normal;font-style:normal;}
+.G{margin:0px 0px 0px 57px;text-indent:0px;text-align:left;color:#000000;font-family:sans-serif;font-size:10pt;font-weight:normal;font-style:normal;}
+.H{margin:0px 0px 5px 0px;text-indent:0px;text-align:left;color:#800000;font-family:sans-serif;font-size:12pt;font-weight:bold;font-style:normal;}
+.I{color:#0000ff;font-weight:normal;}
+.J{color:#000000;font-weight:normal;}
+.K{color:#000000;}
+.L{margin:0px 0px 0px 57px;text-indent:0px;text-align:justify;color:#000000;font-family:sans-serif;font-size:10pt;font-weight:normal;font-style:normal;}
+.M{border-collapse:collapse;table-layout:auto;border: 2px solid #808080;}
+.N{padding: 3px 5px 3px 5px;border-left: 1px solid #808080;border-top: 1px solid #808080;border-right: 1px solid #808080;border-bottom: 1px solid #808080;background-color:#C0C0C0;vertical-align:middle;}
+.O{margin:0px 0px 0px 0px;text-indent:0px;text-align:left;color:#000000;font-family:sans-serif;font-size:10pt;font-weight:bold;font-style:normal;}
+.P{margin:0px 0px 5px 0px;text-indent:0px;text-align:left;color:#000000;font-family:sans-serif;font-size:10pt;font-weight:normal;font-style:normal;}
+.Q{color:#0000ff;}
+.R{font-weight:bold;}
+.S{color:#800000;font-weight:bold;}
+.T{margin:0px 0px 5px 0px;text-indent:0px;text-align:left;color:#000000;font-family:sans-serif;font-size:10pt;font-weight:bold;font-style:normal;}
+.U{font-weight:normal;}
+.V{font-family:monospace;}
+.W{color:#800000;}
+.X{margin:0px 0px 0px 57px;text-indent:0px;text-align:left;color:#000080;font-family:sans-serif;font-size:8pt;font-weight:bold;font-style:normal;}
+.Y{margin:0px 0px 5px 0px;text-indent:0px;text-align:left;color:#0000ff;font-family:sans-serif;font-size:10pt;font-weight:normal;font-style:normal;}
+.Z{color:#000000;font-weight:bold;}
+.AA{padding: 2px 5px 2px 5px;border-left: 1px solid #000000;border-top: 1px solid #000000;border-right: 1px solid #000000;border-bottom: 1px solid #000000;background-color:#C0C0C0;vertical-align:middle;}
+.AB{margin:0px 0px 0px 0px;text-indent:0px;text-align:center;color:#000000;font-family:sans-serif;font-size:10pt;font-weight:bold;font-style:normal;}
+.AC{padding: 2px 5px 2px 5px;border-left: 1px solid #000000;border-top: 1px solid #000000;border-right: 1px solid #000000;border-bottom: 1px solid #000000;background-color:#B2B2B2;vertical-align:middle;}
+.AD{margin:0px 0px 0px 0px;text-indent:0px;text-align:center;color:#000000;font-family:sans-serif;font-size:10pt;font-weight:normal;font-style:normal;}
+.AE{padding: 3px 5px 3px 5px;border-left: 1px solid #000000;border-top: 1px solid #000000;border-right: 1px solid #000000;border-bottom: 1px solid #000000;background-color:#FFFFFF;vertical-align:middle;}
+.AF{margin:0px 0px 0px 0px;text-indent:0px;text-align:center;color:#800000;font-family:monospace;font-size:10pt;font-weight:bold;font-style:normal;}
+.AG{margin:0px 0px 0px 0px;text-indent:0px;text-align:left;color:#000000;font-family:monospace;font-size:10pt;font-weight:bold;font-style:normal;}
+.AH{margin:0px 0px 0px 0px;text-indent:0px;text-align:left;color:#000000;font-family:monospace;font-size:10pt;font-weight:normal;font-style:normal;}
+a.l1         { text-decoration:none; font-size: 8pt; font-family: sans-serif; font-weight: normal; }
+a.l1:link    { color:#000000; }
+a.l1:visited { color:#000080; }
+a.l1:hover   { color:#9933CC; }
+a.l1:active  { color:#000000; }
+a.l2         { text-decoration:none; font-size: 12pt; font-family: sans-serif; font-variant: small-caps; }
+a.l2:link    { color:#0066FF; }
+a.l2:visited { color:#FF6600; }
+a.l2:hover   { color:#BC0624; }
+a.l2:active  { color:#BC0024; }
+
+-->
+</STYLE>
+<META NAME="keywords" CONTENT="framework, toolkit, widget, c++, visual, studio, dev-cpp, builder, ide, class, component,wxwidgets, qt, rapid, application, development, rad, mfc, linux, macos, gui, sdl, directx, desktop"><META name="robots" content="index,follow">
+<LINK rel="alternate" type="application/rss+xml" title="SVN changes" href="svnchanges.xml">
+<LINK rel="shortcut icon" type="image/png" href="favicon.png">
+</HEAD><BODY BGCOLOR="#D2D9D2" ALINK="#800000" LINK="#000000" VLINK="#000080"><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%"><TR><TD COLSPAN="3"><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%" BGCOLOR="#FFFFFF" style="border: 1px solid #6E89AE;padding-left: 10px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;"><TR><TD><A HREF="index.html"><IMG SRC="0i.png" ALT="" BORDER="0"></A>
+</TD>
+<TD ALIGN="RIGHT" VALIGN="BOTTOM" STYLE="padding-bottom: 5px; background-image: url('1i.png')"><span style="font-size: 14pt; font-family: sans-serif;"><script type="text/javascript"><!--
+google_ad_client = "pub-1082147624384270";
+google_ad_width = 468;
+google_ad_height = 60;
+google_ad_format = "468x60_as";
+google_ad_type = "text_image";
+google_ad_channel = "";
+google_color_border = "336699";
+google_color_bg = "FFFFFF";
+google_color_link = "0000FF";
+google_color_text = "000000";
+google_color_url = "008000";
+//--></script>
+<script type="text/javascript"
+  src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+&nbsp;&nbsp;</span>
+</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>
+<TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%"><TR><TD COLSPAN="3" BGCOLOR="#D2D9D2" HEIGHT="6"></TD>
+</TR>
+<TR><TD VALIGN="TOP" ALIGN="CENTER"><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="160"><TR><TD ALIGN="CENTER"><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%" BGCOLOR="#FFFFFF" style="border-style: solid; border-width: 1px; border-color: #6E89AE;padding: 0px"><TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px;"><A HREF="www$uppweb$overview$en-us.html" CLASS="l1">Overview</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$examples$en-us.html" CLASS="l1">Examples</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$ss$en-us.html" CLASS="l1">Screenshots</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$comparison$en-us.html" CLASS="l1">Comparisons</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$apps$en-us.html" CLASS="l1">Applications</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$download$en-us.html" CLASS="l1">Download</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$documentation$en-us.html" CLASS="l1">Documentation</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$Tutorials$en-us.html" CLASS="l1">Tutorials</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="app$ide$UppHub$en-us.html" CLASS="l1">UppHub</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$Roadmap$en-us.html" CLASS="l1">Status & Roadmap</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$FAQ$en-us.html" CLASS="l1">FAQ</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="app$ide$About$en-us.html" CLASS="l1">Authors & License</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="https://www.ultimatepp.org/forums" CLASS="l1">Forums</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$Funding$en-us.html" CLASS="l1">Funding U++</A>
+</TD>
+</TR>
+</TABLE>
+<TABLE BORDER="0" WIDTH="100%"><TR><TD></TD>
+</TR>
+</TABLE>
+<TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%" BGCOLOR="#FFFFFF" style="border-style: solid; border-width: 1px; border-color: #6E89AE;padding: 0px"><TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('3i.png'); border: 0px solid black;padding-left:12px; padding-right:0px; padding-top:1px; padding-bottom:1px;color:#FFFFFF;"><B><span style="font-size: 8pt; font-family: sans-serif;">Search on this site</span>
+</B>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:6px; padding-right:0px; padding-top:4px; padding-bottom:4px;border-top: 1px solid #6E89AE;"><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%"><TR><TD><IMG SRC="4i.png" ALT="" BORDER="0"></TD>
+<TD><FORM ACTION="https://www.google.com/search" METHOD="GET" STYLE="margin:0px;padding:0px;"><INPUT TYPE="HIDDEN" NAME="ie" VALUE="UTF-8"><INPUT TYPE="HIDDEN" NAME="oe" VALUE="UTF-8"><INPUT TYPE="TEXT" NAME="q" SIZE="15" MAXLENGTH="256" placeholder="Site search"><INPUT TYPE="HIDDEN" NAME="sitesearch" VALUE="ultimatepp.org"></FORM>
+</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>
+<TABLE BORDER="0" WIDTH="100%"><TR><TD></TD>
+</TR>
+</TABLE>
+<br><div id="fb-root"></div>
+<script type="text/javascript">(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) {return;}
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+<div class="fb-like" data-href="https://www.facebook.com/pages/Upp-Framework/262346610476027?sk=wall" data-send="false" data-layout="button_count" data-width="160" data-show-faces="false" data-font="arial"></div>
+<br><br><script type="text/javascript"><!--
+google_ad_client = "pub-1082147624384270";
+google_ad_width = 160;
+google_ad_height = 600;
+google_ad_format = "160x600_as";
+google_ad_type = "text_image";
+google_ad_channel = "";
+google_color_border = "336699";
+google_color_bg = "FFFFFF";
+google_color_link = "0000FF";
+google_color_text = "000000";
+google_color_url = "008000";
+//--></script>
+<script type="text/javascript"
+  src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script><br><br><script type="text/javascript"><!--
+google_ad_client = "pub-1082147624384270";
+google_ad_width = 160;
+google_ad_height = 90;
+google_ad_format = "160x90_0ads_al_s";
+google_ad_channel = "";
+google_color_border = "336699";
+google_color_bg = "FFFFFF";
+google_color_link = "0000FF";
+google_color_text = "000000";
+google_color_url = "008000";
+//--></script>
+<script type="text/javascript"
+  src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+<br><br><br><br><br><br><A HREF="https://sourceforge.net/projects/upp/"><IMG SRC="https://sourceforge.net/sflogo.php?group_id=93970&amp;type=2" ALT="SourceForge.net Logo" BORDER="0" WIDTH="125" HEIGHT="37"></A>
+<br><br><A HREF="https://flathub.org/en/apps/org.ultimatepp.TheIDE"><IMG SRC="5i.png" ALT="SourceForge.net Logo" BORDER="0" WIDTH="125" HEIGHT="37"></A>
+<br><br><div style="background-color:#ffffff;width:125;height:35"><A HREF="https://github.com/ultimatepp"><IMG SRC="6i.png" ALT="GitHub Logo" BORDER="0" WIDTH="125" HEIGHT="35"></A>
+</div><br><div style="background-color:#ffffff;width:125;height:35"><div style="height:5"></div><A HREF="https://discord.gg/8XzqQzXZzb"><IMG SRC="https://assets-global.website-files.com/6257adef93867e50d84d30e2/636e0b5061df29d55a92d945_full_logo_blurple_RGB.svg" ALT="Discord Logo" BORDER="0" WIDTH="125" HEIGHT="25"></A>
+</div><br></TD>
+</TR>
+</TABLE>
+</TD>
+<TD VALIGN="TOP" BGCOLOR="#D2D9D2"><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="6"><TR><TD></TD>
+</TR>
+</TABLE>
+</TD>
+<TD VALIGN="TOP" WIDTH="100%" BGCOLOR="#D2D9D2"><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" BGCOLOR="#FFFFFF" WIDTH="100%" style="border-style: solid; border-width: 1px; border-color: #6E89AE;padding: 10px;;"><TR><TD><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%"><TR><TD><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr><td width="100%"><table width="100%" class="C"><colgroup><col width="100%"></colgroup>
+<tr><td class="D"><p class="E">Standard Ssh Channels</p>
+</td>
+</tr>
+</table></td>
+</tr></table>
+<p class="F">&nbsp;</p>
+<p class="G">Secure shell protocol (version 2) predefines several channel types.</p>
+<p class="G"> </p>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="30" bgcolor="#F0F0F0">
+<p class="A"></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A"><a href="src$Core$SSH$Upp_Ssh_Channels_en-us.html#Upp::Scp::class">1. Secure data copy channel.</a></p></td></tr></table>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="30" bgcolor="#F0F0F0">
+<p class="A"></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A"><a href="src$Core$SSH$Upp_Ssh_Channels_en-us.html#Upp::SshExec::class">2. Remote command execution channel.</a></p></td></tr></table>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="30" bgcolor="#F0F0F0">
+<p class="A"></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A"><a href="src$Core$SSH$Upp_Ssh_Channels_en-us.html#Upp::SshTunnel::class">3. TCP-IP and port forwarding (network proxy) channel.</a></p></td></tr></table>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="30" bgcolor="#F0F0F0">
+<p class="A"></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A"><a href="src$Core$SSH$Upp_Ssh_Channels_en-us.html#Upp::SshShell::class">4. Real-time, interactive remote shell (command line interface) channel.</a></p></td></tr></table>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="30" bgcolor="#F0F0F0">
+<p class="A"></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A"><a href="src$Core$SSH$Upp_Ssh_Channels_en-us.html#Upp::SshShell::class">5. Real-time X11 forwarding channel (on machines running X server).</a></p></td></tr></table>
+<p class="G">&nbsp;</p>
+<p class="G">Below classes wrap up the generic SshChannel class to provide easy-to-use interfaces to these specialized channels.</p>
+<p class="A">&nbsp;</p>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr><td width="100%"><table width="100%" class="C"><colgroup><col width="100%"></colgroup>
+<tr><td class="D"><p class="E">Scp</p>
+</td>
+</tr>
+</table></td>
+</tr></table>
+<p class="F">&nbsp;</p>
+<p id="Upp::Scp::class" class="H"><span class="I">class</span><span class="J">&nbsp;</span><span class="K">Scp</span><span class="J">&nbsp;:&nbsp;</span><span class="I">public</span><span class="J">&nbsp;</span>SshChannel</p>
+<p class="L">This class encapsulates an SSH2 secure copy channel. It provides a means for securely transferring files between local host and a remote host. Scp class is derived from SshChannel class, and has pick semantics.</p>
+<p class="F">&nbsp;</p>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr><td width="100%"><table width="100%" class="M"><colgroup><col width="100%"></colgroup>
+<tr><td class="N"><p class="O">Public Method List</p>
+</td>
+</tr>
+</table></td>
+</tr></table>
+<p class="F">&nbsp;</p>
+<p id="Upp::Scp::SaveFile(const char*,const Upp::String&)" class="P"><span class="Q">bool</span>&nbsp;<span class="R">SaveFile</span>(<span class="Q">const</span>&nbsp;<span class="Q">char</span>&nbsp;*<span class="S">path</span>, <span class="Q">const</span>&nbsp;<a href="Upp::String"><u>String</u></a><span class="Q">&amp;</span>&nbsp;<span class="S">data</span>)</p>
+<p class="G">Saves the content of <span class="S">data </span>to remote <span class="S">path</span>. Returns true on success. <a href="src$Core$SSH$Upp_Ssh_SFtp_en-us.html#Upp::SFtp::WhenProgress">WhenProgress </a>gate can be used to track data transfer.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Upp::Scp::LoadFile(const char*)" class="P"><a href="Upp::String"><u>String</u></a>&nbsp;<span class="R">LoadFile</span>(<span class="Q">const</span>&nbsp;<span class="Q">char</span>&nbsp;*<span class="S">path</span>)</p>
+<p class="G">Returns the content of the remote <span class="S">path</span>. <a href="src$Core$SSH$Upp_Ssh_SFtp_en-us.html#Upp::SFtp::WhenProgress">WhenProgress </a>gate can be used to track data transfer.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Upp::Scp::SaveFile(const char*,Upp::Stream&)" class="P"><span class="Q">bool</span>&nbsp;<span class="R">SaveFile</span>(<span class="Q">const</span>&nbsp;<span class="Q">char</span>&nbsp;*<span class="S">path</span>, <a href="Upp::Stream"><u>Stream</u></a><span class="Q">&amp;</span>&nbsp;<span class="S">in</span>)</p>
+<p class="G">Saves the content of <span class="S">in</span> to remote <span class="S">path</span> . Returns true on success. <a href="src$Core$SSH$Upp_Ssh_SFtp_en-us.html#Upp::SFtp::WhenProgress">WhenProgress </a>gate can be used to track data transfer.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Upp::Scp::LoadFile(Upp::Stream&,const char*)" class="P"><span class="Q">bool</span>&nbsp;<span class="R">LoadFile</span>(<a href="Upp::Stream"><u>Stream</u></a><span class="Q">&amp;</span>&nbsp;<span class="S">out</span>, <span class="Q">const</span>&nbsp;<span class="Q">char</span>&nbsp;*<span class="S">path</span>)</p>
+<p class="G">Returns the content of remote <span class="S">path </span>into <span class="S">out</span>. Returns true on success. <a href="src$Core$SSH$Upp_Ssh_SFtp_en-us.html#Upp::SFtp::WhenProgress">WhenProgress </a>gate can be used to track data transfer.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Upp::Scp::WhenProgress" class="T"><a href="Upp::Gate"><span class="U"><u>Gate</u></span></a><span class="U">&lt;</span><a href="Upp::int64"><span class="U"><u>int64</u></span></a><span class="U">, </span><a href="Upp::int64"><span class="U"><u>int64</u></span></a><span class="U">&gt;&nbsp;</span>WhenProgress</p>
+<p class="G">If defined, this gate allows tracking of data transfers. The first parameter provides the amount of data that has already been transferred. The second parameter provides the total amount of data to be transferred. Returning true will abort the current data transfer.</p>
+<p class="A">&nbsp;</p>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr><td width="100%"><table width="100%" class="M"><colgroup><col width="100%"></colgroup>
+<tr><td class="N"><p class="O">Constructor detail</p>
+</td>
+</tr>
+</table></td>
+</tr></table>
+<p class="F">&nbsp;</p>
+<p id="Upp::Scp::Scp(Upp::SshSession&)" class="P"><span class="R">Scp</span>(<a href="Upp::SshSession"><u>SshSession</u></a><span class="Q">&amp;</span>&nbsp;<span class="S">session</span>)</p>
+<p class="G">Constructor. Binds the Scp instance to <span class="S">session</span>.</p>
+<p class="F">&nbsp;</p>
+<p class="F">&nbsp;</p>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr><td width="100%"><table width="100%" class="C"><colgroup><col width="100%"></colgroup>
+<tr><td class="D"><p class="E">SshExec</p>
+</td>
+</tr>
+</table></td>
+</tr></table>
+<p class="F">&nbsp;</p>
+<p id="Upp::SshExec::class" class="H"><span class="I">class</span><span class="J">&nbsp;</span><span class="K">SshExec</span><span class="J">&nbsp;:&nbsp;</span><span class="I">public</span><span class="J">&nbsp;</span>SshChannel</p>
+<p class="L">This class encapsulates an SSH2 remote process execution (exec) channel. It provides a means for executing a single shell command on a remote host. Note that SshExec objects can only be used once, since the protocol does not allow the reuse of exec channels. If you need to run a real-time, interactive command line interface, you should consider using <a href="src$Core$SSH$Upp_Ssh_Channels_en-us.html#Upp::SshShell::class">SshShell</a> class instead. SshExec class is derived from SshChannel class, and has pick semantics. </p>
+<p class="F">&nbsp;</p>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr><td width="100%"><table width="100%" class="M"><colgroup><col width="100%"></colgroup>
+<tr><td class="N"><p class="O">Public Method List</p>
+</td>
+</tr>
+</table></td>
+</tr></table>
+<p class="F">&nbsp;</p>
+<p id="Upp::SshExec::Execute(const Upp::String&,Upp::String&,Upp::String&)" class="P"><span class="Q">int</span>&nbsp;<span class="R">Execute</span>(<span class="Q">const</span>&nbsp;<a href="Upp::String"><u>String</u></a><span class="Q">&amp;</span>&nbsp;<span class="S">cmd</span>, <a href="Upp::String"><u>String</u></a><span class="Q">&amp;</span>&nbsp;<span class="S">out</span>, <a href="Upp::String"><u>String</u></a><span class="Q">&amp;</span>&nbsp;<span class="S">err</span>)</p>
+<p id="Upp::SshExec::operator()(const Upp::String&,Upp::String&,Upp::String&)" class="P"><span class="Q">int</span>&nbsp;<span class="R">operator()</span>(<span class="Q">const</span>&nbsp;<a href="Upp::String"><u>String</u></a><span class="Q">&amp;</span>&nbsp;<span class="S">cmd</span>, <a href="Upp::String"><u>String</u></a><span class="Q">&amp;</span>&nbsp;<span class="S">out</span>, <a href="Upp::String"><u>String</u></a><span class="Q">&amp;</span>&nbsp;<span class="S">err</span>)</p>
+<p class="G">Executes a remote process defined by the <span class="S">cmd</span> command line,returns its standard output in <span class="S">out</span>, its standard error output in <span class="S">err</span>, and its exit code as the return value. A negative return value means protocol or internal error.</p>
+<p class="F">&nbsp;</p>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr><td width="100%"><table width="100%" class="M"><colgroup><col width="100%"></colgroup>
+<tr><td class="N"><p class="O">Constructor detail</p>
+</td>
+</tr>
+</table></td>
+</tr></table>
+<p class="F">&nbsp;</p>
+<p id="Upp::SshExec::SshExec(Upp::SshSession&)" class="P"><span class="R">SshExec</span>(<a href="Upp::SshSession"><u>SshSession</u></a><span class="Q">&amp;</span>&nbsp;<span class="S">session</span>)</p>
+<p class="G">Constructor. Binds the SshExec instance to <span class="S">session</span>.</p>
+<p class="F">&nbsp;</p>
+<p class="A">&nbsp;</p>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr><td width="100%"><table width="100%" class="M"><colgroup><col width="100%"></colgroup>
+<tr><td class="N"><p class="O">Helper functions</p>
+</td>
+</tr>
+</table></td>
+</tr></table>
+<p class="F">&nbsp;</p>
+<p id="Upp::SshExecute(Upp::SshSession&,const Upp::String&,Upp::String&,Upp::String&)" class="P"><span class="Q">int</span>&nbsp;<span class="R">SshExecute</span>(<a href="Upp::SshSession"><u>SshSession</u></a><span class="Q">&amp;</span>&nbsp;<span class="S">session</span>, <span class="Q">const</span>&nbsp;<a href="Upp::String"><u>String</u></a><span class="Q">&amp;</span>&nbsp;<span class="S">cmd</span>, <a href="Upp::String"><u>String</u></a><span class="Q">&amp;</span>&nbsp;<span class="S">out</span>, <a href="Upp::String"><u>String</u></a><span class="Q">&amp;</span>&nbsp;<span class="S">err</span>)</p>
+<p class="G">Executes a remote process defined by the <span class="S">cmd</span> command line, returns its standard output in <span class="S">out</span>, its standard error output in <span class="S">err</span>, and its exit code as the return value. A negative return value means protocol or internal error. This helper function will use the timeout value provided by the session.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Upp::SshExecute(Upp::SshSession&,const Upp::String&,Upp::String&)" class="P"><span class="Q">int</span>&nbsp;<span class="R">SshExecute</span>(<a href="Upp::SshSession"><u>SshSession</u></a><span class="Q">&amp;</span>&nbsp;<span class="S">session</span>, <span class="Q">const</span>&nbsp;<a href="Upp::String"><u>String</u></a><span class="Q">&amp;</span>&nbsp;<span class="S">cmd</span>, <a href="Upp::String"><u>String</u></a><span class="Q">&amp;</span>&nbsp;<span class="S">out</span>)</p>
+<p class="G">Executes a remote process defined by the <span class="S">cmd</span> command line, returns its output (stdout/stderr) in <span class="S">out</span>, and its exit code as the return value. A negative return value means protocol or internal error. This helper function will use the timeout value provided by the session.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Upp::SshExecute(Upp::SshSession&,const Upp::String&)" class="P"><a href="Upp::String"><u>String</u></a>&nbsp;<span class="R">SshExecute</span>(<a href="Upp::SshSession"><u>SshSession</u></a><span class="Q">&amp;</span>&nbsp;<span class="S">session</span>, <span class="Q">const</span>&nbsp;<a href="Upp::String"><u>String</u></a><span class="Q">&amp;</span>&nbsp;<span class="S">cmd</span>)</p>
+<p class="G">Executes a remote process defined by the <span class="S">cmd</span> command line. and returns its output on success, and String::GetVoid() on failure. This helper function will use the timeout value provided by the session.</p>
+<p class="F">&nbsp;</p>
+<p class="A">&nbsp;</p>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr><td width="100%"><table width="100%" class="C"><colgroup><col width="100%"></colgroup>
+<tr><td class="D"><p class="E">SshTunnel</p>
+</td>
+</tr>
+</table></td>
+</tr></table>
+<p class="F">&nbsp;</p>
+<p id="Upp::SshTunnel::class" class="H"><span class="I">class</span><span class="J">&nbsp;</span><span class="K">SshTunnel</span><span class="J">&nbsp;:&nbsp;</span><span class="I">public</span><span class="J">&nbsp;</span>SshChannel</p>
+<p class="G">This class encapsulates the SSH2 TCP/IP and port forwarding mechanisms. It provides a means for TCP tunneling from both client to server and server to client directions, acting as a secure network proxy. SshTunnel class is derived from SshChannel class, and has pick semantics.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Upp::SshTunnel::Connect(const Upp::String&)" class="P"><span class="Q">bool</span>&nbsp;<span class="R">Connect</span>(<span class="Q">const</span>&nbsp;<a href="Upp::String"><u>String</u></a><span class="Q">&amp;</span>&nbsp;<span class="S">url</span>)</p>
+<p id="Upp::SshTunnel::Connect(const Upp::String&,int)" class="P"><span class="Q">bool</span>&nbsp;<span class="R">Connect</span>(<span class="Q">const</span>&nbsp;<a href="Upp::String"><u>String</u></a><span class="Q">&amp;</span>&nbsp;<span class="S">host</span>, <span class="Q">int</span>&nbsp;<span class="S">port</span>)</p>
+<p class="G">Attempts a tunnelled TCP/IP connection to target <span class="S">host</span> at <span class="S">port</span>. Returns true on success. <span class="S">url</span> must contain the target host name and port information. (E.g. &quot;<span class="V">localhost:1080&quot;).</span> Please note that while the client to SSH server communication remains encrypted, communication from the SSH server to target host is not. </p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Upp::SshTunnel::Listen(int,int)" class="P"><span class="Q">bool</span>&nbsp;<span class="R">Listen</span>(<span class="Q">int</span>&nbsp;<span class="S">port</span>, <span class="Q">int</span>&nbsp;<span class="S">listen_count</span>&nbsp;=&nbsp;<span class="W">5</span>)</p>
+<p id="Upp::SshTunnel::Listen(const Upp::String&,int,int*,int)" class="P"><span class="Q">bool</span>&nbsp;<span class="R">Listen</span>(<span class="Q">const</span>&nbsp;<a href="Upp::String"><u>String</u></a><span class="Q">&amp;</span>&nbsp;<span class="S">host</span>, <span class="Q">int</span>&nbsp;<span class="S">port</span>, <span class="Q">int*</span>&nbsp;<span class="S">bound_port</span>, <span class="Q">int</span>&nbsp;<span class="S">listen_count</span>&nbsp;=&nbsp;<span class="W">5</span>)</p>
+<p class="G">Instructs the remote SSH server to begin listening for inbound TCP/IP connections at <span class="S">port</span>. Returns true on success. If the listen port is set to 0, the SSH server will select the first available dynamic port. If a dynamic port is requested, <span class="S">bound_port</span> will be populated with the actual bound port assigned by the server. <span class="S">host</span> &nbsp;can be used to specify what interfaces to listen on. If host is not specified, or explicilty set to &quot;0.0.0.0&quot;, all available addresses will be used to bind on. New connections will be queued until accepted using the Accept() method. <span class="S">listen_count</span> can be used to set the maximum number of pending connections to queue before rejecting further attempts.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Upp::SshTunnel::Accept(Upp::SshTunnel&)" class="P"><span class="Q">bool</span>&nbsp;<span class="R">Accept</span>(<a href="Upp::SshTunnel"><u>SshTunnel</u></a><span class="Q">&amp;</span>&nbsp;<span class="S">listener</span>)</p>
+<p class="G">Accepts a connection from the <span class="S">listener</span>. Returns true on success.</p>
+<p class="F">&nbsp;</p>
+<p class="F">&nbsp;</p>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr><td width="100%"><table width="100%" class="M"><colgroup><col width="100%"></colgroup>
+<tr><td class="N"><p class="O">Constructor detail</p>
+</td>
+</tr>
+</table></td>
+</tr></table>
+<p class="F">&nbsp;</p>
+<p id="Upp::SshTunnel::SshTunnel(Upp::SshSession&)" class="P"><span class="R">SshTunnel</span>(<a href="Upp::SshSession"><u>SshSession</u></a><span class="Q">&amp;</span>&nbsp;<span class="S">session</span>)</p>
+<p class="G">Constructor. Binds the SshTunnel instance to <span class="S">session</span>.</p>
+<p class="F">&nbsp;</p>
+<p class="A">&nbsp;</p>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr><td width="100%"><table width="100%" class="C"><colgroup><col width="100%"></colgroup>
+<tr><td class="D"><p class="E">SshShell</p>
+</td>
+</tr>
+</table></td>
+</tr></table>
+<p class="F">&nbsp;</p>
+<p id="Upp::SshShell::class" class="H"><span class="I">class</span><span class="J">&nbsp;</span><span class="K">SshShell</span><span class="J">&nbsp;:&nbsp;</span><span class="I">public</span><span class="J">&nbsp;</span>SshChannel</p>
+<p class="L">This class encapsulates an SSH2 interactive shell channel, providing a means for secure interaction with a remote command line interface in real-time with X11 forwarding support. SshShell class is derived from SshChannel class, and has pick semantics. If you need to execute a single command with no interaction, you should consider using <a href="src$Core$SSH$Upp_Ssh_Channels_en-us.html#Upp::SshExec::class">SshExec</a> class. Also note that the shell object needs to be put into blocking mode if it is not planned to run as a timed session.</p>
+<p class="F">&nbsp;</p>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr><td width="100%"><table width="100%" class="M"><colgroup><col width="100%"></colgroup>
+<tr><td class="N"><p class="O">Public Method List</p>
+</td>
+</tr>
+</table></td>
+</tr></table>
+<p class="F">&nbsp;</p>
+<p id="Upp::SshShell::Run(const Upp::String&,Upp::Size,const Upp::String&)" class="P"><span class="Q">bool</span>&nbsp;<span class="R">Run</span>(<span class="Q">const</span>&nbsp;<a href="Upp::String"><u>String</u></a><span class="Q">&amp;</span>&nbsp;<span class="S">terminal</span>, <a href="Upp::Size"><u>Size</u></a>&nbsp;<span class="S">pagesize</span>, <span class="Q">const</span>&nbsp;<a href="Upp::String"><u>String</u></a><span class="Q">&amp;</span>&nbsp;<span class="S">tmodes</span>&nbsp;=&nbsp;Null)</p>
+<p id="Upp::SshShell::Run(const Upp::String&,int,int,const Upp::String&)" class="P"><span class="Q">bool</span>&nbsp;<span class="R">Run</span>(<span class="Q">const</span>&nbsp;<a href="Upp::String"><u>String</u></a><span class="Q">&amp;</span>&nbsp;<span class="S">terminal</span>, <span class="Q">int</span>&nbsp;<span class="S">width</span>, <span class="Q">int</span>&nbsp;<span class="S">height</span>, <span class="Q">const</span>&nbsp;<a href="Upp::String"><u>String</u></a><span class="Q">&amp;</span>&nbsp;<span class="S">tmodes</span>&nbsp;=&nbsp;Null)</p>
+<p class="G">Runs a generic remote command line interface. Returns true on successful exit. <span class="S">terminal</span> should be set to preferred terminal emulation (ansi, vt100, xterm, etc.). The dimensions of the terminal view (as character cells) can be set using the <span class="S">width </span>and <span class="S">height</span>, or <span class="S">pagesize</span> parameters. Terminal modes can be specified using the <span class="S">tmodes</span> string (see below table for details).</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Upp::SshShell::Console(const Upp::String&)" class="P"><span class="Q">bool</span>&nbsp;<span class="R">Console</span>(<span class="Q">const</span>&nbsp;<a href="Upp::String"><u>String</u></a><span class="Q">&amp;</span>&nbsp;<span class="S">terminal</span>, <span class="Q">const</span>&nbsp;<a href="Upp::String"><u>String</u></a><span class="Q">&amp;</span>&nbsp;<span class="S">tmodes</span>&nbsp;=&nbsp;Null)</p>
+<p class="X">Requires console-based applications.</p>
+<p class="G">Runs a console-based remote command line interface. Returns true on successful exit. <span class="S">terminal</span> should be set to preferred terminal emulation (ansi, vt100, xterm, etc.). Terminal modes can be specified using the <span class="S">tmodes</span> string (see below table for details). Note that in console mode SshShell automatically takes care of the local console page resizing. </p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Upp::SshShell::ForwardX11(const Upp::String&,int,int,int)" class="P"><a href="Upp::SshShell"><u>SshShell</u></a><span class="Q">&amp;</span>&nbsp;<span class="R">ForwardX11</span>(<span class="Q">const</span>&nbsp;<a href="Upp::String"><u>String</u></a><span class="Q">&amp;</span>&nbsp;<span class="S">host</span>&nbsp;=&nbsp;Null, <span class="Q">int</span>&nbsp;<span class="S">display</span>&nbsp;=&nbsp;<span class="W">0</span>, <span class="Q">int</span>&nbsp;<span class="S">screen</span>&nbsp;=&nbsp;<span class="W">0</span>, <span class="Q">int</span>&nbsp;<span class="S">bufsize</span>&nbsp;=&nbsp;<span class="W">1024</span>&nbsp;*&nbsp;<span class="W">1024</span>)</p>
+<p class="X">POSIX only. Requires a running X server.</p>
+<p class="G">Enables X11 forwarding for the given shell instance. <span class="S">host</span> and <span class="S">display</span> can be used to connect to local X server. (defaulted values simply mean &quot;[localhost]:0&quot;). <span class="S">screen</span> can be used to select the X11 screen to forward. <span class="S">bufsize</span> specifies the size of read/write buffer for the associated UNIX sockets. Default buffer size is 1 MB (increasing the read/write buffer may result in smoother performance). Returns *this for method chaining.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Upp::SshShell::AcceptX11(Upp::SshX11Handle)" class="P"><span class="Q">bool</span>&nbsp;<span class="R">AcceptX11</span>(<a href="Upp::SshX11Handle"><u>SshX11Handle</u></a>&nbsp;<span class="S">xhandle</span>)</p>
+<p class="X">POSIX only. Requires a running X server.</p>
+<p class="G">Accepts an X11 connection. Return true on success. This method requires X11 forwarding to be enabled, and is meant to be used with <a href="src$Core$SSH$Upp_Ssh_Session_en-us.html#Upp::SshSession::WhenX11">SshSession:WhenX11</a> event. Note that each shell instance can forward multiple X11 connections.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Upp::SshShell::Send(int)" class="P"><span class="Q">void</span>&nbsp;<span class="R">Send</span>(<span class="Q">int</span>&nbsp;<span class="S">c</span>)</p>
+<p id="Upp::SshShell::Send(const char*)" class="P"><span class="Q">void</span>&nbsp;<span class="R">Send</span>(<span class="Q">const</span>&nbsp;<span class="Q">char*</span>&nbsp;<span class="S">s</span>)</p>
+<p id="Upp::SshShell::Send(const Upp::String&)" class="P"><span class="Q">void</span>&nbsp;<span class="R">Send</span>(<span class="Q">const</span>&nbsp;<a href="Upp::String"><u>String</u></a><span class="Q">&amp;</span>&nbsp;<span class="S">s</span>)</p>
+<p class="G">Puts a single character, or multiple characters, into the input queue.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Upp::SshShell::PageSize(Upp::Size)" class="P"><a href="Upp::SshShell"><u>SshShell</u></a><span class="Q">&amp;</span>&nbsp;<span class="R">PageSize</span>(<a href="Upp::Size"><u>Size</u></a>&nbsp;<span class="S">sz</span>)</p>
+<p class="G">Sets the terminal view size as character cells to <span class="S">sz</span>. Returns *this for method chaining.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Upp::SshShell::GetPageSize()const" class="Y"><a href="Upp::Size"><span class="K"><u>Size</u></span></a><span class="K">&nbsp;</span><span class="Z">GetPageSize</span><span class="K">()&nbsp;</span>const</p>
+<p class="G">Returns the current SSH terminal view size in character cells.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Upp::SshShell::GetConsolePageSize()" class="P"><a href="Upp::Size"><u>Size</u></a>&nbsp;<span class="R">GetConsolePageSize</span>()</p>
+<p class="G">This helper method returns the actual page size of the local console, and is meant to be used in console mode. Returns Null on failure.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Upp::SshShell::WhenInput" class="T"><a href="Upp::Event"><span class="U"><u>Event</u></span></a><span class="U">&lt;&gt;&nbsp;</span>WhenInput</p>
+<p class="G">This event is emitted when writing to shell channel becomes possible. Send() method can be used to send data over the channel.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Upp::SshShell::WhenOutput" class="T"><a href="Upp::Event"><span class="U"><u>Event</u></span></a><span class="U">&lt;</span><span class="I">const</span><span class="U">&nbsp;</span><span class="I">void*</span><span class="U">, </span><span class="I">int</span><span class="U">&gt;&nbsp;</span>WhenOutput</p>
+<p class="G">This event is emitted whenever data is read from the shell.</p>
+<p class="F">&nbsp;</p>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr><td width="100%"><table width="100%" class="M"><colgroup><col width="100%"></colgroup>
+<tr><td class="N"><p class="O">Constructor detail</p>
+</td>
+</tr>
+</table></td>
+</tr></table>
+<p class="F">&nbsp;</p>
+<p id="Upp::SshShell::SshShell(Upp::SshSession&)" class="P"><span class="R">SshShell</span>(<a href="Upp::SshSession"><u>SshSession</u></a><span class="Q">&amp;</span>&nbsp;<span class="S">session</span>)</p>
+<p class="G">Constructor. Binds the SshShell instance to <span class="S">session</span>.</p>
+<p class="F">&nbsp;</p>
+<p class="F">&nbsp;</p>
+<p class="A">&nbsp;</p>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr><td width="100%"><table width="100%" class="C"><colgroup><col width="100%"></colgroup>
+<tr><td class="D"><p class="E">Encoding of Terminal Modes</p>
+</td>
+</tr>
+</table></td>
+</tr></table>
+<p class="G">&nbsp;</p>
+<p class="L">Below is a list of terminal modes currently supported by the SSH2 protocol. Current implementation requires that the terminal modes be encoded into a byte stream. SSH package uses a String for this purpose. This string should consists of opcode-argument pairs wherein the opcode is a byte value. Opcodes 1 to 159 have a single uint32 argument. This byte stream should terminate with a TTY_OP_END, i.e 0x00 value. Client should put any mode that it knows about, and server can ignore any mode that it does not recognise. See <a href="https://tools.ietf.org/html/rfc4254">RFC-4254</a> for details.</p>
+<p class="G">&nbsp;</p>
+<p class="A">&nbsp;</p>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr><td width="100%"><table width="100%" class="C"><colgroup><col width="9%"><col width="11%"><col width="78%"></colgroup>
+<tr><td class="AA" colspan=3><p class="AB">Terminal Modes</p>
+</td>
+</tr>
+<tr><td class="AC"><p class="AD">Opcode</p>
+</td>
+<td class="AC"><p class="AD">Mnemonic</p>
+</td>
+<td class="AC"><p class="AD">Description</p>
+</td>
+</tr>
+<tr><td class="AE"><p class="AF">0</p>
+</td>
+<td class="AE"><p class="AG">TTY_OP_END</p>
+</td>
+<td class="AE"><p class="AH">Indicates end of options.</p>
+</td>
+</tr>
+<tr><td class="AE"><p class="AF">1</p>
+</td>
+<td class="AE"><p class="AG">VINTR</p>
+</td>
+<td class="AE"><p class="AH">Interrupt character; 255 if none. Similarly for the other characters. Not all of these characters are supported on all systems.</p>
+</td>
+</tr>
+<tr><td class="AE"><p class="AF">2</p>
+</td>
+<td class="AE"><p class="AG">VQUIT</p>
+</td>
+<td class="AE"><p class="AH">The quit character (sends SIGQUIT signal on POSIX systems).</p>
+</td>
+</tr>
+<tr><td class="AE"><p class="AF">3</p>
+</td>
+<td class="AE"><p class="AG">VEREASE</p>
+</td>
+<td class="AE"><p class="AH">Erase the character to left of the cursor.</p>
+</td>
+</tr>
+<tr><td class="AE"><p class="AF">4</p>
+</td>
+<td class="AE"><p class="AG">VKILL</p>
+</td>
+<td class="AE"><p class="AH">Kill the current input line.</p>
+</td>
+</tr>
+<tr><td class="AE"><p class="AF">5</p>
+</td>
+<td class="AE"><p class="AG">VEOF</p>
+</td>
+<td class="AE"><p class="AH">End-of-file character (sends EOF from the terminal).</p>
+</td>
+</tr>
+<tr><td class="AE"><p class="AF">6</p>
+</td>
+<td class="AE"><p class="AG">VEOL</p>
+</td>
+<td class="AE"><p class="AH">End-of-line character in addition to carriage return and/or linefeed.</p>
+</td>
+</tr>
+<tr><td class="AE"><p class="AF">7</p>
+</td>
+<td class="AE"><p class="AG">VEOL2</p>
+</td>
+<td class="AE"><p class="AH">Additional end-of-line character.</p>
+</td>
+</tr>
+<tr><td class="AE"><p class="AF">8</p>
+</td>
+<td class="AE"><p class="AG">VSTART</p>
+</td>
+<td class="AE"><p class="AH">Continues paused output (normally control-Q).</p>
+</td>
+</tr>
+<tr><td class="AE"><p class="AF">9</p>
+</td>
+<td class="AE"><p class="AG">VSTOP</p>
+</td>
+<td class="AE"><p class="AH">Pauses output (normally control-S).</p>
+</td>
+</tr>
+<tr><td class="AE"><p class="AF">10</p>
+</td>
+<td class="AE"><p class="AG">VSUSP</p>
+</td>
+<td class="AE"><p class="AH">Suspends the current program.</p>
+</td>
+</tr>
+<tr><td class="AE"><p class="AF">11</p>
+</td>
+<td class="AE"><p class="AG">VDSUSP</p>
+</td>
+<td class="AE"><p class="AH">Another suspend character.</p>
+</td>
+</tr>
+<tr><td class="AE"><p class="AF">12</p>
+</td>
+<td class="AE"><p class="AG">VREPRINT</p>
+</td>
+<td class="AE"><p class="AH">Reprints the current input line.</p>
+</td>
+</tr>
+<tr><td class="AE"><p class="AF">13</p>
+</td>
+<td class="AE"><p class="AG">VWERASE</p>
+</td>
+<td class="AE"><p class="AH">Erases a word left of cursor.</p>
+</td>
+</tr>
+<tr><td class="AE"><p class="AF">14</p>
+</td>
+<td class="AE"><p class="AG">VLNEXT</p>
+</td>
+<td class="AE"><p class="AH">Enter the next character typed literally, even if it is a special character.</p>
+</td>
+</tr>
+<tr><td class="AE"><p class="AF">15</p>
+</td>
+<td class="AE"><p class="AG">VFLUSH</p>
+</td>
+<td class="AE"><p class="AH">Character to flush output.</p>
+</td>
+</tr>
+<tr><td class="AE"><p class="AF">16</p>
+</td>
+<td class="AE"><p class="AG">VSWITCH</p>
+</td>
+<td class="AE"><p class="AH">Switch to a different shell layer.</p>
+</td>
+</tr>
+<tr><td class="AE"><p class="AF">17</p>
+</td>
+<td class="AE"><p class="AG">VSTATUS</p>
+</td>
+<td class="AE"><p class="AH">Prints system status line (load, command, pid, etc).</p>
+</td>
+</tr>
+<tr><td class="AE"><p class="AF">18</p>
+</td>
+<td class="AE"><p class="AG">VDISCARD</p>
+</td>
+<td class="AE"><p class="AH">Toggles the flushing of terminal output.</p>
+</td>
+</tr>
+<tr><td class="AE"><p class="AF">30</p>
+</td>
+<td class="AE"><p class="AG">IGNPAR</p>
+</td>
+<td class="AE"><p class="AH">The ignore parity flag. &nbsp;The parameter SHOULD be 0 if this flag is FALSE, and 1 if it is TRUE.</p>
+</td>
+</tr>
+<tr><td class="AE"><p class="AF">31</p>
+</td>
+<td class="AE"><p class="AG">PARMRK</p>
+</td>
+<td class="AE"><p class="AH">Mark parity and framing errors.</p>
+</td>
+</tr>
+<tr><td class="AE"><p class="AF">32</p>
+</td>
+<td class="AE"><p class="AG">INPCK</p>
+</td>
+<td class="AE"><p class="AH">Enable checking of parity errors.</p>
+</td>
+</tr>
+<tr><td class="AE"><p class="AF">33</p>
+</td>
+<td class="AE"><p class="AG">ISTRIP</p>
+</td>
+<td class="AE"><p class="AH">Strip 8th bit off characters.</p>
+</td>
+</tr>
+<tr><td class="AE"><p class="AF">34</p>
+</td>
+<td class="AE"><p class="AG">INLCR</p>
+</td>
+<td class="AE"><p class="AH">Map NL into CR on input.</p>
+</td>
+</tr>
+<tr><td class="AE"><p class="AF">35</p>
+</td>
+<td class="AE"><p class="AG">IGNCR</p>
+</td>
+<td class="AE"><p class="AH">Ignore CR on input.</p>
+</td>
+</tr>
+<tr><td class="AE"><p class="AF">36</p>
+</td>
+<td class="AE"><p class="AG">ICRNL</p>
+</td>
+<td class="AE"><p class="AH">Map CR to NL on input.</p>
+</td>
+</tr>
+<tr><td class="AE"><p class="AF">37</p>
+</td>
+<td class="AE"><p class="AG">IUCLC</p>
+</td>
+<td class="AE"><p class="AH">Translate uppercase characters to lowercase.</p>
+</td>
+</tr>
+<tr><td class="AE"><p class="AF">38</p>
+</td>
+<td class="AE"><p class="AG">IXON</p>
+</td>
+<td class="AE"><p class="AH">Enable output flow control.</p>
+</td>
+</tr>
+<tr><td class="AE"><p class="AF">39</p>
+</td>
+<td class="AE"><p class="AG">IXANY</p>
+</td>
+<td class="AE"><p class="AH">Any char will restart after stop.</p>
+</td>
+</tr>
+<tr><td class="AE"><p class="AF">40</p>
+</td>
+<td class="AE"><p class="AG">IXOFF</p>
+</td>
+<td class="AE"><p class="AH">Enable input flow control.</p>
+</td>
+</tr>
+<tr><td class="AE"><p class="AF">41</p>
+</td>
+<td class="AE"><p class="AG">IMAXBEL</p>
+</td>
+<td class="AE"><p class="AH">Ring bell on input queue full.</p>
+</td>
+</tr>
+<tr><td class="AE"><p class="AF">50</p>
+</td>
+<td class="AE"><p class="AG">ISIG</p>
+</td>
+<td class="AE"><p class="AH">Enable signals INTR, QUIT, [D]SUSP.</p>
+</td>
+</tr>
+<tr><td class="AE"><p class="AF">51</p>
+</td>
+<td class="AE"><p class="AG">ICANON</p>
+</td>
+<td class="AE"><p class="AH">Canonicalize input lines.</p>
+</td>
+</tr>
+<tr><td class="AE"><p class="AF">52</p>
+</td>
+<td class="AE"><p class="AG">XCASE</p>
+</td>
+<td class="AE"><p class="AH">Enable input and output of uppercase characters by preceding their lowercase equivalents with &quot;\&quot;.</p>
+</td>
+</tr>
+<tr><td class="AE"><p class="AF">53</p>
+</td>
+<td class="AE"><p class="AG">ECHO</p>
+</td>
+<td class="AE"><p class="AH">Enable echoing.</p>
+</td>
+</tr>
+<tr><td class="AE"><p class="AF">54</p>
+</td>
+<td class="AE"><p class="AG">ECHOE</p>
+</td>
+<td class="AE"><p class="AH">Visually erase chars.</p>
+</td>
+</tr>
+<tr><td class="AE"><p class="AF">55</p>
+</td>
+<td class="AE"><p class="AG">ECHOK</p>
+</td>
+<td class="AE"><p class="AH">Kill character discards current line.</p>
+</td>
+</tr>
+<tr><td class="AE"><p class="AF">56</p>
+</td>
+<td class="AE"><p class="AG">ECHONL</p>
+</td>
+<td class="AE"><p class="AH">Echo NL even if ECHO is off.</p>
+</td>
+</tr>
+<tr><td class="AE"><p class="AF">57</p>
+</td>
+<td class="AE"><p class="AG">NOFLSH</p>
+</td>
+<td class="AE"><p class="AH">Don't flush after interrupt.</p>
+</td>
+</tr>
+<tr><td class="AE"><p class="AF">58</p>
+</td>
+<td class="AE"><p class="AG">TOSTOP</p>
+</td>
+<td class="AE"><p class="AH">Stop background jobs from output.</p>
+</td>
+</tr>
+<tr><td class="AE"><p class="AF">59</p>
+</td>
+<td class="AE"><p class="AG">IEXTEN</p>
+</td>
+<td class="AE"><p class="AH">Enable extensions.</p>
+</td>
+</tr>
+<tr><td class="AE"><p class="AF">60</p>
+</td>
+<td class="AE"><p class="AG">ECHOCTL</p>
+</td>
+<td class="AE"><p class="AH">Echo control characters as ^(Char).</p>
+</td>
+</tr>
+<tr><td class="AE"><p class="AF">61</p>
+</td>
+<td class="AE"><p class="AG">ECHOKE</p>
+</td>
+<td class="AE"><p class="AH">Visual erase for line kill.</p>
+</td>
+</tr>
+<tr><td class="AE"><p class="AF">62</p>
+</td>
+<td class="AE"><p class="AG">PENDIN</p>
+</td>
+<td class="AE"><p class="AH">Retype pending input.</p>
+</td>
+</tr>
+<tr><td class="AE"><p class="AF">70</p>
+</td>
+<td class="AE"><p class="AG">OPOST</p>
+</td>
+<td class="AE"><p class="AH">Enable output processing.</p>
+</td>
+</tr>
+<tr><td class="AE"><p class="AF">71</p>
+</td>
+<td class="AE"><p class="AG">OLCUC</p>
+</td>
+<td class="AE"><p class="AH">Convert lowercase to uppercase.</p>
+</td>
+</tr>
+<tr><td class="AE"><p class="AF">72</p>
+</td>
+<td class="AE"><p class="AG">ONLCR</p>
+</td>
+<td class="AE"><p class="AH">Map NL to CR-NL.</p>
+</td>
+</tr>
+<tr><td class="AE"><p class="AF">73</p>
+</td>
+<td class="AE"><p class="AG">OCRNL</p>
+</td>
+<td class="AE"><p class="AH">Translate carriage return to newline (output).</p>
+</td>
+</tr>
+<tr><td class="AE"><p class="AF">74</p>
+</td>
+<td class="AE"><p class="AG">ONOCR</p>
+</td>
+<td class="AE"><p class="AH">Translate newline to carriage return-newline (output).</p>
+</td>
+</tr>
+<tr><td class="AE"><p class="AF">75</p>
+</td>
+<td class="AE"><p class="AG">ONRLET</p>
+</td>
+<td class="AE"><p class="AH">Newline performs a carriage return (output).</p>
+</td>
+</tr>
+<tr><td class="AE"><p class="AF">90</p>
+</td>
+<td class="AE"><p class="AG">CS7</p>
+</td>
+<td class="AE"><p class="AH">7-bit mode.</p>
+</td>
+</tr>
+<tr><td class="AE"><p class="AF">91</p>
+</td>
+<td class="AE"><p class="AG">CS8</p>
+</td>
+<td class="AE"><p class="AH">8-bit mode.</p>
+</td>
+</tr>
+<tr><td class="AE"><p class="AF">92</p>
+</td>
+<td class="AE"><p class="AG">PARENB</p>
+</td>
+<td class="AE"><p class="AH">Parity enable.</p>
+</td>
+</tr>
+<tr><td class="AE"><p class="AF">93</p>
+</td>
+<td class="AE"><p class="AG">PARODD</p>
+</td>
+<td class="AE"><p class="AH">Odd parity, else even.</p>
+</td>
+</tr>
+<tr><td class="AE"><p class="AF">128</p>
+</td>
+<td class="AE"><p class="AG">TTY_OP_ISPEED</p>
+</td>
+<td class="AE"><p class="AH">Specifies the input baud rate in bits per second.</p>
+</td>
+</tr>
+<tr><td class="AE"><p class="AF">129</p>
+</td>
+<td class="AE"><p class="AG">TTY_OP_OSPEED</p>
+</td>
+<td class="AE"><p class="AH">Specifies the output baud rate in bits per second.</p>
+</td>
+</tr>
+</table></td>
+</tr></table>
+<p class="A">&nbsp;</p>
+</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>
+<TABLE BORDER="0" WIDTH="100%"><TR><TD></TD>
+</TR>
+</TABLE>
+<TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" BGCOLOR="#FFFFFF" WIDTH="100%" style="border-style: solid; border-width: 1px; border-color: #6E89AE;padding: 10px;;"><TR><TD><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%"><TR><TD><p class="A"><span class="B"> </span><a href="www$uppweb$contribweb$en-us.html">Do you want to contribute?</a></p>
+</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>
+<script type="text/javascript">var a={};var p=window.location.pathname.split("/");p=p[p.length-1];var s='<select id="lang" onchange="window.location=document.getElementById(\'lang\').value;">';for(l in a){if(p==l){d=" selected=1"}else{d=""}s+='<option value="'+l+'"'+d+'>'+a[l]+'</option>'}s+='</select>';var d=document.createElement('div');d.innerHTML=s;var c=document.getElementById('langs');c.replaceChild(d,c.firstChild);document.getElementById('langbox').style.display='block';</script></BODY>

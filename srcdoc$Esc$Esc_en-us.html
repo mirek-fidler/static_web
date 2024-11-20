@@ -1,0 +1,897 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en-us">
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
+<META NAME="Generator" CONTENT="U++ HTML Package">
+<META NAME="Description" CONTENT="Esc is a simple scripting language intended for embedding in Ultimate++ applications.">
+<TITLE>Esc scripting language :: U++</TITLE>
+<STYLE TYPE="text/css"><!--
+.A{margin:0px 0px 0px 0px;text-indent:0px;text-align:left;color:#000000;font-family:sans-serif;font-size:10pt;font-weight:normal;font-style:normal;}
+.B{font-size:12pt;}
+.C{margin:0px 0px 16px 0px;text-indent:0px;text-align:left;color:#000000;font-family:sans-serif;font-size:24pt;font-weight:bold;font-style:normal;}
+.D{margin:16px 0px 0px 0px;text-indent:0px;text-align:left;color:#000000;font-family:sans-serif;font-size:18pt;font-weight:bold;font-style:normal;}
+.E{margin:8px 0px 8px 0px;text-indent:0px;text-align:left;color:#000000;font-family:sans-serif;font-size:10pt;font-weight:normal;font-style:normal;line-height:150%}
+.F{margin:26px 0px 16px 0px;text-indent:0px;text-align:left;color:#000000;font-family:sans-serif;font-size:14pt;font-weight:bold;font-style:normal;}
+.G{margin:0px 0px 0px 64px;text-indent:0px;text-align:left;color:#000080;font-family:monospace;font-size:8pt;font-weight:normal;font-style:normal;}
+.H{color:#8000ff;}
+.I{margin:0px 0px 0px 64px;text-indent:0px;text-align:left;color:#008000;font-family:monospace;font-size:8pt;font-weight:normal;font-style:normal;}
+.J{color:#000080;}
+.K{font-family:monospace;font-weight:bold;}
+.L{font-style:italic;}
+.M{margin:0px 0px 0px 0px;text-indent:0px;text-align:left;color:#000000;font-family:monospace;font-size:10pt;font-weight:normal;font-style:normal;}
+.N{color:#8000ff;font-weight:bold;}
+.O{margin:8px 0px 8px 0px;text-indent:0px;text-align:left;color:#000000;font-family:sans-serif;font-size:10pt;font-weight:normal;font-style:italic;line-height:150%}
+.P{font-style:normal;}
+.Q{border-collapse:collapse;table-layout:auto;border: 2px solid #000000;}
+.R{padding: 3px 5px 3px 5px;border-left: 1px solid #000000;border-top: 1px solid #000000;border-right: 1px solid #000000;border-bottom: 1px solid #000000;background-color:#D8D8D8;vertical-align:middle;}
+.S{padding: 3px 5px 3px 5px;border-left: 1px solid #000000;border-top: 1px solid #000000;border-right: 1px solid #000000;border-bottom: 1px solid #000000;background-color:#FFFFFF;vertical-align:top;}
+.T{margin:0px 0px 0px 0px;text-indent:0px;text-align:left;color:#000000;font-family:monospace;font-size:10pt;font-weight:bold;font-style:normal;}
+.U{font-weight:normal;font-style:italic;}
+.V{margin:0px 0px 0px 0px;text-indent:0px;text-align:left;color:#000000;font-family:monospace;font-size:10pt;font-weight:normal;font-style:italic;}
+.W{font-weight:bold;font-style:normal;}
+.X{font-weight:bold;}
+.Y{padding: 3px 5px 3px 5px;border-left: 1px solid #000000;border-top: 7px solid #000000;border-right: 1px solid #000000;border-bottom: 1px solid #000000;background-color:#FFFFFF;vertical-align:top;}
+.Z{font-weight:bold;font-style:italic;}
+.AA{font-family:monospace;}
+.AB{font-family:sans-serif;}
+.AC{margin:0px 0px 0px 0px;text-indent:0px;text-align:left;color:#000000;font-family:sans-serif;font-size:12pt;font-weight:normal;font-style:normal;}
+a.l1         { text-decoration:none; font-size: 8pt; font-family: sans-serif; font-weight: normal; }
+a.l1:link    { color:#000000; }
+a.l1:visited { color:#000080; }
+a.l1:hover   { color:#9933CC; }
+a.l1:active  { color:#000000; }
+a.l2         { text-decoration:none; font-size: 12pt; font-family: sans-serif; font-variant: small-caps; }
+a.l2:link    { color:#0066FF; }
+a.l2:visited { color:#FF6600; }
+a.l2:hover   { color:#BC0624; }
+a.l2:active  { color:#BC0024; }
+
+-->
+</STYLE>
+<META NAME="keywords" CONTENT="framework, toolkit, widget, c++, visual, studio, dev-cpp, builder, ide, class, component,wxwidgets, qt, rapid, application, development, rad, mfc, linux, macos, gui, sdl, directx, desktop"><META name="robots" content="index,follow">
+<LINK rel="alternate" type="application/rss+xml" title="SVN changes" href="svnchanges.xml">
+<LINK rel="shortcut icon" type="image/png" href="favicon.png">
+</HEAD><BODY BGCOLOR="#D2D9D2" ALINK="#800000" LINK="#000000" VLINK="#000080"><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%"><TR><TD COLSPAN="3"><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%" BGCOLOR="#FFFFFF" style="border: 1px solid #6E89AE;padding-left: 10px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;"><TR><TD><A HREF="index.html"><IMG SRC="0i.png" ALT="" BORDER="0"></A>
+</TD>
+<TD ALIGN="RIGHT" VALIGN="BOTTOM" STYLE="padding-bottom: 5px; background-image: url('1i.png')"><span style="font-size: 14pt; font-family: sans-serif;"><script type="text/javascript"><!--
+google_ad_client = "pub-1082147624384270";
+google_ad_width = 468;
+google_ad_height = 60;
+google_ad_format = "468x60_as";
+google_ad_type = "text_image";
+google_ad_channel = "";
+google_color_border = "336699";
+google_color_bg = "FFFFFF";
+google_color_link = "0000FF";
+google_color_text = "000000";
+google_color_url = "008000";
+//--></script>
+<script type="text/javascript"
+  src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+&nbsp;&nbsp;</span>
+</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>
+<TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%"><TR><TD COLSPAN="3" BGCOLOR="#D2D9D2" HEIGHT="6"></TD>
+</TR>
+<TR><TD VALIGN="TOP" ALIGN="CENTER"><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="160"><TR><TD ALIGN="CENTER"><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%" BGCOLOR="#FFFFFF" style="border-style: solid; border-width: 1px; border-color: #6E89AE;padding: 0px"><TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px;"><A HREF="www$uppweb$overview$en-us.html" CLASS="l1">Overview</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$examples$en-us.html" CLASS="l1">Examples</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$ss$en-us.html" CLASS="l1">Screenshots</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$comparison$en-us.html" CLASS="l1">Comparisons</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$apps$en-us.html" CLASS="l1">Applications</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$download$en-us.html" CLASS="l1">Download</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$documentation$en-us.html" CLASS="l1">Documentation</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$Tutorials$en-us.html" CLASS="l1">Tutorials</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="app$ide$UppHub$en-us.html" CLASS="l1">UppHub</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$Roadmap$en-us.html" CLASS="l1">Status & Roadmap</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$FAQ$en-us.html" CLASS="l1">FAQ</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="app$ide$About$en-us.html" CLASS="l1">Authors & License</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="https://www.ultimatepp.org/forums" CLASS="l1">Forums</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$Funding$en-us.html" CLASS="l1">Funding U++</A>
+</TD>
+</TR>
+</TABLE>
+<TABLE BORDER="0" WIDTH="100%"><TR><TD></TD>
+</TR>
+</TABLE>
+<TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%" BGCOLOR="#FFFFFF" style="border-style: solid; border-width: 1px; border-color: #6E89AE;padding: 0px"><TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('3i.png'); border: 0px solid black;padding-left:12px; padding-right:0px; padding-top:1px; padding-bottom:1px;color:#FFFFFF;"><B><span style="font-size: 8pt; font-family: sans-serif;">Search on this site</span>
+</B>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:6px; padding-right:0px; padding-top:4px; padding-bottom:4px;border-top: 1px solid #6E89AE;"><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%"><TR><TD><IMG SRC="4i.png" ALT="" BORDER="0"></TD>
+<TD><FORM ACTION="https://www.google.com/search" METHOD="GET" STYLE="margin:0px;padding:0px;"><INPUT TYPE="HIDDEN" NAME="ie" VALUE="UTF-8"><INPUT TYPE="HIDDEN" NAME="oe" VALUE="UTF-8"><INPUT TYPE="TEXT" NAME="q" SIZE="15" MAXLENGTH="256" placeholder="Site search"><INPUT TYPE="HIDDEN" NAME="sitesearch" VALUE="ultimatepp.org"></FORM>
+</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>
+<TABLE BORDER="0" WIDTH="100%"><TR><TD></TD>
+</TR>
+</TABLE>
+<br><div id="fb-root"></div>
+<script type="text/javascript">(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) {return;}
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+<div class="fb-like" data-href="https://www.facebook.com/pages/Upp-Framework/262346610476027?sk=wall" data-send="false" data-layout="button_count" data-width="160" data-show-faces="false" data-font="arial"></div>
+<br><br><script type="text/javascript"><!--
+google_ad_client = "pub-1082147624384270";
+google_ad_width = 160;
+google_ad_height = 600;
+google_ad_format = "160x600_as";
+google_ad_type = "text_image";
+google_ad_channel = "";
+google_color_border = "336699";
+google_color_bg = "FFFFFF";
+google_color_link = "0000FF";
+google_color_text = "000000";
+google_color_url = "008000";
+//--></script>
+<script type="text/javascript"
+  src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script><br><br><script type="text/javascript"><!--
+google_ad_client = "pub-1082147624384270";
+google_ad_width = 160;
+google_ad_height = 90;
+google_ad_format = "160x90_0ads_al_s";
+google_ad_channel = "";
+google_color_border = "336699";
+google_color_bg = "FFFFFF";
+google_color_link = "0000FF";
+google_color_text = "000000";
+google_color_url = "008000";
+//--></script>
+<script type="text/javascript"
+  src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+<br><br><br><br><br><br><A HREF="https://sourceforge.net/projects/upp/"><IMG SRC="https://sourceforge.net/sflogo.php?group_id=93970&amp;type=2" ALT="SourceForge.net Logo" BORDER="0" WIDTH="125" HEIGHT="37"></A>
+<br><br><A HREF="https://flathub.org/en/apps/org.ultimatepp.TheIDE"><IMG SRC="5i.png" ALT="SourceForge.net Logo" BORDER="0" WIDTH="125" HEIGHT="37"></A>
+<br><br><div style="background-color:#ffffff;width:125;height:35"><A HREF="https://github.com/ultimatepp"><IMG SRC="6i.png" ALT="GitHub Logo" BORDER="0" WIDTH="125" HEIGHT="35"></A>
+</div><br><div style="background-color:#ffffff;width:125;height:35"><div style="height:5"></div><A HREF="https://discord.gg/8XzqQzXZzb"><IMG SRC="https://assets-global.website-files.com/6257adef93867e50d84d30e2/636e0b5061df29d55a92d945_full_logo_blurple_RGB.svg" ALT="Discord Logo" BORDER="0" WIDTH="125" HEIGHT="25"></A>
+</div><br></TD>
+</TR>
+</TABLE>
+</TD>
+<TD VALIGN="TOP" BGCOLOR="#D2D9D2"><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="6"><TR><TD></TD>
+</TR>
+</TABLE>
+</TD>
+<TD VALIGN="TOP" WIDTH="100%" BGCOLOR="#D2D9D2"><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" BGCOLOR="#FFFFFF" WIDTH="100%" style="border-style: solid; border-width: 1px; border-color: #6E89AE;padding: 10px;;"><TR><TD><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%"><TR><TD><p class="C">Esc scripting language</p>
+<hr><p class="D">Table of contents</p>
+<p class="A">&nbsp;</p>
+<p class="A"><a href="srcdoc$Esc$Esc_en-us.html#1">1. Introduction</a></p>
+<p class="A"><a href="srcdoc$Esc$Esc_en-us.html#2">2. Value types</a></p>
+<p class="A"> &nbsp;&nbsp;&nbsp;<a href="srcdoc$Esc$Esc_en-us.html#2_1">2.1 Voids</a></p>
+<p class="A"> &nbsp;&nbsp;&nbsp;<a href="srcdoc$Esc$Esc_en-us.html#2_2">2.2 Numbers</a></p>
+<p class="A"> &nbsp;&nbsp;&nbsp;<a href="srcdoc$Esc$Esc_en-us.html#2_3">2.3 Arrays</a></p>
+<p class="A"> &nbsp;&nbsp;&nbsp;<a href="srcdoc$Esc$Esc_en-us.html#2_4">2.4 Maps</a></p>
+<p class="A"> &nbsp;&nbsp;&nbsp;<a href="srcdoc$Esc$Esc_en-us.html#2_5">2.5 Lambdas</a></p>
+<p class="A"><a href="srcdoc$Esc$Esc_en-us.html#3">3. Variables and contexts</a></p>
+<p class="A"><a href="srcdoc$Esc$Esc_en-us.html#4">4. Expressions</a></p>
+<p class="A"><a href="srcdoc$Esc$Esc_en-us.html#5">5. Statements</a></p>
+<p class="A"><a href="srcdoc$Esc$Esc_en-us.html#6">6. Standard library</a></p>
+<p class="A">&nbsp;</p>
+<hr><p id="1" class="D">1. Introduction</p>
+<p class="E">Esc is a simple scripting language intended for embedding in Ultimate++ applications.</p>
+<p class="E">It is typeless, value oriented language with simple interfacing with C++/U++ code. It is very simple yet quite complete language.</p>
+<hr><p id="2" class="D">2. Value types</p>
+<p id="2_1" class="F">2.1 Voids</p>
+<p class="E">All variables have void value before assigned any other value. Void type has single value</p>
+<p class="A">&nbsp;</p>
+<p class="G">void</p>
+<p class="A">&nbsp;</p>
+<p class="E">and expression can be tested for voidness using <span class="H">is_void</span> function.</p>
+<p id="2_2" class="F">2.2 Numbers</p>
+<p class="E">Number is floating point number (corresponding to C type double). Examples of number literals:</p>
+<p class="A">&nbsp;</p>
+<p class="G">1</p>
+<p class="G">1.123</p>
+<p class="G">1.123e-96</p>
+<p class="I"><span class="J">0x123 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>// hexadecimal</p>
+<p class="I"><span class="J">0123 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>// octal</p>
+<p class="I"><span class="J">0b10100100 &nbsp;</span>// binary</p>
+<p class="I"><span class="J">'x' &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>// character code</p>
+<p class="A">&nbsp;</p>
+<p class="E">Esc supports common C-like operations for number values.</p>
+<p id="2_3" class="F">2.3 Arrays</p>
+<p class="E">Arrays are ordered random access sequences of other Esc values (nested arrays included). Array values are specified using <span class="H">[]</span> brackets:</p>
+<p class="A">&nbsp;</p>
+<p class="I"><span class="J">[] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>// empty array</p>
+<p class="G">[ 1, 2, 3, 4, 5 ]</p>
+<p class="I"><span class="J">[ 1, [2, 3], 4 ] &nbsp;&nbsp;</span>// array contains nested array</p>
+<p class="I"><span class="J">&quot;Hello&quot; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>// equivalent to ['H', 'e', 'l', 'l', 'o']</p>
+<p class="I"><span class="J">[ 1, 2, 3 * alfa ] </span>// expressions can be used as well</p>
+<p class="A">&nbsp;</p>
+<p class="E">Number of elements in the array can be retrieved by standard function <span class="K">count</span>.</p>
+<p class="E">Accessing elements of arrays is provided by subscript <span class="H">[ ]</span> operator:</p>
+<p class="A">&nbsp;</p>
+<p class="G">a[0]</p>
+<p class="G">a[1] = 3</p>
+<p class="A">&nbsp;</p>
+<p class="E">First element of array corresponds to index <span class="H">[0]</span>.</p>
+<p class="E">Negative indexes are allowed and designate elements from the end of array: <span class="H">[-1]</span> is last element of array, <span class="H">[-2]</span> last but one etc.</p>
+<p class="A">&nbsp;</p>
+<p class="G">a[-1]</p>
+<p class="A">&nbsp;</p>
+<p class="E">is equivalent to</p>
+<p class="A">&nbsp;</p>
+<p class="G">a[count(a) - 1]</p>
+<p class="A">&nbsp;</p>
+<p class="E">When index is used for the r-value (standing on the right side of <span class="H">=</span>), index is range checked. For l-value, if non-negative index designates element past the of the array, array is expanded with void values to create this element.</p>
+<p class="E">&quot;Empty&quot; index <span class="H">[]</span> designates element past last and can be used to add elements to the array:</p>
+<p class="A">&nbsp;</p>
+<p class="G">x[] = item</p>
+<p class="A">&nbsp;</p>
+<p class="E">is equivalent to</p>
+<p class="A">&nbsp;</p>
+<p class="G">x[count(x)] = item</p>
+<p class="A">&nbsp;</p>
+<p class="E">Range of element in array can be obtained or changed using slices:</p>
+<p class="A">&nbsp;</p>
+<p class="G">array[pos, count]</p>
+<p class="A">&nbsp;</p>
+<p class="E">designates array slice of <span class="L">count</span> elements starting with <span class="L">pos</span> element.</p>
+<p class="A">&nbsp;</p>
+<p class="G">x[start:end]</p>
+<p class="A">&nbsp;</p>
+<p class="E">designates array slice of <span class="L">end - start</span> elements starting with <span class="L">start</span> .</p>
+<p class="E">Parts of slices can be omitted</p>
+<p class="A">&nbsp;</p>
+<p class="G">array[pos,]</p>
+<p class="E">or</p>
+<p class="G">array[pos:]</p>
+<p class="A">&nbsp;</p>
+<p class="E">is equivalent to</p>
+<p class="A">&nbsp;</p>
+<p class="G">array[pos : count(array)]</p>
+<p class="A">&nbsp;</p>
+<p class="E">and</p>
+<p class="A">&nbsp;</p>
+<p class="G">array[,count]</p>
+<p class="E">or</p>
+<p class="G">array[:count]</p>
+<p class="A">&nbsp;</p>
+<p class="E">is equivalent to</p>
+<p class="A">&nbsp;</p>
+<p class="G">array[0, count]</p>
+<p class="A">&nbsp;</p>
+<p class="E">When slices are used as l-value, corresponding part of the array is replaced:</p>
+<p class="A">&nbsp;</p>
+<p class="G">s = &quot;1234&quot;;</p>
+<p class="I"><span class="J">s[1: -1] = &quot;xXx&quot;; </span>// s is now &quot;1xXx4&quot;</p>
+<p class="A">&nbsp;</p>
+<p class="E">Several operators can be applied to arrays</p>
+<p class="A">&nbsp;</p>
+<p class="G">array1 + array2</p>
+<p class="A">&nbsp;</p>
+<p class="E">concatenates two arrays,</p>
+<p class="A">&nbsp;</p>
+<p class="G">array * number</p>
+<p class="G">number * array</p>
+<p class="A">&nbsp;</p>
+<p class="E">repeats array number times.</p>
+<p class="A">&nbsp;</p>
+<p class="G">array += array1</p>
+<p class="A">&nbsp;</p>
+<p class="E">is equivalent to</p>
+<p class="A">&nbsp;</p>
+<p class="G">array = array + array1</p>
+<p class="A">&nbsp;</p>
+<p class="E">also</p>
+<p class="A">&nbsp;</p>
+<p class="G">array &lt;&lt; array1 &lt;&lt; array2 &lt;&lt; array3</p>
+<p class="A">&nbsp;</p>
+<p class="E">is equivalent to</p>
+<p class="A">&nbsp;</p>
+<p class="G">array = array + array1 + array2 + array3</p>
+<p class="A">&nbsp;</p>
+<p class="E">Esc allows <span class="L">void</span> value on the right side of array concatenation expression - in such cases, operator has no effect.</p>
+<p id="2_4" class="F">2.4 Maps</p>
+<p class="E">Maps contain key-value pairs as entries. Normal subscripts <span class="H">[]</span> are used to access map entries:</p>
+<p class="A">&nbsp;</p>
+<p class="G">map[key] = value</p>
+<p class="A">&nbsp;</p>
+<p class="E">All entries in map that are not assigned a non-void value have void value. This way assigning void to the map key can be considered as removing entry from the map</p>
+<p class="A">&nbsp;</p>
+<p class="G">map[key] = void</p>
+<p class="A">&nbsp;</p>
+<p class="E">and testing entry for being void can be considered as test of key presence in map:</p>
+<p class="M">&nbsp;</p>
+<p class="G">if(is_void(map[key])) { ... }</p>
+<p class="A">&nbsp;</p>
+<p class="E">As the special exception, when a void value appears before an l-value <span class="H">[]</span>, it is changed to the empty map:</p>
+<p class="A">&nbsp;</p>
+<p class="I"><span class="J">x = void; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>// x is void</p>
+<p class="I"><span class="J">x[key] = value; </span>// x is now map</p>
+<p class="A">&nbsp;</p>
+<p class="E">Maps are also used to create compound data structures. To make this job easier, special <span class="L">.field</span> syntax is supported:</p>
+<p class="A">&nbsp;</p>
+<p class="G">x.field = value;</p>
+<p class="A">&nbsp;</p>
+<p class="E">is equivalent to</p>
+<p class="A">&nbsp;</p>
+<p class="G">x[&quot;field&quot;] = value;</p>
+<p class="A">&nbsp;</p>
+<p class="A">Map values can also be specified using {} braces:</p>
+<p class="A">&nbsp;</p>
+<p class="I"><span class="J">{} &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>// empty map</p>
+<p class="G">{ &quot;alfa&quot;:10, &quot;beta&quot;:20, 20:&quot;40&quot; }</p>
+<p class="I"><span class="J">{ 2 * a : &quot;100&quot; } &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>// map values can contain expressions</p>
+<p class="A">&nbsp;</p>
+<p id="2_5" class="F">2.5 Lambdas</p>
+<p class="E">Lambdas represent executable Esc code. Lambda values are introduced using <span class="H">@</span> character:</p>
+<p class="A">&nbsp;</p>
+<p class="G">@(x) { return 2 * x; }</p>
+<p class="A">&nbsp;</p>
+<p class="E">Assigning lambda value to variable is equivalent to defining a function:</p>
+<p class="A">&nbsp;</p>
+<p class="I"><span class="J">:foo = @(x) { return 2 * x; };&nbsp;&nbsp;&nbsp;&nbsp;</span>// defines global function foo</p>
+<p class="A">&nbsp;</p>
+<p class="E">If lambda argument is preceded with <span class="H">&amp;</span> character, it designates input-output argument (other arguments are input only).</p>
+<p class="E"><span class="H">...</span> at the end of the argument list allows variable number of arguments to be present. In that case, additional parameters are passed in <span class="L">argv</span> variable of type array.</p>
+<p class="A">&nbsp;</p>
+<p class="G">:sum = @(...) { s = 0; for(i in argv) s += argv[i]; }</p>
+<p class="A">&nbsp;</p>
+<p class="E">Parameters can have default values separated by <span class="H">=</span>:</p>
+<p class="A">&nbsp;</p>
+<p class="G">:bar = @(x = 0) { ... }</p>
+<p class="A">&nbsp;</p>
+<p class="E">To make life easier, alternative form of function definition is available:</p>
+<p class="A">&nbsp;</p>
+<p class="G">#:foo(x) { return 2 * x; }</p>
+<p class="A">&nbsp;</p>
+<hr><p id="3" class="D">3. Variables and contexts</p>
+<p class="E">Variable names in Esc follow C principles (are case sensitive, start with alphabetic character or <span class="H">_</span> and can contain alphabetic characters, <span class="H">_</span> and numbers).</p>
+<p class="E">Esc distinguishes three types of variables contexts using <span class="N">.</span> and <span class="N">:</span> characters:</p>
+<p class="A">&nbsp;</p>
+<p class="I"><span class="J">var&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>// local</p>
+<p class="I"><span class="J">.var&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>// instance</p>
+<p class="I"><span class="J">:var&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>// global</p>
+<p class="A">&nbsp;</p>
+<p class="E">Local variables are specific to function, global variables are shared among all functions. Instance variables </p>
+<p class="E">represent map values (keys designate variable names) of map whose lambda value is invoked, or can be forced using binary <span class="H">!</span> bind operator:</p>
+<p class="A">&nbsp;</p>
+<p class="G">var.x = 0;</p>
+<p class="G">var.Next = @() { .x++; };</p>
+<p class="I"><span class="J">var.Next();&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>// var.x is now 1 </p>
+<p class="G">var1.x = 0;</p>
+<p class="I"><span class="J">var.Next()! var1;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>// var1.x is now 1</p>
+<p class="A">&nbsp;</p>
+<p class="E">To make programmer's life easier, one exception applies concerning context - when invoking lambda from local variable and lambda is not present in it, instance and global contexts (in this order) are tried as well:</p>
+<p class="A">&nbsp;</p>
+<p class="G">beta(x)</p>
+<p class="A">&nbsp;</p>
+<p class="E">Tries to get lambda form local <span class="L">beta</span> variable first, then (if no lambda found) from instance <span class="L">beta </span>variable and finally (if still no lambda) from global <span class="L">beta</span>. Of course, <span class="N">.</span> and <span class="N">:</span> can still be used to designate context:</p>
+<p class="A">&nbsp;</p>
+<p class="I"><span class="J">:beta(x) </span>// calls global beta even if local or instance beta is present</p>
+<p class="A">&nbsp;</p>
+<hr><p id="4" class="D">4. Expressions</p>
+<p class="O"><span class="P">When expressions are used as logical values, void, zero number and map or array with zero elements represent </span>false<span class="P">, other values are </span>true.</p>
+<p class="E">In following table, thick lines divide operators with the same priority, with topmost items having the highest priority:</p>
+<p class="A">&nbsp;</p>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr><td width="100%"><table width="100%" class="Q"><colgroup><col width="44%"><col width="55%"></colgroup>
+<tr><td class="R"><p class="A">Operator</p>
+</td>
+<td class="R"><p class="A">Comments</p>
+</td>
+</tr>
+<tr><td class="S"><p class="T"><span class="U">map</span>[<span class="U">key</span>]</p>
+</td>
+<td class="S"><p class="A">Map value at <span class="L">key</span>.</p>
+</td>
+</tr>
+<tr><td class="S"><p class="V">map<span class="W">.</span>field</p>
+</td>
+<td class="S"><p class="A">Same as <span class="L">map</span>[&quot;<span class="L">field</span>&quot;].</p>
+</td>
+</tr>
+<tr><td class="S"><p class="T"><span class="U">array</span>[<span class="U">index</span>]</p>
+</td>
+<td class="S"><p class="A">Array element at position <span class="L">index</span>.</p>
+</td>
+</tr>
+<tr><td class="S"><p class="T"><span class="U">array</span>[<span class="U">start</span>, <span class="U">count</span>]</p>
+</td>
+<td class="S"><p class="A">Array slice starting at <span class="L">start</span> of <span class="L">count</span> elements.</p>
+</td>
+</tr>
+<tr><td class="S"><p class="T"><span class="U">array</span>[<span class="U">start</span>:<span class="U">end</span>]</p>
+</td>
+<td class="S"><p class="A">Array slice of elements <span class="L">start .. end</span> - 1</p>
+</td>
+</tr>
+<tr><td class="S"><p class="T"><span class="U">array</span>[,<span class="U">count</span>]</p>
+<p class="T"><span class="U">array</span>[:<span class="U">count</span>]</p>
+</td>
+<td class="S"><p class="A">Same as <span class="L">array</span>[0, <span class="L">count</span>].</p>
+<p class="A">&nbsp;</p>
+</td>
+</tr>
+<tr><td class="S"><p class="T"><span class="U">array</span>[<span class="U">start</span>:]</p>
+<p class="T"><span class="U">array</span>[<span class="U">start</span>,]</p>
+</td>
+<td class="S"><p class="A">Same as <span class="L">array</span>[<span class="L">start</span> : count(array)]. </p>
+</td>
+</tr>
+<tr><td class="S"><p class="T"><span class="U">lambda</span>(<span class="U">args</span>)</p>
+</td>
+<td class="S"><p class="A">Invokes <span class="L">lambda</span> with the set of <span class="L">args</span>. If lambda is subscript of the map, map becomes instance for <span class="L">lambda</span> execution (accessible via <span class="X">.</span><span class="L">name</span> or <span class="X">self</span>).</p>
+</td>
+</tr>
+<tr><td class="S"><p class="V">lambda<span class="W">(</span>args<span class="W">) ! </span>instance</p>
+</td>
+<td class="S"><p class="A">Invokes <span class="L">lambda</span>, using<span class="L"> instance</span> as instance for lambda execution (accessible via <span class="X">.</span><span class="L">name</span> or <span class="X">self</span>).</p>
+</td>
+</tr>
+<tr><td class="S"><p class="T">self</p>
+</td>
+<td class="S"><p class="A">Instance.</p>
+</td>
+</tr>
+<tr><td class="Y"><p class="V"><span class="W">++</span>l-number</p>
+<p class="V"><span class="W">--</span>l-number</p>
+</td>
+<td class="Y"><p class="A">Increments/decrements number l-value.</p>
+</td>
+</tr>
+<tr><td class="S"><p class="V"><span class="W">-</span>number</p>
+</td>
+<td class="S"><p class="A">Unary minus.</p>
+</td>
+</tr>
+<tr><td class="S"><p class="V"><span class="W">~</span>number</p>
+</td>
+<td class="S"><p class="A">Bit-wise complement.</p>
+</td>
+</tr>
+<tr><td class="S"><p class="V"><span class="W">!</span>value</p>
+</td>
+<td class="S"><p class="A">Logical not. 1 when value represents false, 0 otherwise.</p>
+</td>
+</tr>
+<tr><td class="S"><p class="T"><span class="U">l-number</span>--</p>
+<p class="T"><span class="U">l-number</span>++</p>
+</td>
+<td class="S"><p class="A">Post-increment / post-decrement of number l-value.</p>
+</td>
+</tr>
+<tr><td class="Y"><p class="V">array<span class="W"> * </span>number</p>
+<p class="V">number<span class="W"> * </span>array</p>
+</td>
+<td class="Y"><p class="A">Returns <span class="L">array</span><span class="Z"> </span>repeated <span class="L">number</span> times.</p>
+</td>
+</tr>
+<tr><td class="S"><p class="V">number<span class="W"> * </span>number</p>
+</td>
+<td class="S"><p class="A">Multiplication.</p>
+</td>
+</tr>
+<tr><td class="S"><p class="V">number<span class="W"> / </span>number</p>
+</td>
+<td class="S"><p class="A">Division.</p>
+</td>
+</tr>
+<tr><td class="S"><p class="V">number<span class="W"> % </span>number</p>
+</td>
+<td class="S"><p class="A">Modulo.</p>
+</td>
+</tr>
+<tr><td class="Y"><p class="V">array<span class="W"> + </span>array</p>
+</td>
+<td class="Y"><p class="A">Concatenates <span class="L">array</span>s.</p>
+</td>
+</tr>
+<tr><td class="S"><p class="V">number<span class="W"> + </span>number</p>
+</td>
+<td class="S"><p class="A">Addition.</p>
+</td>
+</tr>
+<tr><td class="S"><p class="V">number<span class="W"> - </span>number</p>
+</td>
+<td class="S"><p class="A">Subtraction.</p>
+</td>
+</tr>
+<tr><td class="Y"><p class="V">l-array<span class="W"> &lt;&lt; </span>array</p>
+</td>
+<td class="Y"><p class="A">Concatenates <span class="L">array </span>to <span class="L">l-array</span>, yielding <span class="L">l-array </span>as l-value result.</p>
+</td>
+</tr>
+<tr><td class="S"><p class="V">number<span class="W"> &lt;&lt; </span>number</p>
+</td>
+<td class="S"><p class="A">Shift left.</p>
+</td>
+</tr>
+<tr><td class="S"><p class="V">number<span class="W"> &gt;&gt; </span>number</p>
+</td>
+<td class="S"><p class="A">Shift right.</p>
+</td>
+</tr>
+<tr><td class="Y"><p class="V">number<span class="W"> &lt; </span>number</p>
+<p class="V">number<span class="W"> &gt; </span>number</p>
+<p class="V">number<span class="W"> &lt;= </span>number</p>
+<p class="V">number<span class="W"> &gt;= </span>number</p>
+</td>
+<td class="Y"><p class="A">Comparison of <span class="L">number</span>s.</p>
+</td>
+</tr>
+<tr><td class="S"><p class="V">array<span class="W"> &lt; </span>array</p>
+<p class="V">array<span class="W"> &gt; </span>array</p>
+<p class="V">array<span class="W"> &lt;= </span>array</p>
+<p class="V">array<span class="W"> &gt;= </span>array</p>
+</td>
+<td class="S"><p class="A">Comparison of <span class="L">array</span>s.</p>
+</td>
+</tr>
+<tr><td class="Y"><p class="V">value<span class="W"> == </span>value</p>
+</td>
+<td class="Y"><p class="A">Equality.</p>
+</td>
+</tr>
+<tr><td class="S"><p class="V">value<span class="W"> != </span>value</p>
+</td>
+<td class="S"><p class="A">Inequality.</p>
+</td>
+</tr>
+<tr><td class="Y"><p class="V">number<span class="W"> &amp; </span>number</p>
+</td>
+<td class="Y"><p class="A">Binary and.</p>
+</td>
+</tr>
+<tr><td class="Y"><p class="V">number<span class="W"> ^ </span>number</p>
+</td>
+<td class="Y"><p class="A">Binary xor.</p>
+</td>
+</tr>
+<tr><td class="Y"><p class="V">number<span class="W"> | </span>number</p>
+</td>
+<td class="Y"><p class="A">Binary or.</p>
+</td>
+</tr>
+<tr><td class="Y"><p class="V">value<span class="W"> &amp;&amp; </span>value</p>
+</td>
+<td class="Y"><p class="A">Logical and. If first value is false, second value is not evaluated, just skipped.</p>
+</td>
+</tr>
+<tr><td class="Y"><p class="V">value<span class="W"> || </span>value</p>
+</td>
+<td class="Y"><p class="A">Logical or. If first value is true, second value is not evaluated, just skipped.</p>
+</td>
+</tr>
+<tr><td class="Y"><p class="V">value <span class="W">?</span> value <span class="W">:</span> value</p>
+</td>
+<td class="Y"><p class="A">Conditional expression. Only necessary expressions are evaluated.</p>
+</td>
+</tr>
+<tr><td class="Y"><p class="V">l-value<span class="W"> = </span>value</p>
+</td>
+<td class="Y"><p class="A">Assignment.</p>
+</td>
+</tr>
+<tr><td class="S"><p class="V">l-array<span class="W"> += </span>array</p>
+</td>
+<td class="S"><p class="A">Same as <span class="AA">l-array = l-array + array</span>.</p>
+</td>
+</tr>
+<tr><td class="S"><p class="V">l-number<span class="W"> += </span>number</p>
+</td>
+<td class="S"><p class="A">Same as <span class="AA">l-number = l-number + number</span>.</p>
+</td>
+</tr>
+<tr><td class="S"><p class="V">l-number<span class="W"> -= </span>number</p>
+</td>
+<td class="S"><p class="A">Same as <span class="AA">l-number = l-number - number</span>.</p>
+</td>
+</tr>
+<tr><td class="S"><p class="V">l-number<span class="W"> *= </span>number</p>
+</td>
+<td class="S"><p class="A">Same as <span class="AA">l-number = l-number * number</span>.</p>
+</td>
+</tr>
+<tr><td class="S"><p class="V">l-number<span class="W"> /= </span>number</p>
+</td>
+<td class="S"><p class="A">Same as <span class="AA">l-number = l-number / number</span>.</p>
+</td>
+</tr>
+<tr><td class="S"><p class="V">l-number<span class="W"> %= </span>number</p>
+</td>
+<td class="S"><p class="A">Same as <span class="AA">l-number = l-number % number</span>.</p>
+</td>
+</tr>
+</table></td>
+</tr></table>
+<p class="A">&nbsp;</p>
+<p class="A">&nbsp;</p>
+<hr><p id="5" class="D">5. Statements</p>
+<p class="A">&nbsp;</p>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr><td width="100%"><table width="100%" class="Q"><colgroup><col width="45%"><col width="54%"></colgroup>
+<tr><td class="R"><p class="A">Statement</p>
+</td>
+<td class="R"><p class="A">Comments</p>
+</td>
+</tr>
+<tr><td class="S"><p class="T">;</p>
+</td>
+<td class="S"><p class="A">Empty statement.</p>
+</td>
+</tr>
+<tr><td class="S"><p class="T"><span class="U">expression</span>;</p>
+</td>
+<td class="S"><p class="A">Expression. It gets evaluated.</p>
+</td>
+</tr>
+<tr><td class="S"><p class="T">{ <span class="U">statement</span>; ... }</p>
+</td>
+<td class="S"><p class="A">Compound statement.</p>
+</td>
+</tr>
+<tr><td class="S"><p class="V"><span class="W">if(</span>condition<span class="W">) </span>statement</p>
+</td>
+<td class="S"><p class="A">Conditional statement.</p>
+</td>
+</tr>
+<tr><td class="S"><p class="V"><span class="W">if(</span>condition<span class="W">) </span>statement</p>
+<p class="V"><span class="W">else </span>statement</p>
+</td>
+<td class="S"><p class="A">Conditional statement with </p>
+</td>
+</tr>
+<tr><td class="S"><p class="V"><span class="W">while(</span>condition<span class="W">) </span>statement</p>
+</td>
+<td class="S"><p class="A">Loop. Statement is performed as long as the <span class="L">condition</span> is true.</p>
+</td>
+</tr>
+<tr><td class="S"><p class="V"><span class="W">do </span>statement</p>
+<p class="T">while(<span class="U">condition</span>)</p>
+</td>
+<td class="S"><p class="A">Loop. Statement is performed once and then is repeated as long as the <span class="L">condition</span> is true.</p>
+</td>
+</tr>
+<tr><td class="S"><p class="T">for(<span class="U">init</span>, <span class="U">condition</span>, <span class="U">increment</span>)</p>
+<p class="V"><span class="W">&nbsp;&nbsp;&nbsp;&nbsp;</span>statement</p>
+</td>
+<td class="S"><p class="A">Same as</p>
+<p class="M"><span class="L">init</span>;</p>
+<p class="M">while(<span class="L">condition</span>) {</p>
+<p class="M">&nbsp;&nbsp;&nbsp;&nbsp;<span class="L">statement</span>;</p>
+<p class="M">&nbsp;&nbsp;&nbsp;&nbsp;<span class="L">increment</span>;</p>
+<p class="M">}</p>
+</td>
+</tr>
+<tr><td class="S"><p class="T">for(<span class="U">l-value</span> in <span class="U">array</span>)</p>
+<p class="V"><span class="W">&nbsp;&nbsp;&nbsp;&nbsp;</span>statement</p>
+</td>
+<td class="S"><p class="A">Same as</p>
+<p class="M">for(<span class="L">l-value</span> = 0; <span class="L">l-value</span> &lt; count(<span class="L">array</span>);</p>
+<p class="M"> &nbsp;&nbsp;&nbsp;<span class="L">l-value</span>++)</p>
+<p class="V"><span class="P">&nbsp;&nbsp;&nbsp;&nbsp;</span>statement</p>
+<p class="A">&nbsp;</p>
+</td>
+</tr>
+<tr><td class="S"><p class="T">for(<span class="U">l-value</span> in <span class="U">map</span>)</p>
+<p class="V"><span class="W">&nbsp;&nbsp;&nbsp;&nbsp;</span>statement</p>
+</td>
+<td class="S"><p class="A">Iterates through <span class="L">map</span>, assigning keys of elements with non-void value to the <span class="L">l-value</span>.</p>
+</td>
+</tr>
+<tr><td class="S"><p class="T">continue</p>
+</td>
+<td class="S"><p class="A">Skips the rest of loop statement.</p>
+</td>
+</tr>
+<tr><td class="S"><p class="T">break</p>
+</td>
+<td class="S"><p class="A">Causes exit from innermost loop or switch statement.</p>
+</td>
+</tr>
+<tr><td class="S"><p class="V"><span class="W">switch(</span>value<span class="W">) </span>statement</p>
+</td>
+<td class="S"><p class="A">Matches <span class="L">value</span> to all case statements inside the <span class="L">statement</span>, continues at the case with the same value, or with default if no such case exists and default is present. If neither matching case and default exists, does nothing.</p>
+</td>
+</tr>
+<tr><td class="S"><p class="T">case <span class="U">value</span>:</p>
+</td>
+<td class="S"><p class="A">Switch case.</p>
+</td>
+</tr>
+<tr><td class="S"><p class="T">default:</p>
+</td>
+<td class="S"><p class="A">Default switch case.</p>
+</td>
+</tr>
+<tr><td class="S"><p class="T">#<span class="U">name</span>(<span class="U">args</span>) { ... }</p>
+</td>
+<td class="S"><p class="M"><span class="AB">Same as </span><span class="L">name</span> = @(<span class="L">args</span>) { ... };</p>
+</td>
+</tr>
+<tr><td class="S"><p class="T">#.<span class="U">name</span>(<span class="U">args</span>) { ... }</p>
+</td>
+<td class="S"><p class="M"><span class="AB">Same as </span>.<span class="L">name</span> = @(<span class="L">args</span>) { ... };</p>
+</td>
+</tr>
+<tr><td class="S"><p class="T">#:<span class="U">name</span>(<span class="U">args</span>) { ... }</p>
+</td>
+<td class="S"><p class="M"><span class="AB">Same as </span>:<span class="L">name</span> = @(<span class="L">args</span>) { ... };</p>
+</td>
+</tr>
+</table></td>
+</tr></table>
+<p class="A">&nbsp;</p>
+<hr><p id="6" class="D">6. Standard library</p>
+<p class="AC">&nbsp;</p>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr><td width="100%"><table width="100%" class="Q"><colgroup><col width="24%"><col width="75%"></colgroup>
+<tr><td class="R"><p class="A">Function</p>
+</td>
+<td class="R"><p class="A">Comments</p>
+</td>
+</tr>
+<tr><td class="S"><p class="T">is_number(<span class="U">x</span>)</p>
+</td>
+<td class="S"><p class="A">Returns 1 if <span class="L">x</span> is a number, 0 otherwise.</p>
+</td>
+</tr>
+<tr><td class="S"><p class="T">is_array(<span class="U">x</span>)</p>
+</td>
+<td class="S"><p class="A">Returns 1 if <span class="L">x</span> is a array, 0 otherwise.</p>
+</td>
+</tr>
+<tr><td class="S"><p class="T">is_map(<span class="U">x</span>)</p>
+</td>
+<td class="S"><p class="A">Returns 1 if <span class="L">x</span> is a map, 0 otherwise.</p>
+</td>
+</tr>
+<tr><td class="S"><p class="T">is_void(<span class="U">x</span>)</p>
+</td>
+<td class="S"><p class="A">Returns 1 if <span class="L">x</span> is void, 0 otherwise.</p>
+</td>
+</tr>
+<tr><td class="S"><p class="T">int(<span class="U">number</span>)</p>
+</td>
+<td class="S"><p class="A">Returns the <span class="L">number</span> rounded towards zero.</p>
+</td>
+</tr>
+<tr><td class="S"><p class="T">to_string(<span class="U">x</span>)</p>
+</td>
+<td class="S"><p class="A">Return <span class="L">x</span> as array representing string representation.</p>
+</td>
+</tr>
+<tr><td class="S"><p class="T">to_number(<span class="U">x</span>)</p>
+</td>
+<td class="S"><p class="A">Converts an array (string) to the number.</p>
+</td>
+</tr>
+<tr><td class="S"><p class="T">count(<span class="U">x</span>)</p>
+</td>
+<td class="S"><p class="A">If <span class="L">x </span>is void, returns 0.</p>
+<p class="A">If x is a number, returns 1.</p>
+<p class="A">If x is an array, returns number of elements of this array.</p>
+<p class="A">If x is an map, returns number of entries in this map with non-void values.</p>
+</td>
+</tr>
+<tr><td class="S"><p class="T">keys(<span class="U">map</span>)</p>
+</td>
+<td class="S"><p class="A">Returns array of keys of map (ordering is the same as for <span class="X">values</span> function, otherwise is unspecified).</p>
+</td>
+</tr>
+<tr><td class="S"><p class="T">values(<span class="U">map</span>)</p>
+</td>
+<td class="S"><p class="A">Returns array of values of map (ordering is the same as for <span class="X">keys</span> function, otherwise is unspecified).</p>
+</td>
+</tr>
+<tr><td class="S"><p class="T">rand()</p>
+</td>
+<td class="S"><p class="A">Returns random number in range 0..32767.</p>
+</td>
+</tr>
+<tr><td class="S"><p class="T">reverse(<span class="U">array</span>)</p>
+</td>
+<td class="S"><p class="A">Returns reversed <span class="L">array</span>.</p>
+</td>
+</tr>
+<tr><td class="S"><p class="T">sort(<span class="U">array</span>)</p>
+</td>
+<td class="S"><p class="A">Returns sorted <span class="L">array</span>.</p>
+</td>
+</tr>
+<tr><td class="S"><p class="T">order(<span class="U">array</span>)</p>
+</td>
+<td class="S"><p class="A">Returns sort order of elements in the <span class="L">array</span>.</p>
+</td>
+</tr>
+<tr><td class="S"><p class="T">IsDate(<span class="U">map</span>)</p>
+</td>
+<td class="S"><p class="A">Returns 1 if map contains &quot;day&quot;, &quot;month&quot; and &quot;year&quot; keys, 0 otherwise.</p>
+</td>
+</tr>
+<tr><td class="S"><p class="T">IsTime(<span class="U">map</span>)</p>
+</td>
+<td class="S"><p class="A">Returns 1 if map contains &quot;second&quot;, &quot;minute&quot;, &quot;hour&quot;, &quot;day&quot;, &quot;month&quot; and &quot;year&quot; members, 0 otherwise.</p>
+</td>
+</tr>
+<tr><td class="S"><p class="T">GetSysTime()</p>
+</td>
+<td class="S"><p class="A">Returns current time as map with &quot;second&quot;, &quot;minute&quot;, &quot;hour&quot;, &quot;day&quot;, &quot;month&quot; and &quot;year&quot; members.</p>
+</td>
+</tr>
+<tr><td class="S"><p class="T">sin(<span class="U">x</span>)</p>
+<p class="T">cos(<span class="U">x</span>)</p>
+<p class="T">tan(<span class="U">x</span>)</p>
+<p class="T">asin(<span class="U">x</span>)</p>
+<p class="T">acos(<span class="U">x</span>)</p>
+<p class="T">atan(<span class="U">x</span>)</p>
+<p class="T">atan2(<span class="U">a</span>, <span class="U">b</span>)</p>
+<p class="T">sinh(<span class="U">x</span>)</p>
+<p class="T">cosh(<span class="U">x</span>)</p>
+<p class="T">tanh(<span class="U">x</span>)</p>
+<p class="T">asinh(<span class="U">x</span>)</p>
+<p class="T">acosh(<span class="U">x</span>)</p>
+<p class="T">atanh(<span class="U">x</span>)</p>
+<p class="T">exp(<span class="U">x</span>)</p>
+<p class="T">log(<span class="U">x</span>)</p>
+<p class="T">log10(<span class="U">x</span>)</p>
+<p class="T">exp2(<span class="U">x</span>)</p>
+<p class="T">log2(<span class="U">x</span>)</p>
+<p class="T">sqrt(<span class="U">x</span>)</p>
+<p class="T">cbrt(<span class="U">x</span>)</p>
+<p class="T">pow(<span class="U">base</span>, <span class="U">exp</span>)</p>
+</td>
+<td class="S"><p class="A">Well know mathematical functions.</p>
+</td>
+</tr>
+</table></td>
+</tr></table>
+<p class="A">&nbsp;</p>
+</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>
+<TABLE BORDER="0" WIDTH="100%"><TR><TD></TD>
+</TR>
+</TABLE>
+<TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" BGCOLOR="#FFFFFF" WIDTH="100%" style="border-style: solid; border-width: 1px; border-color: #6E89AE;padding: 10px;;"><TR><TD><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%"><TR><TD><p class="A"><span class="B"> </span><a href="www$uppweb$contribweb$en-us.html">Do you want to contribute?</a></p>
+</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>
+<script type="text/javascript">var a={};var p=window.location.pathname.split("/");p=p[p.length-1];var s='<select id="lang" onchange="window.location=document.getElementById(\'lang\').value;">';for(l in a){if(p==l){d=" selected=1"}else{d=""}s+='<option value="'+l+'"'+d+'>'+a[l]+'</option>'}s+='</select>';var d=document.createElement('div');d.innerHTML=s;var c=document.getElementById('langs');c.replaceChild(d,c.firstChild);document.getElementById('langbox').style.display='block';</script></BODY>

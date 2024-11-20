@@ -1,0 +1,520 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en-us">
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
+<META NAME="Generator" CONTENT="U++ HTML Package">
+<TITLE>Painter :: U++</TITLE>
+<STYLE TYPE="text/css"><!--
+.A{margin:0px 0px 0px 0px;text-indent:0px;text-align:left;color:#000000;font-family:sans-serif;font-size:10pt;font-weight:normal;font-style:normal;}
+.B{font-size:12pt;}
+.C{border-collapse:collapse;table-layout:auto;border: 2px solid #000000;}
+.D{padding: 3px 5px 3px 5px;border-left: 1px solid #000000;border-top: 1px solid #000000;border-right: 1px solid #000000;border-bottom: 1px solid #000000;background-color:#712A00;vertical-align:middle;}
+.E{margin:0px 0px 0px 0px;text-indent:0px;text-align:left;color:#e0e0e0;font-family:sans-serif;font-size:16pt;font-weight:bold;font-style:normal;}
+.F{border-collapse:collapse;table-layout:auto;border: 2px solid #808080;}
+.G{padding: 3px 5px 3px 5px;border-left: 1px solid #808080;border-top: 1px solid #808080;border-right: 1px solid #808080;border-bottom: 1px solid #808080;background-color:#C0C0C0;vertical-align:middle;}
+.H{margin:0px 0px 0px 0px;text-indent:0px;text-align:left;color:#000000;font-family:sans-serif;font-size:10pt;font-weight:bold;font-style:normal;}
+.I{margin:0px 0px 0px 0px;text-indent:0px;text-align:left;color:#000000;font-family:sans-serif;font-size:6pt;font-weight:normal;font-style:normal;}
+.J{margin:0px 0px 5px 0px;text-indent:0px;text-align:left;color:#000000;font-family:sans-serif;font-size:10pt;font-weight:normal;font-style:normal;}
+.K{color:#0000ff;}
+.L{font-weight:bold;}
+.M{color:#800000;font-weight:bold;}
+.N{margin:0px 0px 0px 57px;text-indent:0px;text-align:left;color:#000000;font-family:sans-serif;font-size:10pt;font-weight:normal;font-style:normal;}
+.O{color:#800000;}
+.P{margin:0px 0px 0px 57px;text-indent:0px;text-align:left;color:#000000;font-family:monospace;font-size:8pt;font-weight:normal;font-style:normal;}
+.Q{margin:8px 0px 0px 0px;text-indent:0px;text-align:left;color:#000000;font-family:sans-serif;font-size:10pt;font-weight:normal;font-style:normal;}
+.R{margin:0px 0px 5px 0px;text-indent:0px;text-align:left;color:#000000;font-family:sans-serif;font-size:12pt;font-weight:normal;font-style:normal;}
+a.l1         { text-decoration:none; font-size: 8pt; font-family: sans-serif; font-weight: normal; }
+a.l1:link    { color:#000000; }
+a.l1:visited { color:#000080; }
+a.l1:hover   { color:#9933CC; }
+a.l1:active  { color:#000000; }
+a.l2         { text-decoration:none; font-size: 12pt; font-family: sans-serif; font-variant: small-caps; }
+a.l2:link    { color:#0066FF; }
+a.l2:visited { color:#FF6600; }
+a.l2:hover   { color:#BC0624; }
+a.l2:active  { color:#BC0024; }
+
+-->
+</STYLE>
+<META NAME="keywords" CONTENT="framework, toolkit, widget, c++, visual, studio, dev-cpp, builder, ide, class, component,wxwidgets, qt, rapid, application, development, rad, mfc, linux, macos, gui, sdl, directx, desktop"><META name="robots" content="index,follow">
+<LINK rel="alternate" type="application/rss+xml" title="SVN changes" href="svnchanges.xml">
+<LINK rel="shortcut icon" type="image/png" href="favicon.png">
+</HEAD><BODY BGCOLOR="#D2D9D2" ALINK="#800000" LINK="#000000" VLINK="#000080"><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%"><TR><TD COLSPAN="3"><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%" BGCOLOR="#FFFFFF" style="border: 1px solid #6E89AE;padding-left: 10px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;"><TR><TD><A HREF="index.html"><IMG SRC="0i.png" ALT="" BORDER="0"></A>
+</TD>
+<TD ALIGN="RIGHT" VALIGN="BOTTOM" STYLE="padding-bottom: 5px; background-image: url('1i.png')"><span style="font-size: 14pt; font-family: sans-serif;"><script type="text/javascript"><!--
+google_ad_client = "pub-1082147624384270";
+google_ad_width = 468;
+google_ad_height = 60;
+google_ad_format = "468x60_as";
+google_ad_type = "text_image";
+google_ad_channel = "";
+google_color_border = "336699";
+google_color_bg = "FFFFFF";
+google_color_link = "0000FF";
+google_color_text = "000000";
+google_color_url = "008000";
+//--></script>
+<script type="text/javascript"
+  src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+&nbsp;&nbsp;</span>
+</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>
+<TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%"><TR><TD COLSPAN="3" BGCOLOR="#D2D9D2" HEIGHT="6"></TD>
+</TR>
+<TR><TD VALIGN="TOP" ALIGN="CENTER"><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="160"><TR><TD ALIGN="CENTER"><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%" BGCOLOR="#FFFFFF" style="border-style: solid; border-width: 1px; border-color: #6E89AE;padding: 0px"><TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px;"><A HREF="www$uppweb$overview$en-us.html" CLASS="l1">Overview</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$examples$en-us.html" CLASS="l1">Examples</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$ss$en-us.html" CLASS="l1">Screenshots</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$comparison$en-us.html" CLASS="l1">Comparisons</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$apps$en-us.html" CLASS="l1">Applications</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$download$en-us.html" CLASS="l1">Download</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$documentation$en-us.html" CLASS="l1">Documentation</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$Tutorials$en-us.html" CLASS="l1">Tutorials</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="app$ide$UppHub$en-us.html" CLASS="l1">UppHub</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$Roadmap$en-us.html" CLASS="l1">Status & Roadmap</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$FAQ$en-us.html" CLASS="l1">FAQ</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="app$ide$About$en-us.html" CLASS="l1">Authors & License</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="https://www.ultimatepp.org/forums" CLASS="l1">Forums</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$Funding$en-us.html" CLASS="l1">Funding U++</A>
+</TD>
+</TR>
+</TABLE>
+<TABLE BORDER="0" WIDTH="100%"><TR><TD></TD>
+</TR>
+</TABLE>
+<TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%" BGCOLOR="#FFFFFF" style="border-style: solid; border-width: 1px; border-color: #6E89AE;padding: 0px"><TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('3i.png'); border: 0px solid black;padding-left:12px; padding-right:0px; padding-top:1px; padding-bottom:1px;color:#FFFFFF;"><B><span style="font-size: 8pt; font-family: sans-serif;">Search on this site</span>
+</B>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:6px; padding-right:0px; padding-top:4px; padding-bottom:4px;border-top: 1px solid #6E89AE;"><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%"><TR><TD><IMG SRC="4i.png" ALT="" BORDER="0"></TD>
+<TD><FORM ACTION="https://www.google.com/search" METHOD="GET" STYLE="margin:0px;padding:0px;"><INPUT TYPE="HIDDEN" NAME="ie" VALUE="UTF-8"><INPUT TYPE="HIDDEN" NAME="oe" VALUE="UTF-8"><INPUT TYPE="TEXT" NAME="q" SIZE="15" MAXLENGTH="256" placeholder="Site search"><INPUT TYPE="HIDDEN" NAME="sitesearch" VALUE="ultimatepp.org"></FORM>
+</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>
+<TABLE BORDER="0" WIDTH="100%"><TR><TD></TD>
+</TR>
+</TABLE>
+<br><div id="fb-root"></div>
+<script type="text/javascript">(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) {return;}
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+<div class="fb-like" data-href="https://www.facebook.com/pages/Upp-Framework/262346610476027?sk=wall" data-send="false" data-layout="button_count" data-width="160" data-show-faces="false" data-font="arial"></div>
+<br><br><script type="text/javascript"><!--
+google_ad_client = "pub-1082147624384270";
+google_ad_width = 160;
+google_ad_height = 600;
+google_ad_format = "160x600_as";
+google_ad_type = "text_image";
+google_ad_channel = "";
+google_color_border = "336699";
+google_color_bg = "FFFFFF";
+google_color_link = "0000FF";
+google_color_text = "000000";
+google_color_url = "008000";
+//--></script>
+<script type="text/javascript"
+  src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script><br><br><script type="text/javascript"><!--
+google_ad_client = "pub-1082147624384270";
+google_ad_width = 160;
+google_ad_height = 90;
+google_ad_format = "160x90_0ads_al_s";
+google_ad_channel = "";
+google_color_border = "336699";
+google_color_bg = "FFFFFF";
+google_color_link = "0000FF";
+google_color_text = "000000";
+google_color_url = "008000";
+//--></script>
+<script type="text/javascript"
+  src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+<br><br><br><br><br><br><A HREF="https://sourceforge.net/projects/upp/"><IMG SRC="https://sourceforge.net/sflogo.php?group_id=93970&amp;type=2" ALT="SourceForge.net Logo" BORDER="0" WIDTH="125" HEIGHT="37"></A>
+<br><br><A HREF="https://flathub.org/en/apps/org.ultimatepp.TheIDE"><IMG SRC="5i.png" ALT="SourceForge.net Logo" BORDER="0" WIDTH="125" HEIGHT="37"></A>
+<br><br><div style="background-color:#ffffff;width:125;height:35"><A HREF="https://github.com/ultimatepp"><IMG SRC="6i.png" ALT="GitHub Logo" BORDER="0" WIDTH="125" HEIGHT="35"></A>
+</div><br><div style="background-color:#ffffff;width:125;height:35"><div style="height:5"></div><A HREF="https://discord.gg/8XzqQzXZzb"><IMG SRC="https://assets-global.website-files.com/6257adef93867e50d84d30e2/636e0b5061df29d55a92d945_full_logo_blurple_RGB.svg" ALT="Discord Logo" BORDER="0" WIDTH="125" HEIGHT="25"></A>
+</div><br></TD>
+</TR>
+</TABLE>
+</TD>
+<TD VALIGN="TOP" BGCOLOR="#D2D9D2"><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="6"><TR><TD></TD>
+</TR>
+</TABLE>
+</TD>
+<TD VALIGN="TOP" WIDTH="100%" BGCOLOR="#D2D9D2"><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" BGCOLOR="#FFFFFF" WIDTH="100%" style="border-style: solid; border-width: 1px; border-color: #6E89AE;padding: 10px;;"><TR><TD><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%"><TR><TD><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr><td width="100%"><table width="100%" class="C"><colgroup><col width="100%"></colgroup>
+<tr><td class="D"><p class="E">Painter</p>
+</td>
+</tr>
+</table></td>
+</tr></table>
+<p class="A">&nbsp;</p>
+<p class="A">Painter is an abstract class that represents &quot;SVG level&quot; rendering engine, supporting cubic and quadratic Bezier paths, affine transformations, filling and stroking with raster images, linear or radial gradients, clipping and alpha masking.</p>
+<p class="A">&nbsp;</p>
+<p class="A">&nbsp;</p>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr><td width="100%"><table width="100%" class="F"><colgroup><col width="100%"></colgroup>
+<tr><td class="G"><p class="H">Path definition methods</p>
+</td>
+</tr>
+</table></td>
+</tr></table>
+<p class="I">&nbsp;</p>
+<p id="Upp::Painter::Move(const Upp::Pointf&,bool)" class="J">Painter<span class="K">&amp;</span> <span class="L">Move</span>(<span class="K">const</span> Pointf<span class="K">&amp;</span> <span class="M">p</span>, <span class="K">bool</span> <span class="M">rel</span>)</p>
+<p id="Upp::Painter::Move(const Upp::Pointf&)" class="J">Painter<span class="K">&amp;</span> <span class="L">Move</span>(<span class="K">const</span> Pointf<span class="K">&amp;</span> <span class="M">p</span>)</p>
+<p id="Upp::Painter::Move(double,double,bool)" class="J">Painter<span class="K">&amp;</span> <span class="L">Move</span>(<span class="K">double</span> <span class="M">x</span>, <span class="K">double</span> <span class="M">y</span>, <span class="K">bool</span> <span class="M">rel</span>)</p>
+<p id="Upp::Painter::Move(double,double)" class="J">Painter<span class="K">&amp;</span> <span class="L">Move</span>(<span class="K">double</span> <span class="M">x</span>, <span class="K">double</span> <span class="M">y</span>)</p>
+<p id="Upp::Painter::RelMove(const Upp::Pointf&)" class="J">Painter<span class="K">&amp;</span> <span class="L">RelMove</span>(<span class="K">const</span> Pointf<span class="K">&amp;</span> <span class="M">p</span>)</p>
+<p id="Upp::Painter::RelMove(double,double)" class="J">Painter<span class="K">&amp;</span> <span class="L">RelMove</span>(<span class="K">double</span> <span class="M">x</span>, <span class="K">double</span> <span class="M">y</span>)</p>
+<p class="N">Move to a new path point, without any visual connection to the previous path. Path definition usually starts with Move. <span class="M">p</span> or <span class="M">x</span>, <span class="M">y</span> specify the point, if <span class="M">rel</span> is true or with <span class="L">RelMove</span> the position is relative to the last point of path.</p>
+<p class="I">&nbsp;</p>
+<hr><p class="I">&nbsp;</p>
+<p id="Upp::Painter::Line(const Upp::Pointf&,bool)" class="J">Painter<span class="K">&amp;</span> <span class="L">Line</span>(<span class="K">const</span> Pointf<span class="K">&amp;</span> <span class="M">p</span>, <span class="K">bool</span> <span class="M">rel</span>)</p>
+<p id="Upp::Painter::Line(const Upp::Pointf&)" class="J">Painter<span class="K">&amp;</span> <span class="L">Line</span>(<span class="K">const</span> Pointf<span class="K">&amp;</span> <span class="M">p</span>)</p>
+<p id="Upp::Painter::Line(double,double,bool)" class="J">Painter<span class="K">&amp;</span> <span class="L">Line</span>(<span class="K">double</span> <span class="M">x</span>, <span class="K">double</span> <span class="M">y</span>, <span class="K">bool</span> <span class="M">rel</span>)</p>
+<p id="Upp::Painter::Line(double,double)" class="J">Painter<span class="K">&amp;</span> <span class="L">Line</span>(<span class="K">double</span> <span class="M">x</span>, <span class="K">double</span> <span class="M">y</span>)</p>
+<p id="Upp::Painter::RelLine(const Upp::Pointf&)" class="J">Painter<span class="K">&amp;</span> <span class="L">RelLine</span>(<span class="K">const</span> Pointf<span class="K">&amp;</span> <span class="M">p</span>)</p>
+<p id="Upp::Painter::RelLine(double,double)" class="J">Painter<span class="K">&amp;</span> <span class="L">RelLine</span>(<span class="K">double</span> <span class="M">x</span>, <span class="K">double</span> <span class="M">y</span>)</p>
+<p class="N">Add a line to the current path from the last point of path to <span class="M">p</span> / <span class="M">x</span> <span class="M">y</span>. If <span class="M">rel</span> is true or with <span class="L">RelLine</span> the position is relative to the last point of path.</p>
+<p class="I">&nbsp;</p>
+<hr><p class="I">&nbsp;</p>
+<p id="Upp::Painter::Quadratic(const Upp::Pointf&,const Upp::Pointf&,bool)" class="J">Painter<span class="K">&amp;</span> <span class="L">Quadratic</span>(<span class="K">const</span> Pointf<span class="K">&amp;</span> <span class="M">p1</span>, <span class="K">const</span> Pointf<span class="K">&amp;</span> <span class="M">p</span>, <span class="K">bool</span> <span class="M">rel</span>)</p>
+<p id="Upp::Painter::Quadratic(const Upp::Pointf&,const Upp::Pointf&)" class="J">Painter<span class="K">&amp;</span> <span class="L">Quadratic</span>(<span class="K">const</span> Pointf<span class="K">&amp;</span> <span class="M">p1</span>, <span class="K">const</span> Pointf<span class="K">&amp;</span> <span class="M">p</span>)</p>
+<p id="Upp::Painter::Quadratic(const Upp::Pointf&)" class="J">Painter<span class="K">&amp;</span> <span class="L">Quadratic</span>(<span class="K">const</span> Pointf<span class="K">&amp;</span> <span class="M">p</span>)</p>
+<p id="Upp::Painter::Quadratic(double,double,bool)" class="J">Painter<span class="K">&amp;</span> <span class="L">Quadratic</span>(<span class="K">double</span> <span class="M">x</span>, <span class="K">double</span> <span class="M">y</span>, <span class="K">bool</span> <span class="M">rel</span>)</p>
+<p id="Upp::Painter::Quadratic(double,double,double,double,bool)" class="J">Painter<span class="K">&amp;</span> <span class="L">Quadratic</span>(<span class="K">double</span> <span class="M">x1</span>, <span class="K">double</span> <span class="M">y1</span>, <span class="K">double</span> <span class="M">x</span>, <span class="K">double</span> <span class="M">y</span>, <span class="K">bool</span> <span class="M">rel</span>)</p>
+<p id="Upp::Painter::Quadratic(const Upp::Pointf&,bool)" class="J">Painter<span class="K">&amp;</span> <span class="L">Quadratic</span>(<span class="K">const</span> Pointf<span class="K">&amp;</span> <span class="M">p</span>, <span class="K">bool</span> <span class="M">rel</span>)</p>
+<p id="Upp::Painter::Quadratic(double,double,double,double)" class="J">Painter<span class="K">&amp;</span> <span class="L">Quadratic</span>(<span class="K">double</span> <span class="M">x1</span>, <span class="K">double</span> <span class="M">y1</span>, <span class="K">double</span> <span class="M">x</span>, <span class="K">double</span> <span class="M">y</span>)</p>
+<p id="Upp::Painter::Quadratic(double,double)" class="J">Painter<span class="K">&amp;</span> <span class="L">Quadratic</span>(<span class="K">double</span> <span class="M">x</span>, <span class="K">double</span> <span class="M">y</span>)</p>
+<p id="Upp::Painter::RelQuadratic(const Upp::Pointf&,const Upp::Pointf&)" class="J">Painter<span class="K">&amp;</span> <span class="L">RelQuadratic</span>(<span class="K">const</span> Pointf<span class="K">&amp;</span> <span class="M">p1</span>, <span class="K">const</span> Pointf<span class="K">&amp;</span> <span class="M">p</span>)</p>
+<p id="Upp::Painter::RelQuadratic(double,double,double,double)" class="J">Painter<span class="K">&amp;</span> <span class="L">RelQuadratic</span>(<span class="K">double</span> <span class="M">x1</span>, <span class="K">double</span> <span class="M">y1</span>, <span class="K">double</span> <span class="M">x</span>, <span class="K">double</span> <span class="M">y</span>)</p>
+<p id="Upp::Painter::RelQuadratic(double,double)" class="J">Painter<span class="K">&amp;</span> <span class="L">RelQuadratic</span>(<span class="K">double</span> <span class="M">x</span>, <span class="K">double</span> <span class="M">y</span>)</p>
+<p id="Upp::Painter::RelQuadratic(const Upp::Pointf&)" class="J">Painter<span class="K">&amp;</span> <span class="L">RelQuadratic</span>(<span class="K">const</span> Pointf<span class="K">&amp;</span> <span class="M">p</span>)</p>
+<p class="N">Adds quadratic Bezier curve to final point <span class="M">p </span>/<span class="M"> x</span> <span class="M">y </span>with control point<span class="M"> p1</span> / <span class="M">x1</span> <span class="M">y1</span>. If <span class="M">rel</span> is true or with <span class="L">RelQuadratic</span> the points are relative to the last point of path.</p>
+<p class="I">&nbsp;</p>
+<hr><p class="I">&nbsp;</p>
+<p id="Upp::Painter::Cubic(const Upp::Pointf&,const Upp::Pointf&,const Upp::Pointf&,bool)" class="J">Painter<span class="K">&amp;</span> <span class="L">Cubic</span>(<span class="K">const</span> Pointf<span class="K">&amp;</span> <span class="M">p1</span>, <span class="K">const</span> Pointf<span class="K">&amp;</span> <span class="M">p2</span>, <span class="K">const</span> Pointf<span class="K">&amp;</span> <span class="M">p</span>, <span class="K">bool</span> <span class="M">rel</span>)</p>
+<p id="Upp::Painter::Cubic(const Upp::Pointf&,const Upp::Pointf&,bool)" class="J">Painter<span class="K">&amp;</span> <span class="L">Cubic</span>(<span class="K">const</span> Pointf<span class="K">&amp;</span> <span class="M">p2</span>, <span class="K">const</span> Pointf<span class="K">&amp;</span> <span class="M">p</span>, <span class="K">bool</span> <span class="M">rel</span>)</p>
+<p id="Upp::Painter::Cubic(const Upp::Pointf&,const Upp::Pointf&,const Upp::Pointf&)" class="J">Painter<span class="K">&amp;</span> <span class="L">Cubic</span>(<span class="K">const</span> Pointf<span class="K">&amp;</span> <span class="M">p1</span>, <span class="K">const</span> Pointf<span class="K">&amp;</span> <span class="M">p2</span>, <span class="K">const</span> Pointf<span class="K">&amp;</span> <span class="M">p</span>)</p>
+<p id="Upp::Painter::Cubic(const Upp::Pointf&,const Upp::Pointf&)" class="J">Painter<span class="K">&amp;</span> <span class="L">Cubic</span>(<span class="K">const</span> Pointf<span class="K">&amp;</span> <span class="M">p2</span>, <span class="K">const</span> Pointf<span class="K">&amp;</span> <span class="M">p</span>)</p>
+<p id="Upp::Painter::Cubic(double,double,double,double,double,double,bool)" class="J">Painter<span class="K">&amp;</span> <span class="L">Cubic</span>(<span class="K">double</span> <span class="M">x1</span>, <span class="K">double</span> <span class="M">y1</span>, <span class="K">double</span> <span class="M">x2</span>, <span class="K">double</span> <span class="M">y2</span>, <span class="K">double</span> <span class="M">x</span>, <span class="K">double</span> <span class="M">y</span>, <span class="K">bool</span> <span class="M">rel</span>)</p>
+<p id="Upp::Painter::Cubic(double,double,double,double,bool)" class="J">Painter<span class="K">&amp;</span> <span class="L">Cubic</span>(<span class="K">double</span> <span class="M">x2</span>, <span class="K">double</span> <span class="M">y2</span>, <span class="K">double</span> <span class="M">x</span>, <span class="K">double</span> <span class="M">y</span>, <span class="K">bool</span> <span class="M">rel</span>)</p>
+<p id="Upp::Painter::Cubic(double,double,double,double,double,double)" class="J">Painter<span class="K">&amp;</span> <span class="L">Cubic</span>(<span class="K">double</span> <span class="M">x1</span>, <span class="K">double</span> <span class="M">y1</span>, <span class="K">double</span> <span class="M">x2</span>, <span class="K">double</span> <span class="M">y2</span>, <span class="K">double</span> <span class="M">x</span>, <span class="K">double</span> <span class="M">y</span>)</p>
+<p id="Upp::Painter::Cubic(double,double,double,double)" class="J">Painter<span class="K">&amp;</span> <span class="L">Cubic</span>(<span class="K">double</span> <span class="M">x2</span>, <span class="K">double</span> <span class="M">y2</span>, <span class="K">double</span> <span class="M">x</span>, <span class="K">double</span> <span class="M">y</span>)</p>
+<p id="Upp::Painter::RelCubic(const Upp::Pointf&,const Upp::Pointf&,const Upp::Pointf&)" class="J">Painter<span class="K">&amp;</span> <span class="L">RelCubic</span>(<span class="K">const</span> Pointf<span class="K">&amp;</span> <span class="M">p1</span>, <span class="K">const</span> Pointf<span class="K">&amp;</span> <span class="M">p2</span>, <span class="K">const</span> Pointf<span class="K">&amp;</span> <span class="M">p</span>)</p>
+<p id="Upp::Painter::RelCubic(const Upp::Pointf&,const Upp::Pointf&)" class="J">Painter<span class="K">&amp;</span> <span class="L">RelCubic</span>(<span class="K">const</span> Pointf<span class="K">&amp;</span> <span class="M">p2</span>, <span class="K">const</span> Pointf<span class="K">&amp;</span> <span class="M">p</span>)</p>
+<p id="Upp::Painter::RelCubic(double,double,double,double,double,double)" class="J">Painter<span class="K">&amp;</span> <span class="L">RelCubic</span>(<span class="K">double</span> <span class="M">x1</span>, <span class="K">double</span> <span class="M">y1</span>, <span class="K">double</span> <span class="M">x2</span>, <span class="K">double</span> <span class="M">y2</span>, <span class="K">double</span> <span class="M">x</span>, <span class="K">double</span> <span class="M">y</span>)</p>
+<p id="Upp::Painter::RelCubic(double,double,double,double)" class="J">Painter<span class="K">&amp;</span> <span class="L">RelCubic</span>(<span class="K">double</span> <span class="M">x2</span>, <span class="K">double</span> <span class="M">y2</span>, <span class="K">double</span> <span class="M">x</span>, <span class="K">double</span> <span class="M">y</span>)</p>
+<p class="N">Adds cubic Bezier curve to final point <span class="M">p </span>/<span class="M"> x</span> <span class="M">y </span>with control points<span class="M"> p1</span> / <span class="M">x1</span> <span class="M">y1</span>.and <span class="M">p2</span> / <span class="M">x2</span> <span class="M">y2</span>. If <span class="M">rel</span> is true or with <span class="L">RelCubic</span> the points are relative to the last point of path.</p>
+<p class="I">&nbsp;</p>
+<hr><p class="I">&nbsp;</p>
+<p id="Upp::Painter::Arc(const Upp::Pointf&,const Upp::Pointf&,double,double,bool)" class="J">Painter<span class="K">&amp;</span> <span class="L">Arc</span>(<span class="K">const</span> Pointf<span class="K">&amp;</span> <span class="M">c</span>, <span class="K">const</span> Pointf<span class="K">&amp;</span> <span class="M">r</span>, <span class="K">double</span> <span class="M">angle</span>, <span class="K">double</span> <span class="M">sweep</span>, <span class="K">bool</span> <span class="M">rel</span>)</p>
+<p id="Upp::Painter::Arc(const Upp::Pointf&,double,double,double,double,bool)" class="J">Painter<span class="K">&amp;</span> <span class="L">Arc</span>(<span class="K">const</span> Pointf<span class="K">&amp;</span> <span class="M">c</span>, <span class="K">double</span> <span class="M">rx</span>, <span class="K">double</span> <span class="M">ry</span>, <span class="K">double</span> <span class="M">angle</span>, <span class="K">double</span> <span class="M">sweep</span>, <span class="K">bool</span> <span class="M">rel</span>)</p>
+<p id="Upp::Painter::Arc(const Upp::Pointf&,double,double,double,bool)" class="J">Painter<span class="K">&amp;</span> <span class="L">Arc</span>(<span class="K">const</span> Pointf<span class="K">&amp;</span> <span class="M">c</span>, <span class="K">double</span> <span class="M">r</span>, <span class="K">double</span> <span class="M">angle</span>, <span class="K">double</span> <span class="M">sweep</span>, <span class="K">bool</span> <span class="M">rel</span>)</p>
+<p id="Upp::Painter::Arc(double,double,double,double,double,double,bool)" class="J">Painter<span class="K">&amp;</span> <span class="L">Arc</span>(<span class="K">double</span> <span class="M">x</span>, <span class="K">double</span> <span class="M">y</span>, <span class="K">double</span> <span class="M">rx</span>, <span class="K">double</span> <span class="M">ry</span>, <span class="K">double</span> <span class="M">angle</span>, <span class="K">double</span> <span class="M">sweep</span>, <span class="K">bool</span> <span class="M">rel</span>)</p>
+<p id="Upp::Painter::Arc(double,double,double,double,double,bool)" class="J">Painter<span class="K">&amp;</span> <span class="L">Arc</span>(<span class="K">double</span> <span class="M">x</span>, <span class="K">double</span> <span class="M">y</span>, <span class="K">double</span> <span class="M">r</span>, <span class="K">double</span> <span class="M">angle</span>, <span class="K">double</span> <span class="M">sweep</span>, <span class="K">bool</span> <span class="M">rel</span>)</p>
+<p id="Upp::Painter::Arc(const Upp::Pointf&,const Upp::Pointf&,double,double)" class="J">Painter<span class="K">&amp;</span> <span class="L">Arc</span>(<span class="K">const</span> Pointf<span class="K">&amp;</span> <span class="M">c</span>, <span class="K">const</span> Pointf<span class="K">&amp;</span> <span class="M">r</span>, <span class="K">double</span> <span class="M">angle</span>, <span class="K">double</span> <span class="M">sweep</span>)</p>
+<p id="Upp::Painter::Arc(const Upp::Pointf&,double,double,double,double)" class="J">Painter<span class="K">&amp;</span> <span class="L">Arc</span>(<span class="K">const</span> Pointf<span class="K">&amp;</span> <span class="M">c</span>, <span class="K">double</span> <span class="M">rx</span>, <span class="K">double</span> <span class="M">ry</span>, <span class="K">double</span> <span class="M">angle</span>, <span class="K">double</span> <span class="M">sweep</span>)</p>
+<p id="Upp::Painter::Arc(const Upp::Pointf&,double,double,double)" class="J">Painter<span class="K">&amp;</span> <span class="L">Arc</span>(<span class="K">const</span> Pointf<span class="K">&amp;</span> <span class="M">c</span>, <span class="K">double</span> <span class="M">r</span>, <span class="K">double</span> <span class="M">angle</span>, <span class="K">double</span> <span class="M">sweep</span>)</p>
+<p id="Upp::Painter::Arc(double,double,double,double,double,double)" class="J">Painter<span class="K">&amp;</span> <span class="L">Arc</span>(<span class="K">double</span> <span class="M">x</span>, <span class="K">double</span> <span class="M">y</span>, <span class="K">double</span> <span class="M">rx</span>, <span class="K">double</span> <span class="M">ry</span>, <span class="K">double</span> <span class="M">angle</span>, <span class="K">double</span> <span class="M">sweep</span>)</p>
+<p id="Upp::Painter::Arc(double,double,double,double,double)" class="J">Painter<span class="K">&amp;</span> <span class="L">Arc</span>(<span class="K">double</span> <span class="M">x</span>, <span class="K">double</span> <span class="M">y</span>, <span class="K">double</span> <span class="M">r</span>, <span class="K">double</span> <span class="M">angle</span>, <span class="K">double</span> <span class="M">sweep</span>)</p>
+<p id="Upp::Painter::RelArc(const Upp::Pointf&,const Upp::Pointf&,double,double)" class="J">Painter<span class="K">&amp;</span> <span class="L">RelArc</span>(<span class="K">const</span> Pointf<span class="K">&amp;</span> <span class="M">c</span>, <span class="K">const</span> Pointf<span class="K">&amp;</span> <span class="M">r</span>, <span class="K">double</span> <span class="M">angle</span>, <span class="K">double</span> <span class="M">sweep</span>)</p>
+<p id="Upp::Painter::RelArc(const Upp::Pointf&,double,double,double,double)" class="J">Painter<span class="K">&amp;</span> <span class="L">RelArc</span>(<span class="K">const</span> Pointf<span class="K">&amp;</span> <span class="M">c</span>, <span class="K">double</span> <span class="M">rx</span>, <span class="K">double</span> <span class="M">ry</span>, <span class="K">double</span> <span class="M">angle</span>, <span class="K">double</span> <span class="M">sweep</span>)</p>
+<p id="Upp::Painter::RelArc(const Upp::Pointf&,double,double,double)" class="J">Painter<span class="K">&amp;</span> <span class="L">RelArc</span>(<span class="K">const</span> Pointf<span class="K">&amp;</span> <span class="M">c</span>, <span class="K">double</span> <span class="M">r</span>, <span class="K">double</span> <span class="M">angle</span>, <span class="K">double</span> <span class="M">sweep</span>)</p>
+<p id="Upp::Painter::RelArc(double,double,double,double,double,double)" class="J">Painter<span class="K">&amp;</span> <span class="L">RelArc</span>(<span class="K">double</span> <span class="M">x</span>, <span class="K">double</span> <span class="M">y</span>, <span class="K">double</span> <span class="M">rx</span>, <span class="K">double</span> <span class="M">ry</span>, <span class="K">double</span> <span class="M">angle</span>, <span class="K">double</span> <span class="M">sweep</span>)</p>
+<p id="Upp::Painter::RelArc(double,double,double,double,double)" class="J">Painter<span class="K">&amp;</span> <span class="L">RelArc</span>(<span class="K">double</span> <span class="M">x</span>, <span class="K">double</span> <span class="M">y</span>, <span class="K">double</span> <span class="M">r</span>, <span class="K">double</span> <span class="M">angle</span>, <span class="K">double</span> <span class="M">sweep</span>)</p>
+<p class="N">Adds circular or elliptical arc. <span class="M">c</span> / <span class="M">x</span> <span class="M">y</span> is the center of circle or ellipse, <span class="M">r</span> is the radius of circle if it is double or horizontal and vertical radius specified as Pointf, <span class="M">rx</span> <span class="M">ry</span> are ellipse radii, <span class="M">angle</span> is the starting angle of arc in radians where 0 is the angle of positive x axis, <span class="M">sweep</span> is the ending angle of arc, positive sweep is in clockwise direction. The line is first added from the current position to the starting point of arc (if you want arc without it, just Move the position to the starting point). If <span class="M">rel</span> is true or with <span class="L">RelArc </span>the center is relative to the last point of path.</p>
+<p class="I">&nbsp;</p>
+<hr><p class="I">&nbsp;</p>
+<p id="Upp::Painter::SvgArc(const Upp::Pointf&,double,bool,bool,const Upp::Pointf&,bool)" class="J">Painter<span class="K">&amp;</span> <span class="L">SvgArc</span>(<span class="K">const</span> Pointf<span class="K">&amp;</span> <span class="M">r</span>, <span class="K">double</span> <span class="M">xangle</span>, <span class="K">bool</span> <span class="M">large</span>, <span class="K">bool</span> <span class="M">sweep</span>, <span class="K">const</span> Pointf<span class="K">&amp;</span> <span class="M">p</span>, <span class="K">bool</span> <span class="M">rel</span>)</p>
+<p id="Upp::Painter::SvgArc(double,double,double,bool,bool,const Upp::Pointf&,bool)" class="J">Painter<span class="K">&amp;</span> <span class="L">SvgArc</span>(<span class="K">double</span> <span class="M">rx</span>, <span class="K">double</span> <span class="M">ry</span>, <span class="K">double</span> <span class="M">xangle</span>, <span class="K">bool</span> <span class="M">large</span>, <span class="K">bool</span> <span class="M">sweep</span>, <span class="K">const</span> Pointf<span class="K">&amp;</span> <span class="M">p</span>, <span class="K">bool</span> <span class="M">rel</span>)</p>
+<p id="Upp::Painter::SvgArc(double,double,double,bool,bool,double,double,bool)" class="J">Painter<span class="K">&amp;</span> <span class="L">SvgArc</span>(<span class="K">double</span> <span class="M">rx</span>, <span class="K">double</span> <span class="M">ry</span>, <span class="K">double</span> <span class="M">xangle</span>, <span class="K">bool</span> <span class="M">large</span>, <span class="K">bool</span> <span class="M">sweep</span>, <span class="K">double</span> <span class="M">x</span>, <span class="K">double</span> <span class="M">y</span>, <span class="K">bool</span> <span class="M">rel</span>)</p>
+<p id="Upp::Painter::SvgArc(const Upp::Pointf&,double,bool,bool,const Upp::Pointf&)" class="J">Painter<span class="K">&amp;</span> <span class="L">SvgArc</span>(<span class="K">const</span> Pointf<span class="K">&amp;</span> <span class="M">r</span>, <span class="K">double</span> <span class="M">xangle</span>, <span class="K">bool</span> <span class="M">large</span>, <span class="K">bool</span> <span class="M">sweep</span>, <span class="K">const</span> Pointf<span class="K">&amp;</span> <span class="M">p</span>)</p>
+<p id="Upp::Painter::SvgArc(double,double,double,bool,bool,const Upp::Pointf&)" class="J">Painter<span class="K">&amp;</span> <span class="L">SvgArc</span>(<span class="K">double</span> <span class="M">rx</span>, <span class="K">double</span> <span class="M">ry</span>, <span class="K">double</span> <span class="M">xangle</span>, <span class="K">bool</span> <span class="M">large</span>, <span class="K">bool</span> <span class="M">sweep</span>, <span class="K">const</span> Pointf<span class="K">&amp;</span> <span class="M">p</span>)</p>
+<p id="Upp::Painter::SvgArc(double,double,double,bool,bool,double,double)" class="J">Painter<span class="K">&amp;</span> <span class="L">SvgArc</span>(<span class="K">double</span> <span class="M">rx</span>, <span class="K">double</span> <span class="M">ry</span>, <span class="K">double</span> <span class="M">xangle</span>, <span class="K">bool</span> <span class="M">large</span>, <span class="K">bool</span> <span class="M">sweep</span>, <span class="K">double</span> <span class="M">x</span>, <span class="K">double</span> <span class="M">y</span>)</p>
+<p id="Upp::Painter::RelSvgArc(const Upp::Pointf&,double,bool,bool,const Upp::Pointf&)" class="J">Painter<span class="K">&amp;</span> <span class="L">RelSvgArc</span>(<span class="K">const</span> Pointf<span class="K">&amp;</span> <span class="M">r</span>, <span class="K">double</span> <span class="M">xangle</span>, <span class="K">bool</span> <span class="M">large</span>, <span class="K">bool</span> <span class="M">sweep</span>, <span class="K">const</span> Pointf<span class="K">&amp;</span> <span class="M">p</span>)</p>
+<p id="Upp::Painter::RelSvgArc(double,double,double,bool,bool,const Upp::Pointf&)" class="J">Painter<span class="K">&amp;</span> <span class="L">RelSvgArc</span>(<span class="K">double</span> <span class="M">rx</span>, <span class="K">double</span> <span class="M">ry</span>, <span class="K">double</span> <span class="M">xangle</span>, <span class="K">bool</span> <span class="M">large</span>, <span class="K">bool</span> <span class="M">sweep</span>, <span class="K">const</span> Pointf<span class="K">&amp;</span> <span class="M">p</span>)</p>
+<p id="Upp::Painter::RelSvgArc(double,double,double,bool,bool,double,double)" class="J">Painter<span class="K">&amp;</span> <span class="L">RelSvgArc</span>(<span class="K">double</span> <span class="M">rx</span>, <span class="K">double</span> <span class="M">ry</span>, <span class="K">double</span> <span class="M">xangle</span>, <span class="K">bool</span> <span class="M">large</span>, <span class="K">bool</span> <span class="M">sweep</span>, <span class="K">double</span> <span class="M">x</span>, <span class="K">double</span> <span class="M">y</span>)</p>
+<p class="N">Adds arc specified by SVG compatible definition. If <span class="M">rel</span> is true or with <span class="L">RelSvgArc </span>the center is relative to the last point of path.</p>
+<p class="I">&nbsp;</p>
+<hr><p class="I">&nbsp;</p>
+<p id="Upp::Painter::Path(Upp::CParser&)" class="J">Painter<span class="K">&amp;</span> <span class="L">Path</span>(CParser<span class="K">&amp;</span> <span class="M">p</span>)</p>
+<p id="Upp::Painter::Path(const char*)" class="J">Painter<span class="K">&amp;</span> <span class="L">Path</span>(<span class="K">const</span> <span class="K">char</span> <span class="K">*</span><span class="M">path</span>)</p>
+<p class="N">Adds path by parsing input text in SVG path definition format.</p>
+<p class="I">&nbsp;</p>
+<hr><p class="I">&nbsp;</p>
+<p id="Upp::Painter::Character(const Upp::Pointf&,int,Upp::Font)" class="J">Painter<span class="K">&amp;</span> <span class="L">Character</span>(<span class="K">const</span> Pointf<span class="K">&amp;</span> <span class="M">p</span>, <span class="K">int</span> <span class="M">ch</span>, Font <span class="M">fnt</span>)</p>
+<p id="Upp::Painter::Character(double,double,int,Upp::Font)" class="J">Painter<span class="K">&amp;</span> <span class="L">Character</span>(<span class="K">double</span> <span class="M">x</span>, <span class="K">double</span> <span class="M">y</span>, <span class="K">int</span> <span class="M">ch</span>, Font <span class="M">fnt</span>)</p>
+<p class="N">Adds character with UNICODE codepoint <span class="M">ch</span> from Font <span class="M">fnt </span>(font can be replaced if given character is missing in it) at the position<span class="M"> p</span> / <span class="M">x</span> <span class="M">y</span>.</p>
+<p class="I">&nbsp;</p>
+<hr><p class="I">&nbsp;</p>
+<p id="Upp::Painter::Text(const Upp::Pointf&,const Upp::wchar*,Upp::Font,int,const double*)" class="J">Painter<span class="K">&amp;</span> <span class="L">Text</span>(<span class="K">const</span> Pointf<span class="K">&amp;</span> <span class="M">p</span>, <span class="K">const</span> wchar <span class="K">*</span><span class="M">text</span>, Font <span class="M">fnt</span>, <span class="K">int</span> <span class="M">n</span> <span class="K">=</span> <span class="K">-</span><span class="O">1</span>, <span class="K">const</span> <span class="K">double</span> <span class="K">*</span><span class="M">dx</span> <span class="K">=</span> <span class="O">0</span>)</p>
+<p id="Upp::Painter::Text(double,double,const Upp::wchar*,Upp::Font,int,const double*)" class="J">Painter<span class="K">&amp;</span> <span class="L">Text</span>(<span class="K">double</span> <span class="M">x</span>, <span class="K">double</span> <span class="M">y</span>, <span class="K">const</span> wchar <span class="K">*</span><span class="M">text</span>, Font <span class="M">fnt</span>, <span class="K">int</span> <span class="M">n</span> <span class="K">=</span> <span class="K">-</span><span class="O">1</span>, <span class="K">const</span> <span class="K">double</span> <span class="K">*</span><span class="M">dx</span> <span class="K">=</span> <span class="O">0</span>)</p>
+<p id="Upp::Painter::Text(const Upp::Pointf&,const Upp::WString&,Upp::Font,const double*)" class="J">Painter<span class="K">&amp;</span> <span class="L">Text</span>(<span class="K">const</span> Pointf<span class="K">&amp;</span> <span class="M">p</span>, <span class="K">const</span> WString<span class="K">&amp;</span> <span class="M">s</span>, Font <span class="M">fnt</span>, <span class="K">const</span> <span class="K">double</span> <span class="K">*</span><span class="M">dx</span> <span class="K">=</span> <span class="O">0</span>)</p>
+<p id="Upp::Painter::Text(double,double,const Upp::WString&,Upp::Font,const double*)" class="J">Painter<span class="K">&amp;</span> <span class="L">Text</span>(<span class="K">double</span> <span class="M">x</span>, <span class="K">double</span> <span class="M">y</span>, <span class="K">const</span> WString<span class="K">&amp;</span> <span class="M">s</span>, Font <span class="M">fnt</span>, <span class="K">const</span> <span class="K">double</span> <span class="K">*</span><span class="M">dx</span> <span class="K">=</span> <span class="O">0</span>)</p>
+<p id="Upp::Painter::Text(const Upp::Pointf&,const Upp::String&,Upp::Font,const double*)" class="J">Painter<span class="K">&amp;</span> <span class="L">Text</span>(<span class="K">const</span> Pointf<span class="K">&amp;</span> <span class="M">p</span>, <span class="K">const</span> String<span class="K">&amp;</span> <span class="M">s</span>, Font <span class="M">fnt</span>, <span class="K">const</span> <span class="K">double</span> <span class="K">*</span><span class="M">dx</span> <span class="K">=</span> <span class="O">0</span>)</p>
+<p id="Upp::Painter::Text(double,double,const Upp::String&,Upp::Font,const double*)" class="J">Painter<span class="K">&amp;</span> <span class="L">Text</span>(<span class="K">double</span> <span class="M">x</span>, <span class="K">double</span> <span class="M">y</span>, <span class="K">const</span> String<span class="K">&amp;</span> <span class="M">s</span>, Font <span class="M">fnt</span>, <span class="K">const</span> <span class="K">double</span> <span class="K">*</span><span class="M">dx</span> <span class="K">=</span> <span class="O">0</span>)</p>
+<p id="Upp::Painter::Text(const Upp::Pointf&,const char*,Upp::Font,int,const double*)" class="J">Painter<span class="K">&amp;</span> <span class="L">Text</span>(<span class="K">const</span> Pointf<span class="K">&amp;</span> <span class="M">p</span>, <span class="K">const</span> <span class="K">char</span> <span class="K">*</span><span class="M">text</span>, Font <span class="M">fnt</span>, <span class="K">int</span> <span class="M">n</span> <span class="K">=</span> <span class="K">-</span><span class="O">1</span>, <span class="K">const</span> <span class="K">double</span> <span class="K">*</span><span class="M">dx</span> <span class="K">=</span> <span class="O">0</span>)</p>
+<p id="Upp::Painter::Text(double,double,const char*,Upp::Font,int,const double*)" class="J">Painter<span class="K">&amp;</span> <span class="L">Text</span>(<span class="K">double</span> <span class="M">x</span>, <span class="K">double</span> <span class="M">y</span>, <span class="K">const</span> <span class="K">char</span> <span class="K">*</span><span class="M">text</span>, Font <span class="M">fnt</span>, <span class="K">int</span> <span class="M">n</span> <span class="K">=</span> <span class="K">-</span><span class="O">1</span>, <span class="K">const</span> <span class="K">double</span> <span class="K">*</span><span class="M">dx</span> <span class="K">=</span> <span class="O">0</span>)</p>
+<p class="N">Convenience method that renders <span class="M">text</span> (using Character method) at <span class="M">p</span> / <span class="M">x</span> <span class="M">y</span> using <span class="M">fnt</span>. Number of characters can be limited to <span class="M">n</span> (-1 means render all of them, advance between characters can be overriden with <span class="M">dx</span>.</p>
+<p class="I">&nbsp;</p>
+<hr><p class="I">&nbsp;</p>
+<p id="Upp::Painter::Rectangle(double,double,double,double)" class="J">Painter<span class="K">&amp;</span> <span class="L">Rectangle</span>(<span class="K">double</span> <span class="M">x</span>, <span class="K">double</span> <span class="M">y</span>, <span class="K">double</span> <span class="M">cx</span>, <span class="K">double</span> <span class="M">cy</span>)</p>
+<p class="N">Convenience method that adds a rectangle to the path.</p>
+<p class="I">&nbsp;</p>
+<hr><p class="I">&nbsp;</p>
+<p id="Upp::Painter::RoundedRectangle(double,double,double,double,double)" class="J">Painter<span class="K">&amp;</span> <span class="L">RoundedRectangle</span>(<span class="K">double</span> <span class="M">x</span>, <span class="K">double</span> <span class="M">y</span>, <span class="K">double</span> <span class="M">cx</span>, <span class="K">double</span> <span class="M">cy</span>, <span class="K">double</span> <span class="M">r</span>)</p>
+<p id="Upp::Painter::RoundedRectangle(double,double,double,double,double,double)" class="J">Painter<span class="K">&amp;</span> <span class="L">RoundedRectangle</span>(<span class="K">double</span> <span class="M">x</span>, <span class="K">double</span> <span class="M">y</span>, <span class="K">double</span> <span class="M">cx</span>, <span class="K">double</span> <span class="M">cy</span>, <span class="K">double</span> <span class="M">rx</span>, <span class="K">double</span> <span class="M">ry</span>)</p>
+<p class="N">Convenience method that adds rounded rectangle to the path. <span class="M">r</span> specifies the radius of circular corner, <span class="M">rx</span> <span class="M">ry</span> radii of elliptical corners.</p>
+<p class="I">&nbsp;</p>
+<hr><p class="I">&nbsp;</p>
+<p id="Upp::Painter::Ellipse(double,double,double,double)" class="J">Painter<span class="K">&amp;</span> <span class="L">Ellipse</span>(<span class="K">double</span> <span class="M">x</span>, <span class="K">double</span> <span class="M">y</span>, <span class="K">double</span> <span class="M">rx</span>, <span class="K">double</span> <span class="M">ry</span>)</p>
+<p class="N">Convenience method that adds ellipse to the path.</p>
+<p class="I">&nbsp;</p>
+<hr><p class="I">&nbsp;</p>
+<p id="Upp::Painter::Circle(double,double,double)" class="J">Painter<span class="K">&amp;</span> <span class="L">Circle</span>(<span class="K">double</span> <span class="M">x</span>, <span class="K">double</span> <span class="M">y</span>, <span class="K">double</span> <span class="M">r</span>)</p>
+<p class="N">Convenience method that adds circle to the path.</p>
+<p class="I">&nbsp;</p>
+<hr><p class="I">&nbsp;</p>
+<p id="Upp::Painter::Div()" class="J">Painter<span class="K">&amp;</span> <span class="L">Div</span>()</p>
+<p class="N">Divides path into groups that are treated separately with respect to current &quot;insideness&quot; rule (even-odd or non-zero winding rule). For example:</p>
+<p class="P">sw.Circle(200, 200, 100).Circle(270, 200, 100).EvenOdd().Fill(Black());</p>
+<p class="N"><a href="src$Painter$Painter_en-us.html_0.png"><img src="src$Painter$Painter_en-us.html_0.png" border="0" alt="" style="width: 91px; height: 67px"></a></p>
+<p class="N">produces shape with &quot;hole&quot; where circles overlap, by adding Div into path</p>
+<p class="P">sw.Circle(200, 200, 100).<span class="L">Div()</span>.Circle(270, 200, 100).EvenOdd().Fill(Black());</p>
+<p class="N"><a href="src$Painter$Painter_en-us.html_1.png"><img src="src$Painter$Painter_en-us.html_1.png" border="0" alt="" style="width: 89px; height: 66px"></a></p>
+<p class="N">circles are treated as separate subshapes and simply overwrite each other.</p>
+<p class="N">This feature is especially important when drawing text with effects as it allows individual characters to be grouped to use single fill or stroke (glyphs and advance widths are often designed with possible overlaps).</p>
+<p class="I">&nbsp;</p>
+<hr><p class="I">&nbsp;</p>
+<p id="Upp::Painter::Close()" class="J">Painter<span class="K">&amp;</span> <span class="L">Close</span>()</p>
+<p class="N">Adds line from the last point of path back to the first point (if they are not equal). Note that this is done automatically in any Fill call.</p>
+<p class="I">&nbsp;</p>
+<p class="A">&nbsp;</p>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr><td width="100%"><table width="100%" class="F"><colgroup><col width="100%"></colgroup>
+<tr><td class="G"><p class="H">Filling and Stroking</p>
+</td>
+</tr>
+</table></td>
+</tr></table>
+<p class="Q"><span class="L">Fill</span> is operation that affects all pixels inside the path (as defined by current insidness rule). <span class="L">Stroke</span> interprets the path as &quot;line&quot; with thickness defined as Stroke <span class="M">width</span> and affects pixels in the line. The Stroke line appearance is also affected by <span class="L">LineCap</span>, <span class="L">LineJoin</span>, <span class="L">MiterLimit </span>and <span class="L">Dash</span> attributes. The number of Stroke and Fill operations on single path is not limited.</p>
+<p class="I">&nbsp;</p>
+<p id="Upp::Painter::Stroke(double,const Upp::RGBA&)" class="J">Painter<span class="K">&amp;</span> <span class="L">Stroke</span>(<span class="K">double</span> <span class="M">width</span>, <span class="K">const</span> RGBA<span class="K">&amp;</span> <span class="M">color</span>)</p>
+<p id="Upp::Painter::Fill(const Upp::RGBA&)" class="J">Painter<span class="K">&amp;</span> <span class="L">Fill</span>(<span class="K">const</span> RGBA<span class="K">&amp;</span> <span class="M">color</span>)</p>
+<p class="N">Fills or strokes the path with solid <span class="M">color</span>.</p>
+<p class="I">&nbsp;</p>
+<hr><p class="I">&nbsp;</p>
+<p id="Upp::Painter::Fill(const Upp::Image&,const Upp::Xform2D&,Upp::dword)" class="J">Painter<span class="K">&amp;</span> <span class="L">Fill</span>(<span class="K">const</span> Image<span class="K">&amp;</span> <span class="M">image</span>, <span class="K">const</span> Xform2D<span class="K">&amp;</span> <span class="M">transsrc </span><span class="K">=</span> Xform2D<span class="K">::</span>Identity(), dword <span class="M">flags</span> <span class="K">=</span> <span class="O">0</span>)</p>
+<p id="Upp::Painter::Fill(const Upp::Image&,Upp::Pointf,Upp::Pointf,Upp::dword)" class="J">Painter<span class="K">&amp;</span> <span class="L">Fill</span>(<span class="K">const</span> Image<span class="K">&amp;</span> <span class="M">image</span>, Pointf <span class="M">p1</span>, Pointf <span class="M">p2</span>, dword <span class="M">flags</span> <span class="K">=</span> <span class="O">0</span>)</p>
+<p id="Upp::Painter::Fill(const Upp::Image&,double,double,double,double,Upp::dword)" class="J">Painter<span class="K">&amp;</span> <span class="L">Fill</span>(<span class="K">const</span> Image<span class="K">&amp;</span> <span class="M">image</span>, <span class="K">double</span> <span class="M">x1</span>, <span class="K">double</span> <span class="M">y1</span>, <span class="K">double</span> <span class="M">x2</span>, <span class="K">double</span> <span class="M">y2</span>, dword <span class="M">flags</span> <span class="K">=</span> <span class="O">0</span>)</p>
+<p id="Upp::Painter::Stroke(double,const Upp::Image&,const Upp::Xform2D&,Upp::dword)" class="J">Painter<span class="K">&amp;</span> <span class="L">Stroke</span>(<span class="K">double</span> <span class="M">width</span>, <span class="K">const</span> Image<span class="K">&amp;</span> <span class="M">image</span>, <span class="K">const</span> Xform2D<span class="K">&amp;</span> <span class="M">transsrc</span>, dword <span class="M">flags</span> <span class="K">=</span> <span class="O">0</span>)</p>
+<p id="Upp::Painter::Stroke(double,const Upp::Image&,const Upp::Pointf&,const Upp::Pointf&,Upp::dword)" class="J">Painter<span class="K">&amp;</span> <span class="L">Stroke</span>(<span class="K">double</span> <span class="M">width</span>, <span class="K">const</span> Image<span class="K">&amp;</span> <span class="M">image</span>, <span class="K">const</span> Pointf<span class="K">&amp;</span> <span class="M">p1</span>, <span class="K">const</span> Pointf<span class="K">&amp;</span> <span class="M">p2</span>, dword <span class="M">flags</span> <span class="K">=</span> <span class="O">0</span>)</p>
+<p id="Upp::Painter::Stroke(double,const Upp::Image&,double,double,double,double,Upp::dword)" class="J">Painter<span class="K">&amp;</span> <span class="L">Stroke</span>(<span class="K">double</span> <span class="M">width</span>, <span class="K">const</span> Image<span class="K">&amp;</span> <span class="M">image</span>, <span class="K">double</span> <span class="M">x1</span>, <span class="K">double</span> <span class="M">y1</span>, <span class="K">double</span> <span class="M">x2</span>, <span class="K">double</span> <span class="M">y2</span>, dword <span class="M">flags</span> <span class="K">=</span> <span class="O">0</span>)</p>
+<p class="N">Fills or strokes the path with <span class="M">image</span>. The placement of image in the path is defined by <span class="M">transsrc</span> transformation that maps image coordinates to current painter coordinates or alternatively by line segment <span class="M">p1</span> <span class="M">p2</span> / <span class="M">x1</span> <span class="M">y1</span> <span class="M">x2</span> <span class="M">y2</span> that represents top border of image. <span class="M">flags</span> can provide FILL_FAST flag that changes image interpolation to fastest nearest-neighbor method and also provides the information about pixels outside image a combination of FILL_HPAD, FILL_HREPEAT, FILL_HREFLECT, FILL_VPAD, FILL_VREPEAT, FILL_VREFLECT, FILL_PAD, FILL_REPEAT, FILL_REFLECT, where H means extension to left/right, V up/down, PAD means repeat border pixels, REPEAT means repeat image pixels, REFLECT repeat image pixels but flip adjacent images:</p>
+<p class="N"><a href="src$Painter$Painter_en-us.html_2.png"><img src="src$Painter$Painter_en-us.html_2.png" border="0" alt="" style="width: 665px; height: 111px"></a></p>
+<p class="I">&nbsp;</p>
+<hr><p class="I">&nbsp;</p>
+<p id="Upp::Painter::Fill(const Upp::Pointf&,const Upp::RGBA&,const Upp::Pointf&,const Upp::RGBA&,int)" class="J">Painter<span class="K">&amp;</span> <span class="L">Fill</span>(<span class="K">const</span> Pointf<span class="K">&amp;</span> <span class="M">p1</span>, <span class="K">const</span> RGBA<span class="K">&amp;</span> <span class="M">color1</span>, <span class="K">const</span> Pointf<span class="K">&amp;</span> <span class="M">p2</span>, <span class="K">const</span> RGBA<span class="K">&amp;</span> <span class="M">color2</span>, <span class="K">int</span> <span class="M">style </span><span class="K">=</span> <span class="L">GRADIENT_PAD</span>)</p>
+<p id="Upp::Painter::Fill(double,double,const Upp::RGBA&,double,double,const Upp::RGBA&,int)" class="J">Painter<span class="K">&amp;</span> <span class="L">Fill</span>(<span class="K">double</span> <span class="M">x1</span>, <span class="K">double</span> <span class="M">y1</span>, <span class="K">const</span> RGBA<span class="K">&amp;</span> <span class="M">color1</span>, <span class="K">double</span> <span class="M">x2</span>, <span class="K">double</span> <span class="M">y2</span>, <span class="K">const</span> RGBA<span class="K">&amp;</span> <span class="M">color2</span>, <span class="K">int</span> <span class="M">style </span><span class="K">=</span> <span class="L">GRADIENT_PAD</span>)</p>
+<p id="Upp::Painter::Fill(const Upp::RGBA&,const Upp::RGBA&,const Upp::Xform2D&,Upp::dword)" class="J">Painter<span class="K">&amp;</span> <span class="L">Fill</span>(<span class="K">const</span> RGBA<span class="K">&amp;</span> <span class="M">color1</span>, <span class="K">const</span> RGBA<span class="K">&amp;</span> <span class="M">color2</span>, <span class="K">const</span> Xform2D<span class="K">&amp;</span> <span class="M">transsrc</span>, dword <span class="M">flags</span> <span class="K">=</span> <span class="O">0</span>)</p>
+<p id="Upp::Painter::Stroke(double,const Upp::Pointf&,const Upp::RGBA&,const Upp::Pointf&,const Upp::RGBA&,int)" class="J">Painter<span class="K">&amp;</span> <span class="L">Stroke</span>(<span class="K">double</span> <span class="M">width</span>, <span class="K">const</span> Pointf<span class="K">&amp;</span> <span class="M">p1</span>, <span class="K">const</span> RGBA<span class="K">&amp;</span> <span class="M">color1</span>, <span class="K">const</span> Pointf<span class="K">&amp;</span> <span class="M">p2</span>, <span class="K">const</span> RGBA<span class="K">&amp;</span> <span class="M">color2</span>, <span class="K">int</span> <span class="M">style </span><span class="K">=</span> <span class="L">GRADIENT_PAD</span>)</p>
+<p id="Upp::Painter::Stroke(double,double,double,const Upp::RGBA&,double,double,const Upp::RGBA&,int)" class="J">Painter<span class="K">&amp;</span> <span class="L">Stroke</span>(<span class="K">double</span> <span class="M">width</span>, <span class="K">double</span> <span class="M">x1</span>, <span class="K">double</span> <span class="M">y1</span>, <span class="K">const</span> RGBA<span class="K">&amp;</span> <span class="M">color1</span>, <span class="K">double</span> <span class="M">x2</span>, <span class="K">double</span> <span class="M">y2</span>, <span class="K">const</span> RGBA<span class="K">&amp;</span> <span class="M">color2</span>, <span class="K">int</span> <span class="M">style </span><span class="K">=</span> <span class="L">GRADIENT_PAD</span>)</p>
+<p id="Upp::Painter::Stroke(double,const Upp::RGBA&,const Upp::RGBA&,const Upp::Xform2D&,Upp::dword)" class="J">Painter<span class="K">&amp;</span> <span class="L">Stroke</span>(<span class="K">double</span> <span class="M">width</span>, <span class="K">const</span> RGBA<span class="K">&amp;</span> <span class="M">color1</span>, <span class="K">const</span> RGBA<span class="K">&amp;</span> <span class="M">color2</span>, <span class="K">const</span> Xform2D<span class="K">&amp;</span> <span class="M">transsrc</span>, dword <span class="M">flags</span> <span class="K">=</span> <span class="O">0</span>)</p>
+<p class="N">Fills or strokes path with linear gradient. Gradient is specified by two points (<span class="M">p1</span> / <span class="M">x1</span> <span class="M">y1</span>, <span class="M">p2</span> / <span class="M">x2</span> <span class="M">y2</span>) and two colors <span class="M">color1</span> <span class="M">color2</span>. Additional colors to be used in between can be specified with <span class="L">ColorStop</span> method. <span class="M">style</span> specifies the color of gradient outside of area, with options GRADIENT_PAD, GRADIENT_REPEAT, GRADIENT_REFLECT (with meaning similar to image filling options). Variant with <span class="M">transsrc</span> specifies mapping using transformation matrix, with source gradient being line [0,0]-[1,0].</p>
+<p class="I">&nbsp;</p>
+<hr><p class="I">&nbsp;</p>
+<p id="Upp::Painter::Fill(const Upp::Pointf&,const Upp::RGBA&,const Upp::Pointf&,double,const Upp::RGBA&,int)" class="J">Painter<span class="K">&amp;</span> <span class="L">Fill</span>(<span class="K">const</span> Pointf<span class="K">&amp;</span> <span class="M">f</span>, <span class="K">const</span> RGBA<span class="K">&amp;</span> <span class="M">color1</span>, <span class="K">const</span> Pointf<span class="K">&amp;</span> <span class="M">c</span>, <span class="K">double</span> <span class="M">r</span>, <span class="K">const</span> RGBA<span class="K">&amp;</span> <span class="M">color2</span>, <span class="K">int</span> style <span class="K">=</span> <span class="M">GRADIENT_PAD</span>)</p>
+<p id="Upp::Painter::Fill(double,double,const Upp::RGBA&,double,double,double,const Upp::RGBA&,int)" class="J">Painter<span class="K">&amp;</span> <span class="L">Fill</span>(<span class="K">double</span> <span class="M">fx</span>, <span class="K">double</span> <span class="M">fy</span>, <span class="K">const</span> RGBA<span class="K">&amp;</span> <span class="M">color1</span>, <span class="K">double</span> <span class="M">cx</span>, <span class="K">double</span> <span class="M">cy</span>, <span class="K">double</span> <span class="M">r</span>, <span class="K">const</span> RGBA<span class="K">&amp;</span> <span class="M">color2</span>, <span class="K">int</span> style <span class="K">=</span> <span class="M">GRADIENT_PAD</span>)</p>
+<p id="Upp::Painter::Fill(const Upp::Pointf&,const Upp::RGBA&,double,const Upp::RGBA&,int)" class="J">Painter<span class="K">&amp;</span> <span class="L">Fill</span>(<span class="K">const</span> Pointf<span class="K">&amp;</span> <span class="M">c</span>, <span class="K">const</span> RGBA<span class="K">&amp;</span> <span class="M">color1</span>, <span class="K">double</span> <span class="M">r</span>, <span class="K">const</span> RGBA<span class="K">&amp;</span> <span class="M">color2</span>, <span class="K">int</span> style <span class="K">=</span> <span class="M">GRADIENT_PAD</span>)</p>
+<p id="Upp::Painter::Fill(double,double,const Upp::RGBA&,double,const Upp::RGBA&,int)" class="J">Painter<span class="K">&amp;</span> <span class="L">Fill</span>(<span class="K">double</span> <span class="M">x</span>, <span class="K">double</span> <span class="M">y</span>, <span class="K">const</span> RGBA<span class="K">&amp;</span> <span class="M">color1</span>, <span class="K">double</span> <span class="M">r</span>, <span class="K">const</span> RGBA<span class="K">&amp;</span> <span class="M">color2</span>, <span class="K">int</span> style <span class="K">=</span> <span class="M">GRADIENT_PAD</span>)</p>
+<p id="Upp::Painter::Fill(const Upp::Pointf&,const Upp::RGBA&,const Upp::RGBA&,const Upp::Xform2D&,int)" class="J">Painter<span class="K">&amp;</span> <span class="L">Fill</span>(<span class="K">const</span> Pointf<span class="K">&amp;</span> <span class="M">f</span>, <span class="K">const</span> RGBA<span class="K">&amp;</span> <span class="M">color1</span>, <span class="K">const</span> RGBA<span class="K">&amp;</span> <span class="M">color2</span>, <span class="K">const</span> Xform2D<span class="K">&amp;</span> <span class="M">transsrc</span>, <span class="K">int</span> style <span class="K">=</span> <span class="M">GRADIENT_PAD</span>)</p>
+<p id="Upp::Painter::Stroke(double,const Upp::Pointf&,const Upp::RGBA&,const Upp::Pointf&,double,const Upp::RGBA&,int)" class="J">Painter<span class="K">&amp;</span> <span class="L">Stroke</span>(<span class="K">double</span> <span class="M">width</span>, <span class="K">const</span> Pointf<span class="K">&amp;</span> <span class="M">f</span>, <span class="K">const</span> RGBA<span class="K">&amp;</span> <span class="M">color1</span>, <span class="K">const</span> Pointf<span class="K">&amp;</span> <span class="M">c</span>, <span class="K">double</span> <span class="M">r</span>, <span class="K">const</span> RGBA<span class="K">&amp;</span> <span class="M">color2</span>, <span class="K">int</span> style <span class="K">=</span> <span class="M">GRADIENT_PAD</span>)</p>
+<p id="Upp::Painter::Stroke(double,double,double,const Upp::RGBA&,double,double,double,const Upp::RGBA&,int)" class="J">Painter<span class="K">&amp;</span> <span class="L">Stroke</span>(<span class="K">double</span> <span class="M">width</span>, <span class="K">double</span> <span class="M">fx</span>, <span class="K">double</span> <span class="M">fy</span>, <span class="K">const</span> RGBA<span class="K">&amp;</span> <span class="M">color1</span>, <span class="K">double</span> <span class="M">x</span>, <span class="K">double</span> <span class="M">y</span>, <span class="K">double</span> <span class="M">r</span>, <span class="K">const</span> RGBA<span class="K">&amp;</span> <span class="M">color2</span>, <span class="K">int</span> style <span class="K">=</span> <span class="M">GRADIENT_PAD</span>)</p>
+<p id="Upp::Painter::Stroke(double,const Upp::Pointf&,const Upp::RGBA&,double,const Upp::RGBA&,int)" class="J">Painter<span class="K">&amp;</span> <span class="L">Stroke</span>(<span class="K">double</span> <span class="M">width</span>, <span class="K">const</span> Pointf<span class="K">&amp;</span> <span class="M">c</span>, <span class="K">const</span> RGBA<span class="K">&amp;</span> <span class="M">color1</span>, <span class="K">double</span> <span class="M">r</span>, <span class="K">const</span> RGBA<span class="K">&amp;</span> <span class="M">color2</span>, <span class="K">int</span> style <span class="K">=</span> <span class="M">GRADIENT_PAD</span>)</p>
+<p id="Upp::Painter::Stroke(double,double,double,const Upp::RGBA&,double,const Upp::RGBA&,int)" class="J">Painter<span class="K">&amp;</span> <span class="L">Stroke</span>(<span class="K">double</span> <span class="M">width</span>, <span class="K">double</span> <span class="M">x</span>, <span class="K">double</span> <span class="M">y</span>, <span class="K">const</span> RGBA<span class="K">&amp;</span> <span class="M">color1</span>, <span class="K">double</span> <span class="M">r</span>, <span class="K">const</span> RGBA<span class="K">&amp;</span> <span class="M">color2</span>, <span class="K">int</span> style <span class="K">=</span> <span class="M">GRADIENT_PAD</span>)</p>
+<p id="Upp::Painter::Stroke(double,const Upp::Pointf&,const Upp::RGBA&,const Upp::RGBA&,const Upp::Xform2D&,int)" class="J">Painter<span class="K">&amp;</span> <span class="L">Stroke</span>(<span class="K">double</span> <span class="M">width</span>, <span class="K">const</span> Pointf<span class="K">&amp;</span> <span class="M">f</span>, <span class="K">const</span> RGBA<span class="K">&amp;</span> <span class="M">color1</span>, <span class="K">const</span> RGBA<span class="K">&amp;</span> <span class="M">color2</span>, <span class="K">const</span> Xform2D<span class="K">&amp;</span> <span class="M">transsrc</span>, <span class="K">int</span> style <span class="K">=</span> <span class="M">GRADIENT_PAD</span>)</p>
+<p class="N">Fills or strokes path with radial gradient. Gradient start at focus point <span class="M">f</span> / <span class="M">fx</span> <span class="M">fy</span> with <span class="M">color1</span> and ends at circle with center point <span class="M">c</span> / <span class="M">x</span> <span class="M">y</span> and radius <span class="M">r</span> with <span class="M">color2</span>. If focus point is not present, it is the same as the center of circle. <span class="M">style</span> specifies the color of gradient outside of area, with options GRADIENT_PAD, GRADIENT_REPEAT, GRADIENT_REFLECT (with meaning similar to image filling options). Variant with <span class="M">transsrc</span> specifies mapping using transformation matrix, with source gradient being circle with center at [0,0] and radius 1.</p>
+<p class="I">&nbsp;</p>
+<p class="A">&nbsp;</p>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr><td width="100%"><table width="100%" class="F"><colgroup><col width="100%"></colgroup>
+<tr><td class="G"><p class="H">Painter context and attributes</p>
+</td>
+</tr>
+</table></td>
+</tr></table>
+<p class="Q">Painter has notion of two types of context: normal and path specific. Any context changes that are done without any path operations performed after latest path realization operation (Fill, Stroke, Clip) are global - valid until the context is restored to previous state with End (or painting ends). Context changes that are done after path was created are path specific - valid only for given path.</p>
+<p class="Q">&nbsp;</p>
+<hr><p class="I">&nbsp;</p>
+<p id="Upp::Painter::Begin()" class="J"><span class="K">void</span> <span class="L">Begin</span>()</p>
+<p class="N">Stores current context on the stack. This includes clipping regions and alpha masking.</p>
+<p class="I">&nbsp;</p>
+<hr><p class="I">&nbsp;</p>
+<p id="Upp::Painter::End()" class="J"><span class="K">void</span> <span class="L">End</span>()</p>
+<p class="N">Pops and restores the context from the stack, unless the corresponding Begin was actually BeginMask.</p>
+<p class="I">&nbsp;</p>
+<hr><p class="I">&nbsp;</p>
+<p id="Upp::Painter::ColorStop(double,const Upp::RGBA&)" class="J">Painter<span class="K">&amp;</span> <span class="L">ColorStop</span>(<span class="K">double</span> <span class="M">pos</span>, <span class="K">const</span> RGBA<span class="K">&amp;</span> <span class="M">color</span>)</p>
+<p class="N">Adds additional gradient <span class="M">color</span> at relative position <span class="M">pos</span>. Position is fraction of distance between gradient starting and ending point as defined in Fill or Stroke.</p>
+<p class="I">&nbsp;</p>
+<hr><p class="I">&nbsp;</p>
+<p id="Upp::Painter::ClearStops()" class="J">Painter<span class="K">&amp;</span> <span class="L">ClearStops</span>()</p>
+<p class="N">Removes all positions defined by ColorStop. As ColorStop is usually used as path specific attribute, this is really needed nor used.</p>
+<p class="I">&nbsp;</p>
+<hr><p class="I">&nbsp;</p>
+<p id="Upp::Painter::Opacity(double)" class="J">Painter<span class="K">&amp;</span> <span class="L">Opacity</span>(<span class="K">double</span> <span class="M">o</span>)</p>
+<p class="N">Sets painting opacity to <span class="M">o</span>, where 1 is fully opaque and 0 is fully transparent.</p>
+<p class="I">&nbsp;</p>
+<hr><p class="I">&nbsp;</p>
+<p id="Upp::Painter::LineCap(int)" class="J">Painter<span class="K">&amp;</span> <span class="L">LineCap</span>(<span class="K">int</span> <span class="M">linecap</span>)</p>
+<p class="N">Sets line caps. <span class="M">linecap</span> can be one of LINECAP_BUTT, LINECAP_SQUARE or LINECAP_ROUND (LINECAP_BUTT is default value):</p>
+<p class="N"><a href="src$Painter$Painter_en-us.html_3.png"><img src="src$Painter$Painter_en-us.html_3.png" border="0" alt="" style="width: 544px; height: 81px"></a></p>
+<p class="I">&nbsp;</p>
+<hr><p class="I">&nbsp;</p>
+<p id="Upp::Painter::LineJoin(int)" class="J">Painter<span class="K">&amp;</span> <span class="L">LineJoin</span>(<span class="K">int</span> <span class="M">linejoin</span>)</p>
+<p class="N">Sets the line joining mode. <span class="M">linejoin</span> can be one of LINEJOIN_MITER, LINEJOIN_ROUND, LINEJOIN_BEVEL (LINEJOIN_MITER is default value):</p>
+<p class="N"><a href="src$Painter$Painter_en-us.html_4.png"><img src="src$Painter$Painter_en-us.html_4.png" border="0" alt="" style="width: 536px; height: 161px"></a></p>
+<p class="I">&nbsp;</p>
+<hr><p class="I">&nbsp;</p>
+<p id="Upp::Painter::MiterLimit(double)" class="J">Painter<span class="K">&amp;</span> <span class="L">MiterLimit</span>(<span class="K">double</span> <span class="M">l</span>)</p>
+<p class="N">Defines a limit on the ratio of the miter length to the stroke width. Default value is 4. Past this maximum value, join reverts to bevel:</p>
+<p class="N"><a href="src$Painter$Painter_en-us.html_5.png"><img src="src$Painter$Painter_en-us.html_5.png" border="0" alt="" style="width: 507px; height: 177px"></a></p>
+<p class="I">&nbsp;</p>
+<hr><p class="I">&nbsp;</p>
+<p id="Upp::Painter::Dash(const Vector&,double)" class="J">Painter<span class="K">&amp;</span> <span class="L">Dash</span>(<span class="K">const</span> Vector&lt;<span class="K">double</span>&gt;<span class="K">&amp;</span> <span class="M">dash</span>, <span class="K">double</span> <span class="M">start</span>)</p>
+<p id="Upp::Painter::Dash(const char*,double)" class="J">Painter<span class="K">&amp;</span> <span class="L">Dash</span>(<span class="K">const</span> <span class="K">char</span> <span class="K">*</span><span class="M">dash</span>, <span class="K">double</span> <span class="M">start</span> <span class="K">=</span> <span class="O">0</span>)</p>
+<p class="N">Defines the pattern of dashes and gaps used to stroke the path. First value is the length of dash. If total number of values is odd, meaning of individual values alternates between dash and gap. For <span class="K">const</span> <span class="K">char</span> <span class="K">*</span><span class="M">dash</span>, values are defined by space separate list of numbers. <span class="M">start</span> can offset the starting position.</p>
+<p class="N"><a href="src$Painter$Painter_en-us.html_6.png"><img src="src$Painter$Painter_en-us.html_6.png" border="0" alt="" style="width: 596px; height: 84px"></a></p>
+<p class="I">&nbsp;</p>
+<hr><p class="I">&nbsp;</p>
+<p id="Upp::Painter::EvenOdd(bool)" class="J">Painter<span class="K">&amp;</span> <span class="L">EvenOdd</span>(<span class="K">bool</span> <span class="M">evenodd</span> <span class="K">=</span> <span class="K">true</span>)</p>
+<p class="N">Sets the filling mode to either even-odd rule or zero-winding rule.</p>
+<p class="I">&nbsp;</p>
+<hr><p class="I">&nbsp;</p>
+<p id="Upp::Painter::Invert(bool)" class="J">Painter<span class="K">&amp;</span> <span class="L">Invert</span>(<span class="K">bool</span> <span class="M">b</span> <span class="K">=</span> <span class="K">true</span>)</p>
+<p class="N">Special mode where instead of filling with color or source spans, affected pixels have the color channels inverted (with binary NOT operation). This is occasionally useful for displaying cursors.</p>
+<p class="I">&nbsp;</p>
+<hr><p class="I">&nbsp;</p>
+<p id="Upp::Painter::ImageFilter(int)" class="J">Painter<span class="K">&amp;</span> <span class="L">ImageFilter</span>(<span class="K">int</span> <span class="M">filter</span>)</p>
+<p class="N">Sets the convolution <span class="M">filter</span> used to rescale images. Can be one of FILTER_NEAREST, FILTER_BILINEAR, FILTER_BSPLINE, FILTER_COSTELLA, FILTER_BICUBIC_MITCHELL,</p>
+<p class="N">FILTER_BICUBIC_CATMULLROM, FILTER_LANCZOS3.</p>
+<p class="I">&nbsp;</p>
+<hr><p class="I">&nbsp;</p>
+<p id="Upp::Painter::Transform(const Upp::Xform2D&)" class="J">Painter<span class="K">&amp;</span> <span class="L">Transform</span>(<span class="K">const</span> Xform2D<span class="K">&amp;</span> <span class="M">m</span>)</p>
+<p class="N">Multiplies transformation matrix by <span class="M">m</span>. Cannot be used as path specific attribute change.</p>
+<p class="I">&nbsp;</p>
+<hr><p class="I">&nbsp;</p>
+<p id="Upp::Painter::Translate(double,double)" class="J">Painter<span class="K">&amp;</span> <span class="L">Translate</span>(<span class="K">double</span> <span class="M">x</span>, <span class="K">double</span> <span class="M">y</span>)</p>
+<p id="Upp::Painter::Translate(const Upp::Pointf&)" class="J">Painter<span class="K">&amp;</span> <span class="L">Translate</span>(<span class="K">const</span> Pointf<span class="K">&amp;</span> <span class="M">p</span>)</p>
+<p class="N">Translates transformation matrix by <span class="M">p</span> / <span class="M">x</span> <span class="M">y</span>. Cannot be used as path specific attribute change.</p>
+<p class="I">&nbsp;</p>
+<hr><p class="I">&nbsp;</p>
+<p id="Upp::Painter::Rotate(double)" class="J">Painter<span class="K">&amp;</span> <span class="L">Rotate</span>(<span class="K">double</span> <span class="M">a</span>)</p>
+<p class="N">Rotates transformation matrix by <span class="M">a</span> radians. Cannot be used as path specific attribute change.</p>
+<p class="I">&nbsp;</p>
+<hr><p class="I">&nbsp;</p>
+<p id="Upp::Painter::Scale(double,double)" class="J">Painter<span class="K">&amp;</span> <span class="L">Scale</span>(<span class="K">double</span> <span class="M">scalex</span>, <span class="K">double</span> <span class="M">scaley</span>)</p>
+<p class="N">Scales the transformation by <span class="M">scalex</span>, <span class="M">scaley</span> factors. Cannot be used as path specific attribute change.</p>
+<p class="I">&nbsp;</p>
+<hr><p class="I">&nbsp;</p>
+<p id="Upp::Painter::Scale(double)" class="J">Painter<span class="K">&amp;</span> <span class="L">Scale</span>(<span class="K">double</span> <span class="M">scale</span>)</p>
+<p class="N">Same as Scale( <span class="M">scale</span>, <span class="M">scale</span>).</p>
+<p class="I">&nbsp;</p>
+<p class="A">&nbsp;</p>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr><td width="100%"><table width="100%" class="F"><colgroup><col width="100%"></colgroup>
+<tr><td class="G"><p class="H">Other operations</p>
+</td>
+</tr>
+</table></td>
+</tr></table>
+<p class="I">&nbsp;</p>
+<p id="Upp::Painter::Clear(const Upp::RGBA&)" class="J"><span class="K">void</span> <span class="L">Clear</span>(<span class="K">const</span> RGBA<span class="K">&amp;</span> <span class="M">color </span><span class="K">=</span> RGBAZero())</p>
+<p class="N">Sets all values in the target canvas to color. This is usually the first operation performed. Default RGBAZero() values sets canvas to be initially completely transparent.</p>
+<p class="I">&nbsp;</p>
+<hr><p class="I">&nbsp;</p>
+<p id="Upp::Painter::Paint(const Upp::Painting&)" class="J"><span class="K">void</span> <span class="L">Paint</span>(<span class="K">const</span> Painting<span class="K">&amp;</span> <span class="M">p</span>)</p>
+<p class="N">Replays all painting commands contained Painting object (which can be created using PaintingPainter class)</p>
+<p class="I">&nbsp;</p>
+<hr><p class="I">&nbsp;</p>
+<p id="Upp::Painter::Clip()" class="J">Painter<span class="K">&amp;</span> <span class="L">Clip</span>()</p>
+<p class="N">Converts current path into clipping region and combines it with existing clipping region. This new clipping region is then valid until next End command. .</p>
+<p class="I">&nbsp;</p>
+<hr><p class="I">&nbsp;</p>
+<p id="Upp::Painter::BeginOnPath(double,bool)" class="J"><span class="K">void</span> <span class="L">BeginOnPath</span>(<span class="K">double</span> <span class="M">q</span>, <span class="K">bool</span> <span class="M">absolute</span> <span class="K">=</span> <span class="K">false</span>)</p>
+<p class="N">Does takes current path, does Begin operation, then sets the current transformation so that it lies on current path at length <span class="M">q</span> (if <span class="M">absolute</span> is true, it is length of path, ratio of length of path otherwise (0 is the start of path, 1 end of path) and is rotated in the direction of the path. The path is extrapolated on either side by line with the last path direction to cover positions outside the path. This transformation is valid till the End command.</p>
+<p class="I">&nbsp;</p>
+<hr><p class="I">&nbsp;</p>
+<p id="Upp::Painter::BeginMask()" class="J"><span class="K">void</span> <span class="L">BeginMask</span>()</p>
+<p class="N">Starts alpha mask definition. Anything drawn since BeginMask till End command is not really drawn to the canvas and only alpha value are stored as mask that is, after the End command, combined with current alpha mask and used for alpha masking.</p>
+<p class="I">&nbsp;</p>
+<hr><p class="I">&nbsp;</p>
+<p id="Upp::Painter::EndPath()" class="J"><span class="K">void</span> <span class="L">EndPath</span>()</p>
+<p class="N">Simply cancels the last path without drawing anything. This is occasionally useful with complex drawing code.</p>
+<p class="I">&nbsp;</p>
+<p class="I">&nbsp;</p>
+<p class="I">&nbsp;</p>
+<p class="A">&nbsp;</p>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr><td width="100%"><table width="100%" class="C"><colgroup><col width="100%"></colgroup>
+<tr><td class="D"><p class="E">NilPainter</p>
+</td>
+</tr>
+</table></td>
+</tr></table>
+<p class="A">&nbsp;</p>
+<p id="Upp::NilPainter" class="R"><span class="L">NilPainter</span> <span class="K">:</span> <span class="K">public</span> Painter</p>
+<p class="N">NilPainter is special variant of Painter that simply ignores all invoked operation. It is useful in more complex code where e.g. the same routine is first used with NilPainter for calculating dimension of display output and then in second pass for actual painting.</p>
+</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>
+<TABLE BORDER="0" WIDTH="100%"><TR><TD></TD>
+</TR>
+</TABLE>
+<TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" BGCOLOR="#FFFFFF" WIDTH="100%" style="border-style: solid; border-width: 1px; border-color: #6E89AE;padding: 10px;;"><TR><TD><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%"><TR><TD><p class="A"><span class="B"> </span><a href="www$uppweb$contribweb$en-us.html">Do you want to contribute?</a></p>
+</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>
+<script type="text/javascript">var a={};var p=window.location.pathname.split("/");p=p[p.length-1];var s='<select id="lang" onchange="window.location=document.getElementById(\'lang\').value;">';for(l in a){if(p==l){d=" selected=1"}else{d=""}s+='<option value="'+l+'"'+d+'>'+a[l]+'</option>'}s+='</select>';var d=document.createElement('div');d.innerHTML=s;var c=document.getElementById('langs');c.replaceChild(d,c.firstChild);document.getElementById('langbox').style.display='block';</script></BODY>

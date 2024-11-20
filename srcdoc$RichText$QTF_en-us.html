@@ -1,0 +1,1777 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en-us">
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
+<META NAME="Generator" CONTENT="U++ HTML Package">
+<META NAME="Description" CONTENT="Quixotic Text Format (QTF) is the native format of U++ rich texts (formatted texts). It is byte oriented format. Bytes with values 2-31 are ignored.">
+<TITLE>QTF - Quixotic Text Format :: U++</TITLE>
+<STYLE TYPE="text/css"><!--
+.A{margin:0px 0px 0px 0px;text-indent:0px;text-align:left;color:#000000;font-family:sans-serif;font-size:10pt;font-weight:normal;font-style:normal;}
+.B{font-size:12pt;}
+.C{margin:0px 0px 16px 0px;text-indent:0px;text-align:left;color:#000000;font-family:serif;font-size:24pt;font-weight:bold;font-style:normal;}
+.D{margin:16px 0px 0px 0px;text-indent:0px;text-align:left;color:#000000;font-family:sans-serif;font-size:16pt;font-weight:bold;font-style:normal;}
+.E{margin:8px 0px 8px 0px;text-indent:0px;text-align:left;color:#000000;font-family:sans-serif;font-size:10pt;font-weight:normal;font-style:normal;line-height:150%}
+.F{font-weight:bold;}
+.G{margin:16px 0px 0px 0px;text-indent:0px;text-align:left;color:#000000;font-family:sans-serif;font-size:14pt;font-weight:bold;font-style:normal;}
+.H{color:#008000;}
+.I{margin:0px 0px 0px 0px;text-indent:0px;text-align:left;color:#008000;font-family:sans-serif;font-size:10pt;font-weight:bold;font-style:normal;}
+.J{margin:0px 0px 0px 0px;text-indent:0px;text-align:left;color:#800000;font-family:monospace;font-size:9pt;font-weight:bold;font-style:normal;}
+.K{color:#8000ff;}
+.L{border-collapse:collapse;table-layout:auto;border: 1px solid #000000;}
+.M{padding: 3px 5px 3px 5px;border-left: 1px solid #000000;border-top: 1px solid #000000;border-right: 1px solid #000000;border-bottom: 1px solid #000000;background-color:#FFFFFF;vertical-align:middle;}
+.N{margin:0px 0px 0px 0px;text-indent:0px;text-align:left;color:#000000;font-family:sans-serif;font-size:10pt;font-weight:bold;font-style:normal;}
+.O{padding: 0px 0px 0px 0px;border-left: 1px solid #000000;border-top: 1px solid #000000;border-right: 1px solid #000000;border-bottom: 1px solid #000000;background-color:#000000;vertical-align:middle;}
+.P{padding: 0px 0px 0px 0px;border-left: 1px solid #000000;border-top: 1px solid #000000;border-right: 1px solid #000000;border-bottom: 1px solid #000000;background-color:#C0C0C0;vertical-align:middle;}
+.Q{padding: 0px 0px 0px 0px;border-left: 1px solid #000000;border-top: 1px solid #000000;border-right: 1px solid #000000;border-bottom: 1px solid #000000;background-color:#FFFFFF;vertical-align:middle;}
+.R{padding: 0px 0px 0px 0px;border-left: 1px solid #000000;border-top: 1px solid #000000;border-right: 1px solid #000000;border-bottom: 1px solid #000000;background-color:#800000;vertical-align:middle;}
+.S{padding: 0px 0px 0px 0px;border-left: 1px solid #000000;border-top: 1px solid #000000;border-right: 1px solid #000000;border-bottom: 1px solid #000000;background-color:#008000;vertical-align:middle;}
+.T{padding: 0px 0px 0px 0px;border-left: 1px solid #000000;border-top: 1px solid #000000;border-right: 1px solid #000000;border-bottom: 1px solid #000000;background-color:#000080;vertical-align:middle;}
+.U{padding: 0px 0px 0px 0px;border-left: 1px solid #000000;border-top: 1px solid #000000;border-right: 1px solid #000000;border-bottom: 1px solid #000000;background-color:#FF0000;vertical-align:middle;}
+.V{padding: 0px 0px 0px 0px;border-left: 1px solid #000000;border-top: 1px solid #000000;border-right: 1px solid #000000;border-bottom: 1px solid #000000;background-color:#E0E0E0;vertical-align:middle;}
+.W{padding: 0px 0px 0px 0px;border-left: 1px solid #000000;border-top: 1px solid #000000;border-right: 1px solid #000000;border-bottom: 1px solid #000000;background-color:#00FFFF;vertical-align:middle;}
+.X{padding: 0px 0px 0px 0px;border-left: 1px solid #000000;border-top: 1px solid #000000;border-right: 1px solid #000000;border-bottom: 1px solid #000000;background-color:#FFFF00;vertical-align:middle;}
+.Y{margin:0px 0px 0px 0px;text-indent:0px;text-align:left;color:#000000;font-family:sans-serif;font-size:8pt;font-weight:normal;font-style:normal;}
+.Z{margin:0px 0px 0px 0px;text-indent:0px;text-align:left;color:#8000ff;font-family:monospace;font-size:10pt;font-weight:bold;font-style:normal;}
+.AA{padding: 0px 0px 0px 0px;border-left: 1px solid #000000;border-top: 1px solid #000000;border-right: 1px solid #000000;border-bottom: 1px solid #000000;background-color:#008080;vertical-align:middle;}
+.AB{padding: 0px 0px 0px 0px;border-left: 1px solid #000000;border-top: 1px solid #000000;border-right: 1px solid #000000;border-bottom: 1px solid #000000;background-color:#8000FF;vertical-align:middle;}
+.AC{padding: 0px 0px 0px 0px;border-left: 1px solid #000000;border-top: 1px solid #000000;border-right: 1px solid #000000;border-bottom: 1px solid #000000;background-color:#808000;vertical-align:middle;}
+.AD{margin:0px 0px 0px 0px;text-indent:0px;text-align:left;color:#8000ff;font-family:sans-serif;font-size:10pt;font-weight:bold;font-style:normal;}
+.AE{padding: 0px 0px 0px 0px;border-left: 1px solid #000000;border-top: 1px solid #000000;border-right: 1px solid #000000;border-bottom: 1px solid #000000;background-color:#0000FF;vertical-align:middle;}
+.AF{padding: 0px 0px 0px 0px;border-left: 1px solid #000000;border-top: 1px solid #000000;border-right: 1px solid #000000;border-bottom: 1px solid #000000;background-color:#00FF00;vertical-align:middle;}
+.AG{padding: 0px 0px 0px 0px;border-left: 1px solid #000000;border-top: 1px solid #000000;border-right: 1px solid #000000;border-bottom: 1px solid #000000;background-color:#808080;vertical-align:middle;}
+.AH{padding: 0px 0px 0px 0px;border-left: 1px solid #000000;border-top: 1px solid #000000;border-right: 1px solid #000000;border-bottom: 1px solid #000000;background-color:#EEEEEE;vertical-align:middle;}
+.AI{padding: 0px 0px 0px 0px;border-left: 1px solid #000000;border-top: 1px solid #000000;border-right: 1px solid #000000;border-bottom: 1px solid #000000;background-color:#FF00FF;vertical-align:middle;}
+.AJ{padding: 0px 0px 0px 0px;border-left: 1px solid #000000;border-top: 1px solid #000000;border-right: 1px solid #000000;border-bottom: 1px solid #000000;background-color:#FFFFB4;vertical-align:middle;}
+.AK{margin:0px 0px 0px 0px;text-indent:0px;text-align:left;color:#8000ff;font-family:sans-serif;font-size:10pt;font-weight:normal;font-style:normal;}
+.AL{color:#0000ff;font-style:italic;}
+.AM{margin:0px 0px 0px 0px;text-indent:0px;text-align:left;color:#0000ff;font-family:sans-serif;font-size:10pt;font-weight:normal;font-style:italic;}
+.AN{color:#000000;font-style:normal;}
+.AO{border-collapse:collapse;table-layout:auto;border: 2px solid #000000;}
+.AP{margin:0px 0px 0px 0px;text-indent:0px;text-align:left;color:#8000ff;font-family:monospace;font-size:10pt;font-weight:normal;font-style:normal;}
+.AQ{color:#0000ff;font-weight:bold;}
+.AR{font-weight:bold;font-style:italic;}
+.AS{font-style:italic;}
+.AT{padding: 3px 5px 3px 5px;border-left: 1px solid #000000;border-top: 1px solid #000000;border-right: 1px solid #000000;border-bottom: 1px solid #000000;background-color:#E5E5F8;vertical-align:top;}
+.AU{margin:0px 0px 0px 0px;text-indent:0px;text-align:left;color:#000000;font-family:sans-serif;font-size:10pt;font-weight:bold;font-style:italic;}
+.AV{padding: 3px 5px 3px 5px;border-left: 1px solid #000000;border-top: 1px solid #000000;border-right: 1px solid #000000;border-bottom: 1px solid #000000;background-color:#FFFFFF;vertical-align:top;}
+.AW{margin:0px 0px 0px 0px;text-indent:0px;text-align:left;color:#0000ff;font-family:monospace;font-size:10pt;font-weight:normal;font-style:italic;}
+.AX{color:#8000ff;font-style:normal;}
+.AY{color:#800000;font-family:monospace;font-weight:bold;}
+.AZ{color:#0000ff;}
+.BA{color:#8000ff;font-weight:bold;}
+.BB{color:#000000;}
+.BC{color:#000000;font-style:italic;}
+.BD{color:#8000ff;font-family:monospace;}
+.BE{margin:0px 0px 0px 0px;text-indent:0px;text-align:left;color:#800000;font-family:monospace;font-size:10pt;font-weight:bold;font-style:normal;}
+.BF{color:#000000;font-family:sans-serif;font-weight:normal;}
+.BG{color:#0000ff;font-family:monospace;font-style:italic;}
+.BH{color:#000080;}
+.BI{margin:0px 0px 0px 0px;text-indent:0px;text-align:left;color:#0000ff;font-family:sans-serif;font-size:10pt;font-weight:normal;font-style:normal;}
+.BJ{margin:0px 0px 0px 0px;text-indent:0px;text-align:left;color:#800000;font-family:monospace;font-size:10pt;font-weight:normal;font-style:normal;}
+.BK{margin:8px 0px 8px 0px;text-indent:0px;text-align:left;color:#000000;font-family:sans-serif;font-size:10pt;font-weight:normal;font-style:italic;line-height:150%}
+.BL{font-style:normal;}
+.BM{margin:0px 0px 0px 0px;text-indent:0px;text-align:left;color:#000000;font-family:sans-serif;font-size:12pt;font-weight:normal;font-style:normal;}
+.BN{margin:0px 0px 0px 0px;text-indent:0px;text-align:left;color:#800000;font-family:monospace;font-size:8pt;font-weight:bold;font-style:normal;}
+.BO{font-weight:normal;}
+.BP{margin:0px 0px 0px 0px;text-indent:0px;text-align:left;color:#000000;font-family:monospace;font-size:10pt;font-weight:normal;font-style:normal;}
+.BQ{font-family:sans-serif;}
+.BR{font-family:serif;}
+.BS{margin:0px 0px 0px 0px;text-indent:0px;text-align:left;color:#000000;font-family:sans-serif;font-size:48pt;font-weight:normal;font-style:normal;}
+.BT{font-size:6pt;}
+.BU{font-size:8pt;}
+.BV{font-size:10pt;}
+.BW{font-size:16pt;}
+.BX{font-size:20pt;}
+.BY{font-size:24pt;}
+.BZ{font-size:28pt;}
+.CA{font-size:36pt;}
+.CB{margin:0px 0px 0px 0px;text-indent:0px;text-align:left;color:#000000;font-family:sans-serif;font-size:60pt;font-weight:normal;font-style:normal;}
+.CC{margin:0px 0px 0px 0px;text-indent:0px;text-align:left;color:#000000;font-family:sans-serif;font-size:10pt;font-weight:normal;font-style:normal;background-color:#ffdcc8;}
+.CD{margin:0px 0px 40px 0px;text-indent:0px;text-align:left;color:#000000;font-family:sans-serif;font-size:10pt;font-weight:normal;font-style:normal;}
+.CE{display:list-item;list-style-type:disc;margin:0px 0px 0px 20px;text-indent:0px;text-align:left;color:#000000;font-family:sans-serif;font-size:10pt;font-weight:normal;font-style:normal;}
+.CF{display:list-item;list-style-type:circle;margin:0px 0px 0px 20px;text-indent:0px;text-align:left;color:#000000;font-family:sans-serif;font-size:10pt;font-weight:normal;font-style:normal;}
+.CG{display:list-item;list-style-type:square;margin:0px 0px 0px 20px;text-indent:0px;text-align:left;color:#000000;font-family:sans-serif;font-size:10pt;font-weight:normal;font-style:normal;}
+.CH{border-collapse:collapse;table-layout:auto;border: 10px solid #000080;}
+.CI{padding: 3px 5px 3px 5px;border-left: 20px solid #008000;border-top: 20px solid #008000;border-right: 20px solid #008000;border-bottom: 20px solid #008000;background-color:#FFFFFF;vertical-align:middle;}
+.CJ{padding: 3px 5px 3px 12px;border-left: 8px solid #FF0000;border-top: 1px solid #000000;border-right: 1px solid #000000;border-bottom: 1px solid #000000;background-color:#800000;vertical-align:middle;}
+.CK{margin:0px 0px 0px 0px;text-indent:0px;text-align:left;color:#800000;font-family:sans-serif;font-size:10pt;font-weight:bold;font-style:normal;}
+.CL{border-collapse:collapse;table-layout:auto;border: 0px solid #000000;}
+.CM{padding: 10px 10px 10px 10px;border-left: 6px solid #000000;border-top: 6px solid #000000;border-right: 6px solid #000000;border-bottom: 6px solid #000000;background-color:#FFFFFF;vertical-align:middle;}
+a.l1         { text-decoration:none; font-size: 8pt; font-family: sans-serif; font-weight: normal; }
+a.l1:link    { color:#000000; }
+a.l1:visited { color:#000080; }
+a.l1:hover   { color:#9933CC; }
+a.l1:active  { color:#000000; }
+a.l2         { text-decoration:none; font-size: 12pt; font-family: sans-serif; font-variant: small-caps; }
+a.l2:link    { color:#0066FF; }
+a.l2:visited { color:#FF6600; }
+a.l2:hover   { color:#BC0624; }
+a.l2:active  { color:#BC0024; }
+
+-->
+</STYLE>
+<META NAME="keywords" CONTENT="framework, toolkit, widget, c++, visual, studio, dev-cpp, builder, ide, class, component,wxwidgets, qt, rapid, application, development, rad, mfc, linux, macos, gui, sdl, directx, desktop"><META name="robots" content="index,follow">
+<LINK rel="alternate" type="application/rss+xml" title="SVN changes" href="svnchanges.xml">
+<LINK rel="shortcut icon" type="image/png" href="favicon.png">
+</HEAD><BODY BGCOLOR="#D2D9D2" ALINK="#800000" LINK="#000000" VLINK="#000080"><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%"><TR><TD COLSPAN="3"><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%" BGCOLOR="#FFFFFF" style="border: 1px solid #6E89AE;padding-left: 10px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;"><TR><TD><A HREF="index.html"><IMG SRC="0i.png" ALT="" BORDER="0"></A>
+</TD>
+<TD ALIGN="RIGHT" VALIGN="BOTTOM" STYLE="padding-bottom: 5px; background-image: url('1i.png')"><span style="font-size: 14pt; font-family: sans-serif;"><script type="text/javascript"><!--
+google_ad_client = "pub-1082147624384270";
+google_ad_width = 468;
+google_ad_height = 60;
+google_ad_format = "468x60_as";
+google_ad_type = "text_image";
+google_ad_channel = "";
+google_color_border = "336699";
+google_color_bg = "FFFFFF";
+google_color_link = "0000FF";
+google_color_text = "000000";
+google_color_url = "008000";
+//--></script>
+<script type="text/javascript"
+  src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+&nbsp;&nbsp;</span>
+</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>
+<TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%"><TR><TD COLSPAN="3" BGCOLOR="#D2D9D2" HEIGHT="6"></TD>
+</TR>
+<TR><TD VALIGN="TOP" ALIGN="CENTER"><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="160"><TR><TD ALIGN="CENTER"><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%" BGCOLOR="#FFFFFF" style="border-style: solid; border-width: 1px; border-color: #6E89AE;padding: 0px"><TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px;"><A HREF="www$uppweb$overview$en-us.html" CLASS="l1">Overview</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$examples$en-us.html" CLASS="l1">Examples</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$ss$en-us.html" CLASS="l1">Screenshots</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$comparison$en-us.html" CLASS="l1">Comparisons</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$apps$en-us.html" CLASS="l1">Applications</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$download$en-us.html" CLASS="l1">Download</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$documentation$en-us.html" CLASS="l1">Documentation</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$Tutorials$en-us.html" CLASS="l1">Tutorials</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="app$ide$UppHub$en-us.html" CLASS="l1">UppHub</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$Roadmap$en-us.html" CLASS="l1">Status & Roadmap</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$FAQ$en-us.html" CLASS="l1">FAQ</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="app$ide$About$en-us.html" CLASS="l1">Authors & License</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="https://www.ultimatepp.org/forums" CLASS="l1">Forums</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$Funding$en-us.html" CLASS="l1">Funding U++</A>
+</TD>
+</TR>
+</TABLE>
+<TABLE BORDER="0" WIDTH="100%"><TR><TD></TD>
+</TR>
+</TABLE>
+<TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%" BGCOLOR="#FFFFFF" style="border-style: solid; border-width: 1px; border-color: #6E89AE;padding: 0px"><TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('3i.png'); border: 0px solid black;padding-left:12px; padding-right:0px; padding-top:1px; padding-bottom:1px;color:#FFFFFF;"><B><span style="font-size: 8pt; font-family: sans-serif;">Search on this site</span>
+</B>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:6px; padding-right:0px; padding-top:4px; padding-bottom:4px;border-top: 1px solid #6E89AE;"><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%"><TR><TD><IMG SRC="4i.png" ALT="" BORDER="0"></TD>
+<TD><FORM ACTION="https://www.google.com/search" METHOD="GET" STYLE="margin:0px;padding:0px;"><INPUT TYPE="HIDDEN" NAME="ie" VALUE="UTF-8"><INPUT TYPE="HIDDEN" NAME="oe" VALUE="UTF-8"><INPUT TYPE="TEXT" NAME="q" SIZE="15" MAXLENGTH="256" placeholder="Site search"><INPUT TYPE="HIDDEN" NAME="sitesearch" VALUE="ultimatepp.org"></FORM>
+</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>
+<TABLE BORDER="0" WIDTH="100%"><TR><TD></TD>
+</TR>
+</TABLE>
+<br><div id="fb-root"></div>
+<script type="text/javascript">(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) {return;}
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+<div class="fb-like" data-href="https://www.facebook.com/pages/Upp-Framework/262346610476027?sk=wall" data-send="false" data-layout="button_count" data-width="160" data-show-faces="false" data-font="arial"></div>
+<br><br><script type="text/javascript"><!--
+google_ad_client = "pub-1082147624384270";
+google_ad_width = 160;
+google_ad_height = 600;
+google_ad_format = "160x600_as";
+google_ad_type = "text_image";
+google_ad_channel = "";
+google_color_border = "336699";
+google_color_bg = "FFFFFF";
+google_color_link = "0000FF";
+google_color_text = "000000";
+google_color_url = "008000";
+//--></script>
+<script type="text/javascript"
+  src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script><br><br><script type="text/javascript"><!--
+google_ad_client = "pub-1082147624384270";
+google_ad_width = 160;
+google_ad_height = 90;
+google_ad_format = "160x90_0ads_al_s";
+google_ad_channel = "";
+google_color_border = "336699";
+google_color_bg = "FFFFFF";
+google_color_link = "0000FF";
+google_color_text = "000000";
+google_color_url = "008000";
+//--></script>
+<script type="text/javascript"
+  src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+<br><br><br><br><br><br><A HREF="https://sourceforge.net/projects/upp/"><IMG SRC="https://sourceforge.net/sflogo.php?group_id=93970&amp;type=2" ALT="SourceForge.net Logo" BORDER="0" WIDTH="125" HEIGHT="37"></A>
+<br><br><A HREF="https://flathub.org/en/apps/org.ultimatepp.TheIDE"><IMG SRC="5i.png" ALT="SourceForge.net Logo" BORDER="0" WIDTH="125" HEIGHT="37"></A>
+<br><br><div style="background-color:#ffffff;width:125;height:35"><A HREF="https://github.com/ultimatepp"><IMG SRC="6i.png" ALT="GitHub Logo" BORDER="0" WIDTH="125" HEIGHT="35"></A>
+</div><br><div style="background-color:#ffffff;width:125;height:35"><div style="height:5"></div><A HREF="https://discord.gg/8XzqQzXZzb"><IMG SRC="https://assets-global.website-files.com/6257adef93867e50d84d30e2/636e0b5061df29d55a92d945_full_logo_blurple_RGB.svg" ALT="Discord Logo" BORDER="0" WIDTH="125" HEIGHT="25"></A>
+</div><br></TD>
+</TR>
+</TABLE>
+</TD>
+<TD VALIGN="TOP" BGCOLOR="#D2D9D2"><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="6"><TR><TD></TD>
+</TR>
+</TABLE>
+</TD>
+<TD VALIGN="TOP" WIDTH="100%" BGCOLOR="#D2D9D2"><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" BGCOLOR="#FFFFFF" WIDTH="100%" style="border-style: solid; border-width: 1px; border-color: #6E89AE;padding: 10px;;"><TR><TD><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%"><TR><TD><p class="C">QTF - Quixotic Text Format</p>
+<hr><p class="D">Table of contents</p>
+<p class="A">&nbsp;</p>
+<p class="A"><a href="srcdoc$RichText$QTF_en-us.html#1">1. Definition</a></p>
+<p class="A"><a href="srcdoc$RichText$QTF_en-us.html#2">2. Format overview</a></p>
+<p class="A"> &nbsp;&nbsp;&nbsp;<a href="srcdoc$RichText$QTF_en-us.html#2_1">2.1 Symbols</a></p>
+<p class="A"> &nbsp;&nbsp;&nbsp;<a href="srcdoc$RichText$QTF_en-us.html#2_2">2.2 Colors</a></p>
+<p class="A"> &nbsp;&nbsp;&nbsp;<a href="srcdoc$RichText$QTF_en-us.html#2_3">2.3 Basic QTF codes</a></p>
+<p class="A"> &nbsp;&nbsp;&nbsp;<a href="srcdoc$RichText$QTF_en-us.html#2_4">2.4 Character and paragraph formatting</a></p>
+<p class="A"> &nbsp;&nbsp;&nbsp;<a href="srcdoc$RichText$QTF_en-us.html#2_5">2.5 Styles</a></p>
+<p class="A"> &nbsp;&nbsp;&nbsp;<a href="srcdoc$RichText$QTF_en-us.html#2_6">2.6 Objects</a></p>
+<p class="A"> &nbsp;&nbsp;&nbsp;<a href="srcdoc$RichText$QTF_en-us.html#2_7">2.7 iml format</a></p>
+<p class="A"> &nbsp;&nbsp;&nbsp;<a href="srcdoc$RichText$QTF_en-us.html#2_8">2.8 Fields</a></p>
+<p class="A"> &nbsp;&nbsp;&nbsp;<a href="srcdoc$RichText$QTF_en-us.html#2_9">2.9 Tables</a></p>
+<p class="A"> &nbsp;&nbsp;&nbsp;<a href="srcdoc$RichText$QTF_en-us.html#2_10">2.10 Global Header and Footer</a></p>
+<p class="A"><a href="srcdoc$RichText$QTF_en-us.html#3">3. Examples</a></p>
+<p class="A">&nbsp;</p>
+<hr><p id="1" class="D">1. Definition</p>
+<p class="E"><span class="F">Quixotic Text Format</span> (<span class="F">QTF</span>) is the native format of U++ rich texts (formatted texts). It is byte oriented format. Bytes with values 2-31 are ignored. Other values are interpreted as characters or formatting commands.</p>
+<p class="E">QTF name existed before U++ framework received its final name, so its name does not directly refer to it. For backwards compatibility reasons the community never decided to rename it.</p>
+<hr><p id="2" class="D">2. Format overview</p>
+<p id="2_1" class="G">2.1 Symbols</p>
+<p class="E">Letters (<span class="H">a</span>-<span class="H">zA</span>-<span class="H">Z</span>), numbers (<span class="H">0</span>-<span class="H">9</span>), space (32) and characters</p>
+<p class="A">&nbsp;</p>
+<p class="I">. , ; ! ? % ( ) / &lt; &gt; #</p>
+<p class="A">&nbsp;</p>
+<p class="E">and bytes greater than 127 are guaranteed to be never used as command characters (not even in future versions of QTF). Other characters should be prefixed with escape character ` (reverse apostrophe). Group of characters can be escaped using byte 1. Example:</p>
+<p class="A">&nbsp;</p>
+<p class="J">&quot;\1a[x]\1[* bold]&quot;</p>
+<p class="A">&nbsp;</p>
+<p class="E">Byte 0 represents the end of input sequence.</p>
+<p class="E">Dimension units of QTF are dots - one dot is defined as 1/600 of inch.</p>
+<p id="2_2" class="G">2.2 Colors</p>
+<p class="E">Colors are described as either number <span class="K">0</span>-<span class="K">9</span>, with meaning</p>
+<p class="A">&nbsp;</p>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr><td><table border="0" width= 19px><tr><td></td></tr></table></td>
+<td width="100%"><table width="100%" class="L"><colgroup><col width="10%"><col width="10%"><col width="10%"><col width="10%"><col width="10%"><col width="10%"><col width="10%"><col width="10%"><col width="10%"><col width="10%"></colgroup>
+<tr><td class="M"><p class="N">0</p>
+</td>
+<td class="M"><p class="N">1</p>
+</td>
+<td class="M"><p class="N">2</p>
+</td>
+<td class="M"><p class="N">3</p>
+</td>
+<td class="M"><p class="N">4</p>
+</td>
+<td class="M"><p class="N">5</p>
+</td>
+<td class="M"><p class="N">6</p>
+</td>
+<td class="M"><p class="N">7</p>
+</td>
+<td class="M"><p class="N">8</p>
+</td>
+<td class="M"><p class="N">9</p>
+</td>
+</tr>
+<tr><td class="O"><p class="A">&nbsp;</p>
+</td>
+<td class="P"><p class="A">&nbsp;</p>
+</td>
+<td class="Q"><p class="A">&nbsp;</p>
+</td>
+<td class="R"><p class="A">&nbsp;</p>
+</td>
+<td class="S"><p class="A">&nbsp;</p>
+</td>
+<td class="T"><p class="A">&nbsp;</p>
+</td>
+<td class="U"><p class="A">&nbsp;</p>
+</td>
+<td class="V"><p class="A">&nbsp;</p>
+</td>
+<td class="W"><p class="A">&nbsp;</p>
+</td>
+<td class="X"><p class="A">&nbsp;</p>
+</td>
+</tr>
+<tr><td class="M"><p class="Y">Black</p>
+</td>
+<td class="M"><p class="Y">LtGray</p>
+</td>
+<td class="M"><p class="Y">White</p>
+</td>
+<td class="M"><p class="Y">Red</p>
+</td>
+<td class="M"><p class="Y">Green</p>
+</td>
+<td class="M"><p class="Y">Blue</p>
+</td>
+<td class="M"><p class="Y">LtRed</p>
+</td>
+<td class="M"><p class="Y">WhiteGray</p>
+</td>
+<td class="M"><p class="Y">LtCyan</p>
+</td>
+<td class="M"><p class="Y">Yellow</p>
+</td>
+</tr>
+</table></td>
+<td><table border="0" width= 19px><tr><td></td></tr></table></td></tr></table>
+<p class="A">&nbsp;</p>
+<p class="A">or letters</p>
+<p class="A">&nbsp;</p>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr><td><table border="0" width= 19px><tr><td></td></tr></table></td>
+<td width="100%"><table width="100%" class="L"><colgroup><col width="11%"><col width="11%"><col width="11%"><col width="11%"><col width="11%"><col width="11%"><col width="11%"><col width="11%"><col width="11%"></colgroup>
+<tr><td class="M"><p class="Z">b</p>
+</td>
+<td class="M"><p class="Z">c</p>
+</td>
+<td class="M"><p class="Z">g</p>
+</td>
+<td class="M"><p class="Z">k</p>
+</td>
+<td class="M"><p class="Z">l</p>
+</td>
+<td class="M"><p class="Z">m</p>
+</td>
+<td class="M"><p class="Z">o</p>
+</td>
+<td class="M"><p class="Z">r</p>
+</td>
+<td class="M"><p class="Z">y</p>
+</td>
+</tr>
+<tr><td class="T"><p class="A">&nbsp;</p>
+</td>
+<td class="AA"><p class="A">&nbsp;</p>
+</td>
+<td class="S"><p class="A">&nbsp;</p>
+</td>
+<td class="O"><p class="A">&nbsp;</p>
+</td>
+<td class="P"><p class="A">&nbsp;</p>
+</td>
+<td class="AB"><p class="A">&nbsp;</p>
+</td>
+<td class="AC"><p class="A">&nbsp;</p>
+</td>
+<td class="R"><p class="A">&nbsp;</p>
+</td>
+<td class="X"><p class="A">&nbsp;</p>
+</td>
+</tr>
+<tr><td class="M"><p class="Y">Blue</p>
+</td>
+<td class="M"><p class="Y">Cyan</p>
+</td>
+<td class="M"><p class="Y">Green</p>
+</td>
+<td class="M"><p class="Y">Black</p>
+</td>
+<td class="M"><p class="Y">LtGray</p>
+</td>
+<td class="M"><p class="Y">Magenta</p>
+</td>
+<td class="M"><p class="Y">Brown</p>
+</td>
+<td class="M"><p class="Y">Red</p>
+</td>
+<td class="M"><p class="Y">Yellow</p>
+</td>
+</tr>
+</table></td>
+<td><table border="0" width= 19px><tr><td></td></tr></table></td></tr></table>
+<p class="A">&nbsp;</p>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr><td><table border="0" width= 19px><tr><td></td></tr></table></td>
+<td width="100%"><table width="100%" class="L"><colgroup><col width="11%"><col width="11%"><col width="11%"><col width="11%"><col width="11%"><col width="11%"><col width="11%"><col width="11%"><col width="11%"></colgroup>
+<tr><td class="M"><p class="AD">B</p>
+</td>
+<td class="M"><p class="AD">C</p>
+</td>
+<td class="M"><p class="AD">G</p>
+</td>
+<td class="M"><p class="AD">K</p>
+</td>
+<td class="M"><p class="AD">L</p>
+</td>
+<td class="M"><p class="AD">M</p>
+</td>
+<td class="M"><p class="AD">W</p>
+</td>
+<td class="M"><p class="AD">R</p>
+</td>
+<td class="M"><p class="AD">Y</p>
+</td>
+</tr>
+<tr><td class="AE"><p class="A">&nbsp;</p>
+</td>
+<td class="W"><p class="A">&nbsp;</p>
+</td>
+<td class="AF"><p class="A">&nbsp;</p>
+</td>
+<td class="AG"><p class="A">&nbsp;</p>
+</td>
+<td class="AH"><p class="A">&nbsp;</p>
+</td>
+<td class="AI"><p class="A">&nbsp;</p>
+</td>
+<td class="Q"><p class="A">&nbsp;</p>
+</td>
+<td class="U"><p class="A">&nbsp;</p>
+</td>
+<td class="AJ"><p class="A">&nbsp;</p>
+</td>
+</tr>
+<tr><td class="M"><p class="Y">LtBlue</p>
+</td>
+<td class="M"><p class="Y">LtCyan</p>
+</td>
+<td class="M"><p class="Y">LtGreen</p>
+</td>
+<td class="M"><p class="Y">Gray</p>
+</td>
+<td class="M"><p class="Y">WhiteGray</p>
+</td>
+<td class="M"><p class="Y">LtMagenta</p>
+</td>
+<td class="M"><p class="Y">White</p>
+</td>
+<td class="M"><p class="Y">LtRed</p>
+</td>
+<td class="M"><p class="Y">LtYellow</p>
+</td>
+</tr>
+</table></td>
+<td><table border="0" width= 19px><tr><td></td></tr></table></td></tr></table>
+<p class="A">&nbsp;</p>
+<p class="A">or as the RGB value in form</p>
+<p class="A">&nbsp;</p>
+<p class="AK">(<span class="AL">number</span>.<span class="AL">number</span>.<span class="AL">number</span>)</p>
+<p class="AK">&nbsp;</p>
+<p class="A">where <span class="AL">number</span> is 0-255.</p>
+<p class="A">&nbsp;</p>
+<p class="AM"><span class="AN">Form with single </span>number</p>
+<p class="A">&nbsp;</p>
+<p class="AK">(<span class="AL">number</span>)</p>
+<p class="AK">&nbsp;</p>
+<p class="A">specifies grays.</p>
+<p class="A">&nbsp;</p>
+<p class="A">Letter</p>
+<p class="A">&nbsp;</p>
+<p class="AK">N</p>
+<p class="AK">&nbsp;</p>
+<p class="A">used in place of color designates transparent color.</p>
+<p id="2_3" class="G">2.3 Basic QTF codes</p>
+<p class="E">Basic QTF codes are:</p>
+<p class="A">&nbsp;</p>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr><td><table border="0" width= 19px><tr><td></td></tr></table></td>
+<td width="100%"><table width="100%" class="AO"><colgroup><col width="20%"><col width="79%"></colgroup>
+<tr><td class="M"><p class="AP">_</p>
+</td>
+<td class="M"><p class="A">Hard-space - space that cannot be divided at the end of line.</p>
+</td>
+</tr>
+<tr><td class="M"><p class="AP">&amp;</p>
+</td>
+<td class="M"><p class="A">New paragraph.</p>
+</td>
+</tr>
+<tr><td class="M"><p class="AP">-|</p>
+</td>
+<td class="M"><p class="A">Tabulator</p>
+</td>
+</tr>
+<tr><td class="M"><p class="AP">@$<span class="AQ">hex</span>;</p>
+</td>
+<td class="M"><p class="A">Unicode character as hexadecimal number.</p>
+</td>
+</tr>
+</table></td>
+<td><table border="0" width= 19px><tr><td></td></tr></table></td></tr></table>
+<p class="A">&nbsp;</p>
+<p id="2_4" class="G">2.4 Character and paragraph formatting</p>
+<p class="A">&nbsp;</p>
+<p class="A">Character and paragraph formatting starts with</p>
+<p class="AK">&nbsp;</p>
+<p class="AK">[</p>
+<p class="AK">&nbsp;</p>
+<p class="A">character followed by <span class="AR">character/paragraph formating</span><span class="AS"> sequence</span> ended with single space character and applies to the text until matching</p>
+<p class="A">&nbsp;</p>
+<p class="AK">]</p>
+<p class="AK">&nbsp;</p>
+<p class="A">is encountered.</p>
+<p class="A">&nbsp;</p>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr><td width="100%"><table width="100%" class="AO"><colgroup><col width="18%"><col width="81%"></colgroup>
+<tr><td class="AT" colspan=2><p class="AU">Character/paragraph formating sequence</p>
+</td>
+</tr>
+<tr><td class="AV"><p class="AP">/</p>
+</td>
+<td class="M"><p class="A">Italic.</p>
+</td>
+</tr>
+<tr><td class="AV"><p class="AP">*</p>
+</td>
+<td class="M"><p class="A">Bold.</p>
+</td>
+</tr>
+<tr><td class="AV"><p class="AP">_</p>
+</td>
+<td class="M"><p class="A">Underline.</p>
+</td>
+</tr>
+<tr><td class="AV"><p class="AP">-</p>
+</td>
+<td class="M"><p class="A">Strikeout.</p>
+</td>
+</tr>
+<tr><td class="AV"><p class="AP">c</p>
+</td>
+<td class="M"><p class="A">Capitals.</p>
+</td>
+</tr>
+<tr><td class="AV"><p class="AP">`</p>
+</td>
+<td class="M"><p class="A">Superscript.</p>
+</td>
+</tr>
+<tr><td class="AV"><p class="AP">,</p>
+</td>
+<td class="M"><p class="A">Subscript.</p>
+</td>
+</tr>
+<tr><td class="AV"><p class="AP">d</p>
+</td>
+<td class="M"><p class="A">Dashed underline.</p>
+</td>
+</tr>
+<tr><td class="AV"><p class="AP">T</p>
+</td>
+<td class="M"><p class="A">Non anti aliased font.</p>
+</td>
+</tr>
+<tr><td class="AV"><p class="AP">^<span class="AL">text</span>^</p>
+</td>
+<td class="M"><p class="A">Hyperlink.</p>
+</td>
+</tr>
+<tr><td class="AV"><p class="AP">I<span class="AL">text</span>;</p>
+</td>
+<td class="M"><p class="A">Index entry.</p>
+</td>
+</tr>
+<tr><td class="AV"><p class="AW"><span class="AX">+</span>number</p>
+</td>
+<td class="M"><p class="A">Font height in dots.</p>
+</td>
+</tr>
+<tr><td class="AV"><p class="AP">0</p>
+</td>
+<td class="M"><p class="A">Font height 50 dots (6 points).</p>
+</td>
+</tr>
+<tr><td class="AV"><p class="AP">1</p>
+</td>
+<td class="M"><p class="A">Font height 67 dots (8 points).</p>
+</td>
+</tr>
+<tr><td class="AV"><p class="AP">2</p>
+</td>
+<td class="M"><p class="A">Font height 84 dots (10 points).</p>
+</td>
+</tr>
+<tr><td class="AV"><p class="AP">3</p>
+</td>
+<td class="M"><p class="A">Font height 100 dots (12 points).</p>
+</td>
+</tr>
+<tr><td class="AV"><p class="AP">4</p>
+</td>
+<td class="M"><p class="A">Font height 134 dots (16 points).</p>
+</td>
+</tr>
+<tr><td class="AV"><p class="AP">5</p>
+</td>
+<td class="M"><p class="A">Font height 167 dots (20 points).</p>
+</td>
+</tr>
+<tr><td class="AV"><p class="AP">6</p>
+</td>
+<td class="M"><p class="A">Font height 200 dots (24 points).</p>
+</td>
+</tr>
+<tr><td class="AV"><p class="AP">7</p>
+</td>
+<td class="M"><p class="A">Font height 234 dots (28 points).</p>
+</td>
+</tr>
+<tr><td class="AV"><p class="AP">8</p>
+</td>
+<td class="M"><p class="A">Font height 300 dots (36 points).</p>
+</td>
+</tr>
+<tr><td class="AV"><p class="AP">9</p>
+</td>
+<td class="M"><p class="A">Font height 400 dots (48 points).</p>
+</td>
+</tr>
+<tr><td class="AV"><p class="AW"><span class="AX">@</span>color</p>
+</td>
+<td class="M"><p class="A">Text color.</p>
+</td>
+</tr>
+<tr><td class="AV"><p class="AW"><span class="AX">$</span>color</p>
+</td>
+<td class="M"><p class="A">Text background color.</p>
+</td>
+</tr>
+<tr><td class="AV"><p class="AP">A</p>
+</td>
+<td class="M"><p class="A">Arial font.</p>
+</td>
+</tr>
+<tr><td class="AV"><p class="AP">R</p>
+</td>
+<td class="M"><p class="A">Times New Roman font.</p>
+</td>
+</tr>
+<tr><td class="AV"><p class="AP">C</p>
+</td>
+<td class="M"><p class="A">Courier font.</p>
+</td>
+</tr>
+<tr><td class="AV"><p class="AP">G</p>
+</td>
+<td class="M"><p class="A">Standard GUI font.</p>
+</td>
+</tr>
+<tr><td class="AV"><p class="AP">g</p>
+</td>
+<td class="M"><p class="A">Standard GUI font with standard height.</p>
+</td>
+</tr>
+<tr><td class="AV"><p class="AP">S</p>
+</td>
+<td class="M"><p class="A">Symbol font.</p>
+</td>
+</tr>
+<tr><td class="AV"><p class="AW"><span class="AX">.</span>number</p>
+</td>
+<td class="M"><p class="A">Font with specified font <span class="AL">number</span>.</p>
+</td>
+</tr>
+<tr><td class="AV"><p class="AP">!<span class="AL">text</span>!</p>
+</td>
+<td class="M"><p class="A">Font with face name equal to <span class="AL">text</span>. If such font does not exist on system, Arial is used.</p>
+</td>
+</tr>
+<tr><td class="AV"><p class="AP">{<span class="AL">charset</span>}</p>
+<p class="A">&nbsp;</p>
+</td>
+<td class="M"><p class="A">Character set. It can be defined as either single character</p>
+<p class="A">&nbsp;</p>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr><td><table border="0" width= 66px><tr><td></td></tr></table></td>
+<td width="100%"><table width="100%" class="L"><colgroup><col width="18%"><col width="81%"></colgroup>
+<tr><td class="M"><p class="AP">_</p>
+</td>
+<td class="M"><p class="A">utf-8</p>
+</td>
+</tr>
+<tr><td class="M"><p class="AP">0</p>
+</td>
+<td class="M"><p class="A">windows-1250</p>
+</td>
+</tr>
+<tr><td class="M"><p class="AP">1</p>
+</td>
+<td class="M"><p class="A">windows-1251</p>
+</td>
+</tr>
+<tr><td class="M"><p class="AP">2</p>
+</td>
+<td class="M"><p class="A">windows-1252</p>
+</td>
+</tr>
+<tr><td class="M"><p class="AP">3</p>
+</td>
+<td class="M"><p class="A">windows-1253</p>
+</td>
+</tr>
+<tr><td class="M"><p class="AP">4</p>
+</td>
+<td class="M"><p class="A">windows-1254</p>
+</td>
+</tr>
+<tr><td class="M"><p class="AP">5</p>
+</td>
+<td class="M"><p class="A">windows-1255</p>
+</td>
+</tr>
+<tr><td class="M"><p class="AP">6</p>
+</td>
+<td class="M"><p class="A">windows-1256</p>
+</td>
+</tr>
+<tr><td class="M"><p class="AP">7</p>
+</td>
+<td class="M"><p class="A">windows-1257</p>
+</td>
+</tr>
+<tr><td class="M"><p class="AP">A</p>
+</td>
+<td class="M"><p class="A">iso-8859-1</p>
+</td>
+</tr>
+<tr><td class="M"><p class="AP">B</p>
+</td>
+<td class="M"><p class="A">iso-8859-2</p>
+</td>
+</tr>
+<tr><td class="M"><p class="AP">C</p>
+</td>
+<td class="M"><p class="A">iso-8859-3</p>
+</td>
+</tr>
+<tr><td class="M"><p class="AP">D</p>
+</td>
+<td class="M"><p class="A">iso-8859-4</p>
+</td>
+</tr>
+<tr><td class="M"><p class="AP">E</p>
+</td>
+<td class="M"><p class="A">iso-8859-5</p>
+</td>
+</tr>
+<tr><td class="M"><p class="AP">F</p>
+</td>
+<td class="M"><p class="A">iso-8859-6</p>
+</td>
+</tr>
+<tr><td class="M"><p class="AP">G</p>
+</td>
+<td class="M"><p class="A">iso-8859-7</p>
+</td>
+</tr>
+<tr><td class="M"><p class="AP">H</p>
+</td>
+<td class="M"><p class="A">iso-8859-8</p>
+</td>
+</tr>
+<tr><td class="M"><p class="AP">I</p>
+</td>
+<td class="M"><p class="A">iso-8859-9</p>
+</td>
+</tr>
+<tr><td class="M"><p class="AP">J</p>
+</td>
+<td class="M"><p class="A">iso-8859-10</p>
+</td>
+</tr>
+</table></td>
+<td><table border="0" width= 351px><tr><td></td></tr></table></td></tr></table>
+<p class="A">&nbsp;</p>
+<p class="A">or as the string designating character set (example: <span class="AY">&quot;[{_}&nbsp;...]&quot;</span><span class="F">, </span><span class="AY">&quot;[{windows-1250}&nbsp;...]&quot;</span>).</p>
+</td>
+</tr>
+<tr><td class="AV"><p class="AW"><span class="AX">%</span>lang</p>
+</td>
+<td class="M"><p class="A">Language. It is defined in form <span class="AZ">XX</span>-<span class="AZ">YY</span>, according to ISO 639 and ISO 3166 standards. (example: <span class="AY">&quot;[%EN-US&nbsp;...]&quot;</span>). <span class="AY">&quot;[%00-00&nbsp;&quot;</span> represents &quot;none&quot; language. As special optimization, <span class="BA">%-</span> is equivalent to <span class="K">%</span><span class="AZ">00-00</span> (no language) and</p>
+<p class="A"><span class="K">%%</span> is equivalent to <span class="K">%</span><span class="AZ">EN-US</span>.</p>
+</td>
+</tr>
+<tr><td class="AV"><p class="AP">:<span class="AL">text</span>:</p>
+</td>
+<td class="M"><p class="A">Paragraph label.</p>
+</td>
+</tr>
+<tr><td class="AV"><p class="AP">&lt;</p>
+</td>
+<td class="M"><p class="A">Align paragraph left.</p>
+</td>
+</tr>
+<tr><td class="AV"><p class="AP">=</p>
+</td>
+<td class="M"><p class="A">Center paragraph.</p>
+</td>
+</tr>
+<tr><td class="AV"><p class="AP">&gt;</p>
+</td>
+<td class="M"><p class="A">Align paragraph right.</p>
+</td>
+</tr>
+<tr><td class="AV"><p class="AP">#</p>
+</td>
+<td class="M"><p class="A">Justify paragraph.</p>
+</td>
+</tr>
+<tr><td class="AV"><p class="AW"><span class="AX">l</span>number</p>
+</td>
+<td class="M"><p class="A">Left margin in dots.</p>
+</td>
+</tr>
+<tr><td class="AV"><p class="AW"><span class="AX">r</span>number</p>
+</td>
+<td class="M"><p class="A">Right margin in dots.</p>
+</td>
+</tr>
+<tr><td class="AV"><p class="AW"><span class="AX">i</span>number</p>
+</td>
+<td class="M"><p class="A">Indent in dots.</p>
+</td>
+</tr>
+<tr><td class="AV"><p class="AP">pn</p>
+</td>
+<td class="M"><p class="A">Line spacing 1.0 (default).</p>
+</td>
+</tr>
+<tr><td class="AV"><p class="AP">pw</p>
+</td>
+<td class="M"><p class="A">Line spacing 1.15.</p>
+</td>
+</tr>
+<tr><td class="AV"><p class="AP">ph</p>
+</td>
+<td class="M"><p class="A">Line spacing 1.5.</p>
+</td>
+</tr>
+<tr><td class="AV"><p class="AP">pd</p>
+</td>
+<td class="M"><p class="A">Line spacing 2.0.</p>
+</td>
+</tr>
+<tr><td class="AV"><p class="AW"><span class="AX">H</span>number</p>
+</td>
+<td class="M"><p class="A">Horizontal ruler height (if zero, there is no ruler).</p>
+</td>
+</tr>
+<tr><td class="AV"><p class="AW"><span class="AX">h</span>color</p>
+</td>
+<td class="M"><p class="A">Color of horizontal ruler (default is black).</p>
+</td>
+</tr>
+<tr><td class="AV"><p class="AW"><span class="AX">L</span>number</p>
+</td>
+<td class="M"><p class="A">Style of horizontal ruler line, 0 - solid color, 1 - dots, 2 - dashes</p>
+</td>
+</tr>
+<tr><td class="AV"><p class="AW"><span class="AX">b</span>number</p>
+</td>
+<td class="M"><p class="A">Space before paragraph in dots.</p>
+</td>
+</tr>
+<tr><td class="AV"><p class="AW"><span class="AX">a</span>number</p>
+</td>
+<td class="M"><p class="A">Space after paragraph in dots.</p>
+</td>
+</tr>
+<tr><td class="AV"><p class="AP">P</p>
+</td>
+<td class="M"><p class="A">Page break before paragraph.</p>
+</td>
+</tr>
+<tr><td class="AV"><p class="AP">F</p>
+</td>
+<td class="M"><p class="A">Paragraph will always be the first on page, adding page break if necessary.</p>
+</td>
+</tr>
+<tr><td class="AV"><p class="AP">k</p>
+</td>
+<td class="M"><p class="A">Keep paragraph on single page.</p>
+</td>
+</tr>
+<tr><td class="AV"><p class="AP">K</p>
+</td>
+<td class="M"><p class="AK"><span class="BB">Keep paragraph on same page as next one. Only works well for binding two paragraphs (does not propagate further). If you need to bind more, use organizing table </span>{{*K <span class="BC">text</span>}}</p>
+</td>
+</tr>
+<tr><td class="AV"><p class="AP">Q</p>
+</td>
+<td class="M"><p class="A">Orphan control.</p>
+</td>
+</tr>
+<tr><td class="AV"><p class="AP">n<span class="AL">text</span>;</p>
+</td>
+<td class="M"><p class="A">Text to insert before paragraph number.</p>
+</td>
+</tr>
+<tr><td class="AV"><p class="AP">m<span class="AL">text</span>;</p>
+</td>
+<td class="M"><p class="A">Text to insert after paragraph number.</p>
+</td>
+</tr>
+<tr><td class="AV"><p class="AP">N</p>
+</td>
+<td class="M"><p class="A">Numbering. It is followed by up to 8 characters defining numbering style of each level</p>
+<p class="A">&nbsp;</p>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr><td><table border="0" width= 68px><tr><td></td></tr></table></td>
+<td width="100%"><table width="100%" class="L"><colgroup><col width="8%"><col width="91%"></colgroup>
+<tr><td class="M"><p class="AP">-</p>
+</td>
+<td class="M"><p class="A">Level is not used.</p>
+</td>
+</tr>
+<tr><td class="M"><p class="AP">1</p>
+</td>
+<td class="M"><p class="A">Numbers, starting with 1.</p>
+</td>
+</tr>
+<tr><td class="M"><p class="AP">0</p>
+</td>
+<td class="M"><p class="A">Numbers, starting with 0.</p>
+</td>
+</tr>
+<tr><td class="M"><p class="AP">a</p>
+</td>
+<td class="M"><p class="A">Lowercase letters, starting with a.</p>
+</td>
+</tr>
+<tr><td class="M"><p class="AP">A</p>
+</td>
+<td class="M"><p class="A">Uppercase letters, starting with A.</p>
+</td>
+</tr>
+<tr><td class="M"><p class="AP">i</p>
+</td>
+<td class="M"><p class="A">Lowercase roman numbers, starting with i.</p>
+</td>
+</tr>
+<tr><td class="M"><p class="AP">I</p>
+</td>
+<td class="M"><p class="A">Uppercase roman numbers, starting with I</p>
+</td>
+</tr>
+</table></td>
+<td><table border="0" width= 172px><tr><td></td></tr></table></td></tr></table>
+<p class="A">&nbsp;</p>
+<p class="A">If after 8 numbering style characters there is a '<span class="K">!</span>' suffix, the reset is performed for those numbering levels that are used. If all levels are not used, reset is performed for the top-level.</p>
+</td>
+</tr>
+<tr><td class="AV"><p class="AP">o</p>
+</td>
+<td class="M"><p class="A">Bullet style.</p>
+</td>
+</tr>
+<tr><td class="AV"><p class="AP">O_</p>
+</td>
+<td class="M"><p class="A">No bullet.</p>
+</td>
+</tr>
+<tr><td class="AV"><p class="AP">O0</p>
+</td>
+<td class="M"><p class="A">Bullet style.</p>
+</td>
+</tr>
+<tr><td class="AV"><p class="AP">O1</p>
+</td>
+<td class="M"><p class="A">Bullet style.</p>
+</td>
+</tr>
+<tr><td class="AV"><p class="AP">O2</p>
+</td>
+<td class="M"><p class="A">Bullet style.</p>
+</td>
+</tr>
+<tr><td class="AV"><p class="AP">O3</p>
+</td>
+<td class="M"><p class="A">Bullet style.</p>
+</td>
+</tr>
+<tr><td class="AV"><p class="AP">O9</p>
+</td>
+<td class="M"><p class="A">Text bullet style.</p>
+</td>
+</tr>
+<tr><td class="AV"><p class="AW"><span class="AX">t</span>number</p>
+</td>
+<td class="M"><p class="A">Default tab size.</p>
+</td>
+</tr>
+<tr><td class="AV"><p class="AP">~</p>
+</td>
+<td class="M"><p class="A">Tabulator setting. Can be followed by character designating type of tabulation</p>
+<p class="A">&nbsp;</p>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr><td><table border="0" width= 68px><tr><td></td></tr></table></td>
+<td width="100%"><table width="100%" class="L"><colgroup><col width="8%"><col width="91%"></colgroup>
+<tr><td class="M"><p class="AP">&gt;</p>
+</td>
+<td class="M"><p class="A">Normal tabulation.</p>
+</td>
+</tr>
+<tr><td class="M"><p class="AP">&lt;</p>
+</td>
+<td class="M"><p class="A">Left tabulation.</p>
+</td>
+</tr>
+<tr><td class="M"><p class="AP">=</p>
+</td>
+<td class="M"><p class="A">Centered tabulation.</p>
+</td>
+</tr>
+</table></td>
+<td><table border="0" width= 172px><tr><td></td></tr></table></td></tr></table>
+<p class="A">&nbsp;</p>
+<p class="A">(default is normal) and by filler character </p>
+<p class="A">&nbsp;</p>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr><td><table border="0" width= 68px><tr><td></td></tr></table></td>
+<td width="100%"><table width="100%" class="L"><colgroup><col width="33%"><col width="34%"><col width="32%"></colgroup>
+<tr><td class="M"><p class="AP">.</p>
+</td>
+<td class="M"><p class="AP">-</p>
+</td>
+<td class="M"><p class="AP">_</p>
+</td>
+</tr>
+</table></td>
+<td><table border="0" width= 172px><tr><td></td></tr></table></td></tr></table>
+<p class="A">&nbsp;</p>
+<p class="A">and is followed by number specifying tabulator position in dots. The number can be preceded by <span class="BD">&gt;</span> - in that case, position is relative to the right side.</p>
+<p class="A">&nbsp;</p>
+<p class="A">When followed by <span class="BD">~</span> (<span class="AY">&quot;~~&quot;</span>), clears all current tab settings (including those inherited from paragraph style).</p>
+</td>
+</tr>
+<tr><td class="AV"><p class="AP">;</p>
+</td>
+<td class="M"><p class="BE"><span class="BF">NOP &nbsp;separator. In some cases it is needed to separate command code. Example: </span>&quot;[l200;4 &quot;</p>
+</td>
+</tr>
+<tr><td class="AV"><p class="AW"><span class="AX">s</span>number</p>
+<p class="AW"><span class="AX">s</span>&quot;text&quot;</p>
+</td>
+<td class="AV"><p class="A">Paragraph style, either defined by style number, or style name.</p>
+</td>
+</tr>
+<tr><td class="AV"><p class="AP"><span class="BB">tP</span><span class="AL">qtf</span>^^<span class="AL">qtf</span>^^</p>
+</td>
+<td class="AV"><p class="A">New text header &nbsp;/ footer, <span class="BG">qtf</span> is complete embeded QTF representing header/footer. This QTF can contain field<span class="BH"> {:VALUE:PAGENUMBER:} </span>to represent page number and<span class="BH"> {:VALUE:PAGECOUNT:}</span> to represent total number of pages.</p>
+</td>
+</tr>
+</table></td>
+</tr></table>
+<p class="A">&nbsp;</p>
+<p id="2_5" class="G">2.5 Styles</p>
+<p class="E">Paragraph styles are defined using normal character/paragraph formatting sequence with</p>
+<p class="A">&nbsp;</p>
+<p class="AM"><span class="AX">$$</span>number<span class="AX">,</span>nnumber<span class="AX">#</span>uuid<span class="AX">:</span>name</p>
+<p class="A">&nbsp;</p>
+<p class="E">instead of text, where</p>
+<p class="A">&nbsp;</p>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr><td width="100%"><table width="100%" class="AO"><colgroup><col width="18%"><col width="81%"></colgroup>
+<tr><td class="AV"><p class="BI">number</p>
+</td>
+<td class="AV"><p class="A">Number of style - can be used with <span class="K">s</span> paragraph format command code.</p>
+</td>
+</tr>
+<tr><td class="AV"><p class="BI">nnumber</p>
+</td>
+<td class="AV"><p class="A">Number of style of next paragraph - used by RichText editor when inserting paragraphs.</p>
+</td>
+</tr>
+<tr><td class="AV"><p class="BI">uuid</p>
+</td>
+<td class="AV"><p class="A">32 digit unique hexadecimal identifier of style.</p>
+</td>
+</tr>
+<tr><td class="AV"><p class="BI">name</p>
+</td>
+<td class="AV"><p class="A">Name of style, displayed by editors. Can also be used with <span class="K">s</span> paragraph format command code.</p>
+</td>
+</tr>
+</table></td>
+</tr></table>
+<p class="A">&nbsp;</p>
+<p class="E">Style with <span class="AZ">number</span> = 0 and <span class="AZ">uuid = </span>00000000000000000000000000000000 is <span class="AR">default</span> style.</p>
+<p class="A">Example:</p>
+<p class="A">&nbsp;</p>
+<p class="BJ">&quot;[*/+117 $$2,0#07143242482611002448121871408047:title]&quot;</p>
+<p class="BI">&nbsp;</p>
+<p id="2_6" class="G">2.6 Objects</p>
+<p class="BI">&nbsp;</p>
+<p class="A">Object plays the role of the single character and is displayed according to its type. It is started with a header in the form</p>
+<p class="A">&nbsp;</p>
+<p class="AM"><span class="AX">@@</span>format<span class="AX">:</span>cx<span class="AX">&amp;</span>cy</p>
+<p class="BI">&nbsp;</p>
+<p class="A">or</p>
+<p class="A">&nbsp;</p>
+<p class="AM"><span class="AX">@@</span>format<span class="AX">:</span>cx<span class="AX">*</span>cy</p>
+<p class="A">&nbsp;</p>
+<p class="A">where</p>
+<p class="A">&nbsp;</p>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr><td width="100%"><table width="100%" class="AO"><colgroup><col width="18%"><col width="81%"></colgroup>
+<tr><td class="AV"><p class="BI">format</p>
+</td>
+<td class="AV"><p class="A">Format of objects. This format must be recognized by the application. By default, RichText recognizes the PNG format and <span class="AR">iml</span> format (see bellow).</p>
+</td>
+</tr>
+<tr><td class="AV"><p class="BI">cx</p>
+</td>
+<td class="AV"><p class="A">Width of object in dots.</p>
+</td>
+</tr>
+<tr><td class="AV"><p class="BI">cy</p>
+</td>
+<td class="AV"><p class="A">Height of object in dots.</p>
+</td>
+</tr>
+</table></td>
+</tr></table>
+<p class="BI">&nbsp;</p>
+<p class="E">First form with '<span class="K">&amp;</span>' activates &quot;keep aspect ratio&quot; for the object, second form with '<span class="K">*</span>' leaves this option inactive.</p>
+<p class="E">Optionally, there can be 3rd number, separated by '<span class="K">/</span>' character. This number represent vertical placement of object, default value 0 means that bottom border of object is aligned with baseline of text.</p>
+<p class="E">If header is followed by '`' character, object data are in text format. In that case, object data are terminated with another '`' character. If there needs to be '`' in the text, '``' can be used as escape sequence.</p>
+<p class="E">If header is followed by '(', it countains BASE64 encoded binary data, ending with ')'. <span class="F">This is default format for binary data</span>.</p>
+<p class="BK"><span class="BL">If there is no '`' nor '(', header is in binary 7 bit format. Bit 7 of data bytes is always 1, so that actual data bytes are in range 128-255. First byte in range 32-127 ends data sequence. Data are encoded in 7 byte groups, which corresponds to 8 bytes of encoded format. First byte of this 8 bytes block always contains eight bits of following bytes, LSB (that is bit 0) being the eight bit for first byte in block. </span>This format is deprecated.</p>
+<p id="2_7" class="G">2.7 iml format</p>
+<p class="E">iml format is &nbsp;text format of rich object where text data reference existing .iml based Image as pair <span class="AZ">iml_class_name</span>:<span class="AZ">image_name</span>. Example of full object definition in iml format:</p>
+<p class="A">&nbsp;</p>
+<p class="BE">&quot;@@iml:400*400`CtrlImg:exclamation`&quot;</p>
+<p class="BI">&nbsp;</p>
+<p id="2_8" class="G">2.8 Fields</p>
+<p class="BI">&nbsp;</p>
+<p class="A">Fields are special elements of text that are evaluated by client code into rich text. QTF format for fields is</p>
+<p class="BI">&nbsp;</p>
+<p class="AK">{:<span class="AL">field_type_id</span>:<span class="AL">parameter</span>:}</p>
+<p class="AK">&nbsp;</p>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr><td width="100%"><table width="100%" class="AO"><colgroup><col width="18%"><col width="81%"></colgroup>
+<tr><td class="AV"><p class="BI">field_type_id</p>
+</td>
+<td class="AV"><p class="A">Type of field. Field types are represented by RichPara::FieldType derived instances and registred using RichPara::Register function.</p>
+</td>
+</tr>
+<tr><td class="AV"><p class="BI">parameter</p>
+</td>
+<td class="AV"><p class="A">Additional string parameter that gets passed to FieldType::Evaluate method</p>
+</td>
+</tr>
+</table></td>
+</tr></table>
+<p class="AK">&nbsp;</p>
+<p id="2_9" class="G">2.9 Tables</p>
+<p class="E">Table definition starts with</p>
+<p class="BM">&nbsp;</p>
+<p class="AK">{{</p>
+<p class="AK">&nbsp;</p>
+<p class="E">pair, followed by set of numbers separated with</p>
+<p class="A">&nbsp;</p>
+<p class="AK">:</p>
+<p class="AK">&nbsp;</p>
+<p class="E">Numbers represent ratios of column widths; count of numbers is equivalent to count of columns. Next there is <span class="AS">table/cell formatting sequence</span> ended with single space character. Cells are separated with</p>
+<p class="A">&nbsp;</p>
+<p class="AK">::</p>
+<p class="AK">&nbsp;</p>
+<p class="E">characters and another table/cell formating sequence (to setup format for each individual cell). Formating of cells is inherited from previous cells. Table ends with</p>
+<p class="A">&nbsp;</p>
+<p class="AK">}}</p>
+<p class="AK">&nbsp;</p>
+<p class="E">pair.</p>
+<p class="A">&nbsp;</p>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr><td width="100%"><table width="100%" class="AO"><colgroup><col width="19%"><col width="80%"></colgroup>
+<tr><td class="AT" colspan=2><p class="AU">Table/cell formating sequence</p>
+</td>
+</tr>
+<tr><td class="AV"><p class="AW"><span class="AX">&lt;</span>number</p>
+</td>
+<td class="AV"><p class="A">Left margin of table in dots.</p>
+</td>
+</tr>
+<tr><td class="AV"><p class="AW"><span class="AX">&gt;</span>number</p>
+</td>
+<td class="AV"><p class="A">Right margin of table in dots.</p>
+</td>
+</tr>
+<tr><td class="AV"><p class="AW"><span class="AX">B</span>number</p>
+</td>
+<td class="AV"><p class="A">Space before table in dots.</p>
+</td>
+</tr>
+<tr><td class="AV"><p class="AW"><span class="AX">A</span>number</p>
+</td>
+<td class="AV"><p class="A">Space after table in dots.</p>
+</td>
+</tr>
+<tr><td class="AV"><p class="AW"><span class="AX">f</span>number</p>
+</td>
+<td class="AV"><p class="A">Frame thickness in dots. Frame is outer border of table. Default value is 10.</p>
+</td>
+</tr>
+<tr><td class="AV"><p class="AW"><span class="AX">F</span>color</p>
+</td>
+<td class="AV"><p class="A">Color of the frame.</p>
+</td>
+</tr>
+<tr><td class="AV"><p class="AW"><span class="AX">g</span>number</p>
+</td>
+<td class="AV"><p class="A">Grid thickness in dots. Grid are lines dividing cells inside table. Default value is 4.</p>
+</td>
+</tr>
+<tr><td class="AV"><p class="AW"><span class="AX">G</span>color</p>
+</td>
+<td class="AV"><p class="A">Color of the grid.</p>
+</td>
+</tr>
+<tr><td class="AV"><p class="AP">k</p>
+</td>
+<td class="AV"><p class="A">Keep the cell on single page.</p>
+</td>
+</tr>
+<tr><td class="AV"><p class="AP">K</p>
+</td>
+<td class="AV"><p class="A">Keep the table on single page.</p>
+</td>
+</tr>
+<tr><td class="AV"><p class="AP">~</p>
+</td>
+<td class="AV"><p class="A">Sets grid and frame thickness to zero. Useful when using tables to organize text.</p>
+</td>
+</tr>
+<tr><td class="AV"><p class="AW"><span class="AX">h</span>number</p>
+</td>
+<td class="AV"><p class="A">Number of header rows. Header rows are repeated at the beginning of every page.</p>
+</td>
+</tr>
+<tr><td class="AV"><p class="AP">^</p>
+</td>
+<td class="AV"><p class="A">Cell aligns to top.</p>
+</td>
+</tr>
+<tr><td class="AV"><p class="AP">=</p>
+</td>
+<td class="AV"><p class="A">Cell aligns to center (vertical). Default.</p>
+</td>
+</tr>
+<tr><td class="AV"><p class="AP">v</p>
+</td>
+<td class="AV"><p class="A">Cell aligns to bottom.</p>
+</td>
+</tr>
+<tr><td class="AV"><p class="AW"><span class="AX">l</span>number/number</p>
+<p class="AW"><span class="AX">l</span>number</p>
+<p class="AW"><span class="AX">l</span>/number</p>
+</td>
+<td class="AV"><p class="A">Sets left cell border (first <span class="AL">number</span>) and margin in dots. If any of numbers is missing, sets only the one present. Default is border: 0, margin: 25.</p>
+</td>
+</tr>
+<tr><td class="AV"><p class="AW"><span class="AX">r</span>number/number</p>
+<p class="AW"><span class="AX">r</span>number</p>
+<p class="AW"><span class="AX">r</span>/number</p>
+</td>
+<td class="AV"><p class="A">Sets right cell border (first <span class="AL">number</span>) and margin in dots. If any of numbers is missing, sets only the one present. Default is border: 0, margin: 25.</p>
+</td>
+</tr>
+<tr><td class="AV"><p class="AW"><span class="AX">t</span>number/number</p>
+<p class="AW"><span class="AX">t</span>number</p>
+<p class="AW"><span class="AX">t</span>/number</p>
+</td>
+<td class="AV"><p class="A">Sets top cell border (first <span class="AL">number</span>) and margin in dots. If any of numbers is missing, sets only the one present. Default is border: 0, margin: 15.</p>
+</td>
+</tr>
+<tr><td class="AV"><p class="AW"><span class="AX">b</span>number/number</p>
+<p class="AW"><span class="AX">b</span>number</p>
+<p class="AW"><span class="AX">b</span>/number</p>
+</td>
+<td class="AV"><p class="A">Sets bottom cell border (first <span class="AL">number</span>) and margin in dots. If any of numbers is missing, sets only the one present. Default is border: 0, margin: 15.</p>
+</td>
+</tr>
+<tr><td class="AV"><p class="AW"><span class="AX">a</span>number/number</p>
+<p class="AW"><span class="AX">a</span>number</p>
+<p class="AW"><span class="AX">a</span>/number</p>
+</td>
+<td class="AV"><p class="A">Sets all cell borders (first <span class="AL">number</span>) and margins in dots. If any of numbers is missing, sets only the one present.</p>
+</td>
+</tr>
+<tr><td class="AV"><p class="AP">*</p>
+</td>
+<td class="AV"><p class="A">Same as f0g0a0/0 - sets everything to zero to use table as organizing element.</p>
+</td>
+</tr>
+<tr><td class="AV"><p class="AP">o</p>
+</td>
+<td class="AV"><p class="A">Sets round border.</p>
+</td>
+</tr>
+<tr><td class="AV"><p class="AW"><span class="AX">@</span>color</p>
+</td>
+<td class="AV"><p class="A">Cell background color. Default is White.</p>
+</td>
+</tr>
+<tr><td class="AV"><p class="AW"><span class="AX">R</span>color</p>
+</td>
+<td class="AV"><p class="A">Cell border color. Default is Black.</p>
+</td>
+</tr>
+<tr><td class="AV"><p class="AP">!</p>
+</td>
+<td class="AV"><p class="A">Resets cell formatting to default values.</p>
+</td>
+</tr>
+<tr><td class="AV"><p class="AW"><span class="AX">H</span>number</p>
+</td>
+<td class="AV"><p class="A">Sets the minimal height of cell (and therefore also of row) in dots.</p>
+</td>
+</tr>
+<tr><td class="AV"><p class="AW"><span class="AX">-</span>number</p>
+</td>
+<td class="AV"><p class="A">Horizontal cell span.</p>
+</td>
+</tr>
+<tr><td class="AV"><p class="AW"><span class="AX">|</span>number</p>
+</td>
+<td class="AV"><p class="A">Vertical cell span.</p>
+</td>
+</tr>
+<tr><td class="AV"><p class="AP">;</p>
+</td>
+<td class="M"><p class="A">NOP &nbsp;separator. In some cases it helps to separate command code.</p>
+</td>
+</tr>
+<tr><td class="AV"><p class="AP">P</p>
+</td>
+<td class="M"><p class="A">Page break before table.</p>
+</td>
+</tr>
+<tr><td class="AV"><p class="AP">T<span class="AL">qtf</span>^^<span class="AL">qtf</span>^^</p>
+</td>
+<td class="AV"><p class="A">New text header &nbsp;/ footer, <span class="BG">qtf</span> is complete embeded QTF representing header/footer. This QTF can contain field<span class="BH"> {:VALUE:PAGENUMBER:} </span>to represent page number and<span class="BH"> {:VALUE:PAGECOUNT:}</span> to represent total number of pages.</p>
+</td>
+</tr>
+</table></td>
+</tr></table>
+<p class="E">Note: There is also legacy support for old table format (from previous QTF version) that is based on <span class="K">++ </span>pair as table start/stop and <span class="K">|| --</span> to divide cells/lines. </p>
+<p id="2_10" class="G">2.10 Global Header and Footer</p>
+<p class="E">Global text header is defined using <span class="BD">^H</span><span class="BG">qtf_text</span><span class="BD">^^</span>, footer <span class="BD">^F</span><span class="BG">qtf_text</span><span class="BD">^^</span>, where <span class="BG">qtf_text</span> is complete embeded QTF representing header/footer. This QTF can contain field<span class="BH"> {:VALUE:PAGENUMBER:} </span>to represent page number and<span class="BH"> {:VALUE:PAGECOUNT:}</span> to represent total number of pages. Global page header and footer can be changed by paragraph attributes.</p>
+<hr><p id="3" class="D">3. Examples</p>
+<p class="A">&nbsp;</p>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr><td width="100%"><table width="100%" class="AO"><colgroup><col width="100%"></colgroup>
+<tr><td class="M"><p class="BN">&quot;Normal [* bold] [/ italic] [_ underline] [` superscript] [, subscript]&quot;</p>
+</td>
+</tr>
+<tr><td class="M"><p class="A">Normal <span class="F">bold</span> <span class="AS">italic</span> <u>underline</u> <sup>superscript</sup> <sub>subscript</sub></p>
+</td>
+</tr>
+</table></td>
+</tr></table>
+<p class="A">&nbsp;</p>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr><td width="100%"><table width="100%" class="AO"><colgroup><col width="100%"></colgroup>
+<tr><td class="M"><p class="BN">&quot;`[ `] \1[escaped]\1 [* bold]&quot;</p>
+</td>
+</tr>
+<tr><td class="M"><p class="N"><span class="BO">[ ] [escaped] </span>bold</p>
+</td>
+</tr>
+</table></td>
+</tr></table>
+<p class="A">&nbsp;</p>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr><td width="100%"><table width="100%" class="AO"><colgroup><col width="100%"></colgroup>
+<tr><td class="M"><p class="BN">&quot;[A Arial (Sans-Serif)] [R Times New Roman (Serif)] [C Courier (Monospace)]&quot;</p>
+</td>
+</tr>
+<tr><td class="M"><p class="BP"><span class="BQ">Arial (Sans-Serif) </span><span class="BR">Times New Roman (Serif)</span><span class="BQ"> </span>Courier (Monospace)</p>
+</td>
+</tr>
+</table></td>
+</tr></table>
+<p class="A">&nbsp;</p>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr><td width="100%"><table width="100%" class="AO"><colgroup><col width="100%"></colgroup>
+<tr><td class="M"><p class="BN">&quot;[0 6pt ][1 8pt ][2 10pt ][3 12pt ][4 16pt ][5 20pt ][6 24pt ][7 28pt ][8 36pt ][9 48pt ]&quot;</p>
+</td>
+</tr>
+<tr><td class="M"><p class="BS"><span class="BT">6pt </span><span class="BU">8pt </span><span class="BV">10pt </span><span class="B">12pt</span><span class="BV"> </span><span class="BW">16pt </span><span class="BX">20pt </span><span class="BY">24pt </span><span class="BZ">28pt </span><span class="CA">36pt </span>48pt </p>
+</td>
+</tr>
+</table></td>
+</tr></table>
+<p class="A">&nbsp;</p>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr><td width="100%"><table width="100%" class="AO"><colgroup><col width="100%"></colgroup>
+<tr><td class="M"><p class="BN">&quot;[!Tahoma! Tahoma]&quot;</p>
+</td>
+</tr>
+<tr><td class="M"><p class="A">Tahoma</p>
+</td>
+</tr>
+</table></td>
+</tr></table>
+<p class="A">&nbsp;</p>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr><td width="100%"><table width="100%" class="AO"><colgroup><col width="100%"></colgroup>
+<tr><td class="M"><p class="BN">&quot;[+500 500dots]&quot;</p>
+</td>
+</tr>
+<tr><td class="M"><p class="CB">500dots</p>
+</td>
+</tr>
+</table></td>
+</tr></table>
+<p class="A">&nbsp;</p>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr><td width="100%"><table width="100%" class="AO"><colgroup><col width="100%"></colgroup>
+<tr><td class="M"><p class="BN">&quot;[@4 Green text] [$(255.220.200) Pink background]&quot;</p>
+</td>
+</tr>
+<tr><td class="M"><p class="CC"><span class="H">Green text</span> Pink background</p>
+</td>
+</tr>
+</table></td>
+</tr></table>
+<p class="A">&nbsp;</p>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr><td width="100%"><table width="100%" class="AO"><colgroup><col width="100%"></colgroup>
+<tr><td class="M"><p class="BN">&quot;[%EN-US English language] [%CS-CZ Czech language]&quot;</p>
+</td>
+</tr>
+<tr><td class="M"><p class="A">English language Czech language</p>
+</td>
+</tr>
+</table></td>
+</tr></table>
+<p class="A">&nbsp;</p>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr><td width="100%"><table width="100%" class="AO"><colgroup><col width="100%"></colgroup>
+<tr><td class="M"><p class="BN">&quot;[^upp.sf.net^ Hyperlink] [Icompiler, linker; Index entry]&quot;</p>
+</td>
+</tr>
+<tr><td class="M"><p class="A"><a href="upp.sf.net">Hyperlink</a> Index entry</p>
+</td>
+</tr>
+</table></td>
+</tr></table>
+<p class="A">&nbsp;</p>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr><td width="100%"><table width="100%" class="AO"><colgroup><col width="100%"></colgroup>
+<tr><td class="M"><p class="BN">&quot;[:label: Labeled paragraph]&quot;</p>
+</td>
+</tr>
+<tr><td class="M"><p class="A">Labeled paragraph</p>
+</td>
+</tr>
+</table></td>
+</tr></table>
+<p class="A">&nbsp;</p>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr><td width="100%"><table width="100%" class="AO"><colgroup><col width="100%"></colgroup>
+<tr><td class="M"><p class="BN">&quot;[&lt; Left paragraph alignment]&quot;</p>
+</td>
+</tr>
+<tr><td class="M"><p class="A">Left paragraph alignment</p>
+</td>
+</tr>
+</table></td>
+</tr></table>
+<p class="A">&nbsp;</p>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr><td width="100%"><table width="100%" class="AO"><colgroup><col width="100%"></colgroup>
+<tr><td class="M"><p class="BN">&quot;[= Center paragraph alignment]&quot;</p>
+</td>
+</tr>
+<tr><td class="M"><p class="A">Center paragraph alignment</p>
+</td>
+</tr>
+</table></td>
+</tr></table>
+<p class="A">&nbsp;</p>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr><td width="100%"><table width="100%" class="AO"><colgroup><col width="100%"></colgroup>
+<tr><td class="M"><p class="BN">&quot;[&gt; Right paragraph alignment]&quot;</p>
+</td>
+</tr>
+<tr><td class="M"><p class="A">Right paragraph alignment</p>
+</td>
+</tr>
+</table></td>
+</tr></table>
+<p class="A">&nbsp;</p>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr><td width="100%"><table width="100%" class="AO"><colgroup><col width="100%"></colgroup>
+<tr><td class="M"><p class="BN">&quot;[# Justify alignment. Just some text to demosntrate it... Just some text to demonstrate it... Just some text to demonstrate it...]&quot;</p>
+</td>
+</tr>
+<tr><td class="M"><p class="A">Justify alignment. Just some text to demosntrate it... Just some text to demonstrate it... Just some text to demonstrate it...</p>
+</td>
+</tr>
+</table></td>
+</tr></table>
+<p class="A">&nbsp;</p>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr><td width="100%"><table width="100%" class="AO"><colgroup><col width="100%"></colgroup>
+<tr><td class="M"><p class="BN">&quot;[l1000 Left margin 1000dots]&quot;</p>
+</td>
+</tr>
+<tr><td class="M"><p class="A">Left margin 1000dots</p>
+</td>
+</tr>
+</table></td>
+</tr></table>
+<p class="A">&nbsp;</p>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr><td width="100%"><table width="100%" class="AO"><colgroup><col width="100%"></colgroup>
+<tr><td class="M"><p class="BN">&quot;[i1000 Indent 1000 dots.Just some text to demonstrate it... Just some text to demonstrate it...]&quot;</p>
+</td>
+</tr>
+<tr><td class="M"><p class="A">Indent 1000 dots.Just some text to demonstrate it... Just some text to demonstrate it...</p>
+</td>
+</tr>
+</table></td>
+</tr></table>
+<p class="A">&nbsp;</p>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr><td width="100%"><table width="100%" class="AO"><colgroup><col width="100%"></colgroup>
+<tr><td class="M"><p class="BN">&quot;[r1000 Right margin 1000 dots.Just some text to demonstrate it... Just some text to demonstrate it...]&quot;</p>
+</td>
+</tr>
+<tr><td class="M"><p class="A">Right margin 1000 dots.Just some text to demonstrate it... Just some text to demonstrate it...</p>
+</td>
+</tr>
+</table></td>
+</tr></table>
+<p class="A">&nbsp;</p>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr><td width="100%"><table width="100%" class="AO"><colgroup><col width="100%"></colgroup>
+<tr><td class="M"><p class="BN">&quot;Paragraph&amp;[b200 Before 200dots]&quot;</p>
+</td>
+</tr>
+<tr><td class="M"><p class="A">Paragraph</p>
+<p class="A">Before 200dots</p>
+</td>
+</tr>
+</table></td>
+</tr></table>
+<p class="A">&nbsp;</p>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr><td width="100%"><table width="100%" class="AO"><colgroup><col width="100%"></colgroup>
+<tr><td class="M"><p class="BN">&quot;[a200 After 200dots]&amp;Paragraph&quot;</p>
+</td>
+</tr>
+<tr><td class="M"><p class="CD">After 200dots</p>
+<p class="A">Paragraph</p>
+</td>
+</tr>
+</table></td>
+</tr></table>
+<p class="A">&nbsp;</p>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr><td width="100%"><table width="100%" class="AO"><colgroup><col width="100%"></colgroup>
+<tr><td class="M"><p class="BN">&quot;[i200 [O0 bullet&amp;][O1 bullet&amp;][O2 bullet&amp;][O3 bullet]]&quot;</p>
+</td>
+</tr>
+<tr><td class="M"><p class="CE">bullet</p>
+<p class="CF">bullet</p>
+<p class="CG">bullet</p>
+<p class="A">bullet</p>
+</td>
+</tr>
+</table></td>
+</tr></table>
+<p class="A">&nbsp;</p>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr><td width="100%"><table width="100%" class="AO"><colgroup><col width="100%"></colgroup>
+<tr><td class="M"><p class="BN">&quot;[O9i500 text bullet-|Just some text to demonstrate it... Just some text to demonstrate it...Just some text to demonstrate it... Just some text to demonstrate it...]&quot;</p>
+</td>
+</tr>
+<tr><td class="M"><p class="A">text bullet&nbsp;&nbsp;&nbsp;&nbsp;Just some text to demonstrate it... Just some text to demonstrate it...Just some text to demonstrate it... Just some text to demonstrate it...</p>
+</td>
+</tr>
+</table></td>
+</tr></table>
+<p class="A">&nbsp;</p>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr><td width="100%"><table width="100%" class="AO"><colgroup><col width="100%"></colgroup>
+<tr><td class="M"><p class="BN">&quot;[O9i200 [N1m.; -|level 1&amp;][N1a -|level 2&amp;][N1a -|level 2&amp;][N1 -|level 1&amp;][N1a -|level 2]]&quot;</p>
+</td>
+</tr>
+<tr><td class="M"><p class="A">1. level 1</p>
+<p class="A">1.a level 2</p>
+<p class="A">1.b level 2</p>
+<p class="A">2 level 1</p>
+<p class="A">&nbsp;&nbsp;&nbsp;&nbsp;level 2</p>
+</td>
+</tr>
+</table></td>
+</tr></table>
+<p class="A">&nbsp;</p>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr><td width="100%"><table width="100%" class="AO"><colgroup><col width="100%"></colgroup>
+<tr><td class="M"><p class="BN">&quot;[~300~=.2000~&gt;-3000 -|Normal tab-|Centered tab-|Right tab]&quot;</p>
+</td>
+</tr>
+<tr><td class="M"><p class="A">&nbsp;&nbsp;&nbsp;&nbsp;Normal tab&nbsp;&nbsp;&nbsp;&nbsp;Centered tab&nbsp;&nbsp;&nbsp;&nbsp;Right tab</p>
+</td>
+</tr>
+</table></td>
+</tr></table>
+<p class="A">&nbsp;</p>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr><td width="100%"><table width="100%" class="AO"><colgroup><col width="100%"></colgroup>
+<tr><td class="M"><p class="BN">&quot;{{1:2 A1||A2||B1||B2}}&quot;</p>
+</td>
+</tr>
+<tr><td class="M"><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr><td width="100%"><table width="100%" class="AO"><colgroup><col width="33%"><col width="66%"></colgroup>
+<tr><td class="M"><p class="A">A1</p>
+</td>
+<td class="M"><p class="A">A2</p>
+</td>
+</tr>
+<tr><td class="M"><p class="A">B1</p>
+</td>
+<td class="M"><p class="A">B2</p>
+</td>
+</tr>
+</table></td>
+</tr></table>
+</td>
+</tr>
+</table></td>
+</tr></table>
+<p class="A">&nbsp;</p>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr><td width="100%"><table width="100%" class="AO"><colgroup><col width="100%"></colgroup>
+<tr><td class="M"><p class="BN">&quot;{{2:1G4g100F5f50 A1:: A2:: B1:: B2}}&quot;</p>
+</td>
+</tr>
+<tr><td class="M"><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr><td width="100%"><table width="100%" class="CH"><colgroup><col width="66%"><col width="33%"></colgroup>
+<tr><td class="CI"><p class="A">A1</p>
+</td>
+<td class="CI"><p class="A">A2</p>
+</td>
+</tr>
+<tr><td class="CI"><p class="A">B1</p>
+</td>
+<td class="CI"><p class="A">B2</p>
+</td>
+</tr>
+</table></td>
+</tr></table>
+</td>
+</tr>
+</table></td>
+</tr></table>
+<p class="A">&nbsp;</p>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr><td width="100%"><table width="100%" class="AO"><colgroup><col width="100%"></colgroup>
+<tr><td class="M"><p class="BN">&quot;{{1:2 A1::l40/60R6@3 A2::! B1:: B2}}&quot;</p>
+</td>
+</tr>
+<tr><td class="M"><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr><td width="100%"><table width="100%" class="AO"><colgroup><col width="33%"><col width="66%"></colgroup>
+<tr><td class="M"><p class="A">A1</p>
+</td>
+<td class="CJ"><p class="A">A2</p>
+</td>
+</tr>
+<tr><td class="M"><p class="A">B1</p>
+</td>
+<td class="M"><p class="A">B2</p>
+</td>
+</tr>
+</table></td>
+</tr></table>
+</td>
+</tr>
+</table></td>
+</tr></table>
+<p class="A">&nbsp;</p>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr><td width="100%"><table width="100%" class="AO"><colgroup><col width="100%"></colgroup>
+<tr><td class="M"><p class="BN">&quot;{{1:1:1|2 A1::-2 A2:: A3:: B1:: B2:: B3}}&quot;</p>
+</td>
+</tr>
+<tr><td class="M"><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr><td width="100%"><table width="100%" class="AO"><colgroup><col width="33%"><col width="33%"><col width="33%"></colgroup>
+<tr><td class="M" rowspan=2><p class="A">A1</p>
+</td>
+<td class="M" colspan=2><p class="A">A2</p>
+</td>
+</tr>
+<tr><td class="M"><p class="A">B2</p>
+</td>
+<td class="M"><p class="A">B3</p>
+</td>
+</tr>
+</table></td>
+</tr></table>
+</td>
+</tr>
+</table></td>
+</tr></table>
+<p class="A">&nbsp;</p>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr><td width="100%"><table width="100%" class="AO"><colgroup><col width="100%"></colgroup>
+<tr><td class="M"><p class="BN">&quot;{{1:2 A1:: A2:: B1:: {{1:2 a1:: a2:: a1:: a2}}}}&quot;</p>
+</td>
+</tr>
+<tr><td class="M"><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr><td width="100%"><table width="100%" class="AO"><colgroup><col width="33%"><col width="66%"></colgroup>
+<tr><td class="M"><p class="A">A1</p>
+</td>
+<td class="M"><p class="A">A2</p>
+</td>
+</tr>
+<tr><td class="M"><p class="A">B1</p>
+</td>
+<td class="M"><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr><td width="100%"><table width="100%" class="AO"><colgroup><col width="33%"><col width="66%"></colgroup>
+<tr><td class="M"><p class="A">a1</p>
+</td>
+<td class="M"><p class="A">a2</p>
+</td>
+</tr>
+<tr><td class="M"><p class="A">a1</p>
+</td>
+<td class="M"><p class="A">a2</p>
+</td>
+</tr>
+</table></td>
+</tr></table>
+</td>
+</tr>
+</table></td>
+</tr></table>
+</td>
+</tr>
+</table></td>
+</tr></table>
+<p class="CK">&nbsp;</p>
+<p class="BM">&nbsp;</p>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr><td width="100%"><table width="100%" class="AO"><colgroup><col width="100%"></colgroup>
+<tr><td class="M"><p class="BN">&quot;{{1~a30/50o Round border}}&quot;</p>
+</td>
+</tr>
+<tr><td class="M"><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr><td width="100%"><table width="100%" class="CL"><colgroup><col width="100%"></colgroup>
+<tr><td class="CM"><p class="A">Round border</p>
+</td>
+</tr>
+</table></td>
+</tr></table>
+</td>
+</tr>
+</table></td>
+</tr></table>
+<p class="CK">&nbsp;</p>
+</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>
+<TABLE BORDER="0" WIDTH="100%"><TR><TD></TD>
+</TR>
+</TABLE>
+<TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" BGCOLOR="#FFFFFF" WIDTH="100%" style="border-style: solid; border-width: 1px; border-color: #6E89AE;padding: 10px;;"><TR><TD><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%"><TR><TD><p class="A"><span class="B"> </span><a href="www$uppweb$contribweb$en-us.html">Do you want to contribute?</a></p>
+</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>
+<script type="text/javascript">var a={};var p=window.location.pathname.split("/");p=p[p.length-1];var s='<select id="lang" onchange="window.location=document.getElementById(\'lang\').value;">';for(l in a){if(p==l){d=" selected=1"}else{d=""}s+='<option value="'+l+'"'+d+'>'+a[l]+'</option>'}s+='</select>';var d=document.createElement('div');d.innerHTML=s;var c=document.getElementById('langs');c.replaceChild(d,c.firstChild);document.getElementById('langbox').style.display='block';</script></BODY>

@@ -1,0 +1,404 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en-us">
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
+<META NAME="Generator" CONTENT="U++ HTML Package">
+<TITLE>Math utility :: U++</TITLE>
+<STYLE TYPE="text/css"><!--
+.A{margin:0px 0px 0px 0px;text-indent:0px;text-align:left;color:#000000;font-family:sans-serif;font-size:10pt;font-weight:normal;font-style:normal;}
+.B{font-size:12pt;}
+.C{border-collapse:collapse;table-layout:auto;border: 2px solid #000000;}
+.D{padding: 3px 5px 3px 5px;border-left: 1px solid #000000;border-top: 1px solid #000000;border-right: 1px solid #000000;border-bottom: 1px solid #000000;background-color:#712A00;vertical-align:middle;}
+.E{margin:0px 0px 0px 0px;text-indent:0px;text-align:left;color:#e0e0e0;font-family:sans-serif;font-size:16pt;font-weight:bold;font-style:normal;}
+.F{margin:0px 0px 0px 0px;text-indent:0px;text-align:left;color:#000000;font-family:sans-serif;font-size:6pt;font-weight:normal;font-style:normal;}
+.G{border-collapse:collapse;table-layout:auto;border: 2px solid #808080;}
+.H{padding: 3px 5px 3px 5px;border-left: 1px solid #808080;border-top: 1px solid #808080;border-right: 1px solid #808080;border-bottom: 1px solid #808080;background-color:#C0C0C0;vertical-align:middle;}
+.I{margin:0px 0px 0px 0px;text-indent:0px;text-align:left;color:#000000;font-family:sans-serif;font-size:10pt;font-weight:bold;font-style:normal;}
+.J{margin:0px 0px 5px 0px;text-indent:0px;text-align:left;color:#000000;font-family:sans-serif;font-size:10pt;font-weight:bold;font-style:normal;}
+.K{margin:0px 0px 0px 57px;text-indent:0px;text-align:left;color:#000000;font-family:sans-serif;font-size:10pt;font-weight:normal;font-style:normal;}
+.L{font-style:italic;}
+.M{margin:0px 0px 0px 57px;text-indent:0px;text-align:left;color:#000000;font-family:sans-serif;font-size:10pt;font-weight:normal;font-style:italic;}
+.N{margin:0px 0px 5px 0px;text-indent:0px;text-align:left;color:#000000;font-family:sans-serif;font-size:10pt;font-weight:normal;font-style:normal;}
+.O{font-weight:bold;}
+.P{color:#800000;font-weight:bold;}
+.Q{color:#0000ff;}
+a.l1         { text-decoration:none; font-size: 8pt; font-family: sans-serif; font-weight: normal; }
+a.l1:link    { color:#000000; }
+a.l1:visited { color:#000080; }
+a.l1:hover   { color:#9933CC; }
+a.l1:active  { color:#000000; }
+a.l2         { text-decoration:none; font-size: 12pt; font-family: sans-serif; font-variant: small-caps; }
+a.l2:link    { color:#0066FF; }
+a.l2:visited { color:#FF6600; }
+a.l2:hover   { color:#BC0624; }
+a.l2:active  { color:#BC0024; }
+
+-->
+</STYLE>
+<META NAME="keywords" CONTENT="framework, toolkit, widget, c++, visual, studio, dev-cpp, builder, ide, class, component,wxwidgets, qt, rapid, application, development, rad, mfc, linux, macos, gui, sdl, directx, desktop"><META name="robots" content="index,follow">
+<LINK rel="alternate" type="application/rss+xml" title="SVN changes" href="svnchanges.xml">
+<LINK rel="shortcut icon" type="image/png" href="favicon.png">
+</HEAD><BODY BGCOLOR="#D2D9D2" ALINK="#800000" LINK="#000000" VLINK="#000080"><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%"><TR><TD COLSPAN="3"><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%" BGCOLOR="#FFFFFF" style="border: 1px solid #6E89AE;padding-left: 10px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;"><TR><TD><A HREF="index.html"><IMG SRC="0i.png" ALT="" BORDER="0"></A>
+</TD>
+<TD ALIGN="RIGHT" VALIGN="BOTTOM" STYLE="padding-bottom: 5px; background-image: url('1i.png')"><span style="font-size: 14pt; font-family: sans-serif;"><script type="text/javascript"><!--
+google_ad_client = "pub-1082147624384270";
+google_ad_width = 468;
+google_ad_height = 60;
+google_ad_format = "468x60_as";
+google_ad_type = "text_image";
+google_ad_channel = "";
+google_color_border = "336699";
+google_color_bg = "FFFFFF";
+google_color_link = "0000FF";
+google_color_text = "000000";
+google_color_url = "008000";
+//--></script>
+<script type="text/javascript"
+  src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+&nbsp;&nbsp;</span>
+</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>
+<TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%"><TR><TD COLSPAN="3" BGCOLOR="#D2D9D2" HEIGHT="6"></TD>
+</TR>
+<TR><TD VALIGN="TOP" ALIGN="CENTER"><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="160"><TR><TD ALIGN="CENTER"><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%" BGCOLOR="#FFFFFF" style="border-style: solid; border-width: 1px; border-color: #6E89AE;padding: 0px"><TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px;"><A HREF="www$uppweb$overview$en-us.html" CLASS="l1">Overview</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$examples$en-us.html" CLASS="l1">Examples</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$ss$en-us.html" CLASS="l1">Screenshots</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$comparison$en-us.html" CLASS="l1">Comparisons</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$apps$en-us.html" CLASS="l1">Applications</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$download$en-us.html" CLASS="l1">Download</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$documentation$en-us.html" CLASS="l1">Documentation</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$Tutorials$en-us.html" CLASS="l1">Tutorials</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="app$ide$UppHub$en-us.html" CLASS="l1">UppHub</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$Roadmap$en-us.html" CLASS="l1">Status & Roadmap</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$FAQ$en-us.html" CLASS="l1">FAQ</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="app$ide$About$en-us.html" CLASS="l1">Authors & License</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="https://www.ultimatepp.org/forums" CLASS="l1">Forums</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$Funding$en-us.html" CLASS="l1">Funding U++</A>
+</TD>
+</TR>
+</TABLE>
+<TABLE BORDER="0" WIDTH="100%"><TR><TD></TD>
+</TR>
+</TABLE>
+<TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%" BGCOLOR="#FFFFFF" style="border-style: solid; border-width: 1px; border-color: #6E89AE;padding: 0px"><TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('3i.png'); border: 0px solid black;padding-left:12px; padding-right:0px; padding-top:1px; padding-bottom:1px;color:#FFFFFF;"><B><span style="font-size: 8pt; font-family: sans-serif;">Search on this site</span>
+</B>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:6px; padding-right:0px; padding-top:4px; padding-bottom:4px;border-top: 1px solid #6E89AE;"><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%"><TR><TD><IMG SRC="4i.png" ALT="" BORDER="0"></TD>
+<TD><FORM ACTION="https://www.google.com/search" METHOD="GET" STYLE="margin:0px;padding:0px;"><INPUT TYPE="HIDDEN" NAME="ie" VALUE="UTF-8"><INPUT TYPE="HIDDEN" NAME="oe" VALUE="UTF-8"><INPUT TYPE="TEXT" NAME="q" SIZE="15" MAXLENGTH="256" placeholder="Site search"><INPUT TYPE="HIDDEN" NAME="sitesearch" VALUE="ultimatepp.org"></FORM>
+</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>
+<TABLE BORDER="0" WIDTH="100%"><TR><TD></TD>
+</TR>
+</TABLE>
+<br><div id="fb-root"></div>
+<script type="text/javascript">(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) {return;}
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+<div class="fb-like" data-href="https://www.facebook.com/pages/Upp-Framework/262346610476027?sk=wall" data-send="false" data-layout="button_count" data-width="160" data-show-faces="false" data-font="arial"></div>
+<br><br><script type="text/javascript"><!--
+google_ad_client = "pub-1082147624384270";
+google_ad_width = 160;
+google_ad_height = 600;
+google_ad_format = "160x600_as";
+google_ad_type = "text_image";
+google_ad_channel = "";
+google_color_border = "336699";
+google_color_bg = "FFFFFF";
+google_color_link = "0000FF";
+google_color_text = "000000";
+google_color_url = "008000";
+//--></script>
+<script type="text/javascript"
+  src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script><br><br><script type="text/javascript"><!--
+google_ad_client = "pub-1082147624384270";
+google_ad_width = 160;
+google_ad_height = 90;
+google_ad_format = "160x90_0ads_al_s";
+google_ad_channel = "";
+google_color_border = "336699";
+google_color_bg = "FFFFFF";
+google_color_link = "0000FF";
+google_color_text = "000000";
+google_color_url = "008000";
+//--></script>
+<script type="text/javascript"
+  src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+<br><br><br><br><br><br><A HREF="https://sourceforge.net/projects/upp/"><IMG SRC="https://sourceforge.net/sflogo.php?group_id=93970&amp;type=2" ALT="SourceForge.net Logo" BORDER="0" WIDTH="125" HEIGHT="37"></A>
+<br><br><A HREF="https://flathub.org/en/apps/org.ultimatepp.TheIDE"><IMG SRC="5i.png" ALT="SourceForge.net Logo" BORDER="0" WIDTH="125" HEIGHT="37"></A>
+<br><br><div style="background-color:#ffffff;width:125;height:35"><A HREF="https://github.com/ultimatepp"><IMG SRC="6i.png" ALT="GitHub Logo" BORDER="0" WIDTH="125" HEIGHT="35"></A>
+</div><br><div style="background-color:#ffffff;width:125;height:35"><div style="height:5"></div><A HREF="https://discord.gg/8XzqQzXZzb"><IMG SRC="https://assets-global.website-files.com/6257adef93867e50d84d30e2/636e0b5061df29d55a92d945_full_logo_blurple_RGB.svg" ALT="Discord Logo" BORDER="0" WIDTH="125" HEIGHT="25"></A>
+</div><br></TD>
+</TR>
+</TABLE>
+</TD>
+<TD VALIGN="TOP" BGCOLOR="#D2D9D2"><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="6"><TR><TD></TD>
+</TR>
+</TABLE>
+</TD>
+<TD VALIGN="TOP" WIDTH="100%" BGCOLOR="#D2D9D2"><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" BGCOLOR="#FFFFFF" WIDTH="100%" style="border-style: solid; border-width: 1px; border-color: #6E89AE;padding: 10px;;"><TR><TD><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%"><TR><TD><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr><td width="100%"><table width="100%" class="C"><colgroup><col width="100%"></colgroup>
+<tr><td class="D"><p class="E">Math utility</p>
+</td>
+</tr>
+</table></td>
+</tr></table>
+<p class="F">&nbsp;</p>
+<p class="A">A number of mathematical functions and constants.</p>
+<p class="F">&nbsp;</p>
+<p class="A">&nbsp;</p>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr><td width="100%"><table width="100%" class="G"><colgroup><col width="100%"></colgroup>
+<tr><td class="H"><p class="I">Constant List</p>
+</td>
+</tr>
+</table></td>
+</tr></table>
+<p class="F">&nbsp;</p>
+<p id="M_E" class="J">M_E</p>
+<p class="K"><span class="L">e&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>2.71828182845904523536</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="M_LOG2E" class="J">M_LOG2E</p>
+<p class="K"><span class="L">log</span><span class="L"><sub>2</sub></span><span class="L">e&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>1.44269504088896340736</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="M_LOG10E" class="J">M_LOG10E</p>
+<p class="K"><span class="L">log10e</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0.434294481903251827651</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="M_LN2" class="J">M_LN2</p>
+<p class="K"><span class="L">ln2</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0.693147180559945309417</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="M_LN10" class="J">M_LN10</p>
+<p class="K"><span class="L">ln10</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2.30258509299404568402</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="M_PI" class="J">M_PI</p>
+<p class="K"><span class="L">Pi</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3.14159265358979323846</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="M_PI_2" class="J">M_PI_2</p>
+<p class="K"><span class="L">Pi / 2</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1.57079632679489661923</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="M_PI_4" class="J">M_PI_4</p>
+<p class="K"><span class="L">Pi / 4</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0.785398163397448309616</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="M_1_PI" class="J">M_1_PI</p>
+<p class="K"><span class="L">1 / Pi</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0.318309886183790671538</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="M_2_PI" class="J">M_2_PI</p>
+<p class="K"><span class="L">2 / Pi</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0.636619772367581343076</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="M_1_SQRTPI" class="J">M_1_SQRTPI</p>
+<p class="K"><span class="L">1 / sqrt(Pi)</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0.564189583547756286948</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="M_2_SQRTPI" class="J">M_2_SQRTPI</p>
+<p class="K"><span class="L">2 / sqrt(Pi)</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1.12837916709551257390</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="M_SQRT2" class="J">M_SQRT2</p>
+<p class="K">1.41421356237309504880</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="M_SQRT_2" class="J">M_SQRT_2</p>
+<p class="K">0.707106781186547524401</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="M_2PI" class="J">M_2PI</p>
+<p class="M">2Pi</p>
+<p class="F">&nbsp;</p>
+<p class="A">&nbsp;</p>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr><td width="100%"><table width="100%" class="G"><colgroup><col width="100%"></colgroup>
+<tr><td class="H"><p class="I">Function List</p>
+</td>
+</tr>
+</table></td>
+</tr></table>
+<p class="F">&nbsp;</p>
+<p id="Random()" class="N"><a href="src$Core$PrimitiveDataTypes$en-us.html#Upp::dword::typedef"><u>dword</u></a>&nbsp;<span class="O">Random</span>()</p>
+<p class="K">Returns the next random generated number. Algorithm used is xoshiro256**, with seed obtained from host platform specific resources ('/dev/urandom' in Posix systems, GUID generator in Win32).</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Random(dword)" class="N"><a href="src$Core$PrimitiveDataTypes$en-us.html#Upp::dword::typedef"><u>dword</u></a>&nbsp;<span class="O">Random</span>(<a href="src$Core$PrimitiveDataTypes$en-us.html#Upp::dword::typedef"><u>dword</u></a>&nbsp;<span class="P">n</span>)</p>
+<p class="K">Returns random generated number smaller than <span class="P">n</span>.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Random64()" class="N"><a href="src$Core$PrimitiveDataTypes$en-us.html#Upp::qword::typedef"><u>qword</u></a>&nbsp;<span class="O">Random64</span>()</p>
+<p class="K">Returns 64bit random number.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Upp::Random64(Upp::uint64)" class="N"><a href="Upp::uint64"><u>uint64</u></a>&nbsp;<span class="O">Random64</span>(<a href="Upp::uint64"><u>uint64</u></a>&nbsp;<span class="P">n</span>)</p>
+<p class="K">Returns the 64bit random number smaller than <span class="P">n</span>.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Upp::Random64(Upp::uint64*,int)" class="N"><span class="Q">void</span>&nbsp;<span class="O">Random64</span>(<a href="Upp::uint64"><u>uint64</u></a>&nbsp;*<span class="P">t</span>, <span class="Q">int</span>&nbsp;<span class="P">n</span>)</p>
+<p class="K">Sets <span class="P">n</span> random 64bit numbers to <span class="P">t</span> array.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Randomf()" class="N"><span class="Q">double</span>&nbsp;<span class="O">Randomf</span>()</p>
+<p class="K">Returns the floating point number &lt;0, 1).</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="SeedRandom(dword)" class="N"><span class="Q">void</span>&nbsp;<span class="O">SeedRandom</span>(<a href="src$Core$PrimitiveDataTypes$en-us.html#Upp::dword::typedef"><u>dword</u></a>&nbsp;<span class="P">seed</span>)</p>
+<p class="K">Seeds random with single value <span class="P">seed</span>. This is good to get always the same sequence of numbers (for the same seed). Usually used for testing.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Upp::SeedRandom()" class="N"><span class="Q">void</span>&nbsp;<span class="O">SeedRandom</span>()</p>
+<p class="K">Seeds random using the host platform entropy. Good to &quot;re-randomize&quot; Random after seeding it with fixed value.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="ZeroArray(x)" class="N"><span class="O">ZeroArray</span>(<span class="P">x</span>)</p>
+<p class="K">Fills C array <span class="P">x</span> with zeros.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="sqr(double)" class="N"><span class="Q">double</span>&nbsp;<span class="O">sqr</span>&nbsp;(<span class="Q">double</span>&nbsp;<span class="P">a</span>)</p>
+<p class="K">Returns the square of <span class="P">a</span>.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="argsinh(double)" class="N"><span class="Q">double</span>&nbsp;<span class="O">argsinh</span>&nbsp;(<span class="Q">double</span>&nbsp;<span class="P">s</span>)</p>
+<p class="K">Returns the hyperbolic arcsin of <span class="P">s</span>.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="argcosh(double)" class="N"><span class="Q">double</span>&nbsp;<span class="O">argcosh</span>&nbsp;(<span class="Q">double</span>&nbsp;<span class="P">c</span>)</p>
+<p class="K">Returns the hyperbolic arcsin of <span class="P">c</span>.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="argtanh(double)" class="N"><span class="Q">double</span>&nbsp;<span class="O">argtanh</span>&nbsp;(<span class="Q">double</span>&nbsp;<span class="P">t</span>)</p>
+<p class="K">Returns the hyperbolic arctan of <span class="P">t</span>.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="iscale(int,int,int)" class="N"><span class="Q">int</span>&nbsp;<span class="O">iscale</span>(<span class="Q">int</span>&nbsp;<span class="P">x</span>, <span class="Q">int</span>&nbsp;<span class="P">y</span>, <span class="Q">int</span>&nbsp;<span class="P">z</span>)</p>
+<p class="K">Returns <span class="P">x</span> * <span class="P">y</span> / <span class="P">z</span>.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="iscalefloor(int,int,int)" class="N"><span class="Q">int</span>&nbsp;<span class="O">iscalefloor</span>(<span class="Q">int</span>&nbsp;<span class="P">x</span>, <span class="Q">int</span>&nbsp;<span class="P">y</span>, <span class="Q">int</span>&nbsp;<span class="P">z</span>)</p>
+<p class="K">Returns <span class="P">x</span> * <span class="P">y</span> / <span class="P">z</span><span class="O">,</span> rounded towards negative infinity.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="iscaleceil(int,int,int)" class="N"><span class="Q">int</span>&nbsp;<span class="O">iscaleceil</span>(<span class="Q">int</span>&nbsp;<span class="P">x</span>, <span class="Q">int</span>&nbsp;<span class="P">y</span>, <span class="Q">int</span>&nbsp;<span class="P">z</span>)</p>
+<p class="K">Returns <span class="P">x</span> * <span class="P">y</span> / <span class="P">z</span><span class="O">,</span> rounded towards positive infinity.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="idivfloor(int,int)" class="N"><span class="Q">int</span>&nbsp;<span class="O">idivfloor</span>(<span class="Q">int</span>&nbsp;<span class="P">x</span>, <span class="Q">int</span>&nbsp;<span class="P">y</span>)</p>
+<p class="K">Returns <span class="P">x</span> / <span class="P">y</span>, truncated towards negative infinity.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="idivceil(int,int)" class="N"><span class="Q">int</span>&nbsp;<span class="O">idivceil</span>(<span class="Q">int</span>&nbsp;<span class="P">x</span>, <span class="Q">int</span>&nbsp;<span class="P">y</span>)</p>
+<p class="K">Returns <span class="P">x</span> / <span class="P">y</span>, truncated towards positive infinity.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="itimesfloor(int,int)" class="N"><span class="Q">int</span>&nbsp;<span class="O">itimesfloor</span>(<span class="Q">int</span>&nbsp;<span class="P">x</span>, <span class="Q">int</span>&nbsp;<span class="P">y</span>)</p>
+<p class="K">Moves <span class="P">x</span> to nearest lower multiple of <span class="P">y</span>.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="itimesceil(int,int)" class="N"><span class="Q">int</span>&nbsp;<span class="O">itimesceil</span>(<span class="Q">int</span>&nbsp;<span class="P">x</span>, <span class="Q">int</span>&nbsp;<span class="P">y</span>)</p>
+<p class="K">Moves <span class="P">x</span> to nearest higher multiple of <span class="P">y</span>.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="fround(double)" class="N"><span class="Q">int</span>&nbsp;<span class="O">fround</span>(<span class="Q">double</span>&nbsp;<span class="P">x</span>)</p>
+<p class="K">Converts double <span class="P">x </span>to nearest integer. Checks integer limits.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="ffloor(double)" class="N"><span class="Q">int</span>&nbsp;<span class="O">ffloor</span>(<span class="Q">double</span>&nbsp;<span class="P">x</span>)</p>
+<p class="K">Converts double <span class="P">x </span>to integer rounding towards negative infinity. Checks integer limits.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="fceil(double)" class="N"><span class="Q">int</span>&nbsp;<span class="O">fceil</span>(<span class="Q">double</span>&nbsp;<span class="P">x</span>)</p>
+<p class="K">Converts double <span class="P">x </span>to integer rounding towards +infinity. Checks integer limits.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="fround64(double)" class="N"><a href="src$Core$PrimitiveDataTypes$en-us.html#Upp::int64::typedef"><u>int64</u></a>&nbsp;<span class="O">fround64</span>(<span class="Q">double</span>&nbsp;<span class="P">x</span>)</p>
+<p class="K">Converts double <span class="P">x </span>to nearest integer. Checks integer limits.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="ffloor64(double)" class="N"><a href="src$Core$PrimitiveDataTypes$en-us.html#Upp::int64::typedef"><u>int64</u></a>&nbsp;<span class="O">ffloor64</span>(<span class="Q">double</span>&nbsp;<span class="P">x</span>)</p>
+<p class="K">Converts double <span class="P">x </span>to integer rounding towards negative infinity. Checks integer limits.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="fceil64(double)" class="N"><a href="src$Core$PrimitiveDataTypes$en-us.html#Upp::int64::typedef"><u>int64</u></a>&nbsp;<span class="O">fceil64</span>(<span class="Q">double</span>&nbsp;<span class="P">x</span>)</p>
+<p class="K">Converts double <span class="P">x </span>to integer rounding towards +infinity. Checks integer limits.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="modulo(double,double)" class="N"><span class="Q">double</span>&nbsp;<span class="O">modulo</span>(<span class="Q">double</span>&nbsp;<span class="P">x</span>, <span class="Q">double</span>&nbsp;<span class="P">y</span>)</p>
+<p class="K">Returns the floating-point remainder of <span class="P">x</span>/<span class="P">y</span>.</p>
+<p class="K">&nbsp;</p>
+<p class="K">The remainder of a division operation is the result of subtracting the integral quotient multiplied by the denominator from the numerator:</p>
+<p class="K">&nbsp;</p>
+<p class="K">remainder = numerator - quotient * denominator.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Upp::SolveQuadraticEquation(double,double,double,double*)" class="N"><span class="Q">int</span>&nbsp;<span class="O">SolveQuadraticEquation</span>(<span class="Q">double</span>&nbsp;<span class="P">A</span>, <span class="Q">double</span>&nbsp;<span class="P">B</span>, <span class="Q">double</span>&nbsp;<span class="P">C</span>, <span class="Q">double</span>&nbsp;*<span class="P">r</span>)</p>
+<p class="K">Solves quadratic equation. Returns number of solutions (0, 1 or 2), stores solutions to array r (which must have at least two elements).</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="AsString(double,int)" class="N"><a href="src$Core$String$en-us.html#String::class"><u>String</u></a>&nbsp;<span class="O">AsString</span>(<span class="Q">double</span>&nbsp;<span class="P">x</span>, <span class="Q">int</span>&nbsp;<span class="P">nDigits</span>)</p>
+<p class="K">Returns the string representation of <span class="P">x</span> with <span class="P">nDigits</span> precision.</p>
+<p class="F">&nbsp;</p>
+<p class="A">&nbsp;</p>
+</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>
+<TABLE BORDER="0" WIDTH="100%"><TR><TD></TD>
+</TR>
+</TABLE>
+<TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" BGCOLOR="#FFFFFF" WIDTH="100%" style="border-style: solid; border-width: 1px; border-color: #6E89AE;padding: 10px;;"><TR><TD><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%"><TR><TD><p class="A"><span class="B"> </span><a href="www$uppweb$contribweb$en-us.html">Do you want to contribute?</a></p>
+</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>
+<script type="text/javascript">var a={};var p=window.location.pathname.split("/");p=p[p.length-1];var s='<select id="lang" onchange="window.location=document.getElementById(\'lang\').value;">';for(l in a){if(p==l){d=" selected=1"}else{d=""}s+='<option value="'+l+'"'+d+'>'+a[l]+'</option>'}s+='</select>';var d=document.createElement('div');d.innerHTML=s;var c=document.getElementById('langs');c.replaceChild(d,c.firstChild);document.getElementById('langbox').style.display='block';</script></BODY>

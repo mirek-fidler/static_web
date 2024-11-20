@@ -1,0 +1,261 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en-us">
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
+<META NAME="Generator" CONTENT="U++ HTML Package">
+<META NAME="Description" CONTENT="U++ allocator now always returns 16-byte aligned blocks.">
+<TITLE>New features of U++ Core 2016 (C++11) :: U++</TITLE>
+<STYLE TYPE="text/css"><!--
+.A{margin:0px 0px 0px 0px;text-indent:0px;text-align:left;color:#000000;font-family:sans-serif;font-size:10pt;font-weight:normal;font-style:normal;}
+.B{font-size:12pt;}
+.C{margin:0px 0px 16px 0px;text-indent:0px;text-align:left;color:#000000;font-family:serif;font-size:24pt;font-weight:bold;font-style:normal;}
+.D{margin:16px 0px 0px 0px;text-indent:0px;text-align:left;color:#000000;font-family:sans-serif;font-size:16pt;font-weight:bold;font-style:normal;}
+.E{margin:8px 0px 8px 0px;text-indent:0px;text-align:left;color:#000000;font-family:sans-serif;font-size:10pt;font-weight:normal;font-style:normal;line-height:150%}
+.F{font-weight:bold;}
+.G{font-style:italic;}
+.H{margin:0px 0px 0px 64px;text-indent:0px;text-align:left;color:#000080;font-family:monospace;font-size:8pt;font-weight:normal;font-style:normal;}
+.I{display:list-item;list-style-type:disc;margin:8px 0px 8px 45px;text-indent:0px;text-align:left;color:#000000;font-family:sans-serif;font-size:10pt;font-weight:normal;font-style:normal;line-height:150%}
+a.l1         { text-decoration:none; font-size: 8pt; font-family: sans-serif; font-weight: normal; }
+a.l1:link    { color:#000000; }
+a.l1:visited { color:#000080; }
+a.l1:hover   { color:#9933CC; }
+a.l1:active  { color:#000000; }
+a.l2         { text-decoration:none; font-size: 12pt; font-family: sans-serif; font-variant: small-caps; }
+a.l2:link    { color:#0066FF; }
+a.l2:visited { color:#FF6600; }
+a.l2:hover   { color:#BC0624; }
+a.l2:active  { color:#BC0024; }
+
+-->
+</STYLE>
+<META NAME="keywords" CONTENT="framework, toolkit, widget, c++, visual, studio, dev-cpp, builder, ide, class, component,wxwidgets, qt, rapid, application, development, rad, mfc, linux, macos, gui, sdl, directx, desktop"><META name="robots" content="index,follow">
+<LINK rel="alternate" type="application/rss+xml" title="SVN changes" href="svnchanges.xml">
+<LINK rel="shortcut icon" type="image/png" href="favicon.png">
+</HEAD><BODY BGCOLOR="#D2D9D2" ALINK="#800000" LINK="#000000" VLINK="#000080"><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%"><TR><TD COLSPAN="3"><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%" BGCOLOR="#FFFFFF" style="border: 1px solid #6E89AE;padding-left: 10px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;"><TR><TD><A HREF="index.html"><IMG SRC="0i.png" ALT="" BORDER="0"></A>
+</TD>
+<TD ALIGN="RIGHT" VALIGN="BOTTOM" STYLE="padding-bottom: 5px; background-image: url('1i.png')"><span style="font-size: 14pt; font-family: sans-serif;"><script type="text/javascript"><!--
+google_ad_client = "pub-1082147624384270";
+google_ad_width = 468;
+google_ad_height = 60;
+google_ad_format = "468x60_as";
+google_ad_type = "text_image";
+google_ad_channel = "";
+google_color_border = "336699";
+google_color_bg = "FFFFFF";
+google_color_link = "0000FF";
+google_color_text = "000000";
+google_color_url = "008000";
+//--></script>
+<script type="text/javascript"
+  src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+&nbsp;&nbsp;</span>
+</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>
+<TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%"><TR><TD COLSPAN="3" BGCOLOR="#D2D9D2" HEIGHT="6"></TD>
+</TR>
+<TR><TD VALIGN="TOP" ALIGN="CENTER"><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="160"><TR><TD ALIGN="CENTER"><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%" BGCOLOR="#FFFFFF" style="border-style: solid; border-width: 1px; border-color: #6E89AE;padding: 0px"><TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px;"><A HREF="www$uppweb$overview$en-us.html" CLASS="l1">Overview</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$examples$en-us.html" CLASS="l1">Examples</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$ss$en-us.html" CLASS="l1">Screenshots</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$comparison$en-us.html" CLASS="l1">Comparisons</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$apps$en-us.html" CLASS="l1">Applications</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$download$en-us.html" CLASS="l1">Download</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$documentation$en-us.html" CLASS="l1">Documentation</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$Tutorials$en-us.html" CLASS="l1">Tutorials</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="app$ide$UppHub$en-us.html" CLASS="l1">UppHub</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$Roadmap$en-us.html" CLASS="l1">Status & Roadmap</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$FAQ$en-us.html" CLASS="l1">FAQ</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="app$ide$About$en-us.html" CLASS="l1">Authors & License</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="https://www.ultimatepp.org/forums" CLASS="l1">Forums</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$Funding$en-us.html" CLASS="l1">Funding U++</A>
+</TD>
+</TR>
+</TABLE>
+<TABLE BORDER="0" WIDTH="100%"><TR><TD></TD>
+</TR>
+</TABLE>
+<TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%" BGCOLOR="#FFFFFF" style="border-style: solid; border-width: 1px; border-color: #6E89AE;padding: 0px"><TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('3i.png'); border: 0px solid black;padding-left:12px; padding-right:0px; padding-top:1px; padding-bottom:1px;color:#FFFFFF;"><B><span style="font-size: 8pt; font-family: sans-serif;">Search on this site</span>
+</B>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:6px; padding-right:0px; padding-top:4px; padding-bottom:4px;border-top: 1px solid #6E89AE;"><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%"><TR><TD><IMG SRC="4i.png" ALT="" BORDER="0"></TD>
+<TD><FORM ACTION="https://www.google.com/search" METHOD="GET" STYLE="margin:0px;padding:0px;"><INPUT TYPE="HIDDEN" NAME="ie" VALUE="UTF-8"><INPUT TYPE="HIDDEN" NAME="oe" VALUE="UTF-8"><INPUT TYPE="TEXT" NAME="q" SIZE="15" MAXLENGTH="256" placeholder="Site search"><INPUT TYPE="HIDDEN" NAME="sitesearch" VALUE="ultimatepp.org"></FORM>
+</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>
+<TABLE BORDER="0" WIDTH="100%"><TR><TD></TD>
+</TR>
+</TABLE>
+<br><div id="fb-root"></div>
+<script type="text/javascript">(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) {return;}
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+<div class="fb-like" data-href="https://www.facebook.com/pages/Upp-Framework/262346610476027?sk=wall" data-send="false" data-layout="button_count" data-width="160" data-show-faces="false" data-font="arial"></div>
+<br><br><script type="text/javascript"><!--
+google_ad_client = "pub-1082147624384270";
+google_ad_width = 160;
+google_ad_height = 600;
+google_ad_format = "160x600_as";
+google_ad_type = "text_image";
+google_ad_channel = "";
+google_color_border = "336699";
+google_color_bg = "FFFFFF";
+google_color_link = "0000FF";
+google_color_text = "000000";
+google_color_url = "008000";
+//--></script>
+<script type="text/javascript"
+  src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script><br><br><script type="text/javascript"><!--
+google_ad_client = "pub-1082147624384270";
+google_ad_width = 160;
+google_ad_height = 90;
+google_ad_format = "160x90_0ads_al_s";
+google_ad_channel = "";
+google_color_border = "336699";
+google_color_bg = "FFFFFF";
+google_color_link = "0000FF";
+google_color_text = "000000";
+google_color_url = "008000";
+//--></script>
+<script type="text/javascript"
+  src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+<br><br><br><br><br><br><A HREF="https://sourceforge.net/projects/upp/"><IMG SRC="https://sourceforge.net/sflogo.php?group_id=93970&amp;type=2" ALT="SourceForge.net Logo" BORDER="0" WIDTH="125" HEIGHT="37"></A>
+<br><br><A HREF="https://flathub.org/en/apps/org.ultimatepp.TheIDE"><IMG SRC="5i.png" ALT="SourceForge.net Logo" BORDER="0" WIDTH="125" HEIGHT="37"></A>
+<br><br><div style="background-color:#ffffff;width:125;height:35"><A HREF="https://github.com/ultimatepp"><IMG SRC="6i.png" ALT="GitHub Logo" BORDER="0" WIDTH="125" HEIGHT="35"></A>
+</div><br><div style="background-color:#ffffff;width:125;height:35"><div style="height:5"></div><A HREF="https://discord.gg/8XzqQzXZzb"><IMG SRC="https://assets-global.website-files.com/6257adef93867e50d84d30e2/636e0b5061df29d55a92d945_full_logo_blurple_RGB.svg" ALT="Discord Logo" BORDER="0" WIDTH="125" HEIGHT="25"></A>
+</div><br></TD>
+</TR>
+</TABLE>
+</TD>
+<TD VALIGN="TOP" BGCOLOR="#D2D9D2"><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="6"><TR><TD></TD>
+</TR>
+</TABLE>
+</TD>
+<TD VALIGN="TOP" WIDTH="100%" BGCOLOR="#D2D9D2"><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" BGCOLOR="#FFFFFF" WIDTH="100%" style="border-style: solid; border-width: 1px; border-color: #6E89AE;padding: 10px;;"><TR><TD><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%"><TR><TD><p class="C">New features of U++ Core 2016 (C++11)</p>
+<hr><p class="D">Table of contents</p>
+<p class="A">&nbsp;</p>
+<p class="A"><a href="srcdoc$Core$Core2016_en-us.html#1">1. Allocator</a></p>
+<p class="A"><a href="srcdoc$Core$Core2016_en-us.html#2">2. Multithreading</a></p>
+<p class="A"><a href="srcdoc$Core$Core2016_en-us.html#3">3. Callback changes</a></p>
+<p class="A"><a href="srcdoc$Core$Core2016_en-us.html#4">4. Algorithms and Containers</a></p>
+<p class="A"><a href="srcdoc$Core$Core2016_en-us.html#5">5. Tuple</a></p>
+<p class="A"><a href="srcdoc$Core$Core2016_en-us.html#6">6. Changes in r-value and pick</a></p>
+<p class="A"><a href="srcdoc$Core$Core2016_en-us.html#7">7. Smaller improvements</a></p>
+<p class="A">&nbsp;</p>
+<hr><p id="1" class="D">1. Allocator</p>
+<p class="E">U++ allocator now always returns 16-byte aligned blocks. This is to simplify SSE requirements, at the price of smallest possible allocation being 32-bytes (request for smaller blocks are rounded up to 32-bytes).</p>
+<p class="E">In situation where allocating a lot of blocks smaller than 32 bytes (typical is controlling reference counter block in shared_ptr like class), new <span class="F">TinyAlloc</span>/<span class="F">TinyFree</span> functions can be used, or templated &quot;new/delete&quot; like functions <span class="F">tiny_new</span>/<span class="F">tiny_delete</span>.</p>
+<hr><p id="2" class="D">2. Multithreading</p>
+<p class="E">One of biggest advances of C++11 is support for multithreading memory model. That is why we could drop U++ memory model support and use what language/standard library provides. <span class="F">Atomic </span>is now reimplemented using <span class="F">std::atomic&lt;int&gt;</span>, thread local variables are language standard. OTOH, beyond memory model, U++ <span class="F">Thread </span>class and <span class="F">CoWork </span>class are still basis of multithreading.</p>
+<p class="E"><span class="F">ConditionVariable </span>is now recommended over <span class="F">Semaphore</span>. We keep U++ class for this one, because in Win32 <span class="F">ConditionVariable </span>requires Windows 7 and we still want to keep WinXP support (U++ <span class="F">ConditionVariable </span>contains internal implementation when system API is missing).</p>
+<p class="E"><span class="F">Thread::Exit</span> can be used to exit the thread (from within), similar to <span class="F">Exit </span>to exit the whole program. It throws exception, which is caught at the end of thread routine.</p>
+<p class="E"><span class="F">CoWork </span>was optimized and also changed so that each &quot;master thread&quot; has private thread pool. This is important to avoid stealing of work between master threads, which can lead to problems (e.g. delays in the GUI).</p>
+<p class="E"><span class="F">CoWork::FinLock</span> now provides 'finalization lock', useful to avoid additional mutex lock for e.g. storing results.</p>
+<p class="E"><span class="F">CoWork </span>now also has pipeline support, where thread performs one specific task and eventually passes results to another thread to continue processing.</p>
+<hr><p id="3" class="D">3. Callback changes</p>
+<p class="E">Callbacks are refactored with C++11 lambdas and varargs templates. There are now 3 classes:</p>
+<p class="E"><span class="F">Function </span>is similar to <span class="F">std::function</span>, generic callable with any number of parameters and any return value in addition it has ability to 'add' functions using operator&lt;&lt;. Also, unlike <span class="F">std::function</span>, calling empty Function is no operation, not exception.</p>
+<p class="E"><span class="F">Event </span>is equivalent of Callback - unlike Callback, it is not necessary to have Callback, Callback1, Callback2, number of parameters is resolved by C++11 template varargs.</p>
+<p class="E">Callback is deprecated but supported for backward compatibility.</p>
+<hr><p id="4" class="D">4. Algorithms and Containers</p>
+<p class="E">The set of algorithms provided by U++ is now streamlined by introduction of <span class="G">Range</span> concept. Range is entity that provides begin/end/GetCount/operator[] methods. All U++ algorithms expect Range as input. All U++ containers satisfy Range concept. In addition there are</p>
+<p class="E"><span class="F">SubRangeClass </span>- represents subrange of container, or just begin/end pair.</p>
+<p class="E"><span class="F">ConstRangeClass </span>- trivial single-value range</p>
+<p class="E"><span class="F">ViewRangeClass </span>- is basically a list of indicies inside another range. <span class="F">FilterRange</span> function can create ViewRangeClass based on predicate.</p>
+<p class="E">U++ containers now support <span class="F">InsertRange</span>/<span class="F">AppendRange </span>template methods.</p>
+<p class="E">New, parallel algorithms are introduced: <span class="F">CoLoop</span>, <span class="F">CoAccumulate</span>, <span class="F">CoSum</span>, <span class="F">CoFindBest</span>, <span class="F">CoFindMin</span>, <span class="F">CoMin</span>, <span class="F">CoFindMax</span>, <span class="F">CoMax</span>, <span class="F">CoFindMatch</span>, <span class="F">CoFindIndex</span>, <span class="F">CoSort</span>,<span class="F"> CoStableSort</span>,<span class="F"> CoIndexSort</span>, <span class="F">CoStableIndexSort</span>, <span class="F">CoIndexSort2</span>, <span class="F">CoStableIndexSort2</span>, <span class="F">CoIndexSort3</span>, <span class="F">CoStableIndexSort3</span>, <span class="F">CoGetSortOrder</span>, <span class="F">CoGetStableSortOrder</span>, <span class="F">CoSortByKey</span>, <span class="F">CoSortByValue</span>, <span class="F">CoStableSortByKey</span>, <span class="F">CoStableSortByValue</span>, <span class="F">CoSortIndex</span>, <span class="F">CoStableSortIndex</span>.</p>
+<hr><p id="5" class="D">5. Tuple</p>
+<p class="E">Tuple now does not require the specific template type based on number of elements (instead of Tuple3&lt;int, int, String&gt; it can now be used just Tuple&lt;int, int, String&gt;). Tuple now has methods for retrieving the number of elements and index based access of elements via Value and also C++11 like access via template methods (index based or type based):</p>
+<p class="A">&nbsp;</p>
+<p class="H"><span class="F">Tuple</span>&lt;int, String&gt; x = <span class="F">MakeTuple</span>(12, (const char *)&quot;hello&quot;);</p>
+<p class="H">&nbsp;&nbsp;&nbsp;&nbsp;</p>
+<p class="H">DUMP(x.a);</p>
+<p class="H">DUMP(x.b);</p>
+<p class="H">DUMP(x);</p>
+<p class="H">&nbsp;</p>
+<p class="H">DUMP(x.<span class="F">GetCount</span>());</p>
+<p class="H">DUMP(x.<span class="F">Get</span>(0));</p>
+<p class="H">DUMP(x.<span class="F">Get</span>(1));</p>
+<p class="H">DUMP(x.<span class="F">GetArray</span>());</p>
+<p class="H">DUMP(x.<span class="F">Get&lt;0&gt;</span>());</p>
+<p class="H">DUMP(x.<span class="F">Get&lt;String&gt;</span>());</p>
+<p class="H">&nbsp;&nbsp;&nbsp;&nbsp;</p>
+<p class="H">x.Set(1, &quot;bar&quot;);</p>
+<p class="H">DUMP(x);</p>
+<p class="H">ValueArray va { 22, &quot;world&quot; };</p>
+<p class="H">x.<span class="F">SetArray</span>(va);</p>
+<p class="H">DUMP(x);</p>
+<p class="A">&nbsp;</p>
+<p class="E">Unfortunately, as 'Tuple' id now represents template class, 'Tuple' function had to be removed. Use MakeTuple instead.</p>
+<hr><p id="6" class="D">6. Changes in r-value and pick</p>
+<p class="E">All features required for compatibility with C++99 (pick_ etc...) were removed in favor of using r-value references. &quot;picked&quot; state was removed, picking now simply clears the source to &quot;empty&quot; state. AddPick methods in containers are deprecated, use Add(pick(x)) instead. 'pick' is kept as synonym to std::move and clone is still required (containers do not provide default copy constructor).</p>
+<p class="E">Throughout library, &quot;opportunity&quot; r-value constructors/assignments are added. That has perhaps the most optimizing effect with chaining String operator+: String a; ... String x = a+ &quot; foo &quot; + &quot;bar&quot; does not perform any unnecessary copies now.</p>
+<hr><p id="7" class="D">7. Smaller improvements</p>
+<p class="E">Below is the list of various smaller improvements:</p>
+<p class="I">Stream::SerializeRaw count is now int64 (instead of 32-bit int)</p>
+<p class="I">2GB items limit is better implemented in StringBuffer, WStringBuffer, StringStream.</p>
+<p class="I">StringStream now has SizeLimit option, if breached (when storing data to StringStream), exception is thrown.</p>
+<p class="I">NanoStrings class is removed.</p>
+<p class="I">HashFn / precomputed hash options in Index/Maps are removed.</p>
+<p class="I">Index/Maps are further optimized (about 5% gain in benchmarks).</p>
+<p class="A">&nbsp;</p>
+</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>
+<TABLE BORDER="0" WIDTH="100%"><TR><TD></TD>
+</TR>
+</TABLE>
+<TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" BGCOLOR="#FFFFFF" WIDTH="100%" style="border-style: solid; border-width: 1px; border-color: #6E89AE;padding: 10px;;"><TR><TD><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%"><TR><TD><p class="A"><span class="B"> </span><a href="www$uppweb$contribweb$en-us.html">Do you want to contribute?</a></p>
+</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>
+<script type="text/javascript">var a={};var p=window.location.pathname.split("/");p=p[p.length-1];var s='<select id="lang" onchange="window.location=document.getElementById(\'lang\').value;">';for(l in a){if(p==l){d=" selected=1"}else{d=""}s+='<option value="'+l+'"'+d+'>'+a[l]+'</option>'}s+='</select>';var d=document.createElement('div');d.innerHTML=s;var c=document.getElementById('langs');c.replaceChild(d,c.firstChild);document.getElementById('langbox').style.display='block';</script></BODY>

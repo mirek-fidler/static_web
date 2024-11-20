@@ -1,0 +1,252 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en-us">
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
+<META NAME="Generator" CONTENT="U++ HTML Package">
+<META NAME="Description" CONTENT="Having a tool that will take care of unifying code formatting within the code base is crucial for any software project aspiring to be successful.">
+<TITLE>Code Formatting :: U++</TITLE>
+<STYLE TYPE="text/css"><!--
+.A{margin:0px 0px 0px 0px;text-indent:0px;text-align:left;color:#000000;font-family:sans-serif;font-size:10pt;font-weight:normal;font-style:normal;}
+.B{font-size:12pt;}
+.C{margin:0px 0px 16px 0px;text-indent:0px;text-align:left;color:#000000;font-family:serif;font-size:24pt;font-weight:bold;font-style:normal;}
+.D{margin:16px 0px 0px 0px;text-indent:0px;text-align:left;color:#000000;font-family:sans-serif;font-size:16pt;font-weight:bold;font-style:normal;}
+.E{margin:8px 0px 8px 0px;text-indent:0px;text-align:left;color:#000000;font-family:sans-serif;font-size:10pt;font-weight:normal;font-style:normal;line-height:150%}
+.F{margin:16px 0px 0px 0px;text-indent:0px;text-align:left;color:#000000;font-family:sans-serif;font-size:14pt;font-weight:bold;font-style:normal;}
+.G{display:list-item;list-style-type:disc;margin:8px 0px 8px 52px;text-indent:0px;text-align:left;color:#000000;font-family:sans-serif;font-size:10pt;font-weight:normal;font-style:normal;line-height:150%}
+.H{font-weight:bold;}
+.I{margin:0px 0px 0px 0px;text-indent:0px;text-align:center;color:#000000;font-family:sans-serif;font-size:10pt;font-weight:normal;font-style:normal;}
+a.l1         { text-decoration:none; font-size: 8pt; font-family: sans-serif; font-weight: normal; }
+a.l1:link    { color:#000000; }
+a.l1:visited { color:#000080; }
+a.l1:hover   { color:#9933CC; }
+a.l1:active  { color:#000000; }
+a.l2         { text-decoration:none; font-size: 12pt; font-family: sans-serif; font-variant: small-caps; }
+a.l2:link    { color:#0066FF; }
+a.l2:visited { color:#FF6600; }
+a.l2:hover   { color:#BC0624; }
+a.l2:active  { color:#BC0024; }
+
+-->
+</STYLE>
+<META NAME="keywords" CONTENT="framework, toolkit, widget, c++, visual, studio, dev-cpp, builder, ide, class, component,wxwidgets, qt, rapid, application, development, rad, mfc, linux, macos, gui, sdl, directx, desktop"><META name="robots" content="index,follow">
+<LINK rel="alternate" type="application/rss+xml" title="SVN changes" href="svnchanges.xml">
+<LINK rel="shortcut icon" type="image/png" href="favicon.png">
+</HEAD><BODY BGCOLOR="#D2D9D2" ALINK="#800000" LINK="#000000" VLINK="#000080"><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%"><TR><TD COLSPAN="3"><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%" BGCOLOR="#FFFFFF" style="border: 1px solid #6E89AE;padding-left: 10px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;"><TR><TD><A HREF="index.html"><IMG SRC="0i.png" ALT="" BORDER="0"></A>
+</TD>
+<TD ALIGN="RIGHT" VALIGN="BOTTOM" STYLE="padding-bottom: 5px; background-image: url('1i.png')"><span style="font-size: 14pt; font-family: sans-serif;"><script type="text/javascript"><!--
+google_ad_client = "pub-1082147624384270";
+google_ad_width = 468;
+google_ad_height = 60;
+google_ad_format = "468x60_as";
+google_ad_type = "text_image";
+google_ad_channel = "";
+google_color_border = "336699";
+google_color_bg = "FFFFFF";
+google_color_link = "0000FF";
+google_color_text = "000000";
+google_color_url = "008000";
+//--></script>
+<script type="text/javascript"
+  src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+&nbsp;&nbsp;</span>
+</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>
+<TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%"><TR><TD COLSPAN="3" BGCOLOR="#D2D9D2" HEIGHT="6"></TD>
+</TR>
+<TR><TD VALIGN="TOP" ALIGN="CENTER"><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="160"><TR><TD ALIGN="CENTER"><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%" BGCOLOR="#FFFFFF" style="border-style: solid; border-width: 1px; border-color: #6E89AE;padding: 0px"><TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px;"><A HREF="www$uppweb$overview$en-us.html" CLASS="l1">Overview</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$examples$en-us.html" CLASS="l1">Examples</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$ss$en-us.html" CLASS="l1">Screenshots</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$comparison$en-us.html" CLASS="l1">Comparisons</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$apps$en-us.html" CLASS="l1">Applications</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$download$en-us.html" CLASS="l1">Download</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$documentation$en-us.html" CLASS="l1">Documentation</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$Tutorials$en-us.html" CLASS="l1">Tutorials</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="app$ide$UppHub$en-us.html" CLASS="l1">UppHub</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$Roadmap$en-us.html" CLASS="l1">Status & Roadmap</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$FAQ$en-us.html" CLASS="l1">FAQ</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="app$ide$About$en-us.html" CLASS="l1">Authors & License</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="https://www.ultimatepp.org/forums" CLASS="l1">Forums</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$Funding$en-us.html" CLASS="l1">Funding U++</A>
+</TD>
+</TR>
+</TABLE>
+<TABLE BORDER="0" WIDTH="100%"><TR><TD></TD>
+</TR>
+</TABLE>
+<TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%" BGCOLOR="#FFFFFF" style="border-style: solid; border-width: 1px; border-color: #6E89AE;padding: 0px"><TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('3i.png'); border: 0px solid black;padding-left:12px; padding-right:0px; padding-top:1px; padding-bottom:1px;color:#FFFFFF;"><B><span style="font-size: 8pt; font-family: sans-serif;">Search on this site</span>
+</B>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:6px; padding-right:0px; padding-top:4px; padding-bottom:4px;border-top: 1px solid #6E89AE;"><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%"><TR><TD><IMG SRC="4i.png" ALT="" BORDER="0"></TD>
+<TD><FORM ACTION="https://www.google.com/search" METHOD="GET" STYLE="margin:0px;padding:0px;"><INPUT TYPE="HIDDEN" NAME="ie" VALUE="UTF-8"><INPUT TYPE="HIDDEN" NAME="oe" VALUE="UTF-8"><INPUT TYPE="TEXT" NAME="q" SIZE="15" MAXLENGTH="256" placeholder="Site search"><INPUT TYPE="HIDDEN" NAME="sitesearch" VALUE="ultimatepp.org"></FORM>
+</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>
+<TABLE BORDER="0" WIDTH="100%"><TR><TD></TD>
+</TR>
+</TABLE>
+<br><div id="fb-root"></div>
+<script type="text/javascript">(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) {return;}
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+<div class="fb-like" data-href="https://www.facebook.com/pages/Upp-Framework/262346610476027?sk=wall" data-send="false" data-layout="button_count" data-width="160" data-show-faces="false" data-font="arial"></div>
+<br><br><script type="text/javascript"><!--
+google_ad_client = "pub-1082147624384270";
+google_ad_width = 160;
+google_ad_height = 600;
+google_ad_format = "160x600_as";
+google_ad_type = "text_image";
+google_ad_channel = "";
+google_color_border = "336699";
+google_color_bg = "FFFFFF";
+google_color_link = "0000FF";
+google_color_text = "000000";
+google_color_url = "008000";
+//--></script>
+<script type="text/javascript"
+  src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script><br><br><script type="text/javascript"><!--
+google_ad_client = "pub-1082147624384270";
+google_ad_width = 160;
+google_ad_height = 90;
+google_ad_format = "160x90_0ads_al_s";
+google_ad_channel = "";
+google_color_border = "336699";
+google_color_bg = "FFFFFF";
+google_color_link = "0000FF";
+google_color_text = "000000";
+google_color_url = "008000";
+//--></script>
+<script type="text/javascript"
+  src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+<br><br><br><br><br><br><A HREF="https://sourceforge.net/projects/upp/"><IMG SRC="https://sourceforge.net/sflogo.php?group_id=93970&amp;type=2" ALT="SourceForge.net Logo" BORDER="0" WIDTH="125" HEIGHT="37"></A>
+<br><br><A HREF="https://flathub.org/en/apps/org.ultimatepp.TheIDE"><IMG SRC="5i.png" ALT="SourceForge.net Logo" BORDER="0" WIDTH="125" HEIGHT="37"></A>
+<br><br><div style="background-color:#ffffff;width:125;height:35"><A HREF="https://github.com/ultimatepp"><IMG SRC="6i.png" ALT="GitHub Logo" BORDER="0" WIDTH="125" HEIGHT="35"></A>
+</div><br><div style="background-color:#ffffff;width:125;height:35"><div style="height:5"></div><A HREF="https://discord.gg/8XzqQzXZzb"><IMG SRC="https://assets-global.website-files.com/6257adef93867e50d84d30e2/636e0b5061df29d55a92d945_full_logo_blurple_RGB.svg" ALT="Discord Logo" BORDER="0" WIDTH="125" HEIGHT="25"></A>
+</div><br></TD>
+</TR>
+</TABLE>
+</TD>
+<TD VALIGN="TOP" BGCOLOR="#D2D9D2"><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="6"><TR><TD></TD>
+</TR>
+</TABLE>
+</TD>
+<TD VALIGN="TOP" WIDTH="100%" BGCOLOR="#D2D9D2"><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" BGCOLOR="#FFFFFF" WIDTH="100%" style="border-style: solid; border-width: 1px; border-color: #6E89AE;padding: 10px;;"><TR><TD><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%"><TR><TD><p class="C">Code Formatting</p>
+<hr><p class="D">Table of content</p>
+<p class="A">&nbsp;</p>
+<p class="A"><a href="app$ide$CodeFormatting_en-us.html#1">1. Introduction</a></p>
+<p class="A"><a href="app$ide$CodeFormatting_en-us.html#2">2. Formatting</a></p>
+<p class="A"> &nbsp;&nbsp;&nbsp;<a href="app$ide$CodeFormatting_en-us.html#2_1">2.1 Available options</a></p>
+<p class="A"> &nbsp;&nbsp;&nbsp;<a href="app$ide$CodeFormatting_en-us.html#2_2">2.2 Reformat code</a></p>
+<p class="A"> &nbsp;&nbsp;&nbsp;<a href="app$ide$CodeFormatting_en-us.html#2_3">2.3 Reformat code with options..</a></p>
+<p class="A"> &nbsp;&nbsp;&nbsp;<a href="app$ide$CodeFormatting_en-us.html#2_4">2.4 Reformat JSON</a></p>
+<p class="A"> &nbsp;&nbsp;&nbsp;<a href="app$ide$CodeFormatting_en-us.html#2_5">2.5 Reformat XML</a></p>
+<p class="A"> &nbsp;&nbsp;&nbsp;<a href="app$ide$CodeFormatting_en-us.html#2_6">2.6 Reformat Comment Paragraph</a></p>
+<p class="A"><a href="app$ide$CodeFormatting_en-us.html#3">3. Troubleshooting</a></p>
+<p class="A"> &nbsp;&nbsp;&nbsp;<a href="app$ide$CodeFormatting_en-us.html#3_1">3.1 The clang-format executable has not been found</a></p>
+<p class="A">&nbsp;</p>
+<hr><p id="1" class="D">1. Introduction</p>
+<p class="E">Having a tool that will take care of unifying code formatting within the code base is crucial for any software project aspiring to be successful. Having unified code formatting allows a development team to save a significant amount of time by avoiding unnecessary discussions during code review. Also, with the whole process automated, you do not need to think about the style and can focus on other things, such as the architecture of your application.</p>
+<p class="E">Our implementation of code formatting is based on <a href="https://clang.llvm.org/docs/ClangFormat.html">clang-format</a>. This is an industry standard-tool widely used among C/C++ developers. It not only supports C++, but other languages as well, such as C, C#, JavaScript, JSON, and Objective-C.</p>
+<p class="E">The current version of formatting was introduced in 2023.1 version. </p>
+<hr><p id="2" class="D">2. Formatting</p>
+<p id="2_1" class="F">2.1 Available options</p>
+<p class="E">To reformat code, you can use several strategies:</p>
+<p class="G"><span class="H">Reformat code </span>(Ctrl/⌘+I)</p>
+<p class="G"><span class="H">Reformat code with options..</span> (Ctrl/⌘+Shift+I)</p>
+<p class="G">Reformat JSON</p>
+<p class="G">Reformat XML</p>
+<p class="G">Reformat comment paragraph (Alt/⌃+R)</p>
+<p class="E">In this paragraph, we will discuss each of these options separately. The above code formatting options can be found in the &quot;Assist -&gt; Reformat&quot; menu.</p>
+<p class="A">&nbsp;</p>
+<p class="I"><a href="app$ide$CodeFormatting_en-us.html_0.png"><img src="app$ide$CodeFormatting_en-us.html_0.png" border="0" alt="" style="width: 705px; height: 504px"></a></p>
+<p class="A">&nbsp;</p>
+<p class="E">Please notice that access to the &quot;Reformat&quot; menu is also available directly from the &quot;Edit&quot; menu. It is an alternative pathway. It doesn't matter which reformat menu you use. The functionality is exactly the same.</p>
+<p class="E">All options available in the &quot;Reformat&quot; menu take into account your selection. It means that whenever you have selected some portion of text in the code editor, the reformat commands will only operate on that text. If there is no selection, the commands will operate on the whole file's content.</p>
+<p id="2_2" class="F">2.2 Reformat code</p>
+<p class="E">As the name of the option suggests, this option formats code. By default, this operation looks for a <span class="H">.clang-format</span> file located in your code base. The file is formatted according to the information about style stored in it.</p>
+<p class="E">U++ has its own <span class="H">.clang-format</span> file. The style is based on LLVM. However, there are several modifications to it, so the whole style has its own name. We call it simply U++ style. If you want to study this file on your own, you can <a href="https://github.com/ultimatepp/ultimatepp/blob/master/.clang-format">find</a> it in our main repository. All applications that are built within the uppsrc assembly are using this style by default, and there is no need for additional configuration.</p>
+<p class="E">If you want to override the default U++<span class="H"> .clang-format</span> file, you can create your own and put it in your assembly or package. Then &quot;Reformat code&quot; will use it as a base for the code formatting operation. The documentation about creating your own .clang-format file can be found <a href="https://releases.llvm.org/3.6.0/tools/clang/docs/ClangFormatStyleOptions.html">here</a>.</p>
+<p class="E">If no .clang-format file is provided and the application is not developed within valid uppsrc assembly, then the &quot;Reformat code with options..&quot; option is executed. </p>
+<p id="2_3" class="F">2.3 Reformat code with options..</p>
+<p class="E">This option opens a separate dialog in which you have direct access to all options provided by clang-format. It is also less straightforward than the &quot;Reformat code&quot; option because it allows you to preview code formatting before applying it to code. If you don't like the final result, you can always cancel the operation by clicking the dedicated button.</p>
+<p class="A">&nbsp;</p>
+<p class="I"><a href="app$ide$CodeFormatting_en-us.html_1.png"><img src="app$ide$CodeFormatting_en-us.html_1.png" border="0" alt="" style="width: 774px; height: 643px"></a></p>
+<p class="A">&nbsp;</p>
+<p class="E">As you can see in the above image, the dialog is very advanced. It allows you to experiment with all the options that can be used in .clang-format file. You can easily create your own style and export it by using the &quot;Save..&quot; button. Once you export .clang-format file, you can use it in one of your projects.</p>
+<p id="2_4" class="F">2.4 Reformat JSON</p>
+<p class="E">This option, as the name suggests, formats JSON. It is based on our internal JSON format implementation. The outputted JSON is always the same. There are no configuration options.</p>
+<p class="E">Please notice that for formatting JSON, you can use the &quot;Reformat Code&quot; option. This option offers much more flexibility because you can configure output directly in .clang-format file.</p>
+<p id="2_5" class="F">2.5 Reformat XML</p>
+<p class="E">The same as reformat JSON, but dedicated to XML.</p>
+<p id="2_6" class="F">2.6 Reformat Comment Paragraph</p>
+<p class="E">This option formats comments. It means that it will optimize the size of the comment to the optimal level. By default, it formats the comment where the caret is placed. It also works with selections.</p>
+<p class="E">If there is no need for comment formatting, nothing happened.</p>
+<p class="E">The sample code transformation made by this option is shown in the below image:</p>
+<p class="A">&nbsp;</p>
+<p class="I"><a href="app$ide$CodeFormatting_en-us.html_2.png"><img src="app$ide$CodeFormatting_en-us.html_2.png" border="0" alt="" style="width: 713px; height: 322px"></a></p>
+<p class="A">&nbsp;</p>
+<hr><p id="3" class="D">3. Troubleshooting</p>
+<p id="3_1" class="F">3.1 The clang-format executable has not been found</p>
+<p class="E">TheIDE uses an external clang-format executable. When TheIDE could not find this executable, errors occurred. To avoid this error, please make sure that the clang-format executable is installed and available in your environment. You can verify it by entering the clang-format command in your terminal.</p>
+<p class="E">Please notice that for the Windows platform, TheIDE is first looking for clang-format executable bundled with the U++ installation and stored in the bin directory.</p>
+</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>
+<TABLE BORDER="0" WIDTH="100%"><TR><TD></TD>
+</TR>
+</TABLE>
+<TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" BGCOLOR="#FFFFFF" WIDTH="100%" style="border-style: solid; border-width: 1px; border-color: #6E89AE;padding: 10px;;"><TR><TD><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%"><TR><TD><p class="A"><span class="B"> </span><a href="www$uppweb$contribweb$en-us.html">Do you want to contribute?</a></p>
+</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>
+<script type="text/javascript">var a={};var p=window.location.pathname.split("/");p=p[p.length-1];var s='<select id="lang" onchange="window.location=document.getElementById(\'lang\').value;">';for(l in a){if(p==l){d=" selected=1"}else{d=""}s+='<option value="'+l+'"'+d+'>'+a[l]+'</option>'}s+='</select>';var d=document.createElement('div');d.innerHTML=s;var c=document.getElementById('langs');c.replaceChild(d,c.firstChild);document.getElementById('langbox').style.display='block';</script></BODY>

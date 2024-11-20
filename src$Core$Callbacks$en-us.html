@@ -1,0 +1,737 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en-us">
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
+<META NAME="Generator" CONTENT="U++ HTML Package">
+<TITLE>Callbacks :: U++</TITLE>
+<STYLE TYPE="text/css"><!--
+.A{margin:0px 0px 0px 0px;text-indent:0px;text-align:left;color:#000000;font-family:sans-serif;font-size:10pt;font-weight:normal;font-style:normal;}
+.B{font-size:12pt;}
+.C{border-collapse:collapse;table-layout:auto;border: 2px solid #000000;}
+.D{padding: 3px 5px 3px 5px;border-left: 1px solid #000000;border-top: 1px solid #000000;border-right: 1px solid #000000;border-bottom: 1px solid #000000;background-color:#712A00;vertical-align:middle;}
+.E{margin:0px 0px 0px 0px;text-indent:0px;text-align:left;color:#e0e0e0;font-family:sans-serif;font-size:16pt;font-weight:bold;font-style:normal;}
+.F{margin:8px 0px 0px 0px;text-indent:0px;text-align:left;color:#000000;font-family:sans-serif;font-size:10pt;font-weight:bold;font-style:italic;}
+.G{margin:8px 0px 0px 0px;text-indent:0px;text-align:left;color:#000000;font-family:sans-serif;font-size:10pt;font-weight:normal;font-style:normal;}
+.H{color:#8000ff;font-weight:bold;font-style:italic;}
+.I{margin:0px 0px 0px 0px;text-indent:0px;text-align:left;color:#000000;font-family:sans-serif;font-size:6pt;font-weight:normal;font-style:normal;}
+.J{padding: 3px 5px 3px 5px;border-left: 1px solid #000000;border-top: 1px solid #000000;border-right: 1px solid #000000;border-bottom: 1px solid #000000;background-color:#CCCCCC;vertical-align:middle;}
+.K{margin:0px 0px 0px 0px;text-indent:0px;text-align:left;color:#8000ff;font-family:sans-serif;font-size:8pt;font-weight:bold;font-style:italic;}
+.L{padding: 3px 5px 3px 5px;border-left: 1px solid #000000;border-top: 1px solid #000000;border-right: 1px solid #000000;border-bottom: 1px solid #000000;background-color:#FFFFFF;vertical-align:middle;}
+.M{margin:0px 0px 0px 0px;text-indent:0px;text-align:left;color:#000000;font-family:monospace;font-size:9pt;font-weight:bold;font-style:normal;}
+.N{margin:0px 0px 0px 0px;text-indent:0px;text-align:left;color:#0000ff;font-family:monospace;font-size:9pt;font-weight:bold;font-style:italic;}
+.O{margin:0px 0px 0px 0px;text-indent:0px;text-align:left;color:#000000;font-family:monospace;font-size:9pt;font-weight:bold;font-style:italic;}
+.P{margin:0px 0px 0px 0px;text-indent:0px;text-align:left;color:#8000ff;font-family:sans-serif;font-size:10pt;font-weight:bold;font-style:italic;}
+.Q{color:#000000;font-weight:normal;font-style:normal;}
+.R{margin:0px 0px 0px 57px;text-indent:0px;text-align:left;color:#000000;font-family:sans-serif;font-size:10pt;font-weight:normal;font-style:normal;}
+.S{color:#800000;font-weight:bold;}
+.T{color:#800000;font-family:monospace;font-weight:bold;}
+.U{font-weight:bold;}
+.V{margin:0px 0px 0px 57px;text-indent:0px;text-align:left;color:#000080;font-family:sans-serif;font-size:8pt;font-weight:bold;font-style:normal;}
+.W{font-weight:bold;font-style:italic;}
+.X{margin:0px 0px 0px 0px;text-indent:0px;text-align:left;color:#000000;font-family:sans-serif;font-size:10pt;font-weight:bold;font-style:normal;}
+.Y{font-weight:normal;}
+.Z{color:#8000ff;font-style:italic;}
+.AA{margin:0px 0px 0px 0px;text-indent:0px;text-align:left;color:#800000;font-family:sans-serif;font-size:10pt;font-weight:normal;font-style:normal;}
+.AB{color:#000000;}
+.AC{color:#000000;font-weight:bold;}
+.AD{color:#008000;font-weight:bold;}
+.AE{color:#8000ff;font-weight:bold;}
+.AF{color:#800000;}
+.AG{color:#0000ff;font-weight:bold;}
+.AH{margin:0px 0px 5px 0px;text-indent:0px;text-align:left;color:#000000;font-family:sans-serif;font-size:12pt;font-weight:normal;font-style:normal;}
+.AI{color:#0000ff;}
+.AJ{margin:0px 0px 5px 0px;text-indent:0px;text-align:left;color:#000000;font-family:sans-serif;font-size:10pt;font-weight:bold;font-style:normal;}
+.AK{color:#0000ff;font-weight:normal;}
+.AL{border-collapse:collapse;table-layout:auto;border: 2px solid #808080;}
+.AM{padding: 3px 5px 3px 5px;border-left: 1px solid #808080;border-top: 1px solid #808080;border-right: 1px solid #808080;border-bottom: 1px solid #808080;background-color:#C0C0C0;vertical-align:middle;}
+.AN{margin:0px 0px 5px 0px;text-indent:0px;text-align:left;color:#000000;font-family:sans-serif;font-size:10pt;font-weight:normal;font-style:normal;}
+.AO{margin:0px 0px 5px 0px;text-indent:0px;text-align:left;color:#0000ff;font-family:sans-serif;font-size:10pt;font-weight:normal;font-style:normal;}
+a.l1         { text-decoration:none; font-size: 8pt; font-family: sans-serif; font-weight: normal; }
+a.l1:link    { color:#000000; }
+a.l1:visited { color:#000080; }
+a.l1:hover   { color:#9933CC; }
+a.l1:active  { color:#000000; }
+a.l2         { text-decoration:none; font-size: 12pt; font-family: sans-serif; font-variant: small-caps; }
+a.l2:link    { color:#0066FF; }
+a.l2:visited { color:#FF6600; }
+a.l2:hover   { color:#BC0624; }
+a.l2:active  { color:#BC0024; }
+
+-->
+</STYLE>
+<META NAME="keywords" CONTENT="framework, toolkit, widget, c++, visual, studio, dev-cpp, builder, ide, class, component,wxwidgets, qt, rapid, application, development, rad, mfc, linux, macos, gui, sdl, directx, desktop"><META name="robots" content="index,follow">
+<LINK rel="alternate" type="application/rss+xml" title="SVN changes" href="svnchanges.xml">
+<LINK rel="shortcut icon" type="image/png" href="favicon.png">
+</HEAD><BODY BGCOLOR="#D2D9D2" ALINK="#800000" LINK="#000000" VLINK="#000080"><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%"><TR><TD COLSPAN="3"><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%" BGCOLOR="#FFFFFF" style="border: 1px solid #6E89AE;padding-left: 10px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;"><TR><TD><A HREF="index.html"><IMG SRC="0i.png" ALT="" BORDER="0"></A>
+</TD>
+<TD ALIGN="RIGHT" VALIGN="BOTTOM" STYLE="padding-bottom: 5px; background-image: url('1i.png')"><span style="font-size: 14pt; font-family: sans-serif;"><script type="text/javascript"><!--
+google_ad_client = "pub-1082147624384270";
+google_ad_width = 468;
+google_ad_height = 60;
+google_ad_format = "468x60_as";
+google_ad_type = "text_image";
+google_ad_channel = "";
+google_color_border = "336699";
+google_color_bg = "FFFFFF";
+google_color_link = "0000FF";
+google_color_text = "000000";
+google_color_url = "008000";
+//--></script>
+<script type="text/javascript"
+  src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+&nbsp;&nbsp;</span>
+</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>
+<TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%"><TR><TD COLSPAN="3" BGCOLOR="#D2D9D2" HEIGHT="6"></TD>
+</TR>
+<TR><TD VALIGN="TOP" ALIGN="CENTER"><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="160"><TR><TD ALIGN="CENTER"><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%" BGCOLOR="#FFFFFF" style="border-style: solid; border-width: 1px; border-color: #6E89AE;padding: 0px"><TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px;"><A HREF="www$uppweb$overview$en-us.html" CLASS="l1">Overview</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$examples$en-us.html" CLASS="l1">Examples</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$ss$en-us.html" CLASS="l1">Screenshots</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$comparison$en-us.html" CLASS="l1">Comparisons</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$apps$en-us.html" CLASS="l1">Applications</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$download$en-us.html" CLASS="l1">Download</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$documentation$en-us.html" CLASS="l1">Documentation</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$Tutorials$en-us.html" CLASS="l1">Tutorials</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="app$ide$UppHub$en-us.html" CLASS="l1">UppHub</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$Roadmap$en-us.html" CLASS="l1">Status & Roadmap</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$FAQ$en-us.html" CLASS="l1">FAQ</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="app$ide$About$en-us.html" CLASS="l1">Authors & License</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="https://www.ultimatepp.org/forums" CLASS="l1">Forums</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$Funding$en-us.html" CLASS="l1">Funding U++</A>
+</TD>
+</TR>
+</TABLE>
+<TABLE BORDER="0" WIDTH="100%"><TR><TD></TD>
+</TR>
+</TABLE>
+<TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%" BGCOLOR="#FFFFFF" style="border-style: solid; border-width: 1px; border-color: #6E89AE;padding: 0px"><TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('3i.png'); border: 0px solid black;padding-left:12px; padding-right:0px; padding-top:1px; padding-bottom:1px;color:#FFFFFF;"><B><span style="font-size: 8pt; font-family: sans-serif;">Search on this site</span>
+</B>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:6px; padding-right:0px; padding-top:4px; padding-bottom:4px;border-top: 1px solid #6E89AE;"><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%"><TR><TD><IMG SRC="4i.png" ALT="" BORDER="0"></TD>
+<TD><FORM ACTION="https://www.google.com/search" METHOD="GET" STYLE="margin:0px;padding:0px;"><INPUT TYPE="HIDDEN" NAME="ie" VALUE="UTF-8"><INPUT TYPE="HIDDEN" NAME="oe" VALUE="UTF-8"><INPUT TYPE="TEXT" NAME="q" SIZE="15" MAXLENGTH="256" placeholder="Site search"><INPUT TYPE="HIDDEN" NAME="sitesearch" VALUE="ultimatepp.org"></FORM>
+</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>
+<TABLE BORDER="0" WIDTH="100%"><TR><TD></TD>
+</TR>
+</TABLE>
+<br><div id="fb-root"></div>
+<script type="text/javascript">(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) {return;}
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+<div class="fb-like" data-href="https://www.facebook.com/pages/Upp-Framework/262346610476027?sk=wall" data-send="false" data-layout="button_count" data-width="160" data-show-faces="false" data-font="arial"></div>
+<br><br><script type="text/javascript"><!--
+google_ad_client = "pub-1082147624384270";
+google_ad_width = 160;
+google_ad_height = 600;
+google_ad_format = "160x600_as";
+google_ad_type = "text_image";
+google_ad_channel = "";
+google_color_border = "336699";
+google_color_bg = "FFFFFF";
+google_color_link = "0000FF";
+google_color_text = "000000";
+google_color_url = "008000";
+//--></script>
+<script type="text/javascript"
+  src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script><br><br><script type="text/javascript"><!--
+google_ad_client = "pub-1082147624384270";
+google_ad_width = 160;
+google_ad_height = 90;
+google_ad_format = "160x90_0ads_al_s";
+google_ad_channel = "";
+google_color_border = "336699";
+google_color_bg = "FFFFFF";
+google_color_link = "0000FF";
+google_color_text = "000000";
+google_color_url = "008000";
+//--></script>
+<script type="text/javascript"
+  src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+<br><br><br><br><br><br><A HREF="https://sourceforge.net/projects/upp/"><IMG SRC="https://sourceforge.net/sflogo.php?group_id=93970&amp;type=2" ALT="SourceForge.net Logo" BORDER="0" WIDTH="125" HEIGHT="37"></A>
+<br><br><A HREF="https://flathub.org/en/apps/org.ultimatepp.TheIDE"><IMG SRC="5i.png" ALT="SourceForge.net Logo" BORDER="0" WIDTH="125" HEIGHT="37"></A>
+<br><br><div style="background-color:#ffffff;width:125;height:35"><A HREF="https://github.com/ultimatepp"><IMG SRC="6i.png" ALT="GitHub Logo" BORDER="0" WIDTH="125" HEIGHT="35"></A>
+</div><br><div style="background-color:#ffffff;width:125;height:35"><div style="height:5"></div><A HREF="https://discord.gg/8XzqQzXZzb"><IMG SRC="https://assets-global.website-files.com/6257adef93867e50d84d30e2/636e0b5061df29d55a92d945_full_logo_blurple_RGB.svg" ALT="Discord Logo" BORDER="0" WIDTH="125" HEIGHT="25"></A>
+</div><br></TD>
+</TR>
+</TABLE>
+</TD>
+<TD VALIGN="TOP" BGCOLOR="#D2D9D2"><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="6"><TR><TD></TD>
+</TR>
+</TABLE>
+</TD>
+<TD VALIGN="TOP" WIDTH="100%" BGCOLOR="#D2D9D2"><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" BGCOLOR="#FFFFFF" WIDTH="100%" style="border-style: solid; border-width: 1px; border-color: #6E89AE;padding: 10px;;"><TR><TD><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%"><TR><TD><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr><td width="100%"><table width="100%" class="C"><colgroup><col width="100%"></colgroup>
+<tr><td class="D"><p class="E">Callbacks</p>
+</td>
+</tr>
+</table></td>
+</tr></table>
+<p class="F"><a href="src$Core$Function_en-us.html">Callbacks are now deprecated. Use Function/Event/Gate instead!</a></p>
+<p class="G">Callbacks can be described as a very generalized form of function pointers. Each Callback represents some kind of action (usually calling a certain function or a certain object method) that can be invoked at any time.</p>
+<p class="G">If you are happy enough to be able to use C++11, you can also assign C++ lambda to Callback using operator &lt;&lt; (see bellow).</p>
+<p class="G">There are several basic callback types, depending on number of parameters passed and return value. In order to keep description of callbacks short, all these types are described in a single &quot;parametrized&quot; description, with parameters <span class="H">highlighted</span>.</p>
+<p class="G">Generally, callbacks are now defined for up to 5 parameters of target (function, method, another callback).</p>
+<p class="A">&nbsp;</p>
+<p class="A">Callback types:</p>
+<p class="I">&nbsp;</p>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr><td width="100%"><table width="100%" class="C"><colgroup><col width="15%"><col width="51%"><col width="19%"><col width="13%"></colgroup>
+<tr><td class="J"><p class="K">CallbackType</p>
+</td>
+<td class="J"><p class="K">parameters</p>
+</td>
+<td class="J"><p class="K">arguments</p>
+</td>
+<td class="J"><p class="K">return_type</p>
+</td>
+</tr>
+<tr><td class="L"><p id="Callback::class" class="M">Callback</p>
+</td>
+<td class="L"><p class="N">none</p>
+</td>
+<td class="L"><p class="N">none</p>
+</td>
+<td class="L"><p class="O">void</p>
+</td>
+</tr>
+<tr><td class="L"><p id="Callback1::class" class="M">Callback1</p>
+</td>
+<td class="L"><p class="O">class P1</p>
+</td>
+<td class="L"><p class="O">P1</p>
+</td>
+<td class="L"><p class="O">void</p>
+</td>
+</tr>
+<tr><td class="L"><p id="Callback2::class" class="M">Callback2</p>
+</td>
+<td class="L"><p class="O">class P1, class P2</p>
+</td>
+<td class="L"><p class="O">P1, P2</p>
+</td>
+<td class="L"><p class="O">void</p>
+</td>
+</tr>
+<tr><td class="L"><p id="Callback3::class" class="M">Callback3</p>
+</td>
+<td class="L"><p class="O">class P1, class P2, class P3</p>
+</td>
+<td class="L"><p class="O">P1, P2, P3</p>
+</td>
+<td class="L"><p class="O">void</p>
+</td>
+</tr>
+<tr><td class="L"><p id="Callback4::class" class="M">Callback4</p>
+</td>
+<td class="L"><p class="O">class P1, class P2, class P3, class P4</p>
+</td>
+<td class="L"><p class="O">P1, P2, P3, P4</p>
+</td>
+<td class="L"><p class="O">void</p>
+</td>
+</tr>
+<tr><td class="L"><p id="Callback5::class" class="M">Callback5</p>
+</td>
+<td class="L"><p class="O">class P1, ... , class P5</p>
+</td>
+<td class="L"><p class="O">P1, ... , P5</p>
+</td>
+<td class="L"><p class="O">void</p>
+</td>
+</tr>
+<tr><td class="L"><p id="Gate::class" class="M">Gate</p>
+</td>
+<td class="L"><p class="N">none</p>
+</td>
+<td class="L"><p class="N">none</p>
+</td>
+<td class="L"><p class="O">bool</p>
+</td>
+</tr>
+<tr><td class="L"><p id="Gate1::class" class="M">Gate1</p>
+</td>
+<td class="L"><p class="O">class P1</p>
+</td>
+<td class="L"><p class="O">P1</p>
+</td>
+<td class="L"><p class="O">bool</p>
+</td>
+</tr>
+<tr><td class="L"><p id="Gate2::class" class="M">Gate2</p>
+</td>
+<td class="L"><p class="O">class P1, class P2</p>
+</td>
+<td class="L"><p class="O">P1, P2</p>
+</td>
+<td class="L"><p class="O">bool</p>
+</td>
+</tr>
+<tr><td class="L"><p id="Gate3::class" class="M">Gate3</p>
+</td>
+<td class="L"><p class="O">class P1, class P2, class P3</p>
+</td>
+<td class="L"><p class="O">P1, P2, P3</p>
+</td>
+<td class="L"><p class="O">bool</p>
+</td>
+</tr>
+<tr><td class="L"><p id="Gate4::class" class="M">Gate4</p>
+</td>
+<td class="L"><p class="O">class P1, class P2, class P3, class P4</p>
+</td>
+<td class="L"><p class="O">P1, P2, P3, P4</p>
+</td>
+<td class="L"><p class="O">bool</p>
+</td>
+</tr>
+<tr><td class="L"><p id="Gate5::class" class="M">Gate5</p>
+</td>
+<td class="L"><p class="O">class P1, ... , class P5</p>
+</td>
+<td class="L"><p class="O">P1, ... , P5</p>
+</td>
+<td class="L"><p class="O">bool</p>
+</td>
+</tr>
+</table></td>
+</tr></table>
+<p class="A">&nbsp;</p>
+<p class="A">[ template&nbsp;&lt;<span class="H">parameters</span>&gt; ]</p>
+<p class="P"><span class="Q">class&nbsp;</span>CallbackType</p>
+<p class="R">&nbsp;</p>
+<p class="R">Callback type. Callbacks are moveable types with fast deep copy (using reference counting).</p>
+<p class="R">&nbsp;</p>
+<p class="A">&nbsp;</p>
+<p class="A">explicit&nbsp;<span class="H">CallbackType</span>(<span class="H">CallbackType</span>Action&lt;<span class="H">arguments&gt;</span>&nbsp;*<span class="S">newaction</span>)</p>
+<p class="R">Constructs callback based from new action.</p>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="T">newaction</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">Action. Must be created using <span class="U">new</span> operator. Callback takes over its ownership.</p></td></tr></table>
+<p class="I">&nbsp;</p>
+<p class="A">&nbsp;</p>
+<p id="Callback1::Callback1()" class="A"><span class="H">CallbackType</span>()</p>
+<p class="R">Creates an empty callback.</p>
+<p class="I">&nbsp;</p>
+<hr><p class="I">&nbsp;</p>
+<p id="Callback1::Callback1(const Callback1&)" class="A"><span class="H">CallbackType</span>(const&nbsp;<span class="H">CallbackType</span>&amp;&nbsp;<span class="S">c</span>)</p>
+<p class="R">Copy constructor. </p>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="T">c</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">Source callback.</p></td></tr></table>
+<p class="I">&nbsp;</p>
+<hr><p class="I">&nbsp;</p>
+<p id="::Callback1::~Callback1()" class="A">~<span class="H">CallbackType</span>()</p>
+<p class="R">Destructor.</p>
+<p class="I">&nbsp;</p>
+<hr><p class="I">&nbsp;</p>
+<p id="::Callback1::Clear()" class="A">void&nbsp;<span class="U">Clear</span>()</p>
+<p class="R">Empties the callback.</p>
+<p class="I">&nbsp;</p>
+<hr><p class="I">&nbsp;</p>
+<p id="::Gate::ClearTrue()" class="A">void&nbsp;<span class="U">ClearTrue</span>()</p>
+<p class="V">Only in Gate callbacks.</p>
+<p class="R">Clears Gate. After this method is invoked, the Gate performs no actions but returns true.</p>
+<p class="I">&nbsp;</p>
+<hr><p class="I">&nbsp;</p>
+<p id="::Gate::ClearFalse()" class="A">void&nbsp;<span class="U">ClearFalse</span>()</p>
+<p class="V">Only in Gate callbacks.</p>
+<p class="R">Clears Gate. After this method is invoked, the Gate performs no actions and returns false. This is the same as Clear.</p>
+<p class="I">&nbsp;</p>
+<hr><p class="I">&nbsp;</p>
+<p id="::Callback1::operator bool()const" class="A"><span class="U">operator&nbsp;bool</span>()&nbsp;const</p>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="W">Return value</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">True if the callback is valid. Invoking a valid callback invokes an action.</p></td></tr></table>
+<p class="I">&nbsp;</p>
+<hr><p class="I">&nbsp;</p>
+<p id="::Callback1::Execute(P1)const" class="A"><span class="H">return_type</span>&nbsp;<span class="U">Execute</span>(<span class="H">arguments</span>)&nbsp;const</p>
+<p class="R">Executes the callback with given set of arguments.</p>
+<p class="I">&nbsp;</p>
+<hr><p class="I">&nbsp;</p>
+<p id="::Callback1::operator()(P1)const" class="A"><span class="H">return_type</span>&nbsp;<span class="U">operator()</span>(<span class="H">arguments</span>)&nbsp;const</p>
+<p class="R">Same as the Execute method.</p>
+<p class="I">&nbsp;</p>
+<p class="A">&nbsp;</p>
+<p id="Callback1Action::struct" class="A">[ template&nbsp;&lt;<span class="H">parameters</span>&gt; ]</p>
+<p class="X"><span class="Y">struct&nbsp;</span><span class="Z">CallbackType</span>Action</p>
+<p class="R">This is the abstract base class for callback action implementations. Callback holds reference counted pointer to instance of class derived from this class.</p>
+<p class="I">&nbsp;</p>
+<p class="A">&nbsp;</p>
+<p id="Callback1Action::Callback1Action()" class="A"><span class="H">CallbackType</span><span class="U">Action</span>()</p>
+<p class="R">Constructor. Assigns 1 to the reference count.</p>
+<p class="I">&nbsp;</p>
+<hr><p class="I">&nbsp;</p>
+<p id="Callback1Action::~Callback1Action()" class="A">~<span class="H">CallbackType</span><span class="U">Action</span>()</p>
+<p class="R">Virtual destructor.</p>
+<p class="I">&nbsp;</p>
+<hr><p class="I">&nbsp;</p>
+<p id="Callback1Action::Execute(P1)" class="AA"><span class="AB">virtual </span><span class="H">return_type</span><span class="AB">&nbsp;</span><span class="AC">Execute</span><span class="AB">(</span><span class="H">arguments</span><span class="AB">)&nbsp;=&nbsp;</span>0</p>
+<p class="R">Performs the action with specified set of arguments.</p>
+<p class="I">&nbsp;</p>
+<hr><p class="I">&nbsp;</p>
+<p id="Callback1Action::IsValid()const" class="A">virtual bool&nbsp;<span class="U">IsValid</span>()&nbsp;const</p>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="W">Return value</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">true if the Action is valid. Default implementation returns true.</p></td></tr></table>
+<p class="I">&nbsp;</p>
+<hr><p class="I">&nbsp;</p>
+<p id="Callback1Action::count" class="X"><span class="Y">Atomic&nbsp;</span>count</p>
+<p class="R">Member variable used as reference count.</p>
+<p class="I">&nbsp;</p>
+<p class="A">&nbsp;</p>
+<p class="A">&nbsp;</p>
+<p class="A">&nbsp;</p>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr><td width="100%"><table width="100%" class="C"><colgroup><col width="100%"></colgroup>
+<tr><td class="D"><p class="E">Common Callback/Gate functions</p>
+</td>
+</tr>
+</table></td>
+</tr></table>
+<p class="I">&nbsp;</p>
+<p id="::callback(OBJECT*,void(METHOD::*)(P1 p1))" class="A">template&nbsp;&lt;class <span class="AD">OBJECT</span>, class <span class="AD">METHOD</span><span class="AE">,</span><span class="AD"> </span><span class="H">parameters</span>&gt;</p>
+<p class="A"><span class="H">CallbackType</span>&lt;<span class="H">arguments</span>&gt; <span class="U">callback</span>(<span class="AD">OBJECT</span>&nbsp;*<span class="S">object</span>, void&nbsp;(<span class="AD">METHOD</span>::*<span class="S">method</span>)(<span class="H">arguments</span>))</p>
+<p class="R">Creates a callback that invokes the specified method of the specified object.</p>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="T">object</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">Pointer to the object.</p></td></tr></table>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="T">method</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">Pointer to the method.</p></td></tr></table>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="W">Return value</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">Created callback.</p></td></tr></table>
+<p class="I">&nbsp;</p>
+<hr><p class="I">&nbsp;</p>
+<p id="::callback(OBJECT*,void(METHOD::*)(P1 p1))" class="A">template&nbsp;&lt;class <span class="AD">OBJECT</span>, class <span class="AD">METHOD</span><span class="AE">,</span><span class="AD"> </span><span class="H">parameters</span>&gt;</p>
+<p class="A"><span class="H">CallbackType</span>&lt;<span class="H">arguments</span>&gt; <span class="U">callback</span>(const <span class="AD">OBJECT</span>&nbsp;*<span class="S">object</span>, void&nbsp;(<span class="AD">METHOD</span>::*<span class="S">method</span>)(<span class="H">arguments</span>) const)</p>
+<p class="R">Constant variant of callback. The created Callback object invokes a constant method of the object.</p>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="T">object</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">Pointer to the object.</p></td></tr></table>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="T">method</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">Pointer to the constant method to invoke.</p></td></tr></table>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="W">Return value</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">Created callback.</p></td></tr></table>
+<p class="I">&nbsp;</p>
+<hr><p class="I">&nbsp;</p>
+<p id="::pteback(OBJECT*,void(METHOD::*)(P1 p1))" class="A">[ template&nbsp;&lt;<span class="H">parameters</span>&gt; ]</p>
+<p class="A"><span class="H">CallbackType</span>&lt;<span class="H">arguments</span>&gt; <span class="U">pteback</span>(<span class="AD">OBJECT</span>&nbsp;*<span class="S">object</span>, void&nbsp;(<span class="AD">METHOD</span>::*<span class="S">method</span>)(<span class="H">arguments</span>))</p>
+<p class="R">Creates a Callback object which is similar to the one created by callback, but which can be safely invoked even after destruction of <span class="AF">object</span> (results in no operation).</p>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="T">object</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">Pointer to the object. Must be an ancestor of the <a href="src$Core$PtePtr$en-us.html#::Pte::template <class T> class Pte">Pte</a> class.</p></td></tr></table>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="T">method</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">Pointer to the method.</p></td></tr></table>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="W">Return value</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">Created callback.</p></td></tr></table>
+<p class="I">&nbsp;</p>
+<hr><p class="I">&nbsp;</p>
+<p id="::callback(void(*)(P1 p1))" class="A">[ template&nbsp;&lt;<span class="H">parameters</span>&gt; ]</p>
+<p class="A"><span class="H">CallbackType</span>&lt;<span class="H">arguments</span>&gt; <span class="U">callback</span>(void&nbsp;(*<span class="S">fn</span>)(<span class="H">arguments</span>))</p>
+<p class="R">Creates a Callback object that invokes a non-member function.</p>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="T">fn</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">Pointer to the function.</p></td></tr></table>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="W">Return value</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">Created callback.</p></td></tr></table>
+<p class="I">&nbsp;</p>
+<hr><p class="I">&nbsp;</p>
+<p id="Proxy(Callback1<P1>&)" class="A">[ template&nbsp;&lt;<span class="H">parameters</span>&gt; ]</p>
+<p class="A"><span class="H">CallbackType</span>&lt;<span class="H">arguments</span>&gt; <span class="U">Proxy</span>(<span class="H">CallbackType</span>&lt;<span class="H">arguments</span>&gt;&amp;&nbsp;<span class="S">cb</span>)</p>
+<p class="R">Creates a Callback object that invokes another Callback object. Useful for callback routing (e.g. when some parent Ctrl wants to reroute some of its child callbacks via its interface). Note that this function stores a reference to the target callback in the created callback - storing callbacks that are used as Proxy targets in Vector flavor of containers is not a good idea.</p>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="T">cb</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">Target callback.</p></td></tr></table>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="W">Return value</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">Created callback.</p></td></tr></table>
+<p class="I">&nbsp;</p>
+<hr><p class="I">&nbsp;</p>
+<p id="callback(Callback1<P1>,Callback1<P1>)" class="A">[ template&nbsp;&lt;<span class="H">parameters</span>&gt; ]</p>
+<p class="A"><span class="H">CallbackType</span>&lt;<span class="H">arguments</span>&gt; <span class="U">callback</span>(<span class="H">CallbackType</span>&lt;<span class="H">arguments</span>&gt; &nbsp;<span class="S">cb1</span>, <span class="H">CallbackType</span>&lt;<span class="H">arguments</span>&gt; &nbsp;<span class="S">cb2</span>)</p>
+<p class="R">Creates a Callback object that invokes two other callbacks. Note that this function stores a reference to the target callbacks in the created callback - storing callbacks that are used as targets here in Vector flavor of containers is not a good idea. For Gate callbacks, the result of this operation is the boolean value returned by <span class="S">cb2</span>.</p>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="T">cb1</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">First target callback.</p></td></tr></table>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="T">cb2</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">Second target callback.</p></td></tr></table>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="W">Return value</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">Created callback.</p></td></tr></table>
+<p class="I">&nbsp;</p>
+<hr><p class="I">&nbsp;</p>
+<p id="operator<<(Callback1<P1>&,Callback1<P1>)" class="A">[ template&nbsp;&lt;<span class="H">parameters</span>&gt; ]</p>
+<p class="A"><span class="H">CallbackType</span>&lt;<span class="H">arguments</span>&gt;&amp;&nbsp;<span class="U">operator&lt;&lt;</span>(<span class="H">CallbackType</span>&lt;<span class="H">arguments</span>&gt; &amp;&nbsp;<span class="S">a</span>, <span class="H">CallbackType</span>&lt;<span class="H">arguments</span>&gt;&nbsp;<span class="S">b</span>)</p>
+<p class="R">Operator variant of the previous function. Allows chaining thus imitating callback insertion.</p>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="T">a</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">First callback. Its value is replaced by a callback that calls both the first and the second callback.</p></td></tr></table>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="T">b</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">Second callback.</p></td></tr></table>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="W">Return value</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">Reference to the first callback.</p></td></tr></table>
+<p class="I">&nbsp;</p>
+<hr><p class="I">&nbsp;</p>
+<p id="operator<<(Callback1<P1>&,Callback1<P1>)" class="A">[ template&nbsp;&lt;<span class="H">parameters</span>&gt; ]</p>
+<p class="A"><span class="H">CallbackType</span>&lt;<span class="H">arguments</span>&gt;&amp;&nbsp;<span class="U">operator&lt;&lt;</span>(<span class="H">CallbackType</span>&lt;<span class="H">arguments</span>&gt; &amp;&nbsp;<span class="S">a</span>, <span class="H">C++11Lambda</span>&nbsp;<span class="S">b</span>)</p>
+<p class="R">Variant of merging callbacks that can be used for C++11 lambdas.</p>
+<p class="I">&nbsp;</p>
+<p class="A">&nbsp;</p>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr><td width="100%"><table width="100%" class="C"><colgroup><col width="100%"></colgroup>
+<tr><td class="D"><p class="E">Storing arguments in callback</p>
+</td>
+</tr>
+</table></td>
+</tr></table>
+<p class="A">&nbsp;</p>
+<p class="A">It is possible to store some arguments that are passed to target (function or method) as parameters when creating. If simultaneously passing other parameters in callback call, those passed on call represent beginning arguments and those defined in callback creation fill the rest of arguments.</p>
+<p class="A">&nbsp;</p>
+<p class="A">Again, all this is defined for up to 5 target parameters:</p>
+<p class="A">&nbsp;</p>
+<p id="::callback1(Object*,void(M::*)(P),T)" class="A">template&nbsp;&lt;class&nbsp;<span class="AD">Object</span>, class&nbsp;<span class="AD">M</span>, class&nbsp;<span class="AD">P1</span>, ..., class&nbsp;<span class="AD">T1</span>, ...&gt;</p>
+<p id="::callback1(Object*,void(M::*)(P),T)" class="A"><span class="H">CallbackType</span>&lt;<span class="H">arguments</span>&gt;&nbsp;<span class="U">callback1</span>(<span class="AD">Object</span>&nbsp;*<span class="S">object</span>, void&nbsp;(<span class="AD">M</span>::*<span class="S">method</span>)(<span class="AD">P1</span>, ...), <span class="AD">T1</span>&nbsp;<span class="S">arg1</span>, ...)</p>
+<p class="I">&nbsp;</p>
+<p id="::callback1(const Object*,void(M::*)(P)const,T)" class="A">template&nbsp;&lt;class&nbsp;<span class="AD">Object</span>, class&nbsp;<span class="AD">M</span>, class&nbsp;<span class="AD">P1</span>, ..., class&nbsp;<span class="AD">T1</span>, ...&gt;</p>
+<p id="::callback1(const Object*,void(M::*)(P)const,T)" class="A"><span class="H">CallbackType</span>&lt;<span class="H">arguments</span>&gt;&nbsp;<span class="U">callback1</span>(<span class="AD">Object</span>&nbsp;*<span class="S">object</span>, void&nbsp;(<span class="AD">M</span>::*<span class="S">method</span>)(<span class="AD">P1</span>, ...) const, <span class="AD">T1</span>&nbsp;<span class="S">arg1</span>, ...)</p>
+<p class="I">&nbsp;</p>
+<p id="::pteback1(Object*,void(M::*)(P),T)" class="A">template&nbsp;&lt;class&nbsp;<span class="AD">Object</span>, class&nbsp;<span class="AD">M</span>, class&nbsp;<span class="AD">P1</span>, ..., class&nbsp;<span class="AD">T1</span>, ...&gt;</p>
+<p id="::pteback1(Object*,void(M::*)(P),T)" class="A"><span class="H">CallbackType</span>&lt;<span class="H">arguments</span>&gt;&nbsp;<span class="U">pteback1</span>(<span class="AD">Object</span>&nbsp;*<span class="S">object</span>, void&nbsp;(<span class="AD">M</span>::*<span class="S">method</span>)(<span class="AD">P1</span>, ...), <span class="AD">T1</span>&nbsp;<span class="S">arg1</span>, ...)</p>
+<p class="I">&nbsp;</p>
+<p id="::pteback1(Object*,void(M::*)(P)const,T)" class="A">template&nbsp;&lt;class&nbsp;<span class="AD">Object</span>, class&nbsp;<span class="AD">M</span>, class&nbsp;<span class="AD">P1</span>, ..., class&nbsp;<span class="AD">T1</span>, ...&gt;</p>
+<p id="::pteback1(Object*,void(M::*)(P)const,T)" class="A"><span class="H">CallbackType</span>&lt;<span class="H">arguments</span>&gt;&nbsp;<span class="U">pteback1</span>(<span class="AD">Object</span>&nbsp;*<span class="S">object</span>, void&nbsp;(<span class="AD">M</span>::*<span class="S">method</span>)(<span class="AD">P1</span>, ...) const, <span class="AD">T1</span>&nbsp;<span class="S">arg1</span>, ...)</p>
+<p class="I">&nbsp;</p>
+<p id="::callback1(void(*)(P),T)" class="A">template&nbsp;&lt;class&nbsp;<span class="AD">P1</span>, ..., class&nbsp;<span class="AD">T1</span>, ...&gt;</p>
+<p id="::callback1(void(*)(P),T)" class="A"><span class="H">CallbackType</span>&lt;<span class="H">arguments</span>&gt;&nbsp;<span class="U">callback1</span>(void&nbsp;(*<span class="S">fn</span>)(<span class="AD">P1</span>, ...), <span class="AD">T1</span>&nbsp;<span class="S">arg</span>, ...)</p>
+<p class="A">&nbsp;</p>
+<p class="R"><span class="AD">P1</span> (<span class="AD">P2, P3 </span>...) are arguments passed on method invocation, <span class="AD">T1</span> (<span class="AD">T2, T3 </span>...) are parameters stored in Callback object.</p>
+<p class="I">&nbsp;</p>
+<p class="A">&nbsp;</p>
+<p class="A">&nbsp;</p>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr><td width="100%"><table width="100%" class="C"><colgroup><col width="100%"></colgroup>
+<tr><td class="D"><p class="E">Callback macros</p>
+</td>
+</tr>
+</table></td>
+</tr></table>
+<p class="G">Callback macros reduce verbosity of instance method callbacks. They expect CLASSNAME to be typedef-ed as the type of current class and return method callbacks bound to the <span class="AG">this</span> pointer.</p>
+<p class="I">&nbsp;</p>
+<p class="A">&nbsp;</p>
+<p id="::THISBACK(x)" class="A"><span class="U">THISBACK</span>(<span class="S">x</span>)</p>
+<p class="R">Expands to callback(this, &amp;CLASSNAME::<span class="AF">m</span>).</p>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="T">m</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">Name of method.</p></td></tr></table>
+<p class="I">&nbsp;</p>
+<hr><p class="I">&nbsp;</p>
+<p id="::THISBACK1(x, arg)" class="A"><span class="U">THISBACK1</span>(<span class="S">x</span>, <span class="S">arg</span>)</p>
+<p class="R">Expands to callback1(this, &amp;CLASSNAME::<span class="AF">m</span>, <span class="AF">arg</span>).</p>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="T">m</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">Name of method.</p></td></tr></table>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="T">arg</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">Additional parameter.</p></td></tr></table>
+<p class="I">&nbsp;</p>
+<hr><p class="I">&nbsp;</p>
+<p id="::THISBACK2(m, a, b)" class="A"><span class="U">THISBACK2</span>(<span class="S">m</span>, <span class="S">a</span>, <span class="S">b</span>)</p>
+<p class="R">Expands to callback2(this, &amp;CLASSNAME::<span class="AF">m</span>, <span class="AF">a</span>,<span class="AF"> b</span>).</p>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="T">m</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">Name of method.</p></td></tr></table>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="T">a</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">First additional parameter.</p></td></tr></table>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="T">b</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">Second additional parameter.</p></td></tr></table>
+<p class="I">&nbsp;</p>
+<hr><p class="I">&nbsp;</p>
+<p id="::PTEBACK(x)" class="A"><span class="U">PTEBACK</span>(<span class="S">x</span>)</p>
+<p class="R">Expands to pteback(this, &amp;CLASSNAME::<span class="AF">m</span>).</p>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="T">m</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">Name of method.</p></td></tr></table>
+<p class="I">&nbsp;</p>
+<hr><p class="I">&nbsp;</p>
+<p id="::PTEBACK1(x, arg)" class="A"><span class="U">PTEBACK1</span>(<span class="S">x</span>, <span class="S">arg</span>)</p>
+<p class="R">Expands to pteback1(this, &amp;CLASSNAME::<span class="AF">m</span>, <span class="AF">arg</span>).</p>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="T">m</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">Name of method.</p></td></tr></table>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="T">arg</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">Additional parameter.</p></td></tr></table>
+<p class="I">&nbsp;</p>
+<hr><p class="I">&nbsp;</p>
+<p id="::PTEBACK2(m, a, b)" class="A"><span class="U">PTEBACK2</span>(<span class="S">m</span>, <span class="S">a</span>, <span class="S">b</span>)</p>
+<p class="R">Expands to pteback2(this, &amp;CLASSNAME::<span class="AF">m</span>, <span class="AF">a</span>,<span class="AF"> b</span>).</p>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="T">m</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">Name of method.</p></td></tr></table>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="T">a</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">First additional parameter.</p></td></tr></table>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="T">b</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">Second additional parameter.</p></td></tr></table>
+<p class="I">&nbsp;</p>
+<p class="A">&nbsp;</p>
+<p class="A">&nbsp;</p>
+<p class="A">&nbsp;</p>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr><td width="100%"><table width="100%" class="C"><colgroup><col width="100%"></colgroup>
+<tr><td class="D"><p class="E">EventArgTarget</p>
+</td>
+</tr>
+</table></td>
+</tr></table>
+<p class="I">&nbsp;</p>
+<p id="noref" class="AH"><span class="AI">template</span>&nbsp;&lt;<span class="AI">class</span>&nbsp;<span class="AD">T</span>&gt;</p>
+<p id="EventArgTarget::class" class="AJ"><span class="AK">class</span><span class="Y">&nbsp;</span>CallbackArgTarget</p>
+<p class="G">This helper class is useful in a situation when a set of callbacks define some output value. Example is pop-up menu that provides selection of one character - in that case, CallbackArgTarget can be used instead of dedicated method to obtain result of user selection.</p>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td valign="top" width="89" bgcolor="#F0F0F0">
+<p class="A"><span class="AD">T</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">Type of output value. Must be able to be assigned Null.</p></td></tr></table>
+<p class="I">&nbsp;</p>
+<p class="A">&nbsp;</p>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr><td width="100%"><table width="100%" class="AL"><colgroup><col width="100%"></colgroup>
+<tr><td class="AM"><p class="X">Public Member List</p>
+</td>
+</tr>
+</table></td>
+</tr></table>
+<p class="I">&nbsp;</p>
+<p id="EventArgTarget::EventArgTarget()" class="AN"><span class="U">CallbackArgTarget</span>()</p>
+<p class="R">Assigns Null to the output value.</p>
+<p class="I">&nbsp;</p>
+<hr><p class="I">&nbsp;</p>
+<p id="EventArgTarget::operator const T&()const" class="AO"><span class="AC">operator&nbsp;const&nbsp;T&amp;</span><span class="AB">()&nbsp;</span>const</p>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="W">Return value</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">The result. If no CallbackArgTarget was invoked, returns Null.</p></td></tr></table>
+<p class="I">&nbsp;</p>
+<hr><p class="I">&nbsp;</p>
+<p id="EventArgTarget::IsNullInstance()const" class="AO">bool<span class="AB">&nbsp;</span><span class="AC">IsNullInstance</span><span class="AB">()&nbsp;</span>const</p>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="W">Return value</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">True if there is not Null in output value.</p></td></tr></table>
+<p class="I">&nbsp;</p>
+<hr><p class="I">&nbsp;</p>
+<p id="EventArgTarget::operator[](const T&)" class="AN"><a href="Callback"><u>Callback</u></a>&nbsp;<span class="U">operator[]</span>(<span class="AI">const</span>&nbsp;<span class="AD">T</span><span class="AI">&amp;</span>&nbsp;<span class="S">value</span>)</p>
+<p class="R">Returns a Callback that, when invoked, assigns <span class="AF">value</span> to the output value.</p>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="T">value</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">Value.</p></td></tr></table>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="W">Return value</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">Callback.</p></td></tr></table>
+<p class="I">&nbsp;</p>
+<p class="A">&nbsp;</p>
+</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>
+<TABLE BORDER="0" WIDTH="100%"><TR><TD></TD>
+</TR>
+</TABLE>
+<TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" BGCOLOR="#FFFFFF" WIDTH="100%" style="border-style: solid; border-width: 1px; border-color: #6E89AE;padding: 10px;;"><TR><TD><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%"><TR><TD><p class="A"><span class="B"> </span><a href="www$uppweb$contribweb$en-us.html">Do you want to contribute?</a></p>
+</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>
+<script type="text/javascript">var a={'src$Core$Callbacks$en-us.html':'English'};var p=window.location.pathname.split("/");p=p[p.length-1];var s='<select id="lang" onchange="window.location=document.getElementById(\'lang\').value;">';for(l in a){if(p==l){d=" selected=1"}else{d=""}s+='<option value="'+l+'"'+d+'>'+a[l]+'</option>'}s+='</select>';var d=document.createElement('div');d.innerHTML=s;var c=document.getElementById('langs');c.replaceChild(d,c.firstChild);document.getElementById('langbox').style.display='block';</script></BODY>

@@ -1,0 +1,583 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en-us">
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
+<META NAME="Generator" CONTENT="U++ HTML Package">
+<TITLE>EditField derived classes :: U++</TITLE>
+<STYLE TYPE="text/css"><!--
+.A{margin:0px 0px 0px 0px;text-indent:0px;text-align:left;color:#000000;font-family:sans-serif;font-size:10pt;font-weight:normal;font-style:normal;}
+.B{font-size:12pt;}
+.C{margin:0px 0px 0px 0px;text-indent:0px;text-align:left;color:#800000;font-family:sans-serif;font-size:18pt;font-weight:bold;font-style:normal;}
+.D{margin:8px 0px 0px 0px;text-indent:0px;text-align:left;color:#000000;font-family:sans-serif;font-size:10pt;font-weight:normal;font-style:normal;}
+.E{margin:0px 0px 0px 0px;text-indent:0px;text-align:left;color:#000000;font-family:sans-serif;font-size:6pt;font-weight:normal;font-style:normal;}
+.F{border-collapse:collapse;table-layout:auto;border: 2px solid #000000;}
+.G{padding: 3px 5px 3px 5px;border-left: 1px solid #000000;border-top: 1px solid #000000;border-right: 1px solid #000000;border-bottom: 1px solid #000000;background-color:#800000;vertical-align:middle;}
+.H{margin:0px 0px 0px 0px;text-indent:0px;text-align:left;color:#e5e5e5;font-family:sans-serif;font-size:16pt;font-weight:bold;font-style:normal;}
+.I{margin:0px 0px 5px 0px;text-indent:0px;text-align:left;color:#0000ff;font-family:sans-serif;font-size:12pt;font-weight:normal;font-style:normal;}
+.J{color:#000000;}
+.K{color:#008000;font-weight:bold;}
+.L{color:#800000;font-weight:bold;}
+.M{margin:0px 0px 5px 0px;text-indent:0px;text-align:left;color:#800000;font-family:sans-serif;font-size:10pt;font-weight:bold;font-style:normal;}
+.N{color:#0000ff;font-weight:normal;}
+.O{color:#000000;font-weight:normal;}
+.P{border-collapse:collapse;table-layout:auto;border: 2px solid #808080;}
+.Q{padding: 3px 5px 3px 5px;border-left: 1px solid #808080;border-top: 1px solid #808080;border-right: 1px solid #808080;border-bottom: 1px solid #808080;background-color:#C0C0C0;vertical-align:middle;}
+.R{margin:0px 0px 0px 0px;text-indent:0px;text-align:left;color:#000000;font-family:sans-serif;font-size:10pt;font-weight:bold;font-style:normal;}
+.S{margin:0px 0px 5px 0px;text-indent:0px;text-align:left;color:#000000;font-family:sans-serif;font-size:10pt;font-weight:normal;font-style:normal;}
+.T{font-weight:bold;}
+.U{margin:0px 0px 0px 57px;text-indent:0px;text-align:left;color:#000000;font-family:sans-serif;font-size:10pt;font-weight:normal;font-style:normal;}
+.V{color:#0000ff;}
+.W{margin:0px 0px 5px 0px;text-indent:0px;text-align:left;color:#000000;font-family:sans-serif;font-size:10pt;font-weight:bold;font-style:normal;}
+.X{font-weight:normal;}
+.Y{margin:0px 0px 5px 0px;text-indent:0px;text-align:left;color:#000000;font-family:sans-serif;font-size:12pt;font-weight:normal;font-style:normal;}
+.Z{margin:0px 0px 5px 0px;text-indent:0px;text-align:left;color:#800000;font-family:sans-serif;font-size:12pt;font-weight:bold;font-style:normal;}
+.AA{margin:0px 0px 5px 0px;text-indent:0px;text-align:left;color:#0000ff;font-family:sans-serif;font-size:10pt;font-weight:normal;font-style:normal;}
+.AB{color:#000000;font-weight:bold;}
+.AC{color:#800000;}
+a.l1         { text-decoration:none; font-size: 8pt; font-family: sans-serif; font-weight: normal; }
+a.l1:link    { color:#000000; }
+a.l1:visited { color:#000080; }
+a.l1:hover   { color:#9933CC; }
+a.l1:active  { color:#000000; }
+a.l2         { text-decoration:none; font-size: 12pt; font-family: sans-serif; font-variant: small-caps; }
+a.l2:link    { color:#0066FF; }
+a.l2:visited { color:#FF6600; }
+a.l2:hover   { color:#BC0624; }
+a.l2:active  { color:#BC0024; }
+
+-->
+</STYLE>
+<META NAME="keywords" CONTENT="framework, toolkit, widget, c++, visual, studio, dev-cpp, builder, ide, class, component,wxwidgets, qt, rapid, application, development, rad, mfc, linux, macos, gui, sdl, directx, desktop"><META name="robots" content="index,follow">
+<LINK rel="alternate" type="application/rss+xml" title="SVN changes" href="svnchanges.xml">
+<LINK rel="shortcut icon" type="image/png" href="favicon.png">
+</HEAD><BODY BGCOLOR="#D2D9D2" ALINK="#800000" LINK="#000000" VLINK="#000080"><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%"><TR><TD COLSPAN="3"><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%" BGCOLOR="#FFFFFF" style="border: 1px solid #6E89AE;padding-left: 10px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;"><TR><TD><A HREF="index.html"><IMG SRC="0i.png" ALT="" BORDER="0"></A>
+</TD>
+<TD ALIGN="RIGHT" VALIGN="BOTTOM" STYLE="padding-bottom: 5px; background-image: url('1i.png')"><span style="font-size: 14pt; font-family: sans-serif;"><script type="text/javascript"><!--
+google_ad_client = "pub-1082147624384270";
+google_ad_width = 468;
+google_ad_height = 60;
+google_ad_format = "468x60_as";
+google_ad_type = "text_image";
+google_ad_channel = "";
+google_color_border = "336699";
+google_color_bg = "FFFFFF";
+google_color_link = "0000FF";
+google_color_text = "000000";
+google_color_url = "008000";
+//--></script>
+<script type="text/javascript"
+  src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+&nbsp;&nbsp;</span>
+</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>
+<TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%"><TR><TD COLSPAN="3" BGCOLOR="#D2D9D2" HEIGHT="6"></TD>
+</TR>
+<TR><TD VALIGN="TOP" ALIGN="CENTER"><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="160"><TR><TD ALIGN="CENTER"><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%" BGCOLOR="#FFFFFF" style="border-style: solid; border-width: 1px; border-color: #6E89AE;padding: 0px"><TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px;"><A HREF="www$uppweb$overview$en-us.html" CLASS="l1">Overview</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$examples$en-us.html" CLASS="l1">Examples</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$ss$en-us.html" CLASS="l1">Screenshots</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$comparison$en-us.html" CLASS="l1">Comparisons</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$apps$en-us.html" CLASS="l1">Applications</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$download$en-us.html" CLASS="l1">Download</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$documentation$en-us.html" CLASS="l1">Documentation</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$Tutorials$en-us.html" CLASS="l1">Tutorials</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="app$ide$UppHub$en-us.html" CLASS="l1">UppHub</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$Roadmap$en-us.html" CLASS="l1">Status & Roadmap</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$FAQ$en-us.html" CLASS="l1">FAQ</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="app$ide$About$en-us.html" CLASS="l1">Authors & License</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="https://www.ultimatepp.org/forums" CLASS="l1">Forums</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$Funding$en-us.html" CLASS="l1">Funding U++</A>
+</TD>
+</TR>
+</TABLE>
+<TABLE BORDER="0" WIDTH="100%"><TR><TD></TD>
+</TR>
+</TABLE>
+<TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%" BGCOLOR="#FFFFFF" style="border-style: solid; border-width: 1px; border-color: #6E89AE;padding: 0px"><TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('3i.png'); border: 0px solid black;padding-left:12px; padding-right:0px; padding-top:1px; padding-bottom:1px;color:#FFFFFF;"><B><span style="font-size: 8pt; font-family: sans-serif;">Search on this site</span>
+</B>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:6px; padding-right:0px; padding-top:4px; padding-bottom:4px;border-top: 1px solid #6E89AE;"><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%"><TR><TD><IMG SRC="4i.png" ALT="" BORDER="0"></TD>
+<TD><FORM ACTION="https://www.google.com/search" METHOD="GET" STYLE="margin:0px;padding:0px;"><INPUT TYPE="HIDDEN" NAME="ie" VALUE="UTF-8"><INPUT TYPE="HIDDEN" NAME="oe" VALUE="UTF-8"><INPUT TYPE="TEXT" NAME="q" SIZE="15" MAXLENGTH="256" placeholder="Site search"><INPUT TYPE="HIDDEN" NAME="sitesearch" VALUE="ultimatepp.org"></FORM>
+</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>
+<TABLE BORDER="0" WIDTH="100%"><TR><TD></TD>
+</TR>
+</TABLE>
+<br><div id="fb-root"></div>
+<script type="text/javascript">(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) {return;}
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+<div class="fb-like" data-href="https://www.facebook.com/pages/Upp-Framework/262346610476027?sk=wall" data-send="false" data-layout="button_count" data-width="160" data-show-faces="false" data-font="arial"></div>
+<br><br><script type="text/javascript"><!--
+google_ad_client = "pub-1082147624384270";
+google_ad_width = 160;
+google_ad_height = 600;
+google_ad_format = "160x600_as";
+google_ad_type = "text_image";
+google_ad_channel = "";
+google_color_border = "336699";
+google_color_bg = "FFFFFF";
+google_color_link = "0000FF";
+google_color_text = "000000";
+google_color_url = "008000";
+//--></script>
+<script type="text/javascript"
+  src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script><br><br><script type="text/javascript"><!--
+google_ad_client = "pub-1082147624384270";
+google_ad_width = 160;
+google_ad_height = 90;
+google_ad_format = "160x90_0ads_al_s";
+google_ad_channel = "";
+google_color_border = "336699";
+google_color_bg = "FFFFFF";
+google_color_link = "0000FF";
+google_color_text = "000000";
+google_color_url = "008000";
+//--></script>
+<script type="text/javascript"
+  src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+<br><br><br><br><br><br><A HREF="https://sourceforge.net/projects/upp/"><IMG SRC="https://sourceforge.net/sflogo.php?group_id=93970&amp;type=2" ALT="SourceForge.net Logo" BORDER="0" WIDTH="125" HEIGHT="37"></A>
+<br><br><A HREF="https://flathub.org/en/apps/org.ultimatepp.TheIDE"><IMG SRC="5i.png" ALT="SourceForge.net Logo" BORDER="0" WIDTH="125" HEIGHT="37"></A>
+<br><br><div style="background-color:#ffffff;width:125;height:35"><A HREF="https://github.com/ultimatepp"><IMG SRC="6i.png" ALT="GitHub Logo" BORDER="0" WIDTH="125" HEIGHT="35"></A>
+</div><br><div style="background-color:#ffffff;width:125;height:35"><div style="height:5"></div><A HREF="https://discord.gg/8XzqQzXZzb"><IMG SRC="https://assets-global.website-files.com/6257adef93867e50d84d30e2/636e0b5061df29d55a92d945_full_logo_blurple_RGB.svg" ALT="Discord Logo" BORDER="0" WIDTH="125" HEIGHT="25"></A>
+</div><br></TD>
+</TR>
+</TABLE>
+</TD>
+<TD VALIGN="TOP" BGCOLOR="#D2D9D2"><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="6"><TR><TD></TD>
+</TR>
+</TABLE>
+</TD>
+<TD VALIGN="TOP" WIDTH="100%" BGCOLOR="#D2D9D2"><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" BGCOLOR="#FFFFFF" WIDTH="100%" style="border-style: solid; border-width: 1px; border-color: #6E89AE;padding: 10px;;"><TR><TD><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%"><TR><TD><p class="C">EditField derived classes</p>
+<p class="D">Widgets editing values in text representation are based on EditField and appropriate Convert class. Majority of them are defined using simple EditValue, EditMinMax and EditMinMaxNotNull template classes:</p>
+<p class="E">&nbsp;</p>
+<p class="A">&nbsp;</p>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr><td width="100%"><table width="100%" class="F"><colgroup><col width="100%"></colgroup>
+<tr><td class="G"><p class="H">EditValue</p>
+</td>
+</tr>
+</table></td>
+</tr></table>
+<p class="E">&nbsp;</p>
+<p id="noref" class="I">template<span class="J">&nbsp;&lt;</span>class<span class="J">&nbsp;</span><span class="K">DataType</span><span class="J">, </span>class<span class="J">&nbsp;</span><span class="L">Cv</span>&gt;</p>
+<p id="EditValue::class" class="M"><span class="N">class</span><span class="O">&nbsp;</span><span class="J">EditValue</span><span class="O">&nbsp;:&nbsp;</span><span class="N">public</span><span class="O">&nbsp;</span>EditField<span class="O">, </span><span class="N">public</span><span class="O">&nbsp;</span>Cv</p>
+<p class="D">This class provides composition of EditField and specific <a href="src$Core$Convert$en-us.html#Convert::class">Convert</a> class. The advantage of deriving from Convert is that all Convert setup methods (like setting min/max value) are directly available without using further glue code.</p>
+<p class="E">&nbsp;</p>
+<p class="A">&nbsp;</p>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr><td width="100%"><table width="100%" class="P"><colgroup><col width="100%"></colgroup>
+<tr><td class="Q"><p class="R">Constructor Detail</p>
+</td>
+</tr>
+</table></td>
+</tr></table>
+<p class="E">&nbsp;</p>
+<p id="EditValue::EditValue()" class="S"><span class="T">EditValue</span>()</p>
+<p class="U">Constructor assigns Convert class (in fact, *this) as the EditField converter.</p>
+<p class="E">&nbsp;</p>
+<p class="E">&nbsp;</p>
+<p class="A">&nbsp;</p>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr><td width="100%"><table width="100%" class="F"><colgroup><col width="100%"></colgroup>
+<tr><td class="G"><p class="H">EditMinMax</p>
+</td>
+</tr>
+</table></td>
+</tr></table>
+<p class="E">&nbsp;</p>
+<p id="noref" class="I">template<span class="J">&nbsp;&lt;</span>class<span class="J">&nbsp;</span><span class="K">DataType</span><span class="J">, </span>class<span class="J">&nbsp;</span><span class="K">Cv</span>&gt;</p>
+<p id="EditMinMax::class" class="S"><span class="V">class</span>&nbsp;<span class="T">EditMinMax</span>&nbsp;:&nbsp;<span class="V">public</span>&nbsp;<span class="L">EditValue</span><span class="V">&lt;</span><span class="K">DataType</span>, <span class="K">Cv</span><span class="V">&gt;</span>&nbsp;</p>
+<p class="D">Wrapper class for converters providing Min, Max and NotNull properties.</p>
+<p class="E">&nbsp;</p>
+<p class="A">&nbsp;</p>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr><td width="100%"><table width="100%" class="P"><colgroup><col width="100%"></colgroup>
+<tr><td class="Q"><p class="R">Constructor Detail</p>
+</td>
+</tr>
+</table></td>
+</tr></table>
+<p class="E">&nbsp;</p>
+<p id="EditMinMax::EditMinMax()" class="S"><span class="T">EditMinMax</span>()</p>
+<p class="U">Default constructor.</p>
+<p class="E">&nbsp;</p>
+<hr><p class="E">&nbsp;</p>
+<p id="EditMinMax::EditMinMax(DataType,DataType)" class="S"><span class="T">EditMinMax</span>(<span class="K">DataType</span>&nbsp;<span class="L">min</span>, <span class="K">DataType</span>&nbsp;<span class="L">max</span>)</p>
+<p class="U">This constructor sets <span class="T">Min</span> and <span class="T">Max</span> properties.</p>
+<p class="E">&nbsp;</p>
+<p class="A">&nbsp;</p>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr><td width="100%"><table width="100%" class="P"><colgroup><col width="100%"></colgroup>
+<tr><td class="Q"><p class="R">Public Method List</p>
+</td>
+</tr>
+</table></td>
+</tr></table>
+<p class="E">&nbsp;</p>
+<p id="EditMinMax::Min(DataType)" class="S"><a href="EditMinMax"><u>EditMinMax</u></a><span class="V">&amp;</span>&nbsp;<span class="T">Min</span>(<span class="K">DataType</span>&nbsp;<span class="L">min</span>)</p>
+<p id="EditMinMax::Max(DataType)" class="S"><a href="EditMinMax"><u>EditMinMax</u></a><span class="V">&amp;</span>&nbsp;<span class="T">Max</span>(<span class="K">DataType</span>&nbsp;<span class="L">max</span>)</p>
+<p id="EditMinMax::NotNull(bool)" class="S"><a href="EditMinMax"><u>EditMinMax</u></a><span class="V">&amp;</span>&nbsp;<span class="T">NotNull</span>(<span class="V">bool</span>&nbsp;<span class="L">nn</span>&nbsp;=&nbsp;<span class="V">true</span>)</p>
+<p class="U">Sets <span class="T">Min</span>, <span class="T">Max</span> and <span class="T">NotNull</span> properties. In fact, the only purpose of these methods is to change the returns value to the correctly typed *this.</p>
+<p class="E">&nbsp;</p>
+<p class="A">&nbsp;</p>
+<p class="A">&nbsp;</p>
+<p class="A">&nbsp;</p>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr><td width="100%"><table width="100%" class="F"><colgroup><col width="100%"></colgroup>
+<tr><td class="G"><p class="H">EditMinMaxNotNull</p>
+</td>
+</tr>
+</table></td>
+</tr></table>
+<p class="E">&nbsp;</p>
+<p id="noref" class="I">template<span class="J">&nbsp;&lt;</span>class<span class="J">&nbsp;</span><span class="K">DataType</span><span class="J">, </span>class<span class="J">&nbsp;</span><span class="K">Cv</span>&gt;</p>
+<p id="EditMinMaxNotNull::class" class="S"><span class="V">class</span>&nbsp;<span class="T">EditMinMaxNotNull</span>&nbsp;:&nbsp;<span class="V">public</span>&nbsp;<span class="L">EditValue</span><span class="V">&lt;</span><span class="K">DataType</span>, <span class="K">Cv</span><span class="V">&gt;</span>&nbsp;</p>
+<p class="D">Similar to EditMinMax template class, but constructs activate <span class="T">NotNull</span> property.</p>
+<p class="E">&nbsp;</p>
+<p class="A">&nbsp;</p>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr><td width="100%"><table width="100%" class="P"><colgroup><col width="100%"></colgroup>
+<tr><td class="Q"><p class="R">Constructor Detail</p>
+</td>
+</tr>
+</table></td>
+</tr></table>
+<p class="E">&nbsp;</p>
+<p id="EditMinMaxNotNull::EditMinMaxNotNull()" class="S"><span class="T">EditMinMaxNotNull</span>()</p>
+<p class="U">Default constructor.</p>
+<p class="E">&nbsp;</p>
+<hr><p class="E">&nbsp;</p>
+<p id="EditMinMaxNotNull::EditMinMaxNotNull(DataType,DataType)" class="S"><span class="T">EditMinMaxNotNull</span>(<span class="K">DataType</span>&nbsp;<span class="L">min</span>, <span class="K">DataType</span>&nbsp;<span class="L">max</span>)</p>
+<p class="U">This constructor sets <span class="T">Min</span> and <span class="T">Max</span> properties.</p>
+<p class="E">&nbsp;</p>
+<p class="A">&nbsp;</p>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr><td width="100%"><table width="100%" class="P"><colgroup><col width="100%"></colgroup>
+<tr><td class="Q"><p class="R">Public Method List</p>
+</td>
+</tr>
+</table></td>
+</tr></table>
+<p class="E">&nbsp;</p>
+<p id="EditMinMaxNotNull::Min(DataType)" class="S"><a href="EditMinMaxNotNull"><u>EditMinMaxNotNull</u></a><span class="V">&amp;</span>&nbsp;<span class="T">Min</span>(<span class="K">DataType</span>&nbsp;<span class="L">min</span>)</p>
+<p id="EditMinMaxNotNull::Max(DataType)" class="S"><a href="EditMinMaxNotNull"><u>EditMinMaxNotNull</u></a><span class="V">&amp;</span>&nbsp;<span class="T">Max</span>(<span class="K">DataType</span>&nbsp;<span class="L">max</span>)</p>
+<p id="EditMinMaxNotNull::NotNull(bool)" class="S"><a href="EditMinMaxNotNull"><u>EditMinMaxNotNull</u></a><span class="V">&amp;</span>&nbsp;<span class="T">NotNull</span>(<span class="V">bool</span>&nbsp;<span class="L">nn</span>&nbsp;=&nbsp;<span class="V">true</span>)</p>
+<p class="U">Sets <span class="T">Min</span>, <span class="T">Max</span> and <span class="T">NotNull</span> properties. In fact, the only purpose of these methods is to change the returns value to the correctly typed *this.</p>
+<p class="E">&nbsp;</p>
+<p class="A">&nbsp;</p>
+<p class="A">&nbsp;</p>
+<p class="A">&nbsp;</p>
+<p class="A">Based on EditMinMax and EditMinMaxNotNull, basic value editors are defined as typedefs:</p>
+<p class="E">&nbsp;</p>
+<p id="EditDate::typedef" class="W"><span class="N">typedef</span><span class="X">&nbsp;</span><a href="EditMinMax"><span class="X"><u>EditMinMax</u></span></a><span class="N">&lt;</span><a href="Date"><span class="X"><u>Date</u></span></a><span class="X">, </span><a href="ConvertDate"><span class="X"><u>ConvertDate</u></span></a><span class="N">&gt;</span><span class="X">&nbsp;</span>EditDate</p>
+<p class="U">Edit field for date values.</p>
+<p class="E">&nbsp;</p>
+<hr><p class="E">&nbsp;</p>
+<p id="EditDateNotNull::typedef" class="W"><span class="N">typedef</span><span class="X">&nbsp;</span><a href="EditMinMaxNotNull"><span class="X"><u>EditMinMaxNotNull</u></span></a><span class="N">&lt;</span><a href="Date"><span class="X"><u>Date</u></span></a><span class="X">, </span><a href="ConvertDate"><span class="X"><u>ConvertDate</u></span></a><span class="N">&gt;</span><span class="X">&nbsp;</span>EditDateNotNull</p>
+<p class="U">Edit field for not null date values.</p>
+<p class="E">&nbsp;</p>
+<hr><p class="E">&nbsp;</p>
+<p id="EditDouble::typedef" class="W"><span class="N">typedef</span><span class="X">&nbsp;</span><a href="EditMinMax"><span class="X"><u>EditMinMax</u></span></a><span class="N">&lt;double</span><span class="X">, </span><a href="ConvertDouble"><span class="X"><u>ConvertDouble</u></span></a><span class="N">&gt;</span><span class="X">&nbsp;</span>EditDouble</p>
+<p class="U">Edit field for double values.</p>
+<p class="E">&nbsp;</p>
+<hr><p class="E">&nbsp;</p>
+<p id="Upp::EditFloat::typedef" class="W"><span class="N">typedef</span><span class="X">&nbsp;</span><a href="Upp::EditMinMax"><span class="X"><u>EditMinMax</u></span></a><span class="X">&lt;</span><span class="N">double</span><span class="X">, ConvertFloat&gt;&nbsp;</span>EditFloat</p>
+<p class="U">Edit field for float values. The difference from EditDouble is that when decimals are rounded to be presented to user, EditFloat rounds to just 7 valid digits to reflect the precision of float type.</p>
+<p class="E">&nbsp;</p>
+<hr><p class="E">&nbsp;</p>
+<p id="EditDoubleNotNull::typedef" class="W"><span class="N">typedef</span><span class="X">&nbsp;</span><a href="EditMinMaxNotNull"><span class="X"><u>EditMinMaxNotNull</u></span></a><span class="N">&lt;double</span><span class="X">, </span><a href="ConvertDouble"><span class="X"><u>ConvertDouble</u></span></a><span class="N">&gt;</span><span class="X">&nbsp;</span>EditDoubleNotNull</p>
+<p class="U">Edit field for not null double values.</p>
+<p class="E">&nbsp;</p>
+<hr><p class="E">&nbsp;</p>
+<p id="EditInt::typedef" class="W"><span class="N">typedef</span><span class="X">&nbsp;</span><a href="EditMinMax"><span class="X"><u>EditMinMax</u></span></a><span class="N">&lt;int</span><span class="X">, </span><a href="ConvertInt"><span class="X"><u>ConvertInt</u></span></a><span class="N">&gt;</span><span class="X">&nbsp;</span>EditInt</p>
+<p class="U">Edit field for integer values.</p>
+<p class="E">&nbsp;</p>
+<hr><p class="E">&nbsp;</p>
+<p id="EditIntNotNull::typedef" class="W"><span class="N">typedef</span><span class="X">&nbsp;</span><a href="EditMinMaxNotNull"><span class="X"><u>EditMinMaxNotNull</u></span></a><span class="N">&lt;int</span><span class="X">, </span><a href="ConvertInt"><span class="X"><u>ConvertInt</u></span></a><span class="N">&gt;</span><span class="X">&nbsp;</span>EditIntNotNull</p>
+<p class="U">Edit field for not null integer values.</p>
+<p class="E">&nbsp;</p>
+<hr><p class="E">&nbsp;</p>
+<p id="Upp::EditInt64NotNull::typedef" class="W"><span class="N">typedef</span><span class="X">&nbsp;</span><a href="Upp::EditMinMaxNotNull"><span class="X"><u>EditMinMaxNotNull</u></span></a><span class="X">&lt;</span><a href="Upp::int64"><span class="X"><u>int64</u></span></a><span class="X">, </span><a href="Upp::EditInt64"><span class="X"><u>EditInt64</u></span></a><span class="X">&gt;&nbsp;</span>EditInt64NotNull</p>
+<p class="U">Edit field for not null int64 values.</p>
+<p class="E">&nbsp;</p>
+<hr><p class="E">&nbsp;</p>
+<p id="Upp::EditFloatNotNull::typedef" class="W"><span class="N">typedef</span><span class="X">&nbsp;</span><a href="Upp::EditMinMaxNotNull"><span class="X"><u>EditMinMaxNotNull</u></span></a><span class="X">&lt;</span><span class="N">double</span><span class="X">, </span><a href="Upp::EditFloat"><span class="X"><u>EditFloat</u></span></a><span class="X">&gt;&nbsp;</span>EditFloatNotNull</p>
+<p class="U">Edit field for not null float values.</p>
+<p class="E">&nbsp;</p>
+<hr><p class="E">&nbsp;</p>
+<p id="EditInt64::typedef" class="W"><span class="N">typedef</span><span class="X">&nbsp;</span><a href="EditMinMax"><span class="X"><u>EditMinMax</u></span></a><span class="N">&lt;</span><a href="int64"><span class="X"><u>int64</u></span></a><span class="X">, </span><a href="ConvertInt64"><span class="X"><u>ConvertInt64</u></span></a><span class="N">&gt;</span><span class="X">&nbsp;</span>EditInt64</p>
+<p class="U">Edit field for 64 bit integer values.</p>
+<p class="E">&nbsp;</p>
+<hr><p class="E">&nbsp;</p>
+<p id="EditTime::typedef" class="W"><span class="N">typedef</span><span class="X">&nbsp;</span><a href="EditMinMax"><span class="X"><u>EditMinMax</u></span></a><span class="N">&lt;</span><a href="Time"><span class="X"><u>Time</u></span></a><span class="X">, </span><a href="ConvertTime"><span class="X"><u>ConvertTime</u></span></a><span class="N">&gt;</span><span class="X">&nbsp;</span>EditTime</p>
+<p class="U">Edit field for time values.</p>
+<p class="E">&nbsp;</p>
+<hr><p class="E">&nbsp;</p>
+<p id="EditTimeNotNull::typedef" class="W"><span class="N">typedef</span><span class="X">&nbsp;</span><a href="EditMinMaxNotNull"><span class="X"><u>EditMinMaxNotNull</u></span></a><span class="N">&lt;</span><a href="Time"><span class="X"><u>Time</u></span></a><span class="X">, </span><a href="ConvertTime"><span class="X"><u>ConvertTime</u></span></a><span class="N">&gt;</span><span class="X">&nbsp;</span>EditTimeNotNull</p>
+<p class="U">Edit field for not null time values.</p>
+<p class="E">&nbsp;</p>
+<p class="A">&nbsp;</p>
+<p class="A">&nbsp;</p>
+<p class="A">&nbsp;</p>
+<p class="A">Some value editors are not based on EditMinMax and EditMinMaxNotNull:</p>
+<p class="E">&nbsp;</p>
+<p class="A">&nbsp;</p>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr><td width="100%"><table width="100%" class="F"><colgroup><col width="100%"></colgroup>
+<tr><td class="G"><p class="H">EditString</p>
+</td>
+</tr>
+</table></td>
+</tr></table>
+<p class="E">&nbsp;</p>
+<p id="EditString::class" class="Y"><span class="V">class</span>&nbsp;<span class="T">EditString</span>&nbsp;:&nbsp;<span class="V">public</span>&nbsp;<span class="L">EditValue</span><span class="V">&lt;</span><a href="WString"><u>WString</u></a>, <a href="ConvertString"><u>ConvertString</u></a><span class="V">&gt;</span>&nbsp;</p>
+<p class="D">EditString is not based on EditMinMax because instead of minimal and maximal values, it implements &quot;maximum number of characters&quot; constraint.</p>
+<p class="E">&nbsp;</p>
+<p class="A">&nbsp;</p>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr><td width="100%"><table width="100%" class="P"><colgroup><col width="100%"></colgroup>
+<tr><td class="Q"><p class="R">Constructor Detail</p>
+</td>
+</tr>
+</table></td>
+</tr></table>
+<p class="E">&nbsp;</p>
+<p id="EditString::EditString()" class="S"><span class="T">EditString</span>()</p>
+<p class="U">Default constructor.</p>
+<p class="E">&nbsp;</p>
+<hr><p class="E">&nbsp;</p>
+<p id="EditString::EditString(int)" class="S"><span class="T">EditString</span>(<span class="V">int</span>&nbsp;<span class="L">maxlen</span>)</p>
+<p class="U">This constructor sets <span class="L">maxlen</span> as maximum length of contained text.</p>
+<p class="E">&nbsp;</p>
+<p class="A">&nbsp;</p>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr><td width="100%"><table width="100%" class="P"><colgroup><col width="100%"></colgroup>
+<tr><td class="Q"><p class="R">Public Method List</p>
+</td>
+</tr>
+</table></td>
+</tr></table>
+<p class="E">&nbsp;</p>
+<p id="EditString::MaxLen(int)" class="S"><a href="EditString"><u>EditString</u></a><span class="V">&amp;</span>&nbsp;<span class="T">MaxLen</span>(<span class="V">int</span>&nbsp;<span class="L">maxlen</span>)</p>
+<p class="U">Sets <span class="L">maxlen</span> as maximum length of contained text.<span class="L">maxlen</span> Returns *this.</p>
+<p class="E">&nbsp;</p>
+<hr><p class="E">&nbsp;</p>
+<p id="EditString::NotNull(bool)" class="S"><a href="EditString"><u>EditString</u></a><span class="V">&amp;</span>&nbsp;<span class="T">NotNull</span>(<span class="V">bool</span>&nbsp;<span class="L">nn</span>&nbsp;=&nbsp;<span class="V">true</span>)</p>
+<p class="U">Sets <span class="T">NotNull</span> property.</p>
+<p class="E">&nbsp;</p>
+<hr><p class="E">&nbsp;</p>
+<p id="Upp::EditString::TrimLeft(bool)" class="S"><a href="Upp::EditString"><u>EditString</u></a><span class="V">&amp;</span>&nbsp;<span class="T">TrimLeft</span>(<span class="V">bool</span>&nbsp;<span class="L">b</span>&nbsp;=&nbsp;<span class="V">true</span>)</p>
+<p id="Upp::EditString::TrimRight(bool)" class="S"><a href="Upp::EditString"><u>EditString</u></a><span class="V">&amp;</span>&nbsp;<span class="T">TrimRight</span>(<span class="V">bool</span>&nbsp;<span class="L">b</span>&nbsp;=&nbsp;<span class="V">true</span>)</p>
+<p id="Upp::EditString::TrimBoth(bool)" class="S"><a href="Upp::EditString"><u>EditString</u></a><span class="V">&amp;</span>&nbsp;<span class="T">TrimBoth</span>(<span class="V">bool</span>&nbsp;<span class="L">b</span>&nbsp;=&nbsp;<span class="V">true</span>)</p>
+<p class="U">Whitechars on the left/right/both side(s) are removed.</p>
+<p class="A">&nbsp;</p>
+<p class="A">&nbsp;</p>
+<p class="A">&nbsp;</p>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr><td width="100%"><table width="100%" class="F"><colgroup><col width="100%"></colgroup>
+<tr><td class="G"><p class="H">EditStringNotNull</p>
+</td>
+</tr>
+</table></td>
+</tr></table>
+<p class="E">&nbsp;</p>
+<p id="EditStringNotNull::class" class="Z"><span class="N">class</span><span class="O">&nbsp;</span><span class="J">EditStringNotNull</span><span class="O">&nbsp;:&nbsp;</span><span class="N">public</span><span class="O">&nbsp;</span>EditString</p>
+<p class="D">This class sets the NotNull property in the constructors.</p>
+<p class="E">&nbsp;</p>
+<p class="A">&nbsp;</p>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr><td width="100%"><table width="100%" class="P"><colgroup><col width="100%"></colgroup>
+<tr><td class="Q"><p class="R">Constructor Detail</p>
+</td>
+</tr>
+</table></td>
+</tr></table>
+<p class="E">&nbsp;</p>
+<p id="EditStringNotNull::EditStringNotNull()" class="S"><span class="T">EditStringNotNull</span>()</p>
+<p class="U">Default constructor.</p>
+<p class="E">&nbsp;</p>
+<hr><p class="E">&nbsp;</p>
+<p id="EditStringNotNull::EditStringNotNull(int)" class="S"><span class="T">EditStringNotNull</span>(<span class="V">int</span>&nbsp;<span class="L">maxlen</span>)</p>
+<p class="U">This constructor sets <span class="L">maxlen</span> as maximum length of contained text.</p>
+<p class="E">&nbsp;</p>
+<p class="A">&nbsp;</p>
+<p class="A">&nbsp;</p>
+<p class="A">&nbsp;</p>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr><td width="100%"><table width="100%" class="F"><colgroup><col width="100%"></colgroup>
+<tr><td class="G"><p class="H">EditIntSpin</p>
+</td>
+</tr>
+</table></td>
+</tr></table>
+<p class="E">&nbsp;</p>
+<p id="EditIntSpin::class" class="Z"><span class="N">class</span><span class="O">&nbsp;</span><span class="J">EditIntSpin</span><span class="O">&nbsp;:&nbsp;</span><span class="N">public</span><span class="O">&nbsp;</span>EditInt</p>
+<p class="D">This editor adds spin buttons to the EditInt class.</p>
+<p class="E">&nbsp;</p>
+<p class="A">&nbsp;</p>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr><td width="100%"><table width="100%" class="P"><colgroup><col width="100%"></colgroup>
+<tr><td class="Q"><p class="R">Constructor Detail</p>
+</td>
+</tr>
+</table></td>
+</tr></table>
+<p class="E">&nbsp;</p>
+<p id="EditIntSpin::EditIntSpin()" class="S"><span class="T">EditIntSpin</span>()</p>
+<p class="U">Default constructor. Spin buttons are on.</p>
+<p class="E">&nbsp;</p>
+<hr><p class="E">&nbsp;</p>
+<p id="EditIntSpin::EditIntSpin(int,int)" class="S"><span class="T">EditIntSpin</span>(<span class="V">int</span>&nbsp;<span class="L">min</span>, <span class="V">int</span>&nbsp;<span class="L">max</span>)</p>
+<p class="U">This constructor sets the <span class="L">min</span> and <span class="L">max</span> values. Spin buttons are on.</p>
+<p class="E">&nbsp;</p>
+<hr><p class="E">&nbsp;</p>
+<p id="EditIntSpin::~EditIntSpin()" class="S"><span class="V">~</span><span class="T">EditIntSpin</span>()</p>
+<p class="U">Default destructor.</p>
+<p class="E">&nbsp;</p>
+<p class="A">&nbsp;</p>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr><td width="100%"><table width="100%" class="P"><colgroup><col width="100%"></colgroup>
+<tr><td class="Q"><p class="R">Public Method List</p>
+</td>
+</tr>
+</table></td>
+</tr></table>
+<p class="E">&nbsp;</p>
+<p id="EditIntSpin::ShowSpin(bool)" class="S"><a href="EditIntSpin"><u>EditIntSpin</u></a><span class="V">&amp;</span>&nbsp;<span class="T">ShowSpin</span>(<span class="V">bool</span>&nbsp;<span class="L">s</span>&nbsp;=&nbsp;<span class="V">true</span>)</p>
+<p class="U">Shows/hides spin buttons.</p>
+<p class="E">&nbsp;</p>
+<hr><p class="E">&nbsp;</p>
+<p id="EditIntSpin::SetInc(int)" class="S"><a href="EditIntSpin"><u>EditIntSpin</u></a><span class="V">&amp;</span>&nbsp;<span class="T">SetInc</span>(<span class="V">int</span>&nbsp;<span class="L">_inc</span>)</p>
+<p class="U">Set the increment factor to <span class="L">_inc</span>.</p>
+<p class="E">&nbsp;</p>
+<hr><p class="E">&nbsp;</p>
+<p id="EditIntSpin::GetInc()const" class="AA">int<span class="J">&nbsp;</span><span class="AB">GetInc</span><span class="J">()&nbsp;</span>const</p>
+<p class="U">Returns the increment factor.</p>
+<p class="E">&nbsp;</p>
+<p class="A">&nbsp;</p>
+<p class="A">&nbsp;</p>
+<p class="A">&nbsp;</p>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr><td width="100%"><table width="100%" class="F"><colgroup><col width="100%"></colgroup>
+<tr><td class="G"><p class="H">EditDoubleSpin</p>
+</td>
+</tr>
+</table></td>
+</tr></table>
+<p class="E">&nbsp;</p>
+<p id="EditDoubleSpin::class" class="Z"><span class="N">class</span><span class="O">&nbsp;</span><span class="J">EditDoubleSpin</span><span class="O">&nbsp;:&nbsp;</span><span class="N">public</span><span class="O">&nbsp;</span>EditDouble</p>
+<p class="D">This editor adds spin buttons to the EditDouble class.</p>
+<p class="E">&nbsp;</p>
+<p class="A">&nbsp;</p>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr><td width="100%"><table width="100%" class="P"><colgroup><col width="100%"></colgroup>
+<tr><td class="Q"><p class="R">Constructor Detail</p>
+</td>
+</tr>
+</table></td>
+</tr></table>
+<p class="E">&nbsp;</p>
+<p id="EditDoubleSpin::EditDoubleSpin(double)" class="S"><span class="T">EditDoubleSpin</span>(<span class="V">double</span>&nbsp;<span class="L">inc</span>&nbsp;=&nbsp;<span class="AC">0</span><span class="V">.</span><span class="AC">1</span>)</p>
+<p class="U">Sets the spin increment to <span class="L">inc</span>. Spin buttons are on.</p>
+<p class="E">&nbsp;</p>
+<hr><p class="E">&nbsp;</p>
+<p id="EditDoubleSpin::EditDoubleSpin(double,double,double)" class="S"><span class="T">EditDoubleSpin</span>(<span class="V">double</span>&nbsp;<span class="L">min</span>, <span class="V">double</span>&nbsp;<span class="L">max</span>, <span class="V">double</span>&nbsp;<span class="L">inc</span>&nbsp;=&nbsp;<span class="AC">0</span><span class="V">.</span><span class="AC">1</span>)</p>
+<p class="U">This constructor sets <span class="L">min</span>, <span class="L">max</span> and <span class="L">inc</span> values. Spin buttons are on.</p>
+<p class="E">&nbsp;</p>
+<hr><p class="E">&nbsp;</p>
+<p id="EditDoubleSpin::~EditDoubleSpin()" class="S"><span class="V">~</span><span class="T">EditDoubleSpin</span>()</p>
+<p class="U">Default destructor.</p>
+<p class="E">&nbsp;</p>
+<p class="A">&nbsp;</p>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr><td width="100%"><table width="100%" class="P"><colgroup><col width="100%"></colgroup>
+<tr><td class="Q"><p class="R">Public Method List</p>
+</td>
+</tr>
+</table></td>
+</tr></table>
+<p class="E">&nbsp;</p>
+<p id="EditDoubleSpin::SetInc(double)" class="S"><a href="EditDoubleSpin"><u>EditDoubleSpin</u></a><span class="V">&amp;</span>&nbsp;<span class="T">SetInc</span>(<span class="V">double</span>&nbsp;<span class="L">_inc</span>&nbsp;=&nbsp;<span class="AC">0</span><span class="V">.</span><span class="AC">1</span>)</p>
+<p class="U">Set the spin increment to <span class="L">_inc</span>.</p>
+<p class="E">&nbsp;</p>
+<hr><p class="E">&nbsp;</p>
+<p id="EditDoubleSpin::GetInc()const" class="AA">double<span class="J">&nbsp;</span><span class="AB">GetInc</span><span class="J">()&nbsp;</span>const</p>
+<p class="U">Returns current spin increment.</p>
+<p class="E">&nbsp;</p>
+<hr><p class="E">&nbsp;</p>
+<p id="EditDoubleSpin::ShowSpin(bool)" class="S"><a href="EditDoubleSpin"><u>EditDoubleSpin</u></a><span class="V">&amp;</span>&nbsp;<span class="T">ShowSpin</span>(<span class="V">bool</span>&nbsp;<span class="L">s</span>&nbsp;=&nbsp;<span class="V">true</span>)</p>
+<p class="U">Shows/hides spin buttons.</p>
+<p class="E">&nbsp;</p>
+<p class="A">&nbsp;</p>
+<p class="A">&nbsp;</p>
+<p class="A">&nbsp;</p>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr><td width="100%"><table width="100%" class="F"><colgroup><col width="100%"></colgroup>
+<tr><td class="G"><p class="H">EditDoubleNotNullSpin</p>
+</td>
+</tr>
+</table></td>
+</tr></table>
+<p class="E">&nbsp;</p>
+<p id="EditDoubleNotNullSpin::class" class="Z"><span class="N">class</span><span class="O">&nbsp;</span><span class="J">EditDoubleNotNullSpin</span><span class="O">&nbsp;:&nbsp;</span><span class="N">public</span><span class="O">&nbsp;</span>EditDoubleSpin</p>
+<p class="D">This editor adds spin buttons to the EditDoubleNotNull class.</p>
+<p class="E">&nbsp;</p>
+<p class="A">&nbsp;</p>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr><td width="100%"><table width="100%" class="P"><colgroup><col width="100%"></colgroup>
+<tr><td class="Q"><p class="R">Constructor Detail</p>
+</td>
+</tr>
+</table></td>
+</tr></table>
+<p class="E">&nbsp;</p>
+<p id="EditDoubleNotNullSpin::EditDoubleNotNullSpin(double)" class="S"><span class="T">EditDoubleNotNullSpin</span>(<span class="V">double</span>&nbsp;<span class="L">inc</span>&nbsp;=&nbsp;<span class="AC">0</span><span class="V">.</span><span class="AC">1</span>)</p>
+<p class="U">Sets the spin increment to <span class="L">inc</span>. Spin buttons are on.</p>
+<p class="E">&nbsp;</p>
+<hr><p class="E">&nbsp;</p>
+<p id="EditDoubleNotNullSpin::EditDoubleNotNullSpin(double,double,double)" class="S"><span class="T">EditDoubleNotNullSpin</span>(<span class="V">double</span>&nbsp;<span class="L">min</span>, <span class="V">double</span>&nbsp;<span class="L">max</span>, <span class="V">double</span>&nbsp;<span class="L">inc</span>&nbsp;=&nbsp;<span class="AC">0</span><span class="V">.</span><span class="AC">1</span>)</p>
+<p class="U">This constructor sets <span class="L">min</span>, <span class="L">max</span> and <span class="L">inc</span> values. Spin buttons are on.</p>
+<p class="E">&nbsp;</p>
+<p class="A">&nbsp;</p>
+</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>
+<TABLE BORDER="0" WIDTH="100%"><TR><TD></TD>
+</TR>
+</TABLE>
+<TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" BGCOLOR="#FFFFFF" WIDTH="100%" style="border-style: solid; border-width: 1px; border-color: #6E89AE;padding: 10px;;"><TR><TD><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%"><TR><TD><p class="A"><span class="B"> </span><a href="www$uppweb$contribweb$en-us.html">Do you want to contribute?</a></p>
+</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>
+<script type="text/javascript">var a={};var p=window.location.pathname.split("/");p=p[p.length-1];var s='<select id="lang" onchange="window.location=document.getElementById(\'lang\').value;">';for(l in a){if(p==l){d=" selected=1"}else{d=""}s+='<option value="'+l+'"'+d+'>'+a[l]+'</option>'}s+='</select>';var d=document.createElement('div');d.innerHTML=s;var c=document.getElementById('langs');c.replaceChild(d,c.firstChild);document.getElementById('langbox').style.display='block';</script></BODY>

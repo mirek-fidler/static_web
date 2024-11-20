@@ -1,0 +1,462 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en-us">
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
+<META NAME="Generator" CONTENT="U++ HTML Package">
+<META NAME="Description" CONTENT="Draw class is base class representing graphical output. It is intentionally designed with quite limited set of easy to use drawing primitives.">
+<TITLE>Draw Tutorial :: U++</TITLE>
+<STYLE TYPE="text/css"><!--
+.A{margin:0px 0px 0px 0px;text-indent:0px;text-align:left;color:#000000;font-family:sans-serif;font-size:10pt;font-weight:normal;font-style:normal;}
+.B{font-size:12pt;}
+.C{margin:0px 0px 16px 0px;text-indent:0px;text-align:left;color:#000000;font-family:serif;font-size:24pt;font-weight:bold;font-style:normal;}
+.D{margin:16px 0px 0px 0px;text-indent:0px;text-align:left;color:#000000;font-family:sans-serif;font-size:16pt;font-weight:bold;font-style:normal;}
+.E{margin:8px 0px 8px 0px;text-indent:0px;text-align:left;color:#000000;font-family:sans-serif;font-size:10pt;font-weight:normal;font-style:normal;line-height:150%}
+.F{font-weight:bold;font-style:italic;}
+.G{margin:0px 0px 0px 64px;text-indent:0px;text-align:left;color:#0000ff;font-family:monospace;font-size:9pt;font-weight:normal;font-style:normal;}
+.H{color:#8000ff;}
+.I{color:#000000;}
+.J{margin:0px 0px 0px 64px;text-indent:0px;text-align:left;color:#000000;font-family:monospace;font-size:9pt;font-weight:normal;font-style:normal;}
+.K{color:#0000ff;font-weight:bold;}
+.L{color:#0000ff;}
+.M{font-weight:bold;}
+.N{color:#800000;}
+.O{color:#000080;}
+.P{margin:0px 0px 0px 64px;text-indent:0px;text-align:left;color:#000080;font-family:monospace;font-size:9pt;font-weight:normal;font-style:normal;}
+.Q{margin:0px 0px 0px 0px;text-indent:0px;text-align:center;color:#000000;font-family:sans-serif;font-size:10pt;font-weight:normal;font-style:normal;}
+.R{display:list-item;list-style-type:disc;margin:8px 0px 8px 52px;text-indent:0px;text-align:left;color:#000000;font-family:sans-serif;font-size:10pt;font-weight:normal;font-style:normal;line-height:150%}
+a.l1         { text-decoration:none; font-size: 8pt; font-family: sans-serif; font-weight: normal; }
+a.l1:link    { color:#000000; }
+a.l1:visited { color:#000080; }
+a.l1:hover   { color:#9933CC; }
+a.l1:active  { color:#000000; }
+a.l2         { text-decoration:none; font-size: 12pt; font-family: sans-serif; font-variant: small-caps; }
+a.l2:link    { color:#0066FF; }
+a.l2:visited { color:#FF6600; }
+a.l2:hover   { color:#BC0624; }
+a.l2:active  { color:#BC0024; }
+
+-->
+</STYLE>
+<META NAME="keywords" CONTENT="framework, toolkit, widget, c++, visual, studio, dev-cpp, builder, ide, class, component,wxwidgets, qt, rapid, application, development, rad, mfc, linux, macos, gui, sdl, directx, desktop"><META name="robots" content="index,follow">
+<LINK rel="alternate" type="application/rss+xml" title="SVN changes" href="svnchanges.xml">
+<LINK rel="shortcut icon" type="image/png" href="favicon.png">
+</HEAD><BODY BGCOLOR="#D2D9D2" ALINK="#800000" LINK="#000000" VLINK="#000080"><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%"><TR><TD COLSPAN="3"><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%" BGCOLOR="#FFFFFF" style="border: 1px solid #6E89AE;padding-left: 10px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;"><TR><TD><A HREF="index.html"><IMG SRC="0i.png" ALT="" BORDER="0"></A>
+</TD>
+<TD ALIGN="RIGHT" VALIGN="BOTTOM" STYLE="padding-bottom: 5px; background-image: url('1i.png')"><span style="font-size: 14pt; font-family: sans-serif;"><script type="text/javascript"><!--
+google_ad_client = "pub-1082147624384270";
+google_ad_width = 468;
+google_ad_height = 60;
+google_ad_format = "468x60_as";
+google_ad_type = "text_image";
+google_ad_channel = "";
+google_color_border = "336699";
+google_color_bg = "FFFFFF";
+google_color_link = "0000FF";
+google_color_text = "000000";
+google_color_url = "008000";
+//--></script>
+<script type="text/javascript"
+  src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+&nbsp;&nbsp;</span>
+</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>
+<TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%"><TR><TD COLSPAN="3" BGCOLOR="#D2D9D2" HEIGHT="6"></TD>
+</TR>
+<TR><TD VALIGN="TOP" ALIGN="CENTER"><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="160"><TR><TD ALIGN="CENTER"><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%" BGCOLOR="#FFFFFF" style="border-style: solid; border-width: 1px; border-color: #6E89AE;padding: 0px"><TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px;"><A HREF="www$uppweb$overview$en-us.html" CLASS="l1">Overview</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$examples$en-us.html" CLASS="l1">Examples</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$ss$en-us.html" CLASS="l1">Screenshots</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$comparison$en-us.html" CLASS="l1">Comparisons</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$apps$en-us.html" CLASS="l1">Applications</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$download$en-us.html" CLASS="l1">Download</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$documentation$en-us.html" CLASS="l1">Documentation</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$Tutorials$en-us.html" CLASS="l1">Tutorials</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="app$ide$UppHub$en-us.html" CLASS="l1">UppHub</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$Roadmap$en-us.html" CLASS="l1">Status & Roadmap</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$FAQ$en-us.html" CLASS="l1">FAQ</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="app$ide$About$en-us.html" CLASS="l1">Authors & License</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="https://www.ultimatepp.org/forums" CLASS="l1">Forums</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$Funding$en-us.html" CLASS="l1">Funding U++</A>
+</TD>
+</TR>
+</TABLE>
+<TABLE BORDER="0" WIDTH="100%"><TR><TD></TD>
+</TR>
+</TABLE>
+<TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%" BGCOLOR="#FFFFFF" style="border-style: solid; border-width: 1px; border-color: #6E89AE;padding: 0px"><TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('3i.png'); border: 0px solid black;padding-left:12px; padding-right:0px; padding-top:1px; padding-bottom:1px;color:#FFFFFF;"><B><span style="font-size: 8pt; font-family: sans-serif;">Search on this site</span>
+</B>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:6px; padding-right:0px; padding-top:4px; padding-bottom:4px;border-top: 1px solid #6E89AE;"><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%"><TR><TD><IMG SRC="4i.png" ALT="" BORDER="0"></TD>
+<TD><FORM ACTION="https://www.google.com/search" METHOD="GET" STYLE="margin:0px;padding:0px;"><INPUT TYPE="HIDDEN" NAME="ie" VALUE="UTF-8"><INPUT TYPE="HIDDEN" NAME="oe" VALUE="UTF-8"><INPUT TYPE="TEXT" NAME="q" SIZE="15" MAXLENGTH="256" placeholder="Site search"><INPUT TYPE="HIDDEN" NAME="sitesearch" VALUE="ultimatepp.org"></FORM>
+</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>
+<TABLE BORDER="0" WIDTH="100%"><TR><TD></TD>
+</TR>
+</TABLE>
+<br><div id="fb-root"></div>
+<script type="text/javascript">(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) {return;}
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+<div class="fb-like" data-href="https://www.facebook.com/pages/Upp-Framework/262346610476027?sk=wall" data-send="false" data-layout="button_count" data-width="160" data-show-faces="false" data-font="arial"></div>
+<br><br><script type="text/javascript"><!--
+google_ad_client = "pub-1082147624384270";
+google_ad_width = 160;
+google_ad_height = 600;
+google_ad_format = "160x600_as";
+google_ad_type = "text_image";
+google_ad_channel = "";
+google_color_border = "336699";
+google_color_bg = "FFFFFF";
+google_color_link = "0000FF";
+google_color_text = "000000";
+google_color_url = "008000";
+//--></script>
+<script type="text/javascript"
+  src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script><br><br><script type="text/javascript"><!--
+google_ad_client = "pub-1082147624384270";
+google_ad_width = 160;
+google_ad_height = 90;
+google_ad_format = "160x90_0ads_al_s";
+google_ad_channel = "";
+google_color_border = "336699";
+google_color_bg = "FFFFFF";
+google_color_link = "0000FF";
+google_color_text = "000000";
+google_color_url = "008000";
+//--></script>
+<script type="text/javascript"
+  src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+<br><br><br><br><br><br><A HREF="https://sourceforge.net/projects/upp/"><IMG SRC="https://sourceforge.net/sflogo.php?group_id=93970&amp;type=2" ALT="SourceForge.net Logo" BORDER="0" WIDTH="125" HEIGHT="37"></A>
+<br><br><A HREF="https://flathub.org/en/apps/org.ultimatepp.TheIDE"><IMG SRC="5i.png" ALT="SourceForge.net Logo" BORDER="0" WIDTH="125" HEIGHT="37"></A>
+<br><br><div style="background-color:#ffffff;width:125;height:35"><A HREF="https://github.com/ultimatepp"><IMG SRC="6i.png" ALT="GitHub Logo" BORDER="0" WIDTH="125" HEIGHT="35"></A>
+</div><br><div style="background-color:#ffffff;width:125;height:35"><div style="height:5"></div><A HREF="https://discord.gg/8XzqQzXZzb"><IMG SRC="https://assets-global.website-files.com/6257adef93867e50d84d30e2/636e0b5061df29d55a92d945_full_logo_blurple_RGB.svg" ALT="Discord Logo" BORDER="0" WIDTH="125" HEIGHT="25"></A>
+</div><br></TD>
+</TR>
+</TABLE>
+</TD>
+<TD VALIGN="TOP" BGCOLOR="#D2D9D2"><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="6"><TR><TD></TD>
+</TR>
+</TABLE>
+</TD>
+<TD VALIGN="TOP" WIDTH="100%" BGCOLOR="#D2D9D2"><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" BGCOLOR="#FFFFFF" WIDTH="100%" style="border-style: solid; border-width: 1px; border-color: #6E89AE;padding: 10px;;"><TR><TD><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%"><TR><TD><p class="C">Draw tutorial</p>
+<hr><p class="D">Table of contents</p>
+<p class="A">&nbsp;</p>
+<p class="A"><a href="srcdoc$Draw$DrawTutorial$en-us.html#1">1. Basic drawing operations</a></p>
+<p class="A"><a href="srcdoc$Draw$DrawTutorial$en-us.html#2">2. Offsets and clipping</a></p>
+<p class="A"><a href="srcdoc$Draw$DrawTutorial$en-us.html#3">3. Fonts and font metrics</a></p>
+<p class="A"><a href="srcdoc$Draw$DrawTutorial$en-us.html#4">4. DrawingDraw</a></p>
+<p class="A"><a href="srcdoc$Draw$DrawTutorial$en-us.html#5">5. ImageDraw</a></p>
+<p class="A"><a href="srcdoc$Draw$DrawTutorial$en-us.html#6">6. Printing</a></p>
+<p class="A">&nbsp;</p>
+<hr><p id="1" class="D">1. Basic drawing operations</p>
+<p class="E">Draw class is base class representing graphical output. It is intentionally designed with quite limited set of easy to use drawing primitives. Unlike most of other similar classes in competing toolkits, U++ drawing operations are <span class="F">stateless</span> - there is no separate setup of e.g. line width, pen color etc, all necessary painting attributes are parameters of respective methods.</p>
+<p class="E">&nbsp;</p>
+<p class="G"><span class="H">#include</span><span class="I"> </span>&lt;<span class="I">CtrlLib</span>/<span class="I">CtrlLib</span>.<span class="I">h</span>&gt;</p>
+<p class="J">&nbsp;</p>
+<p class="J"><span class="K">using</span> <span class="K">namespace</span> Upp;</p>
+<p class="J">&nbsp;</p>
+<p class="J"><span class="K">struct</span> MyApp <span class="L">:</span> TopWindow {</p>
+<p class="J"> &nbsp;&nbsp;&nbsp;<span class="K">void</span> Paint(Draw<span class="L">&amp;</span> w) <span class="K">override</span> {</p>
+<p class="J"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;w<span class="L">.</span><span class="M"><u>DrawRect</u></span>(GetSize(), White());</p>
+<p class="J">&nbsp;</p>
+<p class="J"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;w<span class="L">.</span><span class="M"><u>DrawRect</u></span>(<span class="N">10</span>, <span class="N">10</span>, <span class="N">60</span>, <span class="N">80</span>, Green());</p>
+<p class="J">&nbsp;</p>
+<p class="J"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;w<span class="L">.</span><span class="M"><u>DrawLine</u></span>(<span class="N">100</span>, <span class="N">10</span>, <span class="N">160</span>, <span class="N">80</span>, <span class="N">0</span>, Black());</p>
+<p class="J"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;w<span class="L">.</span><span class="M"><u>DrawLine</u></span>(<span class="N">160</span>, <span class="N">10</span>, <span class="N">100</span>, <span class="N">80</span>, <span class="N">4</span>, Red());</p>
+<p class="J"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;w<span class="L">.</span><span class="M"><u>DrawLine</u></span>(<span class="N">160</span>, <span class="N">40</span>, <span class="N">100</span>, <span class="N">50</span>, PEN_DOT, Red());</p>
+<p class="J">&nbsp;</p>
+<p class="J"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;w<span class="L">.</span><span class="M"><u>DrawEllipse</u></span>(<span class="N">210</span>, <span class="N">20</span>, <span class="N">80</span>, <span class="N">60</span>, Blue());</p>
+<p class="J">&nbsp;</p>
+<p class="J"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;w<span class="L">.</span><span class="M"><u>DrawEllipse</u></span>(<span class="N">310</span>, <span class="N">20</span>, <span class="N">80</span>, <span class="N">60</span>, LtBlue(), <span class="N">5</span>, Red());</p>
+<p class="J">&nbsp;</p>
+<p class="J"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;w<span class="L">.</span><span class="M"><u>DrawArc</u></span>(RectC(<span class="N">410</span>, <span class="N">20</span>, <span class="N">80</span>, <span class="N">60</span>), Point(<span class="N">10</span>, <span class="N">10</span>), Point(<span class="N">450</span>, <span class="N">80</span>), <span class="N">3</span>, Cyan);</p>
+<p class="J">&nbsp;</p>
+<p class="J"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Vector<span class="L">&lt;</span>Point<span class="L">&gt;</span> p;</p>
+<p class="J"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;p <span class="L">&lt;&lt;</span> Point(<span class="N">30</span>, <span class="N">110</span>) <span class="L">&lt;&lt;</span> Point(<span class="N">60</span>, <span class="N">180</span>) <span class="L">&lt;&lt;</span> Point(<span class="N">10</span>, <span class="N">150</span>) <span class="L">&lt;&lt;</span> Point(<span class="N">70</span>, <span class="N">150</span>);</p>
+<p class="J"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;w<span class="L">.</span><span class="M"><u>DrawPolyline</u></span>(p, <span class="N">4</span>, Black);</p>
+<p class="J">&nbsp;</p>
+<p class="J"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;p<span class="L">.</span>Clear();</p>
+<p class="J"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;p <span class="L">&lt;&lt;</span> Point(<span class="N">130</span>, <span class="N">110</span>) <span class="L">&lt;&lt;</span> Point(<span class="N">160</span>, <span class="N">180</span>) <span class="L">&lt;&lt;</span> Point(<span class="N">110</span>, <span class="N">150</span>) <span class="L">&lt;&lt;</span> Point(<span class="N">170</span>, <span class="N">120</span>)</p>
+<p class="J"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="L">&lt;&lt;</span> Point(<span class="N">130</span>, <span class="N">110</span>);</p>
+<p class="J"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;w<span class="L">.</span><span class="M"><u>DrawPolygon</u></span>(p, Blue);</p>
+<p class="J">&nbsp;</p>
+<p class="J"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;p<span class="L">.</span>Clear();</p>
+<p class="J"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;p <span class="L">&lt;&lt;</span> Point(<span class="N">230</span>, <span class="N">110</span>) <span class="L">&lt;&lt;</span> Point(<span class="N">260</span>, <span class="N">180</span>) <span class="L">&lt;&lt;</span> Point(<span class="N">210</span>, <span class="N">150</span>) <span class="L">&lt;&lt;</span> Point(<span class="N">270</span>, <span class="N">120</span>)</p>
+<p class="J"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="L">&lt;&lt;</span> Point(<span class="N">230</span>, <span class="N">110</span>);</p>
+<p class="J"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;w<span class="L">.</span><span class="M"><u>DrawPolygon</u></span>(p, Cyan, <span class="N">5</span>, Magenta);</p>
+<p class="J">&nbsp;</p>
+<p class="J"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;p<span class="L">.</span>Clear();</p>
+<p class="J"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;p <span class="L">&lt;&lt;</span> Point(<span class="N">330</span>, <span class="N">110</span>) <span class="L">&lt;&lt;</span> Point(<span class="N">360</span>, <span class="N">180</span>) <span class="L">&lt;&lt;</span> Point(<span class="N">310</span>, <span class="N">150</span>) <span class="L">&lt;&lt;</span> Point(<span class="N">370</span>, <span class="N">120</span>)</p>
+<p class="J"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="L">&lt;&lt;</span> Point(<span class="N">330</span>, <span class="N">110</span>);</p>
+<p class="J"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;w<span class="L">.</span><span class="M"><u>DrawPolygon</u></span>(p, Cyan, <span class="N">5</span>, Magenta, I64(<span class="O">0xaa55aa55aa55aa55</span>));</p>
+<p class="J">&nbsp;</p>
+<p class="J"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;w<span class="L">.</span><span class="M"><u>DrawImage</u></span>(<span class="N">40</span>, <span class="N">240</span>, CtrlImg<span class="L">::</span>save());</p>
+<p class="J"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;w<span class="L">.</span><span class="M"><u>DrawImage</u></span>(<span class="N">110</span>, <span class="N">210</span>, <span class="N">80</span>, <span class="N">80</span>, CtrlImg<span class="L">::</span>save());</p>
+<p class="J"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;w<span class="L">.</span><span class="M"><u>DrawImage</u></span>(<span class="N">240</span>, <span class="N">240</span>, CtrlImg<span class="L">::</span>save(), Blue);</p>
+<p class="J"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;w<span class="L">.</span><span class="M"><u>DrawImage</u></span>(<span class="N">310</span>, <span class="N">210</span>, <span class="N">80</span>, <span class="N">80</span>, CtrlImg<span class="L">::</span>save(), Blue);</p>
+<p class="J">&nbsp;</p>
+<p class="J"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;w<span class="L">.</span><span class="M"><u>DrawText</u></span>(<span class="N">20</span>, <span class="N">330</span>, <span class="N">&quot;Hello world!&quot;</span>);</p>
+<p class="J"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;w<span class="L">.</span><span class="M"><u>DrawText</u></span>(<span class="N">120</span>, <span class="N">330</span>, <span class="N">&quot;Hello world!&quot;</span>, Arial(<span class="N">15</span>)<span class="L">.</span>Bold());</p>
+<p class="J"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;w<span class="L">.</span><span class="M"><u>DrawText</u></span>(<span class="N">220</span>, <span class="N">330</span>, <span class="N">&quot;Hello world!&quot;</span>, Roman(<span class="N">15</span>)<span class="L">.</span>Italic(), Red);</p>
+<p class="J"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;w<span class="L">.</span><span class="M"><u>DrawText</u></span>(<span class="N">320</span>, <span class="N">380</span>, <span class="N">400</span>, <span class="N">&quot;Hello world!&quot;</span>, Courier(<span class="N">15</span>)<span class="L">.</span>Underline());</p>
+<p class="J"> &nbsp;&nbsp;&nbsp;}</p>
+<p class="J">};</p>
+<p class="J">&nbsp;</p>
+<p class="J">GUI_APP_MAIN</p>
+<p class="J">{</p>
+<p class="J"> &nbsp;&nbsp;&nbsp;MyApp()<span class="L">.</span>Sizeable()<span class="L">.</span>Run();</p>
+<p class="P">}</p>
+<p class="E">&nbsp;</p>
+<p class="Q"><a href="srcdoc$Draw$DrawTutorial$en-us.html_0.png"><img src="srcdoc$Draw$DrawTutorial$en-us.html_0.png" border="0" alt="" style="width: 484px; height: 463px"></a></p>
+<p class="E">&nbsp;</p>
+<p class="E">The examples shows the full range of drawing operations in action.</p>
+<p class="E">&nbsp;</p>
+<hr><p id="2" class="D">2. Offsets and clipping</p>
+<p class="E">You can offset the drawing position and clip the drawing operations to specified rectangle. Offsetting and clipping in U++ is stack based operation - <span class="F">End</span> method restores the previous state. Particularly important is combined offset/clip operation <span class="F">Clipoff</span> that in fact creates a new Draw for subregion of current Draw area.</p>
+<p class="E">&nbsp;</p>
+<p class="G"><span class="H">#include</span><span class="I"> </span>&lt;<span class="I">CtrlLib</span>/<span class="I">CtrlLib</span>.<span class="I">h</span>&gt;</p>
+<p class="J">&nbsp;</p>
+<p class="J"><span class="K">using</span> <span class="K">namespace</span> Upp;</p>
+<p class="J">&nbsp;</p>
+<p class="J"><span class="K">struct</span> MyApp <span class="L">:</span> TopWindow {</p>
+<p class="J"> &nbsp;&nbsp;&nbsp;<span class="K">void</span> DoPainting(Draw<span class="L">&amp;</span> w) {</p>
+<p class="J"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;w<span class="L">.</span>DrawEllipse(<span class="N">0</span>, <span class="N">0</span>, <span class="N">100</span>, <span class="N">30</span>, WhiteGray(), <span class="N">1</span>, Cyan);</p>
+<p class="J"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;w<span class="L">.</span>DrawText(<span class="N">0</span>, <span class="N">0</span>, <span class="N">&quot;Hello world&quot;</span>, Roman(<span class="N">30</span>)<span class="L">.</span>Bold());</p>
+<p class="J"> &nbsp;&nbsp;&nbsp;}</p>
+<p class="J"> &nbsp;&nbsp;&nbsp;</p>
+<p class="J"> &nbsp;&nbsp;&nbsp;<span class="K">void</span> Paint(Draw<span class="L">&amp;</span> w) <span class="K">override</span> {</p>
+<p class="J"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;w<span class="L">.</span>DrawRect(GetSize(), White());</p>
+<p class="J"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;DoPainting(w);</p>
+<p class="J"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;w<span class="L">.</span><span class="M"><u>Offset</u></span>(<span class="N">30</span>, <span class="N">50</span>);</p>
+<p class="J"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;DoPainting(w);</p>
+<p class="J"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;w<span class="L">.</span><span class="M"><u>End</u></span>();</p>
+<p class="J"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;w<span class="L">.</span><span class="M"><u>Offset</u></span>(<span class="N">20</span>, <span class="N">100</span>);</p>
+<p class="J"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;w<span class="L">.</span><span class="M"><u>Clip</u></span>(<span class="N">5</span>, <span class="N">5</span>, <span class="N">40</span>, <span class="N">20</span>);</p>
+<p class="J"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;DoPainting(w);</p>
+<p class="J"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;w<span class="L">.</span><span class="M"><u>End</u></span>();</p>
+<p class="J"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;w<span class="L">.</span><span class="M"><u>End</u></span>();</p>
+<p class="J"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;w<span class="L">.</span><span class="M"><u>Clipoff</u></span>(<span class="N">10</span>, <span class="N">150</span>, <span class="N">60</span>, <span class="N">20</span>);</p>
+<p class="J"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;DoPainting(w);</p>
+<p class="J"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;w<span class="L">.</span><span class="M"><u>End</u></span>();</p>
+<p class="J"> &nbsp;&nbsp;&nbsp;}</p>
+<p class="J">};</p>
+<p class="J">&nbsp;</p>
+<p class="J">GUI_APP_MAIN</p>
+<p class="J">{</p>
+<p class="J"> &nbsp;&nbsp;&nbsp;MyApp()<span class="L">.</span>Sizeable()<span class="L">.</span>Run();</p>
+<p class="J">}</p>
+<p class="E">&nbsp;</p>
+<p class="Q"><a href="srcdoc$Draw$DrawTutorial$en-us.html_1.png"><img src="srcdoc$Draw$DrawTutorial$en-us.html_1.png" border="0" alt="" style="width: 206px; height: 228px"></a></p>
+<p class="E">&nbsp;</p>
+<hr><p id="3" class="D">3. Fonts and font metrics</p>
+<p class="E"><span class="M">Font</span> is a simple font description value type - it contains an index of typeface, height of font and additional attributes (e.g. italic flag). Font also provides metrics information about the font and individual characters.</p>
+<p class="E">The most important information of Font is the <span class="M">GetAscent</span> value - distance from the baseline to the top of character, the <span class="M">GetDescent</span> value - distance from the baseline to the bottom of character cell (height of character cell - <span class="M">GetHeight</span> - is simply the sum of both values) and the individual character width that can be obtained by Font's <span class="M">operator[]</span> (where index is in UNICODE).</p>
+<p class="E">To get the list all available typefaces and respective use <span class="M">GetFaceCount</span> and <span class="M">GetFaceName</span> static methods of Font.</p>
+<p class="E">Position given in <span class="M">DrawText</span> specifies the top-left corner of the first letter of text.</p>
+<p class="E">Different than default character spacing can be specified by the C array with integer widths of characters.</p>
+<p class="E">&nbsp;</p>
+<p class="G"><span class="H">#include</span><span class="I"> </span>&lt;<span class="I">CtrlLib</span>/<span class="I">CtrlLib</span>.<span class="I">h</span>&gt;</p>
+<p class="J">&nbsp;</p>
+<p class="J"><span class="K">using</span> <span class="K">namespace</span> Upp;</p>
+<p class="J">&nbsp;</p>
+<p class="J"><span class="K">struct</span> MyApp <span class="L">:</span> TopWindow {</p>
+<p class="J"> &nbsp;&nbsp;&nbsp;DropList font_list;</p>
+<p class="J">&nbsp;</p>
+<p class="J"> &nbsp;&nbsp;&nbsp;<span class="K">void</span> Paint(Draw<span class="L">&amp;</span> w) <span class="K">override</span> {</p>
+<p class="J"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="K">const</span> String text <span class="L">=</span> <span class="N">&quot;Programming is fun&quot;</span>;</p>
+<p class="J"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Font fnt(<span class="L">~</span>font_list, <span class="N">60</span>);</p>
+<p class="J"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+<p class="J"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;w<span class="L">.</span>DrawRect(GetSize(), White);</p>
+<p class="J"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;w<span class="L">.</span>Offset(<span class="N">50</span>, <span class="N">50</span>);</p>
+<p class="J"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="K">int</span> x <span class="L">=</span> <span class="N">0</span>;</p>
+<p class="J"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Vector<span class="L">&lt;</span><span class="K">int</span><span class="L">&gt;</span> dx;</p>
+<p class="J"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="K">for</span>(<span class="K">char</span> letter <span class="L">:</span> text) {</p>
+<p class="J"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="K">int</span> width <span class="L">=</span> fnt<span class="L">[</span>letter<span class="L">]</span>;</p>
+<p class="J"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;w<span class="L">.</span>DrawRect(x, <span class="N">0</span>, width <span class="L">-</span> <span class="N">1</span>, fnt<span class="L">.</span>GetAscent(), Color(<span class="N">255</span>, <span class="N">255</span>, <span class="N">200</span>));</p>
+<p class="J"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;w<span class="L">.</span>DrawRect(x, fnt<span class="L">.</span>GetAscent(), width <span class="L">-</span> <span class="N">1</span>, fnt<span class="L">.</span>GetDescent(), Color(<span class="N">255</span>, <span class="N">200</span>, <span class="N">255</span>));</p>
+<p class="J"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;w<span class="L">.</span>DrawRect(x <span class="L">+</span> width <span class="L">-</span> <span class="N">1</span>, <span class="N">0</span>, <span class="N">1</span>, fnt<span class="L">.</span>GetHeight(), Black());</p>
+<p class="J"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;dx<span class="L">.</span>Add(width <span class="L">+</span> <span class="N">4</span>);</p>
+<p class="J"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;x <span class="L">+=</span> width;</p>
+<p class="J"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</p>
+<p class="J"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;w<span class="L">.</span>DrawRect(<span class="N">0</span>, <span class="N">0</span>, <span class="N">4</span>, <span class="N">4</span>, Black());</p>
+<p class="J"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;w<span class="L">.</span>DrawText(<span class="N">0</span>, <span class="N">0</span>, text, fnt);</p>
+<p class="J"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;w<span class="L">.</span>DrawText(<span class="N">0</span>, <span class="N">70</span>, text, fnt, Blue(), dx<span class="L">.</span>GetCount(), dx<span class="L">.</span>Begin());</p>
+<p class="J"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;w<span class="L">.</span>End();</p>
+<p class="J"> &nbsp;&nbsp;&nbsp;}</p>
+<p class="J">&nbsp;</p>
+<p class="J"> &nbsp;&nbsp;&nbsp;<span class="K">void</span> NewFont() {</p>
+<p class="J"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Refresh();</p>
+<p class="J"> &nbsp;&nbsp;&nbsp;}</p>
+<p class="J">&nbsp;</p>
+<p class="J"> &nbsp;&nbsp;&nbsp;MyApp() {</p>
+<p class="J"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="K">for</span>(<span class="K">int</span> i <span class="L">=</span> <span class="N">0</span>; i <span class="L">&lt;</span> <span class="M"><u>Font</u></span><span class="K"><u>::</u></span><span class="M"><u>GetFaceCount()</u></span>; i<span class="L">++</span>)</p>
+<p class="J"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;font_list<span class="L">.</span>Add(i, <span class="M"><u>Font</u></span><span class="K"><u>::</u></span><span class="M"><u>GetFaceName(i)</u></span>);</p>
+<p class="J"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Add(font_list<span class="L">.</span>TopPos(<span class="N">0</span>, MINSIZE)<span class="L">.</span>LeftPosZ(<span class="N">0</span>, <span class="N">200</span>));</p>
+<p class="J"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;font_list <span class="L">&lt;&lt;=</span> <span class="N">0</span>;</p>
+<p class="J"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;font_list <span class="L">&lt;&lt;</span> <span class="L">[=]</span> { NewFont(); };</p>
+<p class="J"> &nbsp;&nbsp;&nbsp;}</p>
+<p class="J">};</p>
+<p class="J">&nbsp;</p>
+<p class="J">GUI_APP_MAIN</p>
+<p class="J">{</p>
+<p class="J"> &nbsp;&nbsp;&nbsp;MyApp()<span class="L">.</span>Sizeable()<span class="L">.</span>Run();</p>
+<p class="J">}</p>
+<p class="A">&nbsp;</p>
+<p class="E">In this lesson we used <span class="M">operator~</span> to obtain current value stored by <span class="M">font_list</span>. Alternatively, the GetData() function can be used for more verbosity. More information about this topic can be found in <a href="srcdoc$CtrlLib$Tutorial_en-us.html#17"><span class="M">Value of widget</span></a> section of GUI Tutorial.</p>
+<p class="E">The final results of program operation is shown below:</p>
+<p class="A">&nbsp;</p>
+<p class="Q"><a href="srcdoc$Draw$DrawTutorial$en-us.html_2.png"><img src="srcdoc$Draw$DrawTutorial$en-us.html_2.png" border="0" alt="" style="width: 420px; height: 145px"></a></p>
+<p class="E">&nbsp;</p>
+<hr><p id="4" class="D">4. DrawingDraw</p>
+<p class="E"><span class="M">Drawing</span> object contains a set of drawing operations and in fact represents a vector image with smooth rescaling. <span class="M">DrawingDraw</span> serves as the target Draw when creating Drawing, Drawing can be painted to any Draw target using the <span class="M">DrawDrawing</span> method:</p>
+<p class="E">&nbsp;</p>
+<p class="G"><span class="H">#include</span><span class="I"> </span>&lt;<span class="I">CtrlLib</span>/<span class="I">CtrlLib</span>.<span class="I">h</span>&gt;</p>
+<p class="J">&nbsp;</p>
+<p class="J"><span class="K">using</span> <span class="K">namespace</span> Upp;</p>
+<p class="J">&nbsp;</p>
+<p class="J"><span class="K">struct</span> MyApp <span class="L">:</span> TopWindow {</p>
+<p class="J"> &nbsp;&nbsp;&nbsp;Drawing drawing;</p>
+<p class="J">&nbsp;</p>
+<p class="J"> &nbsp;&nbsp;&nbsp;<span class="K">void</span> Paint(Draw<span class="L">&amp;</span> w) <span class="K">override</span> {</p>
+<p class="J"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;w<span class="L">.</span>DrawRect(GetSize(), White());</p>
+<p class="J"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;w<span class="L">.</span><span class="M"><u>DrawDrawing</u></span>(<span class="N">10</span>, <span class="N">10</span>, <span class="N">50</span>, <span class="N">60</span>, drawing);</p>
+<p class="J"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;w<span class="L">.</span><span class="M"><u>DrawDrawing</u></span>(<span class="N">100</span>, <span class="N">10</span>, <span class="N">150</span>, <span class="N">100</span>, drawing);</p>
+<p class="J"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;w<span class="L">.</span><span class="M"><u>DrawDrawing</u></span>(<span class="N">10</span>, <span class="N">110</span>, <span class="N">300</span>, <span class="N">300</span>, drawing);</p>
+<p class="J"> &nbsp;&nbsp;&nbsp;}</p>
+<p class="J">&nbsp;</p>
+<p class="J"> &nbsp;&nbsp;&nbsp;MyApp() {</p>
+<p class="J"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="M"><u>DrawingDraw</u></span> iw(<span class="N">200</span>, <span class="N">200</span>);</p>
+<p class="J"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;iw<span class="L">.</span>DrawEllipse(<span class="N">10</span>, <span class="N">10</span>, <span class="N">180</span>, <span class="N">100</span>, Cyan());</p>
+<p class="J"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;iw<span class="L">.</span>DrawImage(<span class="N">100</span>, <span class="N">100</span>, CtrlImg<span class="L">::</span>exclamation());</p>
+<p class="J"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;iw<span class="L">.</span>DrawRect(<span class="N">20</span>, <span class="N">100</span>, <span class="N">30</span>, <span class="N">30</span>, Blue);</p>
+<p class="J"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="M"><u>drawing </u></span><span class="K"><u>=</u></span><span class="M"><u> iw</u></span>;</p>
+<p class="J"> &nbsp;&nbsp;&nbsp;}</p>
+<p class="J">};</p>
+<p class="J">&nbsp;</p>
+<p class="J">GUI_APP_MAIN</p>
+<p class="J">{</p>
+<p class="J"> &nbsp;&nbsp;&nbsp;MyApp()<span class="L">.</span>Sizeable()<span class="L">.</span>Run();</p>
+<p class="J">}</p>
+<p class="E">&nbsp;</p>
+<p class="Q"><a href="srcdoc$Draw$DrawTutorial$en-us.html_3.png"><img src="srcdoc$Draw$DrawTutorial$en-us.html_3.png" border="0" alt="" style="width: 324px; height: 374px"></a></p>
+<p class="E">&nbsp;</p>
+<hr><p id="5" class="D">5. ImageDraw</p>
+<p class="E"><span class="M">ImageDraw</span> provides a Draw target that creates an Image object. To define the alpha component, use Draw target returned by <span class="M">Alpha</span> method and <span class="M">GrayColor</span> to define the value (if you never use Alpha, it is considered to be 255 for the whole Image, otherwise it is set to 0 when Alpha is called for the first time).</p>
+<p class="E">&nbsp;</p>
+<p class="G"><span class="H">#include</span><span class="I"> </span>&lt;<span class="I">CtrlLib</span>/<span class="I">CtrlLib</span>.<span class="I">h</span>&gt;</p>
+<p class="J">&nbsp;</p>
+<p class="J"><span class="K">using</span> <span class="K">namespace</span> Upp;</p>
+<p class="J">&nbsp;</p>
+<p class="J"><span class="K">struct</span> MyApp <span class="L">:</span> TopWindow {</p>
+<p class="J"> &nbsp;&nbsp;&nbsp;Image image;</p>
+<p class="J">&nbsp;</p>
+<p class="J"> &nbsp;&nbsp;&nbsp;<span class="K">void</span> Paint(Draw<span class="L">&amp;</span> w) <span class="K">override</span> {</p>
+<p class="J"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;w<span class="L">.</span>DrawRect(GetSize(), Cyan());</p>
+<p class="J"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;w<span class="L">.</span>DrawImage(<span class="N">10</span>, <span class="N">10</span>, image);</p>
+<p class="J"> &nbsp;&nbsp;&nbsp;}</p>
+<p class="J">&nbsp;</p>
+<p class="J"> &nbsp;&nbsp;&nbsp;MyApp() {</p>
+<p class="J"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="M"><u>ImageDraw</u></span> iw(<span class="N">100</span>, <span class="N">40</span>);</p>
+<p class="J"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;iw<span class="L">.</span><span class="M"><u>Alpha</u></span>()<span class="L">.</span>DrawRect(<span class="N">0</span>, <span class="N">0</span>, <span class="N">100</span>, <span class="N">40</span>, GrayColor(<span class="N">0</span>));</p>
+<p class="J"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;iw<span class="L">.</span><span class="M"><u>Alpha</u></span>()<span class="L">.</span>DrawEllipse(<span class="N">0</span>, <span class="N">0</span>, <span class="N">100</span>, <span class="N">40</span>, GrayColor(<span class="N">255</span>));</p>
+<p class="J"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;iw<span class="L">.</span>DrawEllipse(<span class="N">0</span>, <span class="N">0</span>, <span class="N">100</span>, <span class="N">40</span>, Yellow());</p>
+<p class="J"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;iw<span class="L">.</span>DrawText(<span class="N">26</span>, <span class="N">10</span>, <span class="N">&quot;Image&quot;</span>, Arial(<span class="N">16</span>)<span class="L">.</span>Bold());</p>
+<p class="J"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="M"><u>image </u></span><span class="K"><u>=</u></span><span class="M"><u> iw</u></span>;</p>
+<p class="J"> &nbsp;&nbsp;&nbsp;}</p>
+<p class="J">};</p>
+<p class="J">&nbsp;</p>
+<p class="J">GUI_APP_MAIN</p>
+<p class="J">{</p>
+<p class="J"> &nbsp;&nbsp;&nbsp;MyApp()<span class="L">.</span>Sizeable()<span class="L">.</span>Run();</p>
+<p class="J">}</p>
+<p class="E">&nbsp;</p>
+<p class="Q"><a href="srcdoc$Draw$DrawTutorial$en-us.html_4.png"><img src="srcdoc$Draw$DrawTutorial$en-us.html_4.png" border="0" alt="" style="width: 129px; height: 99px"></a></p>
+<p class="E">&nbsp;</p>
+<hr><p id="6" class="D">6. Printing</p>
+<p class="E">Printing is quite similar to painting on the screen. To acquire Draw target for the printer, you need to use <span class="M">PrinterJob</span> (CtrlLib feature). Each page printed should be started by calling <span class="M">StartPage</span> method and ended with <span class="M">EndPage</span>. Drawing coordinates when printing are in <span class="F">dots</span>, defined as 1/600 of inch (in fact, a pixel on 600dpi printer).</p>
+<p class="E">&nbsp;</p>
+<p class="G"><span class="H">#include</span><span class="I"> </span>&lt;<span class="I">CtrlLib</span>/<span class="I">CtrlLib</span>.<span class="I">h</span>&gt;</p>
+<p class="J">&nbsp;</p>
+<p class="J"><span class="K">using</span> <span class="K">namespace</span> Upp;</p>
+<p class="J">&nbsp;</p>
+<p class="J">GUI_APP_MAIN</p>
+<p class="J">{</p>
+<p class="J"> &nbsp;&nbsp;&nbsp;<span class="M"><u>PrinterJob</u></span> pd(<span class="N">&quot;My printer job&quot;</span>);</p>
+<p class="J"> &nbsp;&nbsp;&nbsp;pd<span class="L">.</span>CurrentPage(<span class="N">0</span>);</p>
+<p class="J"> &nbsp;&nbsp;&nbsp;pd<span class="L">.</span>MinMaxPage(<span class="N">0</span>, <span class="N">1</span>);</p>
+<p class="J"> &nbsp;&nbsp;&nbsp;<span class="K">if</span>(pd<span class="L">.</span><span class="M"><u>Execute</u></span>()) {</p>
+<p class="J"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Draw<span class="L">&amp;</span> w <span class="L">=</span> pd<span class="L">.</span><span class="M"><u>GetDraw</u></span>();</p>
+<p class="J"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;w<span class="L">.</span><span class="M"><u>StartPage</u></span>();</p>
+<p class="J"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;w<span class="L">.</span>DrawText(<span class="N">200</span>, <span class="N">1200</span>, <span class="N">&quot;Helo world!&quot;</span>, Arial(<span class="N">600</span>));</p>
+<p class="J"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;w<span class="L">.</span><span class="M"><u>EndPage</u></span>();</p>
+<p class="J"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;w<span class="L">.</span><span class="M"><u>StartPage</u></span>();</p>
+<p class="J"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;w<span class="L">.</span>DrawText(<span class="N">200</span>, <span class="N">1200</span>, <span class="N">&quot;Second page&quot;</span>, Roman(<span class="N">600</span>));</p>
+<p class="J"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;w<span class="L">.</span><span class="M"><u>EndPage</u></span>();</p>
+<p class="J"> &nbsp;&nbsp;&nbsp;}</p>
+<p class="J">}</p>
+<p class="E">&nbsp;</p>
+<hr><p class="D">Recommended tutorials:</p>
+<p class="E">If you want to learn more, we have several tutorials that you can find useful:</p>
+<p class="R"><a href="srcdoc$Draw$ImgTutorial$en-us.html">Image tutorial</a> - here we move things related to images. We show how to create, use and embed icons directly in application.</p>
+</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>
+<TABLE BORDER="0" WIDTH="100%"><TR><TD></TD>
+</TR>
+</TABLE>
+<TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" BGCOLOR="#FFFFFF" WIDTH="100%" style="border-style: solid; border-width: 1px; border-color: #6E89AE;padding: 10px;;"><TR><TD><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%"><TR><TD><p class="A"><span class="B"> </span><a href="www$uppweb$contribweb$en-us.html">Do you want to contribute?</a></p>
+</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>
+<script type="text/javascript">var a={'srcdoc$Draw$DrawTutorial$en-us.html':'English'};var p=window.location.pathname.split("/");p=p[p.length-1];var s='<select id="lang" onchange="window.location=document.getElementById(\'lang\').value;">';for(l in a){if(p==l){d=" selected=1"}else{d=""}s+='<option value="'+l+'"'+d+'>'+a[l]+'</option>'}s+='</select>';var d=document.createElement('div');d.innerHTML=s;var c=document.getElementById('langs');c.replaceChild(d,c.firstChild);document.getElementById('langbox').style.display='block';</script></BODY>

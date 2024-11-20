@@ -1,0 +1,817 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en-us">
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
+<META NAME="Generator" CONTENT="U++ HTML Package">
+<TITLE>TopWindow :: U++</TITLE>
+<STYLE TYPE="text/css"><!--
+.A{margin:0px 0px 0px 0px;text-indent:0px;text-align:left;color:#000000;font-family:sans-serif;font-size:10pt;font-weight:normal;font-style:normal;}
+.B{font-size:12pt;}
+.C{border-collapse:collapse;table-layout:auto;border: 2px solid #000000;}
+.D{padding: 5px 5px 5px 5px;border-left: 1px solid #000000;border-top: 1px solid #000000;border-right: 1px solid #000000;border-bottom: 1px solid #000000;background-color:#800000;vertical-align:middle;}
+.E{margin:0px 0px 0px 0px;text-indent:0px;text-align:left;color:#e5e5e5;font-family:sans-serif;font-size:16pt;font-weight:bold;font-style:normal;}
+.F{margin:0px 0px 0px 0px;text-indent:0px;text-align:left;color:#000000;font-family:sans-serif;font-size:6pt;font-weight:normal;font-style:normal;}
+.G{margin:0px 0px 5px 0px;text-indent:0px;text-align:left;color:#800000;font-family:sans-serif;font-size:12pt;font-weight:bold;font-style:normal;}
+.H{color:#0000ff;font-weight:normal;}
+.I{color:#000000;font-weight:normal;}
+.J{color:#000000;}
+.K{margin:8px 0px 0px 0px;text-indent:0px;text-align:left;color:#000000;font-family:sans-serif;font-size:10pt;font-weight:normal;font-style:normal;}
+.L{font-style:italic;}
+.M{border-collapse:collapse;table-layout:auto;border: 2px solid #808080;}
+.N{padding: 3px 5px 3px 5px;border-left: 1px solid #808080;border-top: 1px solid #808080;border-right: 1px solid #808080;border-bottom: 1px solid #808080;background-color:#C0C0C0;vertical-align:middle;}
+.O{margin:0px 0px 0px 0px;text-indent:0px;text-align:left;color:#000000;font-family:sans-serif;font-size:10pt;font-weight:bold;font-style:normal;}
+.P{margin:0px 0px 5px 0px;text-indent:0px;text-align:left;color:#000000;font-family:sans-serif;font-size:10pt;font-weight:normal;font-style:normal;}
+.Q{color:#0000ff;}
+.R{font-weight:bold;}
+.S{margin:0px 0px 0px 57px;text-indent:0px;text-align:left;color:#000000;font-family:sans-serif;font-size:10pt;font-weight:normal;font-style:normal;}
+.T{margin:0px 0px 5px 0px;text-indent:0px;text-align:left;color:#000000;font-family:sans-serif;font-size:10pt;font-weight:bold;font-style:normal;}
+.U{font-weight:normal;}
+.V{color:#800000;font-weight:bold;}
+.W{color:#800000;font-family:monospace;font-weight:bold;}
+.X{font-weight:bold;font-style:italic;}
+.Y{color:#800000;}
+.Z{margin:0px 0px 0px 57px;text-indent:0px;text-align:left;color:#000080;font-family:sans-serif;font-size:8pt;font-weight:bold;font-style:normal;}
+.AA{margin:0px 0px 5px 0px;text-indent:0px;text-align:left;color:#0000ff;font-family:sans-serif;font-size:10pt;font-weight:normal;font-style:normal;}
+.AB{color:#000000;font-weight:bold;}
+a.l1         { text-decoration:none; font-size: 8pt; font-family: sans-serif; font-weight: normal; }
+a.l1:link    { color:#000000; }
+a.l1:visited { color:#000080; }
+a.l1:hover   { color:#9933CC; }
+a.l1:active  { color:#000000; }
+a.l2         { text-decoration:none; font-size: 12pt; font-family: sans-serif; font-variant: small-caps; }
+a.l2:link    { color:#0066FF; }
+a.l2:visited { color:#FF6600; }
+a.l2:hover   { color:#BC0624; }
+a.l2:active  { color:#BC0024; }
+
+-->
+</STYLE>
+<META NAME="keywords" CONTENT="framework, toolkit, widget, c++, visual, studio, dev-cpp, builder, ide, class, component,wxwidgets, qt, rapid, application, development, rad, mfc, linux, macos, gui, sdl, directx, desktop"><META name="robots" content="index,follow">
+<LINK rel="alternate" type="application/rss+xml" title="SVN changes" href="svnchanges.xml">
+<LINK rel="shortcut icon" type="image/png" href="favicon.png">
+</HEAD><BODY BGCOLOR="#D2D9D2" ALINK="#800000" LINK="#000000" VLINK="#000080"><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%"><TR><TD COLSPAN="3"><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%" BGCOLOR="#FFFFFF" style="border: 1px solid #6E89AE;padding-left: 10px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;"><TR><TD><A HREF="index.html"><IMG SRC="0i.png" ALT="" BORDER="0"></A>
+</TD>
+<TD ALIGN="RIGHT" VALIGN="BOTTOM" STYLE="padding-bottom: 5px; background-image: url('1i.png')"><span style="font-size: 14pt; font-family: sans-serif;"><script type="text/javascript"><!--
+google_ad_client = "pub-1082147624384270";
+google_ad_width = 468;
+google_ad_height = 60;
+google_ad_format = "468x60_as";
+google_ad_type = "text_image";
+google_ad_channel = "";
+google_color_border = "336699";
+google_color_bg = "FFFFFF";
+google_color_link = "0000FF";
+google_color_text = "000000";
+google_color_url = "008000";
+//--></script>
+<script type="text/javascript"
+  src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+&nbsp;&nbsp;</span>
+</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>
+<TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%"><TR><TD COLSPAN="3" BGCOLOR="#D2D9D2" HEIGHT="6"></TD>
+</TR>
+<TR><TD VALIGN="TOP" ALIGN="CENTER"><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="160"><TR><TD ALIGN="CENTER"><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%" BGCOLOR="#FFFFFF" style="border-style: solid; border-width: 1px; border-color: #6E89AE;padding: 0px"><TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px;"><A HREF="www$uppweb$overview$en-us.html" CLASS="l1">Overview</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$examples$en-us.html" CLASS="l1">Examples</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$ss$en-us.html" CLASS="l1">Screenshots</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$comparison$en-us.html" CLASS="l1">Comparisons</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$apps$en-us.html" CLASS="l1">Applications</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$download$en-us.html" CLASS="l1">Download</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$documentation$en-us.html" CLASS="l1">Documentation</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$Tutorials$en-us.html" CLASS="l1">Tutorials</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="app$ide$UppHub$en-us.html" CLASS="l1">UppHub</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$Roadmap$en-us.html" CLASS="l1">Status & Roadmap</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$FAQ$en-us.html" CLASS="l1">FAQ</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="app$ide$About$en-us.html" CLASS="l1">Authors & License</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="https://www.ultimatepp.org/forums" CLASS="l1">Forums</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$Funding$en-us.html" CLASS="l1">Funding U++</A>
+</TD>
+</TR>
+</TABLE>
+<TABLE BORDER="0" WIDTH="100%"><TR><TD></TD>
+</TR>
+</TABLE>
+<TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%" BGCOLOR="#FFFFFF" style="border-style: solid; border-width: 1px; border-color: #6E89AE;padding: 0px"><TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('3i.png'); border: 0px solid black;padding-left:12px; padding-right:0px; padding-top:1px; padding-bottom:1px;color:#FFFFFF;"><B><span style="font-size: 8pt; font-family: sans-serif;">Search on this site</span>
+</B>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:6px; padding-right:0px; padding-top:4px; padding-bottom:4px;border-top: 1px solid #6E89AE;"><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%"><TR><TD><IMG SRC="4i.png" ALT="" BORDER="0"></TD>
+<TD><FORM ACTION="https://www.google.com/search" METHOD="GET" STYLE="margin:0px;padding:0px;"><INPUT TYPE="HIDDEN" NAME="ie" VALUE="UTF-8"><INPUT TYPE="HIDDEN" NAME="oe" VALUE="UTF-8"><INPUT TYPE="TEXT" NAME="q" SIZE="15" MAXLENGTH="256" placeholder="Site search"><INPUT TYPE="HIDDEN" NAME="sitesearch" VALUE="ultimatepp.org"></FORM>
+</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>
+<TABLE BORDER="0" WIDTH="100%"><TR><TD></TD>
+</TR>
+</TABLE>
+<br><div id="fb-root"></div>
+<script type="text/javascript">(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) {return;}
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+<div class="fb-like" data-href="https://www.facebook.com/pages/Upp-Framework/262346610476027?sk=wall" data-send="false" data-layout="button_count" data-width="160" data-show-faces="false" data-font="arial"></div>
+<br><br><script type="text/javascript"><!--
+google_ad_client = "pub-1082147624384270";
+google_ad_width = 160;
+google_ad_height = 600;
+google_ad_format = "160x600_as";
+google_ad_type = "text_image";
+google_ad_channel = "";
+google_color_border = "336699";
+google_color_bg = "FFFFFF";
+google_color_link = "0000FF";
+google_color_text = "000000";
+google_color_url = "008000";
+//--></script>
+<script type="text/javascript"
+  src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script><br><br><script type="text/javascript"><!--
+google_ad_client = "pub-1082147624384270";
+google_ad_width = 160;
+google_ad_height = 90;
+google_ad_format = "160x90_0ads_al_s";
+google_ad_channel = "";
+google_color_border = "336699";
+google_color_bg = "FFFFFF";
+google_color_link = "0000FF";
+google_color_text = "000000";
+google_color_url = "008000";
+//--></script>
+<script type="text/javascript"
+  src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+<br><br><br><br><br><br><A HREF="https://sourceforge.net/projects/upp/"><IMG SRC="https://sourceforge.net/sflogo.php?group_id=93970&amp;type=2" ALT="SourceForge.net Logo" BORDER="0" WIDTH="125" HEIGHT="37"></A>
+<br><br><A HREF="https://flathub.org/en/apps/org.ultimatepp.TheIDE"><IMG SRC="5i.png" ALT="SourceForge.net Logo" BORDER="0" WIDTH="125" HEIGHT="37"></A>
+<br><br><div style="background-color:#ffffff;width:125;height:35"><A HREF="https://github.com/ultimatepp"><IMG SRC="6i.png" ALT="GitHub Logo" BORDER="0" WIDTH="125" HEIGHT="35"></A>
+</div><br><div style="background-color:#ffffff;width:125;height:35"><div style="height:5"></div><A HREF="https://discord.gg/8XzqQzXZzb"><IMG SRC="https://assets-global.website-files.com/6257adef93867e50d84d30e2/636e0b5061df29d55a92d945_full_logo_blurple_RGB.svg" ALT="Discord Logo" BORDER="0" WIDTH="125" HEIGHT="25"></A>
+</div><br></TD>
+</TR>
+</TABLE>
+</TD>
+<TD VALIGN="TOP" BGCOLOR="#D2D9D2"><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="6"><TR><TD></TD>
+</TR>
+</TABLE>
+</TD>
+<TD VALIGN="TOP" WIDTH="100%" BGCOLOR="#D2D9D2"><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" BGCOLOR="#FFFFFF" WIDTH="100%" style="border-style: solid; border-width: 1px; border-color: #6E89AE;padding: 10px;;"><TR><TD><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%"><TR><TD><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr><td width="100%"><table width="100%" class="C"><colgroup><col width="100%"></colgroup>
+<tr><td class="D"><p class="E">TopWindow</p>
+</td>
+</tr>
+</table></td>
+</tr></table>
+<p class="F">&nbsp;</p>
+<p id="TopWindow::class" class="G"><span class="H">class</span><span class="I">&nbsp;</span><span class="J">TopWindow</span><span class="I">&nbsp;:&nbsp;</span><span class="H">public</span><span class="I">&nbsp;</span>Ctrl</p>
+<p class="K">TopWindow represents top-level independent window of host OS, usually decorated with caption, close/zoom/restore buttons etc.</p>
+<p class="K">Important fact to note is that window-rectangle (as defined by Ctrl::SetRect and Ctrl::GetRect methods) does not include any host GUI specific decorations (caption, thick border for resizing), just the area that is &quot;controlled&quot; by U++.</p>
+<p class="K">When TopWindow is opened, it is by default centered w.r.t. to its owner (if there is any). This behaviour can be altered by NoCenter or CenterScreen methods.</p>
+<p class="F">&nbsp;</p>
+<p class="K"><span class="L">Derived from</span> <a href="src$CtrlCore$Ctrl$en-us.html#::Ctrl::class">Ctrl</a></p>
+<p class="F">&nbsp;</p>
+<p class="A">&nbsp;</p>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr><td width="100%"><table width="100%" class="M"><colgroup><col width="100%"></colgroup>
+<tr><td class="N"><p class="O">Public Member List</p>
+</td>
+</tr>
+</table></td>
+</tr></table>
+<p class="F">&nbsp;</p>
+<p id="TopWindow::Reject()" class="P"><span class="Q">virtual</span> <span class="Q">void</span>&nbsp;<span class="R">Reject</span>()</p>
+<p class="S">This virtual method is overloaded to perform Restore operation if there was any previous call to Backup method.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="TopWindow::Close()" class="P"><span class="Q">virtual</span> <span class="Q">void</span>&nbsp;<span class="R">Close</span>()</p>
+<p class="S">This virtual method is implemented in TopWindow so that it breaks modal loop if TopWindow runs it. If there is Breaker with IDCANCEL defined, performs RejectBreak(IDCANCEL). Otherwise, if there is Breaker with IDYES (as assigned to exit Ctrl by CtrlLayoutExit), performs AcceptBreak(IDYES). If none if that is true, AcceptBreak(IDOK) is performed.</p>
+<p class="S">If TopWindow does not run modal loop, it is closed - in this case, any state backup created by Backup method is scratched. Override in descendant class is allowed to call 'delete this' as the very last thing it does (as long as the instance is allocated on the heap).</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="TopWindow::WhenClose" class="T"><a href="Callback"><span class="U"><u>Event&lt;&gt;</u></span></a><span class="U">&nbsp;</span>WhenClose</p>
+<p class="S">This callback is by default invoked when Close button of host GUI window is pushed. Default assigned action is to perform Close virtual method. Assigned event is allowed to call 'delete this' as the very last thing it does (as long as the instance is allocated on the heap).</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="TopWindow::Backup()" class="P"><span class="Q">void</span>&nbsp;<span class="R">Backup</span>()</p>
+<p class="S">Serializes the content of all contained Ctrls (using <a href="src$CtrlCore$Ctrl$en-us.html#::Ctrl::Serialize(::Stream&)">Serialize</a> virtual method) into internal storage of TopWindow. Useful when implementing Cancel buttons.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="TopWindow::Restore()" class="P"><span class="Q">void</span>&nbsp;<span class="R">Restore</span>()</p>
+<p class="S">Restores content of all contained Ctrls from internal storage. If internal storage is empty, does nothing.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="TopWindow::Break(int)" class="P"><span class="Q">void</span>&nbsp;<span class="R">Break</span>(<span class="Q">int</span>&nbsp;<span class="V">ID</span>&nbsp;=&nbsp;IDEXIT)</p>
+<p class="S">If TopWindow is running its loop (see <a href="src$CtrlCore$TopWindow$en-us.html#::TopWindow::Run(bool)">Run</a> or <a href="src$CtrlCore$TopWindow$en-us.html#::TopWindow::RunAppModal()">RunAppModal</a> methods), breaks the loop with specified exit code.</p>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="W">ID</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">Exit code.</p></td></tr></table>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="TopWindow::AcceptBreak(int)" class="P"><span class="Q">bool</span>&nbsp;<span class="R">AcceptBreak</span>(<span class="Q">int</span>&nbsp;<span class="V">ID</span>)</p>
+<p class="S">Tries to accept all contained Ctrls by calling Accept for all child Ctrls, until some returns false - in such case this method returns false. If all child Ctrls return true, calls Break with specified ID and returns true.</p>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="W">ID</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">Exit code.</p></td></tr></table>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="X">Return value</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">True if all child Ctrls were accepted and Break(ID) was invoked.</p></td></tr></table>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="TopWindow::RejectBreak(int)" class="P"><span class="Q">void</span>&nbsp;<span class="R">RejectBreak</span>(<span class="Q">int</span>&nbsp;<span class="V">ID</span>)</p>
+<p class="S">Rejects all contained widgets by calling Reject for all child Ctrls, then calls Break with specified ID.</p>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="W">ID</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">Exit code.</p></td></tr></table>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="TopWindow::WorkAreaTrim()" class="P"><span class="Q">void</span>&nbsp;<span class="R">WorkAreaTrim</span>()</p>
+<p class="S">Adjusts window position so that it does not exceeds desktop workspace. Exceeding parts are trimmed (decreasing window size).</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="TopWindow::Breaker(int)" class="P"><a href="Callback"><u>Callback</u></a>&nbsp;<span class="R">Breaker</span>(<span class="Q">int</span>&nbsp;<span class="V">ID</span>&nbsp;=&nbsp;IDEXIT)</p>
+<p class="S">Returns Callback that, when invoked, invokes <span class="R">Break</span> with the specified exit code. Note that Callback as return value is used for backward compatibility with pre-C++11 U++ and for practical purposes, you could consider Event&lt;&gt; being returned.</p>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="W">ID</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">Message loop exit code.</p></td></tr></table>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="X">Return value</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">Callback.</p></td></tr></table>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="TopWindow::Acceptor(int)" class="P"><a href="Callback"><u>Callback</u></a>&nbsp;<span class="R">Acceptor</span>(<span class="Q">int</span>&nbsp;<span class="V">ID</span>)</p>
+<p class="S">Returns Callback that, when invoked, invokes <span class="R">AcceptBreak</span> with the specified exit code. Note that Callback as return value is used for backward compatibility with pre-C++11 U++ and for practical purposes, you could consider Event&lt;&gt; being returned.</p>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="W">ID</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">Message loop exit code.</p></td></tr></table>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="X">Return value</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">Callback.</p></td></tr></table>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="TopWindow::Rejector(int)" class="P"><a href="Callback"><u>Callback</u></a>&nbsp;<span class="R">Rejector</span>(<span class="Q">int</span>&nbsp;<span class="V">ID</span>)</p>
+<p class="S">Returns Callback that, when invoked, invokes <span class="R">RejectBreak</span> with the specified exit code. Note that Callback as return value is used for backward compatibility with pre-C++11 U++ and for practical purposes, you could consider Event&lt;&gt; being returned.</p>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="W">ID</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">Message loop exit code.</p></td></tr></table>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="X">Return value</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">Callback.</p></td></tr></table>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="TopWindow::Breaker(Ctrl&,int)" class="P"><a href="TopWindow"><u>TopWindow</u></a><span class="Q">&amp;</span>&nbsp;<span class="R">Breaker</span>(<a href="Ctrl"><u>Ctrl</u></a><span class="Q">&amp;</span>&nbsp;<span class="V">m</span>, <span class="Q">int</span>&nbsp;<span class="V">ID</span>&nbsp;=&nbsp;-<span class="Y">1</span>)</p>
+<p class="S">Same as m &lt;&lt;= <span class="R">Breaker</span>(ID) - assigns <span class="R">Breaker</span> callback to WhenAction method of specified Ctrl.</p>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="W">m</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">Ctrl.</p></td></tr></table>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="W">ID</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">Message loop exit code.</p></td></tr></table>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="X">Return value</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">*this.</p></td></tr></table>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="TopWindow::Acceptor(Ctrl&,int)" class="P"><a href="TopWindow"><u>TopWindow</u></a><span class="Q">&amp;</span>&nbsp;<span class="R">Acceptor</span>(<a href="Ctrl"><u>Ctrl</u></a><span class="Q">&amp;</span>&nbsp;<span class="V">m</span>, <span class="Q">int</span>&nbsp;<span class="V">ID</span>)</p>
+<p class="S">Same as m &lt;&lt;= <span class="R">Acceptor</span>(ID) - assigns <span class="R">Acceptor</span> callback to WhenAction method of specified Ctrl.</p>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="W">m</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">Ctrl.</p></td></tr></table>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="W">ID</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">Message loop exit code.</p></td></tr></table>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="X">Return value</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">*this.</p></td></tr></table>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="TopWindow::Rejector(Ctrl&,int)" class="P"><a href="TopWindow"><u>TopWindow</u></a><span class="Q">&amp;</span>&nbsp;<span class="R">Rejector</span>(<a href="Ctrl"><u>Ctrl</u></a><span class="Q">&amp;</span>&nbsp;<span class="V">m</span>, <span class="Q">int</span>&nbsp;<span class="V">ID</span>)</p>
+<p class="S">Same as m &lt;&lt;= <span class="R">Rejector</span>(ID) - assigns <span class="R">Rejector</span> callback to WhenAction method of specified Ctrl.</p>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="W">m</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">Ctrl.</p></td></tr></table>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="W">ID</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">Message loop exit code.</p></td></tr></table>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="X">Return value</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">*this.</p></td></tr></table>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="TopWindow::NoCenter()" class="P"><a href="TopWindow"><u>TopWindow</u></a><span class="Q">&amp;</span>&nbsp;<span class="R">NoCenter</span>()</p>
+<p class="S">Sets TopWindow not to be centered when being created on the screen. Returns *this.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="TopWindow::CenterOwner()" class="P"><a href="TopWindow"><u>TopWindow</u></a><span class="Q">&amp;</span>&nbsp;<span class="R">CenterOwner</span>()</p>
+<p class="S">Sets TopWindow to be centered w.r.t. its owner when being created on the screen. This is default. Returns *this.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="TopWindow::CenterScreen()" class="P"><a href="TopWindow"><u>TopWindow</u></a><span class="Q">&amp;</span>&nbsp;<span class="R">CenterScreen</span>()</p>
+<p class="S">Sets TopWindow to be desktop centered when being created on the screen. Returns *this.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="TopWindow::SetMinSize(Size)" class="P"><span class="Q">virtual</span> <span class="Q">void</span>&nbsp;<span class="R">SetMinSize</span>(<a href="Size"><u>Size</u></a>&nbsp;<span class="V">sz</span>)</p>
+<p class="S">Sets the minimal size for window. This size is then returned by GetMinSize virtual method. If window is resizable, it cannot be made smaller than this size.</p>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="W">sz</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">Minimal size of window.</p></td></tr></table>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="TopWindow::Open(HWND)" class="P"><span class="Q">void</span>&nbsp;<span class="R">Open</span>(HWND&nbsp;<span class="V">ownerhwnd</span>)</p>
+<p class="S">Opens window with owner specified as Win32 handle.</p>
+<p class="Z">Win32 specific.</p>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="W">ownerhwnd</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">Owner window handle.</p></td></tr></table>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="TopWindow::Style(dword)" class="P"><a href="TopWindow"><u>TopWindow</u></a><span class="Q">&amp;</span>&nbsp;<span class="R">Style</span>(<a href="dword"><u>dword</u></a>&nbsp;<span class="V">_style</span>)</p>
+<p class="S">Sets Win32 window style.</p>
+<p class="Z">Win32 specific.</p>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="W">_style</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">Style.</p></td></tr></table>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="X">Return value</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">*this.</p></td></tr></table>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="TopWindow::GetStyle()const" class="AA"><a href="dword"><span class="J"><u>dword</u></span></a><span class="J">&nbsp;</span><span class="AB">GetStyle</span><span class="J">()&nbsp;</span>const</p>
+<p class="S">Sets Win32 window extended style.</p>
+<p class="Z">Win32 specific.</p>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="X">Return value</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">*this.</p></td></tr></table>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="TopWindow::ExStyle(dword)" class="P"><a href="TopWindow"><u>TopWindow</u></a><span class="Q">&amp;</span>&nbsp;<span class="R">ExStyle</span>(<a href="dword"><u>dword</u></a>&nbsp;<span class="V">_exstyle</span>)</p>
+<p class="Z">Win32 specific.</p>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="W">_exstyle</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">style</p></td></tr></table>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="X">Return value</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">*this</p></td></tr></table>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="TopWindow::GetExStyle()const" class="AA"><a href="dword"><span class="J"><u>dword</u></span></a><span class="J">&nbsp;</span><span class="AB">GetExStyle</span><span class="J">()&nbsp;</span>const</p>
+<p class="Z">Win32 specific.</p>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="X">Return value</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">style</p></td></tr></table>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="TopWindow::Open(Ctrl*)" class="P"><span class="Q">void</span>&nbsp;<span class="R">Open</span>(<a href="Ctrl"><u>Ctrl</u></a>&nbsp;*<span class="V">owner</span>)</p>
+<p class="S">Opens TopWindow as window in host GUI with specified owner. Window can be open as hidden is visibility flag is set to false (Hide()), however on closing, window is set to visible.</p>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="W">owner</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">Owner of window. If NULL, window has no owner.</p></td></tr></table>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="TopWindow::Open()" class="P"><span class="Q">void</span>&nbsp;<span class="R">Open</span>()</p>
+<p class="S">Opens TopWindow with owner equal to current active window if it is owned by the process.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="TopWindow::OpenMain()" class="P"><span class="Q">void</span>&nbsp;<span class="R">OpenMain</span>()</p>
+<p class="S">Opens window without owner.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="TopWindow::Run(bool)" class="P"><span class="Q">int</span>&nbsp;<span class="R">Run</span>(<span class="Q">bool</span>&nbsp;<span class="V">appmodal</span>&nbsp;=&nbsp;<span class="Q">false</span>)</p>
+<p class="S">Execute modal loop for TopWindow. If TopWindow is not open, it calls Open before starting loop, but it does not close it.</p>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="W">appmodal</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">If true, all application window are disabled while performing loop. If false, only TopWindow's relative windows (with the same &quot;super&quot;-owner) are disabled.</p></td></tr></table>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="X">Return value</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">Result code of modal loop.</p></td></tr></table>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="TopWindow::RunAppModal()" class="P"><span class="Q">int</span>&nbsp;<span class="R">RunAppModal</span>()</p>
+<p class="S">Same as Run(true).</p>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="X">Return value</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">Result code of modal loop.</p></td></tr></table>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="TopWindow::Execute()" class="P"><span class="Q">int</span>&nbsp;<span class="R">Execute</span>()</p>
+<p class="S">Similar to Run, but closes TopWindow when loop exits.</p>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="X">Return value</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">Result code of modal loop.</p></td></tr></table>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="TopWindow::ExecuteOK()" class="P"><span class="Q">bool</span>&nbsp;<span class="R">ExecuteOK</span>()</p>
+<p class="S">Same as Execute but return true if button OK was pressed.</p>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="X">Return value</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">Result true if OK otherwise false.</p></td></tr></table>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="TopWindow::ExecuteCancel()" class="P"><span class="Q">bool</span>&nbsp;<span class="R">ExecuteCancel</span>()</p>
+<p class="S">Same as Execute but return true if button Cancel was pressed.</p>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="X">Return value</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">Result true if Cancel otherwise false.</p></td></tr></table>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Upp::TopWindow::GetExitCode()const" class="AA">int<span class="J">&nbsp;</span><span class="AB">GetExitCode</span><span class="J">()&nbsp;</span>const</p>
+<p class="S">Returns the result code of last Execute or Run methods.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="TopWindow::Minimize(bool)" class="P"><span class="Q">void</span>&nbsp;<span class="R">Minimize</span>(<span class="Q">bool</span>&nbsp;<span class="V">effect</span>&nbsp;=&nbsp;<span class="Q">false</span>)</p>
+<p class="S">Minimize window.</p>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="W">effect</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">Do platform specific GUI effects.</p></td></tr></table>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="TopWindow::Maximize(bool)" class="P"><span class="Q">void</span>&nbsp;<span class="R">Maximize</span>(<span class="Q">bool</span>&nbsp;<span class="V">effect</span>&nbsp;=&nbsp;<span class="Q">false</span>)</p>
+<p class="S">Maximize window.</p>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="W">effect</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">Do platform specific GUI effects.</p></td></tr></table>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="TopWindow::Overlap(bool)" class="P"><span class="Q">void</span>&nbsp;<span class="R">Overlap</span>(<span class="Q">bool</span>&nbsp;<span class="V">effect</span>&nbsp;=&nbsp;<span class="Q">false</span>)</p>
+<p class="S">Put window to normal overlapped state.</p>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="W">effect</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">Do platform specific GUI effects.</p></td></tr></table>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="TopWindow::IsMaximized()const" class="AA">bool<span class="J">&nbsp;</span><span class="AB">IsMaximized</span><span class="J">()&nbsp;</span>const</p>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="X">Return value</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">True if TopWindow is maximized.</p></td></tr></table>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="TopWindow::IsMinimized()const" class="AA">bool<span class="J">&nbsp;</span><span class="AB">IsMinimized</span><span class="J">()&nbsp;</span>const</p>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="X">Return value</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">True if TopWindow is minimized.</p></td></tr></table>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="TopWindow::IsOverlapped()const" class="AA">bool<span class="J">&nbsp;</span><span class="AB">IsOverlapped</span><span class="J">()&nbsp;</span>const</p>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="X">Return value</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">True if TopWindow is in normal (overlapped) state.</p></td></tr></table>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="TopWindow::ActiveFocus(Ctrl&)" class="P"><a href="TopWindow"><u>TopWindow</u></a><span class="Q">&amp;</span>&nbsp;<span class="R">ActiveFocus</span>(<a href="Ctrl"><u>Ctrl</u></a><span class="Q">&amp;</span>&nbsp;<span class="V">ctrl</span>)</p>
+<p class="S">Sets the ActiveFocus Ctrl. This Ctrl gets focus when TopWindow is activated. If there is no Ctrl with active focus, first Ctrl is activated. When TopWindow is deactivated, Ctrl that has focus is stored as new ActiveFocus Ctrl and gets focus once TopWindow is activated again (unless this method changes ActiveFocus meanwhile). When this, method is called while TopWindow is active, it is equivalent to ctrl.SetFocus().</p>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="W">ctrl</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">Ctrl to have </p></td></tr></table>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="X">Return value</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">*this.</p></td></tr></table>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="TopWindow::Title(const WString&)" class="P"><a href="TopWindow"><u>TopWindow</u></a><span class="Q">&amp;</span>&nbsp;<span class="R">Title</span>(<span class="Q">const</span>&nbsp;<a href="WString"><u>WString</u></a><span class="Q">&amp;</span>&nbsp;<span class="V">_title</span>)</p>
+<p id="TopWindow::Title(const char*)" class="P"><a href="TopWindow"><u>TopWindow</u></a><span class="Q">&amp;</span>&nbsp;<span class="R">Title</span>(<span class="Q">const</span>&nbsp;<span class="Q">char</span>&nbsp;*<span class="V">_title</span>)</p>
+<p class="S">Sets the title of the window.</p>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="W">_title</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">Title.</p></td></tr></table>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="X">Return value</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">*this.</p></td></tr></table>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="TopWindow::GetTitle()const" class="AA">const<span class="J">&nbsp;</span><a href="WString"><span class="J"><u>WString</u></span></a>&amp;<span class="J">&nbsp;</span><span class="AB">GetTitle</span><span class="J">()&nbsp;</span>const</p>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="X">Return value</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">Current title of window.</p></td></tr></table>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="TopWindow::Sizeable(bool)" class="P"><a href="TopWindow"><u>TopWindow</u></a><span class="Q">&amp;</span>&nbsp;<span class="R">Sizeable</span>(<span class="Q">bool</span>&nbsp;<span class="V">b</span>&nbsp;=&nbsp;<span class="Q">true</span>)</p>
+<p class="S">Indicates whether TopWindow should be resizeable by user.</p>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="W">b</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">True to set.</p></td></tr></table>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="X">Return value</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">*this.</p></td></tr></table>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="TopWindow::NoSizeable()" class="P"><a href="TopWindow"><u>TopWindow</u></a><span class="Q">&amp;</span>&nbsp;<span class="R">NoSizeable</span>()</p>
+<p class="S">Same as Sizeable(false).</p>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="X">Return value</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">*this.</p></td></tr></table>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="TopWindow::IsSizeable()const" class="AA">bool<span class="J">&nbsp;</span><span class="AB">IsSizeable</span><span class="J">()&nbsp;</span>const</p>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="X">Return value</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">Value</p></td></tr></table>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="TopWindow::MinimizeBox(bool)" class="P"><a href="TopWindow"><u>TopWindow</u></a><span class="Q">&amp;</span>&nbsp;<span class="R">MinimizeBox</span>(<span class="Q">bool</span>&nbsp;<span class="V">b</span>&nbsp;=&nbsp;<span class="Q">true</span>)</p>
+<p class="S">Sets TopWindow to have a minimize box.</p>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="W">b</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">true to set.</p></td></tr></table>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="X">Return value</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">*this.</p></td></tr></table>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="TopWindow::MaximizeBox(bool)" class="P"><a href="TopWindow"><u>TopWindow</u></a><span class="Q">&amp;</span>&nbsp;<span class="R">MaximizeBox</span>(<span class="Q">bool</span>&nbsp;<span class="V">b</span>&nbsp;=&nbsp;<span class="Q">true</span>)</p>
+<p class="S">Sets TopWindow to have a maximize box.</p>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="W">b</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">true to set.</p></td></tr></table>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="X">Return value</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">*this.</p></td></tr></table>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="TopWindow::Zoomable(bool)" class="P"><a href="TopWindow"><u>TopWindow</u></a><span class="Q">&amp;</span>&nbsp;<span class="R">Zoomable</span>(<span class="Q">bool</span>&nbsp;<span class="V">b</span>&nbsp;=&nbsp;<span class="Q">true</span>)</p>
+<p class="S">Sets TopWindow to be Zoomable - to have maximize/minimize flags, if supported by host platform. Same as MinimizeBox(b).MaximizeBox(b).</p>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="W">b</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">True to set.</p></td></tr></table>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="X">Return value</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">*this.</p></td></tr></table>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="TopWindow::NoZoomable()" class="P"><a href="TopWindow"><u>TopWindow</u></a><span class="Q">&amp;</span>&nbsp;<span class="R">NoZoomable</span>()</p>
+<p class="S">Same as Zoomable(false).</p>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="X">Return value</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">*this.</p></td></tr></table>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="TopWindow::IsZoomable()const" class="AA">bool<span class="J">&nbsp;</span><span class="AB">IsZoomable</span><span class="J">()&nbsp;</span>const</p>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="X">Return value</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">Value of Zoomable flag.</p></td></tr></table>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="TopWindow::Background(const PaintRect&)" class="P"><a href="TopWindow"><u>TopWindow</u></a><span class="Q">&amp;</span>&nbsp;<span class="R">Background</span>(<span class="Q">const</span>&nbsp;<a href="PaintRect"><u>PaintRect</u></a><span class="Q">&amp;</span>&nbsp;<span class="V">prect</span>)</p>
+<p class="S">Sets PaintRect that will be used to paint TopWindow background. Default PaintRect paints background with SColorFace.</p>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="W">prect</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">PaintRect.</p></td></tr></table>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="X">Return value</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">*this.</p></td></tr></table>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="TopWindow::GetBackground()const" class="AA">const<span class="J">&nbsp;</span><a href="PaintRect"><span class="J"><u>PaintRect</u></span></a>&amp;<span class="J">&nbsp;</span><span class="AB">GetBackground</span><span class="J">()&nbsp;</span>const</p>
+<p class="S">Returns active PaintRect used to paint TopWindow background.</p>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="X">Return value</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">PaintRect.</p></td></tr></table>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="TopWindow::ToolWindow(bool)" class="P"><a href="TopWindow"><u>TopWindow</u></a><span class="Q">&amp;</span>&nbsp;<span class="R">ToolWindow</span>(<span class="Q">bool</span>&nbsp;<span class="V">b</span>&nbsp;=&nbsp;<span class="Q">true</span>)</p>
+<p class="S">Makes TopWindow appear with thin caption, if supported by host platform. Must be set before opening.</p>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="W">b</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">True to set the flag.</p></td></tr></table>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="X">Return value</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">*this.</p></td></tr></table>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="TopWindow::NoToolWindow()" class="P"><a href="TopWindow"><u>TopWindow</u></a><span class="Q">&amp;</span>&nbsp;<span class="R">NoToolWindow</span>()</p>
+<p class="S">Same as ToolWindow(false).</p>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="X">Return value</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">*this.</p></td></tr></table>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="TopWindow::IsToolWindow()const" class="AA">bool<span class="J">&nbsp;</span><span class="AB">IsToolWindow</span><span class="J">()&nbsp;</span>const</p>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="X">Return value</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">Value of ToolWindow flag.</p></td></tr></table>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="TopWindow::TopMost(bool,bool)" class="P"><a href="TopWindow"><u>TopWindow</u></a><span class="Q">&amp;</span>&nbsp;<span class="R">TopMost</span>(<span class="Q">bool</span>&nbsp;<span class="V">b</span>&nbsp;=&nbsp;<span class="Q">true</span>, <span class="Q">bool</span>&nbsp;<span class="V">stay_top</span>&nbsp;=&nbsp;<span class="Q">true</span>)</p>
+<p class="S">Makes window stay over any other window. Returns *this.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="TopWindow::NoTopMost()" class="P"><a href="TopWindow"><u>TopWindow</u></a><span class="Q">&amp;</span>&nbsp;<span class="R">NoTopMost</span>()</p>
+<p class="S">Same as TopMost(false).</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="TopWindow::IsTopMost()const" class="AA">bool<span class="J">&nbsp;</span><span class="AB">IsTopMost</span><span class="J">()&nbsp;</span>const</p>
+<p class="S">Value of TopMost flag.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="TopWindow::FullScreen(bool)" class="P"><a href="TopWindow"><u>TopWindow</u></a><span class="Q">&amp;</span>&nbsp;<span class="R">FullScreen</span>(<span class="Q">bool</span>&nbsp;<span class="V">b</span>&nbsp;=&nbsp;<span class="Q">true</span>)</p>
+<p class="S">Sets window to fullscreen if <span class="V">b</span> is true, otherwise sets window to regular state. Returns *this.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="TopWindow::IsFullScreen()const" class="AA">bool<span class="J">&nbsp;</span><span class="AB">IsFullScreen</span><span class="J">()&nbsp;</span>const</p>
+<p class="S"><span class="X">Return value</span>&nbsp;&nbsp;&nbsp;&nbsp;True if window is in fullscreen mode.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="TopWindow::FrameLess(bool)" class="P"><a href="TopWindow"><u>TopWindow</u></a><span class="Q">&amp;</span>&nbsp;<span class="R">FrameLess</span>(<span class="Q">bool</span>&nbsp;<span class="V">b</span>&nbsp;=&nbsp;<span class="Q">true</span>)</p>
+<p class="S">Creates window without border decorations (like windows title var or any resizing borders).</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="TopWindow::IsFrameLess()const" class="AA">bool<span class="J">&nbsp;</span><span class="AB">IsFrameLess</span><span class="J">()&nbsp;</span>const</p>
+<p class="S">Returns FrameLess status.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="TopWindow::Urgent(bool)" class="P"><a href="TopWindow"><u>TopWindow</u></a><span class="Q">&amp;</span>&nbsp;<span class="R">Urgent</span>(<span class="Q">bool</span>&nbsp;<span class="V">b</span>&nbsp;=&nbsp;<span class="Q">true</span>)</p>
+<p class="S">Calling Urgent(true) causes title of inactive window and its item in taskbar to flash to catch users attention. The effect lasts until either Urgent(false) is called or the window is taken to foreground. If Urgent(true) is called on currently active window then it has no effect.</p>
+<p class="S">&nbsp;</p>
+<p class="S">Note: Most of the window managers on X11 do support this feature, but there still might be some obscure ones that simply ignore this setting.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="TopWindow::IsUrgent()const" class="AA">bool<span class="J">&nbsp;</span><span class="AB">IsUrgent</span><span class="J">()&nbsp;</span>const</p>
+<p class="S"><span class="X">Return value</span>&nbsp;&nbsp;&nbsp;&nbsp;True if window tries to catch users attention by flashing.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="TopWindow::NoAccessKeysDistribution()" class="P"><a href="TopWindow"><u>TopWindow</u></a><span class="Q">&amp;</span>&nbsp;<span class="R">NoAccessKeysDistribution</span>()</p>
+<p class="S">Disables distribution of access keys. Normally, TopWindow tries to assign access-keys (also known as &quot;hot-keys&quot;) to all of its child windows before opening. This method disables this behaviour.</p>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="X">Return value</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">*this.</p></td></tr></table>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="TopWindow::CloseBoxRejects(bool)" class="P"><a href="TopWindow"><u>TopWindow</u></a><span class="Q">&amp;</span>&nbsp;<span class="R">CloseBoxRejects</span>(<span class="Q">bool</span>&nbsp;<span class="V">b</span>&nbsp;=&nbsp;<span class="Q">true</span>)</p>
+<p class="S">When active, pressing window title close button always rejects the dialog. When not active, the action depends on Acceptors/Rejectors present, performing first of IDCANCEL -&gt; reject, IDNO -&gt; reject, IDEXIT -&gt; accept, IDYES -&gt; Accept, and IDOK -&gt; Accept as default action if nothing else is present.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="TopWindow::Icon(const Image&)" class="P"><a href="TopWindow"><u>TopWindow</u></a><span class="Q">&amp;</span>&nbsp;<span class="R">Icon</span>(<span class="Q">const</span>&nbsp;<a href="Image"><u>Image</u></a><span class="Q">&amp;</span>&nbsp;<span class="V">m</span>)</p>
+<p class="S">Defines icon for TopWindow that is usually displayed in window caption (platform specif).</p>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="W">m</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">Icon.</p></td></tr></table>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="X">Return value</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">*this.</p></td></tr></table>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="TopWindow::LargeIcon(const Image&)" class="P"><a href="TopWindow"><u>TopWindow</u></a><span class="Q">&amp;</span>&nbsp;<span class="R">LargeIcon</span>(<span class="Q">const</span>&nbsp;<a href="Image"><u>Image</u></a><span class="Q">&amp;</span>&nbsp;<span class="V">m</span>)</p>
+<p class="S">Defines &quot;large&quot; icon for TopWindow. It can be displayed e.g. in task switcher and other places (platform specific).</p>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="W">m</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">Icon.</p></td></tr></table>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="X">Return value</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">*this.</p></td></tr></table>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="TopWindow::Icon(const Image&,const Image&)" class="P"><a href="TopWindow"><u>TopWindow</u></a><span class="Q">&amp;</span>&nbsp;<span class="R">Icon</span>(<span class="Q">const</span>&nbsp;<a href="Image"><u>Image</u></a><span class="Q">&amp;</span>&nbsp;<span class="V">smallicon</span>, <span class="Q">const</span>&nbsp;<a href="Image"><u>Image</u></a><span class="Q">&amp;</span>&nbsp;<span class="V">largeicon</span>)</p>
+<p class="S">Defines both &quot;small&quot; and &quot;large&quot; icons for TopWindow.</p>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="W">smallicon</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">Small icon.</p></td></tr></table>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="W">largeicon</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">Large icon.</p></td></tr></table>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="X">Return value</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">*this.</p></td></tr></table>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="TopWindow::SerializePlacement(Stream&,bool)" class="P"><span class="Q">void</span>&nbsp;<span class="R">SerializePlacement</span>(<a href="Stream"><u>Stream</u></a><span class="Q">&amp;</span>&nbsp;<span class="V">s</span>, <span class="Q">bool</span>&nbsp;<span class="V">reminimize</span>&nbsp;=&nbsp;<span class="Q">false</span>)</p>
+<p class="S">Serializes current placement of TopWindow. It is platform specific, however information can include screen position in &quot;normal&quot; state and current status (maximized, minimized, normal).</p>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="W">s</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">Stream.</p></td></tr></table>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="W">reminimize</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">If false and loading the information from the stream, minimized state is not restored.</p></td></tr></table>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="TopWindow::TopWindow()" class="P"><span class="R">TopWindow</span>()</p>
+<p class="S">Constructor.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="TopWindow::~TopWindow()" class="P"><span class="Q">~</span><span class="R">TopWindow</span>()</p>
+<p class="S">Destructor.</p>
+<p class="F">&nbsp;</p>
+<p class="A">&nbsp;</p>
+</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>
+<TABLE BORDER="0" WIDTH="100%"><TR><TD></TD>
+</TR>
+</TABLE>
+<TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" BGCOLOR="#FFFFFF" WIDTH="100%" style="border-style: solid; border-width: 1px; border-color: #6E89AE;padding: 10px;;"><TR><TD><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%"><TR><TD><p class="A"><span class="B"> </span><a href="www$uppweb$contribweb$en-us.html">Do you want to contribute?</a></p>
+</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>
+<script type="text/javascript">var a={'src$CtrlCore$TopWindow$en-us.html':'English'};var p=window.location.pathname.split("/");p=p[p.length-1];var s='<select id="lang" onchange="window.location=document.getElementById(\'lang\').value;">';for(l in a){if(p==l){d=" selected=1"}else{d=""}s+='<option value="'+l+'"'+d+'>'+a[l]+'</option>'}s+='</select>';var d=document.createElement('div');d.innerHTML=s;var c=document.getElementById('langs');c.replaceChild(d,c.firstChild);document.getElementById('langbox').style.display='block';</script></BODY>

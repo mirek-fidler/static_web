@@ -1,0 +1,495 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en-us">
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
+<META NAME="Generator" CONTENT="U++ HTML Package">
+<TITLE>Static widgets :: U++</TITLE>
+<STYLE TYPE="text/css"><!--
+.A{margin:0px 0px 0px 0px;text-indent:0px;text-align:left;color:#000000;font-family:sans-serif;font-size:10pt;font-weight:normal;font-style:normal;}
+.B{font-size:12pt;}
+.C{margin:0px 0px 0px 0px;text-indent:0px;text-align:left;color:#000000;font-family:sans-serif;font-size:18pt;font-weight:bold;font-style:normal;}
+.D{margin:0px 0px 0px 0px;text-indent:0px;text-align:left;color:#000000;font-family:sans-serif;font-size:6pt;font-weight:normal;font-style:normal;}
+.E{border-collapse:collapse;table-layout:auto;border: 2px solid #000000;}
+.F{padding: 3px 5px 3px 5px;border-left: 1px solid #000000;border-top: 1px solid #000000;border-right: 1px solid #000000;border-bottom: 1px solid #000000;background-color:#800000;vertical-align:middle;}
+.G{margin:0px 0px 0px 0px;text-indent:0px;text-align:left;color:#e5e5e5;font-family:sans-serif;font-size:16pt;font-weight:bold;font-style:normal;}
+.H{margin:0px 0px 5px 0px;text-indent:0px;text-align:left;color:#800000;font-family:sans-serif;font-size:12pt;font-weight:bold;font-style:normal;}
+.I{color:#0000ff;font-weight:normal;}
+.J{color:#000000;font-weight:normal;}
+.K{color:#000000;}
+.L{margin:8px 0px 0px 0px;text-indent:0px;text-align:left;color:#000000;font-family:sans-serif;font-size:10pt;font-weight:normal;font-style:normal;}
+.M{border-collapse:collapse;table-layout:auto;border: 2px solid #808080;}
+.N{padding: 3px 5px 3px 5px;border-left: 1px solid #808080;border-top: 1px solid #808080;border-right: 1px solid #808080;border-bottom: 1px solid #808080;background-color:#C0C0C0;vertical-align:middle;}
+.O{margin:0px 0px 0px 0px;text-indent:0px;text-align:left;color:#000000;font-family:sans-serif;font-size:10pt;font-weight:bold;font-style:normal;}
+.P{margin:0px 0px 5px 0px;text-indent:0px;text-align:left;color:#000000;font-family:sans-serif;font-size:10pt;font-weight:normal;font-style:normal;}
+.Q{color:#0000ff;}
+.R{font-weight:bold;}
+.S{color:#800000;font-weight:bold;}
+.T{margin:0px 0px 0px 57px;text-indent:0px;text-align:left;color:#000000;font-family:sans-serif;font-size:10pt;font-weight:normal;font-style:normal;}
+.U{color:#800000;}
+.V{margin:0px 0px 5px 0px;text-indent:0px;text-align:left;color:#0000ff;font-family:sans-serif;font-size:10pt;font-weight:normal;font-style:normal;}
+.W{color:#000000;font-weight:bold;}
+.X{color:#000080;font-weight:bold;}
+a.l1         { text-decoration:none; font-size: 8pt; font-family: sans-serif; font-weight: normal; }
+a.l1:link    { color:#000000; }
+a.l1:visited { color:#000080; }
+a.l1:hover   { color:#9933CC; }
+a.l1:active  { color:#000000; }
+a.l2         { text-decoration:none; font-size: 12pt; font-family: sans-serif; font-variant: small-caps; }
+a.l2:link    { color:#0066FF; }
+a.l2:visited { color:#FF6600; }
+a.l2:hover   { color:#BC0624; }
+a.l2:active  { color:#BC0024; }
+
+-->
+</STYLE>
+<META NAME="keywords" CONTENT="framework, toolkit, widget, c++, visual, studio, dev-cpp, builder, ide, class, component,wxwidgets, qt, rapid, application, development, rad, mfc, linux, macos, gui, sdl, directx, desktop"><META name="robots" content="index,follow">
+<LINK rel="alternate" type="application/rss+xml" title="SVN changes" href="svnchanges.xml">
+<LINK rel="shortcut icon" type="image/png" href="favicon.png">
+</HEAD><BODY BGCOLOR="#D2D9D2" ALINK="#800000" LINK="#000000" VLINK="#000080"><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%"><TR><TD COLSPAN="3"><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%" BGCOLOR="#FFFFFF" style="border: 1px solid #6E89AE;padding-left: 10px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;"><TR><TD><A HREF="index.html"><IMG SRC="0i.png" ALT="" BORDER="0"></A>
+</TD>
+<TD ALIGN="RIGHT" VALIGN="BOTTOM" STYLE="padding-bottom: 5px; background-image: url('1i.png')"><span style="font-size: 14pt; font-family: sans-serif;"><script type="text/javascript"><!--
+google_ad_client = "pub-1082147624384270";
+google_ad_width = 468;
+google_ad_height = 60;
+google_ad_format = "468x60_as";
+google_ad_type = "text_image";
+google_ad_channel = "";
+google_color_border = "336699";
+google_color_bg = "FFFFFF";
+google_color_link = "0000FF";
+google_color_text = "000000";
+google_color_url = "008000";
+//--></script>
+<script type="text/javascript"
+  src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+&nbsp;&nbsp;</span>
+</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>
+<TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%"><TR><TD COLSPAN="3" BGCOLOR="#D2D9D2" HEIGHT="6"></TD>
+</TR>
+<TR><TD VALIGN="TOP" ALIGN="CENTER"><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="160"><TR><TD ALIGN="CENTER"><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%" BGCOLOR="#FFFFFF" style="border-style: solid; border-width: 1px; border-color: #6E89AE;padding: 0px"><TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px;"><A HREF="www$uppweb$overview$en-us.html" CLASS="l1">Overview</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$examples$en-us.html" CLASS="l1">Examples</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$ss$en-us.html" CLASS="l1">Screenshots</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$comparison$en-us.html" CLASS="l1">Comparisons</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$apps$en-us.html" CLASS="l1">Applications</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$download$en-us.html" CLASS="l1">Download</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$documentation$en-us.html" CLASS="l1">Documentation</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$Tutorials$en-us.html" CLASS="l1">Tutorials</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="app$ide$UppHub$en-us.html" CLASS="l1">UppHub</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$Roadmap$en-us.html" CLASS="l1">Status & Roadmap</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$FAQ$en-us.html" CLASS="l1">FAQ</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="app$ide$About$en-us.html" CLASS="l1">Authors & License</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="https://www.ultimatepp.org/forums" CLASS="l1">Forums</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$Funding$en-us.html" CLASS="l1">Funding U++</A>
+</TD>
+</TR>
+</TABLE>
+<TABLE BORDER="0" WIDTH="100%"><TR><TD></TD>
+</TR>
+</TABLE>
+<TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%" BGCOLOR="#FFFFFF" style="border-style: solid; border-width: 1px; border-color: #6E89AE;padding: 0px"><TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('3i.png'); border: 0px solid black;padding-left:12px; padding-right:0px; padding-top:1px; padding-bottom:1px;color:#FFFFFF;"><B><span style="font-size: 8pt; font-family: sans-serif;">Search on this site</span>
+</B>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:6px; padding-right:0px; padding-top:4px; padding-bottom:4px;border-top: 1px solid #6E89AE;"><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%"><TR><TD><IMG SRC="4i.png" ALT="" BORDER="0"></TD>
+<TD><FORM ACTION="https://www.google.com/search" METHOD="GET" STYLE="margin:0px;padding:0px;"><INPUT TYPE="HIDDEN" NAME="ie" VALUE="UTF-8"><INPUT TYPE="HIDDEN" NAME="oe" VALUE="UTF-8"><INPUT TYPE="TEXT" NAME="q" SIZE="15" MAXLENGTH="256" placeholder="Site search"><INPUT TYPE="HIDDEN" NAME="sitesearch" VALUE="ultimatepp.org"></FORM>
+</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>
+<TABLE BORDER="0" WIDTH="100%"><TR><TD></TD>
+</TR>
+</TABLE>
+<br><div id="fb-root"></div>
+<script type="text/javascript">(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) {return;}
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+<div class="fb-like" data-href="https://www.facebook.com/pages/Upp-Framework/262346610476027?sk=wall" data-send="false" data-layout="button_count" data-width="160" data-show-faces="false" data-font="arial"></div>
+<br><br><script type="text/javascript"><!--
+google_ad_client = "pub-1082147624384270";
+google_ad_width = 160;
+google_ad_height = 600;
+google_ad_format = "160x600_as";
+google_ad_type = "text_image";
+google_ad_channel = "";
+google_color_border = "336699";
+google_color_bg = "FFFFFF";
+google_color_link = "0000FF";
+google_color_text = "000000";
+google_color_url = "008000";
+//--></script>
+<script type="text/javascript"
+  src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script><br><br><script type="text/javascript"><!--
+google_ad_client = "pub-1082147624384270";
+google_ad_width = 160;
+google_ad_height = 90;
+google_ad_format = "160x90_0ads_al_s";
+google_ad_channel = "";
+google_color_border = "336699";
+google_color_bg = "FFFFFF";
+google_color_link = "0000FF";
+google_color_text = "000000";
+google_color_url = "008000";
+//--></script>
+<script type="text/javascript"
+  src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+<br><br><br><br><br><br><A HREF="https://sourceforge.net/projects/upp/"><IMG SRC="https://sourceforge.net/sflogo.php?group_id=93970&amp;type=2" ALT="SourceForge.net Logo" BORDER="0" WIDTH="125" HEIGHT="37"></A>
+<br><br><A HREF="https://flathub.org/en/apps/org.ultimatepp.TheIDE"><IMG SRC="5i.png" ALT="SourceForge.net Logo" BORDER="0" WIDTH="125" HEIGHT="37"></A>
+<br><br><div style="background-color:#ffffff;width:125;height:35"><A HREF="https://github.com/ultimatepp"><IMG SRC="6i.png" ALT="GitHub Logo" BORDER="0" WIDTH="125" HEIGHT="35"></A>
+</div><br><div style="background-color:#ffffff;width:125;height:35"><div style="height:5"></div><A HREF="https://discord.gg/8XzqQzXZzb"><IMG SRC="https://assets-global.website-files.com/6257adef93867e50d84d30e2/636e0b5061df29d55a92d945_full_logo_blurple_RGB.svg" ALT="Discord Logo" BORDER="0" WIDTH="125" HEIGHT="25"></A>
+</div><br></TD>
+</TR>
+</TABLE>
+</TD>
+<TD VALIGN="TOP" BGCOLOR="#D2D9D2"><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="6"><TR><TD></TD>
+</TR>
+</TABLE>
+</TD>
+<TD VALIGN="TOP" WIDTH="100%" BGCOLOR="#D2D9D2"><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" BGCOLOR="#FFFFFF" WIDTH="100%" style="border-style: solid; border-width: 1px; border-color: #6E89AE;padding: 10px;;"><TR><TD><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%"><TR><TD><p class="C">Static widgets</p>
+<p class="D">&nbsp;</p>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr><td width="100%"><table width="100%" class="E"><colgroup><col width="100%"></colgroup>
+<tr><td class="F"><p class="G">StaticText</p>
+</td>
+</tr>
+</table></td>
+</tr></table>
+<p class="D">&nbsp;</p>
+<p id="StaticText::class" class="H"><span class="I">class</span><span class="J">&nbsp;</span><span class="K">StaticText</span><span class="J">&nbsp;:&nbsp;</span><span class="I">public</span><span class="J">&nbsp;</span>Ctrl<span class="J">, </span><span class="I">public</span><span class="J">&nbsp;</span>LabelBase</p>
+<p class="L">Static text.</p>
+<p class="D">&nbsp;</p>
+<p class="A">&nbsp;</p>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr><td width="100%"><table width="100%" class="M"><colgroup><col width="100%"></colgroup>
+<tr><td class="N"><p class="O">Public Method List</p>
+</td>
+</tr>
+</table></td>
+</tr></table>
+<p class="D">&nbsp;</p>
+<p id="StaticText::SetFont(Font)" class="P"><a href="StaticText"><u>StaticText</u></a><span class="Q">&amp;</span>&nbsp;<span class="R">SetFont</span>(<a href="Font"><u>Font</u></a>&nbsp;<span class="S">font</span>)</p>
+<p class="T">Sets the <span class="S">font</span> of text.</p>
+<p class="D">&nbsp;</p>
+<hr><p class="D">&nbsp;</p>
+<p id="StaticText::SetInk(Color)" class="P"><a href="StaticText"><u>StaticText</u></a><span class="Q">&amp;</span>&nbsp;<span class="R">SetInk</span>(<a href="Color"><u>Color</u></a>&nbsp;<span class="S">color</span>)</p>
+<p class="T">Sets the <span class="S">color</span> of text.</p>
+<p class="D">&nbsp;</p>
+<hr><p class="D">&nbsp;</p>
+<p id="StaticText::SetAlign(int)" class="P"><a href="StaticText"><u>StaticText</u></a><span class="Q">&amp;</span>&nbsp;<span class="R">SetAlign</span>(<span class="Q">int</span>&nbsp;<span class="S">align</span>)</p>
+<p class="T">Sets alignment <span class="S">align</span>. Allowed values are ALIGN_LEFT, ALIGN_CENTER, ALIGN_RIGHT.</p>
+<p class="D">&nbsp;</p>
+<hr><p class="D">&nbsp;</p>
+<p id="Upp::StaticText::AlignLeft()" class="P"><a href="Upp::StaticText"><u>StaticText</u></a><span class="Q">&amp;</span>&nbsp;<span class="R">AlignLeft</span>()</p>
+<p class="T">Same as SetAlign(ALIGN_LEFT).</p>
+<p class="D">&nbsp;</p>
+<hr><p class="D">&nbsp;</p>
+<p id="Upp::StaticText::AlignCenter()" class="P"><a href="Upp::StaticText"><u>StaticText</u></a><span class="Q">&amp;</span>&nbsp;<span class="R">AlignCenter</span>()</p>
+<p class="T">Same as SetAlign(ALIGN_CENTER).</p>
+<p class="D">&nbsp;</p>
+<hr><p class="D">&nbsp;</p>
+<p id="Upp::StaticText::AlignRight()" class="P"><a href="Upp::StaticText"><u>StaticText</u></a><span class="Q">&amp;</span>&nbsp;<span class="R">AlignRight</span>()</p>
+<p class="T">Same as SetAlign(ALIGN_RIGHT).</p>
+<p class="D">&nbsp;</p>
+<hr><p class="D">&nbsp;</p>
+<p id="Upp::StaticText::SetVAlign(int)" class="P">StaticText<span class="Q">&amp;</span> <span class="R">SetVAlign</span>(<span class="Q">int</span> <span class="S">align</span>)</p>
+<p id="Upp::StaticText::AlignTop()" class="P">StaticText<span class="Q">&amp;</span> <span class="R">AlignTop</span>()</p>
+<p id="Upp::StaticText::AlignVCenter()" class="P">StaticText<span class="Q">&amp;</span> <span class="R">AlignVCenter</span>()</p>
+<p id="Upp::StaticText::AlignBottom()" class="P">StaticText<span class="Q">&amp;</span> <span class="R">AlignBottom</span>()</p>
+<p class="T"> Sets vertical alignment of label text.</p>
+<p class="D">&nbsp;</p>
+<hr><p class="D">&nbsp;</p>
+<p id="StaticText::SetImage(const Image&,int)" class="P"><a href="StaticText"><u>StaticText</u></a><span class="Q">&amp;</span>&nbsp;<span class="R">SetImage</span>(<span class="Q">const</span>&nbsp;<a href="Image"><u>Image</u></a><span class="Q">&amp;</span>&nbsp;<span class="S">img</span>, <span class="Q">int</span>&nbsp;<span class="S">spc</span>&nbsp;=&nbsp;<span class="U">0</span>)</p>
+<p class="T">Sets the Image to be displayed before the text. <span class="S">spc</span> is space between the text and Image.</p>
+<p class="D">&nbsp;</p>
+<hr><p class="D">&nbsp;</p>
+<p id="StaticText::SetText(const char*)" class="P"><a href="StaticText"><u>StaticText</u></a><span class="Q">&amp;</span>&nbsp;<span class="R">SetText</span>(<span class="Q">const</span>&nbsp;<span class="Q">char</span>&nbsp;*<span class="S">text</span>)</p>
+<p id="StaticText::operator=(const char*)" class="P"><a href="StaticText"><u>StaticText</u></a><span class="Q">&amp;</span>&nbsp;<span class="R">operator=</span>(<span class="Q">const</span>&nbsp;<span class="Q">char</span>&nbsp;*<span class="S">s</span>)</p>
+<p class="T">Sets <span class="S">text</span>. &quot;\1&quot; at the beginning of text activates QTF.</p>
+<p class="D">&nbsp;</p>
+<p class="D">&nbsp;</p>
+<hr><p class="D">&nbsp;</p>
+<p id="Upp::StaticText::GetText()const" class="V"><a href="Upp::String"><span class="K"><u>String</u></span></a><span class="K">&nbsp;</span><span class="W">GetText</span><span class="K">()&nbsp;</span>const</p>
+<p class="T">Returns the text.</p>
+<p class="D">&nbsp;</p>
+<hr><p class="D">&nbsp;</p>
+<p id="Upp::StaticText::GetFont()const" class="V"><span class="K">Font </span><span class="W">GetFont</span><span class="K">() </span>const</p>
+<p class="T">Returns the font.</p>
+<p class="A">&nbsp;</p>
+<hr><p class="D">&nbsp;</p>
+<p id="Upp::StaticText::GetInk()const" class="V"><span class="K">Color </span><span class="W">GetInk</span><span class="K">() </span>const</p>
+<p class="T">Returns the text color.</p>
+<p class="D">&nbsp;</p>
+<hr><p class="D">&nbsp;</p>
+<p id="Upp::StaticText::GetAlign()const" class="V">int<span class="K"> </span><span class="W">GetAlign</span><span class="K">() </span>const</p>
+<p class="T">Returns the alignment.</p>
+<p class="D">&nbsp;</p>
+<hr><p class="D">&nbsp;</p>
+<p id="Upp::StaticText::GetVAlign()const" class="V">int<span class="K"> </span><span class="W">GetVAlign</span><span class="K">() </span>const</p>
+<p class="T">Returns the vertical alignment. .</p>
+<p class="D">&nbsp;</p>
+<hr><p class="D">&nbsp;</p>
+<p id="Upp::StaticText::GetImage()const" class="V"><span class="K">Image </span><span class="W">GetImage</span><span class="K">() </span>const</p>
+<p class="T">Returns the image.</p>
+<p class="A">&nbsp;</p>
+<p class="A">&nbsp;</p>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr><td width="100%"><table width="100%" class="E"><colgroup><col width="100%"></colgroup>
+<tr><td class="F"><p class="G">Label</p>
+</td>
+</tr>
+</table></td>
+</tr></table>
+<p class="D">&nbsp;</p>
+<p id="Label::class" class="H"><span class="I">class</span><span class="J">&nbsp;</span><span class="K">Label</span><span class="J">&nbsp;:&nbsp;</span><span class="I">public</span><span class="J">&nbsp;</span>StaticText</p>
+<p class="L">Generally used to label other widgets. Differs from StaticText by implementing hotkey processing. Hotkeys are assigned automatically by U++ library, however they can also by preassigned using '&amp;' character.</p>
+<p class="D">&nbsp;</p>
+<p class="A">&nbsp;</p>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr><td width="100%"><table width="100%" class="M"><colgroup><col width="100%"></colgroup>
+<tr><td class="N"><p class="O">Public Method List</p>
+</td>
+</tr>
+</table></td>
+</tr></table>
+<p class="D">&nbsp;</p>
+<p id="Label::SetText(const char*)" class="P"><a href="Label"><u>Label</u></a><span class="Q">&amp;</span>&nbsp;<span class="R">SetText</span>(<span class="Q">const</span>&nbsp;<span class="Q">char</span>&nbsp;*<span class="S">text</span>)</p>
+<p id="Label::operator=(const char*)" class="P"><a href="Label"><u>Label</u></a><span class="Q">&amp;</span>&nbsp;<span class="R">operator=</span>(<span class="Q">const</span>&nbsp;<span class="Q">char</span>&nbsp;*<span class="S">s</span>)</p>
+<p class="T">Sets the text. Ignores '&amp;' used to mark hotkeys.</p>
+<p class="D">&nbsp;</p>
+<hr><p class="D">&nbsp;</p>
+<p id="Label::SetLabel(const char*)" class="P"><a href="Label"><u>Label</u></a><span class="Q">&amp;</span>&nbsp;<span class="R">SetLabel</span>(<span class="Q">const</span>&nbsp;<span class="Q">char</span>&nbsp;*<span class="S">lbl</span>)</p>
+<p class="T">Sets the text, '&amp;' marks hotkeys.</p>
+<p class="D">&nbsp;</p>
+<p class="A">&nbsp;</p>
+<p class="A">&nbsp;</p>
+<p class="A">&nbsp;</p>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr><td width="100%"><table width="100%" class="E"><colgroup><col width="100%"></colgroup>
+<tr><td class="F"><p class="G">LabelBox</p>
+</td>
+</tr>
+</table></td>
+</tr></table>
+<p class="D">&nbsp;</p>
+<p id="LabelBox::class" class="H"><span class="I">class</span><span class="J">&nbsp;</span><span class="K">LabelBox</span><span class="J">&nbsp;:&nbsp;</span><span class="I">public</span><span class="J">&nbsp;</span>Label</p>
+<p class="L">Rectangular static widget used to visually group other widgets.</p>
+<p class="D">&nbsp;</p>
+<p class="A">&nbsp;</p>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr><td width="100%"><table width="100%" class="M"><colgroup><col width="100%"></colgroup>
+<tr><td class="N"><p class="O">Public Method List</p>
+</td>
+</tr>
+</table></td>
+</tr></table>
+<p class="D">&nbsp;</p>
+<p id="LabelBox::operator=(const char*)" class="P"><span class="Q">virtual</span> <a href="LabelBox"><u>LabelBox</u></a><span class="Q">&amp;</span>&nbsp;<span class="R">operator=</span>(<span class="Q">const</span>&nbsp;<span class="Q">char</span>&nbsp;*<span class="S">s</span>)</p>
+<p class="T">Assigns the text of LabelBox.</p>
+<p class="D">&nbsp;</p>
+<hr><p class="D">&nbsp;</p>
+<p id="LabelBox::SetColor(Color)" class="P"><a href="LabelBox"><u>LabelBox</u></a><span class="Q">&amp;</span>&nbsp;<span class="R">SetColor</span>(<a href="Color"><u>Color</u></a>&nbsp;<span class="S">c</span>)</p>
+<p class="T">Sets the color of LabelBox.</p>
+<p class="D">&nbsp;</p>
+<p class="A">&nbsp;</p>
+<p class="A">&nbsp;</p>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr><td width="100%"><table width="100%" class="E"><colgroup><col width="100%"></colgroup>
+<tr><td class="F"><p class="G">ParentCtrl</p>
+</td>
+</tr>
+</table></td>
+</tr></table>
+<p class="D">&nbsp;</p>
+<p id="ParentCtrl::class" class="H"><span class="I">class</span><span class="J">&nbsp;</span><span class="K">ParentCtrl</span><span class="J">&nbsp;:&nbsp;</span><span class="I">public</span><span class="J">&nbsp;</span>Ctrl</p>
+<p class="L">This class is supposed to be used as logical parent in situation when more widgets are to be grouped together. The only difference from Ctrl is that ParentCtrl activates Transparent in constructor.</p>
+<p class="D">&nbsp;</p>
+<p class="A">&nbsp;</p>
+<p class="A">&nbsp;</p>
+<p class="A">&nbsp;</p>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr><td width="100%"><table width="100%" class="E"><colgroup><col width="100%"></colgroup>
+<tr><td class="F"><p class="G">StaticRect</p>
+</td>
+</tr>
+</table></td>
+</tr></table>
+<p class="D">&nbsp;</p>
+<p id="StaticRect::class" class="H"><span class="I">class</span><span class="J">&nbsp;</span><span class="K">StaticRect</span><span class="J">&nbsp;:&nbsp;</span><span class="I">public</span><span class="J">&nbsp;</span>Ctrl</p>
+<p class="L">Widget completely filled with single color.</p>
+<p class="D">&nbsp;</p>
+<p class="A">&nbsp;</p>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr><td width="100%"><table width="100%" class="M"><colgroup><col width="100%"></colgroup>
+<tr><td class="N"><p class="O">Public Method List</p>
+</td>
+</tr>
+</table></td>
+</tr></table>
+<p class="D">&nbsp;</p>
+<p id="StaticRect::Color(class Color)" class="P"><a href="StaticRect"><u>StaticRect</u></a><span class="Q">&amp;</span>&nbsp;<span class="R">Color</span>(<span class="Q">class</span>&nbsp;<span class="R">Color</span>&nbsp;<span class="S">c</span>)</p>
+<p class="T">The color. Default is SColorFace.</p>
+<p class="D">&nbsp;</p>
+<p class="A">&nbsp;</p>
+<p class="A">&nbsp;</p>
+<p class="A">&nbsp;</p>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr><td width="100%"><table width="100%" class="E"><colgroup><col width="100%"></colgroup>
+<tr><td class="F"><p class="G">ImageCtrl</p>
+</td>
+</tr>
+</table></td>
+</tr></table>
+<p class="D">&nbsp;</p>
+<p id="ImageCtrl::class" class="H"><span class="I">class</span><span class="J">&nbsp;</span><span class="K">ImageCtrl</span><span class="J">&nbsp;:&nbsp;</span><span class="I">public</span><span class="J">&nbsp;</span>Ctrl</p>
+<p class="L">Display raster Image. Image is centered in the widget rectangle.</p>
+<p class="D">&nbsp;</p>
+<p class="A">&nbsp;</p>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr><td width="100%"><table width="100%" class="M"><colgroup><col width="100%"></colgroup>
+<tr><td class="N"><p class="O">Public Method List</p>
+</td>
+</tr>
+</table></td>
+</tr></table>
+<p class="D">&nbsp;</p>
+<p id="ImageCtrl::SetImage(const Image&)" class="P"><a href="ImageCtrl"><u>ImageCtrl</u></a><span class="Q">&amp;</span>&nbsp;<span class="R">SetImage</span>(<span class="Q">const</span>&nbsp;<a href="Image"><u>Image</u></a><span class="Q">&amp;</span>&nbsp;<span class="S">_img</span>)</p>
+<p class="T">Sets the image.</p>
+<p class="D">&nbsp;</p>
+<p class="A">&nbsp;</p>
+<p class="A">&nbsp;</p>
+<p class="A">&nbsp;</p>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr><td width="100%"><table width="100%" class="E"><colgroup><col width="100%"></colgroup>
+<tr><td class="F"><p class="G">DrawingCtrl</p>
+</td>
+</tr>
+</table></td>
+</tr></table>
+<p class="D">&nbsp;</p>
+<p id="DrawingCtrl::class" class="H"><span class="I">class</span><span class="J">&nbsp;</span><span class="K">DrawingCtrl</span><span class="J">&nbsp;:&nbsp;</span><span class="I">public</span><span class="J">&nbsp;</span>Ctrl</p>
+<p class="L">Displays Drawing.</p>
+<p class="D">&nbsp;</p>
+<p class="A">&nbsp;</p>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr><td width="100%"><table width="100%" class="M"><colgroup><col width="100%"></colgroup>
+<tr><td class="N"><p class="O">Public Method List</p>
+</td>
+</tr>
+</table></td>
+</tr></table>
+<p class="D">&nbsp;</p>
+<p id="DrawingCtrl::Background(Color)" class="P"><a href="Picture"><u>DrawingCtrl</u></a><span class="Q">&amp;</span>&nbsp;<span class="R">Background</span>(<a href="Color"><u>Color</u></a>&nbsp;<span class="S">color</span>)</p>
+<p class="T">Sets background <span class="S">color</span>. Default is white.</p>
+<p class="D">&nbsp;</p>
+<hr><p class="D">&nbsp;</p>
+<p id="DrawingCtrl::Get()const" class="V"><a href="Drawing"><span class="K"><u>Drawing</u></span></a><span class="K">&nbsp;</span><span class="W">Get</span><span class="K">()&nbsp;</span>const</p>
+<p class="T">Returns Drawing assigned to Picture.</p>
+<p class="D">&nbsp;</p>
+<hr><p class="D">&nbsp;</p>
+<p id="DrawingCtrl::KeepRatio(bool)" class="P"><a href="Picture"><u>DrawingCtrl</u></a><span class="Q">&amp;</span>&nbsp;<span class="R">KeepRatio</span>(<span class="Q">bool</span>&nbsp;<span class="S">keep</span>&nbsp;=&nbsp;<span class="Q">true</span>)</p>
+<p class="T">If active, Picture keeps the aspect ratio of Drawing. Default is on.</p>
+<p class="D">&nbsp;</p>
+<hr><p class="D">&nbsp;</p>
+<p id="DrawingCtrl::NoKeepRatio()" class="P"><a href="Picture"><u>DrawingCtrl</u></a><span class="Q">&amp;</span>&nbsp;<span class="R">NoKeepRatio</span>()</p>
+<p class="T">Do not keep aspect ratio.</p>
+<p class="D">&nbsp;</p>
+<hr><p class="D">&nbsp;</p>
+<p id="DrawingCtrl::Set(const Drawing&)" class="P"><a href="Picture"><u>DrawingCtrl</u></a><span class="Q">&amp;</span>&nbsp;<span class="R">Set</span>(<span class="Q">const</span>&nbsp;<a href="Drawing"><u>Drawing</u></a><span class="Q">&amp;</span>&nbsp;<span class="S">_picture</span>)</p>
+<p id="DrawingCtrl::operator=(const Drawing&)" class="P"><a href="Picture"><u>DrawingCtrl</u></a><span class="Q">&amp;</span>&nbsp;<span class="R">operator=</span>(<span class="Q">const</span>&nbsp;<a href="Drawing"><u>Drawing</u></a><span class="Q">&amp;</span>&nbsp;<span class="S">_picture</span>)</p>
+<p class="T">Assigns the Drawing.</p>
+<p class="D">&nbsp;</p>
+<hr><p class="D">&nbsp;</p>
+<p id="DrawingCtrl::operator=(const Painting&)" class="P"><a href="Picture"><u>DrawingCtrl</u></a><span class="Q">&amp;</span>&nbsp;<span class="R">operator=</span>(<span class="Q">const</span>&nbsp;<a href="Painting"><u>Painting</u></a><span class="Q">&amp;</span>&nbsp;<span class="S">_picture</span>)</p>
+<p class="T">Assigns <span class="S">_picture</span>, converted to Drawing.</p>
+<p class="A">&nbsp;</p>
+<p class="A">&nbsp;</p>
+<p class="A">&nbsp;</p>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr><td width="100%"><table width="100%" class="E"><colgroup><col width="100%"></colgroup>
+<tr><td class="F"><p class="G">SeparatorCtrl</p>
+</td>
+</tr>
+</table></td>
+</tr></table>
+<p class="D">&nbsp;</p>
+<p id="SeparatorCtrl::class" class="H"><span class="I">class</span><span class="J">&nbsp;</span><span class="K">SeparatorCtrl</span><span class="J">&nbsp;:&nbsp;</span><span class="I">public</span><span class="J">&nbsp;</span>Ctrl</p>
+<p class="L">Horizontal or vertical separator line. Direction depends on aspect ratio.</p>
+<p class="D">&nbsp;</p>
+<p class="A">&nbsp;</p>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr><td width="100%"><table width="100%" class="M"><colgroup><col width="100%"></colgroup>
+<tr><td class="N"><p class="O">Public Method List</p>
+</td>
+</tr>
+</table></td>
+</tr></table>
+<p class="D">&nbsp;</p>
+<p id="SeparatorCtrl::Margin(int)" class="P"><a href="SeparatorCtrl"><u>SeparatorCtrl</u></a><span class="Q">&amp;</span>&nbsp;<span class="R">Margin</span>(<span class="Q">int</span>&nbsp;<span class="S">w</span>)</p>
+<p class="T">Sets the left-right (for horizontal separator) or top-bottom margin. Default value is 2.</p>
+<p class="D">&nbsp;</p>
+<hr><p class="D">&nbsp;</p>
+<p id="SeparatorCtrl::Margin(int,int)" class="P"><a href="SeparatorCtrl"><u>SeparatorCtrl</u></a><span class="Q">&amp;</span>&nbsp;<span class="R">Margin</span>(<span class="Q">int</span>&nbsp;<span class="S">l</span>, <span class="Q">int</span>&nbsp;<span class="S">r</span>)</p>
+<p class="T">Sets the top-right (for horizontal separator) or top-bottom to <span class="S">l</span> and <span class="S">r</span>, in that order. Default value is 2.</p>
+<p class="D">&nbsp;</p>
+<hr><p class="D">&nbsp;</p>
+<p id="SeparatorCtrl::SetSize(int)" class="P"><a href="SeparatorCtrl"><u>SeparatorCtrl</u></a><span class="Q">&amp;</span>&nbsp;<span class="R">SetSize</span>(<span class="Q">int</span>&nbsp;<span class="S">w</span>)</p>
+<p class="T">Sets the size returned by GetMinSize - included to affect the way how widget is treated in BarCtrl. Default value is 7.</p>
+<p class="D">&nbsp;</p>
+<hr><p class="D">&nbsp;</p>
+<p id="SeparatorCtrl::SetStyle(const SeparatorCtrl::Style&)" class="P"><a href="SeparatorCtrl"><u>SeparatorCtrl</u></a><span class="Q">&amp;</span>&nbsp;<span class="R">SetStyle</span>(<span class="Q">const</span>&nbsp;<a href="SeparatorCtrl::Style"><u>Style</u></a><span class="Q">&amp;</span>&nbsp;<span class="S">s</span>)</p>
+<p class="T">Sets the visual style to SeparatorCtrl::Style <span class="S">s</span>. The style is a simple structure with two fields:</p>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="X">l1</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">the first margin</p></td></tr></table>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="X">l2</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">the second margin</p></td></tr></table>
+<p class="D">&nbsp;</p>
+<p class="A">&nbsp;</p>
+</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>
+<TABLE BORDER="0" WIDTH="100%"><TR><TD></TD>
+</TR>
+</TABLE>
+<TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" BGCOLOR="#FFFFFF" WIDTH="100%" style="border-style: solid; border-width: 1px; border-color: #6E89AE;padding: 10px;;"><TR><TD><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%"><TR><TD><p class="A"><span class="B"> </span><a href="www$uppweb$contribweb$en-us.html">Do you want to contribute?</a></p>
+</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>
+<script type="text/javascript">var a={'src$CtrlLib$Static$en-us.html':'English'};var p=window.location.pathname.split("/");p=p[p.length-1];var s='<select id="lang" onchange="window.location=document.getElementById(\'lang\').value;">';for(l in a){if(p==l){d=" selected=1"}else{d=""}s+='<option value="'+l+'"'+d+'>'+a[l]+'</option>'}s+='</select>';var d=document.createElement('div');d.innerHTML=s;var c=document.getElementById('langs');c.replaceChild(d,c.firstChild);document.getElementById('langbox').style.display='block';</script></BODY>

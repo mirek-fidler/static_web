@@ -1,0 +1,514 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en-us">
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
+<META NAME="Generator" CONTENT="U++ HTML Package">
+<META NAME="Description" CONTENT="Often projects have the same base, the same structure, and / or even identical parts of code.">
+<TITLE>U++ package/project templates :: U++</TITLE>
+<STYLE TYPE="text/css"><!--
+.A{margin:0px 0px 0px 0px;text-indent:0px;text-align:left;color:#000000;font-family:sans-serif;font-size:10pt;font-weight:normal;font-style:normal;}
+.B{font-size:12pt;}
+.C{margin:0px 0px 16px 0px;text-indent:0px;text-align:left;color:#000000;font-family:serif;font-size:24pt;font-weight:bold;font-style:normal;}
+.D{margin:16px 0px 0px 0px;text-indent:0px;text-align:left;color:#000000;font-family:sans-serif;font-size:16pt;font-weight:bold;font-style:normal;}
+.E{font-style:italic;}
+.F{margin:8px 0px 8px 0px;text-indent:0px;text-align:left;color:#000000;font-family:sans-serif;font-size:10pt;font-weight:normal;font-style:normal;line-height:150%}
+.G{margin:16px 0px 0px 0px;text-indent:0px;text-align:left;color:#000000;font-family:sans-serif;font-size:14pt;font-weight:bold;font-style:normal;}
+.H{display:list-item;list-style-type:square;margin:8px 0px 8px 52px;text-indent:0px;text-align:left;color:#000000;font-family:sans-serif;font-size:10pt;font-weight:normal;font-style:normal;line-height:150%}
+.I{margin:8px 0px 8px 32px;text-indent:0px;text-align:left;color:#000000;font-family:sans-serif;font-size:10pt;font-weight:normal;font-style:normal;line-height:150%}
+.J{font-weight:bold;}
+.K{margin:16px 0px 0px 32px;text-indent:0px;text-align:left;color:#000000;font-family:sans-serif;font-size:14pt;font-weight:bold;font-style:normal;}
+.L{margin:0px 0px 0px 0px;text-indent:0px;text-align:left;color:#000000;font-family:monospace;font-size:10pt;font-weight:normal;font-style:normal;}
+.M{margin:8px 0px 8px 32px;text-indent:0px;text-align:left;color:#000000;font-family:monospace;font-size:10pt;font-weight:normal;font-style:normal;line-height:150%}
+.N{margin:0px 0px 0px 32px;text-indent:0px;text-align:left;color:#000000;font-family:monospace;font-size:10pt;font-weight:normal;font-style:normal;}
+.O{margin:8px 0px 8px 32px;text-indent:0px;text-align:left;color:#000000;font-family:monospace;font-size:10pt;font-weight:normal;font-style:italic;line-height:150%}
+.P{font-style:normal;}
+.Q{margin:0px 47px 0px 0px;text-indent:0px;text-align:left;color:#000000;font-family:serif;font-size:10pt;font-weight:normal;font-style:normal;}
+.R{margin:0px 47px 0px 32px;text-indent:0px;text-align:justify;color:#000000;font-family:serif;font-size:10pt;font-weight:normal;font-style:normal;}
+.S{margin:0px 47px 0px 32px;text-indent:0px;text-align:left;color:#000000;font-family:monospace;font-size:10pt;font-weight:normal;font-style:normal;}
+.T{margin:0px 0px 0px 32px;text-indent:0px;text-align:left;color:#000000;font-family:sans-serif;font-size:10pt;font-weight:normal;font-style:normal;}
+a.l1         { text-decoration:none; font-size: 8pt; font-family: sans-serif; font-weight: normal; }
+a.l1:link    { color:#000000; }
+a.l1:visited { color:#000080; }
+a.l1:hover   { color:#9933CC; }
+a.l1:active  { color:#000000; }
+a.l2         { text-decoration:none; font-size: 12pt; font-family: sans-serif; font-variant: small-caps; }
+a.l2:link    { color:#0066FF; }
+a.l2:visited { color:#FF6600; }
+a.l2:hover   { color:#BC0624; }
+a.l2:active  { color:#BC0024; }
+
+-->
+</STYLE>
+<META NAME="keywords" CONTENT="framework, toolkit, widget, c++, visual, studio, dev-cpp, builder, ide, class, component,wxwidgets, qt, rapid, application, development, rad, mfc, linux, macos, gui, sdl, directx, desktop"><META name="robots" content="index,follow">
+<LINK rel="alternate" type="application/rss+xml" title="SVN changes" href="svnchanges.xml">
+<LINK rel="shortcut icon" type="image/png" href="favicon.png">
+</HEAD><BODY BGCOLOR="#D2D9D2" ALINK="#800000" LINK="#000000" VLINK="#000080"><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%"><TR><TD COLSPAN="3"><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%" BGCOLOR="#FFFFFF" style="border: 1px solid #6E89AE;padding-left: 10px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;"><TR><TD><A HREF="index.html"><IMG SRC="0i.png" ALT="" BORDER="0"></A>
+</TD>
+<TD ALIGN="RIGHT" VALIGN="BOTTOM" STYLE="padding-bottom: 5px; background-image: url('1i.png')"><span style="font-size: 14pt; font-family: sans-serif;"><script type="text/javascript"><!--
+google_ad_client = "pub-1082147624384270";
+google_ad_width = 468;
+google_ad_height = 60;
+google_ad_format = "468x60_as";
+google_ad_type = "text_image";
+google_ad_channel = "";
+google_color_border = "336699";
+google_color_bg = "FFFFFF";
+google_color_link = "0000FF";
+google_color_text = "000000";
+google_color_url = "008000";
+//--></script>
+<script type="text/javascript"
+  src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+&nbsp;&nbsp;</span>
+</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>
+<TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%"><TR><TD COLSPAN="3" BGCOLOR="#D2D9D2" HEIGHT="6"></TD>
+</TR>
+<TR><TD VALIGN="TOP" ALIGN="CENTER"><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="160"><TR><TD ALIGN="CENTER"><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%" BGCOLOR="#FFFFFF" style="border-style: solid; border-width: 1px; border-color: #6E89AE;padding: 0px"><TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px;"><A HREF="www$uppweb$overview$en-us.html" CLASS="l1">Overview</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$examples$en-us.html" CLASS="l1">Examples</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$ss$en-us.html" CLASS="l1">Screenshots</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$comparison$en-us.html" CLASS="l1">Comparisons</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$apps$en-us.html" CLASS="l1">Applications</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$download$en-us.html" CLASS="l1">Download</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$documentation$en-us.html" CLASS="l1">Documentation</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$Tutorials$en-us.html" CLASS="l1">Tutorials</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="app$ide$UppHub$en-us.html" CLASS="l1">UppHub</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$Roadmap$en-us.html" CLASS="l1">Status & Roadmap</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$FAQ$en-us.html" CLASS="l1">FAQ</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="app$ide$About$en-us.html" CLASS="l1">Authors & License</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="https://www.ultimatepp.org/forums" CLASS="l1">Forums</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$Funding$en-us.html" CLASS="l1">Funding U++</A>
+</TD>
+</TR>
+</TABLE>
+<TABLE BORDER="0" WIDTH="100%"><TR><TD></TD>
+</TR>
+</TABLE>
+<TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%" BGCOLOR="#FFFFFF" style="border-style: solid; border-width: 1px; border-color: #6E89AE;padding: 0px"><TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('3i.png'); border: 0px solid black;padding-left:12px; padding-right:0px; padding-top:1px; padding-bottom:1px;color:#FFFFFF;"><B><span style="font-size: 8pt; font-family: sans-serif;">Search on this site</span>
+</B>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:6px; padding-right:0px; padding-top:4px; padding-bottom:4px;border-top: 1px solid #6E89AE;"><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%"><TR><TD><IMG SRC="4i.png" ALT="" BORDER="0"></TD>
+<TD><FORM ACTION="https://www.google.com/search" METHOD="GET" STYLE="margin:0px;padding:0px;"><INPUT TYPE="HIDDEN" NAME="ie" VALUE="UTF-8"><INPUT TYPE="HIDDEN" NAME="oe" VALUE="UTF-8"><INPUT TYPE="TEXT" NAME="q" SIZE="15" MAXLENGTH="256" placeholder="Site search"><INPUT TYPE="HIDDEN" NAME="sitesearch" VALUE="ultimatepp.org"></FORM>
+</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>
+<TABLE BORDER="0" WIDTH="100%"><TR><TD></TD>
+</TR>
+</TABLE>
+<br><div id="fb-root"></div>
+<script type="text/javascript">(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) {return;}
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+<div class="fb-like" data-href="https://www.facebook.com/pages/Upp-Framework/262346610476027?sk=wall" data-send="false" data-layout="button_count" data-width="160" data-show-faces="false" data-font="arial"></div>
+<br><br><script type="text/javascript"><!--
+google_ad_client = "pub-1082147624384270";
+google_ad_width = 160;
+google_ad_height = 600;
+google_ad_format = "160x600_as";
+google_ad_type = "text_image";
+google_ad_channel = "";
+google_color_border = "336699";
+google_color_bg = "FFFFFF";
+google_color_link = "0000FF";
+google_color_text = "000000";
+google_color_url = "008000";
+//--></script>
+<script type="text/javascript"
+  src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script><br><br><script type="text/javascript"><!--
+google_ad_client = "pub-1082147624384270";
+google_ad_width = 160;
+google_ad_height = 90;
+google_ad_format = "160x90_0ads_al_s";
+google_ad_channel = "";
+google_color_border = "336699";
+google_color_bg = "FFFFFF";
+google_color_link = "0000FF";
+google_color_text = "000000";
+google_color_url = "008000";
+//--></script>
+<script type="text/javascript"
+  src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+<br><br><br><br><br><br><A HREF="https://sourceforge.net/projects/upp/"><IMG SRC="https://sourceforge.net/sflogo.php?group_id=93970&amp;type=2" ALT="SourceForge.net Logo" BORDER="0" WIDTH="125" HEIGHT="37"></A>
+<br><br><A HREF="https://flathub.org/en/apps/org.ultimatepp.TheIDE"><IMG SRC="5i.png" ALT="SourceForge.net Logo" BORDER="0" WIDTH="125" HEIGHT="37"></A>
+<br><br><div style="background-color:#ffffff;width:125;height:35"><A HREF="https://github.com/ultimatepp"><IMG SRC="6i.png" ALT="GitHub Logo" BORDER="0" WIDTH="125" HEIGHT="35"></A>
+</div><br><div style="background-color:#ffffff;width:125;height:35"><div style="height:5"></div><A HREF="https://discord.gg/8XzqQzXZzb"><IMG SRC="https://assets-global.website-files.com/6257adef93867e50d84d30e2/636e0b5061df29d55a92d945_full_logo_blurple_RGB.svg" ALT="Discord Logo" BORDER="0" WIDTH="125" HEIGHT="25"></A>
+</div><br></TD>
+</TR>
+</TABLE>
+</TD>
+<TD VALIGN="TOP" BGCOLOR="#D2D9D2"><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="6"><TR><TD></TD>
+</TR>
+</TABLE>
+</TD>
+<TD VALIGN="TOP" WIDTH="100%" BGCOLOR="#D2D9D2"><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" BGCOLOR="#FFFFFF" WIDTH="100%" style="border-style: solid; border-width: 1px; border-color: #6E89AE;padding: 10px;;"><TR><TD><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%"><TR><TD><p class="C">U++ package/project templates</p>
+<hr><p class="D">Table of contents</p>
+<p class="A">&nbsp;</p>
+<p class="A"><a href="#1">1. Prologue</a></p>
+<p class="A"><a href="#2">2. Description</a></p>
+<p class="A"><a href="#3">3. Ready-to-use Templates</a></p>
+<p class="A"> &nbsp;&nbsp;&nbsp;<a href="#3_1">3.1 Overview</a></p>
+<p class="A"> &nbsp;&nbsp;&nbsp;<a href="#3_2">3.2 Basic CtrlLib application</a></p>
+<p class="A"> &nbsp;&nbsp;&nbsp;<a href="#3_3">3.3 Console application (no U++)</a></p>
+<p class="A"> &nbsp;&nbsp;&nbsp;<a href="#3_4">3.4 Core console project</a></p>
+<p class="A"> &nbsp;&nbsp;&nbsp;<a href="#3_5">3.5 CtrlLib application with main window</a></p>
+<p class="A"> &nbsp;&nbsp;&nbsp;<a href="#3_6">3.6 SDL project (no U++)</a></p>
+<p class="A"> &nbsp;&nbsp;&nbsp;<a href="#3_7">3.7 SDL with Core package</a></p>
+<p class="A"><a href="#4">4. Template File Layout</a></p>
+<p class="A"> &nbsp;&nbsp;&nbsp;<a href="#4_1">4.1 Extension</a></p>
+<p class="A"> &nbsp;&nbsp;&nbsp;<a href="#4_2">4.2 Sections</a></p>
+<p class="A"> &nbsp;&nbsp;&nbsp;<a href="#4_3">4.3 Section Order</a></p>
+<p class="A"> &nbsp;&nbsp;&nbsp;<a href="#4_4">4.4 Size</a></p>
+<p class="A"><a href="#5">5. Syntax</a></p>
+<p class="A"> &nbsp;&nbsp;&nbsp;<a href="#5_1">5.1 Comments</a></p>
+<p class="A"> &nbsp;&nbsp;&nbsp;<a href="#5_2">5.2 White Space</a></p>
+<p class="A"> &nbsp;&nbsp;&nbsp;<a href="#5_3">5.3 Basic Rule</a></p>
+<p class="A"> &nbsp;&nbsp;&nbsp;<a href="#5_4">5.4 Delimiters</a></p>
+<p class="A"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#5_4_1">5.4.1 &quot;@@&quot;</a></p>
+<p class="A"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#5_4_2">5.4.2 &quot;??&quot;</a></p>
+<p class="A"> &nbsp;&nbsp;&nbsp;<a href="#5_5">5.5 Expressions</a></p>
+<p class="A"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#5_5_1">5.5.1 Basic Rule</a></p>
+<p class="A"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#5_5_2">5.5.2 &quot;@@</a><a href="#5_5_2"><span class="E">filename_expression</span></a><a href="#5_5_2">&quot;</a></p>
+<p class="A"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#5_5_3">5.5.3 &quot;??</a><a href="#5_5_3"><span class="E">expression</span></a><a href="#5_5_3">&quot;</a></p>
+<p class="A"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#5_5_4">5.5.4 &quot;&lt;: ... :&gt;&quot;</a></p>
+<p class="A"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#5_5_5">5.5.5 &quot;&lt;:? </a><a href="#5_5_5"><span class="E">expression</span></a><a href="#5_5_5"> :&gt; ... &lt;:.:&gt;&quot;</a></p>
+<p class="A"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#5_5_6">5.5.6 &quot;&lt;:? </a><a href="#5_5_6"><span class="E">expression</span></a><a href="#5_5_6"> :&gt; ... &lt;:/:&gt; ... &lt;:.:&gt;&quot;</a></p>
+<p class="A"> &nbsp;&nbsp;&nbsp;<a href="#5_6">5.6 &quot;PACKAGE&quot;</a></p>
+<p class="A"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#5_6_1">5.6.1 Description</a></p>
+<p class="A"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#5_6_2">5.6.2 Usage</a></p>
+<p class="A"> &nbsp;&nbsp;&nbsp;<a href="#5_7">5.7 &quot;PACKAGE_TOUPPER&quot;</a></p>
+<p class="A"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#5_7_1">5.7.1 Description</a></p>
+<p class="A"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#5_7_2">5.7.2 Usage</a></p>
+<p class="A"> &nbsp;&nbsp;&nbsp;<a href="#5_8">5.8 &quot;PACKAGE_TOUPPER_CAPS&quot;</a></p>
+<p class="A"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#5_8_1">5.8.1 Description</a></p>
+<p class="A"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#5_8_2">5.8.2 Usage</a></p>
+<p class="A"> &nbsp;&nbsp;&nbsp;<a href="#5_9">5.9 Header Line</a></p>
+<p class="A"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#5_9_1">5.9.1 Description</a></p>
+<p class="A"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#5_9_2">5.9.2 &quot;template&quot;</a></p>
+<p class="A"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#5_9_3">5.9.3 &quot;</a><a href="#5_9_3"><span class="E">Name</span></a><a href="#5_9_3">&quot;</a></p>
+<p class="A"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#5_9_4">5.9.4 &quot;main&quot;, &quot;sub&quot;</a></p>
+<p class="A"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#5_9_5">5.9.5 Usage</a></p>
+<p class="A"> &nbsp;&nbsp;&nbsp;<a href="#5_10">5.10 &quot;filename&quot;</a></p>
+<p class="A"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#5_10_1">5.10.1 Description</a></p>
+<p class="A"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#5_10_2">5.10.2 Definition</a></p>
+<p class="A"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#5_10_3">5.10.3 Usage</a></p>
+<p class="A"> &nbsp;&nbsp;&nbsp;<a href="#5_11">5.11 &quot;id&quot;</a></p>
+<p class="A"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#5_11_1">5.11.1 Description</a></p>
+<p class="A"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#5_11_2">5.11.2 Definition</a></p>
+<p class="A"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#5_11_3">5.11.3 Usage</a></p>
+<p class="A"> &nbsp;&nbsp;&nbsp;<a href="#5_12">5.12 &quot;option&quot;</a></p>
+<p class="A"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#5_12_1">5.12.1 Description</a></p>
+<p class="A"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#5_12_2">5.12.2 Definition</a></p>
+<p class="A"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#5_12_3">5.12.3 Usage</a></p>
+<p class="A"> &nbsp;&nbsp;&nbsp;<a href="#5_13">5.13 &quot;select&quot;</a></p>
+<p class="A"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#5_13_1">5.13.1 Description</a></p>
+<p class="A"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#5_13_2">5.13.2 Definition</a></p>
+<p class="A"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#5_13_3">5.13.3 Usage</a></p>
+<p class="A"> &nbsp;&nbsp;&nbsp;<a href="#5_14">5.14 &quot;text&quot;</a></p>
+<p class="A"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#5_14_1">5.14.1 Description</a></p>
+<p class="A"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#5_14_2">5.14.2 Definition</a></p>
+<p class="A"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#5_14_3">5.14.3 Usage</a></p>
+<p class="A"> &nbsp;&nbsp;&nbsp;<a href="#5_15">5.15 Undefined variables</a></p>
+<p class="A"><a href="#6">6. Template Dialog Layout</a></p>
+<p class="A"><a href="#7">7. Deployment</a></p>
+<p class="A"><a href="#8">8. Epilogue</a></p>
+<p class="A"><a href="#9">9. UPP File Syntax</a></p>
+<p class="A">&nbsp;</p>
+<hr><p id="1" class="D">1. Prologue</p>
+<p class="F">Often projects have the same base, the same structure, and / or even identical parts of code. One way to avoid unnecessary typing or similar work when creating a new project like that, is to use a parameterized template.</p>
+<p class="F">An U++ package template (UPT) is such a parameterized template. It is used to create one or more package files which can be edited further. There can be more than one UPT.</p>
+<p class="F">And you can create a new UPT yourself! To enable you to do this, is the main purpose of this document.</p>
+<p class="A">&nbsp;</p>
+<hr><p id="2" class="D">2. Description</p>
+<p class="F">A UPT is a special file with a .upt-extension containing text and rules to create additional text.</p>
+<p class="F">When starting TheIDE or calling &quot;File / Set main package..&quot;, the appearing window shows a &quot;New Package&quot; option. If this option is selected, TheIDE looks for UPTs and presents them in a list. Selecting one of them automatically shows a preview of the file(s) to create, possibly modified by options appearing at the same time. When everything is as wanted, &quot;Create&quot; writes the previewed files to disk and the new project is ready to be worked on.</p>
+<p class="A">&nbsp;</p>
+<hr><p id="3" class="D">3. Ready-to-use Templates</p>
+<p id="3_1" class="G">3.1 Overview</p>
+<p class="F">U++ is shipped with the following six UPTs:</p>
+<p class="H">Basic CtrlLib application</p>
+<p class="H">Console application (no U++)</p>
+<p class="H">Core console project</p>
+<p class="H">CtrlLib application with main window</p>
+<p class="H">SDL project (no U++)</p>
+<p class="H">SDL with Core package</p>
+<p class="F">&quot;&lt;empty&gt;&quot; means: do not use any package template.</p>
+<p id="3_2" class="G">3.2 Basic CtrlLib application</p>
+<p class="F">This UPT builds only the foundations of a GUI application: the needed include directive, the GUI equivalent for &quot;main()&quot;, and the required build flag. You have the options to generate a header file (with include guards) and to add the &quot;multithreaded&quot; build flag.</p>
+<p id="3_3" class="G">3.3 Console application (no U++)</p>
+<p class="F">This UPT creates the foundations of a plain C++ console application. Even the non-GUI facilities of U++ cannot be used. There aren't any options.</p>
+<p class="F">This template comes in handy when you just want to exploit TheIDE.</p>
+<p id="3_4" class="G">3.4 Core console project</p>
+<p class="F">This UPT builds the foundations of a console application which uses only the non-GUI facilities of U++. You have the options to create a header file (with include guards) and to add the &quot;multithreaded&quot; build flag. Additionally you can direct the template to include code which reads the command line arguments into a const Vector&lt;String&gt;. (Please note that this is not the same as char* argv[], the &quot;pointees&quot; of which are modifiable and include an additional string - argv[0], the path and name of the running program.)</p>
+<p id="3_5" class="G">3.5 CtrlLib application with main window</p>
+<p class="F">This seems to be the most useful UPT which lays the foundations of a &quot;big&quot; GUI application. You get &nbsp;files containing the framework of your own application class, the name of which you can choose. You have a layout menu offering: no layouts, a general layout file, a main window-specific layout file, and a main-window-specific layout file generating an &quot;OK&quot;- and a &quot;Cancel&quot;-Button. Finally there is an option to generate an image list file and an option to add the &quot;multithreaded&quot; build flag.</p>
+<p id="3_6" class="G">3.6 SDL project (no U++)</p>
+<p class="F">This UPT generates the foundations of a Simple DirectMedia Layer (SDL) console application. The U++ facilities cannot be used. Apart from an option to create a header file and an option to write an event loop, there are three more multimedia-specific options.</p>
+<p class="F">This template comes in handy when you just want to exploit TheIDE.</p>
+<p id="3_7" class="G">3.7 SDL with Core package</p>
+<p class="F">This UPT builds the foundations of a Simple DirectMedia Layer (SDL) console application. Additionally, the non-GUI U++ facilities are enabled. Apart from an option to create a header file and an option to write an event loop, there are three more multimedia-specific options .</p>
+<p class="A">&nbsp;</p>
+<hr><p id="4" class="D">4. Template File Layout</p>
+<p id="4_1" class="G">4.1 Extension</p>
+<p class="F">The extension of a UPT file must be &quot;.upt&quot;. If a file has a different extension or none at all it is not even considered to contain a UPT.</p>
+<p id="4_2" class="G">4.2 Sections</p>
+<p class="F">A UPT file is made up of three distinct sections:</p>
+<p class="H">The header line</p>
+<p class="H">The variable definitions</p>
+<p class="H">The file definitions</p>
+<p class="F">If the header line is missing, the file is classified as invalid and ignored.</p>
+<p class="F">In principle the variable definitions are optional, although it is just them which makes a UPT flexible and thus valuable.</p>
+<p class="F">The non-existence of any file definition, although syntactically safe, makes a UPT file absolutely useless. After all, a UPT is to generate files. If there is no file definition, a file simply cannot be created.</p>
+<p id="4_3" class="G">4.3 Section Order</p>
+<p class="F">The sections of a UPT file must appear in the following order:</p>
+<p class="I"><span class="J">1.</span> The header line</p>
+<p class="I"><span class="J">2.</span> The variable definitions - if there aren't any: the file definitions</p>
+<p class="I"><span class="J">3.</span> The file definitions (if there are variable definitions)</p>
+<p class="F">If the header line is not at the beginning of the file - apart from comments or any white space -, the file is classified as invalid and ignored. The header line is terminated by a semicolon.</p>
+<p class="F">The variable definition section is terminated by the beginning of the file definition section which starts with (the first) &quot;@@&quot;. Variable definitions which follow the file definition(s) are considered simple text, belonging to the (last) file.</p>
+<p class="F">The file definition section is terminated by the end of the UPT file.</p>
+<p id="4_4" class="G">4.4 Size</p>
+<p class="F">The size of the UPT file and such the number and the size(s) of the generated file(s) are virtually unlimited.</p>
+<p class="A">&nbsp;</p>
+<hr><p id="5" class="D">5. Syntax</p>
+<p id="5_1" class="G">5.1 Comments</p>
+<p class="F">You can write standard C++ comments (&quot;/* ... */ and &quot;//&quot;) as usual. Inside of the variable definition section they behave as expected. Inside of the file definition section they become comments in the generated file. Putting &quot;/*&quot; into the variable definition section and &quot;*/&quot; into the file definition section leads to weird results.</p>
+<p id="5_2" class="G">5.2 White Space</p>
+<p class="F">Inside of the header line and the variable definition section, but outside of a word or a number, extra white space doesn't count.</p>
+<p class="F">Inside of the file definition section and starting with the second line of each file definition the same rule applies inside of expressions. Outside of expressions any white space defines the layout of the respective file. That simply means: white space appears as white space in the generated file.</p>
+<p id="5_3" class="G">5.3 Basic Rule</p>
+<p class="F">Inside of the file definition section any text which is not part of an expression appears unchanged in the generated file.</p>
+<p id="5_4" class="G">5.4 Delimiters</p>
+<p id="5_4_1" class="K">5.4.1 &quot;@@&quot;</p>
+<p class="I">&quot;@@&quot; marks the beginning of a file definition. Everything up to this delimiter is part of the header line, a variable definition, or a previous file definition.</p>
+<p class="I">But &quot;@@&quot; is a valid delimiter only at the beginning of a line. In this case even white space matters. If &quot;@@&quot; are not the very first two characters of the line, they represent just plain text.</p>
+<p class="I">&quot;@@&quot; functions not only as a delimiter but mainly as (the beginning of) an expression.</p>
+<p id="5_4_2" class="K">5.4.2 &quot;??&quot;</p>
+<p class="I">Although &quot;??&quot; marks the possible nullification of a file definition, it is more an expression than a delimiter.</p>
+<p class="I">It must appear inside of a file definition. If not, the UPT file is classified as invalid and ignored.</p>
+<p class="I">&quot;??&quot; is a valid delimiter only at the beginning of a line. In this case even white space matters. If &quot;??&quot; are not the very first two characters of the line, they represent just plain text.</p>
+<p class="I">&quot;??&quot; makes sense only in cooperation with an expression. Standing alone it makes its line disappear.</p>
+<p id="5_5" class="G">5.5 Expressions</p>
+<p id="5_5_1" class="K">5.5.1&nbsp;&nbsp;&nbsp;&nbsp;Basic Rule</p>
+<p class="I">As the UPT file is evaluated by CParser, you can use any valid numerical or logical C expression or any combination of them, wherever an expression is permitted. The numeric values are of type &quot;double&quot;.</p>
+<p class="I">Expressions are meant to be used inside of the file definition section.</p>
+<p class="I">You can also use such an expression inside of the variable definition section as a default value for an option variable and a select variable, if this makes sense to you.</p>
+<p class="I">NEVER USE AN EXPRESSION TO SET THE DEFAULT VALUE OF A FILENAME VARIABLE OR AN ID VARIABLE! YOUR COMPUTER IS LIKELY TO CRASH AS SOON AS YOUR TEMPLATE IS SELECTED.</p>
+<p id="5_5_2" class="K">5.5.2 &quot;@@<span class="E">filename_expression</span>&quot;</p>
+<p class="I">&quot;@@&quot; marks the beginning of a file name. The name starts immediately after the second &quot;@&quot; (with the third character of the line) and ends with the last character of the logical line. If you enter a filename as a literal, make sure that it is valid, especially if you use white space. The validity of a filename depends on the OS.</p>
+<p class="I">There are three typical patterns (the file extensions are just examples), although other or more complicated expressions are possible:</p>
+<p class="L">&nbsp;&nbsp;&nbsp;&nbsp;@@&lt;:PACKAGE:&gt;.cpp</p>
+<p class="L">&nbsp;&nbsp;&nbsp;&nbsp;@@&lt;:<span class="E">filename_variable</span>:&gt;.hpp</p>
+<p class="L">&nbsp;&nbsp;&nbsp;&nbsp;@@<span class="E">filename_literal</span>.txt</p>
+<p id="5_5_3" class="K">5.5.3 &quot;??<span class="E">expression</span>&quot;</p>
+<p class="I">&quot;??&quot; decides whether a file is to be created. It evaluates the following expression. If the result is true, the file is created. If the result is false, the entire file is discarded. This holds, even if there are lines above the line containing the &quot;??&quot;.</p>
+<p class="I">&quot;??&quot; has a second effect. Beginning with the first file template containing a &quot;??<span class="E">expression</span>&quot; (&quot;??&quot; alone does not suffice!) &quot;&lt;:PACKAGE:&gt;&quot; retains the path - if any - in the variable. Without such a line the path - if any - is removed from the variable. That means:</p>
+<p class="I">Independent of the value of &quot;<span class="E">expression</span>&quot; the filename templates of all the files preceding the file template containing the first &quot;??<span class="E">expression</span>&quot; don't show the path - if any - in &lt;: PACKAGE :&gt;.</p>
+<p class="I">If &quot;??<span class="E">expression</span>&quot; evaluates to &quot;true&quot; &quot;&lt;:PACKAGE:&gt;&quot; in the containing file template shows path - if any - and filename.</p>
+<p class="I">If &quot;??<span class="E">expression</span>&quot; evaluates to &quot;false&quot; the containing file template simply doesn't show up.</p>
+<p class="I">Independent of the value of &quot;<span class="E">expression</span>&quot; the filename templates of all the files following the file template containing the first &quot;??<span class="E">expression</span>&quot; DO show the path - if any - in &lt;: PACKAGE :&gt;.</p>
+<p id="5_5_4" class="K">5.5.4 &quot;&lt;: ... :&gt;&quot;</p>
+<p class="I">&quot;&lt;:&quot; and &quot;:&gt;&quot; convert the enclosed literal into an expression which is evaluated. The result is then displayed without the delimiters.</p>
+<p class="I">A string, enclosed in quotation marks, yields exactly this string. Without quotations marks it is considered a variable. If this variable has been defined, its value is displayed. Otherwise, nothing is shown.</p>
+<p class="I">You can combine numerical expressions and strings, e.g.:</p>
+<p class="I">&lt;:condition_1 ? &quot;text_1&quot; : &quot;text_2&quot;:&gt;</p>
+<p class="I">You cannot nest &quot;&lt;: ... :&gt;&quot;.</p>
+<p class="I">&quot;&lt;: :&gt;&quot; and a single &quot;&lt;:&quot; show a corresponding error message. A single &quot;:&gt;&quot; is just a plain string.</p>
+<p id="5_5_5" class="K">5.5.5 &quot;&lt;:? <span class="E">expression</span> :&gt; ... &lt;:.:&gt;&quot;</p>
+<p class="I">This pattern emulates &quot;if (<span class="E">expression</span>) ...;&quot;</p>
+<p class="I">White space inside of the &quot;&lt;::&gt;&quot;s doesn't matter. Between them it does: it produces white space in the resulting file.</p>
+<p id="5_5_6" class="K">5.5.6&nbsp;&nbsp;&nbsp;&nbsp;&quot;&lt;:? <span class="E">expression</span> :&gt; ... &lt;:/:&gt; ... &lt;:.:&gt;&quot;</p>
+<p class="I">This pattern emulates &quot;if (<span class="E">expression</span>) ...; else ...;&quot;</p>
+<p class="I">White space inside of the &quot;&lt;::&gt;&quot;s doesn't matter. Between them it does: it produces white space in the resulting file.</p>
+<p id="5_6" class="G">5.6 &quot;PACKAGE&quot;</p>
+<p id="5_6_1" class="K">5.6.1&nbsp;&nbsp;&nbsp;&nbsp;Description</p>
+<p class="I">&quot;PACKAGE&quot; is the predefined identifier of a variable to which the content of the &quot;Package name&quot; input field is assigned.</p>
+<p id="5_6_2" class="K">5.6.2 Usage</p>
+<p class="I">The input is filtered. Only alphanumeric characters, &quot;_&quot;, &quot;/&quot;, and &quot;\&quot; are accepted. That means that you can enter a path but not a drive specification as &quot;:&quot; is not a valid character (e. g., Windows). &nbsp;&quot;\&quot; is immediately transformed into &quot;/&quot;.</p>
+<p class="I">Whether the path part in the &quot;Package name&quot; input field - if any - is shown by &lt;: PACKAGE :&gt; depends on the preceding existence of a &quot;??<span class="E">expression</span>&quot; in the UPT file. Refer to section 5.5.3 &quot;??<span class="E">expression</span>&quot;.</p>
+<p class="M">... &lt;: PACKAGE :&gt; ...</p>
+<p id="5_7" class="G">5.7 &quot;PACKAGE_TOUPPER&quot;</p>
+<p id="5_7_1" class="K">5.7.1 Description</p>
+<p class="I">&quot;PACKAGE_TOUPPER&quot; is the predefined identifier of a variable to which the content of the &quot;Package name&quot; input field, transformed into uppercase letters, is assigned. If there were uppercase letters before, they are not changed.</p>
+<p class="I">The reason for the existence of this variable is a well-established practice to write uppercase include guards in .hpp- (.h-) files.</p>
+<p class="I">&quot;PACKAGE_TOUPPER&quot; is only available with U++ releases later than &quot;609-dev3&quot;.</p>
+<p id="5_7_2" class="K">5.7.2 Usage</p>
+<p class="I">In contrast to &quot;PACKAGE&quot;, &quot;PACKAGE_TOUPPER&quot; always contains the path part - if any - of the &quot;Package name&quot; input field.</p>
+<p class="M">... &lt;: PACKAGE_TOUPPER :&gt; ...</p>
+<p id="5_8" class="G">5.8&nbsp;&nbsp;&nbsp;&nbsp;&quot;PACKAGE_TOUPPER_CAPS&quot;</p>
+<p id="5_8_1" class="K">5.8.1 Description</p>
+<p class="I">&quot;PACKAGE_TOUPPER_CAPS&quot; is the predefined identifier of a variable to which the content of the &quot;Package name&quot; input field, transformed into uppercase letters, is assigned. In contrast to &quot;PACKAGE_TO_UPPER&quot; the sequence of a lowercase letter followed by an uppercase letter is separated by &quot;_&quot;, but not vice versa. Furthermore &quot;/&quot; is replaced by &quot;_&quot;, e.g.:</p>
+<p class="I">MyPath/MyPackage -&gt; MY_PATH_MY_PACKAGE</p>
+<p class="I">The reason for the existence of this variable is a well-established practice to write uppercase include guards in .hpp- (.h-) files.</p>
+<p class="I">&quot;PACKAGE_TOUPPER_CAPS&quot; is only available with U++ releases later than &quot;609-dev3&quot;.</p>
+<p id="5_8_2" class="K">5.8.2&nbsp;&nbsp;&nbsp;&nbsp;Usage</p>
+<p class="I">In contrast to &quot;PACKAGE&quot;, &quot;PACKAGE_TOUPPER_CAPS&quot; always contains the path part - if any - of the &quot;Package name&quot; input field.</p>
+<p class="M">... &lt;: PACKAGE_TOUPPER_CAPS :&gt; ...</p>
+<p id="5_9" class="G">5.9 Header Line</p>
+<p id="5_9_1" class="K">5.9.1 Description</p>
+<p class="I">The header line identifies a UPT file as such, names the template and categorizes it.</p>
+<p id="5_9_2" class="K">5.9.2 &quot;template&quot;</p>
+<p class="I">The &quot;template&quot; keyword identifies the UPT file as such. If this keyword is not at the beginning of the file - apart from comments or any white space -, the file is classified as invalid and ignored. The keyword must no be enclosed in quotation marks.</p>
+<p id="5_9_3" class="K">5.9.3 &quot;<span class="E">Name</span>&quot;</p>
+<p class="I">This is the name of the UPT file which appears in the template list of the &quot;Create new package&quot; dialog. It must be enclosed in quotation marks. If the name is missing, the file is classified as invalid and ignored.</p>
+<p id="5_9_4" class="K">5.9.4 &quot;main&quot;, &quot;sub&quot;</p>
+<p class="I">These keywords which must not be enclosed in quotation marks, determine the scope of the UPT file.</p>
+<p class="I">The &quot;Select main package&quot; window contains the option &quot;All packages&quot;. If this option is checked, all the &quot;main&quot; UPT files only are presented in the template list of the &quot;Create new package&quot; dialog. If this option is unchecked all the &quot;sub&quot; UPT files only are shown in the template list of the &quot;Create new package&quot; dialog.</p>
+<p class="I">A UPT file can be both &quot;main&quot; and &quot;sub&quot;.</p>
+<p class="I">If neither keyword is used, the UPT file is silently ignored.</p>
+<p id="5_9_5" class="K">5.9.5 Usage</p>
+<p class="I">The header line is terminated by a semicolon.</p>
+<p class="M">template &quot;<span class="E">name</span>&quot; [main | sub | main sub | sub main];</p>
+<p id="5_10" class="G">5.10 &quot;filename&quot;</p>
+<p id="5_10_1" class="K">5.10.1 Description</p>
+<p class="I">&quot;filename&quot; defines a variable which is determined to host a filename. Using it makes a named edit field appear. The input is filtered. Only alphanumeric characters, &quot;_&quot;, and &quot;.&quot; are accepted. That means that you cannot enter a path or a drive specification (e. g., Windows).</p>
+<p id="5_10_2" class="K">5.10.2 Definition</p>
+<p class="I">The keyword and the variable name must not be enclosed in quotation marks, whereas the title must. Doing otherwise results in an error message and the UPT file is ignored. You can set a literal, enclosed in quotation marks, as default. Using a variable name instead, although syntactically correct, doesn't work. The variable definition is terminated by a semicolon.</p>
+<p class="M">filename &quot;<span class="E">title</span>&quot; <span class="E">variable_name</span> [= &quot;<span class="E">default&quot;</span>];</p>
+<p id="5_10_3" class="K">5.10.3&nbsp;&nbsp;&nbsp;&nbsp;Usage</p>
+<p class="M">... &lt;: <span class="E">variable_name</span> :&gt; ...</p>
+<p class="I">You can compare filename variables and act based on the result of this comparison.</p>
+<p id="5_11" class="G">5.11 &quot;id&quot;</p>
+<p id="5_11_1" class="K">5.11.1 Description</p>
+<p class="I">&quot;id&quot; defines a variable which is determined to host a string. Using it makes a named edit field appear. The input is filtered. Only alphanumeric characters and &quot;_&quot; are accepted.</p>
+<p id="5_11_2" class="K">5.11.2 Definition</p>
+<p class="I">The keyword and the variable name must not be enclosed in quotation marks, whereas the title must. Doing otherwise results in an error message and the UPT file is ignored. You can set a literal, enclosed in quotation marks, as default. Using a variable name instead, although syntactically correct, doesn't work. The variable definition is terminated by a semicolon.</p>
+<p class="M">id &quot;<span class="E">title</span>&quot; <span class="E">variable_name</span> [= &quot;<span class="E">default&quot;</span>];</p>
+<p id="5_11_3" class="K">5.11.3 Usage</p>
+<p class="M">... &lt;: <span class="E">variable_name</span> :&gt; ...</p>
+<p class="I">You can compare id variables and act based on the result of this comparison.</p>
+<p id="5_12" class="G">5.12 &quot;option&quot;</p>
+<p id="5_12_1" class="K">5.12.1 Description</p>
+<p class="I">&quot;option&quot; defines a variable which is determined to host a boolean value. Using it makes a named option box appear.</p>
+<p id="5_12_2" class="K">5.12.2 Definition</p>
+<p class="I">The keyword and the variable name must not be enclosed in quotation marks, whereas the title must. Doing otherwise results in an error message and the UPT file is ignored. You can set either &quot;0&quot; or &quot;1&quot;, enclosed in quotation marks or not, as default. Everything else is evaluated as &quot;false&quot;. Using a variable name instead, although syntactically correct, doesn't work. The variable definition is terminated by a semicolon.</p>
+<p class="I">option &quot;<span class="E">title</span>&quot; <span class="E">variable_name</span> [= [&quot;]0 | 1[<span class="E">&quot;</span>]];</p>
+<p id="5_12_3" class="K">5.12.3 Usage</p>
+<p class="N">... &lt;: <span class="E">variable_name</span> ? <span class="E">number_1</span> : <span class="E">number_2</span> :&gt; ...</p>
+<p class="N">... &lt;: <span class="E">variable_name</span> ? &quot;<span class="E">string_1</span>&quot; : &quot;<span class="E">string_2</span>&quot; :&gt; ...</p>
+<p class="N">... &lt;: ? <span class="E">variable_name</span> :&gt;<span class="E">number</span>&lt;: . :&gt; ...</p>
+<p class="N">... &lt;: ? <span class="E">variable_name</span> :&gt;<span class="E">string</span>&lt;: . :&gt; ...</p>
+<p class="N">... &lt;: ? <span class="E">variable_name</span> :&gt;<span class="E">number_1</span>&lt;: / :&gt;<span class="E">number_2</span>&lt;: . :&gt; ...</p>
+<p class="N">... &lt;: ? <span class="E">variable_name</span> :&gt;<span class="E">string_1</span>&lt;: / :&gt;<span class="E">string_2</span>&lt;: . :&gt; ...</p>
+<p class="I">You can compare option variables and act based on the result of this comparison.</p>
+<p id="5_13" class="G">5.13 &quot;select&quot;</p>
+<p id="5_13_1" class="K">5.13.1 Description</p>
+<p class="I">&quot;select&quot; defines a variable which works like an enumeration. Integer values, starting with 0, are assigned to named options. Using &quot;select&quot; makes a named DropList appear, of which the options can be selected but not edited.</p>
+<p id="5_13_2" class="K">5.13.2 Definition</p>
+<p class="I">The options must be listed inside of parentheses. The keyword and the variable name must not be enclosed in quotation marks, whereas the options and the title must. Doing otherwise or giving no option at all, results in an error message and the UPT file is ignored. The options must be separated by commas. If not, they are concatenated. You can set any value, enclosed in quotation marks or not, as default, but only integer values in the range &quot;0 to number_of_last_option - 1&quot; are accepted. Everything else makes no default option appear. The same holds for variables, be they defined or not. If you give no default at all, the first option becomes the default. The variable definition is terminated by a semicolon.</p>
+<p class="O"><span class="P">option (&quot;option_1&quot;, &quot;option_2&quot;, ...) &quot;</span>title<span class="P">&quot;</span> variable_name</p>
+<p class="M">&nbsp;&nbsp;&nbsp;&nbsp;[= 0 | ... | <span class="E">number_of_last_option - 1</span>];</p>
+<p id="5_13_3" class="K">5.13.3 Usage</p>
+<p class="N">... &lt;: <span class="E">variable_name</span> == <span class="E">zero_based_option_index</span> :&gt; ... &lt;: . :&gt;</p>
+<p class="N">... &lt;: <span class="E">variable_name</span> &gt; <span class="E">zero_based_option_index</span> :&gt; ... &lt;: . :&gt;</p>
+<p class="N">... &lt;: <span class="E">variable_name</span> &gt;= <span class="E">zero_based_option_index</span> :&gt; ... &lt;: . :&gt;</p>
+<p class="N">... &lt;: <span class="E">variable_name</span> &lt; <span class="E">zero_based_option_index</span> :&gt; ... &lt;: . :&gt;</p>
+<p class="N">... &lt;: <span class="E">variable_name</span> &lt;= <span class="E">zero_based_option_index</span> :&gt; ... &lt;: . :&gt;</p>
+<p class="N">... &lt;: <span class="E">variable_name</span> != <span class="E">zero_based_option_index</span> :&gt; ... &lt;: . :&gt;</p>
+<p class="I">You can select filename variables and act based on the result of this comparison.</p>
+<p id="5_14" class="G">5.14 &quot;text&quot;</p>
+<p id="5_14_1" class="K">5.14.1 Description</p>
+<p class="I">&quot;text&quot; defines a variable which is determined to host an arbitrary string. Using it makes a named edit field appear. The input is not filtered. Any character is accepted.</p>
+<p id="5_14_2" class="K">5.14.2 Definition</p>
+<p class="I">The keyword and the variable name must not be enclosed in quotation marks, whereas the title must. Doing otherwise results in an error message and the UPT file is ignored. You can set a literal, enclosed in quotation marks, as default. Using a variable name instead, although syntactically correct, doesn't work. The variable definition is terminated by a semicolon.</p>
+<p class="M">text &quot;<span class="E">title</span>&quot; <span class="E">variable_name</span> [= &quot;<span class="E">default&quot;</span>];</p>
+<p id="5_14_3" class="K">5.14.3 Usage</p>
+<p class="M">... &lt;: <span class="E">variable_name</span> :&gt; ...</p>
+<p class="I">You can compare text variables and act based on the result of this comparison.</p>
+<p id="5_15" class="G">5.15 Undefined variables</p>
+<p class="F">Using undefined variables in syntactically correct places causes no harm. Nevertheless an undefined variable has no value, even not 0.</p>
+<p class="A">&nbsp;</p>
+<hr><p id="6" class="D">6. Template Dialog Layout</p>
+<p class="F">The &quot;Create in&quot;-DropList always shows the currently selected assembly as well as the &quot;uppsrc&quot; assembly.</p>
+<p class="F">The templates are sorted alphabetically. If you have many templates, the template list will get scrollbars. So the number of your templates is virtually unlimited.</p>
+<p class="F">The variables appear in the order as entered. If you have many variables, they may not all be shown. Just enlarge the window. But this dialog section will not get scrollbars, so the number of variables is indeed limited.</p>
+<p class="F">The preview window displays TAB characters as small upright rectangles, but after opening the generated project files these characters show up as usual.</p>
+<p class="A">&nbsp;</p>
+<hr><p id="7" class="D">7. Deployment</p>
+<p class="F">TheIDE looks in the following directories for UPT files:</p>
+<p class="H">MyApps</p>
+<p class="H">uppsrc</p>
+<p class="F">Sub-directories are also scanned.</p>
+<p class="Q">&nbsp;</p>
+<hr><p id="8" class="D">8. Epilogue</p>
+<p class="F">This documentation is valid for U++ releases starting with &quot;610-dev3&quot;.</p>
+<p class="F">If you find any mistakes, be they just linguistic or typographic, please report them on the U++ forum (http://www.arilect.com/upp/forum/).</p>
+<p class="F">If something is not clear or seems to be not clear, please report so on the U++ forum.</p>
+<p class="F">If this documentation is insufficient or seems to be insufficient, please say so on the U++ forum.</p>
+<p class="A">&nbsp;</p>
+<hr><p id="9" class="D">9. UPP File Syntax</p>
+<p class="F">Each package has a package definition file, the name of which must be the same as the name of the package folder. The extension is &quot;.upp&quot;.</p>
+<p class="F">If you create U++ GUI applications, the UPP file normally has the following three sections:</p>
+<p class="R">&nbsp;</p>
+<p class="S">uses</p>
+<p class="S"> &nbsp;&nbsp;&nbsp;CtrlLib;</p>
+<p class="S">&nbsp;</p>
+<p class="S">file</p>
+<p class="S"><span class="E"> &nbsp;&nbsp;&nbsp;file_1.ext</span>,</p>
+<p class="S"><span class="E"> &nbsp;&nbsp;&nbsp;file_2.ext</span>,</p>
+<p class="S"> &nbsp;&nbsp;&nbsp;...;</p>
+<p class="S">&nbsp;</p>
+<p class="S">mainconfig</p>
+<p class="S"> &nbsp;&nbsp;&nbsp;&quot;&quot; = &quot;GUI <span class="E">flag_2</span> ...&quot;;</p>
+<p class="T">&nbsp;</p>
+</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>
+<TABLE BORDER="0" WIDTH="100%"><TR><TD></TD>
+</TR>
+</TABLE>
+<TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" BGCOLOR="#FFFFFF" WIDTH="100%" style="border-style: solid; border-width: 1px; border-color: #6E89AE;padding: 10px;;"><TR><TD><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%"><TR><TD><p class="A"><span class="B"> </span><a href="www$uppweb$contribweb$en-us.html">Do you want to contribute?</a></p>
+</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>
+<script type="text/javascript">var a={'app$ide$PackageTemplates$en-us.html':'English'};var p=window.location.pathname.split("/");p=p[p.length-1];var s='<select id="lang" onchange="window.location=document.getElementById(\'lang\').value;">';for(l in a){if(p==l){d=" selected=1"}else{d=""}s+='<option value="'+l+'"'+d+'>'+a[l]+'</option>'}s+='</select>';var d=document.createElement('div');d.innerHTML=s;var c=document.getElementById('langs');c.replaceChild(d,c.firstChild);document.getElementById('langbox').style.display='block';</script></BODY>

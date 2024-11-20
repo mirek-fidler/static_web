@@ -1,0 +1,442 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en-us">
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
+<META NAME="Generator" CONTENT="U++ HTML Package">
+<META NAME="Description" CONTENT="After installing U++ find the appropriate TheIDE executable file and launch it. By default the file should be localized in the installation directory.">
+<TITLE>Getting started with TheIDE :: U++</TITLE>
+<STYLE TYPE="text/css"><!--
+.A{margin:0px 0px 0px 0px;text-indent:0px;text-align:left;color:#000000;font-family:sans-serif;font-size:10pt;font-weight:normal;font-style:normal;}
+.B{font-size:12pt;}
+.C{margin:0px 0px 16px 0px;text-indent:0px;text-align:left;color:#000000;font-family:serif;font-size:24pt;font-weight:bold;font-style:normal;}
+.D{margin:16px 0px 0px 0px;text-indent:0px;text-align:left;color:#000000;font-family:sans-serif;font-size:16pt;font-weight:bold;font-style:normal;}
+.E{margin:8px 0px 8px 0px;text-indent:0px;text-align:left;color:#000000;font-family:sans-serif;font-size:10pt;font-weight:normal;font-style:normal;line-height:150%}
+.F{margin:16px 0px 0px 0px;text-indent:0px;text-align:left;color:#000000;font-family:sans-serif;font-size:14pt;font-weight:bold;font-style:normal;}
+.G{margin:0px 0px 0px 32px;text-indent:0px;text-align:center;color:#000000;font-family:sans-serif;font-size:10pt;font-weight:normal;font-style:normal;}
+.H{display:list-item;list-style-type:square;margin:0px 0px 8px 58px;text-indent:0px;text-align:left;color:#000000;font-family:sans-serif;font-size:10pt;font-weight:normal;font-style:normal;line-height:150%}
+.I{margin:0px 0px 0px 0px;text-indent:0px;text-align:center;color:#000000;font-family:sans-serif;font-size:10pt;font-weight:normal;font-style:normal;}
+.J{display:list-item;list-style-type:square;margin:0px 0px 8px 58px;text-indent:0px;text-align:left;color:#000000;font-family:sans-serif;font-size:10pt;font-weight:normal;font-style:italic;line-height:150%}
+.K{font-weight:bold;font-style:italic;}
+.L{margin:0px 0px 0px 64px;text-indent:0px;text-align:left;color:#000080;font-family:monospace;font-size:9pt;font-weight:normal;font-style:normal;}
+.M{display:list-item;list-style-type:disc;margin:8px 0px 8px 45px;text-indent:0px;text-align:left;color:#000000;font-family:sans-serif;font-size:10pt;font-weight:normal;font-style:normal;line-height:150%}
+.N{border-collapse:collapse;table-layout:auto;border: 2px solid #000000;}
+.O{padding: 3px 5px 3px 5px;border-left: 1px solid #000000;border-top: 1px solid #000000;border-right: 1px solid #000000;border-bottom: 1px solid #000000;background-color:#CCCCCC;vertical-align:middle;}
+.P{margin:0px 0px 0px 0px;text-indent:0px;text-align:left;color:#000000;font-family:sans-serif;font-size:10pt;font-weight:bold;font-style:normal;}
+.Q{margin:0px 0px 0px 0px;text-indent:0px;text-align:left;color:#000000;font-family:sans-serif;font-size:10pt;font-weight:bold;font-style:italic;}
+.R{padding: 3px 5px 3px 5px;border-left: 1px solid #000000;border-top: 1px solid #000000;border-right: 1px solid #000000;border-bottom: 1px solid #000000;background-color:#FFFFFF;vertical-align:middle;}
+.S{margin:0px 0px 0px 0px;text-indent:0px;text-align:left;color:#000000;font-family:sans-serif;font-size:10pt;font-weight:normal;font-style:italic;}
+.T{font-weight:bold;}
+.U{margin:0px 0px 8px 38px;text-indent:30px;text-align:left;color:#000000;font-family:sans-serif;font-size:10pt;font-weight:normal;font-style:italic;line-height:150%}
+a.l1         { text-decoration:none; font-size: 8pt; font-family: sans-serif; font-weight: normal; }
+a.l1:link    { color:#000000; }
+a.l1:visited { color:#000080; }
+a.l1:hover   { color:#9933CC; }
+a.l1:active  { color:#000000; }
+a.l2         { text-decoration:none; font-size: 12pt; font-family: sans-serif; font-variant: small-caps; }
+a.l2:link    { color:#0066FF; }
+a.l2:visited { color:#FF6600; }
+a.l2:hover   { color:#BC0624; }
+a.l2:active  { color:#BC0024; }
+
+-->
+</STYLE>
+<META NAME="keywords" CONTENT="framework, toolkit, widget, c++, visual, studio, dev-cpp, builder, ide, class, component,wxwidgets, qt, rapid, application, development, rad, mfc, linux, macos, gui, sdl, directx, desktop"><META name="robots" content="index,follow">
+<LINK rel="alternate" type="application/rss+xml" title="SVN changes" href="svnchanges.xml">
+<LINK rel="shortcut icon" type="image/png" href="favicon.png">
+</HEAD><BODY BGCOLOR="#D2D9D2" ALINK="#800000" LINK="#000000" VLINK="#000080"><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%"><TR><TD COLSPAN="3"><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%" BGCOLOR="#FFFFFF" style="border: 1px solid #6E89AE;padding-left: 10px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;"><TR><TD><A HREF="index.html"><IMG SRC="0i.png" ALT="" BORDER="0"></A>
+</TD>
+<TD ALIGN="RIGHT" VALIGN="BOTTOM" STYLE="padding-bottom: 5px; background-image: url('1i.png')"><span style="font-size: 14pt; font-family: sans-serif;"><script type="text/javascript"><!--
+google_ad_client = "pub-1082147624384270";
+google_ad_width = 468;
+google_ad_height = 60;
+google_ad_format = "468x60_as";
+google_ad_type = "text_image";
+google_ad_channel = "";
+google_color_border = "336699";
+google_color_bg = "FFFFFF";
+google_color_link = "0000FF";
+google_color_text = "000000";
+google_color_url = "008000";
+//--></script>
+<script type="text/javascript"
+  src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+&nbsp;&nbsp;</span>
+</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>
+<TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%"><TR><TD COLSPAN="3" BGCOLOR="#D2D9D2" HEIGHT="6"></TD>
+</TR>
+<TR><TD VALIGN="TOP" ALIGN="CENTER"><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="160"><TR><TD ALIGN="CENTER"><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%" BGCOLOR="#FFFFFF" style="border-style: solid; border-width: 1px; border-color: #6E89AE;padding: 0px"><TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px;"><A HREF="www$uppweb$overview$en-us.html" CLASS="l1">Overview</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$examples$en-us.html" CLASS="l1">Examples</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$ss$en-us.html" CLASS="l1">Screenshots</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$comparison$en-us.html" CLASS="l1">Comparisons</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$apps$en-us.html" CLASS="l1">Applications</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$download$en-us.html" CLASS="l1">Download</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$documentation$en-us.html" CLASS="l1">Documentation</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$Tutorials$en-us.html" CLASS="l1">Tutorials</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="app$ide$UppHub$en-us.html" CLASS="l1">UppHub</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$Roadmap$en-us.html" CLASS="l1">Status & Roadmap</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$FAQ$en-us.html" CLASS="l1">FAQ</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="app$ide$About$en-us.html" CLASS="l1">Authors & License</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="https://www.ultimatepp.org/forums" CLASS="l1">Forums</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$Funding$en-us.html" CLASS="l1">Funding U++</A>
+</TD>
+</TR>
+</TABLE>
+<TABLE BORDER="0" WIDTH="100%"><TR><TD></TD>
+</TR>
+</TABLE>
+<TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%" BGCOLOR="#FFFFFF" style="border-style: solid; border-width: 1px; border-color: #6E89AE;padding: 0px"><TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('3i.png'); border: 0px solid black;padding-left:12px; padding-right:0px; padding-top:1px; padding-bottom:1px;color:#FFFFFF;"><B><span style="font-size: 8pt; font-family: sans-serif;">Search on this site</span>
+</B>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:6px; padding-right:0px; padding-top:4px; padding-bottom:4px;border-top: 1px solid #6E89AE;"><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%"><TR><TD><IMG SRC="4i.png" ALT="" BORDER="0"></TD>
+<TD><FORM ACTION="https://www.google.com/search" METHOD="GET" STYLE="margin:0px;padding:0px;"><INPUT TYPE="HIDDEN" NAME="ie" VALUE="UTF-8"><INPUT TYPE="HIDDEN" NAME="oe" VALUE="UTF-8"><INPUT TYPE="TEXT" NAME="q" SIZE="15" MAXLENGTH="256" placeholder="Site search"><INPUT TYPE="HIDDEN" NAME="sitesearch" VALUE="ultimatepp.org"></FORM>
+</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>
+<TABLE BORDER="0" WIDTH="100%"><TR><TD></TD>
+</TR>
+</TABLE>
+<br><div id="fb-root"></div>
+<script type="text/javascript">(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) {return;}
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+<div class="fb-like" data-href="https://www.facebook.com/pages/Upp-Framework/262346610476027?sk=wall" data-send="false" data-layout="button_count" data-width="160" data-show-faces="false" data-font="arial"></div>
+<br><br><script type="text/javascript"><!--
+google_ad_client = "pub-1082147624384270";
+google_ad_width = 160;
+google_ad_height = 600;
+google_ad_format = "160x600_as";
+google_ad_type = "text_image";
+google_ad_channel = "";
+google_color_border = "336699";
+google_color_bg = "FFFFFF";
+google_color_link = "0000FF";
+google_color_text = "000000";
+google_color_url = "008000";
+//--></script>
+<script type="text/javascript"
+  src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script><br><br><script type="text/javascript"><!--
+google_ad_client = "pub-1082147624384270";
+google_ad_width = 160;
+google_ad_height = 90;
+google_ad_format = "160x90_0ads_al_s";
+google_ad_channel = "";
+google_color_border = "336699";
+google_color_bg = "FFFFFF";
+google_color_link = "0000FF";
+google_color_text = "000000";
+google_color_url = "008000";
+//--></script>
+<script type="text/javascript"
+  src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+<br><br><script type="text/javascript"><!--
+google_ad_client = "pub-1082147624384270";
+google_ad_width = 160;
+google_ad_height = 600;
+google_ad_format = "160x600_as";
+google_ad_type = "text_image";
+google_ad_channel = "";
+google_color_border = "336699";
+google_color_bg = "FFFFFF";
+google_color_link = "0000FF";
+google_color_text = "000000";
+google_color_url = "008000";
+//--></script>
+<script type="text/javascript"
+  src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script><br><br><br><br><br><br><A HREF="https://sourceforge.net/projects/upp/"><IMG SRC="https://sourceforge.net/sflogo.php?group_id=93970&amp;type=2" ALT="SourceForge.net Logo" BORDER="0" WIDTH="125" HEIGHT="37"></A>
+<br><br><A HREF="https://flathub.org/en/apps/org.ultimatepp.TheIDE"><IMG SRC="5i.png" ALT="SourceForge.net Logo" BORDER="0" WIDTH="125" HEIGHT="37"></A>
+<br><br><div style="background-color:#ffffff;width:125;height:35"><A HREF="https://github.com/ultimatepp"><IMG SRC="6i.png" ALT="GitHub Logo" BORDER="0" WIDTH="125" HEIGHT="35"></A>
+</div><br><div style="background-color:#ffffff;width:125;height:35"><div style="height:5"></div><A HREF="https://discord.gg/8XzqQzXZzb"><IMG SRC="https://assets-global.website-files.com/6257adef93867e50d84d30e2/636e0b5061df29d55a92d945_full_logo_blurple_RGB.svg" ALT="Discord Logo" BORDER="0" WIDTH="125" HEIGHT="25"></A>
+</div><br></TD>
+</TR>
+</TABLE>
+</TD>
+<TD VALIGN="TOP" BGCOLOR="#D2D9D2"><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="6"><TR><TD></TD>
+</TR>
+</TABLE>
+</TD>
+<TD VALIGN="TOP" WIDTH="100%" BGCOLOR="#D2D9D2"><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" BGCOLOR="#FFFFFF" WIDTH="100%" style="border-style: solid; border-width: 1px; border-color: #6E89AE;padding: 10px;;"><TR><TD><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%"><TR><TD><p class="C">Getting started with TheIDE</p>
+<hr><p class="D">Table of contents</p>
+<p class="A">&nbsp;</p>
+<p class="A"><a href="app$ide$GettingStarted_en-us.html#1">1. Launching TheIDE</a></p>
+<p class="A"><a href="app$ide$GettingStarted_en-us.html#2">2. Assemblies and Packages</a></p>
+<p class="A"> &nbsp;&nbsp;&nbsp;<a href="app$ide$GettingStarted_en-us.html#2_1">2.1 Selecting assembly</a></p>
+<p class="A"> &nbsp;&nbsp;&nbsp;<a href="app$ide$GettingStarted_en-us.html#2_2">2.2 Creating new package</a></p>
+<p class="A"><a href="app$ide$GettingStarted_en-us.html#3">3. Configuring package</a></p>
+<p class="A"><a href="app$ide$GettingStarted_en-us.html#4">4. Creating new file</a></p>
+<p class="A"><a href="app$ide$GettingStarted_en-us.html#5">5. Adding dependency to package</a></p>
+<p class="A"><a href="app$ide$GettingStarted_en-us.html#6">6. Explanations about TheIDE</a></p>
+<p class="A"> &nbsp;&nbsp;&nbsp;<a href="app$ide$GettingStarted_en-us.html#6_1">6.1 What is stored where?</a></p>
+<p class="A"> &nbsp;&nbsp;&nbsp;<a href="app$ide$GettingStarted_en-us.html#6_2">6.2 Package organizer</a></p>
+<p class="A"> &nbsp;&nbsp;&nbsp;<a href="app$ide$GettingStarted_en-us.html#6_3">6.3 Build methods</a></p>
+<p class="A"> &nbsp;&nbsp;&nbsp;<a href="app$ide$GettingStarted_en-us.html#6_4">6.4 Output mode</a></p>
+<p class="A">&nbsp;</p>
+<hr><p id="1" class="D">1. Launching TheIDE</p>
+<p class="E">After installing U++ find the appropriate TheIDE executable file and launch it. By default the file should be localized in the installation directory. However, it depends on the operating system and the way you installed U++.</p>
+<p class="A">&nbsp;</p>
+<hr><p id="2" class="D">2. Assemblies and Packages</p>
+<p class="E">In this section we show how to create your own main package. It can be treated as project, solution etc.</p>
+<p class="A">&nbsp;</p>
+<p id="2_1" class="F">2.1 Selecting assembly</p>
+<p class="E">After you launch TheIDE on the screen window should appear. This window acts as a hub. When you can select/create packages and assemblies. You can back to this window at any time when you are working with TheIDE. Just select from main menu &quot;File&quot; entry and select &quot;Set main package&quot; option.</p>
+<p class="E">First of all, select assembly which is called &quot;MyApps&quot;. It exists by default and it is intended to store user application. To select this assembly click on its name once. If you want to read more about assemblies see <a href="app$ide$PackagesAssembliesAndNests$en-us.html">this reference page</a> for more details. In brief assembly is a collection of packages.</p>
+<p class="E">&nbsp;</p>
+<p class="G"><a href="app$ide$GettingStarted_en-us.html_0.png"><img src="app$ide$GettingStarted_en-us.html_0.png" border="0" alt="" style="width: 794px; height: 530px"></a></p>
+<p class="E">&nbsp;</p>
+<p class="E">In this window you can perform the following operations:</p>
+<p class="H">You can create a new assembly by right-clicking on the assembly list and choosing &quot;New assembly&quot;. If you select an existing assembly before this, the directory settings from the existing assembly will be used.</p>
+<p class="H">If you're just getting started, leave this as it is and continue creating package process.</p>
+<p class="E">&nbsp;</p>
+<p id="2_2" class="F">2.2 Creating new package</p>
+<p class="E">To create a new package, press the &quot;New package&quot; button localized on the bottom of the window. After that on the screen appears the package creator.</p>
+<p class="E">&nbsp;</p>
+<p class="I"><a href="app$ide$GettingStarted_en-us.html_1.png"><img src="app$ide$GettingStarted_en-us.html_1.png" border="0" alt="" style="width: 957px; height: 678px"></a></p>
+<p class="E">&nbsp;</p>
+<p class="E">To create new package you should execute following steps:</p>
+<p class="H">Enter a package name, for this example we'll type &quot;main&quot;, leave the &quot;create in&quot; directory as it is for now (i.e. on MyApps directory).</p>
+<p class="H">Optionally you can fill in a short description of the package, that will appear in the package selection dialog.</p>
+<p class="H">It is possible to choose one of predefined templates, but we leave it on &lt;empty&gt; for now.</p>
+<p class="H">Finally, press the &quot;Create&quot; button on the bottom of the window.</p>
+<p class="A">&nbsp;</p>
+<hr><p id="3" class="D">3. Configuring package</p>
+<p class="E">At the beginning, let's assume that the package you have created is main. Please note, that any package created or selected within manager is by default main. To configure it, select &quot;Main package configuration&quot; from the &quot;Project&quot; menu. Alternatively, you can right mouse click on package list and select the same option.</p>
+<p class="E"> </p>
+<p class="I"><a href="app$ide$GettingStarted_en-us.html_2.png"><img src="app$ide$GettingStarted_en-us.html_2.png" border="0" alt="" style="width: 777px; height: 273px"></a></p>
+<p class="E">&nbsp;</p>
+<p class="E">Let's take a look at the possibilities available in &quot;Main package configuration&quot; window:</p>
+<p class="H">Here you should set the <a href="app$ide$Flags$en-us.html">configuration flags</a> that your program needs.</p>
+<p class="H">For the main package, you must specify at least one possible configuration (otherwise you will not see your new package listed under the &quot;MyApps&quot; assembly - unless you select &quot;all packages&quot; - because only main packages are listed by default).</p>
+<p class="H">Just add an empty row for now (right click-&gt;&quot;Append row&quot; or press Insert key). The &quot;optional name&quot; can be left empty or you can enter any meaningful description for your own reference.</p>
+<p class="J">Note: For windows users: If you add &quot;GUI&quot; flag here, the standard cin/cout/cerr will not be connected to anything. (so even if you start the program from the command line you will not see any text-output).</p>
+<p class="H">Press OK.</p>
+<p class="E">Here is a need of small digression. Several predefined templates mention in the previous chapter have main package setup by default. It means that there is not need to execute above steps. Following templates fall under above definition: Basic <span class="K">&quot;CtrlLib application&quot;</span>, <span class="K">&quot;Core console project&quot;</span> and <span class="K">&quot;Skylark web application&quot;</span>.</p>
+<p class="E">Not main package can be used as supportive module for your projects. You can place their common functions and classes and share between other packages. In this way packages delivered by U++ work like Core and CtrlLib.</p>
+<p class="E">&nbsp;</p>
+<hr><p id="4" class="D">4. Creating new file</p>
+<p class="E">You can now add files to you package, for this example, add a new file &quot;main.cpp&quot; to the package. Below is the list of steps that will guild you through the process:</p>
+<p class="H">Right click on the lower-left part of TheIDE (or on &quot;File&quot; in menu) and choose &quot;Insert package directory file(s)&quot;, type &quot;main.cpp&quot; and click &quot;Open&quot;. If the file does not exist, it will be created - that is why you won't find &quot;New file&quot; anywhere in TheIDE, it is just not needed.</p>
+<p class="E">&nbsp;</p>
+<p class="I"><a href="app$ide$GettingStarted_en-us.html_3.png"><img src="app$ide$GettingStarted_en-us.html_3.png" border="0" alt="" style="width: 1038px; height: 673px"></a></p>
+<p class="E">&nbsp;</p>
+<p class="H">Alternatively, in the newer versions of TheIDE, you can create new file using &quot;New&quot; option from the same menu shown in above image. Then simply select file type and choose name for it. This method is recommended for newer user, because it is a little bit more intuitive and straight forward than creating file by insertion (old way).</p>
+<p class="H">Type or copy following code into the newly created file:</p>
+<p class="A">&nbsp;</p>
+<p class="L">&nbsp;&nbsp;&nbsp;&nbsp;#include &lt;iostream&gt;</p>
+<p class="L">&nbsp;&nbsp;&nbsp;&nbsp;</p>
+<p class="L">&nbsp;&nbsp;&nbsp;&nbsp;int main()</p>
+<p class="L">&nbsp;&nbsp;&nbsp;&nbsp;{</p>
+<p class="L">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;char dummy;</p>
+<p class="L">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;std::cerr &lt;&lt; &quot;Hello, platform! &quot; &lt;&lt; std::endl;</p>
+<p class="L">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;std::cin &gt;&gt; dummy;</p>
+<p class="L">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+<p class="L">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return 0;</p>
+<p class="L">&nbsp;&nbsp;&nbsp;&nbsp;}</p>
+<p class="A">&nbsp;</p>
+<p class="H">If you have configured your compiler previously (you probably did, either the installer instructed you how to do it or it was done automatically), you can start the program by clicking on execute <a href="app$ide$GettingStarted_en-us.html_4.png"><img src="app$ide$GettingStarted_en-us.html_4.png" border="0" alt="" style="width: 16px; height: 16px"></a> icon localized on main tool bar or by pressing CTRL+F5.</p>
+<p class="H">After program launch, you can close it by typing any letter. On the other hand, it can be ended by simply closing terminal window.</p>
+<p class="H">Now you know how to use TheIDE to compile basic C++ program. Looking at the rest of documentation will give you better idea how to unleash the full power of TheIDE and U++. The best parts to continue would be probably <a href="app$ide$PackagesAssembliesAndNests$en-us.html">Packages, Assemblies and Nests</a> and <a href="app$ide$ConfiguringPackagesAssemblies$en-us.html">their configuration.</a> something about the key technologies utilized in TheIDE: <a href="app$ide$Assist$en-us.html">Assist++</a>, <a href="app$ide$Topic$en-us.html">Topic++</a>, <a href="app$ide$Blitz$en-us.html">Blitz</a> or even one of the tutorials linked from Manual section, if you want to learn more about how to use U++.</p>
+<p class="A">&nbsp;</p>
+<hr><p id="5" class="D">5. Adding dependency to package</p>
+<p class="E">You could extend your package code base by adding additional dependencies. Package at the begging uses very limited set of dependencies. If you use empty package template then there are no relationship with other packages. On the other hand package created with CtrlLib template will posses dependencies to GUI packages.</p>
+<p class="E">Let's assume that we have the empty package 'main' that we created at the begging of this article. Now if we would like to use zip compression provided by U++ framework all we need to do is add package &quot;plugin/zip&quot; to our main package. This newly added package is a part of uppsrc assembly.</p>
+<p class="E">Dependency relationship between packages can be established in two different ways:</p>
+<p class="M">By right-clicking on package in your project and selecting option &quot;Add package to ${package_name}&quot;. Where ${package_name} is currently selected package. You must be careful to which package are you adding dependency.</p>
+<p class="M">By selecting package inside TheIDE and then opening &quot;Project&quot; menu and selecting &quot;Add package to ${package_name}&quot;.</p>
+<p class="A">&nbsp;</p>
+<p class="I"><a href="app$ide$GettingStarted_en-us.html_5.png"><img src="app$ide$GettingStarted_en-us.html_5.png" border="0" alt="" style="width: 506px; height: 545px"></a></p>
+<p class="A">&nbsp;</p>
+<p class="E">After that the window with package (dependency) to add should opened. Right now all we need to do is to find package we are interested in. In our case it is &quot;plugin/zip&quot;. To speed up the whole process &quot;Search&quot; field can be used. After finding the package to accept the operation click on &quot;OK&quot; button.</p>
+<p class="A">&nbsp;</p>
+<p class="I"><a href="app$ide$GettingStarted_en-us.html_6.png"><img src="app$ide$GettingStarted_en-us.html_6.png" border="0" alt="" style="width: 564px; height: 395px"></a></p>
+<p class="A">&nbsp;</p>
+<p class="E">Now the &quot;plugin/zip&quot; package is added as dependency to the main package. If we would like to refer to dependency in the source code all we need to do is to include main package header file. In our case it is:</p>
+<p class="A">&nbsp;</p>
+<p class="L">#include &lt;plugin/zip/zip.h&gt;</p>
+<p class="A">&nbsp;</p>
+<p class="E">In U++ world supportive package should have one main header. It makes using such package much more straightforward. For more information please read article about <a href="app$ide$PackagesAssembliesAndNests_en-us.html">packages, assemblies and nests</a>.</p>
+<p class="E">For advanced package management you should use &quot;Package organizer&quot;. It will be described later in the article.</p>
+<hr><p id="6" class="D">6. Explanations about TheIDE</p>
+<p id="6_1" class="F">6.1 What is stored where?</p>
+<p class="E">When you use TheIDE for the first time, it can be confusing to see that settings like static/shared building, execute-, include- and linker- paths can be set in multiple places (for instance, in Project-&gt;Package organizer, in Setup-&gt;Build methods and by clicking on the current build method in the main screen (at the top, e.g. &quot;GCC Debug&quot;).</p>
+<p class="E">In the next part of this paragraph, we look at all configuration options.</p>
+<p id="6_2" class="F">6.2 Package organizer</p>
+<p class="E">Package organizer is localized at &quot;Project -&gt; Package organizer&quot;.</p>
+<p class="E">&nbsp;</p>
+<p class="I"><a href="app$ide$GettingStarted_en-us.html_7.png"><img src="app$ide$GettingStarted_en-us.html_7.png" border="0" alt="" style="width: 1004px; height: 696px"></a></p>
+<p class="E">&nbsp;</p>
+<p class="E">Everything set here is stored in the .upp file of the package.</p>
+<p class="E">You can use your own (or existing) compiler switches to include different things for different builds here, based on configuration flags.</p>
+<p class="E">Examples:</p>
+<p class="E">&nbsp;</p>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr><td><table border="0" width= 57px><tr><td></td></tr></table></td>
+<td width="100%"><table width="100%" class="N"><colgroup><col width="11%"><col width="23%"><col width="65%"></colgroup>
+<tr><td class="O"><p class="P">When</p>
+</td>
+<td class="O"><p class="P">Libraries</p>
+</td>
+<td class="O"><p class="Q">Comment</p>
+</td>
+</tr>
+<tr><td class="R"><p class="A">MSC</p>
+</td>
+<td class="R"><p class="A">SDL</p>
+</td>
+<td class="R"><p class="S">some extra library to link to with VC++ compiler</p>
+</td>
+</tr>
+<tr><td class="R"><p class="A">MSC</p>
+</td>
+<td class="R"><p class="A">SDL_ttf</p>
+</td>
+<td class="R"><p class="S">&nbsp;</p>
+</td>
+</tr>
+<tr><td class="R"><p class="A">MINGW</p>
+</td>
+<td class="R"><p class="A">mingw32</p>
+</td>
+<td class="R"><p class="S">&nbsp;</p>
+</td>
+</tr>
+<tr><td class="R"><p class="A">MINGW</p>
+</td>
+<td class="R"><p class="A">SDL.dll</p>
+</td>
+<td class="R"><p class="S">mingw compiler has special feature to link directly to dll files</p>
+</td>
+</tr>
+<tr><td class="R"><p class="A">MINGW</p>
+</td>
+<td class="R"><p class="A">SDL_ttf.dll</p>
+</td>
+<td class="R"><p class="S">&nbsp;</p>
+</td>
+</tr>
+</table></td>
+</tr></table>
+<p class="E">&nbsp;</p>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr><td><table border="0" width= 57px><tr><td></td></tr></table></td>
+<td width="100%"><table width="100%" class="N"><colgroup><col width="11%"><col width="23%"><col width="64%"></colgroup>
+<tr><td class="O"><p class="P">When</p>
+</td>
+<td class="O"><p class="P">Compiler options</p>
+</td>
+<td class="O"><p class="Q">Comment</p>
+</td>
+</tr>
+<tr><td class="R"><p class="A">MSC</p>
+</td>
+<td class="R"><p class="A">/Ot</p>
+</td>
+<td class="R"><p class="S">additional compiler option for VC++.</p>
+</td>
+</tr>
+</table></td>
+</tr></table>
+<p class="E">&nbsp;</p>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr><td><table border="0" width= 57px><tr><td></td></tr></table></td>
+<td width="100%"><table width="100%" class="N"><colgroup><col width="11%"><col width="23%"><col width="65%"></colgroup>
+<tr><td class="O"><p class="P">When</p>
+</td>
+<td class="O"><p class="P">Linker options</p>
+</td>
+<td class="O"><p class="Q">Comment</p>
+</td>
+</tr>
+<tr><td class="R"><p class="A">MSC</p>
+</td>
+<td class="R"><p class="A">-nologo</p>
+</td>
+<td class="R"><p class="S">some extra linker options when compiler is VC++.</p>
+</td>
+</tr>
+</table></td>
+</tr></table>
+<p class="E">&nbsp;</p>
+<p id="6_3" class="F">6.3 Build methods</p>
+<p class="E">Build methods are localized at &quot;Setup-&gt; Build methods&quot;.</p>
+<p class="E">&nbsp;</p>
+<p class="I"><a href="app$ide$GettingStarted_en-us.html_8.png"><img src="app$ide$GettingStarted_en-us.html_8.png" border="0" alt="" style="width: 871px; height: 715px"></a></p>
+<p class="E">&nbsp;</p>
+<p class="E">Look carefully at the settings here. You can create different build methods for different compilers.</p>
+<p class="E">Each method will store it's settings in a .bm file. The .bm (bm stands for build method) files are stored in ~/.theide on Posix systems and in the executable path of TheIDE on MS Windows.</p>
+<p class="E">The boxes at the top of the windows called &quot;Debug mode default&quot; and &quot;Release mode default&quot; do <span class="T">NOT</span> contain the options actually used for the current build. (they are not in effect when your press F5). These are the default values used for new projects, the options for the current build can be set by clicking on the current build method in the main screen (top of the screen e.g. &quot;GCC Debug&quot;).</p>
+<p class="E">&nbsp;</p>
+<p class="I"><a href="app$ide$GettingStarted_en-us.html_9.png"><img src="app$ide$GettingStarted_en-us.html_9.png" border="0" alt="" style="width: 1058px; height: 236px"></a></p>
+<p class="E">&nbsp;</p>
+<p class="E">Notice that it has two &quot;pull-down&quot; arrows. The left one selects the build method. The right one sets the current build mode, which occurs in two variants &quot;Debug&quot; and &quot;Release&quot;.</p>
+<p id="6_4" class="F">6.4 Output mode</p>
+<p class="E">You will need to click on build method name on main TheIDE tool bar. It is shown on above image with &quot;MINGW Debug&quot; method.</p>
+<p class="E">&nbsp;</p>
+<p class="I"><a href="app$ide$GettingStarted_en-us.html_10.png"><img src="app$ide$GettingStarted_en-us.html_10.png" border="0" alt="" style="width: 721px; height: 580px"></a></p>
+<p class="A">&nbsp;</p>
+<p class="E">Link mode </p>
+<p class="H"><span class="T">All static</span> - static external libraries are preferred. This is default and recommended option for windows environment.</p>
+<p class="H"><span class="T">Shared libs</span> - shared external libraries are preferred, but the program's packages will be linked statically. This is default and recommended option for POSIX environments.</p>
+<p class="H"><span class="T">All shared</span> - both the external libraries and the applications packages will be compiled and linked dynamically.</p>
+<p class="E">Target override</p>
+<p class="H">You can specify a target-location for the resulting binary here. By default it will be writing to following path:</p>
+<p class="U">&quot;C:\upp\out\$target\MINGW.Blitz.Debug.Shared.So.Win32\foo.exe&quot;.</p>
+</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>
+<TABLE BORDER="0" WIDTH="100%"><TR><TD></TD>
+</TR>
+</TABLE>
+<TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" BGCOLOR="#FFFFFF" WIDTH="100%" style="border-style: solid; border-width: 1px; border-color: #6E89AE;padding: 10px;;"><TR><TD><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%"><TR><TD><p class="A"><span class="B"> </span><a href="www$uppweb$contribweb$en-us.html">Do you want to contribute?</a></p>
+</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>
+<script type="text/javascript">var a={};var p=window.location.pathname.split("/");p=p[p.length-1];var s='<select id="lang" onchange="window.location=document.getElementById(\'lang\').value;">';for(l in a){if(p==l){d=" selected=1"}else{d=""}s+='<option value="'+l+'"'+d+'>'+a[l]+'</option>'}s+='</select>';var d=document.createElement('div');d.innerHTML=s;var c=document.getElementById('langs');c.replaceChild(d,c.firstChild);document.getElementById('langbox').style.display='block';</script></BODY>

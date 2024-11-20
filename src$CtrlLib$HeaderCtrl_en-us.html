@@ -1,0 +1,609 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en-us">
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
+<META NAME="Generator" CONTENT="U++ HTML Package">
+<TITLE>HeaderCtrl :: U++</TITLE>
+<STYLE TYPE="text/css"><!--
+.A{margin:0px 0px 0px 0px;text-indent:0px;text-align:left;color:#000000;font-family:sans-serif;font-size:10pt;font-weight:normal;font-style:normal;}
+.B{font-size:12pt;}
+.C{margin:0px 0px 16px 0px;text-indent:0px;text-align:left;color:#000000;font-family:serif;font-size:24pt;font-weight:bold;font-style:normal;}
+.D{margin:0px 0px 0px 0px;text-indent:0px;text-align:left;color:#000000;font-family:sans-serif;font-size:10pt;font-weight:bold;font-style:normal;}
+.E{font-weight:normal;}
+.F{margin:0px 0px 0px 57px;text-indent:0px;text-align:left;color:#000000;font-family:sans-serif;font-size:10pt;font-weight:normal;font-style:normal;}
+.G{margin:0px 0px 0px 0px;text-indent:0px;text-align:left;color:#0000ff;font-family:sans-serif;font-size:10pt;font-weight:normal;font-style:normal;}
+.H{color:#000000;font-style:italic;}
+.I{color:#000000;}
+.J{font-style:italic;}
+.K{display:list-item;list-style-type:disc;margin:0px 0px 0px 20px;text-indent:0px;text-align:left;color:#000000;font-family:sans-serif;font-size:10pt;font-weight:normal;font-style:normal;}
+.L{font-weight:bold;}
+.M{margin:0px 0px 5px 0px;text-indent:0px;text-align:left;color:#404040;font-family:sans-serif;font-size:10pt;font-weight:bold;font-style:normal;}
+.N{color:#0000ff;}
+.O{color:#800000;}
+.P{color:#800000;font-family:monospace;font-weight:bold;}
+.Q{font-weight:bold;font-style:italic;}
+.R{margin:0px 0px 0px 0px;text-indent:0px;text-align:left;color:#000000;font-family:monospace;font-size:10pt;font-weight:normal;font-style:normal;}
+.S{margin:0px 0px 0px 0px;text-indent:0px;text-align:left;color:#000000;font-family:sans-serif;font-size:12pt;font-weight:normal;font-style:normal;}
+.T{margin:0px 0px 5px 0px;text-indent:0px;text-align:left;color:#000000;font-family:sans-serif;font-size:10pt;font-weight:bold;font-style:normal;}
+.U{color:#404040;}
+.V{margin:0px 0px 5px 0px;text-indent:0px;text-align:left;color:#0000ff;font-family:sans-serif;font-size:10pt;font-weight:bold;font-style:normal;}
+.W{color:#800000;font-weight:bold;}
+.X{margin:0px 0px 0px 0px;text-indent:0px;text-align:left;color:#000000;font-family:sans-serif;font-size:14pt;font-weight:bold;font-style:normal;}
+a.l1         { text-decoration:none; font-size: 8pt; font-family: sans-serif; font-weight: normal; }
+a.l1:link    { color:#000000; }
+a.l1:visited { color:#000080; }
+a.l1:hover   { color:#9933CC; }
+a.l1:active  { color:#000000; }
+a.l2         { text-decoration:none; font-size: 12pt; font-family: sans-serif; font-variant: small-caps; }
+a.l2:link    { color:#0066FF; }
+a.l2:visited { color:#FF6600; }
+a.l2:hover   { color:#BC0624; }
+a.l2:active  { color:#BC0024; }
+
+-->
+</STYLE>
+<META NAME="keywords" CONTENT="framework, toolkit, widget, c++, visual, studio, dev-cpp, builder, ide, class, component,wxwidgets, qt, rapid, application, development, rad, mfc, linux, macos, gui, sdl, directx, desktop"><META name="robots" content="index,follow">
+<LINK rel="alternate" type="application/rss+xml" title="SVN changes" href="svnchanges.xml">
+<LINK rel="shortcut icon" type="image/png" href="favicon.png">
+</HEAD><BODY BGCOLOR="#D2D9D2" ALINK="#800000" LINK="#000000" VLINK="#000080"><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%"><TR><TD COLSPAN="3"><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%" BGCOLOR="#FFFFFF" style="border: 1px solid #6E89AE;padding-left: 10px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;"><TR><TD><A HREF="index.html"><IMG SRC="0i.png" ALT="" BORDER="0"></A>
+</TD>
+<TD ALIGN="RIGHT" VALIGN="BOTTOM" STYLE="padding-bottom: 5px; background-image: url('1i.png')"><span style="font-size: 14pt; font-family: sans-serif;"><script type="text/javascript"><!--
+google_ad_client = "pub-1082147624384270";
+google_ad_width = 468;
+google_ad_height = 60;
+google_ad_format = "468x60_as";
+google_ad_type = "text_image";
+google_ad_channel = "";
+google_color_border = "336699";
+google_color_bg = "FFFFFF";
+google_color_link = "0000FF";
+google_color_text = "000000";
+google_color_url = "008000";
+//--></script>
+<script type="text/javascript"
+  src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+&nbsp;&nbsp;</span>
+</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>
+<TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%"><TR><TD COLSPAN="3" BGCOLOR="#D2D9D2" HEIGHT="6"></TD>
+</TR>
+<TR><TD VALIGN="TOP" ALIGN="CENTER"><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="160"><TR><TD ALIGN="CENTER"><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%" BGCOLOR="#FFFFFF" style="border-style: solid; border-width: 1px; border-color: #6E89AE;padding: 0px"><TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px;"><A HREF="www$uppweb$overview$en-us.html" CLASS="l1">Overview</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$examples$en-us.html" CLASS="l1">Examples</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$ss$en-us.html" CLASS="l1">Screenshots</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$comparison$en-us.html" CLASS="l1">Comparisons</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$apps$en-us.html" CLASS="l1">Applications</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$download$en-us.html" CLASS="l1">Download</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$documentation$en-us.html" CLASS="l1">Documentation</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$Tutorials$en-us.html" CLASS="l1">Tutorials</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="app$ide$UppHub$en-us.html" CLASS="l1">UppHub</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$Roadmap$en-us.html" CLASS="l1">Status & Roadmap</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$FAQ$en-us.html" CLASS="l1">FAQ</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="app$ide$About$en-us.html" CLASS="l1">Authors & License</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="https://www.ultimatepp.org/forums" CLASS="l1">Forums</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$Funding$en-us.html" CLASS="l1">Funding U++</A>
+</TD>
+</TR>
+</TABLE>
+<TABLE BORDER="0" WIDTH="100%"><TR><TD></TD>
+</TR>
+</TABLE>
+<TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%" BGCOLOR="#FFFFFF" style="border-style: solid; border-width: 1px; border-color: #6E89AE;padding: 0px"><TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('3i.png'); border: 0px solid black;padding-left:12px; padding-right:0px; padding-top:1px; padding-bottom:1px;color:#FFFFFF;"><B><span style="font-size: 8pt; font-family: sans-serif;">Search on this site</span>
+</B>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:6px; padding-right:0px; padding-top:4px; padding-bottom:4px;border-top: 1px solid #6E89AE;"><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%"><TR><TD><IMG SRC="4i.png" ALT="" BORDER="0"></TD>
+<TD><FORM ACTION="https://www.google.com/search" METHOD="GET" STYLE="margin:0px;padding:0px;"><INPUT TYPE="HIDDEN" NAME="ie" VALUE="UTF-8"><INPUT TYPE="HIDDEN" NAME="oe" VALUE="UTF-8"><INPUT TYPE="TEXT" NAME="q" SIZE="15" MAXLENGTH="256" placeholder="Site search"><INPUT TYPE="HIDDEN" NAME="sitesearch" VALUE="ultimatepp.org"></FORM>
+</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>
+<TABLE BORDER="0" WIDTH="100%"><TR><TD></TD>
+</TR>
+</TABLE>
+<br><div id="fb-root"></div>
+<script type="text/javascript">(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) {return;}
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+<div class="fb-like" data-href="https://www.facebook.com/pages/Upp-Framework/262346610476027?sk=wall" data-send="false" data-layout="button_count" data-width="160" data-show-faces="false" data-font="arial"></div>
+<br><br><script type="text/javascript"><!--
+google_ad_client = "pub-1082147624384270";
+google_ad_width = 160;
+google_ad_height = 600;
+google_ad_format = "160x600_as";
+google_ad_type = "text_image";
+google_ad_channel = "";
+google_color_border = "336699";
+google_color_bg = "FFFFFF";
+google_color_link = "0000FF";
+google_color_text = "000000";
+google_color_url = "008000";
+//--></script>
+<script type="text/javascript"
+  src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script><br><br><script type="text/javascript"><!--
+google_ad_client = "pub-1082147624384270";
+google_ad_width = 160;
+google_ad_height = 90;
+google_ad_format = "160x90_0ads_al_s";
+google_ad_channel = "";
+google_color_border = "336699";
+google_color_bg = "FFFFFF";
+google_color_link = "0000FF";
+google_color_text = "000000";
+google_color_url = "008000";
+//--></script>
+<script type="text/javascript"
+  src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+<br><br><br><br><br><br><A HREF="https://sourceforge.net/projects/upp/"><IMG SRC="https://sourceforge.net/sflogo.php?group_id=93970&amp;type=2" ALT="SourceForge.net Logo" BORDER="0" WIDTH="125" HEIGHT="37"></A>
+<br><br><A HREF="https://flathub.org/en/apps/org.ultimatepp.TheIDE"><IMG SRC="5i.png" ALT="SourceForge.net Logo" BORDER="0" WIDTH="125" HEIGHT="37"></A>
+<br><br><div style="background-color:#ffffff;width:125;height:35"><A HREF="https://github.com/ultimatepp"><IMG SRC="6i.png" ALT="GitHub Logo" BORDER="0" WIDTH="125" HEIGHT="35"></A>
+</div><br><div style="background-color:#ffffff;width:125;height:35"><div style="height:5"></div><A HREF="https://discord.gg/8XzqQzXZzb"><IMG SRC="https://assets-global.website-files.com/6257adef93867e50d84d30e2/636e0b5061df29d55a92d945_full_logo_blurple_RGB.svg" ALT="Discord Logo" BORDER="0" WIDTH="125" HEIGHT="25"></A>
+</div><br></TD>
+</TR>
+</TABLE>
+</TD>
+<TD VALIGN="TOP" BGCOLOR="#D2D9D2"><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="6"><TR><TD></TD>
+</TR>
+</TABLE>
+</TD>
+<TD VALIGN="TOP" WIDTH="100%" BGCOLOR="#D2D9D2"><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" BGCOLOR="#FFFFFF" WIDTH="100%" style="border-style: solid; border-width: 1px; border-color: #6E89AE;padding: 10px;;"><TR><TD><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%"><TR><TD><p class="C">HeaderCtrl</p>
+<p class="A">&nbsp;</p>
+<p class="D"><span class="E">class&nbsp;</span>HeaderCtrl</p>
+<p class="F">&nbsp;</p>
+<p class="F"><a href="src$CtrlLib$HeaderCtrl_en-us.html_0.png"><img src="src$CtrlLib$HeaderCtrl_en-us.html_0.png" border="0" alt="" style="width: 216px; height: 24px"></a></p>
+<p class="F">&nbsp;</p>
+<p class="G"><span class="H">Derived from</span><span class="I"> Ctrl, </span>CtrlFrame</p>
+<p class="A">&nbsp;</p>
+<p class="A">HeaderCtrl is used mainly for table headers. It can be set up to a certain column structure (in the code terminology, the individual header columns are called <span class="J">tabs</span>) including the tabs' visual characteristics (tab title names, icons etc.) and behavioral constraints (tab width limits, the ability to show / hide individual tabs).</p>
+<p class="A">&nbsp;</p>
+<p class="A">The individual tab widths are defined by three basic properties: the <span class="J">logical tab width</span>, its <span class="J">minimum</span> and <span class="J">maximum pixel width</span>. The minimum and maximum tab width are final pixel values defining constraints for physical (final) column widths. On the other hand, the logical tab widths are given in arbitrary units, which are multiplied by a certain scaling factor whenever the header control is laid out to fit the view size. Therefore normally their absolute magnitudes don't matter, just their ratios.</p>
+<p class="A">&nbsp;</p>
+<p class="A">The header control can operate in four different visual modes. Each mode effectively defines how the logical relative tab widths are fitted to the current view size:</p>
+<p class="A">&nbsp;</p>
+<p class="K"><span class="L">Proportional</span>: the tab widths are proportionally adjusted with respect to preset width constraints to fill the current view width;</p>
+<p class="K"><span class="L">ReduceLast</span>: every time a tab width is set and the total tab width exceeds the view size, the following tab widths (tabs to the right) are reduced in right-to-left order (beginning with the rightmost tab) to fit the view size.</p>
+<p class="K"><span class="L">ReduceNext</span>: every time a tab width is set and the total tab width exceeds the view size, the following tab widths (tabs to the right) are reduced in left-to-right order (beginning with the tab just after the tab being adjusted) to fit the view size.</p>
+<p class="K"><span class="L">Absolute</span>: the tab widths are never modified automatically, the logical header width can be smaller or greater than the actual view size. Whenever the total tab width exceeds the view size, the header can be scrolled to the left or right to pan its visible portion within the parent view.</p>
+<p class="A">&nbsp;</p>
+<p class="A">From the programmer's point of view, the HeaderCtrl takes complete control over the distribution of tabs and the user interface needed to adjust them. The host control can use the header control (typically during <span class="J">Layout</span> or <span class="J">Paint</span>) to obtain horizontal pixel positions of the individual tab breaks and use them to position and paint the column data.</p>
+<p class="A">&nbsp;</p>
+<p class="A">If Moving modifier is used, HeaderCtrl allows to reorder tabs using drag &amp; drop operation. Client code can identify the order using GetTabIndex method, which returns the &quot;original&quot; index for the tab.</p>
+<p class="A">&nbsp;</p>
+<p class="A">The HeaderCtrl implements the <span class="J">frame interface</span>; when attached to a parent control using the <span class="J">AddFrame</span> method, it positions itself automatically at the top of the control rectangle (above its view).</p>
+<p class="A">&nbsp;</p>
+<p class="A">In addition to the standard tab title functionality, the rectangular areas corresponding to the individual tabs can act as pseudo-buttons invoking a certain functionality when clicked. Each header tab has a <span class="J">WhenAction</span> callback; when set to a non-null value, the header control starts to check for mouse clicks and executes the callback whenever the corresponding tab is clicked. When used to invoke popups, you can use the <span class="J">GetTabRect</span> method to determine the actual location of a certain header tab and align the dropdown control with respect to the tab rectangle location.</p>
+<p class="A">&nbsp;</p>
+<p class="M">Rect&nbsp;<span class="I">GetTabRect</span>(<span class="N">int</span>&nbsp;<span class="O">i</span>)</p>
+<p class="F">Returns the bounding box of a certain tab (in coordinates relative to the HeaderCtrl view). This can be used by controls using the header (like ArrayCtrl) to determine column break locations or by host applications for positioning dropdown controls (activated upon clicking a tab) relative to the tab box within the header.</p>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="P">i</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">Tab index (zero based).</p></td></tr></table>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="Q">Return value</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">rectangular tab bounding box within the HeaderCtrl.</p></td></tr></table>
+<p class="D">&nbsp;</p>
+<p class="A"><span class="L">Hint:</span> to locate drop-down controls (e.g. popup menus) relative to the tab rectangle, you have to transform the returned rectangle to screen coordinates. This can be done for example using the following code snippet:</p>
+<p class="A">&nbsp;</p>
+<p class="R">&nbsp;&nbsp;&nbsp;&nbsp;Rect tab2_scr_rect = tab.GetTabRect(2) + tab.GetScreenView().TopLeft();</p>
+<p class="S">&nbsp;</p>
+<p id="::HeaderCtrl::Tab(int)const" class="T"><span class="N">const</span><span class="U">&nbsp;</span><span class="U">Column</span><span class="U">&amp;&nbsp;</span>Tab<span class="U">(</span><span class="N">int</span><span class="U">&nbsp;</span><span class="O">i</span>)&nbsp;const</p>
+<p class="F">Returns the descriptive <span class="L">HeaderCtrl::Column</span> structure of a given header tab. This constant version can be used to retrieve individual tab properties. For a thorough description of the <span class="L">Column</span> structure, see below.</p>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="P">i</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">Tab index within the header (zero based).</p></td></tr></table>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="Q">Return value</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">a (constant) reference to the <span class="L">Column</span> structure describing the tab.</p></td></tr></table>
+<p class="S">&nbsp;</p>
+<p id="::HeaderCtrl::Tab(int)" class="T"><span class="U">Column</span><span class="U">&amp;</span><span class="U">&nbsp;</span>Tab<span class="U">(</span><span class="N">int</span><span class="U">&nbsp;</span><span class="O">i</span>)</p>
+<p class="F">Returns a (non-constant) reference to the descriptive <span class="L">HeaderCtrl::Column</span> structure of a given header tab. This can be used to set and retrieve individual tab properties (see below for a full description of the <span class="L">Column</span> structure).</p>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="P">i</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">Tab index (zero based).</p></td></tr></table>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="Q">Return value</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">a non-constant reference to the <span class="L">Column</span> structure for the given tab.</p></td></tr></table>
+<p class="S">&nbsp;</p>
+<p class="M">Column&amp;&nbsp;<span class="I">Add</span>(<span class="N">const</span>&nbsp;<span class="N">char</span>&nbsp;*<span class="O">text</span>, <span class="N">double</span>&nbsp;<span class="O">ratio</span>&nbsp;=&nbsp;<span class="O">0</span>)</p>
+<p class="F">Adds a new tab after (to the right of) all existing header tabs. The function returns a (non-constant) reference to the <span class="L">HeaderCtrl::Column</span> structure which can be further used to set up additional tab properties.</p>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="P">text</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">Tab (title) name.</p></td></tr></table>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="P">ratio</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">Logical tab width.</p></td></tr></table>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="Q">Return value</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">a non-constant reference to the <span class="L">Column</span> structure describing the newly added tab.</p></td></tr></table>
+<p class="S">&nbsp;</p>
+<p class="M">Column&amp;&nbsp;<span class="I">Add</span>()</p>
+<p class="F">Adds a new tab after (to the right of) all existing header tabs. This is identical to the above version with the <span class="J">text</span> argument set to an empty string and <span class="J">ratio</span> set to 0.</p>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="Q">Return value</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">a non-constant reference to the <span class="L">Column</span> structure describing the newly added tab.</p></td></tr></table>
+<p class="S">&nbsp;</p>
+<p class="V">const<span class="U">&nbsp;</span><span class="U">Column</span><span class="U">&amp;&nbsp;</span><span class="I">operator[]</span><span class="U">(</span>int<span class="U">&nbsp;</span><span class="O">i</span><span class="U">)&nbsp;</span>const</p>
+<p class="F">Returns a (constant) reference to a given header tab. This is identical to the <span class="J">const</span> version of the <span class="L">Tab</span> method.</p>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="P">i</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">Tab index (zero based).</p></td></tr></table>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="Q">Return value</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">a constant reference to the given header tab.</p></td></tr></table>
+<p class="S">&nbsp;</p>
+<p class="V">int<span class="U">&nbsp;</span><span class="I">GetCount</span><span class="U">()&nbsp;</span>const</p>
+<p class="F">Returns the current number of header tabs. Each <span class="L">Add</span> increases this value by one and <span class="L">Reset</span> sets it to 0 (the initial value).</p>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="Q">Return value</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">Number of tabs.</p></td></tr></table>
+<p class="S">&nbsp;</p>
+<p class="M"><span class="N">void</span>&nbsp;<span class="I">Reset</span>()</p>
+<p class="F">Resets the header tab to its initial state (removes all tabs).</p>
+<p class="S">&nbsp;</p>
+<p class="M"><span class="N">void</span>&nbsp;<span class="I">ShowTab</span>(<span class="N">int</span>&nbsp;<span class="O">i</span>, <span class="N">bool</span>&nbsp;<span class="O">show</span>&nbsp;=&nbsp;true)</p>
+<p class="F">Shows or hides a certain header tab.</p>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="P">i</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">tab index (zero based)</p></td></tr></table>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="P">show</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">flag indicating whether the tab should be shown (<span class="L">true</span>) or hidden (<span class="L">false</span>).</p></td></tr></table>
+<p class="S">&nbsp;</p>
+<p class="M"><span class="N">void</span>&nbsp;<span class="I">HideTab</span>(<span class="N">int</span>&nbsp;<span class="O">i</span>)</p>
+<p class="F">Hides a certain header tab. This is identical to <span class="L">ShowTab(i, false)</span>.</p>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="P">i</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">tab index (zero based)</p></td></tr></table>
+<p class="S">&nbsp;</p>
+<p class="M"><span class="N">bool</span>&nbsp;<span class="I">IsTabVisible</span>(<span class="N">int</span>&nbsp;<span class="O">i</span>)</p>
+<p class="F">Checks for visibility of a certain tab.</p>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="P">i</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">tab index (zero based).</p></td></tr></table>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="Q">Return value</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A"><span class="L">false</span> = hidden, <span class="L">true</span> = shown.</p></td></tr></table>
+<p class="S">&nbsp;</p>
+<p class="M"><span class="N">void</span>&nbsp;<span class="I">SetTabRatio</span>(<span class="N">int</span>&nbsp;<span class="O">i</span>, <span class="N">double</span>&nbsp;<span class="O">ratio</span>)</p>
+<p class="F">Sets the logical tab width (ratio) of a given tab.</p>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="P">i</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">tab index</p></td></tr></table>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="P">ratio</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">logical tab width.</p></td></tr></table>
+<p class="S">&nbsp;</p>
+<p class="V">double<span class="U">&nbsp;</span><span class="I">GetTabRatio</span><span class="U">(</span>int<span class="U">&nbsp;</span><span class="O">i</span><span class="U">)&nbsp;</span>const</p>
+<p class="F">Retrieves the current logical width of a certain tab. The logical tab width can be set using the <span class="L">SetTabRatio</span> method (or using the <span class="L">SetRatio</span> method for an individual <span class="L">HeaderCtrl::Column</span> object) or by dragging the tab breaks using the mouse.</p>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="P">i</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">tab index (zero based)</p></td></tr></table>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="Q">Return value</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">current logical tab width</p></td></tr></table>
+<p class="S">&nbsp;</p>
+<p class="M"><span class="N">void</span>&nbsp;<span class="I">SetTabWidth</span>(<span class="N">int</span>&nbsp;<span class="O">i</span>, <span class="N">int</span>&nbsp;<span class="O">cx</span>)</p>
+<p class="F">Sets the given header tab to a physical (pixel) size. This also modifies the logical (relative) tab width accordingly.</p>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="P">i</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">tab index (zero based)</p></td></tr></table>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="P">cx</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">tab pixel size</p></td></tr></table>
+<p class="S">&nbsp;</p>
+<p class="M"><span class="N">int</span>&nbsp;<span class="I">GetTabWidth</span>(<span class="N">int</span>&nbsp;<span class="O">i</span>)</p>
+<p class="F">Returns the physical (pixel) width of a given header tab. Remember that (unless the HeaderCtrl is in the <span class="L">Scroll</span> mode) the physical tab widths can change with the parent view size. Algorithms for long-term manipulation of tab sizes (typically serialization) should always count on the logical tab widths.</p>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="P">i</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">tab index (zero based)</p></td></tr></table>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="Q">Return value</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">physical (pixel) tab width. Note that this function isn't <span class="J">const</span>, because the header control uses a lazy algorithm to lay out the header control, and during the call to <span class="L">GetTabWidth</span> it may show that the tabs need to be newly laid out.</p></td></tr></table>
+<p class="S">&nbsp;</p>
+<p id="::HeaderCtrl::SwapTabs(int,int)" class="M"><span class="N">void</span>&nbsp;<span class="I">SwapTabs</span>(<span class="N">int</span>&nbsp;<span class="O">first</span>, <span class="N">int</span>&nbsp;<span class="O">second</span>)</p>
+<p class="F">Swaps tabs <span class="W">first</span> and <span class="W">second</span>.</p>
+<p class="A">&nbsp;</p>
+<p id="::HeaderCtrl::MoveTab(int,int)" class="M"><span class="N">void</span>&nbsp;<span class="I">MoveTab</span>(<span class="N">int</span>&nbsp;<span class="O">from</span>, <span class="N">int</span>&nbsp;<span class="O">to</span>)</p>
+<p class="F">Moves tab to another position.</p>
+<p class="A">&nbsp;</p>
+<p id="::HeaderCtrl::GetTabIndex(int)" class="M"><span class="N">int</span>&nbsp;<span class="I">GetTabIndex</span>(<span class="N">int</span>&nbsp;<span class="O">i</span>)</p>
+<p class="F">Returns &quot;original&quot; index of Tab.</p>
+<p class="A">&nbsp;</p>
+<p id="::HeaderCtrl::FindIndexTab(int)" class="M"><span class="N">int</span>&nbsp;<span class="I">FindIndexTab</span>(<span class="N">int</span>&nbsp;<span class="O">ndx</span>)</p>
+<p class="F">Finds a current position of tab with original index <span class="W">ndx</span>.</p>
+<p class="A">&nbsp;</p>
+<p class="M"><span class="N">void</span>&nbsp;<span class="I">StartSplitDrag</span>(<span class="N">int</span>&nbsp;<span class="O">s</span>)</p>
+<p class="F">Starts the header tab drag &amp; drop for a given tab break.</p>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="P">s</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">break index (zero = left side of tab 0).</p></td></tr></table>
+<p class="S">&nbsp;</p>
+<p class="M"><span class="N">int</span>&nbsp;<span class="I">GetSplit</span>(<span class="N">int</span>&nbsp;<span class="O">x</span>)</p>
+<p class="F">Locates the header tab break corresponding to a given <span class="J">x</span> coordinate (relative to the header control). This can be used by the parent controls to check whether the mouse cursor hovers above a tab break (e.g. <span class="L">ArrayCtrl</span> uses this function to check whether to display the horizontal resizing cursor).</p>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="P">x</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">horizontal pixel coordinate (relative to the header control bounding box).</p></td></tr></table>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="Q">Return value</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">Index of tab break (in the range [0..GetCount()]) or -1 when there is no tab break in the vicinity of a given point.</p></td></tr></table>
+<p class="S">&nbsp;</p>
+<p class="V">int<span class="U">&nbsp;</span><span class="I">GetScroll</span><span class="U">()&nbsp;</span>const</p>
+<p class="F"><span class="L">Absolute</span> mode only: returns pixel offset defining the current origin of the (potentially scrolled) header. For non-scrolling visual modes, this function always returns 0 (in non-scrolling modes the left side of first tab always aligns with the left side of parent view).</p>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="Q">Return value</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">Number of pixels by which the header control is currently scrolled in the horizontal direction. The physical <span class="J">x</span> coordinate of a tab edge (relative to parent view) can be calculated by subtracting this value from its logical coordinate (relative to leftmost header edge).</p></td></tr></table>
+<p class="S">&nbsp;</p>
+<p class="V">bool<span class="U">&nbsp;</span><span class="I">IsScroll</span><span class="U">()&nbsp;</span>const</p>
+<p class="F">Checks whether the header control is currently in scrolling mode (i.e., whether it is in the <span class="L">Absolute</span> visual mode and its total tab width exceeds current view size). When <span class="L">IsScroll</span> returns <span class="L">true</span>, the <span class="L">GetScroll</span> method can be used to retrieve the current horizontal scrollbar position.</p>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="Q">Return value</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A"><span class="L">true</span> = scrolling header, <span class="L">false </span>= non-scrolling header.</p></td></tr></table>
+<p class="S">&nbsp;</p>
+<p class="V">int<span class="U">&nbsp;</span><span class="I">GetHeight</span><span class="U">()&nbsp;</span>const</p>
+<p class="F">Determines the pixel height of the header control. This is equal to the maximum of all the individual tab heights (depending on the tab title font and icon sizes).</p>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="Q">Return value</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">HeaderCtrl pixel height.</p></td></tr></table>
+<p class="S">&nbsp;</p>
+<p class="M">HeaderCtrl&amp;&nbsp;<span class="I">Invisible</span>(<span class="N">bool</span>&nbsp;<span class="O">inv</span>)</p>
+<p class="F">When called with a <span class="L">true</span> argument, makes the header zero height in frame mode (the tab placement routines still work but the header itself remains hidden).</p>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="P">inv</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A"><span class="L">true</span> = hide the header, <span class="L">false</span> = show it.</p></td></tr></table>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="D"><span class="J">Return value</span><span class="E"></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="D"></span>*this</p></td></tr></table>
+<p class="S">&nbsp;</p>
+<p class="M">HeaderCtrl&amp;&nbsp;<span class="I">Track</span>(<span class="N">bool</span>&nbsp;<span class="O">_track</span>&nbsp;=&nbsp;true)</p>
+<p class="F">Sets whether the HeaderCtrl and its parent view contents should be 'animated' during repositioning the tab breaks using mouse drag &amp; drop. When <span class="L">_track</span> is set to <span class="L">true</span>, the header and its parents repaint is requested every time the mouse moves during the drag &amp; drop. When set to <span class="L">false</span>, the header and the parent control get repainted only after the drag &amp; drop is finished. It is wise to set this value depending on the complexity of the data shown 'beneath' the header (usually in an ArrayCtrl) and on the expected target hardware because the track mode is much more demanding with respect to computational time spent during the necessary multiple repaints.</p>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="P">_track</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A"><span class="L">true</span> = regenerate header and its parent dynamically during drag &amp; drop, <span class="L">false</span> = only after it's finished.</p></td></tr></table>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="D"><span class="J">Return value</span><span class="E"></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="D"></span>*this</p></td></tr></table>
+<p class="S">&nbsp;</p>
+<p class="M">HeaderCtrl&amp;&nbsp;<span class="I">NoTrack</span>()</p>
+<p class="F">Turns off track mode. This is identical to <span class="L">Track(false)</span>.</p>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="D"><span class="J">Return value</span><span class="E"></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="D"></span>*this</p></td></tr></table>
+<p class="S">&nbsp;</p>
+<p class="M">HeaderCtrl&amp;&nbsp;<span class="I">Proportional</span>()</p>
+<p class="F">Switches the HeaderCtrl to the <span class="J">proportional</span> mode. In proportional mode, the individual logical tab widths are always recalculated to physical (pixel) widths by scaling them using a common multiplication factor in order to fit the whole header into the view width.</p>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="D"><span class="J">Return value</span><span class="E"></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="D"></span>*this</p></td></tr></table>
+<p class="S">&nbsp;</p>
+<p class="M">HeaderCtrl&amp;&nbsp;<span class="I">ReduceNext</span>()</p>
+<p class="F">Switches the HeaderCtrl to the <span class="J">reduce next</span> mode. Every time a tab width is set in this mode and the total tab width exceeds the view size, the following tab widths (tabs to the right) are reduced in left-to-right order (beginning with the tab just after the tab being adjusted) to fit the view size.</p>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="D"><span class="J">Return value</span><span class="E"></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="D"></span>*this</p></td></tr></table>
+<p class="S">&nbsp;</p>
+<p class="M">HeaderCtrl&amp;&nbsp;<span class="I">ReduceLast</span>()</p>
+<p class="F">Switches the HeaderCtrl to the <span class="J">reduce last</span> mode. Every time a tab width is set in this mode and the total tab width exceeds the view size, the following tab widths (tabs to the right) are reduced in right-to-left order (beginning with the rightmost tab) to fit the view size.</p>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="D"><span class="J">Return value</span><span class="E"></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="D"></span>*this</p></td></tr></table>
+<p class="S">&nbsp;</p>
+<p class="M">HeaderCtrl&amp;&nbsp;<span class="I">Absolute</span>()</p>
+<p class="F">Switches the HeaderCtrl to the <span class="J">absolute</span> (scroll) mode. In this mode the tab widths are never modified automatically, the logical header width can be smaller or greater than the actual view size. Whenever the total tab width exceeds the view size, the header can be scrolled to the left or right to pan its visible portion within the parent view.</p>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="D"><span class="J">Return value</span><span class="E"></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="D"></span>*this</p></td></tr></table>
+<p class="S">&nbsp;</p>
+<p id="::HeaderCtrl::Moving(bool)" class="M">HeaderCtrl&amp;&nbsp;<span class="I">Moving</span>(<span class="N">bool</span>&nbsp;<span class="O">b</span>&nbsp;=&nbsp;true)</p>
+<p class="F">Activates mode when tabs can be rearranged by dragging them. Default is inactive.</p>
+<p class="S">&nbsp;</p>
+<p class="S">&nbsp;</p>
+<p class="M">static static&nbsp;<span class="N">int</span>&nbsp;<span class="I">GetStdHeight</span>()</p>
+<p class="F">Returns the standard header control height (when there are no icons and the standard font is used in all tabs).</p>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="Q">Return value</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A"></p></td></tr></table>
+<p class="S">&nbsp;</p>
+<p class="T"><span class="U">Callback</span><span class="U">&nbsp;</span>WhenLayout</p>
+<p class="F">This callback is executed whenever the header control gets laid out (whenever the tab positions and/or widths change).</p>
+<p class="S">&nbsp;</p>
+<p class="T"><span class="U">Callback</span><span class="U">&nbsp;</span>WhenScroll</p>
+<p class="F">This callback is executed whenever the header control gets scrolled (<span class="J">absolute</span> mode only).</p>
+<p class="S">&nbsp;</p>
+<p class="T"><span class="U">Callback</span><span class="U">&nbsp;</span>WhenScrollVisibility</p>
+<p class="F">This callback is executes whenever its scrollbar appears or disappears (whenever the return value of the <span class="L">IsScroll</span> method changes).</p>
+<p class="A">&nbsp;</p>
+<p class="A">&nbsp;</p>
+<p class="X">HeaderCtrl::Column (nested class)</p>
+<p class="F">&nbsp;</p>
+<p class="A"><span class="J">Derived from</span> LabelBase</p>
+<p class="A">&nbsp;</p>
+<p class="A">The <span class="L">HeaderCtrl::Column</span> structure represents an individual header tab. HeaderCtrl methods for tab insertion and editation typically return a reference to this <span class="J">Column</span> class which can be used afterwards to program the various tab properties.</p>
+<p class="A">&nbsp;</p>
+<p class="A">The set methods return a reference to <span class="L">*this</span> ; this allows multiple tab properties to be set using a single C++ statement with repeated use of the dot operator, e.g.:</p>
+<p class="A">&nbsp;</p>
+<p class="R">&nbsp;&nbsp;&nbsp;&nbsp;headerctrl.Add().Min(10).Max(20).Margin(3);</p>
+<p class="S">&nbsp;</p>
+<p class="M">Column&amp;&nbsp;<span class="I">Min</span>(<span class="N">int</span>&nbsp;<span class="O">_min</span>)</p>
+<p class="F">Sets minimum tab pixel size. The default value is 0 (the tab can be shrunk arbitrarily and can disappear altogether at a certain moment).</p>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="P">_min</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">Minimum tab width in pixels.</p></td></tr></table>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="D"><span class="J">Return value</span><span class="E"></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="D"></span>*this</p></td></tr></table>
+<p class="S">&nbsp;</p>
+<p class="M">Column&amp;&nbsp;<span class="I">Max</span>(<span class="N">int</span>&nbsp;<span class="O">_max</span>)</p>
+<p class="F">Sets maximum tab pixel size. The default value is <span class="J">INT_MAX</span> (unlimited).</p>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="P">_max</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">Maximum tab width in pixels.</p></td></tr></table>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="D"><span class="J">Return value</span><span class="E"></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="D"></span>*this</p></td></tr></table>
+<p class="S">&nbsp;</p>
+<p class="M">Column&amp;&nbsp;<span class="I">MinMax</span>(<span class="N">int</span>&nbsp;<span class="O">m</span>, <span class="N">int</span>&nbsp;<span class="O">n</span>)</p>
+<p class="F">Sets both minimum and maximum tab pixel size at the same time. This has the same effect as <span class="L">.Min(m).Max(n)</span>.</p>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="P">m</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">Minimum tab width in pixels.</p></td></tr></table>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="P">n</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">Maximum tab width in pixels.</p></td></tr></table>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="D"><span class="J">Return value</span><span class="E"></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="D"></span>*this</p></td></tr></table>
+<p class="S">&nbsp;</p>
+<p class="M">Column&amp;&nbsp;<span class="I">Fixed</span>(<span class="N">int</span>&nbsp;<span class="O">f</span>)</p>
+<p class="F">Sets both minimum and maximum tab pixel size to the same value, effectively making the tab width constant. Equal to <span class="L">.MinMax(f, f)</span>.</p>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="P">f</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">Fixed tab width in pixels.</p></td></tr></table>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="D"><span class="J">Return value</span><span class="E"></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="D"></span>*this</p></td></tr></table>
+<p class="S">&nbsp;</p>
+<p class="M">Column&amp;&nbsp;<span class="I">SetRatio</span>(<span class="N">double</span>&nbsp;<span class="O">ratio</span>)</p>
+<p class="F">Sets logical (relative) tab width. The logical tab width (together with logical widths of other tabs and the minimum / maximum width constraints) is used to calculate the final pixel size of each tab according to the current header visual mode.</p>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="P">ratio</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">relative tab width (a generic floating-point value)</p></td></tr></table>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="D"><span class="J">Return value</span><span class="E"></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="D"></span>*this</p></td></tr></table>
+<p class="S">&nbsp;</p>
+<p class="M">Column&amp;&nbsp;<span class="I">SetMargin</span>(<span class="N">int</span>&nbsp;<span class="O">m</span>)</p>
+<p class="F">Sets horizontal tab margin size, the number of pixels to deflate the tab rectangle horizontally to obtain the final &quot;column data&quot; rectangle. In <span class="J">ArrayCtrl</span>, the tab margin areas are used to paint the grid lines and the inverted selection rectangle outside of the table cells.</p>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="P">m</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">Horizontal tab margin size in pixels.</p></td></tr></table>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="D"><span class="J">Return value</span><span class="E"></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="D"></span>*this</p></td></tr></table>
+<p class="S">&nbsp;</p>
+<p class="V">int<span class="U">&nbsp;</span><span class="I">GetMargin</span><span class="U">()&nbsp;</span>const</p>
+<p class="F">Returns current tab margin width in pixels.</p>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="D"><span class="J">Return value</span><span class="E"></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="D"></span>*this</p></td></tr></table>
+<p class="S">&nbsp;</p>
+<p class="T"><span class="U">Callback</span><span class="U">&nbsp;</span>WhenAction</p>
+<p class="F">The tab action callback. When set to a non-null value, the header control starts to check for mouse clicks within this tab and calls this callback whenever the corresponding tab is clicked.</p>
+<p class="A">&nbsp;</p>
+<p id="::HeaderCtrl::Column::WhenBar" class="T"><span class="U">Callback1</span><span class="U">&lt;Bar&amp;&gt;&nbsp;</span>WhenBar</p>
+<p class="F">Provides am optional context menu for header tab. &nbsp;</p>
+<p class="A">&nbsp;</p>
+</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>
+<TABLE BORDER="0" WIDTH="100%"><TR><TD></TD>
+</TR>
+</TABLE>
+<TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" BGCOLOR="#FFFFFF" WIDTH="100%" style="border-style: solid; border-width: 1px; border-color: #6E89AE;padding: 10px;;"><TR><TD><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%"><TR><TD><p class="A"><span class="B"> </span><a href="www$uppweb$contribweb$en-us.html">Do you want to contribute?</a></p>
+</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>
+<script type="text/javascript">var a={};var p=window.location.pathname.split("/");p=p[p.length-1];var s='<select id="lang" onchange="window.location=document.getElementById(\'lang\').value;">';for(l in a){if(p==l){d=" selected=1"}else{d=""}s+='<option value="'+l+'"'+d+'>'+a[l]+'</option>'}s+='</select>';var d=document.createElement('div');d.innerHTML=s;var c=document.getElementById('langs');c.replaceChild(d,c.firstChild);document.getElementById('langbox').style.display='block';</script></BODY>

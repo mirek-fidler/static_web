@@ -1,0 +1,462 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en-us">
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
+<META NAME="Generator" CONTENT="U++ HTML Package">
+<TITLE>Color widgets :: U++</TITLE>
+<STYLE TYPE="text/css"><!--
+.A{margin:0px 0px 0px 0px;text-indent:0px;text-align:left;color:#000000;font-family:sans-serif;font-size:10pt;font-weight:normal;font-style:normal;}
+.B{font-size:12pt;}
+.C{border-collapse:collapse;table-layout:auto;border: 2px solid #000000;}
+.D{padding: 3px 5px 3px 5px;border-left: 1px solid #000000;border-top: 1px solid #000000;border-right: 1px solid #000000;border-bottom: 1px solid #000000;background-color:#800000;vertical-align:middle;}
+.E{margin:0px 0px 0px 0px;text-indent:0px;text-align:left;color:#e5e5e5;font-family:sans-serif;font-size:16pt;font-weight:bold;font-style:normal;}
+.F{margin:0px 0px 0px 0px;text-indent:0px;text-align:left;color:#000000;font-family:sans-serif;font-size:6pt;font-weight:normal;font-style:normal;}
+.G{margin:0px 0px 5px 0px;text-indent:0px;text-align:left;color:#800000;font-family:sans-serif;font-size:12pt;font-weight:bold;font-style:normal;}
+.H{color:#0000ff;font-weight:normal;}
+.I{color:#000000;font-weight:normal;}
+.J{color:#000000;}
+.K{margin:8px 0px 0px 0px;text-indent:0px;text-align:left;color:#000000;font-family:sans-serif;font-size:10pt;font-weight:normal;font-style:normal;}
+.L{margin:0px 0px 0px 57px;text-indent:0px;text-align:left;color:#000000;font-family:sans-serif;font-size:10pt;font-weight:normal;font-style:normal;}
+.M{font-weight:bold;}
+.N{font-weight:bold;font-style:italic;}
+.O{font-style:italic;}
+.P{border-collapse:collapse;table-layout:auto;border: 2px solid #808080;}
+.Q{padding: 3px 5px 3px 5px;border-left: 1px solid #808080;border-top: 1px solid #808080;border-right: 1px solid #808080;border-bottom: 1px solid #808080;background-color:#C0C0C0;vertical-align:middle;}
+.R{margin:0px 0px 0px 0px;text-indent:0px;text-align:left;color:#000000;font-family:sans-serif;font-size:10pt;font-weight:bold;font-style:normal;}
+.S{margin:0px 0px 5px 0px;text-indent:0px;text-align:left;color:#000000;font-family:sans-serif;font-size:10pt;font-weight:normal;font-style:normal;}
+.T{color:#0000ff;}
+.U{color:#800000;font-weight:bold;}
+.V{color:#800000;font-family:monospace;font-weight:bold;}
+.W{margin:0px 0px 5px 0px;text-indent:0px;text-align:left;color:#0000ff;font-family:sans-serif;font-size:10pt;font-weight:normal;font-style:normal;}
+.X{color:#000000;font-weight:bold;}
+.Y{margin:0px 0px 5px 0px;text-indent:0px;text-align:left;color:#000000;font-family:sans-serif;font-size:10pt;font-weight:bold;font-style:normal;}
+.Z{font-weight:normal;}
+a.l1         { text-decoration:none; font-size: 8pt; font-family: sans-serif; font-weight: normal; }
+a.l1:link    { color:#000000; }
+a.l1:visited { color:#000080; }
+a.l1:hover   { color:#9933CC; }
+a.l1:active  { color:#000000; }
+a.l2         { text-decoration:none; font-size: 12pt; font-family: sans-serif; font-variant: small-caps; }
+a.l2:link    { color:#0066FF; }
+a.l2:visited { color:#FF6600; }
+a.l2:hover   { color:#BC0624; }
+a.l2:active  { color:#BC0024; }
+
+-->
+</STYLE>
+<META NAME="keywords" CONTENT="framework, toolkit, widget, c++, visual, studio, dev-cpp, builder, ide, class, component,wxwidgets, qt, rapid, application, development, rad, mfc, linux, macos, gui, sdl, directx, desktop"><META name="robots" content="index,follow">
+<LINK rel="alternate" type="application/rss+xml" title="SVN changes" href="svnchanges.xml">
+<LINK rel="shortcut icon" type="image/png" href="favicon.png">
+</HEAD><BODY BGCOLOR="#D2D9D2" ALINK="#800000" LINK="#000000" VLINK="#000080"><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%"><TR><TD COLSPAN="3"><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%" BGCOLOR="#FFFFFF" style="border: 1px solid #6E89AE;padding-left: 10px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;"><TR><TD><A HREF="index.html"><IMG SRC="0i.png" ALT="" BORDER="0"></A>
+</TD>
+<TD ALIGN="RIGHT" VALIGN="BOTTOM" STYLE="padding-bottom: 5px; background-image: url('1i.png')"><span style="font-size: 14pt; font-family: sans-serif;"><script type="text/javascript"><!--
+google_ad_client = "pub-1082147624384270";
+google_ad_width = 468;
+google_ad_height = 60;
+google_ad_format = "468x60_as";
+google_ad_type = "text_image";
+google_ad_channel = "";
+google_color_border = "336699";
+google_color_bg = "FFFFFF";
+google_color_link = "0000FF";
+google_color_text = "000000";
+google_color_url = "008000";
+//--></script>
+<script type="text/javascript"
+  src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+&nbsp;&nbsp;</span>
+</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>
+<TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%"><TR><TD COLSPAN="3" BGCOLOR="#D2D9D2" HEIGHT="6"></TD>
+</TR>
+<TR><TD VALIGN="TOP" ALIGN="CENTER"><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="160"><TR><TD ALIGN="CENTER"><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%" BGCOLOR="#FFFFFF" style="border-style: solid; border-width: 1px; border-color: #6E89AE;padding: 0px"><TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px;"><A HREF="www$uppweb$overview$en-us.html" CLASS="l1">Overview</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$examples$en-us.html" CLASS="l1">Examples</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$ss$en-us.html" CLASS="l1">Screenshots</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$comparison$en-us.html" CLASS="l1">Comparisons</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$apps$en-us.html" CLASS="l1">Applications</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$download$en-us.html" CLASS="l1">Download</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$documentation$en-us.html" CLASS="l1">Documentation</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$Tutorials$en-us.html" CLASS="l1">Tutorials</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="app$ide$UppHub$en-us.html" CLASS="l1">UppHub</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$Roadmap$en-us.html" CLASS="l1">Status & Roadmap</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$FAQ$en-us.html" CLASS="l1">FAQ</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="app$ide$About$en-us.html" CLASS="l1">Authors & License</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="https://www.ultimatepp.org/forums" CLASS="l1">Forums</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$Funding$en-us.html" CLASS="l1">Funding U++</A>
+</TD>
+</TR>
+</TABLE>
+<TABLE BORDER="0" WIDTH="100%"><TR><TD></TD>
+</TR>
+</TABLE>
+<TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%" BGCOLOR="#FFFFFF" style="border-style: solid; border-width: 1px; border-color: #6E89AE;padding: 0px"><TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('3i.png'); border: 0px solid black;padding-left:12px; padding-right:0px; padding-top:1px; padding-bottom:1px;color:#FFFFFF;"><B><span style="font-size: 8pt; font-family: sans-serif;">Search on this site</span>
+</B>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:6px; padding-right:0px; padding-top:4px; padding-bottom:4px;border-top: 1px solid #6E89AE;"><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%"><TR><TD><IMG SRC="4i.png" ALT="" BORDER="0"></TD>
+<TD><FORM ACTION="https://www.google.com/search" METHOD="GET" STYLE="margin:0px;padding:0px;"><INPUT TYPE="HIDDEN" NAME="ie" VALUE="UTF-8"><INPUT TYPE="HIDDEN" NAME="oe" VALUE="UTF-8"><INPUT TYPE="TEXT" NAME="q" SIZE="15" MAXLENGTH="256" placeholder="Site search"><INPUT TYPE="HIDDEN" NAME="sitesearch" VALUE="ultimatepp.org"></FORM>
+</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>
+<TABLE BORDER="0" WIDTH="100%"><TR><TD></TD>
+</TR>
+</TABLE>
+<br><div id="fb-root"></div>
+<script type="text/javascript">(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) {return;}
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+<div class="fb-like" data-href="https://www.facebook.com/pages/Upp-Framework/262346610476027?sk=wall" data-send="false" data-layout="button_count" data-width="160" data-show-faces="false" data-font="arial"></div>
+<br><br><script type="text/javascript"><!--
+google_ad_client = "pub-1082147624384270";
+google_ad_width = 160;
+google_ad_height = 600;
+google_ad_format = "160x600_as";
+google_ad_type = "text_image";
+google_ad_channel = "";
+google_color_border = "336699";
+google_color_bg = "FFFFFF";
+google_color_link = "0000FF";
+google_color_text = "000000";
+google_color_url = "008000";
+//--></script>
+<script type="text/javascript"
+  src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script><br><br><script type="text/javascript"><!--
+google_ad_client = "pub-1082147624384270";
+google_ad_width = 160;
+google_ad_height = 90;
+google_ad_format = "160x90_0ads_al_s";
+google_ad_channel = "";
+google_color_border = "336699";
+google_color_bg = "FFFFFF";
+google_color_link = "0000FF";
+google_color_text = "000000";
+google_color_url = "008000";
+//--></script>
+<script type="text/javascript"
+  src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+<br><br><br><br><br><br><A HREF="https://sourceforge.net/projects/upp/"><IMG SRC="https://sourceforge.net/sflogo.php?group_id=93970&amp;type=2" ALT="SourceForge.net Logo" BORDER="0" WIDTH="125" HEIGHT="37"></A>
+<br><br><A HREF="https://flathub.org/en/apps/org.ultimatepp.TheIDE"><IMG SRC="5i.png" ALT="SourceForge.net Logo" BORDER="0" WIDTH="125" HEIGHT="37"></A>
+<br><br><div style="background-color:#ffffff;width:125;height:35"><A HREF="https://github.com/ultimatepp"><IMG SRC="6i.png" ALT="GitHub Logo" BORDER="0" WIDTH="125" HEIGHT="35"></A>
+</div><br><div style="background-color:#ffffff;width:125;height:35"><div style="height:5"></div><A HREF="https://discord.gg/8XzqQzXZzb"><IMG SRC="https://assets-global.website-files.com/6257adef93867e50d84d30e2/636e0b5061df29d55a92d945_full_logo_blurple_RGB.svg" ALT="Discord Logo" BORDER="0" WIDTH="125" HEIGHT="25"></A>
+</div><br></TD>
+</TR>
+</TABLE>
+</TD>
+<TD VALIGN="TOP" BGCOLOR="#D2D9D2"><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="6"><TR><TD></TD>
+</TR>
+</TABLE>
+</TD>
+<TD VALIGN="TOP" WIDTH="100%" BGCOLOR="#D2D9D2"><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" BGCOLOR="#FFFFFF" WIDTH="100%" style="border-style: solid; border-width: 1px; border-color: #6E89AE;padding: 10px;;"><TR><TD><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%"><TR><TD><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr><td width="100%"><table width="100%" class="C"><colgroup><col width="100%"></colgroup>
+<tr><td class="D"><p class="E">ColorPopUp</p>
+</td>
+</tr>
+</table></td>
+</tr></table>
+<p class="F">&nbsp;</p>
+<p id="ColorPopUp::class" class="G"><span class="H">class</span><span class="I">&nbsp;</span><span class="J">ColorPopUp</span><span class="I">&nbsp;:&nbsp;</span><span class="H">public</span><span class="I">&nbsp;</span>Ctrl</p>
+<p class="K">This class implements pop-up window for color-selection.</p>
+<p class="A">&nbsp;</p>
+<p class="L"><a href="src$CtrlLib$ColorPopUp$en-us.html_0.png"><img src="src$CtrlLib$ColorPopUp$en-us.html_0.png" border="0" alt="" style="width: 292px; height: 370px"></a></p>
+<p class="A">&nbsp;</p>
+<p class="K">ColorPopUp calls <span class="M">WhenAction</span> Ctrl callback and sets modify flag whenever selected color changes (that is <span class="N">during</span> selection). </p>
+<p class="A">&nbsp;</p>
+<p class="A"><span class="O">Derived from</span> <a href="src$CtrlCore$Ctrl$en-us.html#::Ctrl::class Ctrl">Ctrl</a></p>
+<p class="F">&nbsp;</p>
+<p class="A">&nbsp;</p>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr><td width="100%"><table width="100%" class="P"><colgroup><col width="100%"></colgroup>
+<tr><td class="Q"><p class="R">Public Member List</p>
+</td>
+</tr>
+</table></td>
+</tr></table>
+<p class="F">&nbsp;</p>
+<p id="ColorPopUp::PopUp(Ctrl*,Color)" class="S"><span class="T">void</span>&nbsp;<span class="M">PopUp</span>(<a href="Ctrl"><u>Ctrl</u></a>&nbsp;*<span class="U">owner</span>, <a href="Color"><u>Color</u></a>&nbsp;<span class="U">c</span>&nbsp;=&nbsp;White)</p>
+<p class="L">Opens ColorPopUp as pop-up window.</p>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="V">owner</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">Owner Ctrl. ColorPopUp appears bellow or above this Ctrl.</p></td></tr></table>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="V">c</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">Initial color for wheel and ramp selectors.</p></td></tr></table>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="ColorPopUp::Get()const" class="W"><a href="Color"><span class="J"><u>Color</u></span></a><span class="J">&nbsp;</span><span class="X">Get</span><span class="J">()&nbsp;</span>const</p>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="N">Return value</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">Returns current color selected.</p></td></tr></table>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="ColorPopUp::NotNull(bool)" class="S"><a href="ColorPopUp"><u>ColorPopUp</u></a><span class="T">&amp;</span>&nbsp;<span class="M">NotNull</span>(<span class="T">bool</span>&nbsp;<span class="U">b</span>&nbsp;=&nbsp;<span class="T">true</span>)</p>
+<p class="L">Setups whether Null (that is transparent) color choice is enabled. Constructor setting is NotNull(false).</p>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="V">b</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">true disables Null color choice. </p></td></tr></table>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="N">Return value</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">*this.</p></td></tr></table>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="ColorPopUp::SColors(bool)" class="S"><a href="ColorPopUp"><u>ColorPopUp</u></a><span class="T">&amp;</span>&nbsp;<span class="M">SColors</span>(<span class="T">bool</span>&nbsp;<span class="U">b</span>&nbsp;=&nbsp;<span class="T">true</span>)</p>
+<p class="L">Setups whether choice of system colors is allowed. Constructor setting is SColors(false).</p>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="V">b</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">true enables choice of system colors.</p></td></tr></table>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="N">Return value</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">*this.</p></td></tr></table>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="ColorPopUp::NullText(const char*)" class="S"><a href="ColorPopUp"><u>ColorPopUp</u></a><span class="T">&amp;</span>&nbsp;<span class="M">NullText</span>(<span class="T">const</span>&nbsp;<span class="T">char</span>&nbsp;*<span class="U">s</span>)</p>
+<p class="L">Setups text for Null color choice. Constructor setting for en-us is &quot;(transparent)&quot;.</p>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="V">s</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">New text for Null color choice.</p></td></tr></table>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="N">Return value</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">*this.</p></td></tr></table>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Upp::ColorPopUp::WithVoid(bool)" class="S"><a href="Upp::ColorPopUp"><u>ColorPopUp</u></a><span class="T">&amp;</span>&nbsp;<span class="M">WithVoid</span>(<span class="T">bool</span>&nbsp;<span class="U">b</span>&nbsp;=&nbsp;<span class="T">true</span>)</p>
+<p class="L">Enables special VoidColor() (labeled &quot;(None)&quot;, unless the name is changed by VoidText).</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Upp::ColorPopUp::VoidText(const char*)" class="S"><a href="Upp::ColorPopUp"><u>ColorPopUp</u></a><span class="T">&amp;</span>&nbsp;<span class="M">VoidText</span>(<span class="T">const</span>&nbsp;<span class="T">char</span>&nbsp;*<span class="U">s</span>)</p>
+<p class="L">Changes the label of VoidColor().</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="ColorPopUp::WhenCancel" class="Y"><a href="Callback"><span class="Z"><u>Callback</u></span></a><span class="Z">&nbsp;</span>WhenCancel</p>
+<p class="L">This callback is invoked when ColorPopUp is canceled (e.g. by clicking outside).</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="ColorPopUp::WhenSelect" class="Y"><a href="Callback"><span class="Z"><u>Callback</u></span></a><span class="Z">&nbsp;</span>WhenSelect</p>
+<p class="L">This callback is invoked when color is chosen. Resulting color can be obtained by Get().</p>
+<p class="A">&nbsp;</p>
+<p class="A">&nbsp;</p>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr><td width="100%"><table width="100%" class="C"><colgroup><col width="100%"></colgroup>
+<tr><td class="D"><p class="E">ColorPusher</p>
+</td>
+</tr>
+</table></td>
+</tr></table>
+<p class="F">&nbsp;</p>
+<p id="ColorPusher::class" class="G"><span class="H">class</span><span class="I">&nbsp;</span><span class="J">ColorPusher</span><span class="I">&nbsp;:&nbsp;</span><span class="H">public</span><span class="I">&nbsp;</span>Ctrl</p>
+<p class="K">This class represents Ctrl with Color value. It uses ColorPopUp to edit this value.</p>
+<p class="A">&nbsp;</p>
+<p class="L"><a href="src$CtrlLib$ColorPopUp$en-us.html_1.png"><img src="src$CtrlLib$ColorPopUp$en-us.html_1.png" border="0" alt="" style="width: 48px; height: 24px"></a> &nbsp;<a href="src$CtrlLib$ColorPopUp$en-us.html_2.png"><img src="src$CtrlLib$ColorPopUp$en-us.html_2.png" border="0" alt="" style="width: 125px; height: 23px"></a></p>
+<p class="A">&nbsp;</p>
+<p class="K">As is U++ standard, Color value is set and get using SetData and GetData virtual method.</p>
+<p class="K">WhenAction callback and modify set behaviour depends on track mode. When track mode is enabled (Track(true)), WhenAction is called and modify set upon any change of color (including moving mouse through ColorPopUp). When track mode is off, it is called and set only after new Color is selected.</p>
+<p class="K">&nbsp;</p>
+<p class="A"><span class="O">Derived from</span> <a href="src$CtrlCore$Ctrl$en-us.html#::Ctrl::class Ctrl">Ctrl</a></p>
+<p class="F">&nbsp;</p>
+<p class="A">&nbsp;</p>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr><td width="100%"><table width="100%" class="P"><colgroup><col width="100%"></colgroup>
+<tr><td class="Q"><p class="R">Public Member List</p>
+</td>
+</tr>
+</table></td>
+</tr></table>
+<p class="F">&nbsp;</p>
+<p id="ColorPusher::NullText(const char*)" class="S"><a href="ColorPusher"><u>ColorPusher</u></a><span class="T">&amp;</span>&nbsp;<span class="M">NullText</span>(<span class="T">const</span>&nbsp;<span class="T">char</span>&nbsp;*<span class="U">s</span>)</p>
+<p class="L">Sets a text to be displayed if Color value is Null. Constructor setting for en-us is &quot;(transparent)&quot;.</p>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="V">s</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">Text.</p></td></tr></table>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="N">Return value</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">*this.</p></td></tr></table>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="ColorPusher::NotNull(bool)" class="S"><a href="ColorPusher"><u>ColorPusher</u></a><span class="T">&amp;</span>&nbsp;<span class="M">NotNull</span>(<span class="T">bool</span>&nbsp;<span class="U">b</span>&nbsp;=&nbsp;<span class="T">true</span>)</p>
+<p class="L">Setups whether Null (that is transparent) color choice is enabled. Constructor setting is NotNull(false).</p>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="V">b</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">true disables Null color choice. </p></td></tr></table>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="N">Return value</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">*this.</p></td></tr></table>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Upp::ColorPusher::WithVoid(bool)" class="S"><a href="Upp::ColorPusher"><u>ColorPusher</u></a><span class="T">&amp;</span>&nbsp;<span class="M">WithVoid</span>(<span class="T">bool</span>&nbsp;<span class="U">b</span>&nbsp;=&nbsp;<span class="T">true</span>)</p>
+<p class="L">Enables special VoidColor() (labeled &quot;(None)&quot;, unless the name is changed by VoidText).</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Upp::ColorPusher::VoidText(const char*)" class="S"><a href="Upp::ColorPusher"><u>ColorPusher</u></a><span class="T">&amp;</span>&nbsp;<span class="M">VoidText</span>(<span class="T">const</span>&nbsp;<span class="T">char</span>&nbsp;*<span class="U">s</span>)</p>
+<p class="L">Changes the label of VoidColor().</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="ColorPusher::SColors(bool)" class="S"><a href="ColorPusher"><u>ColorPusher</u></a><span class="T">&amp;</span>&nbsp;<span class="M">SColors</span>(<span class="T">bool</span>&nbsp;<span class="U">b</span>&nbsp;=&nbsp;<span class="T">true</span>)</p>
+<p class="L">Setups whether choice of system colors is allowed. Constructor setting is SColors(false).</p>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="V">b</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">true enables choice of system colors.</p></td></tr></table>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="N">Return value</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">*this.</p></td></tr></table>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Upp::ColorPusher::WithText(bool)" class="S"><a href="Upp::ColorPusher"><u>ColorPusher</u></a><span class="T">&amp;</span>&nbsp;<span class="M">WithText</span>(<span class="T">bool</span>&nbsp;<span class="U">b</span>&nbsp;=&nbsp;<span class="T">true</span>)</p>
+<p class="L">ColorPusher will display text representation of color (either known name, or numbers).</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="Upp::ColorPusher::WithHex(bool)" class="S"><a href="Upp::ColorPusher"><u>ColorPusher</u></a><span class="T">&amp;</span>&nbsp;<span class="M">WithHex</span>(<span class="T">bool</span>&nbsp;<span class="U">b</span>&nbsp;=&nbsp;<span class="T">true</span>)</p>
+<p class="L">ColorPusher will hexadecimal representation of color.</p>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="ColorPusher::Track(bool)" class="S"><a href="ColorPusher"><u>ColorPusher</u></a><span class="T">&amp;</span>&nbsp;<span class="M">Track</span>(<span class="T">bool</span>&nbsp;<span class="U">b</span>&nbsp;=&nbsp;<span class="T">true</span>)</p>
+<p class="L">Setups track mode. Constructor setting is Track(false).</p>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="V">b</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">true enables track mode.</p></td></tr></table>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="N">Return value</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">*this</p></td></tr></table>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="ColorPusher::NoTrack()" class="S"><a href="ColorPusher"><u>ColorPusher</u></a><span class="T">&amp;</span>&nbsp;<span class="M">NoTrack</span>()</p>
+<p class="L">Same as Track(false).</p>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="N">Return value</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">*this.</p></td></tr></table>
+<p class="F">&nbsp;</p>
+<p class="A">&nbsp;</p>
+<p class="A">&nbsp;</p>
+<p class="A">&nbsp;</p>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr><td width="100%"><table width="100%" class="C"><colgroup><col width="100%"></colgroup>
+<tr><td class="D"><p class="E">ColorButton</p>
+</td>
+</tr>
+</table></td>
+</tr></table>
+<p class="F">&nbsp;</p>
+<p id="ColorButton::class" class="G"><span class="H">class</span><span class="I">&nbsp;</span><span class="J">ColorButton</span><span class="I">&nbsp;:&nbsp;</span><span class="H">public</span><span class="I">&nbsp;</span>ColorPusher</p>
+<p class="A">&nbsp;</p>
+<p class="L"><a href="src$CtrlLib$ColorPopUp$en-us.html_3.png"><img src="src$CtrlLib$ColorPopUp$en-us.html_3.png" border="0" alt="" style="width: 24px; height: 22px"></a></p>
+<p class="R">&nbsp;</p>
+<p class="K">This class is similar to ColorPusher, but intended to be used in ToolBar. It supports displaying color using Image too.</p>
+<p class="A">&nbsp;</p>
+<p class="A"><span class="O">Derived from</span> <a href="src$CtrlLib$ColorPopUp$en-us.html#::ColorPusher::class ColorPusher">ColorPusher</a></p>
+<p class="F">&nbsp;</p>
+<p class="A">&nbsp;</p>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr><td width="100%"><table width="100%" class="P"><colgroup><col width="100%"></colgroup>
+<tr><td class="Q"><p class="R">Public Member List</p>
+</td>
+</tr>
+</table></td>
+</tr></table>
+<p class="F">&nbsp;</p>
+<p id="ColorButton::ColorImage(const Image&)" class="S"><a href="ColorButton"><u>ColorButton</u></a><span class="T">&amp;</span>&nbsp;<span class="M">ColorImage</span>(<span class="T">const</span>&nbsp;<a href="Image"><u>Image</u></a><span class="T">&amp;</span>&nbsp;<span class="U">img</span>)</p>
+<p class="L">Sets image to display color. This image is drawn (in the center of ColorButton) with selected color.</p>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="V">img</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">Image.</p></td></tr></table>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="N">Return value</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">*this.</p></td></tr></table>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="ColorButton::NullImage(const Image&)" class="S"><a href="ColorButton"><u>ColorButton</u></a><span class="T">&amp;</span>&nbsp;<span class="M">NullImage</span>(<span class="T">const</span>&nbsp;<a href="Image"><u>Image</u></a><span class="T">&amp;</span>&nbsp;<span class="U">img</span>)</p>
+<p class="L">Sets image to display null color.</p>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="V">img</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">Image.</p></td></tr></table>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="N">Return value</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">*this.</p></td></tr></table>
+<p class="F">&nbsp;</p>
+<hr><p class="F">&nbsp;</p>
+<p id="ColorButton::StaticImage(const Image&)" class="S"><a href="ColorButton"><u>ColorButton</u></a><span class="T">&amp;</span>&nbsp;<span class="M">StaticImage</span>(<span class="T">const</span>&nbsp;<a href="Image"><u>Image</u></a><span class="T">&amp;</span>&nbsp;<span class="U">img</span>)</p>
+<p class="L">Sets static image that is always displayed with ColorImage and NullImage.</p>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="V">img</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">Image.</p></td></tr></table>
+<table width="100%" border="0" cellpadding="2" cellspacing="2"><tr><td width="49"></td><td valign="top" width="224" bgcolor="#F0F0F0">
+<p class="A"><span class="N">Return value</span></p></td>
+<td valign="top" bgcolor="#F0F0F0">
+<p class="A">*this.</p></td></tr></table>
+<p class="F">&nbsp;</p>
+<p class="A">&nbsp;</p>
+</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>
+<TABLE BORDER="0" WIDTH="100%"><TR><TD></TD>
+</TR>
+</TABLE>
+<TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" BGCOLOR="#FFFFFF" WIDTH="100%" style="border-style: solid; border-width: 1px; border-color: #6E89AE;padding: 10px;;"><TR><TD><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%"><TR><TD><p class="A"><span class="B"> </span><a href="www$uppweb$contribweb$en-us.html">Do you want to contribute?</a></p>
+</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>
+<script type="text/javascript">var a={'src$CtrlLib$ColorPopUp$en-us.html':'English'};var p=window.location.pathname.split("/");p=p[p.length-1];var s='<select id="lang" onchange="window.location=document.getElementById(\'lang\').value;">';for(l in a){if(p==l){d=" selected=1"}else{d=""}s+='<option value="'+l+'"'+d+'>'+a[l]+'</option>'}s+='</select>';var d=document.createElement('div');d.innerHTML=s;var c=document.getElementById('langs');c.replaceChild(d,c.firstChild);document.getElementById('langbox').style.display='block';</script></BODY>

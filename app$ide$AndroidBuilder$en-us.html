@@ -1,0 +1,285 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en-us">
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
+<META NAME="Generator" CONTENT="U++ HTML Package">
+<META NAME="Description" CONTENT="Android is lead mobile operating system all over the world. In this reference, we want to show you how you can work with its development tools inside TheIDE.">
+<TITLE>Android builder :: U++</TITLE>
+<STYLE TYPE="text/css"><!--
+.A{margin:0px 0px 0px 0px;text-indent:0px;text-align:left;color:#000000;font-family:sans-serif;font-size:10pt;font-weight:normal;font-style:normal;}
+.B{font-size:12pt;}
+.C{margin:0px 0px 16px 0px;text-indent:0px;text-align:justify;color:#000000;font-family:serif;font-size:24pt;font-weight:bold;font-style:normal;}
+.D{margin:16px 0px 0px 0px;text-indent:0px;text-align:justify;color:#000000;font-family:sans-serif;font-size:16pt;font-weight:bold;font-style:normal;}
+.E{margin:0px 0px 0px 0px;text-indent:0px;text-align:justify;color:#000000;font-family:sans-serif;font-size:10pt;font-weight:normal;font-style:normal;}
+.F{margin:0px 0px 0px 0px;text-indent:0px;text-align:justify;color:#000000;font-family:sans-serif;font-size:12pt;font-weight:normal;font-style:normal;}
+.G{margin:8px 0px 8px 0px;text-indent:0px;text-align:left;color:#000000;font-family:sans-serif;font-size:10pt;font-weight:normal;font-style:normal;line-height:150%}
+.H{display:list-item;list-style-type:disc;margin:8px 0px 8px 52px;text-indent:0px;text-align:left;color:#000000;font-family:sans-serif;font-size:10pt;font-weight:normal;font-style:normal;line-height:150%}
+.I{font-weight:bold;}
+.J{margin:16px 0px 0px 0px;text-indent:0px;text-align:center;color:#000000;font-family:serif;font-size:24pt;font-weight:bold;font-style:normal;}
+.K{margin:8px 0px 13px 0px;text-indent:0px;text-align:center;color:#000000;font-family:sans-serif;font-size:8pt;font-weight:normal;font-style:normal;}
+.L{font-style:italic;}
+.M{margin:8px 0px 8px 0px;text-indent:0px;text-align:justify;color:#000000;font-family:sans-serif;font-size:10pt;font-weight:normal;font-style:italic;}
+.N{margin:0px 0px 0px 0px;text-indent:0px;text-align:center;color:#000000;font-family:sans-serif;font-size:12pt;font-weight:normal;font-style:normal;}
+a.l1         { text-decoration:none; font-size: 8pt; font-family: sans-serif; font-weight: normal; }
+a.l1:link    { color:#000000; }
+a.l1:visited { color:#000080; }
+a.l1:hover   { color:#9933CC; }
+a.l1:active  { color:#000000; }
+a.l2         { text-decoration:none; font-size: 12pt; font-family: sans-serif; font-variant: small-caps; }
+a.l2:link    { color:#0066FF; }
+a.l2:visited { color:#FF6600; }
+a.l2:hover   { color:#BC0624; }
+a.l2:active  { color:#BC0024; }
+
+-->
+</STYLE>
+<META NAME="keywords" CONTENT="framework, toolkit, widget, c++, visual, studio, dev-cpp, builder, ide, class, component,wxwidgets, qt, rapid, application, development, rad, mfc, linux, macos, gui, sdl, directx, desktop"><META name="robots" content="index,follow">
+<LINK rel="alternate" type="application/rss+xml" title="SVN changes" href="svnchanges.xml">
+<LINK rel="shortcut icon" type="image/png" href="favicon.png">
+</HEAD><BODY BGCOLOR="#D2D9D2" ALINK="#800000" LINK="#000000" VLINK="#000080"><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%"><TR><TD COLSPAN="3"><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%" BGCOLOR="#FFFFFF" style="border: 1px solid #6E89AE;padding-left: 10px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;"><TR><TD><A HREF="index.html"><IMG SRC="0i.png" ALT="" BORDER="0"></A>
+</TD>
+<TD ALIGN="RIGHT" VALIGN="BOTTOM" STYLE="padding-bottom: 5px; background-image: url('1i.png')"><span style="font-size: 14pt; font-family: sans-serif;"><script type="text/javascript"><!--
+google_ad_client = "pub-1082147624384270";
+google_ad_width = 468;
+google_ad_height = 60;
+google_ad_format = "468x60_as";
+google_ad_type = "text_image";
+google_ad_channel = "";
+google_color_border = "336699";
+google_color_bg = "FFFFFF";
+google_color_link = "0000FF";
+google_color_text = "000000";
+google_color_url = "008000";
+//--></script>
+<script type="text/javascript"
+  src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+&nbsp;&nbsp;</span>
+</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>
+<TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%"><TR><TD COLSPAN="3" BGCOLOR="#D2D9D2" HEIGHT="6"></TD>
+</TR>
+<TR><TD VALIGN="TOP" ALIGN="CENTER"><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="160"><TR><TD ALIGN="CENTER"><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%" BGCOLOR="#FFFFFF" style="border-style: solid; border-width: 1px; border-color: #6E89AE;padding: 0px"><TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px;"><A HREF="www$uppweb$overview$en-us.html" CLASS="l1">Overview</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$examples$en-us.html" CLASS="l1">Examples</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$ss$en-us.html" CLASS="l1">Screenshots</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$comparison$en-us.html" CLASS="l1">Comparisons</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$apps$en-us.html" CLASS="l1">Applications</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$download$en-us.html" CLASS="l1">Download</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$documentation$en-us.html" CLASS="l1">Documentation</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$Tutorials$en-us.html" CLASS="l1">Tutorials</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="app$ide$UppHub$en-us.html" CLASS="l1">UppHub</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$Roadmap$en-us.html" CLASS="l1">Status & Roadmap</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$FAQ$en-us.html" CLASS="l1">FAQ</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="app$ide$About$en-us.html" CLASS="l1">Authors & License</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="https://www.ultimatepp.org/forums" CLASS="l1">Forums</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$Funding$en-us.html" CLASS="l1">Funding U++</A>
+</TD>
+</TR>
+</TABLE>
+<TABLE BORDER="0" WIDTH="100%"><TR><TD></TD>
+</TR>
+</TABLE>
+<TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%" BGCOLOR="#FFFFFF" style="border-style: solid; border-width: 1px; border-color: #6E89AE;padding: 0px"><TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('3i.png'); border: 0px solid black;padding-left:12px; padding-right:0px; padding-top:1px; padding-bottom:1px;color:#FFFFFF;"><B><span style="font-size: 8pt; font-family: sans-serif;">Search on this site</span>
+</B>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:6px; padding-right:0px; padding-top:4px; padding-bottom:4px;border-top: 1px solid #6E89AE;"><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%"><TR><TD><IMG SRC="4i.png" ALT="" BORDER="0"></TD>
+<TD><FORM ACTION="https://www.google.com/search" METHOD="GET" STYLE="margin:0px;padding:0px;"><INPUT TYPE="HIDDEN" NAME="ie" VALUE="UTF-8"><INPUT TYPE="HIDDEN" NAME="oe" VALUE="UTF-8"><INPUT TYPE="TEXT" NAME="q" SIZE="15" MAXLENGTH="256" placeholder="Site search"><INPUT TYPE="HIDDEN" NAME="sitesearch" VALUE="ultimatepp.org"></FORM>
+</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>
+<TABLE BORDER="0" WIDTH="100%"><TR><TD></TD>
+</TR>
+</TABLE>
+<br><div id="fb-root"></div>
+<script type="text/javascript">(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) {return;}
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+<div class="fb-like" data-href="https://www.facebook.com/pages/Upp-Framework/262346610476027?sk=wall" data-send="false" data-layout="button_count" data-width="160" data-show-faces="false" data-font="arial"></div>
+<br><br><script type="text/javascript"><!--
+google_ad_client = "pub-1082147624384270";
+google_ad_width = 160;
+google_ad_height = 600;
+google_ad_format = "160x600_as";
+google_ad_type = "text_image";
+google_ad_channel = "";
+google_color_border = "336699";
+google_color_bg = "FFFFFF";
+google_color_link = "0000FF";
+google_color_text = "000000";
+google_color_url = "008000";
+//--></script>
+<script type="text/javascript"
+  src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script><br><br><script type="text/javascript"><!--
+google_ad_client = "pub-1082147624384270";
+google_ad_width = 160;
+google_ad_height = 90;
+google_ad_format = "160x90_0ads_al_s";
+google_ad_channel = "";
+google_color_border = "336699";
+google_color_bg = "FFFFFF";
+google_color_link = "0000FF";
+google_color_text = "000000";
+google_color_url = "008000";
+//--></script>
+<script type="text/javascript"
+  src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+<br><br><br><br><br><br><A HREF="https://sourceforge.net/projects/upp/"><IMG SRC="https://sourceforge.net/sflogo.php?group_id=93970&amp;type=2" ALT="SourceForge.net Logo" BORDER="0" WIDTH="125" HEIGHT="37"></A>
+<br><br><A HREF="https://flathub.org/en/apps/org.ultimatepp.TheIDE"><IMG SRC="5i.png" ALT="SourceForge.net Logo" BORDER="0" WIDTH="125" HEIGHT="37"></A>
+<br><br><div style="background-color:#ffffff;width:125;height:35"><A HREF="https://github.com/ultimatepp"><IMG SRC="6i.png" ALT="GitHub Logo" BORDER="0" WIDTH="125" HEIGHT="35"></A>
+</div><br><div style="background-color:#ffffff;width:125;height:35"><div style="height:5"></div><A HREF="https://discord.gg/8XzqQzXZzb"><IMG SRC="https://assets-global.website-files.com/6257adef93867e50d84d30e2/636e0b5061df29d55a92d945_full_logo_blurple_RGB.svg" ALT="Discord Logo" BORDER="0" WIDTH="125" HEIGHT="25"></A>
+</div><br></TD>
+</TR>
+</TABLE>
+</TD>
+<TD VALIGN="TOP" BGCOLOR="#D2D9D2"><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="6"><TR><TD></TD>
+</TR>
+</TABLE>
+</TD>
+<TD VALIGN="TOP" WIDTH="100%" BGCOLOR="#D2D9D2"><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" BGCOLOR="#FFFFFF" WIDTH="100%" style="border-style: solid; border-width: 1px; border-color: #6E89AE;padding: 10px;;"><TR><TD><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%"><TR><TD><p class="C">Working with Android builder</p>
+<hr><p class="D">Table of contents</p>
+<p class="E">&nbsp;</p>
+<p class="E"><a href="#1">1. Introduction</a></p>
+<p class="E"><a href="#2">2. Downloading Android SDK</a></p>
+<p class="E"><a href="#3">3. Configuring Android SDK</a></p>
+<p class="E"><a href="#4">4. Creating Android builder</a></p>
+<p class="E"><a href="#5">5. Linking Android builder with Android NDK</a></p>
+<p class="E"><a href="#6">6. Configuring Android builder</a></p>
+<p class="E"><a href="#7">7. Tips and tricks</a></p>
+<p class="E"><a href="#8">8. Known issues</a></p>
+<p class="E"><a href="#9">9. Appendix</a></p>
+<p class="F">&nbsp;</p>
+<hr><p id="1" class="D">1. Introduction</p>
+<p class="G">Android is lead mobile operating system all over the world. In this reference, we want to show you how you can work with its development tools inside TheIDE.</p>
+<p class="G">We will use abbreviations and terms that may be unknown for beginners and new users. Below is the list with the most important ones:</p>
+<p class="H"><span class="I">Android SDK</span> - Android software development kit</p>
+<p class="H"><span class="I">Android NDK</span> - Android native development kit</p>
+<p class="H"><span class="I">JDK</span> - Java development kit</p>
+<p class="G">This tutorial is divided into nine chapters. The second and third chapters describe things related to Android SDK. Fourth chapter shows how to create Android builder. Next chapter is devoted to the process of creation Android Builder. Fifth chapter shows how to link Android NDK with Android Builder. After that, all configuration options related to Android Builder will be described. The last chapters refer to things related with this tutorial.</p>
+<p class="F">&nbsp;</p>
+<hr><p id="2" class="D">2. Downloading Android SDK</p>
+<p class="G">First of all you will need to download Android SDK from the official site. You can do this by clicking on following URL: <a href="https://developer.android.com/studio/index.html">https://developer.android.com/studio/index.html</a>. On the site, please find paragraph &quot;Get just the command line tools&quot; and select the version suited to your current operating system. If you are interested, you can download the SDK with &quot;Android Studio&quot;, but it is not required by TheIDE.</p>
+<p class="J"><a href="app$ide$AndroidBuilder$en-us.html_0.png"><img src="app$ide$AndroidBuilder$en-us.html_0.png" border="0" alt="" style="width: 490px; height: 236px"></a></p>
+<p class="K">Official Android SDK download site</p>
+<p class="G">When you download Android SDK you will need to install it. This operation can be different depending on which platform you are using. Sometimes you need to unpack the archive (Linux), another time you need to launch the installer (MS Windows).</p>
+<p class="F">&nbsp;</p>
+<hr><p id="3" class="D">3. Configuring Android SDK</p>
+<p class="G">When Android SDK is successfully installed, we need to prepare it for our needs.</p>
+<p class="G">One of the essential tool is &quot;Android SDK Manager&quot;. It helps managing Android SDK components. The entire tool is simply GUI application. To launch it, go to $(SDK_PATH)/tools/ and launch <span class="L">android</span> (on Linux) or <span class="L">android.exe</span> (on MS Windows)). Alternatively after creating Android builder you receive the ability to launch this application from TheIDE. Make sure you have selected properly constituted build method related to Android Builder, because only this guarantees the availability of this option.</p>
+<p class="J"><a href="app$ide$AndroidBuilder$en-us.html_1.png"><img src="app$ide$AndroidBuilder$en-us.html_1.png" border="0" alt="" style="width: 487px; height: 369px"></a></p>
+<p class="K">Android SDK Manager</p>
+<p class="G">After the first launch of &quot;Android SDK Manager&quot; it automatically detects the most important packages to install. So, we don't need to worry about potential selections. The only thing we should do in this window is pressing the &quot;Install&quot; button. Afterward, on your display should appear a window containing license agreements. To download packages you are obligated to accept them. At the end, we need to press &quot;Install&quot; button once again, but this time it is located in the currently window.</p>
+<p class="J"><a href="app$ide$AndroidBuilder$en-us.html_2.png"><img src="app$ide$AndroidBuilder$en-us.html_2.png" border="0" alt="" style="width: 400px; height: 254px"></a></p>
+<p class="K">Window with license agreements</p>
+<p class="G">After accepting licenses the download process should begin. To finish configuring SDK you must wait for the end of the process. It may take awhile (It mostly depends on your internet download rate).</p>
+<p class="M">Attention: If you are Android SDK expert or you know what are you doing you can select packages manually. In this paragraph, we showed the fastest way to the successful configure Android SDK.</p>
+<hr><p id="4" class="D">4. Creating Android builder</p>
+<p class="G">The next big step is creating Android builder inside TheIDE. This operation will allow us to write and build an application on Android. To do this, you will need to open &quot;Build methods&quot; window (TheIDE menu-bar Setup -&gt; Build methods..) and create method. You can do this by moving mouse cursor to methods list and right click on it. Then, menu bar should appear. You need to select &quot;Insert row&quot; entry. We created an empty method with no name. Therefore, you have to name your build method. The name does not matter, but for the purposes of this tutorial we call it &quot;AndroidBuilder&quot;. Please notice that method must have a name. Otherwise, we will not be able &nbsp;to close the &quot;Build methods&quot; window. In the next step we are going to choose builder type. You can do this by clicking on &quot;Builder&quot; drop list and selecting &quot;ANDROID&quot; entry.</p>
+<p class="J"><a href="app$ide$AndroidBuilder$en-us.html_3.png"><img src="app$ide$AndroidBuilder$en-us.html_3.png" border="0" alt="" style="width: 618px; height: 532px"></a></p>
+<p class="K">Build methods window with the newly formed Android builder</p>
+<p class="G">After that, we need to set the JDK path. You can do this by choosing a directory inside &quot;JDK path&quot; field. Before you start setting directory, please make sure that you possess appropriate JDK version. The current version of Android SDK supports <span class="I">Java 8 </span>and we recommended this version. However, you could use latest version as well and Android Builder should handle it by downgrading version on compilation level. If you don't have JDK or you have a version that doesn't meet the requirements, you can download it from one of the distributors: <a href="https://www.azul.com/downloads/?version=java-8-lts&package=jdk">https://www.azul.com/downloads/?version=java-8-lts&amp;package=jdk</a>.</p>
+<p class="G">To finish creating Android builder process, we need to set the Android SDK path. The field used for its settings &quot;Android SDK Path&quot;. Before you setup path, make sure you have installed and configured correctly Android SDK. This process was described in two previous chapters. Please notice that if the path is correct, the options related to Android SDK should be detected automatically.</p>
+<p class="G">After you perform all previous steps you need to press &quot;OK&quot; button to save your new method. From now you will be able to write core Android applications using Java programming language.</p>
+<p class="M">Attention: On MS Window may occur problems with 64 bit Java version, so please be careful.</p>
+<hr><p id="5" class="D">5. Linking Android builder with Android NDK</p>
+<p class="G">U++ is C++ framework, so it is natural that we want to write applications in that language. To do that we need to link Android builder with Android NDK. NDK by default allows writing application on Android using C/C++.</p>
+<p class="G">First of all we need to download NDK from official site: <a href="https://developer.android.com/ndk/downloads/index.html">https://developer.android.com/ndk/downloads/index.html</a>. On the site, you will need to select the version suited to your operating system. After that, we need to execute the downloaded binary. This task will start the NDK components download/decompression process. It may take awhile, so please be patient. After the completion of the process, we should see completed installation of NDK on our hard drive. It will be on a directory where we executed downloaded binary.</p>
+<p class="J"><a href="app$ide$AndroidBuilder$en-us.html_4.png"><img src="app$ide$AndroidBuilder$en-us.html_4.png" border="0" alt="" style="width: 400px; height: 237px"></a></p>
+<p class="K">Official Android NDK download site</p>
+<p class="G">Now we are going to tell our builder where NDK is located. To do that open &quot;Build methods..&quot; and select &quot;ANDROID&quot; build method. The one we created in &quot;Creating Android builder&quot; paragraph. Next, you have to specify NDK directory in &quot;Android NDK path&quot; edit field. After successful Android NDK connection with the builder, fields &quot;Toolchain&quot; and &quot;C++ runtime&quot; should be detected automatically. At the end, we are saving changes in our build method by clicking &quot;OK&quot; button.</p>
+<p class="G">The build method with configured JDK, SDK and NDK, should look like this:</p>
+<p class="F">&nbsp;</p>
+<p class="N"><a href="app$ide$AndroidBuilder$en-us.html_5.png"><img src="app$ide$AndroidBuilder$en-us.html_5.png" border="0" alt="" style="width: 616px; height: 531px"></a></p>
+<p class="F">&nbsp;</p>
+<hr><p id="6" class="D">6. Configuring Android builder</p>
+<p class="G">Android builder is a powerful tool, so it allows configuration. Below is a list with all options grouped in two categories. The first group described options related to Android SDK. The second one is related to Android NDK.</p>
+<p class="G">Android SDK settings:</p>
+<p class="H">Platform version - select android platform version</p>
+<p class="H">Build tools version - select android build tools version</p>
+<p class="G">Android NDK settings:</p>
+<p class="H">BLITZ - turn on/off BLITZ technology.</p>
+<p class="H">Target architectures - specify which architecture binaries will be built</p>
+<p class="H">Toolchain - specify compiler which will be used to compile source files - entries without text refer to GCC</p>
+<p class="H">C++ runtime - specify runtime library - please notice that this flag can turn on/off language specific features like availability of standard library or exception handling</p>
+<p class="H">Common C++ options - compilation flags used with C++ source files</p>
+<p class="H">Common C options - compilation flags used with C source files</p>
+<p class="F">&nbsp;</p>
+<hr><p id="7" class="D">7. Tips and tricks</p>
+<p class="G">Sometimes you can simplify many things or do things that are not described in the documentation. Below is a list with the most useful:</p>
+<p class="H">You can add resources to your pure Android SDK/NDK application by defining following package flag: &quot;ANDROID_RESOURCES_PACKAGE&quot;. The package define in that way should be in line with directory structure described in <a href="http://developer.android.com/guide/topics/resources/providing-resources.html">http://developer.android.com/guide/topics/resources/providing-resources.html</a>.</p>
+<p class="H">You can use download button to launch a web browser with the download site.</p>
+<p class="H">You don't need to specific path manually - use select directory button instead.</p>
+<p class="H">On Debian/Ubuntu directories containing JDKs are located in &quot;/usr/lib/jvm/&quot;.</p>
+<p class="H">Use preprocess IDE option on Java files to generate C/C++ stubs.</p>
+<p class="H">You can launch Android SDK manager from TheIDE by selecting following option from TheIDE menu bar: <span class="L">Setup -&gt; Android -&gt; SDK Manager</span>.</p>
+<p class="H">The second application you can start directly from TheIDE is AVD Manager. It is available from following TheIDE menubar entry: <span class="L">Setup -&gt; Android -&gt; AVD Manager</span>.</p>
+<p class="F">&nbsp;</p>
+<hr><p id="8" class="D">8. Known issues</p>
+<p class="G">The android builder code is not fully complete. Sometimes there are also errors in the code. If you found something disturbing please let us know about it. You can do this by posting the topic on the official U++ forum.</p>
+<p class="H">Debugging doesn't work - functionality is not implemented.</p>
+<p class="H">Graphical interface for signing applications in release mode - you need to do this manually using command line interface.</p>
+<p class="H">Disk space consumption - to achieve Android project compatibility we make copy of project files.</p>
+<p class="H">Java sources compile in single thread.</p>
+<p class="F">&nbsp;</p>
+<hr><p id="9" class="D">9. Appendix</p>
+<p class="G">In the near future we plan to port the whole U++ library to Android.</p>
+</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>
+<TABLE BORDER="0" WIDTH="100%"><TR><TD></TD>
+</TR>
+</TABLE>
+<TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" BGCOLOR="#FFFFFF" WIDTH="100%" style="border-style: solid; border-width: 1px; border-color: #6E89AE;padding: 10px;;"><TR><TD><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%"><TR><TD><p class="A"><span class="B"> </span><a href="www$uppweb$contribweb$en-us.html">Do you want to contribute?</a></p>
+</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>
+<script type="text/javascript">var a={'app$ide$AndroidBuilder$en-us.html':'English'};var p=window.location.pathname.split("/");p=p[p.length-1];var s='<select id="lang" onchange="window.location=document.getElementById(\'lang\').value;">';for(l in a){if(p==l){d=" selected=1"}else{d=""}s+='<option value="'+l+'"'+d+'>'+a[l]+'</option>'}s+='</select>';var d=document.createElement('div');d.innerHTML=s;var c=document.getElementById('langs');c.replaceChild(d,c.firstChild);document.getElementById('langbox').style.display='block';</script></BODY>

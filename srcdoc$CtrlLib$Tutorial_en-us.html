@@ -1,0 +1,1457 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en-us">
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
+<META NAME="Generator" CONTENT="U++ HTML Package">
+<META NAME="Description" CONTENT="Welcome in GUI Tutorial! Here you will learn how to write GUI applications using U++ library. All code mentions in this tutorial is cross-platform.">
+<TITLE>GUI Tutorial :: U++</TITLE>
+<STYLE TYPE="text/css"><!--
+.A{margin:0px 0px 0px 0px;text-indent:0px;text-align:left;color:#000000;font-family:sans-serif;font-size:10pt;font-weight:normal;font-style:normal;}
+.B{font-size:12pt;}
+.C{margin:0px 0px 16px 0px;text-indent:0px;text-align:left;color:#000000;font-family:serif;font-size:24pt;font-weight:bold;font-style:normal;}
+.D{margin:8px 0px 8px 0px;text-indent:0px;text-align:left;color:#000000;font-family:sans-serif;font-size:10pt;font-weight:normal;font-style:normal;line-height:150%}
+.E{font-weight:bold;}
+.F{margin:16px 0px 0px 0px;text-indent:0px;text-align:left;color:#000000;font-family:sans-serif;font-size:16pt;font-weight:bold;font-style:normal;}
+.G{margin:16px 0px 0px 0px;text-indent:0px;text-align:left;color:#000000;font-family:sans-serif;font-size:12pt;font-weight:bold;font-style:normal;}
+.H{margin:0px 0px 0px 0px;text-indent:0px;text-align:center;color:#000000;font-family:sans-serif;font-size:10pt;font-weight:normal;font-style:normal;}
+.I{display:list-item;list-style-type:disc;margin:8px 0px 8px 45px;text-indent:0px;text-align:left;color:#000000;font-family:sans-serif;font-size:10pt;font-weight:normal;font-style:normal;line-height:150%}
+.J{margin:0px 0px 0px 64px;text-indent:0px;text-align:left;color:#0000ff;font-family:monospace;font-size:9pt;font-weight:normal;font-style:normal;}
+.K{color:#8000ff;}
+.L{color:#000000;}
+.M{margin:0px 0px 0px 64px;text-indent:0px;text-align:left;color:#000000;font-family:monospace;font-size:9pt;font-weight:normal;font-style:normal;}
+.N{color:#0000ff;font-weight:bold;}
+.O{color:#800000;}
+.P{margin:0px 0px 0px 64px;text-indent:0px;text-align:left;color:#000080;font-family:monospace;font-size:9pt;font-weight:normal;font-style:normal;}
+.Q{font-weight:bold;font-style:italic;}
+.R{color:#0000ff;}
+.S{margin:0px 0px 0px 64px;text-indent:0px;text-align:left;color:#000000;font-family:monospace;font-size:9pt;font-weight:bold;font-style:normal;}
+.T{font-weight:normal;}
+.U{margin:8px 44px 8px 57px;text-indent:0px;text-align:center;color:#000000;font-family:sans-serif;font-size:10pt;font-weight:normal;font-style:normal;line-height:150%}
+.V{color:#008080;}
+.W{margin:0px 0px 0px 64px;text-indent:0px;text-align:left;color:#000000;font-family:sans-serif;font-size:9pt;font-weight:normal;font-style:normal;}
+.X{margin:8px 0px 8px 0px;text-indent:0px;text-align:left;color:#000000;font-family:sans-serif;font-size:10pt;font-weight:normal;font-style:italic;line-height:150%}
+.Y{margin:0px 0px 0px 0px;text-indent:0px;text-align:left;color:#000080;font-family:monospace;font-size:9pt;font-weight:normal;font-style:normal;}
+.Z{font-style:italic;}
+.AA{margin:8px 0px 8px 0px;text-indent:0px;text-align:center;color:#000000;font-family:sans-serif;font-size:10pt;font-weight:normal;font-style:normal;line-height:150%}
+.AB{margin:0px 0px 0px 64px;text-indent:0px;text-align:left;color:#0000ff;font-family:monospace;font-size:9pt;font-weight:bold;font-style:normal;}
+.AC{margin:0px 0px 0px 0px;text-indent:0px;text-align:center;color:#0000ff;font-family:sans-serif;font-size:10pt;font-weight:bold;font-style:normal;}
+.AD{color:#000080;font-weight:bold;}
+.AE{margin:0px 0px 0px 64px;text-indent:0px;text-align:left;color:#008000;font-family:monospace;font-size:9pt;font-weight:normal;font-style:italic;}
+.AF{color:#000000;font-style:normal;}
+.AG{color:#0000ff;font-weight:bold;font-style:normal;}
+.AH{color:#000000;font-weight:bold;font-style:normal;}
+.AI{color:#008080;font-weight:bold;font-style:normal;}
+.AJ{color:#0000ff;font-style:normal;}
+.AK{color:#800000;font-style:normal;}
+.AL{color:#800000;font-weight:bold;}
+.AM{color:#008080;font-weight:bold;}
+.AN{color:#000080;}
+.AO{color:#000000;font-weight:normal;}
+.AP{margin:8px 0px 8px 0px;text-indent:0px;text-align:left;color:#000000;font-family:sans-serif;font-size:10pt;font-weight:bold;font-style:normal;line-height:150%}
+.AQ{margin:8px 0px 8px 64px;text-indent:0px;text-align:left;color:#000000;font-family:sans-serif;font-size:10pt;font-weight:normal;font-style:normal;line-height:150%}
+.AR{display:list-item;list-style-type:disc;margin:8px 0px 8px 52px;text-indent:0px;text-align:left;color:#000000;font-family:sans-serif;font-size:10pt;font-weight:normal;font-style:normal;line-height:150%}
+.AS{color:#8000ff;font-weight:bold;}
+.AT{margin:0px 0px 0px 64px;text-indent:0px;text-align:left;color:#1c7f00;font-family:monospace;font-size:9pt;font-weight:normal;font-style:normal;}
+.AU{margin:0px 0px 0px 64px;text-indent:0px;text-align:left;color:#008000;font-family:monospace;font-size:10pt;font-weight:normal;font-style:italic;}
+.AV{margin:0px 0px 0px 64px;text-indent:0px;text-align:left;color:#000000;font-family:monospace;font-size:10pt;font-weight:normal;font-style:normal;}
+.AW{margin:0px 0px 0px 64px;text-indent:0px;text-align:left;color:#0000ff;font-family:monospace;font-size:10pt;font-weight:normal;font-style:normal;}
+.AX{margin:0px 0px 0px 64px;text-indent:0px;text-align:left;color:#000000;font-family:monospace;font-size:10pt;font-weight:bold;font-style:normal;}
+.AY{margin:0px 0px 0px 64px;text-indent:0px;text-align:left;color:#000000;font-family:monospace;font-size:6pt;font-weight:normal;font-style:normal;}
+.AZ{margin:0px 0px 0px 64px;text-indent:0px;text-align:left;color:#0000ff;font-family:monospace;font-size:10pt;font-weight:bold;font-style:normal;}
+.BA{margin:0px 0px 0px 64px;text-indent:0px;text-align:left;color:#000000;font-family:sans-serif;font-size:10pt;font-weight:normal;font-style:normal;}
+.BB{display:list-item;list-style-type:disc;margin:8px 0px 8px 58px;text-indent:0px;text-align:left;color:#000000;font-family:sans-serif;font-size:10pt;font-weight:normal;font-style:normal;line-height:150%}
+a.l1         { text-decoration:none; font-size: 8pt; font-family: sans-serif; font-weight: normal; }
+a.l1:link    { color:#000000; }
+a.l1:visited { color:#000080; }
+a.l1:hover   { color:#9933CC; }
+a.l1:active  { color:#000000; }
+a.l2         { text-decoration:none; font-size: 12pt; font-family: sans-serif; font-variant: small-caps; }
+a.l2:link    { color:#0066FF; }
+a.l2:visited { color:#FF6600; }
+a.l2:hover   { color:#BC0624; }
+a.l2:active  { color:#BC0024; }
+
+-->
+</STYLE>
+<META NAME="keywords" CONTENT="framework, toolkit, widget, c++, visual, studio, dev-cpp, builder, ide, class, component,wxwidgets, qt, rapid, application, development, rad, mfc, linux, macos, gui, sdl, directx, desktop"><META name="robots" content="index,follow">
+<LINK rel="alternate" type="application/rss+xml" title="SVN changes" href="svnchanges.xml">
+<LINK rel="shortcut icon" type="image/png" href="favicon.png">
+</HEAD><BODY BGCOLOR="#D2D9D2" ALINK="#800000" LINK="#000000" VLINK="#000080"><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%"><TR><TD COLSPAN="3"><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%" BGCOLOR="#FFFFFF" style="border: 1px solid #6E89AE;padding-left: 10px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;"><TR><TD><A HREF="index.html"><IMG SRC="0i.png" ALT="" BORDER="0"></A>
+</TD>
+<TD ALIGN="RIGHT" VALIGN="BOTTOM" STYLE="padding-bottom: 5px; background-image: url('1i.png')"><span style="font-size: 14pt; font-family: sans-serif;"><script type="text/javascript"><!--
+google_ad_client = "pub-1082147624384270";
+google_ad_width = 468;
+google_ad_height = 60;
+google_ad_format = "468x60_as";
+google_ad_type = "text_image";
+google_ad_channel = "";
+google_color_border = "336699";
+google_color_bg = "FFFFFF";
+google_color_link = "0000FF";
+google_color_text = "000000";
+google_color_url = "008000";
+//--></script>
+<script type="text/javascript"
+  src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+&nbsp;&nbsp;</span>
+</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>
+<TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%"><TR><TD COLSPAN="3" BGCOLOR="#D2D9D2" HEIGHT="6"></TD>
+</TR>
+<TR><TD VALIGN="TOP" ALIGN="CENTER"><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="160"><TR><TD ALIGN="CENTER"><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%" BGCOLOR="#FFFFFF" style="border-style: solid; border-width: 1px; border-color: #6E89AE;padding: 0px"><TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px;"><A HREF="www$uppweb$overview$en-us.html" CLASS="l1">Overview</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$examples$en-us.html" CLASS="l1">Examples</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$ss$en-us.html" CLASS="l1">Screenshots</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$comparison$en-us.html" CLASS="l1">Comparisons</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$apps$en-us.html" CLASS="l1">Applications</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$download$en-us.html" CLASS="l1">Download</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$documentation$en-us.html" CLASS="l1">Documentation</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$Tutorials$en-us.html" CLASS="l1">Tutorials</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="app$ide$UppHub$en-us.html" CLASS="l1">UppHub</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$Roadmap$en-us.html" CLASS="l1">Status & Roadmap</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$FAQ$en-us.html" CLASS="l1">FAQ</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="app$ide$About$en-us.html" CLASS="l1">Authors & License</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="https://www.ultimatepp.org/forums" CLASS="l1">Forums</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$Funding$en-us.html" CLASS="l1">Funding U++</A>
+</TD>
+</TR>
+</TABLE>
+<TABLE BORDER="0" WIDTH="100%"><TR><TD></TD>
+</TR>
+</TABLE>
+<TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%" BGCOLOR="#FFFFFF" style="border-style: solid; border-width: 1px; border-color: #6E89AE;padding: 0px"><TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('3i.png'); border: 0px solid black;padding-left:12px; padding-right:0px; padding-top:1px; padding-bottom:1px;color:#FFFFFF;"><B><span style="font-size: 8pt; font-family: sans-serif;">Search on this site</span>
+</B>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:6px; padding-right:0px; padding-top:4px; padding-bottom:4px;border-top: 1px solid #6E89AE;"><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%"><TR><TD><IMG SRC="4i.png" ALT="" BORDER="0"></TD>
+<TD><FORM ACTION="https://www.google.com/search" METHOD="GET" STYLE="margin:0px;padding:0px;"><INPUT TYPE="HIDDEN" NAME="ie" VALUE="UTF-8"><INPUT TYPE="HIDDEN" NAME="oe" VALUE="UTF-8"><INPUT TYPE="TEXT" NAME="q" SIZE="15" MAXLENGTH="256" placeholder="Site search"><INPUT TYPE="HIDDEN" NAME="sitesearch" VALUE="ultimatepp.org"></FORM>
+</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>
+<TABLE BORDER="0" WIDTH="100%"><TR><TD></TD>
+</TR>
+</TABLE>
+<br><div id="fb-root"></div>
+<script type="text/javascript">(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) {return;}
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+<div class="fb-like" data-href="https://www.facebook.com/pages/Upp-Framework/262346610476027?sk=wall" data-send="false" data-layout="button_count" data-width="160" data-show-faces="false" data-font="arial"></div>
+<br><br><script type="text/javascript"><!--
+google_ad_client = "pub-1082147624384270";
+google_ad_width = 160;
+google_ad_height = 600;
+google_ad_format = "160x600_as";
+google_ad_type = "text_image";
+google_ad_channel = "";
+google_color_border = "336699";
+google_color_bg = "FFFFFF";
+google_color_link = "0000FF";
+google_color_text = "000000";
+google_color_url = "008000";
+//--></script>
+<script type="text/javascript"
+  src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script><br><br><script type="text/javascript"><!--
+google_ad_client = "pub-1082147624384270";
+google_ad_width = 160;
+google_ad_height = 90;
+google_ad_format = "160x90_0ads_al_s";
+google_ad_channel = "";
+google_color_border = "336699";
+google_color_bg = "FFFFFF";
+google_color_link = "0000FF";
+google_color_text = "000000";
+google_color_url = "008000";
+//--></script>
+<script type="text/javascript"
+  src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+<br><br><script type="text/javascript"><!--
+google_ad_client = "pub-1082147624384270";
+google_ad_width = 160;
+google_ad_height = 600;
+google_ad_format = "160x600_as";
+google_ad_type = "text_image";
+google_ad_channel = "";
+google_color_border = "336699";
+google_color_bg = "FFFFFF";
+google_color_link = "0000FF";
+google_color_text = "000000";
+google_color_url = "008000";
+//--></script>
+<script type="text/javascript"
+  src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script><br><br><br><br><br><br><A HREF="https://sourceforge.net/projects/upp/"><IMG SRC="https://sourceforge.net/sflogo.php?group_id=93970&amp;type=2" ALT="SourceForge.net Logo" BORDER="0" WIDTH="125" HEIGHT="37"></A>
+<br><br><A HREF="https://flathub.org/en/apps/org.ultimatepp.TheIDE"><IMG SRC="5i.png" ALT="SourceForge.net Logo" BORDER="0" WIDTH="125" HEIGHT="37"></A>
+<br><br><div style="background-color:#ffffff;width:125;height:35"><A HREF="https://github.com/ultimatepp"><IMG SRC="6i.png" ALT="GitHub Logo" BORDER="0" WIDTH="125" HEIGHT="35"></A>
+</div><br><div style="background-color:#ffffff;width:125;height:35"><div style="height:5"></div><A HREF="https://discord.gg/8XzqQzXZzb"><IMG SRC="https://assets-global.website-files.com/6257adef93867e50d84d30e2/636e0b5061df29d55a92d945_full_logo_blurple_RGB.svg" ALT="Discord Logo" BORDER="0" WIDTH="125" HEIGHT="25"></A>
+</div><br></TD>
+</TR>
+</TABLE>
+</TD>
+<TD VALIGN="TOP" BGCOLOR="#D2D9D2"><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="6"><TR><TD></TD>
+</TR>
+</TABLE>
+</TD>
+<TD VALIGN="TOP" WIDTH="100%" BGCOLOR="#D2D9D2"><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" BGCOLOR="#FFFFFF" WIDTH="100%" style="border-style: solid; border-width: 1px; border-color: #6E89AE;padding: 10px;;"><TR><TD><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%"><TR><TD><p class="C">GUI Tutorial</p>
+<p class="D">Welcome in GUI Tutorial! Here you will learn how to write GUI applications using U++ library. All code mentions in this tutorial is cross-platform. It means it works exactly the same on a different operating system. Moreover, examples attached in this tutorial are bundle with U++ standard distribution, and they are localized in <span class="E">tutorial</span> assembly. So, you don't need to rewrite it by yourself. Good luck!</p>
+<hr><p class="F">Table of contents</p>
+<p class="A">&nbsp;</p>
+<p class="A"><a href="srcdoc$CtrlLib$Tutorial_en-us.html#1">1. First steps</a></p>
+<p class="A"> &nbsp;&nbsp;&nbsp;<a href="srcdoc$CtrlLib$Tutorial_en-us.html#1_1">1.1 Creating GUI application project from template</a></p>
+<p class="A"> &nbsp;&nbsp;&nbsp;<a href="srcdoc$CtrlLib$Tutorial_en-us.html#1_2">1.2 GUI application main function</a></p>
+<p class="A"><a href="srcdoc$CtrlLib$Tutorial$en-us.html#2">2. Application window</a></p>
+<p class="A"><a href="srcdoc$CtrlLib$Tutorial$en-us.html#3">3. Modifying TopWindow properties</a></p>
+<p class="A"><a href="srcdoc$CtrlLib$Tutorial$en-us.html#4">4. Painting the view area</a></p>
+<p class="A"><a href="srcdoc$CtrlLib$Tutorial$en-us.html#5">5. Reacting to input events</a></p>
+<p class="A"><a href="srcdoc$CtrlLib$Tutorial$en-us.html#6">6. Multiple main windows</a></p>
+<p class="A"><a href="srcdoc$CtrlLib$Tutorial$en-us.html#7">7. Menu</a></p>
+<p class="A"><a href="srcdoc$CtrlLib$Tutorial$en-us.html#8">8. Context menu</a></p>
+<p class="A"><a href="srcdoc$CtrlLib$Tutorial$en-us.html#9">9. Context menu alternative</a></p>
+<p class="A"><a href="srcdoc$CtrlLib$Tutorial$en-us.html#10">10. Adding images</a></p>
+<p class="A"><a href="srcdoc$CtrlLib$Tutorial$en-us.html#11">11. Toolbar</a></p>
+<p class="A"><a href="srcdoc$CtrlLib$Tutorial$en-us.html#12">12. StatusBar and decorative Frames</a></p>
+<p class="A"><a href="srcdoc$CtrlLib$Tutorial$en-us.html#13">13. Adding child Ctrls - widgets, reacting to widget events</a></p>
+<p class="A"><a href="srcdoc$CtrlLib$Tutorial$en-us.html#14">14. More about logical coordinates</a></p>
+<p class="A"> &nbsp;&nbsp;&nbsp;<a href="srcdoc$CtrlLib$Tutorial_en-us.html#14.1">14.1 Explanations</a></p>
+<p class="A"> &nbsp;&nbsp;&nbsp;<a href="srcdoc$CtrlLib$Tutorial_en-us.html#14.2">14.2 Minimal window size</a></p>
+<p class="A"><a href="srcdoc$CtrlLib$Tutorial$en-us.html#15">15. Font-zoomed logical coordinates</a></p>
+<p class="A"><a href="srcdoc$CtrlLib$Tutorial$en-us.html#16">16. Layouts</a></p>
+<p class="A"> &nbsp;&nbsp;&nbsp;<a href="srcdoc$CtrlLib$Tutorial_en-us.html#16.1">16.1 Referral implementation</a></p>
+<p class="A"> &nbsp;&nbsp;&nbsp;<a href="srcdoc$CtrlLib$Tutorial_en-us.html#16.2">16.2 Upp namespace agnostic implementation</a></p>
+<p class="A"><a href="srcdoc$CtrlLib$Tutorial$en-us.html#17">17. Value of widget</a></p>
+<p class="A"><a href="srcdoc$CtrlLib$Tutorial$en-us.html#18">18. Accepting and rejecting widgets</a></p>
+<p class="A"><a href="srcdoc$CtrlLib$Tutorial$en-us.html#19">19. Widget edit status flags</a></p>
+<p class="A"><a href="srcdoc$CtrlLib$Tutorial$en-us.html#20">20. Breaking the modal loop</a></p>
+<p class="A"><a href="srcdoc$CtrlLib$Tutorial$en-us.html#21">21. Creating and using custom widgets</a></p>
+<p class="A"><a href="srcdoc$CtrlLib$Tutorial$en-us.html#22">22. Non-modal dialogs</a></p>
+<p class="A"><a href="srcdoc$CtrlLib$Tutorial_en-us.html#23">23. Refreshing the UI periodically (time callback)</a></p>
+<p class="A"><a href="srcdoc$CtrlLib$Tutorial_en-us.html#24">24. Internationalizing applications (i18n)</a></p>
+<p class="A">&nbsp;</p>
+<hr><p id="1" class="F">1. First steps</p>
+<p id="1_1" class="G">1.1 Creating GUI application project from template</p>
+<p class="D">Before we start writing GUI applications, first we need to learn how to create U++ GUI application from template. As described in <a href="app$ide$GettingStarted_en-us.html#2_2"><span class="E">Getting started with TheIDE</span></a> tutorial, let's start from invoking &quot;Create new package&quot; dialog. First of all let's select assembly in which GUI application will be created. For now, <span class="E">MyApps</span> <a href="app$ide$PackagesAssembliesAndNests_en-us.html"><span class="E">assembly</span></a> seems to be a good starting point. To create the package you could click on &quot;New package&quot; button or right click on package list and then select &quot;New package..&quot;:</p>
+<p class="A">&nbsp;</p>
+<p class="H"><a href="srcdoc$CtrlLib$Tutorial_en-us.html_0.png"><img src="srcdoc$CtrlLib$Tutorial_en-us.html_0.png" border="0" alt="" style="width: 500px; height: 331px"></a></p>
+<p class="A">&nbsp;</p>
+<p class="D">After that the dialog in which the package could be created should appear. In the dialog we have several options: The first one is &quot;Package name&quot; in our case let's name it &quot;Gui01&quot; for our first lesson. &quot;Create in&quot; should stay the same we would like to create package in MyApps directory. Next we need to select the package type. It is a very important step, because it will determine the dependencies of your further project. In this case we should focus on two particular templates:</p>
+<p class="I"><span class="E">U++ Basic CtrlLib application</span> - creates package with main GUI function and dependency to GUI packages (uses CtrlLib).</p>
+<p class="I">U++ CtrlLib application with main window - posses some advanced GUI creation options such as adding separate window class and layouts. Good option for persons how finish this tutorial and know basics.</p>
+<p class="D">&quot;Package description&quot; in this case is optional. &quot;Create new package&quot; dialogs is shown below with selected template for GUI applications:</p>
+<p class="A">&nbsp;</p>
+<p class="H"><a href="srcdoc$CtrlLib$Tutorial_en-us.html_1.png"><img src="srcdoc$CtrlLib$Tutorial_en-us.html_1.png" border="0" alt="" style="width: 603px; height: 423px"></a></p>
+<p class="A">&nbsp;</p>
+<p class="D">Now let's click on &quot;Create&quot; button and GUI project should be created.</p>
+<p id="1_2" class="G">1.2 GUI application main function</p>
+<p class="D">After creating GUI package, let's move to the coding part. To hide platform specific differences, U++ GUI application main function is defined using <span class="E">GUI_APP_MAIN</span> macro:</p>
+<p class="D">&nbsp;</p>
+<p class="J"><span class="K">#include</span><span class="L"> </span>&lt;<span class="L">CtrlLib</span>/<span class="L">CtrlLib</span>.<span class="L">h</span>&gt;</p>
+<p class="M">&nbsp;</p>
+<p class="M"><span class="N">using</span> <span class="N">namespace</span> Upp;</p>
+<p class="M">&nbsp;</p>
+<p class="M">GUI_APP_MAIN {</p>
+<p class="M"> &nbsp;&nbsp;&nbsp;PromptOK(<span class="O">&quot;Hello world&quot;</span>);</p>
+<p class="P">}</p>
+<p class="D">&nbsp;</p>
+<p class="H"><a href="srcdoc$CtrlLib$Tutorial_en-us.html_2.png"><img src="srcdoc$CtrlLib$Tutorial_en-us.html_2.png" border="0" alt="" style="width: 171px; height: 131px"></a></p>
+<p class="D">&nbsp;</p>
+<p class="D"><span class="E">PromptOK</span> function displays simply information dialog with the given parameter (in this case &quot;Hello world&quot;).</p>
+<p class="D">To use U++ GUI related code, all you need to do is include <span class="Q">&lt;CtrlLib/CtrlLib.h&gt;</span> header. Please also make sure that <span class="E">CtrlLib </span>package is attached to your current project. This is very important step if you didn't use GUI template to create your project or use empty one.</p>
+<p class="A">&nbsp;</p>
+<hr><p id="2" class="F">2. Application window</p>
+<p class="D">Application top-level windows are of <span class="E">TopWindow</span> class. You can run modal event loop for <span class="E">TopWindow</span> using the <span class="E">Run</span> or <span class="E">Execute</span> methods. Both methods open the window if it is not yet open (you can also open it using <span class="E">Open</span> or <span class="E">OpenMain</span>). Unlike <span class="E">Run</span>, <span class="E">Execute</span> also closes the window at the end of modal loop. <span class="E">TopWindow</span> is also closed by destructor.</p>
+<p class="D">&nbsp;</p>
+<p class="J"><span class="K">#include</span><span class="L"> </span>&lt;<span class="L">CtrlLib</span>/<span class="L">CtrlLib</span>.<span class="L">h</span>&gt;</p>
+<p class="M">&nbsp;</p>
+<p class="M"><span class="N">using</span> <span class="N">namespace</span> Upp;</p>
+<p class="M">&nbsp;</p>
+<p class="M">GUI_APP_MAIN {</p>
+<p class="M"> &nbsp;&nbsp;&nbsp;<span class="E"><u>TopWindow </u></span>w;</p>
+<p class="M"> &nbsp;&nbsp;&nbsp;w<span class="R">.</span><span class="E"><u>Run</u></span>();</p>
+<p class="P">}</p>
+<p class="D">&nbsp;</p>
+<p class="H"><a href="srcdoc$CtrlLib$Tutorial_en-us.html_3.png"><img src="srcdoc$CtrlLib$Tutorial_en-us.html_3.png" border="0" alt="" style="width: 538px; height: 283px"></a></p>
+<p class="D">&nbsp;</p>
+<hr><p id="3" class="F">3. Modifying TopWindow properties</p>
+<p class="D">You can modify properties and behaviour of <span class="E">TopWindow</span> using &quot;modifier&quot; methods. Note that modifiers usually return *this as return value, which results in simplified syntax. You can also setup the size of <span class="E">TopWindow</span> using <span class="E">SetRect</span> (note that unless instructed otherwise, U++ will center the position of window).</p>
+<p class="D">&nbsp;</p>
+<p class="J"><span class="K">#include</span><span class="L"> </span>&lt;<span class="L">CtrlLib</span>/<span class="L">CtrlLib</span>.<span class="L">h</span>&gt;</p>
+<p class="M">&nbsp;</p>
+<p class="M"><span class="N">using</span> <span class="N">namespace</span> Upp;</p>
+<p class="M">&nbsp;</p>
+<p class="M">GUI_APP_MAIN</p>
+<p class="M">{</p>
+<p class="M"> &nbsp;&nbsp;&nbsp;TopWindow w;</p>
+<p class="M"> &nbsp;&nbsp;&nbsp;w<span class="R">.</span><span class="E"><u>Title</u></span>(<span class="O">&quot;My application&quot;</span>)<span class="R">.</span><span class="E"><u>Zoomable</u></span>()<span class="R">.</span><span class="E"><u>Sizeable</u></span>();</p>
+<p class="M"> &nbsp;&nbsp;&nbsp;w<span class="R">.</span><span class="E"><u>SetRect</u></span>(<span class="O">0</span>, <span class="O">0</span>, <span class="O">200</span>, <span class="O">300</span>);</p>
+<p class="M"> &nbsp;&nbsp;&nbsp;w<span class="R">.</span>Run();</p>
+<p class="P">}</p>
+<p class="D">&nbsp;</p>
+<p class="H"><a href="srcdoc$CtrlLib$Tutorial_en-us.html_4.png"><img src="srcdoc$CtrlLib$Tutorial_en-us.html_4.png" border="0" alt="" style="width: 464px; height: 225px"></a></p>
+<p class="D">&nbsp;</p>
+<hr><p id="4" class="F">4. Painting the view area</p>
+<p class="D">In order to display something inside <span class="E">TopWindow</span> view area, you have to create derived class and override <span class="E">Paint</span> method:</p>
+<p class="D">&nbsp;</p>
+<p class="J"><span class="K">#include</span><span class="L"> </span>&lt;<span class="L">CtrlLib</span>/<span class="L">CtrlLib</span>.<span class="L">h</span>&gt;</p>
+<p class="M">&nbsp;</p>
+<p class="M"><span class="N">using</span> <span class="N">namespace</span> Upp;</p>
+<p class="M">&nbsp;</p>
+<p class="M"><span class="N">struct</span> MyAppWindow <span class="R">:</span> TopWindow {</p>
+<p class="S"><span class="T"> &nbsp;&nbsp;&nbsp;</span><span class="R"><u>void</u></span><u> Paint(Draw</u><span class="R"><u>&amp;</u></span><u> w) </u><span class="R"><u>override</u></span><u> {</u></p>
+<p class="S"><span class="T"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><u>w</u><span class="R"><u>.</u></span><u>DrawRect(GetSize(), SWhite());</u></p>
+<p class="S"><span class="T"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><u>w</u><span class="R"><u>.</u></span><u>DrawText(</u><span class="O"><u>20</u></span><u>, </u><span class="O"><u>20</u></span><u>, </u><span class="O"><u>&quot;Hello world!&quot;</u></span><u>, Arial(</u><span class="O"><u>30</u></span><u>), Magenta);</u></p>
+<p class="S"><span class="T"> &nbsp;&nbsp;&nbsp;</span><u>}</u></p>
+<p class="M">&nbsp;</p>
+<p class="M"> &nbsp;&nbsp;&nbsp;MyAppWindow() {</p>
+<p class="M"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Title(<span class="O">&quot;My application&quot;</span>)<span class="R">.</span>Zoomable()<span class="R">.</span>Sizeable();</p>
+<p class="M"> &nbsp;&nbsp;&nbsp;}</p>
+<p class="M">};</p>
+<p class="M">&nbsp;</p>
+<p class="M">GUI_APP_MAIN</p>
+<p class="M">{</p>
+<p class="M"> &nbsp;&nbsp;&nbsp;MyAppWindow app;</p>
+<p class="M"> &nbsp;&nbsp;&nbsp;app<span class="R">.</span>SetRect(<span class="O">0</span>, <span class="O">0</span>, <span class="O">400</span>, <span class="O">100</span>);</p>
+<p class="M"> &nbsp;&nbsp;&nbsp;app<span class="R">.</span>Run();</p>
+<p class="P">}</p>
+<p class="D">&nbsp;</p>
+<p class="H"><a href="srcdoc$CtrlLib$Tutorial_en-us.html_5.png"><img src="srcdoc$CtrlLib$Tutorial_en-us.html_5.png" border="0" alt="" style="width: 326px; height: 131px"></a> </p>
+<p class="H">&nbsp;</p>
+<p class="H"><a href="srcdoc$CtrlLib$Tutorial_en-us.html_6.png"><img src="srcdoc$CtrlLib$Tutorial_en-us.html_6.png" border="0" alt="" style="width: 383px; height: 159px"></a></p>
+<p class="U">The same application running in different operating systems. On the top MS Windows and on the bottom GNU/Linux with KDE.</p>
+<p class="D">&nbsp;</p>
+<hr><p id="5" class="F">5. Reacting to input events</p>
+<p class="D">In order to react to user actions like mouse clicks or keyboard events, you have to override appropriate virtual methods for example <span class="E">LeftDown </span>and <span class="E">MouseMove</span>. To issue the repainting of view area, use the <span class="E">Refresh</span> method.</p>
+<p class="D">&nbsp;</p>
+<p class="J"><span class="K">#include</span><span class="L"> </span>&lt;<span class="L">CtrlLib</span>/<span class="L">CtrlLib</span>.<span class="L">h</span>&gt;</p>
+<p class="M">&nbsp;</p>
+<p class="M"><span class="N">using</span> <span class="N">namespace</span> Upp;</p>
+<p class="M">&nbsp;</p>
+<p class="M"><span class="N">struct</span> MyAppWindow <span class="R">:</span> TopWindow {</p>
+<p class="M"> &nbsp;&nbsp;&nbsp;Point &nbsp;p;</p>
+<p class="M"> &nbsp;&nbsp;&nbsp;String text;</p>
+<p class="M">&nbsp;</p>
+<p class="S"> &nbsp;&nbsp;&nbsp;<span class="R"><u>void</u></span><u> LeftDown(Point pos, </u><span class="V"><u>dword</u></span><u> flags) </u><span class="R"><u>override</u></span><u> {</u></p>
+<p class="S"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<u>p </u><span class="R"><u>=</u></span><u> pos;</u></p>
+<p class="S"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<u>Refresh();</u></p>
+<p class="S"> &nbsp;&nbsp;&nbsp;<u>}</u></p>
+<p class="S">&nbsp;</p>
+<p class="S"> &nbsp;&nbsp;&nbsp;<span class="R"><u>void</u></span><u> MouseMove(Point pos, </u><span class="V"><u>dword</u></span><u> flags) </u><span class="R"><u>override</u></span><u> {</u></p>
+<p class="S"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<u>text </u><span class="R"><u>=</u></span><u> Format(</u><span class="O"><u>&quot;[</u></span><span class="R"><u>%d</u></span><span class="O"><u>:</u></span><span class="R"><u>%d</u></span><span class="O"><u>]&quot;</u></span><u>, pos</u><span class="R"><u>.</u></span><u>x, pos</u><span class="R"><u>.</u></span><u>y);</u></p>
+<p class="S"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<u>Refresh();</u></p>
+<p class="S"> &nbsp;&nbsp;&nbsp;<u>}</u></p>
+<p class="M">&nbsp;</p>
+<p class="M"> &nbsp;&nbsp;&nbsp;<span class="N">void</span> Paint(Draw<span class="R">&amp;</span> w) <span class="N">override</span> {</p>
+<p class="M"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;w<span class="R">.</span>DrawRect(GetSize(), SWhite);</p>
+<p class="M"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;w<span class="R">.</span>DrawText(p<span class="R">.</span>x, p<span class="R">.</span>y, text, Arial(<span class="O">20</span>), Magenta);</p>
+<p class="M"> &nbsp;&nbsp;&nbsp;}</p>
+<p class="M">&nbsp;</p>
+<p class="M"> &nbsp;&nbsp;&nbsp;MyAppWindow() {</p>
+<p class="M"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Title(<span class="O">&quot;My application&quot;</span>)<span class="R">.</span>Zoomable()<span class="R">.</span>Sizeable();</p>
+<p class="M"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;p<span class="R">.</span>x <span class="R">=</span> p<span class="R">.</span>y <span class="R">=</span> <span class="O">0</span>;</p>
+<p class="M"> &nbsp;&nbsp;&nbsp;}</p>
+<p class="M">};</p>
+<p class="M">&nbsp;</p>
+<p class="M">GUI_APP_MAIN</p>
+<p class="M">{</p>
+<p class="M"> &nbsp;&nbsp;&nbsp;MyAppWindow app;</p>
+<p class="M"> &nbsp;&nbsp;&nbsp;app<span class="R">.</span>Run();</p>
+<p class="W">}</p>
+<p class="D">&nbsp;</p>
+<p class="H"><a href="srcdoc$CtrlLib$Tutorial_en-us.html_7.png"><img src="srcdoc$CtrlLib$Tutorial_en-us.html_7.png" border="0" alt="" style="width: 522px; height: 325px"></a></p>
+<p class="D">&nbsp;</p>
+<hr><p id="6" class="F">6. Multiple main windows</p>
+<p class="D">If you application uses multiple top-level peer windows, you cannot use the <span class="E">Run</span> method as it runs the modal loop for just single window. Instead, you have to allocate top-level windows on the heap and use <span class="E">Ctrl::EventLoop</span> - this event loop runs as long as there are any top-level windows opened. Use &quot;<span class="E">delete this</span>&quot; in overridden <span class="E">Close</span> method to close and deallocate the main window.</p>
+<p class="D">&nbsp;</p>
+<p class="J"><span class="K">#include</span><span class="L"> </span>&lt;<span class="L">CtrlLib</span>/<span class="L">CtrlLib</span>.<span class="L">h</span>&gt;</p>
+<p class="M">&nbsp;</p>
+<p class="M"><span class="N">using</span> <span class="N">namespace</span> Upp;</p>
+<p class="M">&nbsp;</p>
+<p class="M"><span class="N">struct</span> MyAppWindow <span class="R">:</span> TopWindow {</p>
+<p class="M"> &nbsp;&nbsp;&nbsp;<span class="N">void</span> Close() <span class="N">override</span> {</p>
+<p class="S"><span class="T"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="R"><u>delete this</u></span><u>;</u></p>
+<p class="M"> &nbsp;&nbsp;&nbsp;}</p>
+<p class="M">&nbsp;</p>
+<p class="M"> &nbsp;&nbsp;&nbsp;<span class="N">void</span> LeftDown(Point pos, <span class="V">dword</span> flags) <span class="N">override</span> {</p>
+<p class="S"><span class="T"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><u>(</u><span class="R"><u>new</u></span><u> MyAppWindow)</u><span class="R"><u>-&gt;</u></span><u>OpenMain();</u></p>
+<p class="M"> &nbsp;&nbsp;&nbsp;}</p>
+<p class="M">&nbsp;</p>
+<p class="M"> &nbsp;&nbsp;&nbsp;<span class="N">void</span> Paint(Draw<span class="R">&amp;</span> w) <span class="N">override</span> {</p>
+<p class="M"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;w<span class="R">.</span>DrawRect(GetSize(), SWhite());</p>
+<p class="M"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;w<span class="R">.</span>DrawText(<span class="O">0</span>, <span class="O">0</span>, <span class="O">&quot;Click the view area to open next window!&quot;</span>, Arial(<span class="O">20</span>));</p>
+<p class="M"> &nbsp;&nbsp;&nbsp;}</p>
+<p class="M">&nbsp;</p>
+<p class="M"> &nbsp;&nbsp;&nbsp;MyAppWindow() {</p>
+<p class="M"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Title(<span class="O">&quot;My multiwindowed application&quot;</span>)<span class="R">.</span>Zoomable()<span class="R">.</span>Sizeable();</p>
+<p class="M"> &nbsp;&nbsp;&nbsp;}</p>
+<p class="M">};</p>
+<p class="M">&nbsp;</p>
+<p class="M">GUI_APP_MAIN</p>
+<p class="M">{</p>
+<p class="S"><span class="T"> &nbsp;&nbsp;&nbsp;</span><u>(</u><span class="R"><u>new</u></span><u> MyAppWindow)</u><span class="R"><u>-&gt;</u></span><u>OpenMain();</u></p>
+<p class="S"> &nbsp;&nbsp;&nbsp;<u>Ctrl</u><span class="R"><u>::</u></span><u>EventLoop();</u></p>
+<p class="P">}</p>
+<p class="D">&nbsp;</p>
+<p class="H"><a href="srcdoc$CtrlLib$Tutorial_en-us.html_8.png"><img src="srcdoc$CtrlLib$Tutorial_en-us.html_8.png" border="0" alt="" style="width: 400px; height: 289px"></a></p>
+<p class="D">&nbsp;</p>
+<p class="X">Note: this is one of rare cases where it makes sense in U++ to call <span class="E">new </span>and <span class="E">delete </span>directly.</p>
+<hr><p id="7" class="F">7. Menu</p>
+<p class="D">Content of menu in U++ is represented by the function or method adding required menu items to the <span class="E">Bar</span>. Items can contain <a href="src$Core$Callbacks$en-us.html">Events</a> to actions invoked by choosing the menu item or <a href="src$Core$Function$en-us.html#Upp::Event::typedef">Events</a> to represent sub-menus. Menu itself is managed by <span class="E">MenuBar</span>. <span class="E">MenuBar</span> can act both as widget or as a <a href="srcdoc$CtrlCore$AboutFrames$en-us.html"><span class="Q">Frame</span></a>. Frames are placed to the window border and reduce its view area.</p>
+<p class="D">&nbsp;</p>
+<p class="J"><span class="K">#include</span><span class="L"> </span>&lt;<span class="L">CtrlLib</span>/<span class="L">CtrlLib</span>.<span class="L">h</span>&gt;</p>
+<p class="M">&nbsp;</p>
+<p class="M"><span class="N">using</span> <span class="N">namespace</span> Upp;</p>
+<p class="M">&nbsp;</p>
+<p class="M"><span class="N">struct</span> MyAppWindow <span class="R">:</span> TopWindow {</p>
+<p class="M"> &nbsp;&nbsp;&nbsp;MenuBar menu;</p>
+<p class="M">&nbsp;</p>
+<p class="M"> &nbsp;&nbsp;&nbsp;<span class="N">void</span> <span class="E"><u>Exit()</u></span> {</p>
+<p class="M"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="N">if</span>(PromptOKCancel(<span class="O">&quot;Exit MyApp?&quot;</span>))</p>
+<p class="M"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Break();</p>
+<p class="M"> &nbsp;&nbsp;&nbsp;}</p>
+<p class="M">&nbsp;</p>
+<p class="M"> &nbsp;&nbsp;&nbsp;<span class="N">void</span> <span class="E"><u>SubMenu</u></span>(Bar<span class="R">&amp;</span> bar) {</p>
+<p class="M"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;bar<span class="R">.</span><span class="E"><u>Add</u></span>(<span class="O">&quot;Exit&quot;</span>, <span class="R">[=]</span> { <span class="E"><u>Exit</u></span>(); });</p>
+<p class="M"> &nbsp;&nbsp;&nbsp;}</p>
+<p class="M">&nbsp;</p>
+<p class="M"> &nbsp;&nbsp;&nbsp;<span class="N">void</span> <span class="E"><u>MainMenu</u></span>(Bar<span class="R">&amp;</span> bar) {</p>
+<p class="M"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;bar<span class="R">.</span><span class="E"><u>Sub</u></span>(<span class="O">&quot;Menu&quot;</span>, <span class="R">[=]</span>(Bar<span class="R">&amp;</span> bar) { <span class="E"><u>SubMenu</u></span>(bar); });</p>
+<p class="M"> &nbsp;&nbsp;&nbsp;}</p>
+<p class="M">&nbsp;</p>
+<p class="M"> &nbsp;&nbsp;&nbsp;MyAppWindow() {</p>
+<p class="M"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Title(<span class="O">&quot;My application with menu&quot;</span>)<span class="R">.</span>Sizeable();</p>
+<p class="M"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="E"><u>AddFrame</u></span>(menu);</p>
+<p class="M"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;menu<span class="R">.</span><span class="E"><u>Set</u></span>(<span class="R">[=]</span>(Bar<span class="R">&amp;</span> bar) { <span class="E"><u>MainMenu</u></span>(bar); });</p>
+<p class="M"> &nbsp;&nbsp;&nbsp;}</p>
+<p class="M">};</p>
+<p class="M">&nbsp;</p>
+<p class="M">GUI_APP_MAIN</p>
+<p class="M">{</p>
+<p class="M"> &nbsp;&nbsp;&nbsp;MyAppWindow app;</p>
+<p class="M"> &nbsp;&nbsp;&nbsp;app<span class="R">.</span>Run();</p>
+<p class="M">}</p>
+<p class="Y">&nbsp;</p>
+<p class="D">&nbsp;</p>
+<p class="H"><a href="srcdoc$CtrlLib$Tutorial_en-us.html_9.png"><img src="srcdoc$CtrlLib$Tutorial_en-us.html_9.png" border="0" alt="" style="width: 286px; height: 266px"></a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="srcdoc$CtrlLib$Tutorial_en-us.html_10.png"><img src="srcdoc$CtrlLib$Tutorial_en-us.html_10.png" border="0" alt="" style="width: 286px; height: 266px"></a></p>
+<p class="D">Of course, with power of C++11 lambdas, it is also possible, if not always advisable, to 'inline' the whole menu structure to single MenuBar::Set call:</p>
+<p class="P">&nbsp;</p>
+<p class="J"><span class="K">#include</span><span class="L"> </span>&lt;<span class="L">CtrlLib</span>/<span class="L">CtrlLib</span>.<span class="L">h</span>&gt;</p>
+<p class="M">&nbsp;</p>
+<p class="M"><span class="N">using</span> <span class="N">namespace</span> Upp;</p>
+<p class="M">&nbsp;</p>
+<p class="M"><span class="N">struct</span> MyAppWindow <span class="R">:</span> TopWindow {</p>
+<p class="M"> &nbsp;&nbsp;&nbsp;MenuBar menu;</p>
+<p class="M">&nbsp;</p>
+<p class="M"> &nbsp;&nbsp;&nbsp;MyAppWindow() {</p>
+<p class="M"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Title(<span class="O">&quot;My application with menu&quot;</span>)<span class="R">.</span>Sizeable();</p>
+<p class="M"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;AddFrame(menu);</p>
+<p class="S"><span class="T"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><u>menu</u><span class="R"><u>.</u></span><u>Set(</u><span class="R"><u>[=]</u></span><u>(Bar</u><span class="R"><u>&amp;</u></span><u> bar) {</u></p>
+<p class="S"><span class="T"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><u>bar</u><span class="R"><u>.</u></span><u>Sub(</u><span class="O"><u>&quot;Menu&quot;</u></span><u>, </u><span class="R"><u>[=]</u></span><u>(Bar</u><span class="R"><u>&amp;</u></span><u> bar) {</u></p>
+<p class="S"><span class="T"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><u>bar</u><span class="R"><u>.</u></span><u>Add(</u><span class="O"><u>&quot;Exit&quot;</u></span><u>, </u><span class="R"><u>[=]</u></span><u> {</u></p>
+<p class="S"><span class="T"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="R"><u>if</u></span><u>(PromptOKCancel(</u><span class="O"><u>&quot;Exit MyApp?&quot;</u></span><u>))</u></p>
+<p class="S"><span class="T"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><u>Break();</u></p>
+<p class="S"><span class="T"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><u>});</u></p>
+<p class="S"><span class="T"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><u>});</u></p>
+<p class="S"><span class="T"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><u>});</u></p>
+<p class="M"> &nbsp;&nbsp;&nbsp;}</p>
+<p class="M">};</p>
+<p class="M">&nbsp;</p>
+<p class="M">GUI_APP_MAIN</p>
+<p class="M">{</p>
+<p class="M"> &nbsp;&nbsp;&nbsp;MyAppWindow app;</p>
+<p class="M"> &nbsp;&nbsp;&nbsp;app<span class="R">.</span>Run();</p>
+<p class="P">}</p>
+<p class="D">&nbsp;</p>
+<hr><p id="8" class="F">8. Context menu</p>
+<p class="D">Context local menu (usually invoked by right mouse click) is similar to the standard menu bar handling, just instead of adding MenuBar to your application, you <span class="Z">execute</span> the menu event:</p>
+<p class="D">&nbsp;</p>
+<p class="J"><span class="K">#include</span><span class="L"> </span>&lt;<span class="L">CtrlLib</span>/<span class="L">CtrlLib</span>.<span class="L">h</span>&gt;</p>
+<p class="M">&nbsp;</p>
+<p class="M"><span class="N">using</span> <span class="N">namespace</span> Upp;</p>
+<p class="M">&nbsp;</p>
+<p class="M"><span class="N">struct</span> MyAppWindow <span class="R">:</span> TopWindow {</p>
+<p class="M"> &nbsp;&nbsp;&nbsp;<span class="N">void</span> Exit() {</p>
+<p class="M"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="N">if</span>(PromptOKCancel(<span class="O">&quot;Exit MyApp?&quot;</span>))</p>
+<p class="M"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Break();</p>
+<p class="M"> &nbsp;&nbsp;&nbsp;}</p>
+<p class="M">&nbsp;</p>
+<p class="M"> &nbsp;&nbsp;&nbsp;<span class="N">void</span> RightDown(Point, <span class="V">dword</span>) <span class="N">override</span> {</p>
+<p class="S"><span class="T"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><u>MenuBar</u><span class="R"><u>::</u></span><u>Execute(</u></p>
+<p class="S"><span class="T"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="R"><u>[=]</u></span><u>(Bar</u><span class="R"><u>&amp;</u></span><u> bar) {</u></p>
+<p class="S"><span class="T"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><u>bar</u><span class="R"><u>.</u></span><u>Add(</u><span class="O"><u>&quot;Exit&quot;</u></span><u>, </u><span class="R"><u>[=]</u></span><u> { Exit(); });</u></p>
+<p class="S"><span class="T"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><u>}</u></p>
+<p class="S"><span class="T"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><u>);</u></p>
+<p class="M"> &nbsp;&nbsp;&nbsp;}</p>
+<p class="M">&nbsp;</p>
+<p class="M"> &nbsp;&nbsp;&nbsp;MyAppWindow() {</p>
+<p class="M"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Title(<span class="O">&quot;My application with local menu&quot;</span>)<span class="R">.</span>Sizeable();</p>
+<p class="M"> &nbsp;&nbsp;&nbsp;}</p>
+<p class="M">};</p>
+<p class="M">&nbsp;</p>
+<p class="M">GUI_APP_MAIN</p>
+<p class="M">{</p>
+<p class="M"> &nbsp;&nbsp;&nbsp;MyAppWindow app;</p>
+<p class="M"> &nbsp;&nbsp;&nbsp;app<span class="R">.</span>Run();</p>
+<p class="P">}</p>
+<p class="D">&nbsp;</p>
+<p class="H"><a href="srcdoc$CtrlLib$Tutorial_en-us.html_11.png"><img src="srcdoc$CtrlLib$Tutorial_en-us.html_11.png" border="0" alt="" style="width: 342px; height: 245px"></a></p>
+<p class="AA">&nbsp;</p>
+<hr><p id="9" class="F">9. Context menu alternative</p>
+<p class="D">It is also possible to create context menu by adding menu items directly to MenuBar. Example also demonstrates how to convert the menu item to some value, by using lambda capture by reference:</p>
+<p class="D">&nbsp;</p>
+<p class="J"><span class="K">#include</span><span class="L"> </span>&lt;<span class="L">CtrlLib</span>/<span class="L">CtrlLib</span>.<span class="L">h</span>&gt;</p>
+<p class="M">&nbsp;</p>
+<p class="M"><span class="N">using</span> <span class="N">namespace</span> Upp;</p>
+<p class="M">&nbsp;</p>
+<p class="M"><span class="N">struct</span> MyAppWindow <span class="R">:</span> TopWindow {</p>
+<p class="M"> &nbsp;&nbsp;&nbsp;<span class="N">void</span> Exit() {</p>
+<p class="M"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="N">if</span>(PromptOKCancel(<span class="O">&quot;Exit MyApp?&quot;</span>))</p>
+<p class="M"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Break();</p>
+<p class="M"> &nbsp;&nbsp;&nbsp;}</p>
+<p class="M">&nbsp;</p>
+<p class="M"> &nbsp;&nbsp;&nbsp;<span class="N">void</span> RightDown(Point, <span class="V">dword</span>) <span class="N">override</span> {</p>
+<p class="M"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="N">int</span> <span class="E"><u>result</u></span><span class="E"> </span><span class="R">=</span> <span class="V">Null</span>;</p>
+<p class="M"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="E"><u>MenuBar menu</u></span>;</p>
+<p class="M"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="N">for</span>(<span class="N">int</span> i <span class="R">=</span> <span class="O">0</span>; i <span class="R">&lt;</span> <span class="O">10</span>; i<span class="R">++</span>)</p>
+<p class="M"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;menu<span class="R">.</span>Add(AsString(i), <span class="R">[=</span>, <span class="N"><u>&amp;</u></span><span class="E"><u>result</u></span><span class="R">]</span> { <span class="E"><u>result</u></span> <span class="R">=</span> i; });</p>
+<p class="M"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;menu<span class="R">.</span>Separator();</p>
+<p class="M"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;menu<span class="R">.</span>Add(<span class="O">&quot;Exit&quot;</span>, <span class="R">[=]</span> { Exit(); });</p>
+<p class="M"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;menu<span class="R">.</span><span class="E"><u>Execute()</u></span>;</p>
+<p class="M"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="N">if</span>(<span class="R">!</span>IsNull(<span class="E"><u>result</u></span>))</p>
+<p class="M"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;PromptOK(<span class="O">&quot;You have selected &quot;</span> <span class="R">+</span> AsString((<span class="N">int</span>)result));</p>
+<p class="M"> &nbsp;&nbsp;&nbsp;}</p>
+<p class="M">&nbsp;</p>
+<p class="M"> &nbsp;&nbsp;&nbsp;MyAppWindow() {</p>
+<p class="M"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Title(<span class="O">&quot;My application with context menu&quot;</span>)<span class="R">.</span>Sizeable();</p>
+<p class="M"> &nbsp;&nbsp;&nbsp;}</p>
+<p class="M">};</p>
+<p class="M">&nbsp;</p>
+<p class="M">GUI_APP_MAIN</p>
+<p class="M">{</p>
+<p class="M"> &nbsp;&nbsp;&nbsp;MyAppWindow app;</p>
+<p class="M"> &nbsp;&nbsp;&nbsp;app<span class="R">.</span>Run();</p>
+<p class="P">}</p>
+<p class="D">&nbsp;</p>
+<p class="H"><a href="srcdoc$CtrlLib$Tutorial_en-us.html_12.png"><img src="srcdoc$CtrlLib$Tutorial_en-us.html_12.png" border="0" alt="" style="width: 289px; height: 332px"></a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="srcdoc$CtrlLib$Tutorial_en-us.html_13.png"><img src="srcdoc$CtrlLib$Tutorial_en-us.html_13.png" border="0" alt="" style="width: 289px; height: 332px"></a></p>
+<p class="D">&nbsp;</p>
+<hr><p id="10" class="F">10. Adding images</p>
+<p class="D">To add some eye-candy to the menu, you can add small raster images. In U++, images are represented by Image values. You can use image designer, part of TheIDE, to design Image constants</p>
+<p class="D">&nbsp;</p>
+<p class="H"><a href="srcdoc$CtrlLib$Tutorial_en-us.html_14.png"><img src="srcdoc$CtrlLib$Tutorial_en-us.html_14.png" border="0" alt="" style="width: 620px; height: 378px"></a></p>
+<p class="D">&nbsp;</p>
+<p class="D">To get the image constants into your application you have to use somewhat obfuscated but thankfully short sequence of preprocessor commands:</p>
+<p class="D">&nbsp;</p>
+<p class="J"><span class="K">#include</span><span class="L"> </span>&lt;<span class="L">CtrlLib</span>/<span class="L">CtrlLib</span>.<span class="L">h</span>&gt;</p>
+<p class="M">&nbsp;</p>
+<p class="M"><span class="N">using</span> <span class="N">namespace</span> Upp;</p>
+<p class="M">&nbsp;</p>
+<p class="S"><span class="K"><u>#define</u></span><u> IMAGECLASS TutorialImg</u></p>
+<p class="AB"><span class="K"><u>#define</u></span><span class="L"><u> IMAGEFILE </u></span><u>&lt;</u><span class="L"><u>Gui10</u></span><u>/</u><span class="L"><u>images</u></span><u>.</u><span class="L"><u>iml</u></span><u>&gt;</u></p>
+<p class="AB"><span class="K"><u>#include</u></span><span class="L"><u> </u></span><u>&lt;</u><span class="L"><u>Draw</u></span><u>/</u><span class="L"><u>iml</u></span><u>.</u><span class="L"><u>h</u></span><u>&gt;</u></p>
+<p class="M">&nbsp;</p>
+<p class="M"><span class="N">struct</span> MyAppWindow <span class="R">:</span> TopWindow {</p>
+<p class="M"> &nbsp;&nbsp;&nbsp;MenuBar menu;</p>
+<p class="M">&nbsp;</p>
+<p class="M"> &nbsp;&nbsp;&nbsp;<span class="N">void</span> Exit() {</p>
+<p class="M"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="N">if</span>(PromptOKCancel(<span class="O">&quot;Exit MyApp?&quot;</span>))</p>
+<p class="M"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Break();</p>
+<p class="M"> &nbsp;&nbsp;&nbsp;}</p>
+<p class="M">&nbsp;</p>
+<p class="M"> &nbsp;&nbsp;&nbsp;<span class="N">void</span> SubMenu(Bar<span class="R">&amp;</span> bar) {</p>
+<p class="M"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;bar<span class="R">.</span>Add(<span class="O">&quot;Exit&quot;</span>, <span class="E"><u>TutorialImg</u></span><span class="N"><u>::</u></span><span class="E"><u>Exit()</u></span>, <span class="R">[=]</span> { Exit(); });</p>
+<p class="M"> &nbsp;&nbsp;&nbsp;}</p>
+<p class="M">&nbsp;</p>
+<p class="M"> &nbsp;&nbsp;&nbsp;MyAppWindow() {</p>
+<p class="M"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Title(<span class="O">&quot;My application with menu and images&quot;</span>)<span class="R">.</span>Sizeable();</p>
+<p class="M"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;AddFrame(menu);</p>
+<p class="M"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;menu<span class="R">.</span>Set(<span class="R">[=]</span>(Bar<span class="R">&amp;</span> bar) {</p>
+<p class="M"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;bar<span class="R">.</span>Sub(<span class="O">&quot;Menu&quot;</span>, <span class="R">[=]</span>(Bar<span class="R">&amp;</span> bar) { SubMenu(bar); });</p>
+<p class="M"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;});</p>
+<p class="M"> &nbsp;&nbsp;&nbsp;}</p>
+<p class="M">};</p>
+<p class="M">&nbsp;</p>
+<p class="M">GUI_APP_MAIN</p>
+<p class="M">{</p>
+<p class="M"> &nbsp;&nbsp;&nbsp;MyAppWindow app;</p>
+<p class="M"> &nbsp;&nbsp;&nbsp;app<span class="R">.</span>Run();</p>
+<p class="W">}</p>
+<p class="D">&nbsp;</p>
+<p class="D">Here <span class="Q">Gui10</span> is the name of package where .iml file resides.</p>
+<p class="D">Image constants are represented by class methods of class defined as <span class="E">IMAGECLASS</span> (<span class="Z">TutorialImg</span> in this case). Image constant then can be added to menu as another parameter of Bar::Add.</p>
+<p class="A">&nbsp;</p>
+<p class="AC"><a href="srcdoc$CtrlLib$Tutorial_en-us.html_15.png"><img src="srcdoc$CtrlLib$Tutorial_en-us.html_15.png" border="0" alt="" style="width: 428px; height: 192px"></a></p>
+<p class="A">&nbsp;</p>
+<p class="D"><span class="E">#include &lt;Draw/iml.h&gt;</span> works only when images are to be used in single .cpp file, otherwise you must put &quot;obfuscated&quot; sequence with <span class="E">#include &lt;Draw/iml_header.h&gt;</span> to you header and <span class="E">#include &lt;Draw/iml_source.h&gt;</span> to any .cpp file inside your package.</p>
+<p class="D">Note that to avoid typing, you can insert the code to include images using TheIDE's code editor context menu:</p>
+<p class="A">&nbsp;</p>
+<p class="H"><a href="srcdoc$CtrlLib$Tutorial_en-us.html_16.png"><img src="srcdoc$CtrlLib$Tutorial_en-us.html_16.png" border="0" alt="" style="width: 400px; height: 318px"></a></p>
+<p class="A">&nbsp;</p>
+<p class="D">The above insertion creates both header and source code.</p>
+<hr><p id="11" class="F">11. Toolbar</p>
+<p class="D">Toolbars are in fact quite similar to menus - they provide set of operations with names and Images that can be invoked by user. In U++ you can take advantage of this similarity as toolbars can share the definition with menus - if <span class="E">Bar::Add</span> command contains the Image, it also adds toolbar button with that Image when used with <span class="E">ToolBar</span>. The text of menu item then translates to button tip. If you want one particular Bar item to be used with menu or toolbar only, you can do that by using <span class="E">AddMenu</span> or <span class="E">AddTool</span> instead of simple Add. Also, items without Image are automatically added to menus only and vice versa, items without text are added to toolbars only.</p>
+<p class="D">&nbsp;</p>
+<p class="J"><span class="K">#include</span><span class="L"> </span>&lt;<span class="L">CtrlLib</span>/<span class="L">CtrlLib</span>.<span class="L">h</span>&gt;</p>
+<p class="M">&nbsp;</p>
+<p class="M"><span class="N">using</span> <span class="N">namespace</span> Upp;</p>
+<p class="M">&nbsp;</p>
+<p class="M"><span class="K">#define</span> IMAGECLASS TutorialImg</p>
+<p class="J"><span class="K">#define</span><span class="L"> IMAGEFILE </span>&lt;<span class="L">Gui11</span>/<span class="L">images</span>.<span class="L">iml</span>&gt;</p>
+<p class="J"><span class="K">#include</span><span class="L"> </span>&lt;<span class="L">Draw</span>/<span class="L">iml</span>.<span class="L">h</span>&gt;</p>
+<p class="M">&nbsp;</p>
+<p class="M"><span class="N">struct</span> MyAppWindow <span class="R">:</span> TopWindow {</p>
+<p class="M"> &nbsp;&nbsp;&nbsp;MenuBar menu;</p>
+<p class="S"><span class="T"> &nbsp;&nbsp;&nbsp;</span><u>ToolBar tool;</u></p>
+<p class="M">&nbsp;</p>
+<p class="M"> &nbsp;&nbsp;&nbsp;<span class="N">void</span> MenuFn() {</p>
+<p class="M"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;PromptOK(<span class="O">&quot;Fn activated!&quot;</span>);</p>
+<p class="M"> &nbsp;&nbsp;&nbsp;}</p>
+<p class="M">&nbsp;</p>
+<p class="M"> &nbsp;&nbsp;&nbsp;<span class="N">void</span> BarFn() {</p>
+<p class="M"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;PromptOK(<span class="O">&quot;Fn2 activated!&quot;</span>);</p>
+<p class="M"> &nbsp;&nbsp;&nbsp;}</p>
+<p class="M">&nbsp;</p>
+<p class="M"> &nbsp;&nbsp;&nbsp;<span class="N">void</span> Exit() {</p>
+<p class="M"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="N">if</span>(PromptOKCancel(<span class="O">&quot;Exit MyApp?&quot;</span>))</p>
+<p class="M"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Break();</p>
+<p class="M"> &nbsp;&nbsp;&nbsp;}</p>
+<p class="M">&nbsp;</p>
+<p class="M"> &nbsp;&nbsp;&nbsp;<span class="N">void</span> SubBar(Bar<span class="R">&amp;</span> bar) {</p>
+<p class="M"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;bar<span class="R">.</span>AddMenu(<span class="O">&quot;Function&quot;</span>, TutorialImg<span class="R">::</span>Fn(), <span class="R">[=]</span> { MenuFn(); });</p>
+<p class="S"><span class="T"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><u>bar</u><span class="R"><u>.</u></span><u>Add(TutorialImg</u><span class="R"><u>::</u></span><u>Fn2(), </u><span class="R"><u>[=]</u></span><u> { BarFn(); });</u></p>
+<p class="S"><span class="T"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><u>bar</u><span class="R"><u>.</u></span><u>Add(</u><span class="O"><u>&quot;Exit&quot;</u></span><u>, TutorialImg</u><span class="R"><u>::</u></span><u>Exit(), </u><span class="R"><u>[=]</u></span><u> { Exit(); });</u></p>
+<p class="M"> &nbsp;&nbsp;&nbsp;}</p>
+<p class="M">&nbsp;</p>
+<p class="M"> &nbsp;&nbsp;&nbsp;<span class="N">void</span> MainMenu(Bar<span class="R">&amp;</span> bar) {</p>
+<p class="M"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;bar<span class="R">.</span>Sub(<span class="O">&quot;Menu&quot;</span>, <span class="R">[=]</span>(Bar<span class="R">&amp;</span> bar) { SubBar(bar); });</p>
+<p class="M"> &nbsp;&nbsp;&nbsp;}</p>
+<p class="M">&nbsp;</p>
+<p class="M"> &nbsp;&nbsp;&nbsp;MyAppWindow() {</p>
+<p class="M"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Title(<span class="O">&quot;My application with bars&quot;</span>)<span class="R">.</span>Sizeable();</p>
+<p class="M"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;AddFrame(menu);</p>
+<p class="M"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="E"><u>AddFrame(tool)</u></span>;</p>
+<p class="M"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;menu<span class="R">.</span>Set(<span class="R">[=]</span>(Bar<span class="R">&amp;</span> bar) { MainMenu(bar); });</p>
+<p class="S"><span class="T"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><u>tool</u><span class="R"><u>.</u></span><u>Set(</u><span class="R"><u>[=]</u></span><u>(Bar</u><span class="R"><u>&amp;</u></span><u> bar) { SubBar(bar); });</u></p>
+<p class="M"> &nbsp;&nbsp;&nbsp;}</p>
+<p class="M">};</p>
+<p class="M">&nbsp;</p>
+<p class="M">GUI_APP_MAIN</p>
+<p class="M">{</p>
+<p class="M"> &nbsp;&nbsp;&nbsp;MyAppWindow app;</p>
+<p class="M"> &nbsp;&nbsp;&nbsp;app<span class="R">.</span>Run();</p>
+<p class="M">}</p>
+<p class="D">&nbsp;</p>
+<p class="H"><a href="srcdoc$CtrlLib$Tutorial_en-us.html_17.png"><img src="srcdoc$CtrlLib$Tutorial_en-us.html_17.png" border="0" alt="" style="width: 333px; height: 175px"></a></p>
+<p class="D">&nbsp;</p>
+<hr><p id="12" class="F">12. StatusBar and decorative Frames</p>
+<p class="D">To improve the visual aspect of the application, we can add some decorative Frames - those are frames that do not represent any action, just draw some kind of border at given frame level. We will also add the <span class="E">StatusBar</span> and connect it to the menu and toolbar - this way it will start displaying descriptions placed to Bar items using a Help method. Note that decorative frame functions (<span class="E">TopSeparatorFrame</span> and <span class="E">InsetFrame</span> here) usually return a reference to single global object, as there are no changing properties required when using them with different windows and widgets concurrently. Finally, this example also demonstrates the use of THISFN macro, which is an shortcut alternative for some lambdas - in this case <span class="AD">THISFN(SubBar)</span> is equivalent to <span class="AD">[=](Bar&amp; bar) { SubBar(bar); }</span>.</p>
+<p class="D">&nbsp;</p>
+<p class="J"><span class="K">#include</span><span class="L"> </span>&lt;<span class="L">CtrlLib</span>/<span class="L">CtrlLib</span>.<span class="L">h</span>&gt;</p>
+<p class="M">&nbsp;</p>
+<p class="M"><span class="N">using</span> <span class="N">namespace</span> Upp;</p>
+<p class="M">&nbsp;</p>
+<p class="M"><span class="K">#define</span> IMAGECLASS TutorialImg</p>
+<p class="J"><span class="K">#define</span><span class="L"> IMAGEFILE </span>&lt;<span class="L">Gui12</span>/<span class="L">images</span>.<span class="L">iml</span>&gt;</p>
+<p class="J"><span class="K">#include</span><span class="L"> </span>&lt;<span class="L">Draw</span>/<span class="L">iml</span>.<span class="L">h</span>&gt;</p>
+<p class="M">&nbsp;</p>
+<p class="M"><span class="N">struct</span> MyAppWindow <span class="R">:</span> TopWindow {</p>
+<p class="M"> &nbsp;&nbsp;&nbsp;MenuBar &nbsp;&nbsp;menu;</p>
+<p class="M"> &nbsp;&nbsp;&nbsp;ToolBar &nbsp;&nbsp;tool;</p>
+<p class="M"> &nbsp;&nbsp;&nbsp;StatusBar status;</p>
+<p class="M"> &nbsp;&nbsp;&nbsp;</p>
+<p class="AE"><span class="AF"> &nbsp;&nbsp;&nbsp;</span><span class="AG"><u>typedef</u></span><span class="AH"><u> MyAppWindow </u></span><span class="AI"><u>CLASSNAME</u></span><span class="AH"><u>;</u></span><span class="AF"> </span>// so that we can use THISFN shortcut</p>
+<p class="M">&nbsp;</p>
+<p class="M"> &nbsp;&nbsp;&nbsp;<span class="N">void</span> SubBar(Bar<span class="R">&amp;</span> bar) {</p>
+<p class="AE"><span class="AF"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;bar</span><span class="AJ">.</span><span class="AF">AddMenu(</span><span class="AK">&quot;Function&quot;</span><span class="AF">, TutorialImg</span><span class="AJ">::</span><span class="AF">Fn(), </span><span class="AJ">[=]</span><span class="AF"> { </span>// AddMenu - only in menu</p>
+<p class="M"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;PromptOK(<span class="O">&quot;Fn activated!&quot;</span>);</p>
+<p class="M"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;})<span class="N"><u>.</u></span><span class="E"><u>Help(</u></span><span class="AL"><u>&quot;This invokes MenuFn method of tutorial example&quot;</u></span><span class="E"><u>)</u></span>;</p>
+<p class="AE"><span class="AF"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;bar</span><span class="AJ">.</span><span class="AF">Add(TutorialImg</span><span class="AJ">::</span><span class="AF">Fn2(), </span><span class="AJ">[=]</span><span class="AF"> { </span>// does not have image - not in toolbar</p>
+<p class="M"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;PromptOK(<span class="O">&quot;Fn2 activated!&quot;</span>);</p>
+<p class="M"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;})<span class="N"><u>.</u></span><span class="E"><u>Help(</u></span><span class="AL"><u>&quot;This invokes BarFn method of tutorial example&quot;</u></span><span class="E"><u>)</u></span>;</p>
+<p class="AE"><span class="AF"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;bar</span><span class="AJ">.</span><span class="AF">Add(</span><span class="AK">&quot;Exit&quot;</span><span class="AF">, TutorialImg</span><span class="AJ">::</span><span class="AF">Exit(), </span><span class="AJ">[=]</span><span class="AF"> { </span>// in both toolbar and menu</p>
+<p class="M"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="N">if</span>(PromptOKCancel(<span class="O">&quot;Exit MyApp?&quot;</span>))</p>
+<p class="M"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Break();</p>
+<p class="M"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;});</p>
+<p class="M"> &nbsp;&nbsp;&nbsp;}</p>
+<p class="M">&nbsp;</p>
+<p class="M"> &nbsp;&nbsp;&nbsp;<span class="N">void</span> MainMenu(Bar<span class="R">&amp;</span> bar) {</p>
+<p class="M"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;bar<span class="R">.</span>Sub(<span class="O">&quot;Menu&quot;</span>, <span class="AM"><u>THISFN</u></span>(SubBar));</p>
+<p class="M"> &nbsp;&nbsp;&nbsp;}</p>
+<p class="M">&nbsp;</p>
+<p class="M"> &nbsp;&nbsp;&nbsp;MyAppWindow() {</p>
+<p class="M"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Title(<span class="O">&quot;My application with bars&quot;</span>)<span class="R">.</span>Sizeable();</p>
+<p class="M"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;AddFrame(menu);</p>
+<p class="S"><span class="T"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><u>AddFrame</u><span class="T">(</span><u>TopSeparatorFrame());</u></p>
+<p class="M"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;AddFrame(tool);</p>
+<p class="M"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;AddFrame(status);</p>
+<p class="S"><span class="T"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><u>AddFrame</u><span class="T">(</span><u>InsetFrame());</u></p>
+<p class="M"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;menu<span class="R">.</span>Set(<span class="AM"><u>THISFN</u></span>(MainMenu));</p>
+<p class="S"><span class="T"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><u>menu</u><span class="R"><u>.</u></span><u>WhenHelp </u><span class="R"><u>=</u></span><u> status;</u></p>
+<p class="AE"><span class="AF"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;tool</span><span class="AJ">.</span><span class="AF">Set(</span><span class="AJ">[=]</span><span class="AF">(Bar</span><span class="AJ">&amp;</span><span class="AF"> bar) { SubBar(bar); }); </span>// equivalent to THISFN(SubBar)</p>
+<p class="S"><span class="T"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><u>tool</u><span class="R"><u>.</u></span><u>WhenHelp </u><span class="R"><u>=</u></span><u> status;</u></p>
+<p class="M"> &nbsp;&nbsp;&nbsp;}</p>
+<p class="M">};</p>
+<p class="M">&nbsp;</p>
+<p class="M">GUI_APP_MAIN</p>
+<p class="M">{</p>
+<p class="M"> &nbsp;&nbsp;&nbsp;MyAppWindow app;</p>
+<p class="M"> &nbsp;&nbsp;&nbsp;app<span class="R">.</span>Run();</p>
+<p class="M">}</p>
+<p class="D">&nbsp;</p>
+<p class="H"><a href="srcdoc$CtrlLib$Tutorial_en-us.html_18.png"><img src="srcdoc$CtrlLib$Tutorial_en-us.html_18.png" border="0" alt="" style="width: 436px; height: 208px"></a></p>
+<p class="D">&nbsp;</p>
+<hr><p id="13" class="F">13. Adding child Ctrls - widgets, reacting to widget events</p>
+<p class="D">If you need to use some predefined child Ctrl (widget), place as variable somewhere, usually as member variable of your window or dialog class and use <span class="E">Add</span> (or <span class="E">operator &lt;&lt;</span>) to put it to your window.</p>
+<p class="D">&nbsp;</p>
+<p class="J"><span class="K">#include</span><span class="L"> </span>&lt;<span class="L">CtrlLib</span>/<span class="L">CtrlLib</span>.<span class="L">h</span>&gt;</p>
+<p class="M">&nbsp;</p>
+<p class="M"><span class="N">using</span> <span class="N">namespace</span> Upp;</p>
+<p class="M">&nbsp;</p>
+<p class="M"><span class="N">struct</span> MyAppWindow <span class="R">:</span> TopWindow {</p>
+<p class="S"><span class="T"> &nbsp;&nbsp;&nbsp;</span><u>Button button;</u></p>
+<p class="M">&nbsp;</p>
+<p class="M"> &nbsp;&nbsp;&nbsp;MyAppWindow() {</p>
+<p class="M"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Title(<span class="O">&quot;My application with button&quot;</span>);</p>
+<p class="S"><span class="T"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><u>Add(button</u><span class="R"><u>.</u></span><u>LeftPos(</u><span class="O"><u>10</u></span><u>, </u><span class="O"><u>200</u></span><u>)</u><span class="R"><u>.</u></span><u>TopPos(</u><span class="O"><u>10</u></span><u>, </u><span class="O"><u>60</u></span><u>));</u></p>
+<p class="S"><span class="T"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><u>button</u><span class="R"><u>.</u></span><u>SetLabel(</u><span class="O"><u>&quot;Click me!&quot;</u></span><u>);</u></p>
+<p class="S"><span class="T"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><u>button </u><span class="R"><u>&lt;&lt;</u></span><u> </u><span class="R"><u>[=]</u></span><u> {</u></p>
+<p class="S"><span class="T"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><u>PromptOK(</u><span class="O"><u>&quot;You have clicked the button!&quot;</u></span><u>);</u></p>
+<p class="S"><span class="T"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><u>};</u></p>
+<p class="M"> &nbsp;&nbsp;&nbsp;}</p>
+<p class="M">};</p>
+<p class="M">&nbsp;</p>
+<p class="M">GUI_APP_MAIN</p>
+<p class="M">{</p>
+<p class="M"> &nbsp;&nbsp;&nbsp;MyAppWindow app;</p>
+<p class="M"> &nbsp;&nbsp;&nbsp;app<span class="R">.</span>Run();</p>
+<p class="P">}</p>
+<p class="D">&nbsp;</p>
+<p class="D">Position within parent view is given in logical coordinates (e.g. <span class="E">LeftPos</span> or <span class="E">TopPos</span>) that allow no-nonsense resizing of dialog. Widget events (like &quot;button pushed&quot;) are reflected by its callbacks. There exists a &quot;default&quot; <span class="E">WhenAction</span> Event in each widget that is invoked when user changes a value or a state of widget. You can access it either directly</p>
+<p class="P">&nbsp;</p>
+<p class="M">widget.<span class="E"><u>WhenAction</u></span><span class="E"> </span>....</p>
+<p class="P">&nbsp;</p>
+<p class="D">or use operator&lt;&lt; version that adds and action to this widget</p>
+<p class="P">&nbsp;</p>
+<p class="M">widget <span class="E">&lt;&lt;</span> ....</p>
+<p class="P">&nbsp;</p>
+<p class="D">Note also that to make the code more clear and less verbose, U++ uses &quot;method chaining&quot; technique, where methods (usually those that affect appearance, position or behavior of widgets - &quot;modifiers&quot; in U++ lingo) are designed to return a reference to *this - that should explain the line</p>
+<p class="D">&nbsp;</p>
+<p class="M"><span class="AN">Add(button</span><span class="R">.</span>LeftPos(<span class="O">10</span>, <span class="O">100</span>)<span class="R">.</span>TopPos(<span class="O">10</span>, <span class="O">30</span>));</p>
+<p class="D">&nbsp;</p>
+<p class="H"><a href="srcdoc$CtrlLib$Tutorial_en-us.html_19.png"><img src="srcdoc$CtrlLib$Tutorial_en-us.html_19.png" border="0" alt="" style="width: 344px; height: 264px"></a></p>
+<p class="D">&nbsp;</p>
+<hr><p id="14" class="F">14 More about logical coordinates</p>
+<p id="14.1" class="G">14.1 Explanations</p>
+<p class="D">Logical coordinates can align one or both sides of widget to the side of parent view at specified distance(s) in both vertical and horizontal direction. If only one side is aligned, logical coordinate specifies the size. There is also specific kind of logical coordinate the specifies the center position.</p>
+<p class="D">&nbsp;</p>
+<p class="J"><span class="K">#include</span><span class="L"> </span>&lt;<span class="L">CtrlLib</span>/<span class="L">CtrlLib</span>.<span class="L">h</span>&gt;</p>
+<p class="M">&nbsp;</p>
+<p class="M"><span class="N">using</span> <span class="N">namespace</span> Upp;</p>
+<p class="M">&nbsp;</p>
+<p class="M"><span class="N">struct</span> MyAppWindow <span class="R">:</span> TopWindow {</p>
+<p class="M"> &nbsp;&nbsp;&nbsp;Button lt, rt, lb, rb, lv, ht, hv, cb, rc;</p>
+<p class="M">&nbsp;</p>
+<p class="M"> &nbsp;&nbsp;&nbsp;MyAppWindow() {</p>
+<p class="M"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Title(<span class="O">&quot;My application with button&quot;</span>)<span class="R">.</span>Sizeable();</p>
+<p class="AB"><span class="AO"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="T">*</span>this</p>
+<p class="S"><span class="T"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="R"><u>&lt;&lt;</u></span><u> lt</u><span class="R"><u>.</u></span><u>SetLabel(</u><span class="O"><u>&quot;left-top&quot;</u></span><u>)</u><span class="R"><u>.</u></span><u>LeftPos(</u><span class="O"><u>10</u></span><u>, </u><span class="O"><u>200</u></span><u>)</u><span class="R"><u>.</u></span><u>TopPos(</u><span class="O"><u>10</u></span><u>, </u><span class="O"><u>40</u></span><u>)</u></p>
+<p class="S"><span class="T"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="R"><u>&lt;&lt;</u></span><u> rt</u><span class="R"><u>.</u></span><u>SetLabel(</u><span class="O"><u>&quot;right-top&quot;</u></span><u>)</u><span class="R"><u>.</u></span><u>RightPos(</u><span class="O"><u>10</u></span><u>, </u><span class="O"><u>200</u></span><u>)</u><span class="R"><u>.</u></span><u>TopPos(</u><span class="O"><u>10</u></span><u>, </u><span class="O"><u>40</u></span><u>)</u></p>
+<p class="S"><span class="T"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="R"><u>&lt;&lt;</u></span><u> lb</u><span class="R"><u>.</u></span><u>SetLabel(</u><span class="O"><u>&quot;left-bottom&quot;</u></span><u>)</u><span class="R"><u>.</u></span><u>LeftPos(</u><span class="O"><u>10</u></span><u>, </u><span class="O"><u>200</u></span><u>)</u><span class="R"><u>.</u></span><u>BottomPos(</u><span class="O"><u>10</u></span><u>, </u><span class="O"><u>40</u></span><u>)</u></p>
+<p class="S"><span class="T"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="R"><u>&lt;&lt;</u></span><u> rb</u><span class="R"><u>.</u></span><u>SetLabel(</u><span class="O"><u>&quot;right-bottom&quot;</u></span><u>)</u><span class="R"><u>.</u></span><u>RightPos(</u><span class="O"><u>10</u></span><u>, </u><span class="O"><u>200</u></span><u>)</u><span class="R"><u>.</u></span><u>BottomPos(</u><span class="O"><u>10</u></span><u>, </u><span class="O"><u>40</u></span><u>)</u></p>
+<p class="S"><span class="T"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="R"><u>&lt;&lt;</u></span><u> lv</u><span class="R"><u>.</u></span><u>SetLabel(</u><span class="O"><u>&quot;left-vsize&quot;</u></span><u>)</u><span class="R"><u>.</u></span><u>LeftPos(</u><span class="O"><u>10</u></span><u>, </u><span class="O"><u>200</u></span><u>)</u><span class="R"><u>.</u></span><u>VSizePos(</u><span class="O"><u>60</u></span><u>, </u><span class="O"><u>60</u></span><u>)</u></p>
+<p class="S"><span class="T"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="R"><u>&lt;&lt;</u></span><u> ht</u><span class="R"><u>.</u></span><u>SetLabel(</u><span class="O"><u>&quot;hsize-pos&quot;</u></span><u>)</u><span class="R"><u>.</u></span><u>HSizePos(</u><span class="O"><u>220</u></span><u>, </u><span class="O"><u>220</u></span><u>)</u><span class="R"><u>.</u></span><u>TopPos(</u><span class="O"><u>10</u></span><u>, </u><span class="O"><u>40</u></span><u>)</u></p>
+<p class="S"><span class="T"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="R"><u>&lt;&lt;</u></span><u> hv</u><span class="R"><u>.</u></span><u>SetLabel(</u><span class="O"><u>&quot;hsize-vsize&quot;</u></span><u>)</u><span class="R"><u>.</u></span><u>HSizePos(</u><span class="O"><u>220</u></span><u>, </u><span class="O"><u>220</u></span><u>)</u><span class="R"><u>.</u></span><u>VSizePos(</u><span class="O"><u>60</u></span><u>, </u><span class="O"><u>60</u></span><u>)</u></p>
+<p class="S"><span class="T"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="R"><u>&lt;&lt;</u></span><u> cb</u><span class="R"><u>.</u></span><u>SetLabel(</u><span class="O"><u>&quot;hcenter-bottom&quot;</u></span><u>)</u><span class="R"><u>.</u></span><u>HCenterPos(</u><span class="O"><u>200</u></span><u>)</u><span class="R"><u>.</u></span><u>BottomPos(</u><span class="O"><u>10</u></span><u>, </u><span class="O"><u>40</u></span><u>)</u></p>
+<p class="S"><span class="T"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="R"><u>&lt;&lt;</u></span><u> rc</u><span class="R"><u>.</u></span><u>SetLabel(</u><span class="O"><u>&quot;right-vcenter&quot;</u></span><u>)</u><span class="R"><u>.</u></span><u>RightPos(</u><span class="O"><u>10</u></span><u>, </u><span class="O"><u>200</u></span><u>)</u><span class="R"><u>.</u></span><u>VCenterPos(</u><span class="O"><u>40</u></span><u>)</u></p>
+<p class="M"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;;</p>
+<p class="M"> &nbsp;&nbsp;&nbsp;}</p>
+<p class="M">};</p>
+<p class="M">&nbsp;</p>
+<p class="M">GUI_APP_MAIN</p>
+<p class="M">{</p>
+<p class="M"> &nbsp;&nbsp;&nbsp;MyAppWindow app;</p>
+<p class="M"> &nbsp;&nbsp;&nbsp;app<span class="R">.</span>Run();</p>
+<p class="M">}</p>
+<p class="D">&nbsp;</p>
+<p class="H"><a href="srcdoc$CtrlLib$Tutorial_en-us.html_20.png"><img src="srcdoc$CtrlLib$Tutorial_en-us.html_20.png" border="0" alt="" style="width: 546px; height: 252px"></a></p>
+<p class="H">&nbsp;</p>
+<p class="H"><a href="srcdoc$CtrlLib$Tutorial_en-us.html_21.png"><img src="srcdoc$CtrlLib$Tutorial_en-us.html_21.png" border="0" alt="" style="width: 327px; height: 338px"></a></p>
+<p class="D">&nbsp;</p>
+<p id="14.2" class="G">14.2 Minimal window size</p>
+<p class="D">When you decrease the size of dialog too much, buttons in this example start to overlap</p>
+<p class="H"><a href="srcdoc$CtrlLib$Tutorial_en-us.html_22.png"><img src="srcdoc$CtrlLib$Tutorial_en-us.html_22.png" border="0" alt="" style="width: 215px; height: 130px"></a></p>
+<p class="D">which is something that is in most cases undesirable. To fix the problem, you can specify the minimal size of window:</p>
+<p class="D">&nbsp;</p>
+<p class="J"><span class="K">#include</span><span class="L"> </span>&lt;<span class="L">CtrlLib</span>/<span class="L">CtrlLib</span>.<span class="L">h</span>&gt;</p>
+<p class="M">&nbsp;</p>
+<p class="M"><span class="N">using</span> <span class="N">namespace</span> Upp;</p>
+<p class="M">&nbsp;</p>
+<p class="M"><span class="N">struct</span> MyAppWindow <span class="R">:</span> TopWindow {</p>
+<p class="M"> &nbsp;&nbsp;&nbsp;Button lt, rt, lb, rb, lv, ht, hv, cb, rc;</p>
+<p class="M">&nbsp;</p>
+<p class="M"> &nbsp;&nbsp;&nbsp;MyAppWindow() {</p>
+<p class="M"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Title(<span class="O">&quot;My application with button&quot;</span>)<span class="R">.</span>Sizeable()<span class="R">.</span><span class="E"><u>SetMinSize</u></span>(<span class="E"><u>Zsz</u></span>(<span class="O">600</span>, <span class="O">400</span>));</p>
+<p class="AB"><span class="AO"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="T">*</span>this</p>
+<p class="M"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="R">&lt;&lt;</span> lt<span class="R">.</span>SetLabel(<span class="O">&quot;left-top&quot;</span>)<span class="R">.</span>LeftPos(<span class="O">10</span>, <span class="O">200</span>)<span class="R">.</span>TopPos(<span class="O">10</span>, <span class="O">40</span>)</p>
+<p class="M"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="R">&lt;&lt;</span> rt<span class="R">.</span>SetLabel(<span class="O">&quot;right-top&quot;</span>)<span class="R">.</span>RightPos(<span class="O">10</span>, <span class="O">200</span>)<span class="R">.</span>TopPos(<span class="O">10</span>, <span class="O">40</span>)</p>
+<p class="M"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="R">&lt;&lt;</span> lb<span class="R">.</span>SetLabel(<span class="O">&quot;left-bottom&quot;</span>)<span class="R">.</span>LeftPos(<span class="O">10</span>, <span class="O">200</span>)<span class="R">.</span>BottomPos(<span class="O">10</span>, <span class="O">40</span>)</p>
+<p class="M"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="R">&lt;&lt;</span> rb<span class="R">.</span>SetLabel(<span class="O">&quot;right-bottom&quot;</span>)<span class="R">.</span>RightPos(<span class="O">10</span>, <span class="O">200</span>)<span class="R">.</span>BottomPos(<span class="O">10</span>, <span class="O">40</span>)</p>
+<p class="M"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="R">&lt;&lt;</span> lv<span class="R">.</span>SetLabel(<span class="O">&quot;left-vsize&quot;</span>)<span class="R">.</span>LeftPos(<span class="O">10</span>, <span class="O">200</span>)<span class="R">.</span>VSizePos(<span class="O">60</span>, <span class="O">60</span>)</p>
+<p class="M"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="R">&lt;&lt;</span> ht<span class="R">.</span>SetLabel(<span class="O">&quot;hsize-pos&quot;</span>)<span class="R">.</span>HSizePos(<span class="O">220</span>, <span class="O">220</span>)<span class="R">.</span>TopPos(<span class="O">10</span>, <span class="O">40</span>)</p>
+<p class="M"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="R">&lt;&lt;</span> hv<span class="R">.</span>SetLabel(<span class="O">&quot;hsize-vsize&quot;</span>)<span class="R">.</span>HSizePos(<span class="O">220</span>, <span class="O">220</span>)<span class="R">.</span>VSizePos(<span class="O">60</span>, <span class="O">60</span>)</p>
+<p class="M"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="R">&lt;&lt;</span> cb<span class="R">.</span>SetLabel(<span class="O">&quot;hcenter-bottom&quot;</span>)<span class="R">.</span>HCenterPos(<span class="O">200</span>)<span class="R">.</span>BottomPos(<span class="O">10</span>, <span class="O">40</span>)</p>
+<p class="M"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="R">&lt;&lt;</span> rc<span class="R">.</span>SetLabel(<span class="O">&quot;right-vcenter&quot;</span>)<span class="R">.</span>RightPos(<span class="O">10</span>, <span class="O">200</span>)<span class="R">.</span>VCenterPos(<span class="O">40</span>)</p>
+<p class="M"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;;</p>
+<p class="M"> &nbsp;&nbsp;&nbsp;}</p>
+<p class="M">};</p>
+<p class="M">&nbsp;</p>
+<p class="M">GUI_APP_MAIN</p>
+<p class="M">{</p>
+<p class="M"> &nbsp;&nbsp;&nbsp;MyAppWindow app;</p>
+<p class="M"> &nbsp;&nbsp;&nbsp;app<span class="R">.</span>Run();</p>
+<p class="M">}</p>
+<p class="D">&nbsp;</p>
+<p class="D"><span class="E">Zsz</span> function converts arguments using font zooming to account for various base GUI font settings.</p>
+<hr><p id="15" class="F">15. Font-zooming</p>
+<p class="D">All distances in U++ widgets are always in pixels. However, to respond to platform setting of GUI font, U++ provides functions to zoom coordinates accordingly. Such zooming scale distances by the ratio of current standard GUI font size to design font size (which is based on old Win95 standard font size). Functions <span class="E">Zx</span> and <span class="E">Zy</span> scale the horizontal or vertical distance. Logical coordinate methods that end with <span class="E">Z</span> (like <span class="E">LeftPosZ </span>or <span class="E">TopPosZ</span>) are then scaling the values with these functions.</p>
+<p class="D">&nbsp;</p>
+<p class="J"><span class="K">#include</span><span class="L"> </span>&lt;<span class="L">CtrlLib</span>/<span class="L">CtrlLib</span>.<span class="L">h</span>&gt;</p>
+<p class="M">&nbsp;</p>
+<p class="M"><span class="N">using</span> <span class="N">namespace</span> Upp;</p>
+<p class="M">&nbsp;</p>
+<p class="M"><span class="N">struct</span> MyAppWindow <span class="R">:</span> TopWindow {</p>
+<p class="M"> &nbsp;&nbsp;&nbsp;Button button;</p>
+<p class="M">&nbsp;</p>
+<p class="M"> &nbsp;&nbsp;&nbsp;MyAppWindow() {</p>
+<p class="M"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Title(<span class="O">&quot;My application with font-zoomed button&quot;</span>)<span class="R">.</span>Sizeable();</p>
+<p class="M"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="R">*</span><span class="N">this</span> <span class="R">&lt;&lt;</span> button<span class="R">.</span>SetLabel(<span class="O">&quot;Button&quot;</span>)<span class="R">.</span>LeftPos(<span class="E"><u>Zx</u></span>(<span class="O">10</span>), <span class="E"><u>Zy</u></span>(<span class="O">64</span>))<span class="R">.</span><span class="E"><u>TopPosZ</u></span>(<span class="O">10</span>, <span class="O">24</span>);</p>
+<p class="M"> &nbsp;&nbsp;&nbsp;}</p>
+<p class="M">};</p>
+<p class="M">&nbsp;</p>
+<p class="M">GUI_APP_MAIN</p>
+<p class="M">{</p>
+<p class="M"> &nbsp;&nbsp;&nbsp;MyAppWindow app;</p>
+<p class="M"> &nbsp;&nbsp;&nbsp;app<span class="R">.</span>Run();</p>
+<p class="M">}</p>
+<p class="D">&nbsp;</p>
+<p class="H"><a href="srcdoc$CtrlLib$Tutorial_en-us.html_23.png"><img src="srcdoc$CtrlLib$Tutorial_en-us.html_23.png" border="0" alt="" style="width: 328px; height: 102px"></a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="srcdoc$CtrlLib$Tutorial_en-us.html_24.png"><img src="srcdoc$CtrlLib$Tutorial_en-us.html_24.png" border="0" alt="" style="width: 350px; height: 105px"></a></p>
+<p class="D">&nbsp;</p>
+<hr><p id="16" class="F">16. Layouts</p>
+<p id="16.1" class="G">16.1 Referral implementation</p>
+<p class="D">Placing widgets by specifying their numeric logical coordinates would be time-consuming, therefore TheIDE provides a visual designer to simplify this task.</p>
+<p class="D">&nbsp;</p>
+<p class="H"><a href="srcdoc$CtrlLib$Tutorial_en-us.html_25.png"><img src="srcdoc$CtrlLib$Tutorial_en-us.html_25.png" border="0" alt="" style="width: 934px; height: 603px"></a></p>
+<p class="D">&nbsp;</p>
+<p class="D">Visual design in U++ is called <span class="E">Layout Designer. </span>Its extensive documentation is available <a href="app$ide$LayoutDes_en-us.html"><span class="E">here</span></a>.</p>
+<p class="D">A group of layouts is stored in .lay file. Format of .lay files is such that it can be directly included into C++:</p>
+<p class="D">&nbsp;</p>
+<p class="J"><span class="K">#include</span><span class="L"> </span>&lt;<span class="L">CtrlLib</span>/<span class="L">CtrlLib</span>.<span class="L">h</span>&gt;</p>
+<p class="M">&nbsp;</p>
+<p class="M"><span class="N">using</span> <span class="N">namespace</span> Upp;</p>
+<p class="M">&nbsp;</p>
+<p class="AB"><span class="K"><u>#define</u></span><span class="L"><u> LAYOUTFILE </u></span><u>&lt;</u><span class="L"><u>Gui16a</u></span><u>/</u><span class="L"><u>dlg</u></span><u>.</u><span class="L"><u>lay</u></span><u>&gt;</u></p>
+<p class="AB"><span class="K"><u>#include</u></span><span class="L"><u> </u></span><u>&lt;</u><span class="L"><u>CtrlCore</u></span><u>/</u><span class="L"><u>lay</u></span><u>.</u><span class="L"><u>h</u></span><u>&gt;</u></p>
+<p class="M">&nbsp;</p>
+<p class="M"><span class="N">struct</span> MyAppWindow <span class="R">:</span> <span class="N">public</span> <span class="E"><u>WithDlgLayout</u></span><span class="N"><u>&lt;</u></span><span class="E"><u>TopWindow</u></span><span class="N"><u>&gt;</u></span> {</p>
+<p class="M"> &nbsp;&nbsp;&nbsp;MyAppWindow() {</p>
+<p class="S"><span class="T"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><u>CtrlLayout(</u><span class="R"><u>*this</u></span><u>, </u><span class="O"><u>&quot;MyDialog&quot;</u></span><u>);</u></p>
+<p class="M"> &nbsp;&nbsp;&nbsp;}</p>
+<p class="M">};</p>
+<p class="M">&nbsp;</p>
+<p class="M">GUI_APP_MAIN</p>
+<p class="M">{</p>
+<p class="M"> &nbsp;&nbsp;&nbsp;MyAppWindow()<span class="R">.</span>Run();</p>
+<p class="M">}</p>
+<p class="D">&nbsp;</p>
+<p class="H"><a href="srcdoc$CtrlLib$Tutorial_en-us.html_26.png"><img src="srcdoc$CtrlLib$Tutorial_en-us.html_26.png" border="0" alt="" style="width: 224px; height: 100px"></a></p>
+<p class="D">&nbsp;</p>
+<p class="D">Deriving from WithDlgLayout&lt;TopWindow&gt; adds layout widgets as member variables. The <a href="src$CtrlCore$Layout_en-us.html#CtrlLayout(T&)"><span class="E">CtrlLayout()</span></a> function call then setups attributes of all layout widgets, including its logical coordinates.</p>
+<p class="D">To understand how layout mechanism works, let's examine the content of .lay file:</p>
+<p class="D">&nbsp;</p>
+<p class="M"><span class="N">LAYOUT</span>(<span class="E"><u>DlgLayout</u></span>, <span class="O">208</span>, <span class="O">64</span>)</p>
+<p class="M"> &nbsp;&nbsp;&nbsp;<span class="N">ITEM</span>(<span class="E"><u>Upp</u></span><span class="N"><u>::</u></span><span class="E"><u>Label, dv___0, SetLabel(</u></span><span class="AM"><u>t_(</u></span><span class="AL"><u>&quot;Label&quot;</u></span><span class="AM"><u>)</u></span><span class="E"><u>)</u></span><span class="N"><u>.</u></span><span class="E"><u>LeftPosZ(</u></span><span class="AL"><u>8</u></span><span class="E"><u>, </u></span><span class="AL"><u>36</u></span><span class="E"><u>)</u></span><span class="N"><u>.</u></span><span class="E"><u>TopPosZ(</u></span><span class="AL"><u>8</u></span><span class="E"><u>, </u></span><span class="AL"><u>19</u></span><span class="E"><u>)</u></span>)</p>
+<p class="M"> &nbsp;&nbsp;&nbsp;<span class="N">ITEM</span>(<span class="E"><u>Upp</u></span><span class="N"><u>::</u></span><span class="E"><u>EditString, text, LeftPosZ(</u></span><span class="AL"><u>48</u></span><span class="E"><u>, </u></span><span class="AL"><u>92</u></span><span class="E"><u>)</u></span><span class="N"><u>.</u></span><span class="E"><u>TopPosZ(</u></span><span class="AL"><u>8</u></span><span class="E"><u>, </u></span><span class="AL"><u>19</u></span><span class="E"><u>)</u></span>)</p>
+<p class="M"> &nbsp;&nbsp;&nbsp;<span class="N">ITEM</span>(<span class="E"><u>Upp</u></span><span class="N"><u>::</u></span><span class="E"><u>Option, option, SetLabel(</u></span><span class="AM"><u>t_(</u></span><span class="AL"><u>&quot;Option&quot;</u></span><span class="AM"><u>)</u></span><span class="E"><u>)</u></span><span class="N"><u>.</u></span><span class="E"><u>LeftPosZ(</u></span><span class="AL"><u>8</u></span><span class="E"><u>, </u></span><span class="AL"><u>108</u></span><span class="E"><u>)</u></span><span class="N"><u>.</u></span><span class="E"><u>TopPosZ(</u></span><span class="AL"><u>32</u></span><span class="E"><u>, </u></span><span class="AL"><u>15</u></span><span class="E"><u>)</u></span>)</p>
+<p class="AB">END<span class="T">_</span>LAYOUT</p>
+<p class="D">&nbsp;</p>
+<p class="D">Header <span class="E">CtrlCore/lay.h</span> includes <span class="E">LAYOUTFILE</span> several times, altering definition of LAYOUT, ITEM and END_LAYOUT to produce C++ code which simplified form for this example looks like</p>
+<p class="D">&nbsp;</p>
+<p class="J"><span class="E">template</span><span class="L"> </span>&lt;<span class="E">class</span><span class="L"> Base</span>&gt;</p>
+<p class="M"><span class="N">struct</span> With<span class="E"><u>DlgLayout</u></span> <span class="R">:</span> Base {</p>
+<p class="S"><span class="T"> &nbsp;&nbsp;&nbsp;</span><u>Label dv___0;</u></p>
+<p class="S"><span class="T"> &nbsp;&nbsp;&nbsp;</span><u>EditString text;</u></p>
+<p class="S"><span class="T"> &nbsp;&nbsp;&nbsp;</span><u>Option option;</u></p>
+<p class="M">};</p>
+<p class="M">&nbsp;</p>
+<p class="J"><span class="E">template</span><span class="L"> </span>&lt;<span class="E">class</span><span class="L"> T</span>&gt;</p>
+<p class="M">CtrlLayout(T<span class="R">&amp;</span> dlg, <span class="N">const</span> <span class="N">char</span> <span class="R">*</span>title)</p>
+<p class="M">{</p>
+<p class="M"> &nbsp;&nbsp;&nbsp;Size sz <span class="R">=</span> Ctrl<span class="R">::</span>LayoutZoom(<span class="AL"><u>208</u></span><span class="E"><u>, </u></span><span class="AL"><u>64</u></span>)</p>
+<p class="M"> &nbsp;&nbsp;&nbsp;dlg<span class="R">.</span>SetMinSize(sz);</p>
+<p class="M"> &nbsp;&nbsp;&nbsp;dlg<span class="R">.</span>SetRect(sz);</p>
+<p class="M"> &nbsp;&nbsp;&nbsp;dlg<span class="R">.</span>Title(title);</p>
+<p class="M"> &nbsp;&nbsp;&nbsp;dlg<span class="R">.</span><span class="E"><u>dv___0</u></span><span class="N"><u>.</u></span><span class="E"><u>SetLabel(</u></span><span class="AM"><u>t_(</u></span><span class="AL"><u>&quot;Label&quot;</u></span><span class="AM"><u>)</u></span><span class="E"><u>)</u></span><span class="N"><u>.</u></span><span class="E"><u>LeftPosZ(</u></span><span class="AL"><u>8</u></span><span class="E"><u>, </u></span><span class="AL"><u>36</u></span><span class="E"><u>)</u></span><span class="N"><u>.</u></span><span class="E"><u>TopPosZ(</u></span><span class="AL"><u>8</u></span><span class="E"><u>, </u></span><span class="AL"><u>19</u></span><span class="E"><u>)</u></span>;</p>
+<p class="M"> &nbsp;&nbsp;&nbsp;dlg<span class="R">.</span><span class="E"><u>text</u></span><span class="N"><u>.</u></span><span class="E"><u>LeftPosZ(</u></span><span class="AL"><u>48</u></span><span class="E"><u>, </u></span><span class="AL"><u>92</u></span><span class="E"><u>)</u></span><span class="N"><u>.</u></span><span class="E"><u>TopPosZ(</u></span><span class="AL"><u>8</u></span><span class="E"><u>, </u></span><span class="AL"><u>19</u></span><span class="E"><u>)</u></span>;</p>
+<p class="M"> &nbsp;&nbsp;&nbsp;dlg<span class="R">.</span><span class="E"><u>option</u></span><span class="N"><u>.</u></span><span class="E"><u>SetLabel(</u></span><span class="AM"><u>t_(</u></span><span class="AL"><u>&quot;Option&quot;</u></span><span class="AM"><u>)</u></span><span class="E"><u>)</u></span><span class="N"><u>.</u></span><span class="E"><u>LeftPosZ(</u></span><span class="AL"><u>8</u></span><span class="E"><u>, </u></span><span class="AL"><u>108</u></span><span class="E"><u>)</u></span><span class="N"><u>.</u></span><span class="E"><u>TopPosZ(</u></span><span class="AL"><u>32</u></span><span class="E"><u>, </u></span><span class="AL"><u>15</u></span><span class="E"><u>)</u></span>;</p>
+<p class="M">}</p>
+<p class="D">&nbsp;</p>
+<p class="D">This way, U++ keeps tight coupling between visual design and C++ code.</p>
+<p class="D">Just like with .iml files, there is TheIDE code editor context menu function that creates necessary code to import .lay file for you:</p>
+<p class="A">&nbsp;</p>
+<p class="AC"><a href="srcdoc$CtrlLib$Tutorial_en-us.html_27.png"><img src="srcdoc$CtrlLib$Tutorial_en-us.html_27.png" border="0" alt="" style="width: 400px; height: 320px"></a></p>
+<p class="A">&nbsp;</p>
+<p class="X">Note: <span class="E">t_</span> function with string literal argument provides internationalization of texts. <span class="E">dv___0</span> is synthetic member variable name used for unnamed layout members (0 is index of member).</p>
+<p id="16.2" class="G">16.2 Upp namespace agnostic implementation</p>
+<p class="D">If you prefer to write code that is namespace agnostic, you are not forced to use &quot;using namespace Upp&quot; in the context of using layouts. Below implementation presents how you could avoid such situation:</p>
+<p class="A">&nbsp;</p>
+<p class="J"><span class="K">#include</span><span class="L"> </span>&lt;<span class="L">CtrlLib</span>/<span class="L">CtrlLib</span>.<span class="L">h</span>&gt;</p>
+<p class="M">&nbsp;</p>
+<p class="J"><span class="K">#define</span><span class="L"> LAYOUTFILE </span>&lt;<span class="L">Gui16b</span>/<span class="L">dlg</span>.<span class="L">lay</span>&gt;</p>
+<p class="J"><span class="K">#include</span><span class="L"> </span>&lt;<span class="L">CtrlCore</span>/<span class="L">lay</span>.<span class="L">h</span>&gt;</p>
+<p class="M">&nbsp;</p>
+<p class="M"><span class="N">struct</span> MyAppWindow <span class="R">:</span> <span class="N">public</span> WithDlgLayout<span class="R">&lt;</span>Upp<span class="R">::</span>TopWindow<span class="R">&gt;</span> {</p>
+<p class="M"> &nbsp;&nbsp;&nbsp;MyAppWindow() {</p>
+<p class="M"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CtrlLayout(<span class="R">*</span><span class="N">this</span>, <span class="O">&quot;MyDialog&quot;</span>);</p>
+<p class="M"> &nbsp;&nbsp;&nbsp;}</p>
+<p class="M">};</p>
+<p class="M">&nbsp;</p>
+<p class="M">GUI_APP_MAIN</p>
+<p class="M">{</p>
+<p class="M"> &nbsp;&nbsp;&nbsp;MyAppWindow()<span class="R">.</span>Run();</p>
+<p class="M">}</p>
+<p class="D">&nbsp;</p>
+<hr><p id="17" class="F">17. Value of widget</p>
+<p class="D">Many widgets have some sort of natural value. E.g. the value of EditString is String entered by user, whereas the value of Option is bool specifying the status of the option.</p>
+<p class="D">U++ provides unified interface to determine the main value of widget via <span class="E">GetData</span> and <span class="E">SetData</span> methods. All types of values are passed using polymorphic Value.</p>
+<p class="AP">&nbsp;</p>
+<p class="J"><span class="K">#include</span><span class="L"> </span>&lt;<span class="L">CtrlLib</span>/<span class="L">CtrlLib</span>.<span class="L">h</span>&gt;</p>
+<p class="M">&nbsp;</p>
+<p class="M"><span class="N">using</span> <span class="N">namespace</span> Upp;</p>
+<p class="M">&nbsp;</p>
+<p class="M">GUI_APP_MAIN</p>
+<p class="M">{</p>
+<p class="M"> &nbsp;&nbsp;&nbsp;TopWindow &nbsp;app;</p>
+<p class="M"> &nbsp;&nbsp;&nbsp;app<span class="R">.</span>SetRect(<span class="O">0</span>, <span class="O">0</span>, Zx(<span class="O">200</span>), Zy(<span class="O">20</span>));</p>
+<p class="M"> &nbsp;&nbsp;&nbsp;EditString text;</p>
+<p class="M"> &nbsp;&nbsp;&nbsp;app<span class="R">.</span>Add(text<span class="R">.</span>TopPosZ(<span class="O">0</span>, <span class="O">20</span>)<span class="R">.</span>HSizePos());</p>
+<p class="M">&nbsp;</p>
+<p class="M"> &nbsp;&nbsp;&nbsp;text<span class="R">.</span><span class="E"><u>SetData</u></span>(<span class="O">&quot;Some text&quot;</span>);</p>
+<p class="M"> &nbsp;&nbsp;&nbsp;app<span class="R">.</span>Run();</p>
+<p class="M"> &nbsp;&nbsp;&nbsp;PromptOK((String)text<span class="R">.</span><span class="E"><u>GetData</u></span>());</p>
+<p class="M">}</p>
+<p class="AQ">&nbsp;</p>
+<p class="D">Because this feature is used very frequently, U++ provides operator overloads for this interface - <span class="E">operator&lt;&lt;=</span> for SetData and <span class="E">operator~</span> for GetData.</p>
+<p class="D">&nbsp;</p>
+<p class="J"><span class="K">#include</span><span class="L"> </span>&lt;<span class="L">CtrlLib</span>/<span class="L">CtrlLib</span>.<span class="L">h</span>&gt;</p>
+<p class="M">&nbsp;</p>
+<p class="M"><span class="N">using</span> <span class="N">namespace</span> Upp;</p>
+<p class="M">&nbsp;</p>
+<p class="M">GUI_APP_MAIN</p>
+<p class="M">{</p>
+<p class="M"> &nbsp;&nbsp;&nbsp;TopWindow &nbsp;app;</p>
+<p class="M"> &nbsp;&nbsp;&nbsp;app<span class="R">.</span>SetRect(<span class="O">0</span>, <span class="O">0</span>, Zx(<span class="O">200</span>), Zy(<span class="O">20</span>));</p>
+<p class="M"> &nbsp;&nbsp;&nbsp;EditString text;</p>
+<p class="M"> &nbsp;&nbsp;&nbsp;app<span class="R">.</span>Add(text<span class="R">.</span>TopPosZ(<span class="O">0</span>, <span class="O">20</span>)<span class="R">.</span>HSizePos());</p>
+<p class="M">&nbsp;</p>
+<p class="M"> &nbsp;&nbsp;&nbsp;<span class="E"><u>text </u></span><span class="N"><u>&lt;&lt;=</u></span> <span class="O">&quot;Some text - operator version&quot;</span>;</p>
+<p class="M"> &nbsp;&nbsp;&nbsp;app<span class="R">.</span>Run();</p>
+<p class="M"> &nbsp;&nbsp;&nbsp;PromptOK((String)<span class="N"><u>~</u></span><span class="E"><u>text</u></span>);</p>
+<p class="M">}</p>
+<p class="D">&nbsp;</p>
+<hr><p id="18" class="F">18. Accepting and rejecting widgets</p>
+<p class="D">Ctrl interface provides</p>
+<p class="D">&nbsp;</p>
+<p class="M"><span class="N">virtual</span> <span class="N">bool</span> &nbsp;&nbsp;<span class="E"><u>Accept</u></span>();</p>
+<p class="M"><span class="N">virtual</span> <span class="N">void</span> &nbsp;&nbsp;<span class="E"><u>Reject</u></span>();</p>
+<p class="D">&nbsp;</p>
+<p class="D">methods. <span class="Q">Accepting</span> is usually a reaction to pressing OK button or similar approve operation and usually involves testing for correct content and finishing any pending operations for widget (this may involve e.g. updating data to SQL database). Accept must return <span class="E">true</span> if widget is accepted.</p>
+<p class="D">Default Ctrl implementation calls GetData for the widget. If ErrorValue (special Value content) is returned by GetData, displays error information contained and returns false, otherwise recursively calls Accept for all children, anding the loop and returning false when any child returns one. If no false was returned so far, Accept returns true.</p>
+<p class="D">The opposite action to Accept is <span class="Q">Reject</span>. This is used when Cancel button is pressed or similar rejecting action. It simply cancels all pending operations on widget. Default implementation calls Reject for all children.</p>
+<p class="D">&nbsp;</p>
+<p class="J"><span class="K">#include</span><span class="L"> </span>&lt;<span class="L">CtrlLib</span>/<span class="L">CtrlLib</span>.<span class="L">h</span>&gt;</p>
+<p class="M">&nbsp;</p>
+<p class="M"><span class="N">using</span> <span class="N">namespace</span> Upp;</p>
+<p class="M">&nbsp;</p>
+<p class="M">GUI_APP_MAIN</p>
+<p class="M">{</p>
+<p class="M"> &nbsp;&nbsp;&nbsp;TopWindow &nbsp;app;</p>
+<p class="M"> &nbsp;&nbsp;&nbsp;app<span class="R">.</span>SetRect(<span class="O">0</span>, <span class="O">0</span>, Zx(<span class="O">200</span>), Zy(<span class="O">20</span>));</p>
+<p class="M"> &nbsp;&nbsp;&nbsp;EditDate &nbsp;date;</p>
+<p class="M"> &nbsp;&nbsp;&nbsp;app<span class="R">.</span>Add(date<span class="R">.</span>TopPosZ(<span class="O">0</span>, <span class="O">20</span>)<span class="R">.</span>HSizePos());</p>
+<p class="M"> &nbsp;&nbsp;&nbsp;app<span class="R">.</span>Run();</p>
+<p class="M"> &nbsp;&nbsp;&nbsp;<span class="N">if</span>(app<span class="R">.</span><span class="E"><u>Accept</u></span>())</p>
+<p class="M"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;PromptOK(<span class="O">&quot;Correct date.&amp;[* &quot;</span> <span class="R">+</span> AsString(<span class="R">~</span>date));</p>
+<p class="M">}</p>
+<p class="D">&nbsp;</p>
+<p class="H"><a href="srcdoc$CtrlLib$Tutorial_en-us.html_28.png"><img src="srcdoc$CtrlLib$Tutorial_en-us.html_28.png" border="0" alt="" style="width: 206px; height: 52px"></a> <a href="srcdoc$CtrlLib$Tutorial_en-us.html_29.png"><img src="srcdoc$CtrlLib$Tutorial_en-us.html_29.png" border="0" alt="" style="width: 171px; height: 126px"></a></p>
+<p class="AA">&nbsp;</p>
+<p class="H"><a href="srcdoc$CtrlLib$Tutorial_en-us.html_30.png"><img src="srcdoc$CtrlLib$Tutorial_en-us.html_30.png" border="0" alt="" style="width: 206px; height: 52px"></a> <a href="srcdoc$CtrlLib$Tutorial_en-us.html_31.png"><img src="srcdoc$CtrlLib$Tutorial_en-us.html_31.png" border="0" alt="" style="width: 175px; height: 126px"></a></p>
+<p class="AA">&nbsp;</p>
+<hr><p id="19" class="F">19. Widget edit status flags</p>
+<p class="D">Ctrl interface provides several edit status flags:</p>
+<p class="AR"><span class="Q">Enabled</span>/<span class="Q">Disabled</span> - disabled widgets do not receive any input. Disabled status is usually expressed by altered visual appearance of widget.</p>
+<p class="AR"><span class="Q">Editable</span>/<span class="Q">ReadOnly</span> - read only widgets receive input messages but no changes to data are allowed. The difference from disabled status is that ReadOnly status allows read operations, like selecting and copying data to clipboard.</p>
+<p class="AR"><span class="Q">Modified</span> - modify flag is set to true whenever data in widget change - either by user action or by widget's interface. Flag is cleared by <span class="E">ClearModify</span> method.</p>
+<p class="D">Note that with exception of suppressing input events for disabled state, implementation of widgets is responsible for correct behaviour with respect to listed flags.</p>
+<p class="D">&nbsp;</p>
+<p class="J"><span class="K">#include</span><span class="L"> </span>&lt;<span class="L">CtrlLib</span>/<span class="L">CtrlLib</span>.<span class="L">h</span>&gt;</p>
+<p class="M">&nbsp;</p>
+<p class="M"><span class="N">using</span> <span class="N">namespace</span> Upp;</p>
+<p class="M">&nbsp;</p>
+<p class="M">GUI_APP_MAIN</p>
+<p class="M">{</p>
+<p class="M"> &nbsp;&nbsp;&nbsp;TopWindow &nbsp;app;</p>
+<p class="M"> &nbsp;&nbsp;&nbsp;app<span class="R">.</span>SetRect(<span class="O">0</span>, <span class="O">0</span>, Zx(<span class="O">200</span>), Zy(<span class="O">60</span>));</p>
+<p class="M"> &nbsp;&nbsp;&nbsp;EditDate &nbsp;date1, date2, date3;</p>
+<p class="M"> &nbsp;&nbsp;&nbsp;date1 <span class="R">&lt;&lt;=</span> date2 <span class="R">&lt;&lt;=</span> date3 <span class="R">&lt;&lt;=</span> GetSysDate();</p>
+<p class="M"> &nbsp;&nbsp;&nbsp;date1<span class="R">.</span><span class="E"><u>ClearModify</u></span>();</p>
+<p class="M"> &nbsp;&nbsp;&nbsp;app<span class="R">.</span>Add(date1<span class="R">.</span>TopPosZ(<span class="O">0</span>, <span class="O">20</span>)<span class="R">.</span>HSizePos());</p>
+<p class="M"> &nbsp;&nbsp;&nbsp;date2<span class="R">.</span><span class="E"><u>Disable</u></span>();</p>
+<p class="M"> &nbsp;&nbsp;&nbsp;app<span class="R">.</span>Add(date2<span class="R">.</span>TopPosZ(<span class="O">20</span>, <span class="O">20</span>)<span class="R">.</span>HSizePos());</p>
+<p class="M"> &nbsp;&nbsp;&nbsp;date3<span class="R">.</span><span class="E"><u>SetReadOnly</u></span>();</p>
+<p class="M"> &nbsp;&nbsp;&nbsp;app<span class="R">.</span>Add(date3<span class="R">.</span>TopPosZ(<span class="O">40</span>, <span class="O">20</span>)<span class="R">.</span>HSizePos());</p>
+<p class="M"> &nbsp;&nbsp;&nbsp;app<span class="R">.</span>Run();</p>
+<p class="M"> &nbsp;&nbsp;&nbsp;<span class="N">if</span>(date1<span class="R">.</span><span class="E"><u>IsModified</u></span>())</p>
+<p class="M"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;PromptOK(<span class="O">&quot;Date was modified!&quot;</span>);</p>
+<p class="M">}</p>
+<p class="D">&nbsp;</p>
+<p class="H"><a href="srcdoc$CtrlLib$Tutorial_en-us.html_32.png"><img src="srcdoc$CtrlLib$Tutorial_en-us.html_32.png" border="0" alt="" style="width: 206px; height: 92px"></a> <a href="srcdoc$CtrlLib$Tutorial_en-us.html_33.png"><img src="srcdoc$CtrlLib$Tutorial_en-us.html_33.png" border="0" alt="" style="width: 199px; height: 126px"></a></p>
+<p class="D">&nbsp;</p>
+<hr><p id="20" class="F">20. Breaking the modal loop</p>
+<p class="D">When you invoke <span class="E">Run</span> for your TopWindow, the new event loop starts. In order to exit it, e.g. by pressing the button, you have to call TopWindow's <span class="E">Break</span> method. Argument passed to Break is then returned from Run.</p>
+<p class="D">&nbsp;</p>
+<p class="J"><span class="K">#include</span><span class="L"> </span>&lt;<span class="L">CtrlLib</span>/<span class="L">CtrlLib</span>.<span class="L">h</span>&gt;</p>
+<p class="M">&nbsp;</p>
+<p class="M"><span class="N">using</span> <span class="N">namespace</span> Upp;</p>
+<p class="M">&nbsp;</p>
+<p class="M"><span class="N">struct</span> MyAppWindow <span class="R">:</span> TopWindow {</p>
+<p class="M"> &nbsp;&nbsp;&nbsp;Button exit;</p>
+<p class="M">&nbsp;</p>
+<p class="M"> &nbsp;&nbsp;&nbsp;MyAppWindow() {</p>
+<p class="M"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SetRect(<span class="O">0</span>, <span class="O">0</span>, Zx(<span class="O">100</span>), Zy(<span class="O">100</span>));</p>
+<p class="M"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Add(exit<span class="R">.</span>SetLabel(<span class="O">&quot;exit&quot;</span>)<span class="R">.</span>LeftPosZ(<span class="O">10</span>, <span class="O">64</span>)<span class="R">.</span>TopPosZ(<span class="O">10</span>, <span class="O">24</span>));</p>
+<p class="M"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;exit <span class="R">&lt;&lt;</span> <span class="R">[=]</span> { <span class="E"><u>Break</u></span>(<span class="O">999</span>); };</p>
+<p class="M"> &nbsp;&nbsp;&nbsp;}</p>
+<p class="M">};</p>
+<p class="M">&nbsp;</p>
+<p class="M">GUI_APP_MAIN</p>
+<p class="M">{</p>
+<p class="M"> &nbsp;&nbsp;&nbsp;MyAppWindow()<span class="R">.</span>Run();</p>
+<p class="M">}</p>
+<p class="D">&nbsp;</p>
+<p class="D">As this is very common situation, TopWindow provides another method, <span class="E">Breaker</span>, which returns an Event which, when invoked, performs the <span class="E">Break</span>.</p>
+<p class="D">&nbsp;</p>
+<p class="J"><span class="K">#include</span><span class="L"> </span>&lt;<span class="L">CtrlLib</span>/<span class="L">CtrlLib</span>.<span class="L">h</span>&gt;</p>
+<p class="M">&nbsp;</p>
+<p class="M"><span class="N">using</span> <span class="N">namespace</span> Upp;</p>
+<p class="M">&nbsp;</p>
+<p class="M"><span class="N">struct</span> MyAppWindow <span class="R">:</span> TopWindow {</p>
+<p class="M"> &nbsp;&nbsp;&nbsp;Button exit;</p>
+<p class="M">&nbsp;</p>
+<p class="M"> &nbsp;&nbsp;&nbsp;MyAppWindow() {</p>
+<p class="M"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SetRect(<span class="O">0</span>, <span class="O">0</span>, Zx(<span class="O">100</span>), Zy(<span class="O">100</span>));</p>
+<p class="M"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Add(exit<span class="R">.</span>SetLabel(<span class="O">&quot;exit&quot;</span>)<span class="R">.</span>LeftPosZ(<span class="O">10</span>, <span class="O">64</span>)<span class="R">.</span>TopPosZ(<span class="O">10</span>, <span class="O">24</span>));</p>
+<p class="M"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;exit <span class="R">&lt;&lt;</span> <span class="E"><u>Breaker</u></span>(<span class="O">999</span>);</p>
+<p class="M"> &nbsp;&nbsp;&nbsp;}</p>
+<p class="M">};</p>
+<p class="M">&nbsp;</p>
+<p class="M">GUI_APP_MAIN</p>
+<p class="M">{</p>
+<p class="M"> &nbsp;&nbsp;&nbsp;MyAppWindow()<span class="R">.</span>Run();</p>
+<p class="M">}</p>
+<p class="D">&nbsp;</p>
+<p class="D">Another common situation is handling OK and Cancel buttons. OK button has to Accept the dialog before breaking the loop (if accept is successful), Cancel has to Reject it. TopWindow therefore provides <span class="E">Acceptor</span> and <span class="E">Rejector</span> methods providing Callbacks that invoke <span class="E">Accept</span> and <span class="E">Reject</span> as needed before calling the <span class="E">Break</span>.</p>
+<p class="D">&nbsp;</p>
+<p class="J"><span class="K">#include</span><span class="L"> </span>&lt;<span class="L">CtrlLib</span>/<span class="L">CtrlLib</span>.<span class="L">h</span>&gt;</p>
+<p class="M">&nbsp;</p>
+<p class="M"><span class="N">using</span> <span class="N">namespace</span> Upp;</p>
+<p class="M">&nbsp;</p>
+<p class="M"><span class="N">struct</span> MyAppWindow <span class="R">:</span> TopWindow {</p>
+<p class="M"> &nbsp;&nbsp;&nbsp;Button ok, cancel;</p>
+<p class="M"> &nbsp;&nbsp;&nbsp;EditDate date;</p>
+<p class="M">&nbsp;</p>
+<p class="M"> &nbsp;&nbsp;&nbsp;MyAppWindow() {</p>
+<p class="M"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SetRect(<span class="O">0</span>, <span class="O">0</span>, Zx(<span class="O">200</span>), Zy(<span class="O">90</span>));</p>
+<p class="M"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Add(date<span class="R">.</span>LeftPosZ(<span class="O">10</span>, <span class="O">80</span>)<span class="R">.</span>TopPosZ(<span class="O">10</span>, <span class="O">20</span>));</p>
+<p class="M"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Add(ok<span class="R">.</span>SetLabel(<span class="O">&quot;OK&quot;</span>)<span class="R">.</span>LeftPosZ(<span class="O">10</span>, <span class="O">64</span>)<span class="R">.</span>TopPosZ(<span class="O">40</span>, <span class="O">24</span>));</p>
+<p class="M"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Add(cancel<span class="R">.</span>SetLabel(<span class="O">&quot;Cancel&quot;</span>)<span class="R">.</span>LeftPosZ(<span class="O">100</span>, <span class="O">64</span>)<span class="R">.</span>TopPosZ(<span class="O">40</span>, <span class="O">24</span>));</p>
+<p class="M">&nbsp;</p>
+<p class="M"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ok<span class="R">.</span><span class="E"><u>Ok</u></span>() <span class="R">&lt;&lt;</span> <span class="E"><u>Acceptor</u></span>(<span class="AS"><u>IDOK</u></span>);</p>
+<p class="M"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;cancel<span class="R">.</span><span class="E"><u>Cancel</u></span>() <span class="R">&lt;&lt;</span> <span class="E"><u>Rejector</u></span>(<span class="AS"><u>IDCANCEL</u></span>);</p>
+<p class="M"> &nbsp;&nbsp;&nbsp;}</p>
+<p class="M">};</p>
+<p class="M">&nbsp;</p>
+<p class="M">GUI_APP_MAIN</p>
+<p class="M">{</p>
+<p class="M"> &nbsp;&nbsp;&nbsp;MyAppWindow app;</p>
+<p class="M"> &nbsp;&nbsp;&nbsp;<span class="N">switch</span>(app<span class="R">.</span>Run()) {</p>
+<p class="J"><span class="L"> &nbsp;&nbsp;&nbsp;</span><span class="E">case</span><span class="L"> </span><span class="AS"><u>IDOK</u></span>:</p>
+<p class="M"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;PromptOK(String()<span class="R">.</span>Cat() <span class="R">&lt;&lt;</span> <span class="O">&quot;OK: &quot;</span> <span class="R">&lt;&lt;</span> <span class="R">~</span>app<span class="R">.</span>date);</p>
+<p class="M"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="N">break</span>;</p>
+<p class="J"><span class="L"> &nbsp;&nbsp;&nbsp;</span><span class="E">case</span><span class="L"> </span><span class="AS"><u>IDCANCEL</u></span>:</p>
+<p class="M"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Exclamation(<span class="O">&quot;Canceled&quot;</span>);</p>
+<p class="M"> &nbsp;&nbsp;&nbsp;}</p>
+<p class="M">}</p>
+<p class="D">&nbsp;</p>
+<p class="D">Calls to <span class="E">Ok</span> and <span class="E">Cancel</span> methods of Button here make Button react to Enter and Esc keys and add specific visual appearance.</p>
+<p class="D">To reduce tedious tasks even further, there are <span class="E">CtrlLayoutOK</span>, <span class="E">CtrlLayoutCancel</span>, <span class="E">CtrlLayoutOKCancel </span>etc. template functions that both <a href="src$CtrlCore$Layout_en-us.html">setup layout and assign</a> Acceptors and Rejectors!</p>
+<p class="X">main.cpp:</p>
+<p class="J"><span class="K">#include</span><span class="L"> </span>&lt;<span class="L">CtrlLib</span>/<span class="L">CtrlLib</span>.<span class="L">h</span>&gt;</p>
+<p class="M">&nbsp;</p>
+<p class="M"><span class="N">using</span> <span class="N">namespace</span> Upp;</p>
+<p class="M">&nbsp;</p>
+<p class="J"><span class="K">#define</span><span class="L"> LAYOUTFILE </span>&lt;<span class="L">Gui20d</span>/<span class="L">myapp</span>.<span class="L">lay</span>&gt;</p>
+<p class="J"><span class="K">#include</span><span class="L"> </span>&lt;<span class="L">CtrlCore</span>/<span class="L">lay</span>.<span class="L">h</span>&gt;</p>
+<p class="M">&nbsp;</p>
+<p class="M">GUI_APP_MAIN</p>
+<p class="M">{</p>
+<p class="M"> &nbsp;&nbsp;&nbsp;WithMyAppLayout<span class="R">&lt;</span>TopWindow<span class="R">&gt;</span> app;</p>
+<p class="M"> &nbsp;&nbsp;&nbsp;<span class="E"><u>CtrlLayoutOKCancel</u></span>(app, <span class="O">&quot;MyApp&quot;</span>);</p>
+<p class="M"> &nbsp;&nbsp;&nbsp;<span class="N">switch</span>(app<span class="R">.</span>Run()) {</p>
+<p class="J"><span class="L"> &nbsp;&nbsp;&nbsp;</span><span class="E">case</span><span class="L"> IDOK</span>:</p>
+<p class="M"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;PromptOK(String()<span class="R">.</span>Cat() <span class="R">&lt;&lt;</span> <span class="O">&quot;OK: &quot;</span> <span class="R">&lt;&lt;</span> <span class="R">~</span>app<span class="R">.</span>date);</p>
+<p class="M"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="N">break</span>;</p>
+<p class="J"><span class="L"> &nbsp;&nbsp;&nbsp;</span><span class="E">case</span><span class="L"> IDCANCEL</span>:</p>
+<p class="M"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Exclamation(<span class="O">&quot;Canceled&quot;</span>);</p>
+<p class="M"> &nbsp;&nbsp;&nbsp;}</p>
+<p class="M">}</p>
+<p class="D">&nbsp;</p>
+<p class="X">myapp.lay:</p>
+<p class="M"><span class="N">LAYOUT</span>(MyAppLayout, <span class="O">148</span>, <span class="O">64</span>)</p>
+<p class="M"> &nbsp;&nbsp;&nbsp;<span class="N">ITEM</span>(Upp<span class="R">::</span>EditDate, date, LeftPosZ(<span class="O">4</span>, <span class="O">88</span>)<span class="R">.</span>TopPosZ(<span class="O">4</span>, <span class="O">19</span>))</p>
+<p class="M"> &nbsp;&nbsp;&nbsp;<span class="N">ITEM</span>(Upp<span class="R">::</span>Button, <span class="E"><u>ok</u></span>, SetLabel(<span class="V">t_(</span><span class="O">&quot;OK&quot;</span><span class="V">)</span>)<span class="R">.</span>LeftPosZ(<span class="O">4</span>, <span class="O">64</span>)<span class="R">.</span>TopPosZ(<span class="O">32</span>, <span class="O">24</span>))</p>
+<p class="M"> &nbsp;&nbsp;&nbsp;<span class="N">ITEM</span>(Upp<span class="R">::</span>Button, <span class="E"><u>cancel</u></span>, SetLabel(<span class="V">t_(</span><span class="O">&quot;Cancel&quot;</span><span class="V">)</span>)<span class="R">.</span>LeftPosZ(<span class="O">76</span>, <span class="O">64</span>)<span class="R">.</span>TopPosZ(<span class="O">32</span>, <span class="O">24</span>))</p>
+<p class="AB">END<span class="T">_</span>LAYOUT</p>
+<p class="D">&nbsp;</p>
+<p class="AT">&nbsp;</p>
+<p class="P"><a href="srcdoc$CtrlLib$Tutorial_en-us.html_34.png"><img src="srcdoc$CtrlLib$Tutorial_en-us.html_34.png" border="0" alt="" style="width: 186px; height: 123px"></a></p>
+<p class="A">&nbsp;</p>
+<p class="D">Please note that the layout has to contain corresponding correctly named widgets (Button ok, cancel) in order to make this work.</p>
+<p class="X">Note: <span class="E">IDOK</span>, <span class="E">IDCANCEL</span> are predefined constants.</p>
+<hr><p id="21" class="F">21. Creating and using custom widgets</p>
+<p class="D">There is really nothing special about creating your own widgets. All that is to be done is to derive your own class from Ctrl (or some other existing widget, if that fits better) and override Ctrl's virtual methods to paint the widgets and do something useful:</p>
+<p class="D">&nbsp;</p>
+<p class="M"><span class="N">struct</span> MyCtrl <span class="R">:</span> <span class="N">public</span> Ctrl {</p>
+<p class="M"> &nbsp;&nbsp;&nbsp;<span class="N">int</span> count <span class="R">=</span> <span class="O">0</span>;</p>
+<p class="M">&nbsp;</p>
+<p class="M"> &nbsp;&nbsp;&nbsp;<span class="N">void</span> Paint(Draw<span class="R">&amp;</span> w) <span class="N">override</span> {</p>
+<p class="M"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;w<span class="R">.</span>DrawRect(GetSize(), White());</p>
+<p class="M"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;w<span class="R">.</span>DrawText(<span class="O">2</span>, <span class="O">2</span>, AsString(count));</p>
+<p class="M"> &nbsp;&nbsp;&nbsp;}</p>
+<p class="M">&nbsp;</p>
+<p class="M"> &nbsp;&nbsp;&nbsp;<span class="N">void</span> LeftDown(Point, <span class="V">dword</span>) <span class="N">override</span> {</p>
+<p class="M"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;count<span class="R">++</span>;</p>
+<p class="M"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Refresh();</p>
+<p class="M"> &nbsp;&nbsp;&nbsp;}</p>
+<p class="M">};</p>
+<p class="D">&nbsp;</p>
+<p class="D">To put your widget into your layout based dialog, the simple way is to add it as &quot;User class&quot;. In that case you just fill in the name of class and layout designer shows the custom widget as empty rectangle with class name displayed on it:</p>
+<p class="D">&nbsp;</p>
+<p class="H"><a href="srcdoc$CtrlLib$Tutorial_en-us.html_35.png"><img src="srcdoc$CtrlLib$Tutorial_en-us.html_35.png" border="0" alt="" style="width: 475px; height: 291px"></a></p>
+<p class="D">&nbsp;</p>
+<p class="D">Note that layout file has to be included <span class="E">after</span> declaration of custom widget (so that the class is defined at that point).</p>
+<p class="D">While empty rectangle in layout designer is usually enough for seldom used widgets, you can also teach TheIDE to show something better using .usc script file:</p>
+<p class="D">&nbsp;</p>
+<p class="M"><span class="N">ctrl</span> MyCtrl {</p>
+<p class="M"> &nbsp;&nbsp;&nbsp;<span class="N">group</span> <span class="O">&quot;Example&quot;</span>;</p>
+<p class="M">&nbsp;</p>
+<p class="M"> &nbsp;&nbsp;&nbsp;<span class="V">GetMinSize</span>() { sz <span class="R">=</span> <span class="V">GetTextSize</span>(<span class="O">&quot;X&quot;</span>); sz<span class="R">.</span>cy <span class="R">+=</span> <span class="O">2</span>; <span class="N">return</span> sz; }</p>
+<p class="M"> &nbsp;&nbsp;&nbsp;<span class="V">GetStdSize</span>() { sz <span class="R">=</span> <span class="V">GetMinSize</span>(); sz<span class="R">.</span>cx <span class="R">*=</span> <span class="O">7</span>; <span class="N">return</span> sz; }</p>
+<p class="M">&nbsp;</p>
+<p class="M"> &nbsp;&nbsp;&nbsp;Paint(w) {</p>
+<p class="M"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;r <span class="R">=</span> GetRect();</p>
+<p class="M"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;w<span class="R">.</span><span class="V">DrawRect</span>(r, <span class="R">:</span><span class="V">White</span>);</p>
+<p class="M"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;w<span class="R">.</span><span class="V">DrawText</span>(<span class="O">2</span>, <span class="O">2</span>, <span class="O">&quot;0&quot;</span>, <span class="V">StdFont</span>(), <span class="R">:</span><span class="V">Black</span>);</p>
+<p class="M"> &nbsp;&nbsp;&nbsp;}</p>
+<p class="M">};</p>
+<p class="D">&nbsp;</p>
+<p class="X">Note: This is not the C++, but a piece of script in &quot;Esc&quot; scripting language, interpreted by layout designer.</p>
+<p class="X">&nbsp;</p>
+<p class="H"><a href="srcdoc$CtrlLib$Tutorial_en-us.html_36.png"><img src="srcdoc$CtrlLib$Tutorial_en-us.html_36.png" border="0" alt="" style="width: 224px; height: 120px"></a></p>
+<p class="D">&nbsp;</p>
+<hr><p id="22" class="F">22. Non-modal dialogs</p>
+<p class="D">To have non-modal dialog, just <span class="E">Open</span> it passing its owner window as parameter. Usually the best arrangement is to have non-modal dialog as member variable of its owner window. Non-modal dialog is dismissed using the <span class="E">Close</span> method just like any other window.</p>
+<p class="D">&nbsp;</p>
+<p class="J"><span class="K">#include</span><span class="L"> </span>&lt;<span class="L">CtrlLib</span>/<span class="L">CtrlLib</span>.<span class="L">h</span>&gt;</p>
+<p class="M">&nbsp;</p>
+<p class="M"><span class="N">using</span> <span class="N">namespace</span> Upp;</p>
+<p class="M">&nbsp;</p>
+<p class="M"><span class="N">struct</span> NonModalDialog <span class="R">:</span> <span class="N">public</span> TopWindow {</p>
+<p class="M"> &nbsp;&nbsp;&nbsp;Button b;</p>
+<p class="M">&nbsp;</p>
+<p class="M"> &nbsp;&nbsp;&nbsp;NonModalDialog() {</p>
+<p class="M"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SetRect(<span class="O">0</span>, <span class="O">0</span>, Zx(<span class="O">200</span>), Zy(<span class="O">50</span>));</p>
+<p class="M"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Add(b<span class="R">.</span>SetLabel(<span class="O">&quot;Close non-modal dialog&quot;</span>)<span class="R">.</span>SizePos());</p>
+<p class="M"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;b <span class="R">&lt;&lt;</span> <span class="R">[=]</span> { <span class="E"><u>Close</u></span>(); };</p>
+<p class="M"> &nbsp;&nbsp;&nbsp;}</p>
+<p class="M">};</p>
+<p class="M">&nbsp;</p>
+<p class="M"><span class="N">struct</span> MainWindow <span class="R">:</span> <span class="N">public</span> TopWindow {</p>
+<p class="S"><span class="T"> &nbsp;&nbsp;&nbsp;</span><u>NonModalDialog dlg;</u></p>
+<p class="M"> &nbsp;&nbsp;&nbsp;Button b;</p>
+<p class="M">&nbsp;</p>
+<p class="M"> &nbsp;&nbsp;&nbsp;MainWindow() {</p>
+<p class="M"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SetRect(<span class="O">0</span>, <span class="O">0</span>, Zx(<span class="O">400</span>), Zy(<span class="O">100</span>));</p>
+<p class="M"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Add(b<span class="R">.</span>SetLabel(<span class="O">&quot;Open/close non-modal dialog&quot;</span>)<span class="R">.</span>SizePos());</p>
+<p class="M"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;b <span class="R">&lt;&lt;</span> <span class="R">[=]</span> {</p>
+<p class="M"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="N">if</span>(dlg<span class="R">.</span>IsOpen())</p>
+<p class="S"><span class="T"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><u>dlg</u><span class="R"><u>.</u></span><u>Close();</u></p>
+<p class="AB"><span class="AO"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>else</p>
+<p class="S"><span class="T"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><u>dlg</u><span class="R"><u>.</u></span><u>Open(</u><span class="R"><u>this</u></span><u>);</u></p>
+<p class="M"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;};</p>
+<p class="M"> &nbsp;&nbsp;&nbsp;}</p>
+<p class="M">};</p>
+<p class="M">&nbsp;</p>
+<p class="M">GUI_APP_MAIN</p>
+<p class="M">{</p>
+<p class="M"> &nbsp;&nbsp;&nbsp;MainWindow win;</p>
+<p class="M"> &nbsp;&nbsp;&nbsp;win<span class="R">.</span>Run();</p>
+<p class="M">}</p>
+<p class="X">&nbsp;</p>
+<p class="H"><a href="srcdoc$CtrlLib$Tutorial_en-us.html_37.png"><img src="srcdoc$CtrlLib$Tutorial_en-us.html_37.png" border="0" alt="" style="width: 417px; height: 188px"></a></p>
+<p class="A">&nbsp;</p>
+<hr><p id="23" class="F">23. Refreshing the UI periodically (time callback)</p>
+<p class="D">Sometimes there is a need to refresh the UI periodically. For example, in a situation where you have a state that is changing over time, A good example of such a state might be a timer or a clock. The clock hands change every second. To refresh the UI at intervals, there is a dedicated Ctrl method called <a href="src$CtrlCore$Ctrl_en-us.html#Upp::Ctrl::SetTimeCallback(int,Function,int)"><span class="E">SetTimeCallback</span></a>. It's first argument is a period in milliseconds. The second one is a callback to the function that will be executed after that time. Please keep in mind that the first parameter might be positive. Then the time callback will be executed only once, or if it is negative, it will be executed indefinitely. However, the time loop in this case can be broken by calling <a href="src$CtrlCore$Ctrl_en-us.html#Ctrl::KillTimeCallback(int)"><span class="E">KillTimeCallback</span></a> method.</p>
+<p class="AU">// The OnTimer() function will be executed only once after one second.</p>
+<p class="AV">SetTimeCallback(<span class="O">1000</span>, <span class="R">[=]</span> { OnTimer(); });</p>
+<p class="AV">&nbsp;</p>
+<p class="AU">// The OnTimer() function will be executed on every second indefinitely.</p>
+<p class="AV">SetTimeCallback(<span class="R">-</span><span class="O">1000</span>, <span class="R">[=]</span> { OnTimer(); });</p>
+<p class="AV">&nbsp;</p>
+<p class="AU">// To destroy an indefinite time callback, call...</p>
+<p class="AV">KillTimeCallback();</p>
+<p class="D">In the exemplary code in this tutorial, we will build a simple window with start and stop button that will activate or deactivate rectangle painting in a random place. Also, after that time, the color of the rectangle will be changed to random. This will be achieved with the previously described methods.</p>
+<p class="D">main.cpp</p>
+<p class="AW"><span class="K">#include</span><span class="L"> </span>&lt;<span class="L">CtrlLib</span>/<span class="L">CtrlLib</span>.<span class="L">h</span>&gt;</p>
+<p class="AV">&nbsp;</p>
+<p class="AV"><span class="N">using</span> <span class="N">namespace</span> Upp;</p>
+<p class="AV">&nbsp;</p>
+<p class="AV"><span class="N">struct</span> RandomRectCtrl <span class="R">:</span> <span class="N">public</span> Ctrl {</p>
+<p class="AV"> &nbsp;&nbsp;&nbsp;Rect &nbsp;rect;</p>
+<p class="AV"> &nbsp;&nbsp;&nbsp;Color color;</p>
+<p class="AV"> &nbsp;&nbsp;&nbsp;</p>
+<p class="AV"> &nbsp;&nbsp;&nbsp;<span class="N">void</span> Paint(Draw<span class="R">&amp;</span> w) <span class="N">override</span> {</p>
+<p class="AV"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Size sz <span class="R">=</span> GetSize();</p>
+<p class="AV"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+<p class="AV"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;w<span class="R">.</span>DrawRect(sz, White());</p>
+<p class="AV"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="N">if</span> (<span class="R">!</span>rect<span class="R">.</span>IsEmpty()) {</p>
+<p class="AV"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;w<span class="R">.</span>DrawRect(rect, color);</p>
+<p class="AV"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</p>
+<p class="AV"> &nbsp;&nbsp;&nbsp;}</p>
+<p class="AV"> &nbsp;&nbsp;&nbsp;</p>
+<p class="AV"> &nbsp;&nbsp;&nbsp;<span class="N">void</span> RandomizeRect() {</p>
+<p class="AV"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Size sz <span class="R">=</span> GetSize();</p>
+<p class="AV"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+<p class="AV"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="N">int</span> length <span class="R">=</span> <span class="O">50</span>;</p>
+<p class="AV"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="N">int</span> x <span class="R">=</span> Random() <span class="R">%</span> (sz<span class="R">.</span>cx <span class="R">-</span> length);</p>
+<p class="AV"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="N">int</span> y <span class="R">=</span> Random() <span class="R">%</span> (sz<span class="R">.</span>cy <span class="R">-</span> length);</p>
+<p class="AV"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+<p class="AV"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;rect <span class="R">=</span> Rect(x, y, x <span class="R">+</span> length, y <span class="R">+</span> length);</p>
+<p class="AV"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;color <span class="R">=</span> Color(Random() <span class="R">%</span> <span class="O">256</span>, Random() <span class="R">%</span> <span class="O">256</span>, Random() <span class="R">%</span> <span class="O">256</span>);</p>
+<p class="AV"> &nbsp;&nbsp;&nbsp;}</p>
+<p class="AV">};</p>
+<p class="AV">&nbsp;</p>
+<p class="AW"><span class="K">#define</span><span class="L"> LAYOUTFILE </span>&lt;<span class="L">Gui23</span>/<span class="L">myapp</span>.<span class="L">lay</span>&gt;</p>
+<p class="AW"><span class="K">#include</span><span class="L"> </span>&lt;<span class="L">CtrlCore</span>/<span class="L">lay</span>.<span class="L">h</span>&gt;</p>
+<p class="AV">&nbsp;</p>
+<p class="AV"><span class="N">struct</span> MyAppWindow <span class="R">:</span> <span class="N">public</span> WithMyAppLayout<span class="R">&lt;</span>TopWindow<span class="R">&gt;</span> {</p>
+<p class="AV"> &nbsp;&nbsp;&nbsp;MyAppWindow() {</p>
+<p class="AV"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CtrlLayout(<span class="R">*</span><span class="N">this</span>, <span class="O">&quot;MyApp&quot;</span>);</p>
+<p class="AV"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+<p class="AV"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;start_stop_btn <span class="R">&lt;&lt;</span> <span class="R">[=]</span> { OnStartStop(); };</p>
+<p class="AV"> &nbsp;&nbsp;&nbsp;}</p>
+<p class="AV"> &nbsp;&nbsp;&nbsp;</p>
+<p class="AV"> &nbsp;&nbsp;&nbsp;<span class="R">~</span>MyAppWindow() {</p>
+<p class="AU"><span class="AF"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>// Not needed will be automatically call upon Ctrl destruction.</p>
+<p class="AU"><span class="AF"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>// KillTimeCallback();</p>
+<p class="AV"> &nbsp;&nbsp;&nbsp;}</p>
+<p class="AV"> &nbsp;&nbsp;&nbsp;</p>
+<p class="AV"> &nbsp;&nbsp;&nbsp;<span class="N">void</span> OnStartStop() {</p>
+<p class="AV"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="N">if</span> (random_rect_ctrl<span class="R">.</span>rect<span class="R">.</span>IsEmpty()) {</p>
+<p class="AV"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;start_stop_btn<span class="R">.</span>SetLabel(<span class="O">&quot;Stop!&quot;</span>);</p>
+<p class="AV"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+<p class="AX"><span class="T"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><u>SetTimeCallback(</u><span class="R"><u>-</u></span><span class="O"><u>2000</u></span><u>, </u><span class="R"><u>[=]</u></span><u> { OnTimer(); });</u></p>
+<p class="AV"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;} <span class="N">else</span> {</p>
+<p class="AX"><span class="T"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><u>KillTimeCallback();</u></p>
+<p class="AV"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+<p class="AV"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;start_stop_btn<span class="R">.</span>SetLabel(<span class="O">&quot;Start!&quot;</span>);</p>
+<p class="AV"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;random_rect_ctrl<span class="R">.</span>rect <span class="R">=</span> {};</p>
+<p class="AV"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;random_rect_ctrl<span class="R">.</span>Refresh();</p>
+<p class="AV"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</p>
+<p class="AV"> &nbsp;&nbsp;&nbsp;}</p>
+<p class="AV"> &nbsp;&nbsp;&nbsp;</p>
+<p class="AV"> &nbsp;&nbsp;&nbsp;<span class="N">void</span> OnTimer() {</p>
+<p class="AV"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;random_rect_ctrl<span class="R">.</span>RandomizeRect();</p>
+<p class="AV"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;random_rect_ctrl<span class="R">.</span>Refresh();</p>
+<p class="AV"> &nbsp;&nbsp;&nbsp;}</p>
+<p class="AV">};</p>
+<p class="AV">&nbsp;</p>
+<p class="AV">GUI_APP_MAIN</p>
+<p class="AV">{</p>
+<p class="AV"> &nbsp;&nbsp;&nbsp;MyAppWindow()<span class="R">.</span>Run();</p>
+<p class="AV">}</p>
+<p class="AY">&nbsp;</p>
+<p class="D">myapp.lay</p>
+<p class="AV"><span class="N">LAYOUT</span>(MyAppLayout, <span class="O">200</span>, <span class="O">200</span>)</p>
+<p class="AV"> &nbsp;&nbsp;&nbsp;<span class="N">ITEM</span>(Upp<span class="R">::</span>Button, start_stop_btn, SetLabel(<span class="V">t_(</span><span class="O">&quot;Start!&quot;</span><span class="V">)</span>)<span class="R">.</span>HSizePosZ(<span class="O">8</span>, <span class="O">8</span>)<span class="R">.</span>BottomPosZ(<span class="O">4</span>, <span class="O">20</span>))</p>
+<p class="AV"> &nbsp;&nbsp;&nbsp;<span class="N">ITEM</span>(RandomRectCtrl, random_rect_ctrl, HSizePosZ(<span class="O">8</span>, <span class="O">8</span>)<span class="R">.</span>VSizePosZ(<span class="O">8</span>, <span class="O">28</span>))</p>
+<p class="AZ">END<span class="T">_</span>LAYOUT</p>
+<p class="D">&nbsp;</p>
+<p class="H"><a href="srcdoc$CtrlLib$Tutorial_en-us.html_38.png"><img src="srcdoc$CtrlLib$Tutorial_en-us.html_38.png" border="0" alt="" style="width: 244px; height: 306px"></a> &nbsp;&nbsp;&nbsp;<a href="srcdoc$CtrlLib$Tutorial_en-us.html_39.png"><img src="srcdoc$CtrlLib$Tutorial_en-us.html_39.png" border="0" alt="" style="width: 244px; height: 306px"></a> &nbsp;&nbsp;&nbsp;<a href="srcdoc$CtrlLib$Tutorial_en-us.html_40.png"><img src="srcdoc$CtrlLib$Tutorial_en-us.html_40.png" border="0" alt="" style="width: 244px; height: 306px"></a></p>
+<p class="D">&nbsp;</p>
+<hr><p id="24" class="F">24. Internationalizing applications (i18n)</p>
+<p class="D">As the globalization progress, it becomes important to deliver application on various markets. Often people on these markets use different languages. In this section we will show how to create an application that will support multiple locales. For this purpose, we will pick up one of the previous example in which simple text is displayed inside the window, and we will add translation support to it:</p>
+<p class="X">main.cpp:</p>
+<p class="J"><span class="K">#include</span><span class="L"> </span>&lt;<span class="L">CtrlLib</span>/<span class="L">CtrlLib</span>.<span class="L">h</span>&gt;</p>
+<p class="M">&nbsp;</p>
+<p class="AE">// The below include needs to be placed in one of implementation file (.cpp)</p>
+<p class="J"><span class="K">#define</span><span class="L"> TFILE </span>&lt;<span class="L">Gui24</span>/<span class="L">Gui24</span>.<span class="L">t</span>&gt;</p>
+<p class="J"><span class="K">#include</span><span class="L"> </span>&lt;<span class="L">Core</span>/<span class="L">t</span>.<span class="L">h</span>&gt;</p>
+<p class="M">&nbsp;</p>
+<p class="M"><span class="N">using</span> <span class="N">namespace</span> Upp;</p>
+<p class="M">&nbsp;</p>
+<p class="M"><span class="N">struct</span> MyAppWindow <span class="R">:</span> TopWindow {</p>
+<p class="M"> &nbsp;&nbsp;&nbsp;MyAppWindow() {</p>
+<p class="M"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Title(<span class="AM"><u>t_(</u></span><span class="AL"><u>&quot;My application&quot;</u></span><span class="AM"><u>)</u></span>);</p>
+<p class="M"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Zoomable()<span class="R">.</span>Sizeable()<span class="R">.</span>SetRect(<span class="O">0</span>, <span class="O">0</span>, <span class="O">550</span>, <span class="O">100</span>);</p>
+<p class="M"> &nbsp;&nbsp;&nbsp;}</p>
+<p class="M"> &nbsp;&nbsp;&nbsp;</p>
+<p class="M"> &nbsp;&nbsp;&nbsp;<span class="N">void</span> Paint(Draw<span class="R">&amp;</span> w) <span class="N">override</span> {</p>
+<p class="M"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;w<span class="R">.</span>DrawRect(GetSize(), SLtYellow);</p>
+<p class="M"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;w<span class="R">.</span>DrawText(<span class="O">20</span>, <span class="O">20</span>, <span class="AM"><u>t_(</u></span><span class="AL"><u>&quot;Hello translation engine!&quot;</u></span><span class="AM"><u>)</u></span>, Arial(<span class="O">30</span>), Blue);</p>
+<p class="M"> &nbsp;&nbsp;&nbsp;}</p>
+<p class="M">};</p>
+<p class="M">&nbsp;</p>
+<p class="M">GUI_APP_MAIN</p>
+<p class="M">{</p>
+<p class="AE"><span class="AF"> &nbsp;&nbsp;&nbsp;</span>// Set system language for whole application</p>
+<p class="S"><span class="T"> &nbsp;&nbsp;&nbsp;</span><u>SetLanguage(GetSystemLNG());</u></p>
+<p class="M"> &nbsp;&nbsp;&nbsp;</p>
+<p class="AE"><span class="AF"> &nbsp;&nbsp;&nbsp;</span>// Uncomment to force specific language...</p>
+<p class="AE"><span class="AF"> &nbsp;&nbsp;&nbsp;</span>// SetLanguage(&quot;en-us&quot;); // English = default</p>
+<p class="AE"><span class="AF"> &nbsp;&nbsp;&nbsp;</span>// SetLanguage(&quot;cs-cz&quot;); // Czech</p>
+<p class="AE"><span class="AF"> &nbsp;&nbsp;&nbsp;</span>// SetLanguage(&quot;de-de&quot;); // German</p>
+<p class="AE"><span class="AF"> &nbsp;&nbsp;&nbsp;</span>// SetLanguage(&quot;es-es&quot;); // Spanish</p>
+<p class="AE"><span class="AF"> &nbsp;&nbsp;&nbsp;</span>// SetLanguage(&quot;fr-fr&quot;); // French</p>
+<p class="AE"><span class="AF"> &nbsp;&nbsp;&nbsp;</span>// SetLanguage(&quot;it-it&quot;); // Italian</p>
+<p class="AE"><span class="AF"> &nbsp;&nbsp;&nbsp;</span>// SetLanguage(&quot;ja-jp&quot;); // Japanese</p>
+<p class="AE"><span class="AF"> &nbsp;&nbsp;&nbsp;</span>// SetLanguage(&quot;pl-pl&quot;); // Polish</p>
+<p class="AE"><span class="AF"> &nbsp;&nbsp;&nbsp;</span>// SetLanguage(&quot;pt-pt&quot;); // Portuguese</p>
+<p class="AE"><span class="AF"> &nbsp;&nbsp;&nbsp;</span>// SetLanguage(&quot;ru-ru&quot;); // Russian</p>
+<p class="AE"><span class="AF"> &nbsp;&nbsp;&nbsp;</span>// SetLanguage(&quot;tr-tr&quot;); // Turkish</p>
+<p class="AE"><span class="AF"> &nbsp;&nbsp;&nbsp;</span>// SetLanguage(&quot;zh-cn&quot;); // Traditional Chinese</p>
+<p class="M"> &nbsp;&nbsp;&nbsp;</p>
+<p class="M"> &nbsp;&nbsp;&nbsp;MyAppWindow()<span class="R">.</span>Run();</p>
+<p class="M">}</p>
+<p class="D">&nbsp;</p>
+<p class="D">As you can see, all strings visible to the user are surrounded by <span class="E">t_</span> macro. This is the way to inform U++ translation engine that string is translatable. Right now we need to create translation file. After that, we need to synchronize translation. This operation will scan the whole source code and find all translatable strings. To make synchronization inside TheIDE we need to open <span class="E">&quot;Project&quot;</span> menu and then select <span class="E">&quot;Synchronized translation files...&quot;</span>. The dialog should appear when you can specify for which packages translation synchronization should be run and which languages should be supported. In our case we will support main languages our users use.</p>
+<p class="D">The generated file with translated entries is located below. For the purpose of this section we used electronic translator, so for any errors we are sorry.</p>
+<p class="X">Gui23.t:</p>
+<p class="AT">// Gui24.t</p>
+<p class="M">#ifdef _MSC_VER</p>
+<p class="M">#pragma setlocale(<span class="O">&quot;C&quot;</span>)</p>
+<p class="M">#endif</p>
+<p class="AE">// main.cpp</p>
+<p class="M">&nbsp;</p>
+<p class="M"><span class="N">T</span><span class="R">_</span>(<span class="O">&quot;My application&quot;</span>)</p>
+<p class="M"><span class="V">csCZ</span>(<span class="O">&quot;Moje aplikace&quot;</span>)</p>
+<p class="M"><span class="V">deDE</span>(<span class="O">&quot;Meine Bewerbung&quot;</span>)</p>
+<p class="M"><span class="V">esES</span>(<span class="O">&quot;Mi aplicación&quot;</span>)</p>
+<p class="M"><span class="V">frFR</span>(<span class="O">&quot;Mon application&quot;</span>)</p>
+<p class="M"><span class="V">itIT</span>(<span class="O">&quot;La mia applicazione&quot;</span>)</p>
+<p class="M"><span class="V">jaJP</span>(<span class="O">&quot;私のアプリケーション&quot;</span>)</p>
+<p class="M"><span class="V">plPL</span>(<span class="O">&quot;Moja aplikacja&quot;</span>)</p>
+<p class="M"><span class="V">ptPT</span>(<span class="O">&quot;Minha aplicação&quot;</span>)</p>
+<p class="M"><span class="V">ruRU</span>(<span class="O">&quot;Мое приложение&quot;</span>)</p>
+<p class="M"><span class="V">trTR</span>(<span class="O">&quot;Benim başvurum&quot;</span>)</p>
+<p class="M"><span class="V">zhCN</span>(<span class="O">&quot;我的應用程序&quot;</span>)</p>
+<p class="M">&nbsp;</p>
+<p class="M"><span class="N">T</span><span class="R">_</span>(<span class="O">&quot;Hello translation engine!&quot;</span>)</p>
+<p class="M"><span class="V">csCZ</span>(<span class="O">&quot;Ahoj překladači!&quot;</span>)</p>
+<p class="M"><span class="V">deDE</span>(<span class="O">&quot;Hallo Übersetzungsmaschine!&quot;</span>)</p>
+<p class="M"><span class="V">esES</span>(<span class="O">&quot;¡Hola motor de traducción!&quot;</span>)</p>
+<p class="M"><span class="V">frFR</span>(<span class="O">&quot;Bonjour le moteur de traduction!&quot;</span>)</p>
+<p class="M"><span class="V">itIT</span>(<span class="O">&quot;Ciao motore di traduzione!&quot;</span>)</p>
+<p class="M"><span class="V">jaJP</span>(<span class="O">&quot;こんにちは翻訳エンジン！&quot;</span>)</p>
+<p class="M"><span class="V">plPL</span>(<span class="O">&quot;Witaj silniku translacji!&quot;</span>)</p>
+<p class="M"><span class="V">ptPT</span>(<span class="O">&quot;Olá motor de tradução!&quot;</span>)</p>
+<p class="M"><span class="V">ruRU</span>(<span class="O">&quot;Привет движок перевода!&quot;</span>)</p>
+<p class="M"><span class="V">trTR</span>(<span class="O">&quot;Merhaba çeviri motoru!&quot;</span>)</p>
+<p class="M"><span class="V">zhCN</span>(<span class="O">&quot;您好翻譯引擎！&quot;</span>)</p>
+<p class="BA">&nbsp;</p>
+<p class="D">Before checking the results of the application, let's take a closer look at framework construction used in this example. The first one is <span class="E">SetLanguage()</span> function. It sets which language should be used by application. In our case we will use exactly the same language as users operating system is using. This information can be obtained by using <span class="E">GetSystemLNG() </span>function and passed to <span class="E">SetLanguage()</span>.</p>
+<p class="D">The <span class="E">SetLanguage()</span> function also sets the language on the library level. So, all controls that posses text visible to the user should be translated. In some cases it doesn't work due to lack of translation for a particular language. You could help in U++ translation by providing a dedicated patch. You could use exactly the same tools mentioned in this section. After that just generate <a href="https://www.ultimatepp.org/www$uppweb$svnInstall_en-us.html#3">patch</a> and post it on appropriate <a href="https://www.ultimatepp.org/forums/index.php?t=thread&frm_id=74&">forum</a>.</p>
+<p class="D">Translation to work correctly in context of package requires the following lines of code to be placed <span class="E">in one of implementation file</span> (.cpp):</p>
+<p class="A">&nbsp;</p>
+<p class="J"><span class="K">#define</span><span class="L"> TFILE </span>&lt;<span class="L">Gui23</span>/<span class="L">Gui23</span>.<span class="L">t</span>&gt;</p>
+<p class="J"><span class="K">#include</span><span class="L"> </span>&lt;<span class="L">Core</span>/<span class="L">t</span>.<span class="L">h</span>&gt;</p>
+<p class="A">&nbsp;</p>
+<p class="D">The final results from various exemplary languages versions are as follows:</p>
+<p class="H"><a href="srcdoc$CtrlLib$Tutorial_en-us.html_41.png"><img src="srcdoc$CtrlLib$Tutorial_en-us.html_41.png" border="0" alt="" style="width: 346px; height: 83px"></a> &nbsp;&nbsp;&nbsp;<a href="srcdoc$CtrlLib$Tutorial_en-us.html_42.png"><img src="srcdoc$CtrlLib$Tutorial_en-us.html_42.png" border="0" alt="" style="width: 346px; height: 83px"></a></p>
+<p class="H">&nbsp;</p>
+<p class="H"><a href="srcdoc$CtrlLib$Tutorial_en-us.html_43.png"><img src="srcdoc$CtrlLib$Tutorial_en-us.html_43.png" border="0" alt="" style="width: 346px; height: 83px"></a> &nbsp;&nbsp;&nbsp;<a href="srcdoc$CtrlLib$Tutorial_en-us.html_44.png"><img src="srcdoc$CtrlLib$Tutorial_en-us.html_44.png" border="0" alt="" style="width: 346px; height: 83px"></a></p>
+<p class="H">&nbsp;</p>
+<p class="H"><a href="srcdoc$CtrlLib$Tutorial_en-us.html_45.png"><img src="srcdoc$CtrlLib$Tutorial_en-us.html_45.png" border="0" alt="" style="width: 346px; height: 83px"></a> &nbsp;&nbsp;&nbsp;<a href="srcdoc$CtrlLib$Tutorial_en-us.html_46.png"><img src="srcdoc$CtrlLib$Tutorial_en-us.html_46.png" border="0" alt="" style="width: 346px; height: 83px"></a></p>
+<p class="A">&nbsp;</p>
+<p class="D">For more information about translation please visit following documentation <a href="srcdoc$Core$i18n_en-us.html">page</a>.</p>
+<hr><p class="F">Recommended tutorials:</p>
+<p class="D">If you want to learn more, we have several tutorials that you can find useful:</p>
+<p class="BB"><a href="srcdoc$Core$Tutorial_en-us.html">Core tutorial</a> - learn basics of U++ programming.</p>
+<p class="BB"><a href="srcdoc$Draw$DrawTutorial_en-us.html">Draw tutorial</a> - in this tutorial we show more advance techniques of drawing inside window. This is the natural continue of things mention on this page.</p>
+<p class="BB"><a href="srcdoc$Draw$ImgTutorial_en-us.html">Image tutorial</a> - here we move things related to images. We show how to create, use and embed icons directly in application.</p>
+</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>
+<TABLE BORDER="0" WIDTH="100%"><TR><TD></TD>
+</TR>
+</TABLE>
+<TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" BGCOLOR="#FFFFFF" WIDTH="100%" style="border-style: solid; border-width: 1px; border-color: #6E89AE;padding: 10px;;"><TR><TD><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%"><TR><TD><p class="A"><span class="B"> </span><a href="www$uppweb$contribweb$en-us.html">Do you want to contribute?</a></p>
+</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>
+<script type="text/javascript">var a={};var p=window.location.pathname.split("/");p=p[p.length-1];var s='<select id="lang" onchange="window.location=document.getElementById(\'lang\').value;">';for(l in a){if(p==l){d=" selected=1"}else{d=""}s+='<option value="'+l+'"'+d+'>'+a[l]+'</option>'}s+='</select>';var d=document.createElement('div');d.innerHTML=s;var c=document.getElementById('langs');c.replaceChild(d,c.firstChild);document.getElementById('langbox').style.display='block';</script></BODY>

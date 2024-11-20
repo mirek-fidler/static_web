@@ -1,0 +1,1056 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML lang="en-us">
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
+<META NAME="Generator" CONTENT="U++ HTML Package">
+<TITLE>Format - text formatting :: U++</TITLE>
+<STYLE TYPE="text/css"><!--
+.A{margin:0px 0px 0px 0px;text-indent:0px;text-align:left;color:#000000;font-family:sans-serif;font-size:10pt;font-weight:normal;font-style:normal;}
+.B{font-size:12pt;}
+.C{border-collapse:collapse;table-layout:auto;border: 2px solid #000000;}
+.D{padding: 3px 5px 3px 5px;border-left: 1px solid #000000;border-top: 1px solid #000000;border-right: 1px solid #000000;border-bottom: 1px solid #000000;background-color:#712A00;vertical-align:middle;}
+.E{margin:0px 0px 0px 0px;text-indent:0px;text-align:left;color:#ffffff;font-family:sans-serif;font-size:16pt;font-weight:bold;font-style:normal;}
+.F{margin:0px 0px 0px 0px;text-indent:0px;text-align:left;color:#800000;font-family:sans-serif;font-size:16pt;font-weight:bold;font-style:normal;}
+.G{margin:0px 0px 5px 0px;text-indent:0px;text-align:left;color:#404040;font-family:sans-serif;font-size:10pt;font-weight:normal;font-style:normal;}
+.H{color:#000000;}
+.I{color:#000000;font-weight:bold;}
+.J{color:#0000ff;}
+.K{color:#800000;font-weight:bold;}
+.L{color:#008000;}
+.M{margin:0px 0px 5px 0px;text-indent:0px;text-align:left;color:#000000;font-family:sans-serif;font-size:10pt;font-weight:normal;font-style:normal;}
+.N{font-weight:bold;}
+.O{margin:0px 0px 0px 57px;text-indent:0px;text-align:left;color:#000000;font-family:sans-serif;font-size:10pt;font-weight:normal;font-style:normal;}
+.P{margin:0px 0px 0px 0px;text-indent:0px;text-align:left;color:#008000;font-family:sans-serif;font-size:10pt;font-weight:bold;font-style:normal;}
+.Q{color:#0000ff;font-weight:bold;}
+.R{padding: 3px 5px 3px 5px;border-left: 1px solid #000000;border-top: 1px solid #000000;border-right: 1px solid #000000;border-bottom: 1px solid #000000;background-color:#FFFFFF;vertical-align:top;}
+.S{margin:0px 0px 0px 0px;text-indent:0px;text-align:left;color:#000000;font-family:sans-serif;font-size:10pt;font-weight:bold;font-style:normal;}
+.T{color:#0000ff;font-style:italic;}
+.U{padding: 3px 5px 3px 5px;border-left: 1px solid #000000;border-top: 1px solid #000000;border-right: 1px solid #000000;border-bottom: 1px solid #000000;background-color:#FFFFFF;vertical-align:middle;}
+.V{color:#0000ff;font-weight:bold;font-style:italic;}
+.W{display:list-item;list-style-type:disc;margin:0px 0px 0px 20px;text-indent:0px;text-align:left;color:#000000;font-family:sans-serif;font-size:10pt;font-weight:normal;font-style:normal;}
+.X{margin:0px 0px 0px 0px;text-indent:0px;text-align:left;color:#000000;font-family:sans-serif;font-size:10pt;font-weight:bold;font-style:italic;}
+.Y{color:#000000;font-weight:normal;}
+.Z{margin:0px 0px 0px 0px;text-indent:0px;text-align:left;color:#0000ff;font-family:sans-serif;font-size:10pt;font-weight:bold;font-style:normal;}
+.AA{padding: 3px 5px 3px 5px;border-left: 1px solid #000000;border-top: 1px solid #000000;border-right: 1px solid #000000;border-bottom: 1px solid #000000;background-color:#CCCCCC;vertical-align:middle;}
+.AB{margin:0px 0px 0px 0px;text-indent:0px;text-align:left;color:#0000ff;font-family:monospace;font-size:10pt;font-weight:normal;font-style:normal;}
+.AC{font-style:italic;}
+.AD{color:#000000;font-weight:bold;font-style:italic;}
+.AE{margin:0px 0px 0px 0px;text-indent:0px;text-align:left;color:#0000ff;font-family:monospace;font-size:10pt;font-weight:normal;font-style:italic;}
+.AF{margin:0px 0px 0px 0px;text-indent:0px;text-align:left;color:#000000;font-family:monospace;font-size:10pt;font-weight:bold;font-style:normal;}
+.AG{font-weight:normal;}
+.AH{margin:0px 0px 0px 0px;text-indent:0px;text-align:left;color:#000000;font-family:monospace;font-size:10pt;font-weight:bold;font-style:italic;}
+.AI{margin:0px 0px 0px 0px;text-indent:0px;text-align:left;color:#666666;font-family:sans-serif;font-size:10pt;font-weight:normal;font-style:normal;}
+.AJ{margin:0px 0px 0px 0px;text-indent:0px;text-align:left;color:#666666;font-family:sans-serif;font-size:10pt;font-weight:bold;font-style:normal;}
+.AK{margin:0px 0px 0px 0px;text-indent:0px;text-align:left;color:#000000;font-family:sans-serif;font-size:12pt;font-weight:normal;font-style:normal;}
+.AL{margin:0px 0px 0px 0px;text-indent:0px;text-align:left;color:#000000;font-family:monospace;font-size:10pt;font-weight:normal;font-style:normal;}
+.AM{margin:0px 0px 0px 0px;text-indent:0px;text-align:left;color:#800000;font-family:sans-serif;font-size:14pt;font-weight:bold;font-style:normal;}
+.AN{border-collapse:collapse;table-layout:auto;border: 2px solid #808080;}
+.AO{padding: 3px 5px 3px 5px;border-left: 1px solid #808080;border-top: 1px solid #808080;border-right: 1px solid #808080;border-bottom: 1px solid #808080;background-color:#C0C0C0;vertical-align:middle;}
+.AP{margin:0px 0px 5px 0px;text-indent:0px;text-align:left;color:#000000;font-family:sans-serif;font-size:10pt;font-weight:bold;font-style:normal;}
+.AQ{color:#0000ff;font-weight:normal;}
+.AR{margin:0px 0px 0px 0px;text-indent:0px;text-align:left;color:#000000;font-family:sans-serif;font-size:6pt;font-weight:normal;font-style:normal;}
+a.l1         { text-decoration:none; font-size: 8pt; font-family: sans-serif; font-weight: normal; }
+a.l1:link    { color:#000000; }
+a.l1:visited { color:#000080; }
+a.l1:hover   { color:#9933CC; }
+a.l1:active  { color:#000000; }
+a.l2         { text-decoration:none; font-size: 12pt; font-family: sans-serif; font-variant: small-caps; }
+a.l2:link    { color:#0066FF; }
+a.l2:visited { color:#FF6600; }
+a.l2:hover   { color:#BC0624; }
+a.l2:active  { color:#BC0024; }
+
+-->
+</STYLE>
+<META NAME="keywords" CONTENT="framework, toolkit, widget, c++, visual, studio, dev-cpp, builder, ide, class, component,wxwidgets, qt, rapid, application, development, rad, mfc, linux, macos, gui, sdl, directx, desktop"><META name="robots" content="index,follow">
+<LINK rel="alternate" type="application/rss+xml" title="SVN changes" href="svnchanges.xml">
+<LINK rel="shortcut icon" type="image/png" href="favicon.png">
+</HEAD><BODY BGCOLOR="#D2D9D2" ALINK="#800000" LINK="#000000" VLINK="#000080"><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%"><TR><TD COLSPAN="3"><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%" BGCOLOR="#FFFFFF" style="border: 1px solid #6E89AE;padding-left: 10px;padding-right: 0px;padding-top: 0px;padding-bottom: 0px;"><TR><TD><A HREF="index.html"><IMG SRC="0i.png" ALT="" BORDER="0"></A>
+</TD>
+<TD ALIGN="RIGHT" VALIGN="BOTTOM" STYLE="padding-bottom: 5px; background-image: url('1i.png')"><span style="font-size: 14pt; font-family: sans-serif;"><script type="text/javascript"><!--
+google_ad_client = "pub-1082147624384270";
+google_ad_width = 468;
+google_ad_height = 60;
+google_ad_format = "468x60_as";
+google_ad_type = "text_image";
+google_ad_channel = "";
+google_color_border = "336699";
+google_color_bg = "FFFFFF";
+google_color_link = "0000FF";
+google_color_text = "000000";
+google_color_url = "008000";
+//--></script>
+<script type="text/javascript"
+  src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+&nbsp;&nbsp;</span>
+</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>
+<TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%"><TR><TD COLSPAN="3" BGCOLOR="#D2D9D2" HEIGHT="6"></TD>
+</TR>
+<TR><TD VALIGN="TOP" ALIGN="CENTER"><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="160"><TR><TD ALIGN="CENTER"><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%" BGCOLOR="#FFFFFF" style="border-style: solid; border-width: 1px; border-color: #6E89AE;padding: 0px"><TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px;"><A HREF="www$uppweb$overview$en-us.html" CLASS="l1">Overview</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$examples$en-us.html" CLASS="l1">Examples</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$ss$en-us.html" CLASS="l1">Screenshots</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$comparison$en-us.html" CLASS="l1">Comparisons</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$apps$en-us.html" CLASS="l1">Applications</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$download$en-us.html" CLASS="l1">Download</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$documentation$en-us.html" CLASS="l1">Documentation</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$Tutorials$en-us.html" CLASS="l1">Tutorials</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="app$ide$UppHub$en-us.html" CLASS="l1">UppHub</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$Roadmap$en-us.html" CLASS="l1">Status & Roadmap</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$FAQ$en-us.html" CLASS="l1">FAQ</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="app$ide$About$en-us.html" CLASS="l1">Authors & License</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="https://www.ultimatepp.org/forums" CLASS="l1">Forums</A>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:12px; padding-right:0px; padding-top:6px; padding-bottom:6px; border-top: 1px solid #6E89AE;"><A HREF="www$uppweb$Funding$en-us.html" CLASS="l1">Funding U++</A>
+</TD>
+</TR>
+</TABLE>
+<TABLE BORDER="0" WIDTH="100%"><TR><TD></TD>
+</TR>
+</TABLE>
+<TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%" BGCOLOR="#FFFFFF" style="border-style: solid; border-width: 1px; border-color: #6E89AE;padding: 0px"><TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('3i.png'); border: 0px solid black;padding-left:12px; padding-right:0px; padding-top:1px; padding-bottom:1px;color:#FFFFFF;"><B><span style="font-size: 8pt; font-family: sans-serif;">Search on this site</span>
+</B>
+</TD>
+</TR>
+<TR><TD WIDTH="100%" VALIGN="MIDDLE" STYLE="background-image: url('2i.png'); border: 0px solid black; padding-left:6px; padding-right:0px; padding-top:4px; padding-bottom:4px;border-top: 1px solid #6E89AE;"><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%"><TR><TD><IMG SRC="4i.png" ALT="" BORDER="0"></TD>
+<TD><FORM ACTION="https://www.google.com/search" METHOD="GET" STYLE="margin:0px;padding:0px;"><INPUT TYPE="HIDDEN" NAME="ie" VALUE="UTF-8"><INPUT TYPE="HIDDEN" NAME="oe" VALUE="UTF-8"><INPUT TYPE="TEXT" NAME="q" SIZE="15" MAXLENGTH="256" placeholder="Site search"><INPUT TYPE="HIDDEN" NAME="sitesearch" VALUE="ultimatepp.org"></FORM>
+</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>
+<TABLE BORDER="0" WIDTH="100%"><TR><TD></TD>
+</TR>
+</TABLE>
+<br><div id="fb-root"></div>
+<script type="text/javascript">(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) {return;}
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+<div class="fb-like" data-href="https://www.facebook.com/pages/Upp-Framework/262346610476027?sk=wall" data-send="false" data-layout="button_count" data-width="160" data-show-faces="false" data-font="arial"></div>
+<br><br><script type="text/javascript"><!--
+google_ad_client = "pub-1082147624384270";
+google_ad_width = 160;
+google_ad_height = 600;
+google_ad_format = "160x600_as";
+google_ad_type = "text_image";
+google_ad_channel = "";
+google_color_border = "336699";
+google_color_bg = "FFFFFF";
+google_color_link = "0000FF";
+google_color_text = "000000";
+google_color_url = "008000";
+//--></script>
+<script type="text/javascript"
+  src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script><br><br><script type="text/javascript"><!--
+google_ad_client = "pub-1082147624384270";
+google_ad_width = 160;
+google_ad_height = 90;
+google_ad_format = "160x90_0ads_al_s";
+google_ad_channel = "";
+google_color_border = "336699";
+google_color_bg = "FFFFFF";
+google_color_link = "0000FF";
+google_color_text = "000000";
+google_color_url = "008000";
+//--></script>
+<script type="text/javascript"
+  src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+<br><br><br><br><br><br><A HREF="https://sourceforge.net/projects/upp/"><IMG SRC="https://sourceforge.net/sflogo.php?group_id=93970&amp;type=2" ALT="SourceForge.net Logo" BORDER="0" WIDTH="125" HEIGHT="37"></A>
+<br><br><A HREF="https://flathub.org/en/apps/org.ultimatepp.TheIDE"><IMG SRC="5i.png" ALT="SourceForge.net Logo" BORDER="0" WIDTH="125" HEIGHT="37"></A>
+<br><br><div style="background-color:#ffffff;width:125;height:35"><A HREF="https://github.com/ultimatepp"><IMG SRC="6i.png" ALT="GitHub Logo" BORDER="0" WIDTH="125" HEIGHT="35"></A>
+</div><br><div style="background-color:#ffffff;width:125;height:35"><div style="height:5"></div><A HREF="https://discord.gg/8XzqQzXZzb"><IMG SRC="https://assets-global.website-files.com/6257adef93867e50d84d30e2/636e0b5061df29d55a92d945_full_logo_blurple_RGB.svg" ALT="Discord Logo" BORDER="0" WIDTH="125" HEIGHT="25"></A>
+</div><br></TD>
+</TR>
+</TABLE>
+</TD>
+<TD VALIGN="TOP" BGCOLOR="#D2D9D2"><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="6"><TR><TD></TD>
+</TR>
+</TABLE>
+</TD>
+<TD VALIGN="TOP" WIDTH="100%" BGCOLOR="#D2D9D2"><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" BGCOLOR="#FFFFFF" WIDTH="100%" style="border-style: solid; border-width: 1px; border-color: #6E89AE;padding: 10px;;"><TR><TD><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%"><TR><TD><table width="100%" border="0" cellpadding="0" cellspacing="0"><tr><td width="100%"><table width="100%" class="C"><colgroup><col width="100%"></colgroup>
+<tr><td class="D"><p class="E">Format - text formatting</p>
+</td>
+</tr>
+</table></td>
+</tr></table>
+<p class="F">&nbsp;</p>
+<p id="::Format(const char*,const::Vector<::Value>&)" class="G"><span class="H">String</span><span class="H">&nbsp;</span><span class="I">Format</span>(<span class="J">const</span>&nbsp;<span class="J">char</span>&nbsp;*<span class="K">format</span>, <span class="J">const</span>&nbsp;Vector&lt;Value&gt;&amp;&nbsp;<span class="K">args</span>)</p>
+<p class="G"><span class="H">String</span><span class="H">&nbsp;</span><span class="I">Format</span>(<span class="J">const</span>&nbsp;<span class="J">char</span>&nbsp;*<span class="K">format</span>, Value&nbsp;<span class="K">arg</span><span class="K"><sub>1</sub></span><span class="K"> </span><span class="L">[</span><span class="H">, </span>Value&nbsp;<span class="K">arg</span><span class="K"><sub>n</sub></span><span class="L">]...</span><span class="H"> </span>)</p>
+<p id="Format(int,const char*,const Vector<Value>&)" class="M"><a href="String">String</a>&nbsp;<span class="N">Format</span>(<span class="J">int</span>&nbsp;<span class="K">language</span>, <span class="J">const</span>&nbsp;<span class="J">char</span>&nbsp;*<span class="K">s</span>, <span class="J">const</span>&nbsp;Vector<span class="J">&lt;</span>Value<span class="J">&gt;&amp;</span>&nbsp;<span class="K">v</span>)</p>
+<p class="G"><span class="H">String</span><span class="H">&nbsp;</span><span class="I">Format</span>(<span class="J">int</span>&nbsp;<span class="K">language</span>, <span class="J">const</span>&nbsp;<span class="J">char</span>&nbsp;*<span class="K">format</span>, Value&nbsp;<span class="K">arg</span><span class="K"><sub>1</sub></span><span class="K"> </span><span class="L">[</span><span class="H">, </span>Value&nbsp;<span class="K">arg</span><span class="K"><sub>n</sub></span><span class="L">]...</span><span class="H"> </span>)</p>
+<p class="O">&nbsp;</p>
+<p class="A">Format forms output text based on <span class="K">format</span>, inserting actual arguments to placeholders. Argument values are converted to text using formatters. U++ specifies set of standard formatters; application can freely register their own formatters for specific Value types too.</p>
+<p class="A">&nbsp;</p>
+<p class="A">Note that the variable number of Value arguments is implemented by overloading the Format up to 20 parameters.</p>
+<p class="A">&nbsp;</p>
+<p class="A">Placeholders start with <span class="N">%</span> and have format:</p>
+<p class="A">&nbsp;</p>
+<p class="P"><span class="H">%</span>[<span class="J">commands</span>][<span class="J">options</span>][<span class="J">formatter-id</span>][<span class="J">`</span>]</p>
+<p class="A">&nbsp;</p>
+<p class="A"><span class="Q">commands</span> are interpreted by Format routine (not specific formatter). Each command sequence ends with character specifying the kind of command, this delimits it from options and/or formatter.</p>
+<p class="A">&nbsp;</p>
+<p class="A">Available commands:</p>
+<p class="A">&nbsp;</p>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr><td width="100%"><table width="100%" class="C"><colgroup><col width="17%"><col width="82%"></colgroup>
+<tr><td class="R"><p class="S"><span class="T">position</span>:</p>
+</td>
+<td class="U"><p class="A">Seeks to an argument at <span class="V">position</span>. Allows to &quot;reorganize&quot; ordering of arguments, useful with translations.</p>
+</td>
+</tr>
+<tr><td class="R"><p class="S"><span class="T">width</span>&lt;</p>
+</td>
+<td class="U"><p class="A">Places formatter result into field with <span class="V">width</span> characters, aligns left.</p>
+</td>
+</tr>
+<tr><td class="R"><p class="S"><span class="T">width</span>&gt;</p>
+</td>
+<td class="U"><p class="A">Places formatter result into field with <span class="V">width</span> characters, aligns right.</p>
+</td>
+</tr>
+<tr><td class="R"><p class="S"><span class="T">width</span>=</p>
+</td>
+<td class="U"><p class="A">Places formatter result into field with <span class="V">width</span> characters, aligns to center.</p>
+</td>
+</tr>
+<tr><td class="R"><p class="S">[<span class="T">text</span>]~</p>
+</td>
+<td class="U"><p class="A">If argument is <span class="N">Null</span>, uses <span class="V">text</span> instead of formatter result.</p>
+</td>
+</tr>
+</table></td>
+</tr></table>
+<p class="A">&nbsp;</p>
+<p class="A"><span class="Q">formatter-id</span><span class="N"> </span>must consist of alpha characters only, unlike C identifiers, digits or '_' are not allowed. Everything between <span class="Q">commands</span> and <span class="Q">formatter-id</span> is considered to be <span class="Q">options</span> and passed to formatter. Note that <span class="Q">formatter-id</span> is Value type specific - the same name can specify different formatter depending on Value type. <span class="Q">formatter-id</span> is case-sensitive.</p>
+<p class="A">&nbsp;</p>
+<p class="A">Character <span class="N">*</span> in <span class="Q">options</span> section is replaced by an argument converted using AsString.</p>
+<p class="A">&nbsp;</p>
+<p class="A">If <span class="Q">options</span> are to contain alpha characters, they need to be escaped using <span class="N">[ ]</span> to distinguish options from formatter-id.</p>
+<p class="A">&nbsp;</p>
+<p class="A">Placeholder can end either by non-alpha character or by <span class="N">`</span>. formatter-id can be left empty; in that case Format uses AsString to convert Value to text (defined in RichValue interface) - the most trivial placeholder is therefore <span class="N">%`</span>.</p>
+<p class="A">&nbsp;</p>
+<p class="A">While Format implements all of classic printf formatter, please notice two incompatibilities:</p>
+<p class="A">&nbsp;</p>
+<p class="W">All arguments of Format must be convertible (and are converted) to Value. On the positive side, Value performs natural conversions like double -&gt; int, so it is possible to e.g. use %d for double value.</p>
+<p class="A">&nbsp;</p>
+<p class="W">formatter-id &quot;eats&quot; all alpha characters. This is a problem when non-placeholder alpha character is to follow placeholder, e.g. %dpt - this has to be written as %d`pt (` delimits the formatter-id).</p>
+<p class="A">&nbsp;</p>
+<p class="A">&nbsp;</p>
+<p class="X">Standard formatters</p>
+<p class="A">&nbsp;</p>
+<p class="S">Default formatter</p>
+<p class="A">&nbsp;</p>
+<p class="A">If formatter-id is empty, Value is converted using AsString (implemented in RichValue interface).</p>
+<p class="A">&nbsp;</p>
+<p class="A">&nbsp;</p>
+<p class="S">printf formatters</p>
+<p class="A">&nbsp;</p>
+<p class="A">Most printf formatters are supported:</p>
+<p class="A">&nbsp;</p>
+<p class="S">c d i o x X ld li lo lx lX lld lli llo llx llX e E f g G s</p>
+<p class="A">&nbsp;</p>
+<p class="A">Please refer to printf documentation for the description.</p>
+<p class="A">&nbsp;</p>
+<p class="A">&nbsp;</p>
+<p class="S">Switch formatter</p>
+<p class="A">&nbsp;</p>
+<p class="A">This is special number formatter (registered for double, int and int64 values). <span class="Q">options</span> of switch formatter contain a list of values and respective texts - a text for actual argument is printed. <span class="Q">formatter-id</span> is <span class="N">s</span>.</p>
+<p class="A">&nbsp;</p>
+<p class="A">The format of switch <span class="Q">options</span> is</p>
+<p class="A">&nbsp;</p>
+<p class="P">[<span class="J">modulo</span><span class="H">%</span>][<span class="J">case</span><span class="H">:</span><span class="J">text</span><span class="Y">;</span>]...[<span class="J">default</span>]</p>
+<p class="A">&nbsp;</p>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr><td width="100%"><table width="100%" class="C"><colgroup><col width="13%"><col width="86%"></colgroup>
+<tr><td class="U"><p class="Z">modulo</p>
+</td>
+<td class="U"><p class="A">If this optional part is present, modulo of argument is used for switch cases.</p>
+</td>
+</tr>
+<tr><td class="U"><p class="Z">case</p>
+</td>
+<td class="U"><p class="A">Numeric case.</p>
+</td>
+</tr>
+<tr><td class="U"><p class="Z">text</p>
+</td>
+<td class="U"><p class="A">Text for given numeric case.</p>
+</td>
+</tr>
+<tr><td class="U"><p class="Z">default</p>
+</td>
+<td class="U"><p class="A">Default text when no case is matched.</p>
+</td>
+</tr>
+</table></td>
+</tr></table>
+<p class="A">&nbsp;</p>
+<p class="A">Note that as text usually contains letters, whole switch options section is almost always escaped using <span class="N">[</span> <span class="N">]</span>.</p>
+<p class="A">&nbsp;</p>
+<p class="A">&nbsp;</p>
+<p class="S">Simple integer formatters</p>
+<p class="A">&nbsp;</p>
+<p class="A">These formatters are registered for double, int and int64 values.</p>
+<p class="A">&nbsp;</p>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr><td width="100%"><table width="100%" class="C"><colgroup><col width="14%"><col width="85%"></colgroup>
+<tr><td class="AA"><p class="Z">formatter-id</p>
+</td>
+<td class="AA"><p class="A">Description</p>
+</td>
+</tr>
+<tr><td class="U"><p class="S">month</p>
+</td>
+<td class="U"><p class="A">Lower-case month name.</p>
+</td>
+</tr>
+<tr><td class="U"><p class="S">Month</p>
+</td>
+<td class="U"><p class="A">Month name with first letter upper-case, rest lower-case.</p>
+</td>
+</tr>
+<tr><td class="U"><p class="S">MONTH</p>
+</td>
+<td class="U"><p class="A">Upper-case month name.</p>
+</td>
+</tr>
+<tr><td class="U"><p class="S">mon</p>
+</td>
+<td class="U"><p class="A">Abbreviated lower-case month name.</p>
+</td>
+</tr>
+<tr><td class="U"><p class="S">Mon</p>
+</td>
+<td class="U"><p class="A">Abbreviated month name, first letter upper-case, rest lower-case.</p>
+</td>
+</tr>
+<tr><td class="U"><p class="S">MON</p>
+</td>
+<td class="U"><p class="A">Abbreviated upper-case month name.</p>
+</td>
+</tr>
+<tr><td class="U"><p class="S">day</p>
+</td>
+<td class="U"><p class="A">Lower-case day name.</p>
+</td>
+</tr>
+<tr><td class="U"><p class="S">Day</p>
+</td>
+<td class="U"><p class="A">Day name with first letter upper-case, rest lower-case.</p>
+</td>
+</tr>
+<tr><td class="U"><p class="S">DAY</p>
+</td>
+<td class="U"><p class="A">Upper-case day name.</p>
+</td>
+</tr>
+<tr><td class="U"><p class="S">dy</p>
+</td>
+<td class="U"><p class="A">Abbreviated lower-case day name.</p>
+</td>
+</tr>
+<tr><td class="U"><p class="S">Dy</p>
+</td>
+<td class="U"><p class="A">Abbreviated day name, first letter upper-case, rest lower-case.</p>
+</td>
+</tr>
+<tr><td class="U"><p class="S">DY</p>
+</td>
+<td class="U"><p class="A">Abbreviated upper-case day name.</p>
+</td>
+</tr>
+<tr><td class="U"><p class="S">tw</p>
+</td>
+<td class="U"><p class="A">12-hour modulo format.</p>
+</td>
+</tr>
+<tr><td class="U"><p class="S">a</p>
+</td>
+<td class="U"><p class="A">Letter format, 1: a, 2: b, ... 26: z, 27: aa, ...</p>
+</td>
+</tr>
+<tr><td class="U"><p class="S">A</p>
+</td>
+<td class="U"><p class="A">Letter format, 1: a, 2: b, ... 26: z, 27: aa, ...</p>
+</td>
+</tr>
+<tr><td class="U"><p class="S">r</p>
+</td>
+<td class="U"><p class="A">Lower-case roman numbers.</p>
+</td>
+</tr>
+<tr><td class="U"><p class="S">R</p>
+</td>
+<td class="U"><p class="A">Upper-case roman numbers.</p>
+</td>
+</tr>
+</table></td>
+</tr></table>
+<p class="A">&nbsp;</p>
+<p class="A">&nbsp;</p>
+<p class="S">Extended real number formatters</p>
+<p class="A">&nbsp;</p>
+<p class="A">These formatters are equivalent to regular %g, %f and %e, but provide more options and are implemented by fast U++ internal conversion routine.</p>
+<p class="A">&nbsp;</p>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr><td width="100%"><table width="100%" class="C"><colgroup><col width="23%"><col width="76%"></colgroup>
+<tr><td class="U"><p class="S">m</p>
+</td>
+<td class="U"><p class="A">equivalent of %g</p>
+</td>
+</tr>
+<tr><td class="U"><p class="S">M</p>
+</td>
+<td class="U"><p class="A">equivalent of %G (with capital E in exponent)</p>
+</td>
+</tr>
+<tr><td class="U"><p class="S">me</p>
+</td>
+<td class="U"><p class="A">equivalent of %e</p>
+</td>
+</tr>
+<tr><td class="U"><p class="S">mE</p>
+</td>
+<td class="U"><p class="A">equivalent of %E</p>
+</td>
+</tr>
+<tr><td class="U"><p class="S">mf</p>
+</td>
+<td class="U"><p class="A">equivalent of %f</p>
+</td>
+</tr>
+<tr><td class="R"><p class="S">ml, Ml, mle, mlE, mlf</p>
+</td>
+<td class="R"><p class="A">adding 'l' after 'm' activates locale customization based on language. At the moment this replaces decimal point with local version.</p>
+</td>
+</tr>
+</table></td>
+</tr></table>
+<p class="A">&nbsp;</p>
+<p class="A">The format of <span class="N">options</span> of alternative real number formatters is</p>
+<p class="A">&nbsp;</p>
+<p class="AB">[<span class="I">+</span>|<span class="AC">&lt;space&gt;</span>][[<span class="H">-</span>][<span class="AD">width</span>][<span class="H">,</span>|<span class="I">.</span>][<span class="AD">precision</span>][<span class="I">!</span>|<span class="I">?</span>||<span class="I">^</span>|<span class="I">&amp;</span>|<span class="I">#</span>]..</p>
+<p class="AB">&nbsp;</p>
+<p class="A">&nbsp;</p>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr><td width="100%"><table width="100%" class="C"><colgroup><col width="23%"><col width="76%"></colgroup>
+<tr><td class="U"><p class="S">+</p>
+</td>
+<td class="U"><p class="A">always prepend the number with sign</p>
+</td>
+</tr>
+<tr><td class="U"><p class="AE">&lt;space&gt;</p>
+</td>
+<td class="U"><p class="A">if number is positive, prepend it with space</p>
+</td>
+</tr>
+<tr><td class="U"><p class="AB">[<span class="H">-</span>][<span class="AD">width</span>]</p>
+</td>
+<td class="U"><p class="A">requested minimal width. If the formatted number is smaller, it is padded with spaces or with zeros when width starts with zero. If width is negative, padding added is on the right (otherwise left).</p>
+</td>
+</tr>
+<tr><td class="U"><p class="AF"><span class="AG">, </span>.</p>
+</td>
+<td class="U"><p class="A">separates width from precision. ',' sets decimal point to ','.</p>
+</td>
+</tr>
+<tr><td class="U"><p class="AH">precision</p>
+</td>
+<td class="U"><p class="A">number of valid digits for %m, number of places after decimal point for %me and %mf.</p>
+</td>
+</tr>
+<tr><td class="U"><p class="AF">!</p>
+</td>
+<td class="U"><p class="A">preserve insignificant zeros in %m format</p>
+</td>
+</tr>
+<tr><td class="U"><p class="AF">?</p>
+</td>
+<td class="U"><p class="A">if number is inf or nan, do not print &quot;inf&quot; or &quot;nan&quot; and leave the output empty</p>
+</td>
+</tr>
+<tr><td class="U"><p class="AF">_</p>
+</td>
+<td class="U"><p class="A">do not prepend '-' for negative zero</p>
+</td>
+</tr>
+<tr><td class="U"><p class="AF">^</p>
+</td>
+<td class="U"><p class="A">do not add plus sign to exponent</p>
+</td>
+</tr>
+<tr><td class="U"><p class="AF">&amp;</p>
+</td>
+<td class="U"><p class="A">make exponent minimal - 1e9 instead of 1e+09</p>
+</td>
+</tr>
+<tr><td class="U"><p class="AF">#</p>
+</td>
+<td class="U"><p class="A">preserve insignificant zeros and/or always print the decimal point</p>
+</td>
+</tr>
+</table></td>
+</tr></table>
+<p class="AB">&nbsp;</p>
+<p class="A">&nbsp;</p>
+<p class="X">Legacy real number formatters</p>
+<p class="A">&nbsp;</p>
+<p class="AI">These are legacy U++ formatters, superseded by %m family</p>
+<p class="AI">&nbsp;</p>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr><td width="100%"><table width="100%" class="C"><colgroup><col width="14%"><col width="85%"></colgroup>
+<tr><td class="U"><p class="AJ">n</p>
+</td>
+<td class="U"><p class="AI">fixed decimals</p>
+</td>
+</tr>
+<tr><td class="U"><p class="AJ">v</p>
+</td>
+<td class="U"><p class="AI">valid decimals</p>
+</td>
+</tr>
+<tr><td class="U"><p class="AJ">ne<span class="AG">, </span>ve</p>
+</td>
+<td class="U"><p class="AI">force exponential notation</p>
+</td>
+</tr>
+<tr><td class="U"><p class="AJ">nf<span class="AG">, </span>vf</p>
+</td>
+<td class="U"><p class="AI">force fixed notation</p>
+</td>
+</tr>
+<tr><td class="U"><p class="AJ">nl<span class="AG">, </span>vl</p>
+</td>
+<td class="U"><p class="AI">locale/language-based formatting (can use ',' instead of '.' and add thousands separators)</p>
+</td>
+</tr>
+</table></td>
+</tr></table>
+<p class="AI">&nbsp;</p>
+<p class="AI">&nbsp;</p>
+<p class="AI">The format of <span class="N">options</span> of alternative real number formatters is</p>
+<p class="AI">&nbsp;</p>
+<p class="AJ">[+][[-]digits][@][,][!][^[+]expdig]</p>
+<p class="AI">&nbsp;</p>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr><td width="100%"><table width="100%" class="C"><colgroup><col width="14%"><col width="85%"></colgroup>
+<tr><td class="U"><p class="AI">+</p>
+</td>
+<td class="U"><p class="AI">always prepend sign (even if positive number)</p>
+</td>
+</tr>
+<tr><td class="U"><p class="AJ">[-]digits</p>
+</td>
+<td class="U"><p class="AI">number of decimals to print (negative = left of decimal point, default = 6)</p>
+</td>
+</tr>
+<tr><td class="U"><p class="AI">@</p>
+</td>
+<td class="U"><p class="AI">do not use thousands separators (in internationalized formatting <span class="N">nl</span> or <span class="N">vl</span>)</p>
+</td>
+</tr>
+<tr><td class="U"><p class="AJ">,</p>
+</td>
+<td class="U"><p class="AI">use ',' instead of '.' for decimal point</p>
+</td>
+</tr>
+<tr><td class="U"><p class="AJ">!</p>
+</td>
+<td class="U"><p class="AI">keep insignificant zeros</p>
+</td>
+</tr>
+<tr><td class="U"><p class="AJ">^</p>
+</td>
+<td class="U"><p class="AI">exponent options:</p>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr><td width="100%"><table width="100%" class="C"><colgroup><col width="50%"><col width="50%"></colgroup>
+<tr><td class="U"><p class="AJ">+</p>
+</td>
+<td class="U"><p class="AI">always prepend sign to exponent</p>
+</td>
+</tr>
+<tr><td class="U"><p class="AJ">expdig</p>
+</td>
+<td class="U"><p class="AI">exponent padding width</p>
+</td>
+</tr>
+</table></td>
+</tr></table>
+</td>
+</tr>
+</table></td>
+</tr></table>
+<p class="AI">&nbsp;</p>
+<p class="A">&nbsp;</p>
+<p class="A">&nbsp;</p>
+<p class="X">Examples of standard formatters</p>
+<p class="A">&nbsp;</p>
+<p class="AK">&nbsp;</p>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr><td width="100%"><table width="100%" class="C"><colgroup><col width="50%"><col width="49%"></colgroup>
+<tr><td class="U"><p class="A">Format(&quot;<span class="N">%d, %s</span>&quot;, 123, &quot;TEXT&quot;)</p>
+</td>
+<td class="U"><p class="AL">123, TEXT</p>
+</td>
+</tr>
+<tr><td class="U"><p class="A">Format(&quot;<span class="N">%2:s, %1:d</span>&quot;, 123, &quot;TEXT&quot;)</p>
+</td>
+<td class="U"><p class="AL">TEXT, 123</p>
+</td>
+</tr>
+<tr><td class="U"><p class="A">Format(&quot;<span class="N">%010d</span>&quot;, 123)</p>
+</td>
+<td class="U"><p class="AL">0000000123</p>
+</td>
+</tr>
+<tr><td class="U"><p class="A">Format(&quot;<span class="N">%0*d</span>&quot;, 11, 123)</p>
+</td>
+<td class="U"><p class="AL">00000000123</p>
+</td>
+</tr>
+<tr><td class="U"><p class="A">Format(&quot;<span class="N">|%20&lt;d|</span>&quot;, 123)</p>
+</td>
+<td class="U"><p class="AL">|123 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|</p>
+</td>
+</tr>
+<tr><td class="U"><p class="A">Format(&quot;<span class="N">|%20&gt;d|</span>&quot;, 123)</p>
+</td>
+<td class="U"><p class="AL">| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;123|</p>
+</td>
+</tr>
+<tr><td class="U"><p class="A">Format(&quot;<span class="N">|%20=d|</span>&quot;, 123)</p>
+</td>
+<td class="U"><p class="AL">| &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;123 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|</p>
+</td>
+</tr>
+<tr><td class="U"><p class="A">Format(&quot;<span class="N">%dpt</span>&quot;, 123)</p>
+</td>
+<td class="U"><p class="AL">123pt</p>
+</td>
+</tr>
+<tr><td class="U"><p class="A">Format(&quot;<span class="N">%[empty]~d, %[empty]~d</span>&quot;, 123, Null)</p>
+</td>
+<td class="U"><p class="AL">123, empty</p>
+</td>
+</tr>
+<tr><td class="U"><p class="A">Format(&quot;<span class="N">%</span>&quot;, 123)</p>
+</td>
+<td class="U"><p class="AL">123</p>
+</td>
+</tr>
+<tr><td class="U"><p class="A">Format(&quot;<span class="N">%c</span>&quot;, 65)</p>
+</td>
+<td class="U"><p class="AL">A</p>
+</td>
+</tr>
+<tr><td class="U"><p class="A">Format(&quot;<span class="N">%d</span>&quot;, 123)</p>
+</td>
+<td class="U"><p class="AL">123</p>
+</td>
+</tr>
+<tr><td class="U"><p class="A">Format(&quot;<span class="N">%i</span>&quot;, 123)</p>
+</td>
+<td class="U"><p class="AL">123</p>
+</td>
+</tr>
+<tr><td class="U"><p class="A">Format(&quot;<span class="N">%o</span>&quot;, 123)</p>
+</td>
+<td class="U"><p class="AL">173</p>
+</td>
+</tr>
+<tr><td class="U"><p class="A">Format(&quot;<span class="N">%x</span>&quot;, 123)</p>
+</td>
+<td class="U"><p class="AL">7b</p>
+</td>
+</tr>
+<tr><td class="U"><p class="A">Format(&quot;<span class="N">%X</span>&quot;, 123)</p>
+</td>
+<td class="U"><p class="AL">7B</p>
+</td>
+</tr>
+<tr><td class="U"><p class="A">Format(&quot;<span class="N">%e</span>&quot;, 1234567.89)</p>
+</td>
+<td class="U"><p class="AL">1.234568e+006</p>
+</td>
+</tr>
+<tr><td class="U"><p class="A">Format(&quot;<span class="N">%E</span>&quot;, 1234567.89)</p>
+</td>
+<td class="U"><p class="AL">1.234568E+006</p>
+</td>
+</tr>
+<tr><td class="U"><p class="A">Format(&quot;<span class="N">%f</span>&quot;, 1234567.89)</p>
+</td>
+<td class="U"><p class="AL">1234567.890000</p>
+</td>
+</tr>
+<tr><td class="U"><p class="A">Format(&quot;<span class="N">%g</span>&quot;, 1234567.89)</p>
+</td>
+<td class="U"><p class="AL">1.23457e+006</p>
+</td>
+</tr>
+<tr><td class="U"><p class="A">Format(&quot;<span class="N">%G</span>&quot;, 1234567.89)</p>
+</td>
+<td class="U"><p class="AL">1.23457E+006</p>
+</td>
+</tr>
+<tr><td class="U"><p class="A">Format(&quot;<span class="N">%m</span>&quot;, 1234567.89)</p>
+</td>
+<td class="U"><p class="AL">1.23457e+06</p>
+</td>
+</tr>
+<tr><td class="U"><p class="A">Format(&quot;<span class="N">%M</span>&quot;, 1234567.89)</p>
+</td>
+<td class="U"><p class="AL">1.23457E+06</p>
+</td>
+</tr>
+<tr><td class="U"><p class="A">Format(&quot;<span class="N">%,m</span>&quot;, 1234567.89)</p>
+</td>
+<td class="U"><p class="AL">1,23457e+06</p>
+</td>
+</tr>
+<tr><td class="U"><p class="A">Format(&quot;<span class="N">%+m</span>&quot;, 1234567.89)</p>
+</td>
+<td class="U"><p class="AL">+1.23457e+06</p>
+</td>
+</tr>
+<tr><td class="U"><p class="A">Format(&quot;<span class="N">% m</span>&quot;, 1234567.89)</p>
+</td>
+<td class="U"><p class="AL"> 1.23457e+06</p>
+</td>
+</tr>
+<tr><td class="U"><p class="A">Format(&quot;<span class="N">%.10m</span>&quot;, 1234567.89)</p>
+</td>
+<td class="U"><p class="AL">1234567.89</p>
+</td>
+</tr>
+<tr><td class="U"><p class="A">Format(&quot;<span class="N">%.10!m</span>&quot;, 1234567.89)</p>
+</td>
+<td class="U"><p class="AL">1234567.890</p>
+</td>
+</tr>
+<tr><td class="U"><p class="A">Format(&quot;<span class="N">%.6m</span>&quot;, 1234567.89)</p>
+</td>
+<td class="U"><p class="AL">1.23457e+06</p>
+</td>
+</tr>
+<tr><td class="U"><p class="A">Format(&quot;<span class="N">%.7m</span>&quot;, 1234567.89)</p>
+</td>
+<td class="U"><p class="AL">1234568</p>
+</td>
+</tr>
+<tr><td class="U"><p class="A">Format(&quot;<span class="N">%.7#m</span>&quot;, 1234567)</p>
+</td>
+<td class="U"><p class="AL">1234567.</p>
+</td>
+</tr>
+<tr><td class="U"><p class="A">Format(&quot;<span class="N">%m</span>&quot;, -0.0)</p>
+</td>
+<td class="U"><p class="AL">-0</p>
+</td>
+</tr>
+<tr><td class="U"><p class="A">Format(&quot;<span class="N">%_m</span>&quot;, -0.0)</p>
+</td>
+<td class="U"><p class="AL">0</p>
+</td>
+</tr>
+<tr><td class="U"><p class="A">Format(&quot;<span class="N">%m</span>&quot;, 1e9)</p>
+</td>
+<td class="U"><p class="AL">1e+09</p>
+</td>
+</tr>
+<tr><td class="U"><p class="A">Format(&quot;<span class="N">%^m</span>&quot;, 1e9)</p>
+</td>
+<td class="U"><p class="AL">1e09</p>
+</td>
+</tr>
+<tr><td class="U"><p class="A">Format(&quot;<span class="N">%&amp;m</span>&quot;, 1e9)</p>
+</td>
+<td class="U"><p class="AL">1e+9</p>
+</td>
+</tr>
+<tr><td class="U"><p class="A">Format(&quot;<span class="N">%&amp;^m</span>&quot;, 1e9)</p>
+</td>
+<td class="U"><p class="AL">1e9</p>
+</td>
+</tr>
+<tr><td class="U"><p class="A">Format(&quot;<span class="N">%m</span>&quot;, log(-1))</p>
+</td>
+<td class="U"><p class="AL">-nan</p>
+</td>
+</tr>
+<tr><td class="U"><p class="A">Format(&quot;<span class="N">%?m</span>&quot;, log(-1))</p>
+</td>
+<td class="U"><p class="AL">&nbsp;</p>
+</td>
+</tr>
+<tr><td class="U"><p class="A">Format(&quot;<span class="N">%.5mf</span>&quot;, 1234567.89)</p>
+</td>
+<td class="U"><p class="AL">1234567.89000</p>
+</td>
+</tr>
+<tr><td class="U"><p class="A">Format(&quot;<span class="N">%.2me</span>&quot;, 1234567.89)</p>
+</td>
+<td class="U"><p class="AL">1.23e+06</p>
+</td>
+</tr>
+<tr><td class="U"><p class="A">Format(&quot;<span class="N">%.2mE</span>&quot;, 1234567.89)</p>
+</td>
+<td class="U"><p class="AL">1.23E+06</p>
+</td>
+</tr>
+<tr><td class="U"><p class="A">Format(&quot;<span class="N">%[1:one;2:two;3:three;another]s</span>&quot;, 2)</p>
+</td>
+<td class="U"><p class="AL">two</p>
+</td>
+</tr>
+<tr><td class="U"><p class="A">Format(&quot;<span class="N">%[1:one;2:two;3:three;another]s</span>&quot;, 20)</p>
+</td>
+<td class="U"><p class="AL">another</p>
+</td>
+</tr>
+<tr><td class="U"><p class="A">Format(&quot;<span class="N">%[3%1:one;2:two;3:three;another]s</span>&quot;, 20)</p>
+</td>
+<td class="U"><p class="AL">two</p>
+</td>
+</tr>
+<tr><td class="U"><p class="A">Format(&quot;<span class="N">%month</span>&quot;, 6)</p>
+</td>
+<td class="U"><p class="AL">june</p>
+</td>
+</tr>
+<tr><td class="U"><p class="A">Format(&quot;<span class="N">%Month</span>&quot;, 6)</p>
+</td>
+<td class="U"><p class="AL">June</p>
+</td>
+</tr>
+<tr><td class="U"><p class="A">Format(&quot;<span class="N">%MONTH</span>&quot;, 6)</p>
+</td>
+<td class="U"><p class="AL">JUNE</p>
+</td>
+</tr>
+<tr><td class="U"><p class="A">Format(&quot;<span class="N">%mon</span>&quot;, 6)</p>
+</td>
+<td class="U"><p class="AL">jun</p>
+</td>
+</tr>
+<tr><td class="U"><p class="A">Format(&quot;<span class="N">%Mon</span>&quot;, 6)</p>
+</td>
+<td class="U"><p class="AL">Jun</p>
+</td>
+</tr>
+<tr><td class="U"><p class="A">Format(&quot;<span class="N">%MON</span>&quot;, 6)</p>
+</td>
+<td class="U"><p class="AL">JUN</p>
+</td>
+</tr>
+<tr><td class="U"><p class="A">Format(&quot;<span class="N">%day</span>&quot;, 6)</p>
+</td>
+<td class="U"><p class="AL">saturday</p>
+</td>
+</tr>
+<tr><td class="U"><p class="A">Format(&quot;<span class="N">%Day</span>&quot;, 6)</p>
+</td>
+<td class="U"><p class="AL">Saturday</p>
+</td>
+</tr>
+<tr><td class="U"><p class="A">Format(&quot;<span class="N">%DAY</span>&quot;, 6)</p>
+</td>
+<td class="U"><p class="AL">SATURDAY</p>
+</td>
+</tr>
+<tr><td class="U"><p class="A">Format(&quot;<span class="N">%dy</span>&quot;, 6)</p>
+</td>
+<td class="U"><p class="AL">sa</p>
+</td>
+</tr>
+<tr><td class="U"><p class="A">Format(&quot;<span class="N">%Dy</span>&quot;, 6)</p>
+</td>
+<td class="U"><p class="AL">Sa</p>
+</td>
+</tr>
+<tr><td class="U"><p class="A">Format(&quot;<span class="N">%DY</span>&quot;, 6)</p>
+</td>
+<td class="U"><p class="AL">SA</p>
+</td>
+</tr>
+<tr><td class="U"><p class="A">Format(&quot;<span class="N">%tw</span>&quot;, 0)</p>
+</td>
+<td class="U"><p class="AL">12</p>
+</td>
+</tr>
+<tr><td class="U"><p class="A">Format(&quot;<span class="N">%tw</span>&quot;, 5)</p>
+</td>
+<td class="U"><p class="AL">5</p>
+</td>
+</tr>
+<tr><td class="U"><p class="A">Format(&quot;<span class="N">%tw</span>&quot;, 15)</p>
+</td>
+<td class="U"><p class="AL">3</p>
+</td>
+</tr>
+<tr><td class="U"><p class="A">Format(&quot;<span class="N">%0tw</span>&quot;, 15)</p>
+</td>
+<td class="U"><p class="AL">03</p>
+</td>
+</tr>
+<tr><td class="U"><p class="A">Format(&quot;<span class="N">%a</span>&quot;, 1)</p>
+</td>
+<td class="U"><p class="AL">a</p>
+</td>
+</tr>
+<tr><td class="U"><p class="A">Format(&quot;<span class="N">%a</span>&quot;, 123)</p>
+</td>
+<td class="U"><p class="AL">es</p>
+</td>
+</tr>
+<tr><td class="U"><p class="A">Format(&quot;<span class="N">%A</span>&quot;, 1)</p>
+</td>
+<td class="U"><p class="AL">A</p>
+</td>
+</tr>
+<tr><td class="U"><p class="A">Format(&quot;<span class="N">%A</span>&quot;, 123)</p>
+</td>
+<td class="U"><p class="AL">ES</p>
+</td>
+</tr>
+<tr><td class="U"><p class="A">Format(&quot;<span class="N">%r</span>&quot;, 8)</p>
+</td>
+<td class="U"><p class="AL">viii</p>
+</td>
+</tr>
+<tr><td class="U"><p class="A">Format(&quot;<span class="N">%R</span>&quot;, 1231)</p>
+</td>
+<td class="U"><p class="AL">MCCXXXI</p>
+</td>
+</tr>
+<tr><td class="U"><p class="A">Format(&quot;<span class="N">%</span>&quot;, GetSysDate())</p>
+</td>
+<td class="U"><p class="AL">11/11/2011</p>
+</td>
+</tr>
+<tr><td class="U"><p class="A">Format(&quot;<span class="N">%</span>&quot;, GetSysTime())</p>
+</td>
+<td class="U"><p class="AL">11/11/2011 14:44:11</p>
+</td>
+</tr>
+<tr><td class="U"><p class="A">Format(&quot;<span class="N">%</span>&quot;, &quot;text&quot;)</p>
+</td>
+<td class="U"><p class="AL">text</p>
+</td>
+</tr>
+</table></td>
+</tr></table>
+<p class="A">&nbsp;</p>
+<p class="A">&nbsp;</p>
+<p class="A">&nbsp;</p>
+<p class="AM">Registering custom formatters</p>
+<p class="A">&nbsp;</p>
+<p id="Formatter::typedef" class="G"><span class="H">typedef&nbsp;</span><a href="String"><span class="H">String</span></a><span class="H">&nbsp;(*Formatter)(</span><span class="J">const</span>&nbsp;<a href="Formatting">Formatting</a>&amp;&nbsp;fmt)</p>
+<p class="O">Formatter has to have form of function with single <a href="Formatting">Formatting</a> argument.</p>
+<p class="M">&nbsp;</p>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr><td width="100%"><table width="100%" class="AN"><colgroup><col width="100%"></colgroup>
+<tr><td class="AO"><p class="S">Formatting</p>
+</td>
+</tr>
+</table></td>
+</tr></table>
+<p class="A">&nbsp;</p>
+<p id="Formatting::struct" class="AP"><span class="AQ">struct</span><span class="AG">&nbsp;</span>Formatting</p>
+<p class="O">This structure passes all informations to format Value argument to the formatter.</p>
+<p class="AR">&nbsp;</p>
+<hr><p class="AR">&nbsp;</p>
+<p id="Formatting::language" class="AP"><span class="AQ">int</span><span class="AG">&nbsp;</span>language</p>
+<p class="O">Language of resulting text.</p>
+<p class="AR">&nbsp;</p>
+<hr><p class="AR">&nbsp;</p>
+<p id="Formatting::arg" class="AP"><span class="AG">Value&nbsp;</span>arg</p>
+<p class="O">Actual argument.</p>
+<p class="AR">&nbsp;</p>
+<hr><p class="AR">&nbsp;</p>
+<p id="Formatting::format" class="AP"><span class="AG">String&nbsp;</span>format</p>
+<p class="O">Formatting <span class="Q">options</span>.</p>
+<p class="AR">&nbsp;</p>
+<hr><p class="AR">&nbsp;</p>
+<p id="Formatting::id" class="AP"><span class="AG">String&nbsp;</span>id</p>
+<p class="O">Formatter-id.</p>
+<p class="M">&nbsp;</p>
+<table width="100%" border="0" cellpadding="0" cellspacing="0"><tr><td width="100%"><table width="100%" class="AN"><colgroup><col width="100%"></colgroup>
+<tr><td class="AO"><p class="S">Format registration functions</p>
+</td>
+</tr>
+</table></td>
+</tr></table>
+<p class="AR">&nbsp;</p>
+<p id="RegisterFormatter(int,const char*,Formatter)init_" class="M"><span class="J">void</span>&nbsp;<span class="N">RegisterFormatter</span>(<span class="J">int</span>&nbsp;<span class="K">type</span>, <span class="J">const</span>&nbsp;<span class="J">char</span>&nbsp;*<span class="K">id</span>, Formatter&nbsp;<span class="K">f</span>)</p>
+<p class="O">Registers formatter for specific Value <span class="K">type</span>. If <span class="K">type</span> is VALUE_V, formatter is applied to all Value types if no formatter for specific type is specified.</p>
+<p class="AR">&nbsp;</p>
+<hr><p class="AR">&nbsp;</p>
+<p id="RegisterNumberFormatter(const char*,Formatter)init_" class="M"><span class="J">void</span>&nbsp;<span class="N">RegisterNumberFormatter</span>(<span class="J">const</span>&nbsp;<span class="J">char</span>&nbsp;*<span class="K">id</span>, Formatter&nbsp;<span class="K">f</span>)</p>
+<p class="O">Registers formatter for bool, int, double and int64 types.</p>
+<p class="AR">&nbsp;</p>
+<hr><p class="AR">&nbsp;</p>
+<p id="RegisterStringFormatter(const char*,Formatter)init_" class="M"><span class="J">void</span>&nbsp;<span class="N">RegisterStringFormatter</span>(<span class="J">const</span>&nbsp;<span class="J">char</span>&nbsp;*<span class="K">id</span>, Formatter&nbsp;<span class="K">f</span>)</p>
+<p class="O">Registers formatter for String and WString types.</p>
+<p class="AR">&nbsp;</p>
+<hr><p class="AR">&nbsp;</p>
+<p id="RegisterDateTimeFormatter(const char*,Formatter)init_" class="M"><span class="J">void</span>&nbsp;<span class="N">RegisterDateTimeFormatter</span>(<span class="J">const</span>&nbsp;<span class="J">char</span>&nbsp;*<span class="K">id</span>, Formatter&nbsp;<span class="K">f</span>)</p>
+<p class="O">Registers formatter for Date and Time types.</p>
+<p class="AR">&nbsp;</p>
+<hr><p class="AR">&nbsp;</p>
+<p id="RegisterValueFormatter(const char*,Formatter)init_" class="M"><span class="J">void</span>&nbsp;<span class="N">RegisterValueFormatter</span>(<span class="J">const</span>&nbsp;<span class="J">char</span>&nbsp;*<span class="K">id</span>, Formatter&nbsp;<span class="K">f</span>)</p>
+<p class="O">Registers formatter to be applied when no formatter for specific type is specified.</p>
+<p class="AR">&nbsp;</p>
+<hr><p class="AR">&nbsp;</p>
+<p id="RegisterNullFormatter(const char*,Formatter)init_" class="M"><span class="J">void</span>&nbsp;<span class="N">RegisterNullFormatter</span>(<span class="J">const</span>&nbsp;<span class="J">char</span>&nbsp;*<span class="K">id</span>, Formatter&nbsp;<span class="K">f</span>)</p>
+<p class="O">Registers formatter <span class="K">id</span> to be applied when the Value argument is Void (Value()) or ErrorValue.</p>
+<p class="AR">&nbsp;</p>
+<p class="A">&nbsp;</p>
+</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>
+<TABLE BORDER="0" WIDTH="100%"><TR><TD></TD>
+</TR>
+</TABLE>
+<TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" BGCOLOR="#FFFFFF" WIDTH="100%" style="border-style: solid; border-width: 1px; border-color: #6E89AE;padding: 10px;;"><TR><TD><TABLE BORDER="0" CELLSPACING="0" CELLPADDING="0" WIDTH="100%"><TR><TD><p class="A"><span class="B"> </span><a href="www$uppweb$contribweb$en-us.html">Do you want to contribute?</a></p>
+</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>
+</TD>
+</TR>
+</TABLE>
+<script type="text/javascript">var a={'src$Core$Format$en-us.html':'English'};var p=window.location.pathname.split("/");p=p[p.length-1];var s='<select id="lang" onchange="window.location=document.getElementById(\'lang\').value;">';for(l in a){if(p==l){d=" selected=1"}else{d=""}s+='<option value="'+l+'"'+d+'>'+a[l]+'</option>'}s+='</select>';var d=document.createElement('div');d.innerHTML=s;var c=document.getElementById('langs');c.replaceChild(d,c.firstChild);document.getElementById('langbox').style.display='block';</script></BODY>
